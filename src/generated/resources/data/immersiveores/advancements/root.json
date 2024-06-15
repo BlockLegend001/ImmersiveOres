@@ -1,0 +1,38 @@
+{
+  "criteria": {
+    "has_vibranium_ingot": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "immersiveores:vibranium_ingot"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "immersiveores:textures/item/vulpus_block.png",
+    "description": {
+      "translate": "advancement.immersiveores.root.descrption"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "immersiveores:vibranium_ingot"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancement.immersiveores.root.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_vibranium_ingot"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

@@ -1,0 +1,38 @@
+{
+  "parent": "immersiveores:vibraniumtools",
+  "criteria": {
+    "has_vulpus_ingot": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "immersiveores:vulpus_ingot"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "advancement.immersiveores.vulpus.descrption"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "immersiveores:vulpus_ingot"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancement.immersiveores.vulpus.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_vulpus_ingot"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

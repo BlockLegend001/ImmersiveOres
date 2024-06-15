@@ -1,0 +1,38 @@
+{
+  "parent": "immersiveores:vulpustools",
+  "criteria": {
+    "has_enderium_ingot": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "immersiveores:enderium_ingot"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "advancement.immersiveores.enderium.descrption"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "immersiveores:enderium_ingot"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancement.immersiveores.enderium.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_enderium_ingot"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

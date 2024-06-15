@@ -1,0 +1,13 @@
+{
+  "values": [
+    "immersiveores:vibranium_block",
+    "immersiveores:vulpus_block",
+    "immersiveores:enderium_block",
+    "immersiveores:vibranium_ore",
+    "immersiveores:vulpus_ore",
+    "immersiveores:enderium_ore",
+    "immersiveores:raw_vibranium_block",
+    "immersiveores:raw_vulpus_block",
+    "immersiveores:raw_enderium_block"
+  ]
+}

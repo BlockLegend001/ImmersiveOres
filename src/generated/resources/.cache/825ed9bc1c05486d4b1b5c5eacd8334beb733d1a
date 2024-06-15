@@ -1,0 +1,10 @@
+// 1.20	2024-06-06T18:25:43.3016711	Tags for minecraft:block mod id immersiveores
+95ed1daa38e9ed5ca52070086c94c68afaebb121 data/forge/tags/blocks/needs_netherite_tool.json
+5137df884e2fcfae692016692d7cba2aebe147bb data/immersiveores/tags/blocks/beacon_base_blocks.json
+82362cfbd1836db13c7e9d36c8712821e795ac55 data/immersiveores/tags/blocks/mineable/enderium_paxel.json
+82362cfbd1836db13c7e9d36c8712821e795ac55 data/immersiveores/tags/blocks/mineable/vibranium_paxel.json
+82362cfbd1836db13c7e9d36c8712821e795ac55 data/immersiveores/tags/blocks/mineable/vulpus_paxel.json
+5aaa2361e8f686dc3a1238b57462870eb14aac25 data/immersiveores/tags/blocks/needs_enderium_tool.json
+62d01ce9f9e51df5caebddf1d53a6fd601cc85b5 data/immersiveores/tags/blocks/needs_vibranium_tool.json
+5aaa2361e8f686dc3a1238b57462870eb14aac25 data/immersiveores/tags/blocks/needs_vulpus_tool.json
+95ed1daa38e9ed5ca52070086c94c68afaebb121 data/minecraft/tags/blocks/mineable/pickaxe.json
