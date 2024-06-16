@@ -10,7 +10,7 @@ import java.util.function.Supplier;
 @SuppressWarnings("deprecation")
 public enum BowTiers implements BowTier {
 
-    ENDERIUM(0, ImmersiveOresConfig.damageVibraniumBow.get(), ImmersiveOresConfig.enchantmentValueEnderiumBow.get(), () -> {
+    ENDERIUM(0, ImmersiveOresConfig.damageEnderiumBow.get(), ImmersiveOresConfig.enchantmentValueEnderiumBow.get(), () -> {
         return Ingredient.of(ModItems.ENDERIUM_INGOT.get());
     }),
 

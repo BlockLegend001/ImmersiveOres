@@ -259,7 +259,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("EEE")
                 .pattern("ENE")
                 .pattern("   ")
-                .unlockedBy("has_vibranium_ingot", inventoryTrigger(ItemPredicate.Builder.item()
+                .unlockedBy("has_vulpus_ingot", inventoryTrigger(ItemPredicate.Builder.item()
                         .of(ModItems.VULPUS_INGOT.get()).build()))
                 .save(consumer);
 
@@ -269,7 +269,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("ENE")
                 .pattern("EEE")
                 .pattern("EEE")
-                .unlockedBy("has_vibranium_ingot", inventoryTrigger(ItemPredicate.Builder.item()
+                .unlockedBy("has_vulpus_ingot", inventoryTrigger(ItemPredicate.Builder.item()
                         .of(ModItems.VULPUS_INGOT.get()).build()))
                 .save(consumer);
 
@@ -279,7 +279,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("EEE")
                 .pattern("ENE")
                 .pattern("E E")
-                .unlockedBy("has_vibranium_ingot", inventoryTrigger(ItemPredicate.Builder.item()
+                .unlockedBy("has_vulpus_ingot", inventoryTrigger(ItemPredicate.Builder.item()
                         .of(ModItems.VULPUS_INGOT.get()).build()))
                 .save(consumer);
 
@@ -289,7 +289,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("   ")
                 .pattern("E E")
                 .pattern("ENE")
-                .unlockedBy("has_vibranium_ingot", inventoryTrigger(ItemPredicate.Builder.item()
+                .unlockedBy("has_vulpus_ingot", inventoryTrigger(ItemPredicate.Builder.item()
                         .of(ModItems.VULPUS_INGOT.get()).build()))
                 .save(consumer);
 
@@ -548,6 +548,46 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern(" SD")
                 .pattern("SED")
                 .pattern(" SD")
+                .unlockedBy("has_enderium_ingot", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(ModItems.ENDERIUM_INGOT.get()).build()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.ENDERIUM_HELMET.get())
+                .define('E', ModItems.ENDERIUM_INGOT.get())
+                .define('N', ModItems.VULPUS_HELMET.get())
+                .pattern("EEE")
+                .pattern("ENE")
+                .pattern("   ")
+                .unlockedBy("has_enderium_ingot", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(ModItems.ENDERIUM_INGOT.get()).build()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.ENDERIUM_CHESTPLATE.get())
+                .define('E', ModItems.ENDERIUM_INGOT.get())
+                .define('N', ModItems.VULPUS_CHESTPLATE.get())
+                .pattern("ENE")
+                .pattern("EEE")
+                .pattern("EEE")
+                .unlockedBy("has_enderium_ingot", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(ModItems.ENDERIUM_INGOT.get()).build()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.ENDERIUM_LEGGINGS.get())
+                .define('E', ModItems.ENDERIUM_INGOT.get())
+                .define('N', ModItems.VULPUS_LEGGINGS.get())
+                .pattern("EEE")
+                .pattern("ENE")
+                .pattern("E E")
+                .unlockedBy("has_enderium_ingot", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(ModItems.ENDERIUM_INGOT.get()).build()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.ENDERIUM_BOOTS.get())
+                .define('E', ModItems.ENDERIUM_INGOT.get())
+                .define('N', ModItems.VULPUS_BOOTS.get())
+                .pattern("   ")
+                .pattern("E E")
+                .pattern("ENE")
                 .unlockedBy("has_enderium_ingot", inventoryTrigger(ItemPredicate.Builder.item()
                         .of(ModItems.ENDERIUM_INGOT.get()).build()))
                 .save(consumer);

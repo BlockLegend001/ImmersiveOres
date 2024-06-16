@@ -3,7 +3,6 @@ package com.blocklegend001.immersiveores.world;
 import com.blocklegend001.immersiveores.ImmersiveOres;
 import com.blocklegend001.immersiveores.ImmersiveOresConfig;
 import com.blocklegend001.immersiveores.blocks.ModBlocks;
-import com.mojang.serialization.Codec;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstapContext;
 import net.minecraft.resources.ResourceKey;

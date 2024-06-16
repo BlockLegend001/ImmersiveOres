@@ -328,8 +328,8 @@ public class ImmersiveOresConfig {
                 .defineInRange("enchantmentValueEnderiumBow", 5, 0, Integer.MAX_VALUE);
 
         damageEnderiumBow = mycfg
-                .comment("Define Damage Value for Enderium Bow. Default = 35")
-                .defineInRange("damageEnderiumBow", 35, 0, Integer.MAX_VALUE);
+                .comment("Define Damage Value for Enderium Bow. Default = 16")
+                .defineInRange("damageEnderiumBow", 16, 0, Integer.MAX_VALUE);
 
         attackDamageBonusEnderiumTier = mycfg
                 .comment("Define Attack Damage Bonus Value for Enderium Tier. Default = 45")
