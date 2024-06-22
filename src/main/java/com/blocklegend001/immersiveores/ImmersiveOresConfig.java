@@ -7,7 +7,6 @@ import net.minecraftforge.fml.common.Mod;
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class ImmersiveOresConfig {
     public static final ForgeConfigSpec.Builder mycfg = new ForgeConfigSpec.Builder();
-
     public static ForgeConfigSpec SPEC;
 
     static {
