@@ -1,0 +1,22 @@
+package com.blocklegend001.immersiveores.mixin;
+
+import net.minecraft.client.data.models.BlockModelGenerators;
+import net.minecraft.data.CachedOutput;
+import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.injection.At;
+import org.spongepowered.asm.mixin.injection.Inject;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
+
+@Mixin(BlockModelGenerators.class)
+public class BlockModelGeneratorsMixin {
+
+    @Inject(method = "run", at = @At("HEAD"))
+    private void beforeRun(CallbackInfo ci) {
+        System.out.println("Eseguito prima del metodo run di BlockModelGenerators.");
+    }
+
+    @Inject(method = "run", at = @At("RETURN"))
+    private void afterRun(CallbackInfo ci) {
+        System.out.println("Eseguito dopo il metodo run di BlockModelGenerators.");
+    }
+}
