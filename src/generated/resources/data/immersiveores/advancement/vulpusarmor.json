@@ -1,0 +1,72 @@
+{
+  "parent": "immersiveores:vulpus",
+  "criteria": {
+    "has_vulpus_boots": {
+      "conditions": {
+        "items": [
+          {
+            "items": "immersiveores:vulpus_boots"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_vulpus_chestplate": {
+      "conditions": {
+        "items": [
+          {
+            "items": "immersiveores:vulpus_chestplate"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_vulpus_helmet": {
+      "conditions": {
+        "items": [
+          {
+            "items": "immersiveores:vulpus_helmet"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_vulpus_leggings": {
+      "conditions": {
+        "items": [
+          {
+            "items": "immersiveores:vulpus_leggings"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancement.immersiveores.vulpusarmor.descrption"
+    },
+    "icon": {
+      "count": 1,
+      "id": "immersiveores:vulpus_chestplate"
+    },
+    "title": {
+      "translate": "advancement.immersiveores.vulpusarmor.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_vulpus_helmet"
+    ],
+    [
+      "has_vulpus_chestplate"
+    ],
+    [
+      "has_vulpus_leggings"
+    ],
+    [
+      "has_vulpus_boots"
+    ]
+  ],
+  "sends_telemetry_event": true
+}
