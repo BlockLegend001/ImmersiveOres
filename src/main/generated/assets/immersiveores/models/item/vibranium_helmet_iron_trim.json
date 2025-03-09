@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "immersiveores:item/vibranium_helmet",
+    "layer1": "minecraft:trims/items/vibranium_trim_iron"
+  }
+}

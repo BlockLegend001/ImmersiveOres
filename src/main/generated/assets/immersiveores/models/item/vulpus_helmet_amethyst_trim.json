@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "immersiveores:item/vulpus_helmet",
+    "layer1": "minecraft:trims/items/vulpus_trim_amethyst"
+  }
+}

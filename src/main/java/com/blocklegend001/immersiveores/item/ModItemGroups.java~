@@ -1,0 +1,83 @@
+package com.blocklegend001.immersiveores.item;
+
+import com.blocklegend001.immersiveores.ImmersiveOres;
+import com.blocklegend001.immersiveores.blocks.ModBlocks;
+import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
+import net.minecraft.item.ItemGroup;
+import net.minecraft.item.ItemStack;
+import net.minecraft.registry.Registries;
+import net.minecraft.registry.Registry;
+import net.minecraft.text.Text;
+import net.minecraft.util.Identifier;
+
+public class ModItemGroups {
+    public static final ItemGroup IMMERSIVEORES = Registry.register(Registries.ITEM_GROUP,
+            Identifier.of(ImmersiveOres.MOD_ID, "immersiveores"),
+            FabricItemGroup.builder().icon(() -> new ItemStack(ModItems.ENDERIUM_INGOT))
+                    .displayName(Text.translatable("itemGroup.immersiveorestab"))
+                    .entries(((displayContext, entries) -> {
+                        entries.add(ModBlocks.VIBRANIUM_ORE);
+                        pOutput.accept(ModBlocks.VULPUS_ORE);
+                        pOutput.accept(ModBlocks.ENDERIUM_ORE);
+                        pOutput.accept(ModBlocks.RAW_VIBRANIUM_BLOCK);
+                        pOutput.accept(ModBlocks.RAW_VULPUS_BLOCK);
+                        pOutput.accept(ModBlocks.RAW_ENDERIUM_BLOCK);
+                        pOutput.accept(ModBlocks.VIBRANIUM_BLOCK);
+                        pOutput.accept(ModBlocks.VULPUS_BLOCK);
+                        pOutput.accept(ModBlocks.ENDERIUM_BLOCK);
+                        pOutput.accept(ModItems.RAW_VIBRANIUM);
+                        pOutput.accept(ModItems.RAW_VULPUS);
+                        pOutput.accept(ModItems.RAW_ENDERIUM);
+                        pOutput.accept(ModItems.VIBRANIUM_INGOT);
+                        pOutput.accept(ModItems.VULPUS_INGOT);
+                        pOutput.accept(ModItems.ENDERIUM_INGOT);
+                        pOutput.accept(ModItems.VIBRANIUM_NUGGET);
+                        pOutput.accept(ModItems.VULPUS_NUGGET);
+                        pOutput.accept(ModItems.ENDERIUM_NUGGET);
+                        pOutput.accept(ModItems.VIBRANIUM_STICK);
+                        pOutput.accept(ModItems.VULPUS_STICK);
+                        pOutput.accept(ModItems.ENDERIUM_STICK);
+                        pOutput.accept(ModItems.VIBRANIUM_PICKAXE);
+                        pOutput.accept(ModItems.VIBRANIUM_AXE);
+                        pOutput.accept(ModItems.VIBRANIUM_SHOVEL);
+                        pOutput.accept(ModItems.VIBRANIUM_SWORD);
+                        pOutput.accept(ModItems.VIBRANIUM_BOW);
+                        pOutput.accept(ModItems.VIBRANIUM_HOE);
+                        pOutput.accept(ModItems.VIBRANIUM_PAXEL);
+                        pOutput.accept(ModItems.VIBRANIUM_HAMMER);
+                        pOutput.accept(ModItems.VIBRANIUM_EXCAVATOR);
+                        pOutput.accept(ModItems.VIBRANIUM_HELMET);
+                        pOutput.accept(ModItems.VIBRANIUM_CHESTPLATE);
+                        pOutput.accept(ModItems.VIBRANIUM_LEGGINGS);
+                        pOutput.accept(ModItems.VIBRANIUM_BOOTS);
+                        pOutput.accept(ModItems.VIBRANIUM_HORSE_ARMOR);
+                        pOutput.accept(ModItems.VULPUS_PICKAXE);
+                        pOutput.accept(ModItems.VULPUS_AXE);
+                        pOutput.accept(ModItems.VULPUS_SHOVEL);
+                        pOutput.accept(ModItems.VULPUS_SWORD);
+                        pOutput.accept(ModItems.VULPUS_BOW);
+                        pOutput.accept(ModItems.VULPUS_HOE);
+                        pOutput.accept(ModItems.VULPUS_PAXEL);
+                        pOutput.accept(ModItems.VULPUS_HAMMER);
+                        pOutput.accept(ModItems.VULPUS_EXCAVATOR);
+                        pOutput.accept(ModItems.VULPUS_HELMET);
+                        pOutput.accept(ModItems.VULPUS_CHESTPLATE);
+                        pOutput.accept(ModItems.VULPUS_LEGGINGS);
+                        pOutput.accept(ModItems.VULPUS_BOOTS);
+                        pOutput.accept(ModItems.VULPUS_HORSE_ARMOR);
+                        pOutput.accept(ModItems.ENDERIUM_PICKAXE);
+                        pOutput.accept(ModItems.ENDERIUM_AXE);
+                        pOutput.accept(ModItems.ENDERIUM_SHOVEL);
+                        pOutput.accept(ModItems.ENDERIUM_SWORD);
+                        pOutput.accept(ModItems.ENDERIUM_BOW);
+                        pOutput.accept(ModItems.ENDERIUM_HOE);
+                        pOutput.accept(ModItems.ENDERIUM_PAXEL);
+                        pOutput.accept(ModItems.ENDERIUM_HAMMER);
+                        pOutput.accept(ModItems.ENDERIUM_EXCAVATOR);
+                        pOutput.accept(ModItems.ENDERIUM_HELMET);
+                        pOutput.accept(ModItems.ENDERIUM_CHESTPLATE);
+                        pOutput.accept(ModItems.ENDERIUM_LEGGINGS);
+                        pOutput.accept(ModItems.ENDERIUM_BOOTS);
+                        pOutput.accept(ModItems.ENDERIUM_HORSE_ARMOR);
+                    }).build());
+}

@@ -1,0 +1,6 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "immersiveores:block/raw_enderium_block"
+  }
+}
