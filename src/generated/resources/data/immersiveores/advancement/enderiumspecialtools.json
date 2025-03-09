@@ -1,0 +1,59 @@
+{
+  "parent": "immersiveores:enderiumtools",
+  "criteria": {
+    "has_enderium_excavator": {
+      "conditions": {
+        "items": [
+          {
+            "items": "immersiveores:enderium_excavator"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_enderium_hammer": {
+      "conditions": {
+        "items": [
+          {
+            "items": "immersiveores:enderium_hammer"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_enderium_paxel": {
+      "conditions": {
+        "items": [
+          {
+            "items": "immersiveores:enderium_paxel"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancement.immersiveores.enderiumspecialtools.descrption"
+    },
+    "icon": {
+      "count": 1,
+      "id": "immersiveores:enderium_paxel"
+    },
+    "title": {
+      "translate": "advancement.immersiveores.enderiumspecialtools.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_enderium_hammer"
+    ],
+    [
+      "has_enderium_paxel"
+    ],
+    [
+      "has_enderium_excavator"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

@@ -1,0 +1,8 @@
+{
+  "remove": [
+    "#immersiveores:needs_vulpus_tool"
+  ],
+  "values": [
+    "#minecraft:incorrect_for_netherite_tool"
+  ]
+}
