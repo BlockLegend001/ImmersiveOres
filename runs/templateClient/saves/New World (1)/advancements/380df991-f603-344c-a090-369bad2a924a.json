@@ -1,0 +1,52 @@
+{
+  "minecraft:recipes/decorations/crafting_table": {
+    "criteria": {
+      "unlock_right_away": "2024-10-02 16:34:30 +0200"
+    },
+    "done": true
+  },
+  "minecraft:adventure/adventuring_time": {
+    "criteria": {
+      "minecraft:birch_forest": "2024-10-02 16:34:32 +0200"
+    },
+    "done": false
+  },
+  "immersiveores:enderiumarmor": {
+    "criteria": {
+      "has_enderium_boots": "2024-10-02 16:34:46 +0200"
+    },
+    "done": false
+  },
+  "immersiveores:vibraniumtools": {
+    "criteria": {
+      "has_vibranium_pickaxe": "2024-10-02 19:24:52 +0200"
+    },
+    "done": false
+  },
+  "immersiveores:vulpustools": {
+    "criteria": {
+      "has_vulpus_pickaxe": "2024-10-02 19:24:54 +0200"
+    },
+    "done": false
+  },
+  "immersiveores:enderiumtools": {
+    "criteria": {
+      "has_enderium_axe": "2024-10-02 19:24:55 +0200",
+      "has_enderium_pickaxe": "2024-10-02 19:24:56 +0200"
+    },
+    "done": false
+  },
+  "immersiveores:recipes/building_blocks/raw_vibranium_block": {
+    "criteria": {
+      "has_raw_vibranium": "2024-10-02 19:25:07 +0200"
+    },
+    "done": true
+  },
+  "immersiveores:recipes/misc/vibranium_ingot_cooked": {
+    "criteria": {
+      "has_raw_vibranium": "2024-10-02 19:25:07 +0200"
+    },
+    "done": true
+  },
+  "DataVersion": 3953
+}

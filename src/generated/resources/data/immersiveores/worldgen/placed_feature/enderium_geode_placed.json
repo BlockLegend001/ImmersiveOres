@@ -1,0 +1,27 @@
+{
+  "feature": "immersiveores:enderium_geode",
+  "placement": [
+    {
+      "type": "minecraft:rarity_filter",
+      "chance": 55
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "type": "minecraft:uniform",
+        "max_inclusive": {
+          "absolute": 125
+        },
+        "min_inclusive": {
+          "absolute": 0
+        }
+      }
+    },
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}

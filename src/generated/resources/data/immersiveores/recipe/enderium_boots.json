@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "E": "immersiveores:enderium_ingot",
+    "N": "immersiveores:vulpus_boots"
+  },
+  "pattern": [
+    "   ",
+    "E E",
+    "ENE"
+  ],
+  "result": {
+    "count": 1,
+    "id": "immersiveores:enderium_boots"
+  }
+}

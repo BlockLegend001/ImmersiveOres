@@ -1,0 +1,93 @@
+package com.blocklegend001.immersiveores.item.custom.vulpus;
+
+import com.blocklegend001.immersiveores.util.ModTags;
+import net.minecraft.ChatFormatting;
+import net.minecraft.client.gui.screens.Screen;
+import net.minecraft.core.BlockPos;
+import net.minecraft.network.chat.Component;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.sounds.SoundSource;
+import net.minecraft.world.InteractionResult;
+import net.minecraft.world.item.DiggerItem;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.ToolMaterial;
+import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.item.context.UseOnContext;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.state.BlockState;
+import net.neoforged.neoforge.common.ItemAbility;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+
+public class VulpusPaxel extends DiggerItem {
+
+    public VulpusPaxel(ToolMaterial pTier, int pAttackDamageModifier, float pAttackSpeedModifier, Properties pProperties) {
+        super(pTier, ModTags.Blocks.VULPUS_PAXEL_MINEABLE, pAttackDamageModifier, pAttackSpeedModifier, pProperties);
+    }
+
+    @Override
+    public InteractionResult useOn(UseOnContext context) {
+        Level world = context.getLevel();
+        BlockPos pos = context.getClickedPos();
+        BlockState state = world.getBlockState(pos);
+        Block block = state.getBlock();
+
+        Set<Block> dirtToPathBlocks = Set.of(
+                Blocks.GRASS_BLOCK, Blocks.DIRT, Blocks.PODZOL, Blocks.COARSE_DIRT,
+                Blocks.MYCELIUM, Blocks.ROOTED_DIRT
+        );
+
+        Map<Block, Block> stripMap = new HashMap<>();
+        stripMap.put(Blocks.OAK_LOG, Blocks.STRIPPED_OAK_LOG);
+        stripMap.put(Blocks.SPRUCE_LOG, Blocks.STRIPPED_SPRUCE_LOG);
+        stripMap.put(Blocks.BIRCH_LOG, Blocks.STRIPPED_BIRCH_LOG);
+        stripMap.put(Blocks.ACACIA_LOG, Blocks.STRIPPED_ACACIA_LOG);
+        stripMap.put(Blocks.DARK_OAK_LOG, Blocks.STRIPPED_DARK_OAK_LOG);
+        stripMap.put(Blocks.MANGROVE_LOG, Blocks.STRIPPED_MANGROVE_LOG);
+        stripMap.put(Blocks.JUNGLE_LOG, Blocks.STRIPPED_JUNGLE_LOG);
+        stripMap.put(Blocks.OAK_WOOD, Blocks.STRIPPED_OAK_WOOD);
+        stripMap.put(Blocks.SPRUCE_WOOD, Blocks.STRIPPED_SPRUCE_WOOD);
+        stripMap.put(Blocks.BIRCH_WOOD, Blocks.STRIPPED_BIRCH_WOOD);
+        stripMap.put(Blocks.ACACIA_WOOD, Blocks.STRIPPED_ACACIA_WOOD);
+        stripMap.put(Blocks.DARK_OAK_WOOD, Blocks.STRIPPED_DARK_OAK_WOOD);
+        stripMap.put(Blocks.MANGROVE_WOOD, Blocks.STRIPPED_MANGROVE_WOOD);
+        stripMap.put(Blocks.JUNGLE_WOOD, Blocks.STRIPPED_JUNGLE_WOOD);
+
+        if (dirtToPathBlocks.contains(block)) {
+            BlockState newPathState = Blocks.DIRT_PATH.defaultBlockState();
+            world.setBlockAndUpdate(pos, newPathState);
+            world.playSound(null, pos, SoundEvents.SHOVEL_FLATTEN, SoundSource.BLOCKS, 1.0f, 1.0f);
+            return InteractionResult.SUCCESS;
+        }
+
+        Block strippedBlock = stripMap.get(block);
+        if (strippedBlock != null) {
+            BlockState newStrippedLog = strippedBlock.defaultBlockState();
+            world.setBlockAndUpdate(pos, newStrippedLog);
+            world.playSound(null, pos, SoundEvents.AXE_STRIP, SoundSource.BLOCKS, 1.0f, 1.0f);
+            return InteractionResult.SUCCESS;
+        }
+
+        return super.useOn(context);
+    }
+
+    @Override
+    public boolean canPerformAction(ItemStack stack, ItemAbility itemAbility) {
+        return super.canPerformAction(stack, itemAbility);
+    }
+
+    @Override
+    public void appendHoverText(ItemStack pStack, TooltipContext pContext, List<Component> components, TooltipFlag pTooltipFlag) {
+        if(Screen.hasShiftDown()) {
+            components.add(Component.translatable("tooltip.immersiveores.unbreakble.tooltip").withStyle(ChatFormatting.RED));
+            components.add(Component.translatable("tooltip.immersiveores.immunetofire.tooltip").withStyle(ChatFormatting.RED));
+        } else {
+            components.add(Component.translatable("tooltip.immersiveores.pressshiftformoreinfo.tooltip").withStyle(ChatFormatting.RED));
+        }
+    }
+}

@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 1.0,
+  "ingredient": "immersiveores:raw_vibranium",
+  "result": {
+    "count": 1,
+    "id": "immersiveores:vibranium_ingot"
+  }
+}

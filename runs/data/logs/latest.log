@@ -1,0 +1,50 @@
+[14:48:52] [main/INFO]: ModLauncher running: args [--mod, immersiveores, --all, --output, D:\Programmazione\Mod\Immersive Ores\NEOFORGE\1.21.3\src\generated\resources, --existing, D:\Programmazione\Mod\Immersive Ores\NEOFORGE\1.21.3\src\main\resources, --launchTarget, forgedatadev, --assetIndex, asset-index, --assetsDir, C:\Users\rosar\.gradle\caches\minecraft\assets, --gameDir, ., --fml.fmlVersion, 5.0.6, --fml.mcVersion, 1.21.3, --fml.neoForgeVersion, 21.3.57, --fml.neoFormVersion, 20241023.131943]
+[14:48:52] [main/INFO]: JVM identified as Amazon.com Inc. OpenJDK 64-Bit Server VM 21.0.5+11-LTS
+[14:48:52] [main/INFO]: ModLauncher 11.0.4+main.d2e20e43 starting: java version 21.0.5 by Amazon.com Inc.; OS Windows 11 arch amd64 version 10.0
+[14:48:52] [main/INFO]: ImmediateWindowProvider not loading because launch target is forgedatadev
+[14:48:52] [main/INFO]: SpongePowered MIXIN Subsystem Version=0.8.7 Source=union:/C:/Users/rosar/.gradle/caches/modules-2/files-2.1/net.fabricmc/sponge-mixin/0.15.2+mixin.0.8.7/2af2f021d8e02a0220dc27a7a72b4666d66d44ca/sponge-mixin-0.15.2+mixin.0.8.7.jar%23166!/ Service=ModLauncher Env=CLIENT
+[14:48:53] [main/INFO]: Found mod file "neoforge-21.3.57.jar" [locator: neoforge devenv provider ([D:\Programmazione\Mod\Immersive Ores\NEOFORGE\1.21.3\.gradle\repositories\ng_dummy_ng\net\neoforged\neoforge\21.3.57\neoforge-21.3.57.jar])]
+[14:48:53] [main/INFO]: Found mod file "neoforge-21.3.57.jar" [locator: neoforge devenv provider ([D:\Programmazione\Mod\Immersive Ores\NEOFORGE\1.21.3\.gradle\repositories\ng_dummy_ng\net\neoforged\neoforge\21.3.57\neoforge-21.3.57.jar])]
+[14:48:53] [main/INFO]: Found mod file "main" [locator: userdev mods and services, reader: mod manifest]
+[14:48:53] [main/INFO]: Found mod file "neoforge-21.3.57.jar" [locator: userdev mods and services, reader: mod manifest]
+[14:48:53] [main/INFO]: Found mod file "RoughlyEnoughItems-neoforge-17.0.790.jar" [locator: userdev mods and services, reader: mod manifest]
+[14:48:53] [main/INFO]: Found mod file "cloth-config-neoforge-16.0.141-neoforge.jar" [locator: userdev mods and services, reader: mod manifest]
+[14:48:53] [main/INFO]: Found mod file "architectury-neoforge-14.0.3.jar" [locator: userdev mods and services, reader: mod manifest]
+[14:48:53] [main/INFO]: Found gamelibrary file "mixinextras-neoforge-0.4.1.jar" [locator: userdev mods and services, reader: mod manifest]
+[14:48:53] [main/WARN]: Attempted to select a dependency jar for JarJar which was passed in as source: library:mixinextras.neoforge. Using Mod File: C:\Users\rosar\.gradle\caches\modules-2\files-2.1\io.github.llamalad7\mixinextras-neoforge\0.4.1\eff97772ecd0dcf8e52cdbafd3b3ccec425f8314\mixinextras-neoforge-0.4.1.jar
+[14:48:53] [main/INFO]: Found 1 dependencies adding them to mods collection
+[14:48:53] [main/INFO]: Found library file "net.neoforged.neoforge-coremods-21.3.57.jar" [parent: neoforge-21.3.57.jar, locator: jarinjar, reader: mod manifest]
+[14:48:53] [main/INFO]: 
+     Mod List:
+		Name Version (Mod Id)
+
+		Architectury 14.0.3 (architectury)
+		Cloth Config v16 API 16.0.141 (cloth_config)
+		ImmersiveOres 1.21.3-0.4 (immersiveores)
+		Minecraft 1.21.3 (minecraft)
+		NeoForge 21.3.57 (neoforge)
+		Roughly Enough Items (REI) 17.0.790 (roughlyenoughitems)
+[14:48:54] [main/INFO]: Launching target 'forgedatadev' with arguments [--gameDir, ., --assetsDir, C:\Users\rosar\.gradle\caches\minecraft\assets, --mod, immersiveores, --all, --output, D:\Programmazione\Mod\Immersive Ores\NEOFORGE\1.21.3\src\generated\resources, --existing, D:\Programmazione\Mod\Immersive Ores\NEOFORGE\1.21.3\src\main\resources, --assetIndex, asset-index]
+[30gen2025 14:48:54.831] [main/INFO] [net.neoforged.neoforge.data.loading.DatagenModLoader/]: Initializing Data Gatherer for mods [immersiveores]
+[30gen2025 14:48:54.844] [main/INFO] [MixinExtras|Service/]: Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.4.1).
+[30gen2025 14:49:03.264] [modloading-worker-0/INFO] [net.neoforged.neoforge.common.NeoForgeMod/NEOFORGE-MOD]: NeoForge mod loading, version 21.3.57, for MC 1.21.3
+[30gen2025 14:49:04.021] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/D:/Programmazione/Mod/Immersive%20Ores/NEOFORGE/1.21.3/.gradle/repositories/ng_dummy_ng/net/neoforged/neoforge/21.3.57/neoforge-21.3.57.jar%23221!/assets/.mcassetsroot' uses unexpected schema
+[30gen2025 14:49:04.022] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/D:/Programmazione/Mod/Immersive%20Ores/NEOFORGE/1.21.3/.gradle/repositories/ng_dummy_ng/net/neoforged/neoforge/21.3.57/neoforge-21.3.57.jar%23221!/data/.mcassetsroot' uses unexpected schema
+[30gen2025 14:49:04.230] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Recipes
+[30gen2025 14:49:05.782] [main/INFO] [net.minecraft.data.DataGenerator/]: Recipes finished after 1550 ms
+[30gen2025 14:49:05.783] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Block States: immersiveores
+[30gen2025 14:49:05.810] [main/INFO] [net.minecraft.data.DataGenerator/]: Block States: immersiveores finished after 27 ms
+[30gen2025 14:49:05.810] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Item Models: immersiveores
+[30gen2025 14:49:05.862] [main/INFO] [net.minecraft.data.DataGenerator/]: Item Models: immersiveores finished after 50 ms
+[30gen2025 14:49:05.862] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Loot Tables
+[30gen2025 14:49:05.880] [main/INFO] [net.minecraft.data.DataGenerator/]: Loot Tables finished after 17 ms
+[30gen2025 14:49:05.880] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:block mod id immersiveores
+[30gen2025 14:49:05.890] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:block mod id immersiveores finished after 9 ms
+[30gen2025 14:49:05.890] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:item mod id immersiveores
+[30gen2025 14:49:05.894] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:item mod id immersiveores finished after 3 ms
+[30gen2025 14:49:05.894] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Registries
+[30gen2025 14:49:05.991] [main/INFO] [net.minecraft.data.DataGenerator/]: Registries finished after 97 ms
+[30gen2025 14:49:05.991] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Advancements
+[30gen2025 14:49:06.015] [main/INFO] [net.minecraft.data.DataGenerator/]: Advancements finished after 23 ms
+[30gen2025 14:49:06.015] [main/INFO] [net.minecraft.data.DataGenerator/]: All providers took: 1784 ms
+[30gen2025 14:49:06.029] [main/INFO] [net.minecraft.data.HashCache/]: Caching: total files: 421, old count: 415, new count: 422, removed stale: 0, written: 6

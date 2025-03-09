@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "E": "immersiveores:vibranium_ingot",
+    "S": "immersiveores:vibranium_stick"
+  },
+  "pattern": [
+    "EEE",
+    " S ",
+    " S "
+  ],
+  "result": {
+    "count": 1,
+    "id": "immersiveores:vibranium_pickaxe"
+  }
+}

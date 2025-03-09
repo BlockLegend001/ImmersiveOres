@@ -1,0 +1,9 @@
+{
+	"favorites": [
+		"{data:{type:\"minecraft:item\",value:{count:1,id:\"minecraft:spruce_slab\"}},type:\"roughlyenoughitems:entry_stack\"}",
+		"{data:{type:\"minecraft:item\",value:{count:1,id:\"minecraft:stripped_oak_wood\"}},type:\"roughlyenoughitems:entry_stack\"}",
+		"{data:{type:\"minecraft:item\",value:{count:1,id:\"minecraft:spruce_fence\"}},type:\"roughlyenoughitems:entry_stack\"}"
+	],
+	"hiddenFavorites": [],
+	"displays": []
+}

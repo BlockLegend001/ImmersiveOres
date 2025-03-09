@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "N": "minecraft:netherite_leggings",
+    "V": "immersiveores:vibranium_ingot"
+  },
+  "pattern": [
+    "VVV",
+    "VNV",
+    "V V"
+  ],
+  "result": {
+    "count": 1,
+    "id": "immersiveores:vibranium_leggings"
+  }
+}

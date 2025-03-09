@@ -1,0 +1,7 @@
+/gamemode survival
+/summon minecraft:slime
+/gamemode creative
+/gamemode survival
+/gamemode creative
+/gamemode survival
+/summon minecraft:slime

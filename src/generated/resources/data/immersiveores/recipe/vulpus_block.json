@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "V": "immersiveores:vulpus_ingot"
+  },
+  "pattern": [
+    "VVV",
+    "VVV",
+    "VVV"
+  ],
+  "result": {
+    "count": 1,
+    "id": "immersiveores:vulpus_block"
+  }
+}

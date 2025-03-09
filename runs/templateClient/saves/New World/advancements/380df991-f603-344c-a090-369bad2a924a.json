@@ -1,0 +1,21 @@
+{
+  "minecraft:recipes/decorations/crafting_table": {
+    "criteria": {
+      "unlock_right_away": "2024-10-01 12:07:39 +0200"
+    },
+    "done": true
+  },
+  "minecraft:adventure/adventuring_time": {
+    "criteria": {
+      "minecraft:desert": "2024-10-01 12:07:39 +0200"
+    },
+    "done": false
+  },
+  "immersiveores:enderiumarmor": {
+    "criteria": {
+      "has_enderium_boots": "2024-10-02 13:11:54 +0200"
+    },
+    "done": false
+  },
+  "DataVersion": 3953
+}
