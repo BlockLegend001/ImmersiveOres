@@ -1,0 +1,98 @@
+package com.blocklegend001.immersiveores.datagen;
+
+import com.blocklegend001.immersiveores.ImmersiveOres;
+import com.blocklegend001.immersiveores.item.ModItems;
+import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
+import net.minecraft.data.client.ItemModelGenerator;
+import net.minecraft.data.client.Models;
+import net.minecraft.data.client.ModelProvider;
+import net.minecraft.data.client.TextureKey;
+import net.minecraft.data.client.TextureMap;
+import net.minecraft.item.ArmorItem;
+import net.minecraft.item.Item;
+import net.minecraft.item.trim.ArmorTrimMaterial;
+import net.minecraft.item.trim.ArmorTrimMaterials;
+import net.minecraft.registry.Registries;
+import net.minecraft.registry.Registry;
+import net.minecraft.registry.RegistryKey;
+import net.minecraft.util.Identifier;
+
+import java.util.LinkedHashMap;
+
+public class ModItemModelProvider extends ModelProvider {
+    private static final LinkedHashMap<RegistryKey<ArmorTrimMaterial>, Float> trimMaterials = new LinkedHashMap<>();
+
+    static {
+        trimMaterials.put(ArmorTrimMaterials.QUARTZ, 0.1F);
+        trimMaterials.put(ArmorTrimMaterials.IRON, 0.2F);
+        trimMaterials.put(ArmorTrimMaterials.NETHERITE, 0.3F);
+        trimMaterials.put(ArmorTrimMaterials.REDSTONE, 0.4F);
+        trimMaterials.put(ArmorTrimMaterials.COPPER, 0.5F);
+        trimMaterials.put(ArmorTrimMaterials.GOLD, 0.6F);
+        trimMaterials.put(ArmorTrimMaterials.EMERALD, 0.7F);
+        trimMaterials.put(ArmorTrimMaterials.DIAMOND, 0.8F);
+        trimMaterials.put(ArmorTrimMaterials.LAPIS, 0.9F);
+        trimMaterials.put(ArmorTrimMaterials.AMETHYST, 1.0F);
+    }
+
+    public ModItemModelProvider(FabricDataOutput output) {
+        super(output);
+    }
+
+    @Override
+    public void generateItemModels(ItemModelGenerator itemModelGenerator) {
+        handheldItem(itemModelGenerator, ModItems.VIBRANIUM_SWORD);
+        handheldItem(itemModelGenerator, ModItems.VIBRANIUM_PAXEL);
+        handheldItem(itemModelGenerator, ModItems.VIBRANIUM_PICKAXE);
+        handheldItem(itemModelGenerator, ModItems.VIBRANIUM_SHOVEL);
+        handheldItem(itemModelGenerator, ModItems.VIBRANIUM_HOE);
+        handheldItem(itemModelGenerator, ModItems.VIBRANIUM_HAMMER);
+        handheldItem(itemModelGenerator, ModItems.VIBRANIUM_EXCAVATOR);
+        handheldItem(itemModelGenerator, ModItems.VIBRANIUM_AXE);
+        simpleItem(itemModelGenerator, ModItems.VIBRANIUM_HORSE_ARMOR);
+        simpleItem(itemModelGenerator, ModItems.VIBRANIUM_HELMET);
+        simpleItem(itemModelGenerator, ModItems.VIBRANIUM_CHESTPLATE);
+        simpleItem(itemModelGenerator, ModItems.VIBRANIUM_LEGGINGS);
+        simpleItem(itemModelGenerator, ModItems.VIBRANIUM_BOOTS);
+        simpleItem(itemModelGenerator, ModItems.RAW_VIBRANIUM);
+        simpleItem(itemModelGenerator, ModItems.VIBRANIUM_INGOT);
+        simpleItem(itemModelGenerator, ModItems.VIBRANIUM_NUGGET);
+        simpleItem(itemModelGenerator, ModItems.VIBRANIUM_STICK);
+
+        trimmedArmorItem(itemModelGenerator, ModItems.VIBRANIUM_HELMET);
+        trimmedArmorItem(itemModelGenerator, ModItems.VIBRANIUM_CHESTPLATE);
+        trimmedArmorItem(itemModelGenerator, ModItems.VIBRANIUM_LEGGINGS);
+        trimmedArmorItem(itemModelGenerator, ModItems.VIBRANIUM_BOOTS);
+
+        // Repeat similarly for ENDERIUM and VULPUS items
+    }
+
+    private void simpleItem(ItemModelGenerator generator, Item item) {
+        generator.register(item, Models.GENERATED);
+    }
+
+    private void handheldItem(ItemModelGenerator generator, Item item) {
+        generator.register(item, Models.HANDHELD);
+    }
+
+    private void trimmedArmorItem(ItemModelGenerator generator, Item item) {
+        if (item instanceof ArmorItem armorItem) {
+            trimMaterials.forEach((trimMaterial, trimValue) -> {
+                String armorType = switch (armorItem.getSlot()) {
+                    case HEAD -> "helmet";
+                    case CHEST -> "chestplate";
+                    case LEGS -> "leggings";
+                    case FEET -> "boots";
+                    default -> "";
+                };
+
+                Identifier armorItemResLoc = Identifier.of(ImmersiveOres.MOD_ID, STR."item/\{Registries.ITEM.getId(item).getPath()}");
+                Identifier trimResLoc = Identifier.of("minecraft", STR."trims/items/\{armorType}_trim_\{trimMaterial.location().getPath()}");
+                Identifier trimNameResLoc = Identifier.of(ImmersiveOres.MOD_ID, STR."item/\{Registries.ITEM.getId(item).getPath()}_\{trimMaterial.getRegistryRef().getRegistry()}_trim");
+
+                generator.register(item, Models.GENERATED);
+                // Handle override if needed
+            });
+        }
+    }
+}

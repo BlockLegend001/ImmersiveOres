@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "immersiveores:raw_vibranium_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "immersiveores:raw_vibranium"
+  }
+}

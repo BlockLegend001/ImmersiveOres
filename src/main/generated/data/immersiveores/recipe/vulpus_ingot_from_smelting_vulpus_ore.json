@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 225,
+  "experience": 1.0,
+  "group": "immersiveores:vulpus_ingot_cooked",
+  "ingredient": {
+    "item": "immersiveores:vulpus_ore"
+  },
+  "result": {
+    "id": "immersiveores:vulpus_ingot"
+  }
+}
