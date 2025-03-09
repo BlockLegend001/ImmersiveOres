@@ -1,0 +1,14 @@
+/gamemode survival
+/summon minecraft:spider
+/gamemode creative
+/gamemode survival
+/gamemode spectator
+/effect give Dev minecraft:night_vision infinite 99
+/gamemode survival
+/gamemode creative
+/gamemode spectator
+/effect give Dev minecraft:night_vision infinite 99
+/gamemode survival
+/gamemode creative
+/gamemode spectator
+/gamemode creative

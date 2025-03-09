@@ -1,0 +1,347 @@
+{
+  "minecraft:recipes/decorations/crafting_table": {
+    "criteria": {
+      "unlock_right_away": "2024-12-09 20:13:23 +0100"
+    },
+    "done": true
+  },
+  "minecraft:adventure/adventuring_time": {
+    "criteria": {
+      "minecraft:meadow": "2024-12-09 20:13:24 +0100"
+    },
+    "done": false
+  },
+  "minecraft:story/root": {
+    "criteria": {
+      "crafting_table": "2024-12-09 20:15:56 +0100"
+    },
+    "done": true
+  },
+  "immersiveores:recipes/combat/vibranium_sword": {
+    "criteria": {
+      "has_vibranium_ingot": "2024-12-09 20:16:02 +0100"
+    },
+    "done": true
+  },
+  "immersiveores:recipes/tools/vibranium_shovel": {
+    "criteria": {
+      "has_vibranium_ingot": "2024-12-09 20:16:02 +0100"
+    },
+    "done": true
+  },
+  "immersiveores:recipes/combat/vibranium_helmet": {
+    "criteria": {
+      "has_vibranium_ingot": "2024-12-09 20:16:02 +0100"
+    },
+    "done": true
+  },
+  "immersiveores:recipes/misc/vibranium_stick": {
+    "criteria": {
+      "has_vibranium_ingot": "2024-12-09 20:16:02 +0100"
+    },
+    "done": true
+  },
+  "immersiveores:recipes/tools/vibranium_axe": {
+    "criteria": {
+      "has_vibranium_ingot": "2024-12-09 20:16:02 +0100"
+    },
+    "done": true
+  },
+  "immersiveores:recipes/combat/vibranium_boots": {
+    "criteria": {
+      "has_vibranium_ingot": "2024-12-09 20:16:02 +0100"
+    },
+    "done": true
+  },
+  "immersiveores:recipes/tools/vibranium_excavator": {
+    "criteria": {
+      "has_vibranium_ingot": "2024-12-09 20:16:02 +0100"
+    },
+    "done": true
+  },
+  "immersiveores:recipes/building_blocks/vibranium_block": {
+    "criteria": {
+      "has_vibranium_ingot": "2024-12-09 20:16:02 +0100"
+    },
+    "done": true
+  },
+  "immersiveores:recipes/tools/vibranium_hoe": {
+    "criteria": {
+      "has_vibranium_ingot": "2024-12-09 20:16:02 +0100"
+    },
+    "done": true
+  },
+  "immersiveores:recipes/combat/vibranium_horse_armor": {
+    "criteria": {
+      "has_vibranium_ingot": "2024-12-09 20:16:02 +0100"
+    },
+    "done": true
+  },
+  "immersiveores:recipes/combat/vibranium_chestplate": {
+    "criteria": {
+      "has_vibranium_ingot": "2024-12-09 20:16:02 +0100"
+    },
+    "done": true
+  },
+  "immersiveores:recipes/tools/vibranium_hammer": {
+    "criteria": {
+      "has_vibranium_ingot": "2024-12-09 20:16:02 +0100"
+    },
+    "done": true
+  },
+  "immersiveores:recipes/misc/vibranium_nugget": {
+    "criteria": {
+      "has_vibranium_ingot": "2024-12-09 20:16:02 +0100"
+    },
+    "done": true
+  },
+  "immersiveores:root": {
+    "criteria": {
+      "has_vibranium_ingot": "2024-12-09 20:16:02 +0100"
+    },
+    "done": true
+  },
+  "immersiveores:recipes/tools/vibranium_pickaxe": {
+    "criteria": {
+      "has_vibranium_ingot": "2024-12-09 20:16:02 +0100"
+    },
+    "done": true
+  },
+  "immersiveores:recipes/combat/vibranium_leggings": {
+    "criteria": {
+      "has_vibranium_ingot": "2024-12-09 20:16:02 +0100"
+    },
+    "done": true
+  },
+  "immersiveores:recipes/combat/vibranium_bow": {
+    "criteria": {
+      "has_vibranium_ingot": "2024-12-09 20:16:02 +0100"
+    },
+    "done": true
+  },
+  "immersiveores:vibraniumarmor": {
+    "criteria": {
+      "has_vibranium_chestplate": "2024-12-09 20:16:08 +0100",
+      "has_vibranium_boots": "2025-01-07 00:29:30 +0100"
+    },
+    "done": false
+  },
+  "immersiveores:recipes/combat/vulpus_boots": {
+    "criteria": {
+      "has_vulpus_ingot": "2024-12-09 20:16:15 +0100"
+    },
+    "done": true
+  },
+  "immersiveores:recipes/combat/vulpus_helmet": {
+    "criteria": {
+      "has_vulpus_ingot": "2024-12-09 20:16:15 +0100"
+    },
+    "done": true
+  },
+  "immersiveores:recipes/combat/vulpus_leggings": {
+    "criteria": {
+      "has_vulpus_ingot": "2024-12-09 20:16:15 +0100"
+    },
+    "done": true
+  },
+  "immersiveores:recipes/tools/vulpus_shovel": {
+    "criteria": {
+      "has_vulpus_ingot": "2024-12-09 20:16:15 +0100"
+    },
+    "done": true
+  },
+  "immersiveores:recipes/combat/vulpus_bow": {
+    "criteria": {
+      "has_vulpus_ingot": "2024-12-09 20:16:15 +0100"
+    },
+    "done": true
+  },
+  "immersiveores:recipes/combat/vulpus_sword": {
+    "criteria": {
+      "has_vulpus_ingot": "2024-12-09 20:16:15 +0100"
+    },
+    "done": true
+  },
+  "immersiveores:recipes/tools/vulpus_hoe": {
+    "criteria": {
+      "has_vulpus_ingot": "2024-12-09 20:16:15 +0100"
+    },
+    "done": true
+  },
+  "immersiveores:recipes/building_blocks/vulpus_block": {
+    "criteria": {
+      "has_vulpus_ingot": "2024-12-09 20:16:15 +0100"
+    },
+    "done": true
+  },
+  "immersiveores:vulpus": {
+    "criteria": {
+      "has_vulpus_ingot": "2024-12-09 20:16:15 +0100"
+    },
+    "done": true
+  },
+  "immersiveores:recipes/tools/vulpus_pickaxe": {
+    "criteria": {
+      "has_vulpus_ingot": "2024-12-09 20:16:15 +0100"
+    },
+    "done": true
+  },
+  "immersiveores:recipes/tools/vulpus_excavator": {
+    "criteria": {
+      "has_vulpus_ingot": "2024-12-09 20:16:15 +0100"
+    },
+    "done": true
+  },
+  "immersiveores:recipes/combat/vulpus_chestplate": {
+    "criteria": {
+      "has_vulpus_ingot": "2024-12-09 20:16:15 +0100"
+    },
+    "done": true
+  },
+  "immersiveores:recipes/tools/vulpus_hammer": {
+    "criteria": {
+      "has_vulpus_ingot": "2024-12-09 20:16:15 +0100"
+    },
+    "done": true
+  },
+  "immersiveores:recipes/combat/vulpus_horse_armor": {
+    "criteria": {
+      "has_vulpus_ingot": "2024-12-09 20:16:15 +0100"
+    },
+    "done": true
+  },
+  "immersiveores:recipes/tools/vulpus_axe": {
+    "criteria": {
+      "has_vulpus_ingot": "2024-12-09 20:16:15 +0100"
+    },
+    "done": true
+  },
+  "immersiveores:recipes/misc/vulpus_stick": {
+    "criteria": {
+      "has_vulpus_ingot": "2024-12-09 20:16:15 +0100"
+    },
+    "done": true
+  },
+  "immersiveores:recipes/misc/vulpus_nugget": {
+    "criteria": {
+      "has_vulpus_ingot": "2024-12-09 20:16:15 +0100"
+    },
+    "done": true
+  },
+  "immersiveores:vulpusarmor": {
+    "criteria": {
+      "has_vulpus_chestplate": "2024-12-09 20:16:23 +0100"
+    },
+    "done": false
+  },
+  "immersiveores:recipes/tools/enderium_hammer": {
+    "criteria": {
+      "has_enderium_ingot": "2024-12-09 20:16:32 +0100"
+    },
+    "done": true
+  },
+  "immersiveores:recipes/combat/enderium_helmet": {
+    "criteria": {
+      "has_enderium_ingot": "2024-12-09 20:16:32 +0100"
+    },
+    "done": true
+  },
+  "immersiveores:recipes/combat/enderium_sword": {
+    "criteria": {
+      "has_enderium_ingot": "2024-12-09 20:16:32 +0100"
+    },
+    "done": true
+  },
+  "immersiveores:recipes/combat/enderium_horse_armor": {
+    "criteria": {
+      "has_enderium_ingot": "2024-12-09 20:16:32 +0100"
+    },
+    "done": true
+  },
+  "immersiveores:recipes/building_blocks/enderium_block": {
+    "criteria": {
+      "has_enderium_ingot": "2024-12-09 20:16:32 +0100"
+    },
+    "done": true
+  },
+  "immersiveores:recipes/combat/enderium_leggings": {
+    "criteria": {
+      "has_enderium_ingot": "2024-12-09 20:16:32 +0100"
+    },
+    "done": true
+  },
+  "immersiveores:recipes/tools/enderium_axe": {
+    "criteria": {
+      "has_enderium_ingot": "2024-12-09 20:16:32 +0100"
+    },
+    "done": true
+  },
+  "immersiveores:recipes/tools/enderium_pickaxe": {
+    "criteria": {
+      "has_enderium_ingot": "2024-12-09 20:16:32 +0100"
+    },
+    "done": true
+  },
+  "immersiveores:recipes/combat/enderium_chestplate": {
+    "criteria": {
+      "has_enderium_ingot": "2024-12-09 20:16:32 +0100"
+    },
+    "done": true
+  },
+  "immersiveores:recipes/tools/enderium_hoe": {
+    "criteria": {
+      "has_enderium_ingot": "2024-12-09 20:16:32 +0100"
+    },
+    "done": true
+  },
+  "immersiveores:recipes/tools/enderium_shovel": {
+    "criteria": {
+      "has_enderium_ingot": "2024-12-09 20:16:32 +0100"
+    },
+    "done": true
+  },
+  "immersiveores:enderium": {
+    "criteria": {
+      "has_enderium_ingot": "2024-12-09 20:16:32 +0100"
+    },
+    "done": true
+  },
+  "immersiveores:recipes/misc/enderium_nugget": {
+    "criteria": {
+      "has_enderium_ingot": "2024-12-09 20:16:32 +0100"
+    },
+    "done": true
+  },
+  "immersiveores:recipes/combat/enderium_bow": {
+    "criteria": {
+      "has_enderium_ingot": "2024-12-09 20:16:32 +0100"
+    },
+    "done": true
+  },
+  "immersiveores:recipes/tools/enderium_excavator": {
+    "criteria": {
+      "has_enderium_ingot": "2024-12-09 20:16:32 +0100"
+    },
+    "done": true
+  },
+  "immersiveores:recipes/misc/enderium_stick": {
+    "criteria": {
+      "has_enderium_ingot": "2024-12-09 20:16:32 +0100"
+    },
+    "done": true
+  },
+  "immersiveores:recipes/combat/enderium_boots": {
+    "criteria": {
+      "has_enderium_ingot": "2024-12-09 20:16:32 +0100"
+    },
+    "done": true
+  },
+  "immersiveores:enderiumarmor": {
+    "criteria": {
+      "has_enderium_chestplate": "2024-12-09 20:16:38 +0100",
+      "has_enderium_boots": "2024-12-09 20:16:42 +0100"
+    },
+    "done": false
+  },
+  "DataVersion": 4189
+}
