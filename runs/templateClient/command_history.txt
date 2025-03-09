@@ -1,0 +1,32 @@
+/gamemode survival
+/gamemode cd
+/gamemode creative
+/execute at Dev in minecraft:the_end run tp 0 0 0
+/effect give Dev minecraft:night_vision infinite 99
+/gamemode spectator
+/execute at Dev in minecraft:the_end run tp 0 0 0
+/effect give Dev minecraft:night_vision infinite 99
+/gamemode spectator
+/gamemode survival
+/effect give Dev minecraft:night_vision infinite 99
+/gamemode survival
+/gamemode spectator
+/execute at Dev in minecraft:the_nether run tp 0 0 0
+/execute at Dev in minecraft:the_end run tp 0 0 0
+/gamemode survival
+/gamemode creative
+/gamemode survival
+/gamemode creative
+/clear
+/gamemode creative
+/gamemode survival
+/clear
+/gamemode creative
+/gamemode survival
+/clear
+/give Dev immersiveores:enderium_boots
+/clear
+/give Dev immersiveores:enderium_boots
+/gamemode creative
+/gamemode survival
+/gamemode creative

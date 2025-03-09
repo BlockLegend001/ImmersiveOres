@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "N": {
+      "item": "minecraft:netherite_helmet"
+    },
+    "V": {
+      "item": "immersiveores:vibranium_ingot"
+    }
+  },
+  "pattern": [
+    "VVV",
+    "VNV",
+    "   "
+  ],
+  "result": {
+    "count": 1,
+    "id": "immersiveores:vibranium_helmet"
+  }
+}

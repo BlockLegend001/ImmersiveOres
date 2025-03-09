@@ -1,0 +1,135 @@
+---- Minecraft Crash Report ----
+// Daisy, daisy...
+
+Time: 2024-10-02 13:12:04
+Description: Ticking player
+
+java.lang.NullPointerException: Cannot invoke "java.lang.Boolean.booleanValue()" because the return value of "java.util.Map.get(Object)" is null
+	at TRANSFORMER/immersiveores@1.21-0.1/com.blocklegend001.immersiveores.event.ModEventHandler.onLivingEquipmentChange(ModEventHandler.java:36) ~[%23191!/:?] {re:classloading}
+	at MC-BOOTSTRAP/net.neoforged.bus/net.neoforged.bus.EventBus.post(EventBus.java:350) ~[bus-8.0.1.jar%23147!/:?] {}
+	at MC-BOOTSTRAP/net.neoforged.bus/net.neoforged.bus.EventBus.post(EventBus.java:315) ~[bus-8.0.1.jar%23147!/:?] {}
+	at TRANSFORMER/minecraft@1.21/net.minecraft.world.entity.LivingEntity.collectEquipmentChanges(LivingEntity.java:2541) ~[neoforge-21.0.167.jar%23189!/:?] {re:classloading,pl:accesstransformer:B}
+	at TRANSFORMER/minecraft@1.21/net.minecraft.world.entity.LivingEntity.detectEquipmentUpdates(LivingEntity.java:2520) ~[neoforge-21.0.167.jar%23189!/:?] {re:classloading,pl:accesstransformer:B}
+	at TRANSFORMER/minecraft@1.21/net.minecraft.world.entity.LivingEntity.tick(LivingEntity.java:2420) ~[neoforge-21.0.167.jar%23189!/:?] {re:classloading,pl:accesstransformer:B}
+	at TRANSFORMER/minecraft@1.21/net.minecraft.world.entity.player.Player.tick(Player.java:281) ~[neoforge-21.0.167.jar%23189!/:?] {re:classloading,pl:accesstransformer:B,re:mixin,pl:accesstransformer:B}
+	at TRANSFORMER/minecraft@1.21/net.minecraft.server.level.ServerPlayer.doTick(ServerPlayer.java:556) ~[neoforge-21.0.167.jar%23189!/:?] {re:classloading,re:mixin}
+	at TRANSFORMER/minecraft@1.21/net.minecraft.server.network.ServerGamePacketListenerImpl.tick(ServerGamePacketListenerImpl.java:260) ~[neoforge-21.0.167.jar%23189!/:?] {re:classloading}
+	at TRANSFORMER/minecraft@1.21/net.minecraft.network.Connection.tick(Connection.java:412) ~[neoforge-21.0.167.jar%23189!/:?] {re:classloading}
+	at TRANSFORMER/minecraft@1.21/net.minecraft.server.network.ServerConnectionListener.tick(ServerConnectionListener.java:159) ~[neoforge-21.0.167.jar%23189!/:?] {re:classloading}
+	at TRANSFORMER/minecraft@1.21/net.minecraft.server.MinecraftServer.tickChildren(MinecraftServer.java:1051) ~[neoforge-21.0.167.jar%23189!/:?] {re:classloading,pl:accesstransformer:B,re:mixin,pl:accesstransformer:B}
+	at TRANSFORMER/minecraft@1.21/net.minecraft.server.MinecraftServer.tickServer(MinecraftServer.java:917) ~[neoforge-21.0.167.jar%23189!/:?] {re:classloading,pl:accesstransformer:B,re:mixin,pl:accesstransformer:B}
+	at TRANSFORMER/minecraft@1.21/net.minecraft.client.server.IntegratedServer.tickServer(IntegratedServer.java:110) ~[neoforge-21.0.167.jar%23189!/:?] {re:classloading,pl:runtimedistcleaner:A}
+	at TRANSFORMER/minecraft@1.21/net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:707) ~[neoforge-21.0.167.jar%23189!/:?] {re:classloading,pl:accesstransformer:B,re:mixin,pl:accesstransformer:B}
+	at TRANSFORMER/minecraft@1.21/net.minecraft.server.MinecraftServer.lambda$spin$2(MinecraftServer.java:267) ~[neoforge-21.0.167.jar%23189!/:?] {re:classloading,pl:accesstransformer:B,re:mixin,pl:accesstransformer:B}
+	at java.base/java.lang.Thread.run(Thread.java:1583) [?:?] {}
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Server thread
+Stacktrace:
+	at TRANSFORMER/immersiveores@1.21-0.1/com.blocklegend001.immersiveores.event.ModEventHandler.onLivingEquipmentChange(ModEventHandler.java:36) ~[%23191!/:?] {re:classloading}
+	at MC-BOOTSTRAP/net.neoforged.bus/net.neoforged.bus.EventBus.post(EventBus.java:350) ~[bus-8.0.1.jar%23147!/:?] {}
+	at MC-BOOTSTRAP/net.neoforged.bus/net.neoforged.bus.EventBus.post(EventBus.java:315) ~[bus-8.0.1.jar%23147!/:?] {}
+	at TRANSFORMER/minecraft@1.21/net.minecraft.world.entity.LivingEntity.collectEquipmentChanges(LivingEntity.java:2541) ~[neoforge-21.0.167.jar%23189!/:?] {re:classloading,pl:accesstransformer:B}
+	at TRANSFORMER/minecraft@1.21/net.minecraft.world.entity.LivingEntity.detectEquipmentUpdates(LivingEntity.java:2520) ~[neoforge-21.0.167.jar%23189!/:?] {re:classloading,pl:accesstransformer:B}
+	at TRANSFORMER/minecraft@1.21/net.minecraft.world.entity.LivingEntity.tick(LivingEntity.java:2420) ~[neoforge-21.0.167.jar%23189!/:?] {re:classloading,pl:accesstransformer:B}
+	at TRANSFORMER/minecraft@1.21/net.minecraft.world.entity.player.Player.tick(Player.java:281) ~[neoforge-21.0.167.jar%23189!/:?] {re:classloading,pl:accesstransformer:B,re:mixin,pl:accesstransformer:B}
+-- Player being ticked --
+Details:
+	Entity Type: minecraft:player (net.minecraft.server.level.ServerPlayer)
+	Entity ID: 121
+	Entity Name: Dev
+	Entity's Exact location: 218.29, 82.12, -350.08
+	Entity's Block location: World: (218,82,-351), Section: (at 10,2,1 in 13,5,-22; chunk contains blocks 208,-64,-352 to 223,319,-337), Region: (0,-1; contains chunks 0,-32 to 31,-1, blocks 0,-64,-512 to 511,319,-1)
+	Entity's Momentum: 0.00, 0.00, 0.00
+	Entity's Passengers: []
+	Entity's Vehicle: null
+Stacktrace:
+	at TRANSFORMER/minecraft@1.21/net.minecraft.server.level.ServerPlayer.doTick(ServerPlayer.java:556) ~[neoforge-21.0.167.jar%23189!/:?] {re:classloading,re:mixin}
+	at TRANSFORMER/minecraft@1.21/net.minecraft.server.network.ServerGamePacketListenerImpl.tick(ServerGamePacketListenerImpl.java:260) ~[neoforge-21.0.167.jar%23189!/:?] {re:classloading}
+	at TRANSFORMER/minecraft@1.21/net.minecraft.network.Connection.tick(Connection.java:412) ~[neoforge-21.0.167.jar%23189!/:?] {re:classloading}
+	at TRANSFORMER/minecraft@1.21/net.minecraft.server.network.ServerConnectionListener.tick(ServerConnectionListener.java:159) ~[neoforge-21.0.167.jar%23189!/:?] {re:classloading}
+	at TRANSFORMER/minecraft@1.21/net.minecraft.server.MinecraftServer.tickChildren(MinecraftServer.java:1051) ~[neoforge-21.0.167.jar%23189!/:?] {re:classloading,pl:accesstransformer:B,re:mixin,pl:accesstransformer:B}
+	at TRANSFORMER/minecraft@1.21/net.minecraft.server.MinecraftServer.tickServer(MinecraftServer.java:917) ~[neoforge-21.0.167.jar%23189!/:?] {re:classloading,pl:accesstransformer:B,re:mixin,pl:accesstransformer:B}
+	at TRANSFORMER/minecraft@1.21/net.minecraft.client.server.IntegratedServer.tickServer(IntegratedServer.java:110) ~[neoforge-21.0.167.jar%23189!/:?] {re:classloading,pl:runtimedistcleaner:A}
+	at TRANSFORMER/minecraft@1.21/net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:707) ~[neoforge-21.0.167.jar%23189!/:?] {re:classloading,pl:accesstransformer:B,re:mixin,pl:accesstransformer:B}
+	at TRANSFORMER/minecraft@1.21/net.minecraft.server.MinecraftServer.lambda$spin$2(MinecraftServer.java:267) ~[neoforge-21.0.167.jar%23189!/:?] {re:classloading,pl:accesstransformer:B,re:mixin,pl:accesstransformer:B}
+	at java.base/java.lang.Thread.run(Thread.java:1583) [?:?] {}
+
+
+-- System Details --
+Details:
+	Minecraft Version: 1.21
+	Minecraft Version ID: 1.21
+	Operating System: Windows 11 (amd64) version 10.0
+	Java Version: 21.0.4, Amazon.com Inc.
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode, sharing), Amazon.com Inc.
+	Memory: 234057696 bytes (223 MiB) / 975175680 bytes (930 MiB) up to 4278190080 bytes (4080 MiB)
+	CPUs: 6
+	Processor Vendor: GenuineIntel
+	Processor Name: Intel(R) Core(TM) i5-9400F CPU @ 2.90GHz
+	Identifier: Intel64 Family 6 Model 158 Stepping 10
+	Microarchitecture: Coffee Lake
+	Frequency (GHz): 2.90
+	Number of physical packages: 1
+	Number of physical CPUs: 6
+	Number of logical CPUs: 6
+	Graphics card #0 name: NVIDIA GeForce GTX 1650
+	Graphics card #0 vendor: NVIDIA
+	Graphics card #0 VRAM (MiB): 4096.00
+	Graphics card #0 deviceId: VideoController1
+	Graphics card #0 versionInfo: 32.0.15.6109
+	Memory slot #0 capacity (MiB): 8192.00
+	Memory slot #0 clockSpeed (GHz): 2.67
+	Memory slot #0 type: DDR4
+	Memory slot #1 capacity (MiB): 8192.00
+	Memory slot #1 clockSpeed (GHz): 2.67
+	Memory slot #1 type: DDR4
+	Virtual memory max (MiB): 23998.87
+	Virtual memory used (MiB): 16799.29
+	Swap memory total (MiB): 7680.00
+	Swap memory used (MiB): 396.62
+	Space in storage for jna.tmpdir (MiB): <path not set>
+	Space in storage for org.lwjgl.system.SharedLibraryExtractPath (MiB): <path not set>
+	Space in storage for io.netty.native.workdir (MiB): <path not set>
+	Space in storage for java.io.tmpdir (MiB): available: 45444.05, total: 228306.77
+	Space in storage for workdir (MiB): available: 82603.23, total: 953867.00
+	JVM Flags: 1 total; -XX:HeapDumpPath=MojangTricksIntelDriversForPerformance_javaw.exe_minecraft.exe.heapdump
+	Server Running: true
+	Player Count: 1 / 8; [ServerPlayer['Dev'/121, l='ServerLevel[New World]', x=218.29, y=82.12, z=-350.08]]
+	Active Data Packs: vanilla, mod_data, mod/roughlyenoughitems (incompatible), mod/cloth_config (incompatible), mod/immersiveores, mod/architectury (incompatible), mod/neoforge, mod/jei (incompatible)
+	Available Data Packs: bundle, trade_rebalance, vanilla, mod/architectury (incompatible), mod/cloth_config (incompatible), mod/immersiveores, mod/jei (incompatible), mod/neoforge, mod/roughlyenoughitems (incompatible), mod_data
+	Enabled Feature Flags: minecraft:vanilla
+	World Generation: Stable
+	World Seed: -5738513575540594920
+	Type: Integrated Server (map_client.txt)
+	Is Modded: Definitely; Client brand changed to 'neoforge'; Server brand changed to 'neoforge'
+	Launched Version: 21.0.167
+	ModLauncher: 11.0.4+main.d2e20e43
+	ModLauncher launch target: forgeclientuserdev
+	ModLauncher services: 
+		sponge-mixin-0.14.0+mixin.0.8.6.jar mixin PLUGINSERVICE 
+		loader-4.0.23.jar slf4jfixer PLUGINSERVICE 
+		loader-4.0.23.jar runtime_enum_extender PLUGINSERVICE 
+		at-modlauncher-10.0.1.jar accesstransformer PLUGINSERVICE 
+		loader-4.0.23.jar runtimedistcleaner PLUGINSERVICE 
+		modlauncher-11.0.4.jar mixin TRANSFORMATIONSERVICE 
+		modlauncher-11.0.4.jar fml TRANSFORMATIONSERVICE 
+	FML Language Providers: 
+		javafml@4.0
+		lowcodefml@4.0
+		minecraft@4.0
+	Mod List: 
+		neoforge-21.0.167.jar                             |Minecraft                     |minecraft                     |1.21                |Manifest: a1:d4:5e:04:4f:d3:d6:e0:7b:37:97:cf:77:b0:de:ad:4a:47:ce:8c:96:49:5f:0a:cf:8c:ae:b2:6d:4b:8a:3f
+		RoughlyEnoughItems-neoforge-16.0.744.jar          |Roughly Enough Items (REI)    |roughlyenoughitems            |16.0.744            |Manifest: NOSIGNATURE
+		cloth-config-neoforge-15.0.127-neoforge.jar       |Cloth Config v15 API          |cloth_config                  |15.0.127            |Manifest: NOSIGNATURE
+		main                                              |ImmersiveOres                 |immersiveores                 |1.21-0.1            |Manifest: NOSIGNATURE
+		architectury-neoforge-13.0.5.jar                  |Architectury                  |architectury                  |13.0.5              |Manifest: NOSIGNATURE
+		neoforge-21.0.167.jar                             |NeoForge                      |neoforge                      |21.0.167            |Manifest: NOSIGNATURE
+		jei-1.21-neoforge-19.8.2.99.jar                   |Just Enough Items             |jei                           |19.8.2.99           |Manifest: NOSIGNATURE
+	Crash Report UUID: e0371c65-75a2-4319-8154-e3556b915c66
+	FML: 4.0.23
+	NeoForge: 21.0.167
