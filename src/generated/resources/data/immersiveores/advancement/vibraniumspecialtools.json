@@ -1,0 +1,59 @@
+{
+  "parent": "immersiveores:vibraniumtools",
+  "criteria": {
+    "has_vibranium_excavator": {
+      "conditions": {
+        "items": [
+          {
+            "items": "immersiveores:vibranium_excavator"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_vibranium_hammer": {
+      "conditions": {
+        "items": [
+          {
+            "items": "immersiveores:vibranium_hammer"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_vibranium_paxel": {
+      "conditions": {
+        "items": [
+          {
+            "items": "immersiveores:vibranium_paxel"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancement.immersiveores.vibraniumspecialtools.descrption"
+    },
+    "icon": {
+      "count": 1,
+      "id": "immersiveores:vibranium_paxel"
+    },
+    "title": {
+      "translate": "advancement.immersiveores.vibraniumspecialtools.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_vibranium_hammer"
+    ],
+    [
+      "has_vibranium_paxel"
+    ],
+    [
+      "has_vibranium_excavator"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

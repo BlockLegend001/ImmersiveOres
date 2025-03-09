@@ -1,0 +1,62 @@
+[19feb2025 00:50:34.148] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forge_userdev_data, --assetIndex, 17, --assetsDir, C:\Users\rosar\.gradle\caches\forge_gradle\assets, --gameDir, ., --mod, immersiveores, --all, --output, D:\Programmazione\Mod\Immersive Ores\FORGE\1.21\src\generated\resources, --existing, D:\Programmazione\Mod\Immersive Ores\FORGE\1.21\src\main\resources]
+[19feb2025 00:50:34.160] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: JVM identified as Amazon.com Inc. OpenJDK 64-Bit Server VM 21.0.5+11-LTS
+[19feb2025 00:50:34.162] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 10.2.1 starting: java version 21.0.5 by Amazon.com Inc.; OS Windows 11 arch amd64 version 10.0
+[19feb2025 00:50:34.313] [main/INFO] [net.minecraftforge.fml.loading.ImmediateWindowHandler/]: ImmediateWindowProvider not loading because launch target is forge_userdev_data
+[19feb2025 00:50:34.434] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.7 Source=jar:file:///C:/Users/rosar/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.7/8ab114ac385e6dbdad5efafe28aba4df8120915f/mixin-0.8.7.jar!/ Service=ModLauncher Env=UNKNOWN
+[19feb2025 00:50:35.618] [main/INFO] [net.minecraftforge.fml.loading.moddiscovery.JarInJarDependencyLocator/]: No dependencies to load found. Skipping!
+[19feb2025 00:50:36.591] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forge_userdev_data' with arguments [--gameDir, ., --assetsDir, C:\Users\rosar\.gradle\caches\forge_gradle\assets, --assetIndex, 17, --mod, immersiveores, --all, --output, D:\Programmazione\Mod\Immersive Ores\FORGE\1.21\src\generated\resources, --existing, D:\Programmazione\Mod\Immersive Ores\FORGE\1.21\src\main\resources]
+[19feb2025 00:50:43.905] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 51.0.33, for MC 1.21 with MCP 20240613.102039
+[19feb2025 00:50:43.905] [modloading-worker-0/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v51.0.33 Initialized
+[19feb2025 00:50:43.942] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Opening jdk.naming.dns/com.sun.jndi.dns to java.naming
+[19feb2025 00:50:44.290] [modloading-worker-0/ERROR] [mezz.jei.common.config.file.ConfigSchema/]: Failed to save config file: 'D:\Programmazione\Mod\Immersive Ores\FORGE\1.21\run-data\config\jei\jei-colors.ini'
+java.nio.file.FileSystemException: D:\Programmazione\Mod\Immersive Ores\FORGE\1.21\run-data\config\jei\9313811227815389324.tmp: Impossibile accedere al file. Il file è utilizzato da un altro processo
+	at java.base/sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:92) ~[?:?]
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:103) ~[?:?]
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:108) ~[?:?]
+	at java.base/sun.nio.fs.WindowsFileSystemProvider.implDelete(WindowsFileSystemProvider.java:273) ~[?:?]
+	at java.base/sun.nio.fs.AbstractFileSystemProvider.delete(AbstractFileSystemProvider.java:104) ~[?:?]
+	at java.base/java.nio.file.Files.delete(Files.java:1152) ~[?:?]
+	at TRANSFORMER/jei@19.8.2.99/mezz.jei.core.util.PathUtil.writeUsingTempFile(PathUtil.java:25) ~[jei-1.21-forge-19.8.2.99.jar:19.8.2.99]
+	at TRANSFORMER/jei@19.8.2.99/mezz.jei.common.config.file.ConfigSerializer.save(ConfigSerializer.java:130) ~[jei-1.21-forge-19.8.2.99.jar:19.8.2.99]
+	at TRANSFORMER/jei@19.8.2.99/mezz.jei.common.config.file.ConfigSchema.save(ConfigSchema.java:65) ~[jei-1.21-forge-19.8.2.99.jar:19.8.2.99]
+	at TRANSFORMER/jei@19.8.2.99/mezz.jei.common.config.file.ConfigSchema.register(ConfigSchema.java:57) ~[jei-1.21-forge-19.8.2.99.jar:19.8.2.99]
+	at TRANSFORMER/jei@19.8.2.99/mezz.jei.library.startup.JeiStarter.<init>(JeiStarter.java:85) ~[jei-1.21-forge-19.8.2.99.jar:19.8.2.99]
+	at TRANSFORMER/jei@19.8.2.99/mezz.jei.forge.JustEnoughItemsClient.<init>(JustEnoughItemsClient.java:51) ~[jei-1.21-forge-19.8.2.99.jar:19.8.2.99]
+	at TRANSFORMER/jei@19.8.2.99/mezz.jei.forge.JustEnoughItemsClientSafeRunner.registerClient(JustEnoughItemsClientSafeRunner.java:19) ~[jei-1.21-forge-19.8.2.99.jar:19.8.2.99]
+	at LAYER PLUGIN/net.minecraftforge.fmlcore@1.21-51.0.33/net.minecraftforge.fml.DistExecutor.safeRunWhenOn(DistExecutor.java:123) ~[fmlcore-1.21-51.0.33.jar:1.0]
+	at TRANSFORMER/jei@19.8.2.99/mezz.jei.forge.JustEnoughItems.<init>(JustEnoughItems.java:32) ~[jei-1.21-forge-19.8.2.99.jar:19.8.2.99]
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62) ~[?:?]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502) ~[?:?]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486) ~[?:?]
+	at LAYER PLUGIN/net.minecraftforge.javafmlmod@1.21-51.0.33/net.minecraftforge.fml.javafmlmod.FMLModContainer.constructMod(FMLModContainer.java:66) ~[javafmllanguage-1.21-51.0.33.jar!/:51.0.33]
+	at LAYER PLUGIN/net.minecraftforge.fmlcore@1.21-51.0.33/net.minecraftforge.fml.ModContainer.lambda$buildTransitionHandler$5(ModContainer.java:125) ~[fmlcore-1.21-51.0.33.jar!/:1.0]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804) [?:?]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1796) [?:?]
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:387) [?:?]
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1312) [?:?]
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1843) [?:?]
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1808) [?:?]
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188) [?:?]
+[19feb2025 00:50:44.602] [modloading-worker-0/INFO] [mezz.jei.library.load.PluginCaller/]: Sending ConfigManager...
+[19feb2025 00:50:44.610] [modloading-worker-0/INFO] [mezz.jei.library.load.PluginCaller/]: Sending ConfigManager took 5.407 ms
+[19feb2025 00:50:45.235] [main/INFO] [net.minecraftforge.data.loading.DatagenModLoader/]: Initializing Data Gatherer for mods [immersiveores]
+[19feb2025 00:50:45.320] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/rosar/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.21-51.0.33_mapped_official_1.21/forge-1.21-51.0.33_mapped_official_1.21-recomp.jar%230!/assets/.mcassetsroot' uses unexpected schema
+[19feb2025 00:50:45.320] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/rosar/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.21-51.0.33_mapped_official_1.21/forge-1.21-51.0.33_mapped_official_1.21-recomp.jar%230!/data/.mcassetsroot' uses unexpected schema
+[19feb2025 00:50:45.605] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Recipes
+[19feb2025 00:50:45.830] [main/INFO] [net.minecraft.data.DataGenerator/]: Recipes finished after 223 ms
+[19feb2025 00:50:45.830] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Block States: immersiveores
+[19feb2025 00:50:46.087] [main/INFO] [net.minecraft.data.DataGenerator/]: Block States: immersiveores finished after 256 ms
+[19feb2025 00:50:46.087] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Item Models: immersiveores
+[19feb2025 00:50:46.176] [main/INFO] [net.minecraft.data.DataGenerator/]: Item Models: immersiveores finished after 89 ms
+[19feb2025 00:50:46.176] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Loot Tables
+[19feb2025 00:50:46.201] [main/INFO] [net.minecraft.data.DataGenerator/]: Loot Tables finished after 24 ms
+[19feb2025 00:50:46.201] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:block mod id immersiveores
+[19feb2025 00:50:46.214] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:block mod id immersiveores finished after 12 ms
+[19feb2025 00:50:46.215] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:item mod id immersiveores
+[19feb2025 00:50:46.222] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:item mod id immersiveores finished after 7 ms
+[19feb2025 00:50:46.223] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Registries
+[19feb2025 00:50:46.232] [main/INFO] [net.minecraft.data.DataGenerator/]: Registries finished after 9 ms
+[19feb2025 00:50:46.232] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Advancements
+[19feb2025 00:50:46.268] [main/INFO] [net.minecraft.data.DataGenerator/]: Advancements finished after 35 ms
+[19feb2025 00:50:46.268] [main/INFO] [net.minecraft.data.DataGenerator/]: All providers took: 662 ms
+[19feb2025 00:50:46.285] [main/INFO] [net.minecraft.data.HashCache/]: Caching: total files: 418, old count: 418, new count: 419, removed stale: 0, written: 3

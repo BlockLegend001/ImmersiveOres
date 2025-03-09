@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_enderium_nugget": {
+      "conditions": {
+        "items": [
+          {
+            "items": "immersiveores:enderium_nugget"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "immersiveores:enderium_ingot_craft"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_enderium_nugget"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "immersiveores:enderium_ingot_craft"
+    ]
+  }
+}
