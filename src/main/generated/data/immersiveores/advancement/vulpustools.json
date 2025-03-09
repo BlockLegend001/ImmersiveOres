@@ -1,0 +1,85 @@
+{
+  "parent": "immersiveores:vulpus",
+  "criteria": {
+    "has_vulpus_axe": {
+      "conditions": {
+        "items": [
+          {
+            "items": "immersiveores:vulpus_axe"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_vulpus_hoe": {
+      "conditions": {
+        "items": [
+          {
+            "items": "immersiveores:vulpus_hoe"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_vulpus_pickaxe": {
+      "conditions": {
+        "items": [
+          {
+            "items": "immersiveores:vulpus_pickaxe"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_vulpus_shovel": {
+      "conditions": {
+        "items": [
+          {
+            "items": "immersiveores:vulpus_shovel"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_vulpus_sword": {
+      "conditions": {
+        "items": [
+          {
+            "items": "immersiveores:vulpus_sword"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancement.immersiveores.vulpustools.descrption"
+    },
+    "icon": {
+      "count": 1,
+      "id": "immersiveores:vulpus_pickaxe"
+    },
+    "title": {
+      "translate": "advancement.immersiveores.vulpustools.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_vulpus_pickaxe"
+    ],
+    [
+      "has_vulpus_axe"
+    ],
+    [
+      "has_vulpus_sword"
+    ],
+    [
+      "has_vulpus_shovel"
+    ],
+    [
+      "has_vulpus_hoe"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

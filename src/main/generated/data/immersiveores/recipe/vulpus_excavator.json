@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "E": "immersiveores:vulpus_ingot",
+    "S": "immersiveores:vulpus_stick",
+    "W": "immersiveores:vulpus_block"
+  },
+  "pattern": [
+    " E ",
+    "WSW",
+    " S "
+  ],
+  "result": {
+    "count": 1,
+    "id": "immersiveores:vulpus_excavator"
+  }
+}

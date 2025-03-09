@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "E": "immersiveores:enderium_ingot",
+    "S": "immersiveores:enderium_stick",
+    "W": "immersiveores:enderium_block"
+  },
+  "pattern": [
+    " E ",
+    "WSW",
+    " S "
+  ],
+  "result": {
+    "count": 1,
+    "id": "immersiveores:enderium_excavator"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_enderium_ore": {
+      "conditions": {
+        "items": [
+          {
+            "items": "immersiveores:enderium_ore"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:enderium_ingot_from_smelting_enderium_ore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_enderium_ore"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:enderium_ingot_from_smelting_enderium_ore"
+    ]
+  }
+}
