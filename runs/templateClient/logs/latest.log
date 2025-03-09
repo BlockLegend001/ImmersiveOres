@@ -1,0 +1,207 @@
+[06mar2025 00:31:19.785] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgeclientuserdev, --version, 21.0.167, --assetIndex, asset-index, --assetsDir, C:\Users\rosar\.gradle\caches\minecraft\assets, --gameDir, ., --fml.neoForgeVersion, 21.0.167, --fml.fmlVersion, 4.0.23, --fml.mcVersion, 1.21, --fml.neoFormVersion, 20240613.152323]
+[06mar2025 00:31:19.793] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: JVM identified as Amazon.com Inc. OpenJDK 64-Bit Server VM 21.0.5+11-LTS
+[06mar2025 00:31:19.799] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 11.0.4+main.d2e20e43 starting: java version 21.0.5 by Amazon.com Inc.; OS Windows 11 arch amd64 version 10.0
+[06mar2025 00:31:21.159] [main/INFO] [net.neoforged.fml.loading.ImmediateWindowHandler/]: Loading ImmediateWindowProvider fmlearlywindow
+[06mar2025 00:31:21.883] [main/INFO] [EARLYDISPLAY/]: Trying GL version 4.6
+[06mar2025 00:31:22.275] [main/INFO] [EARLYDISPLAY/]: Requested GL version 4.6 got version 4.6
+[06mar2025 00:31:23.436] [pool-2-thread-1/INFO] [EARLYDISPLAY/]: GL info: NVIDIA GeForce GTX 1650/PCIe/SSE2 GL version 4.6.0 NVIDIA 566.14, NVIDIA Corporation
+[06mar2025 00:31:25.346] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.6 Source=union:/C:/Users/rosar/.gradle/caches/modules-2/files-2.1/net.fabricmc/sponge-mixin/0.14.0+mixin.0.8.6/c265173c84346e9e5d42a2384b2b02bd39a4a899/sponge-mixin-0.14.0+mixin.0.8.6.jar%23135!/ Service=ModLauncher Env=CLIENT
+[06mar2025 00:31:26.025] [main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file "neoforge-21.0.167.jar" [locator: neoforge devenv provider ([D:\Programmazione\Mod\Immersive Ores\NEOFORGE\1.21\.gradle\repositories\ng_dummy_ng\net\neoforged\neoforge\21.0.167\neoforge-21.0.167.jar])]
+[06mar2025 00:31:26.053] [main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file "neoforge-21.0.167.jar" [locator: neoforge devenv provider ([D:\Programmazione\Mod\Immersive Ores\NEOFORGE\1.21\.gradle\repositories\ng_dummy_ng\net\neoforged\neoforge\21.0.167\neoforge-21.0.167.jar])]
+[06mar2025 00:31:26.092] [main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file "main" [locator: userdev mods and services, reader: mod manifest]
+[06mar2025 00:31:26.109] [main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file "neoforge-21.0.167.jar" [locator: userdev mods and services, reader: mod manifest]
+[06mar2025 00:31:26.116] [main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file "architectury-neoforge-13.0.5.jar" [locator: userdev mods and services, reader: mod manifest]
+[06mar2025 00:31:26.122] [main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file "RoughlyEnoughItems-neoforge-16.0.744.jar" [locator: userdev mods and services, reader: mod manifest]
+[06mar2025 00:31:26.218] [main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file "jei-1.21-neoforge-19.8.2.99.jar" [locator: userdev mods and services, reader: mod manifest]
+[06mar2025 00:31:26.247] [main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file "cloth-config-neoforge-15.0.127-neoforge.jar" [locator: userdev mods and services, reader: mod manifest]
+[06mar2025 00:31:26.317] [main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Found gamelibrary file "mixinextras-neoforge-0.3.5.jar" [locator: userdev mods and services, reader: mod manifest]
+[06mar2025 00:31:26.523] [main/WARN] [net.neoforged.jarjar.selection.JarSelector/]: Attempted to select a dependency jar for JarJar which was passed in as source: mixinextras-neoforge-0.3.5.jar. Using Mod File: C:\Users\rosar\.gradle\caches\modules-2\files-2.1\io.github.llamalad7\mixinextras-neoforge\0.3.5\ef3ffcf309dae656517b2f120189b1c9b21737dd\mixinextras-neoforge-0.3.5.jar
+[06mar2025 00:31:26.523] [main/INFO] [net.neoforged.fml.loading.moddiscovery.locators.JarInJarDependencyLocator/]: No dependencies to load found. Skipping!
+[06mar2025 00:31:28.095] [main/INFO] [net.neoforged.fml.loading.FMLServiceProvider/CORE]: Loading coremod script-engine for [neoforge]
+[06mar2025 00:31:32.426] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgeclientuserdev' with arguments [--version, 21.0.167, --gameDir, ., --assetsDir, C:\Users\rosar\.gradle\caches\minecraft\assets, --assetIndex, asset-index]
+[06mar2025 00:31:33.520] [main/INFO] [MixinExtras|Service/]: Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.3.5).
+[06mar2025 00:31:36.886] [Datafixer Bootstrap/INFO] [com.mojang.datafixers.DataFixerBuilder/]: 229 Datafixer optimizations took 1422 milliseconds
+[06mar2025 00:31:45.532] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, location] and [teleport, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+[06mar2025 00:31:45.533] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, location] and [teleport, targets] with inputs: [0.1 -0.5 .9, 0 0 0]
+[06mar2025 00:31:45.539] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, destination] and [teleport, targets] with inputs: [Player, 0123, @e, dd12be42-52a9-4a91-a8a1-11c01849e498]
+[06mar2025 00:31:45.541] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, targets] and [teleport, destination] with inputs: [Player, 0123, dd12be42-52a9-4a91-a8a1-11c01849e498]
+[06mar2025 00:31:45.543] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, targets, location] and [teleport, targets, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+[06mar2025 00:31:45.742] [Render thread/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/D:/Programmazione/Mod/Immersive%20Ores/NEOFORGE/1.21/.gradle/repositories/ng_dummy_ng/net/neoforged/neoforge/21.0.167/neoforge-21.0.167.jar%23189!/assets/.mcassetsroot' uses unexpected schema
+[06mar2025 00:31:45.742] [Render thread/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/D:/Programmazione/Mod/Immersive%20Ores/NEOFORGE/1.21/.gradle/repositories/ng_dummy_ng/net/neoforged/neoforge/21.0.167/neoforge-21.0.167.jar%23189!/data/.mcassetsroot' uses unexpected schema
+[06mar2025 00:31:45.783] [Render thread/INFO] [com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService/]: Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, name=PROD]
+[06mar2025 00:31:45.798] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Setting user: Dev
+[06mar2025 00:31:45.965] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Backend library: LWJGL version 3.3.3+5
+[06mar2025 00:31:47.001] [modloading-worker-0/INFO] [net.neoforged.neoforge.common.NeoForgeMod/NEOFORGE-MOD]: NeoForge mod loading, version 21.0.167, for MC 1.21
+[06mar2025 00:31:47.186] [modloading-worker-0/INFO] [mezz.jei.library.load.PluginCaller/]: Sending ConfigManager...
+[06mar2025 00:31:47.191] [modloading-worker-0/INFO] [mezz.jei.library.load.PluginCaller/]: Sending ConfigManager took 2.457 ms
+[06mar2025 00:31:47.867] [modloading-worker-0/INFO] [REI/]: [REI] Config loaded
+[06mar2025 00:31:48.245] [modloading-worker-0/INFO] [REI/]: [REI] Registered plugin provider DefaultPluginImpl [roughlyenoughitems] for REIServerPlugin
+[06mar2025 00:31:48.271] [modloading-worker-0/INFO] [REI/]: [REI] Registered plugin provider DefaultPluginImpl [roughlyenoughitems] for REIPlugin
+[06mar2025 00:31:48.276] [modloading-worker-0/INFO] [REI/]: [REI] Registered plugin provider DefaultRuntimePlugin [roughlyenoughitems] for REIServerPlugin
+[06mar2025 00:31:48.276] [modloading-worker-0/INFO] [REI/]: [REI] Registered plugin provider DefaultRuntimePlugin [roughlyenoughitems] for REIPlugin
+[06mar2025 00:31:48.426] [modloading-worker-0/INFO] [REI/]: [REI] Registered plugin provider DefaultClientPluginImpl [roughlyenoughitems] for REIClientPlugin
+[06mar2025 00:31:48.427] [modloading-worker-0/INFO] [REI/]: [REI] Registered plugin provider DefaultClientPluginImpl [roughlyenoughitems] for REIPlugin
+[06mar2025 00:31:48.465] [modloading-worker-0/INFO] [REI/]: [REI] Registered plugin provider DefaultClientRuntimePlugin [roughlyenoughitems] for REIClientPlugin
+[06mar2025 00:31:48.466] [modloading-worker-0/INFO] [REI/]: [REI] Registered plugin provider DefaultClientRuntimePlugin [roughlyenoughitems] for REIPlugin
+[06mar2025 00:31:48.473] [modloading-worker-0/INFO] [REI/]: [REI] Registered plugin provider HideIngredientsFromTagsPlugin [roughlyenoughitems] for REIClientPlugin
+[06mar2025 00:31:48.474] [modloading-worker-0/INFO] [REI/]: [REI] Registered plugin provider HideIngredientsFromTagsPlugin [roughlyenoughitems] for REIPlugin
+[06mar2025 00:31:50.257] [Render thread/INFO] [net.neoforged.neoforge.gametest.GameTestHooks/]: Enabled Gametest Namespaces: []
+[06mar2025 00:31:50.756] [Render thread/INFO] [net.minecraft.server.packs.resources.ReloadableResourceManager/]: Reloading ResourceManager: vanilla, mod_resources, mod/roughlyenoughitems, mod/cloth_config, mod/immersiveores, mod/architectury, mod/neoforge, mod/jei
+[06mar2025 00:31:51.118] [Worker-Main-5/INFO] [net.minecraft.client.gui.font.providers.UnihexProvider/]: Found unifont_all_no_pua-15.1.05.hex, loading
+[06mar2025 00:31:52.274] [Worker-Main-2/INFO] [net.minecraft.client.gui.font.providers.UnihexProvider/]: Found unifont_jp_patch-15.1.05.hex, loading
+[06mar2025 00:31:56.192] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:item.goat_horn.play
+[06mar2025 00:31:56.192] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:entity.goat.screaming.horn_break
+[06mar2025 00:31:56.481] [Render thread/INFO] [com.mojang.blaze3d.audio.Library/]: OpenAL initialized on device OpenAL Soft on Altoparlanti (Maonocaster G1 Neo)
+[06mar2025 00:31:56.482] [Render thread/INFO] [net.minecraft.client.sounds.SoundEngine/SOUNDS]: Sound engine started
+[06mar2025 00:31:56.651] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 1024x512x4 minecraft:textures/atlas/blocks.png-atlas
+[06mar2025 00:31:56.665] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x4 minecraft:textures/atlas/signs.png-atlas
+[06mar2025 00:31:56.666] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x512x4 minecraft:textures/atlas/shield_patterns.png-atlas
+[06mar2025 00:31:56.667] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x512x4 minecraft:textures/atlas/banner_patterns.png-atlas
+[06mar2025 00:31:56.668] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 1024x1024x4 minecraft:textures/atlas/armor_trims.png-atlas
+[06mar2025 00:31:56.675] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 128x64x4 minecraft:textures/atlas/decorated_pot.png-atlas
+[06mar2025 00:31:56.676] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x4 minecraft:textures/atlas/chest.png-atlas
+[06mar2025 00:31:56.676] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x4 minecraft:textures/atlas/shulker_boxes.png-atlas
+[06mar2025 00:31:56.678] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x4 minecraft:textures/atlas/beds.png-atlas
+[06mar2025 00:31:56.962] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x0 minecraft:textures/atlas/particles.png-atlas
+[06mar2025 00:31:56.964] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x0 minecraft:textures/atlas/paintings.png-atlas
+[06mar2025 00:31:56.964] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x128x0 minecraft:textures/atlas/mob_effects.png-atlas
+[06mar2025 00:31:56.965] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 64x64x0 minecraft:textures/atlas/map_decorations.png-atlas
+[06mar2025 00:31:56.965] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 1024x512x0 minecraft:textures/atlas/gui.png-atlas
+[06mar2025 00:31:56.989] [Render thread/WARN] [net.minecraft.client.renderer.ShaderInstance/]: Shader rendertype_entity_translucent_emissive could not find sampler named Sampler2 in the specified shader program.
+[06mar2025 00:31:57.061] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x0 jei:textures/atlas/gui.png-atlas
+[06mar2025 00:33:11.372] [Render thread/INFO] [net.minecraft.world.item.crafting.RecipeManager/]: Loaded 1356 recipes
+[06mar2025 00:33:11.582] [Render thread/INFO] [net.minecraft.advancements.AdvancementTree/]: Loaded 1477 advancements
+[06mar2025 00:33:12.038] [Render thread/INFO] [mezz.jei.neoforge.startup.StartEventObserver/]: JEI StartEventObserver received class net.neoforged.neoforge.event.TagsUpdatedEvent too early, ignoring
+[06mar2025 00:33:12.336] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Starting integrated minecraft server version 1.21
+[06mar2025 00:33:12.336] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Generating keypair
+[06mar2025 00:33:14.846] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Preparing start region for dimension minecraft:overworld
+[06mar2025 00:33:15.145] [progressListener/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
+[06mar2025 00:33:15.367] [progressListener/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Time elapsed: 517 ms
+[06mar2025 00:33:15.368] [Server thread/INFO] [net.neoforged.neoforge.server.permission.PermissionAPI/]: Successfully initialized permission handler neoforge:default_handler
+[06mar2025 00:33:15.483] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Changing view distance to 12, from 10
+[06mar2025 00:33:15.483] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Changing simulation distance to 12, from 0
+[06mar2025 00:33:16.604] [Render thread/INFO] [mezz.jei.neoforge.startup.StartEventObserver/]: JEI StartEventObserver received class net.neoforged.neoforge.event.TagsUpdatedEvent
+[06mar2025 00:33:16.905] [Server thread/INFO] [net.minecraft.server.players.PlayerList/]: Dev[local:E:0ed7cb25] logged in with entity id 133 at (-106.01569778083095, 70.0, -144.11518259489438)
+[06mar2025 00:33:17.029] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev joined the game
+[06mar2025 00:33:17.253] [Render thread/WARN] [REI/]: [REI] Suppressing Reload Plugins of stage START
+[06mar2025 00:33:17.289] [Render thread/INFO] [mezz.jei.neoforge.startup.StartEventObserver/]: JEI StartEventObserver received class net.neoforged.neoforge.client.event.RecipesUpdatedEvent
+[06mar2025 00:33:17.289] [Render thread/INFO] [mezz.jei.neoforge.startup.StartEventObserver/]: JEI StartEventObserver transitioning state from LISTENING to JEI_STARTED
+[06mar2025 00:33:17.316] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Starting JEI...
+[06mar2025 00:33:17.324] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering item subtypes...
+[06mar2025 00:33:17.330] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering item subtypes took 5.758 ms
+[06mar2025 00:33:17.331] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering fluid subtypes...
+[06mar2025 00:33:17.332] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering fluid subtypes took 1.471 ms
+[06mar2025 00:33:17.334] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering ingredients...
+[06mar2025 00:33:17.526] [Render thread/WARN] [mezz.jei.library.plugins.vanilla.ingredients.ItemStackListFactory/]: Item Group has no display items and no search tab display items. Items from this group will be missing from the JEI ingredient list. Operator Utilities
+[06mar2025 00:33:17.546] [Render thread/INFO] [mezz.jei.library.load.PluginCallerTimerRunnable/]: Registering ingredients: jei:minecraft took 212.4 milliseconds
+[06mar2025 00:33:17.547] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering ingredients took 213.2 ms
+[06mar2025 00:33:17.555] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering Mod Info...
+[06mar2025 00:33:17.556] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering Mod Info took 760.2 μs
+[06mar2025 00:33:17.621] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering categories...
+[06mar2025 00:33:17.643] [Render thread/INFO] [mezz.jei.library.load.PluginCallerTimerRunnable/]: Registering categories: jei:minecraft took 21.55 milliseconds
+[06mar2025 00:33:17.650] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering categories took 29.26 ms
+[06mar2025 00:33:17.651] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering vanilla category extensions...
+[06mar2025 00:33:17.656] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering vanilla category extensions took 5.009 ms
+[06mar2025 00:33:17.658] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipe catalysts...
+[06mar2025 00:33:17.660] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipe catalysts took 1.066 ms
+[06mar2025 00:33:17.662] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering advanced plugins...
+[06mar2025 00:33:17.663] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering advanced plugins took 552.4 μs
+[06mar2025 00:33:17.663] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Building recipe registry...
+[06mar2025 00:33:17.673] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Building recipe registry took 10.08 ms
+[06mar2025 00:33:17.676] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipes...
+[06mar2025 00:33:17.861] [Render thread/INFO] [mezz.jei.library.load.PluginCallerTimerRunnable/]: Registering recipes: jei:minecraft took 185.2 milliseconds
+[06mar2025 00:33:17.885] [REI-ReloadPlugins/INFO] [REI/]: [REI] ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[06mar2025 00:33:17.887] [REI-ReloadPlugins/INFO] [REI/]: [REI] REIPlugin starting main-reload for START.
+[06mar2025 00:33:17.891] [REI-ReloadPlugins/INFO] [REI/]: [REI] Plugins (5):
+[06mar2025 00:33:17.891] [REI-ReloadPlugins/INFO] [REI/]: [REI]  - (-100,00) DefaultClientPluginImpl of DefaultClientPluginImpl [roughlyenoughitems]
+[06mar2025 00:33:17.891] [REI-ReloadPlugins/INFO] [REI/]: [REI]  - (-100,00) DefaultPluginImpl of DefaultPluginImpl [roughlyenoughitems]
+[06mar2025 00:33:17.891] [REI-ReloadPlugins/INFO] [REI/]: [REI]  - (0,00) HideIngredientsFromTagsPlugin of HideIngredientsFromTagsPlugin [roughlyenoughitems]
+[06mar2025 00:33:17.892] [REI-ReloadPlugins/INFO] [REI/]: [REI]  - (0,00) DefaultClientRuntimePlugin of DefaultClientRuntimePlugin [roughlyenoughitems]
+[06mar2025 00:33:17.892] [REI-ReloadPlugins/INFO] [REI/]: [REI]  - (0,00) DefaultRuntimePlugin of DefaultRuntimePlugin [roughlyenoughitems]
+[06mar2025 00:33:17.892] [REI-ReloadPlugins/INFO] [REI/]: [REI] ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[06mar2025 00:33:17.896] [Render thread/INFO] [mezz.jei.library.load.PluginCallerTimerRunnable/]: Registering recipes: jei:internal took 34.11 milliseconds
+[06mar2025 00:33:17.896] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipes took 220.1 ms
+[06mar2025 00:33:17.901] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipes transfer handlers...
+[06mar2025 00:33:17.905] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipes transfer handlers took 3.916 ms
+[06mar2025 00:33:17.949] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Building runtime...
+[06mar2025 00:33:17.957] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering gui handlers...
+[06mar2025 00:33:17.966] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering gui handlers took 8.468 ms
+[06mar2025 00:33:17.978] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering Runtime...
+[06mar2025 00:33:17.984] [Render thread/INFO] [mezz.jei.gui.startup.JeiGuiStarter/]: Starting JEI GUI
+[06mar2025 00:33:17.984] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Building ingredient list...
+[06mar2025 00:33:17.988] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Building ingredient list took 4.202 ms
+[06mar2025 00:33:17.988] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Building ingredient filter...
+[06mar2025 00:33:18.011] [Render thread/INFO] [mezz.jei.gui.ingredients.IngredientFilter/]: Adding 1751 ingredients
+[06mar2025 00:33:18.223] [REI-ReloadPlugins/INFO] [REI/]: [REI] OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+[06mar2025 00:33:18.224] [REI-ReloadPlugins/INFO] [REI/]: [REI] REIClientPlugin starting main-reload for START.
+[06mar2025 00:33:18.227] [REI-ReloadPlugins/INFO] [REI/]: [REI] Plugins (3):
+[06mar2025 00:33:18.227] [REI-ReloadPlugins/INFO] [REI/]: [REI]  - (-100,00) DefaultClientPluginImpl of DefaultClientPluginImpl [roughlyenoughitems]
+[06mar2025 00:33:18.228] [REI-ReloadPlugins/INFO] [REI/]: [REI]  - (0,00) HideIngredientsFromTagsPlugin of HideIngredientsFromTagsPlugin [roughlyenoughitems]
+[06mar2025 00:33:18.228] [REI-ReloadPlugins/INFO] [REI/]: [REI]  - (0,00) DefaultClientRuntimePlugin of DefaultClientRuntimePlugin [roughlyenoughitems]
+[06mar2025 00:33:18.228] [REI-ReloadPlugins/INFO] [REI/]: [REI] OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+[06mar2025 00:33:18.329] [Render thread/INFO] [mezz.jei.gui.ingredients.IngredientFilter/]: Added 1751/1751 ingredients
+[06mar2025 00:33:18.331] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Building ingredient filter took 342.0 ms
+[06mar2025 00:33:18.420] [Render thread/INFO] [mezz.jei.library.load.PluginCallerTimerRunnable/]: Registering Runtime: jei:neoforge_gui took 440.6 milliseconds
+[06mar2025 00:33:18.420] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering Runtime took 441.6 ms
+[06mar2025 00:33:18.421] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Building runtime took 470.7 ms
+[06mar2025 00:33:18.421] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Sending Runtime...
+[06mar2025 00:33:18.422] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Sending Runtime took 448.4 μs
+[06mar2025 00:33:18.422] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Starting JEI took 1.105 s
+[06mar2025 00:33:18.436] [Render thread/INFO] [net.minecraft.advancements.AdvancementTree/]: Loaded 70 advancements
+[06mar2025 00:33:19.246] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Saving and pausing game...
+[06mar2025 00:33:19.347] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[06mar2025 00:33:19.473] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[06mar2025 00:33:19.521] [REI-ReloadPlugins/INFO] [REI/]: [REI] OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+[06mar2025 00:33:19.522] [REI-ReloadPlugins/INFO] [REI/]: [REI] REIServerPlugin starting main-reload for START.
+[06mar2025 00:33:19.522] [REI-ReloadPlugins/INFO] [REI/]: [REI] Plugins (2):
+[06mar2025 00:33:19.522] [REI-ReloadPlugins/INFO] [REI/]: [REI]  - (-100,00) DefaultPluginImpl of DefaultPluginImpl [roughlyenoughitems]
+[06mar2025 00:33:19.522] [REI-ReloadPlugins/INFO] [REI/]: [REI]  - (0,00) DefaultRuntimePlugin of DefaultRuntimePlugin [roughlyenoughitems]
+[06mar2025 00:33:19.522] [REI-ReloadPlugins/INFO] [REI/]: [REI] OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+[06mar2025 00:33:19.529] [REI-ReloadPlugins/INFO] [REI/]: [REI] REIPlugin finished post-reload for START in 2.466 ms, totaling 702.0 ms.
+[06mar2025 00:33:19.533] [REI-ReloadPlugins/INFO] [REI/]: [REI] REIClientPlugin finished post-reload for START in 1.472 ms, totaling 1.319 s.
+[06mar2025 00:33:19.536] [REI-ReloadPlugins/INFO] [REI/]: [REI] REIServerPlugin finished post-reload for START in 767.2 μs, totaling 4.266 ms.
+[06mar2025 00:33:19.551] [REI-ReloadPlugins/INFO] [REI/]: [REI] ########################################
+[06mar2025 00:33:19.551] [REI-ReloadPlugins/INFO] [REI/]: [REI] REIPlugin starting main-reload for END.
+[06mar2025 00:33:19.552] [REI-ReloadPlugins/INFO] [REI/]: [REI] Plugins (5):
+[06mar2025 00:33:19.552] [REI-ReloadPlugins/INFO] [REI/]: [REI]  - (-100,00) DefaultClientPluginImpl of DefaultClientPluginImpl [roughlyenoughitems]
+[06mar2025 00:33:19.552] [REI-ReloadPlugins/INFO] [REI/]: [REI]  - (-100,00) DefaultPluginImpl of DefaultPluginImpl [roughlyenoughitems]
+[06mar2025 00:33:19.552] [REI-ReloadPlugins/INFO] [REI/]: [REI]  - (0,00) HideIngredientsFromTagsPlugin of HideIngredientsFromTagsPlugin [roughlyenoughitems]
+[06mar2025 00:33:19.552] [REI-ReloadPlugins/INFO] [REI/]: [REI]  - (0,00) DefaultClientRuntimePlugin of DefaultClientRuntimePlugin [roughlyenoughitems]
+[06mar2025 00:33:19.552] [REI-ReloadPlugins/INFO] [REI/]: [REI]  - (0,00) DefaultRuntimePlugin of DefaultRuntimePlugin [roughlyenoughitems]
+[06mar2025 00:33:19.552] [REI-ReloadPlugins/INFO] [REI/]: [REI] ########################################
+[06mar2025 00:33:19.643] [REI-ReloadPlugins/INFO] [REI/]: [REI] ########################################
+[06mar2025 00:33:19.643] [REI-ReloadPlugins/INFO] [REI/]: [REI] REIClientPlugin starting main-reload for END.
+[06mar2025 00:33:19.646] [REI-ReloadPlugins/INFO] [REI/]: [REI] Plugins (3):
+[06mar2025 00:33:19.646] [REI-ReloadPlugins/INFO] [REI/]: [REI]  - (-100,00) DefaultClientPluginImpl of DefaultClientPluginImpl [roughlyenoughitems]
+[06mar2025 00:33:19.646] [REI-ReloadPlugins/INFO] [REI/]: [REI]  - (0,00) HideIngredientsFromTagsPlugin of HideIngredientsFromTagsPlugin [roughlyenoughitems]
+[06mar2025 00:33:19.646] [REI-ReloadPlugins/INFO] [REI/]: [REI]  - (0,00) DefaultClientRuntimePlugin of DefaultClientRuntimePlugin [roughlyenoughitems]
+[06mar2025 00:33:19.646] [REI-ReloadPlugins/INFO] [REI/]: [REI] ########################################
+[06mar2025 00:33:19.677] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[06mar2025 00:33:23.343] [REI-ReloadPlugins/INFO] [REI/]: [REI] ========================================
+[06mar2025 00:33:23.343] [REI-ReloadPlugins/INFO] [REI/]: [REI] REIServerPlugin starting main-reload for END.
+[06mar2025 00:33:23.344] [REI-ReloadPlugins/INFO] [REI/]: [REI] Plugins (2):
+[06mar2025 00:33:23.344] [REI-ReloadPlugins/INFO] [REI/]: [REI]  - (-100,00) DefaultPluginImpl of DefaultPluginImpl [roughlyenoughitems]
+[06mar2025 00:33:23.344] [REI-ReloadPlugins/INFO] [REI/]: [REI]  - (0,00) DefaultRuntimePlugin of DefaultRuntimePlugin [roughlyenoughitems]
+[06mar2025 00:33:23.345] [REI-ReloadPlugins/INFO] [REI/]: [REI] ========================================
+[06mar2025 00:33:23.356] [REI-ReloadPlugins/INFO] [REI/]: [REI] REIPlugin finished post-reload for END in 599.6 μs, totaling 94.18 ms.
+[06mar2025 00:33:23.358] [REI-ReloadPlugins/INFO] [REI/]: [REI] REIClientPlugin finished post-reload for END in 842.4 μs, totaling 3.701 s.
+[06mar2025 00:33:23.360] [REI-ReloadPlugins/INFO] [REI/]: [REI] REIServerPlugin finished post-reload for END in 332.1 μs, totaling 11.85 ms.
+[06mar2025 00:34:20.838] [Render thread/INFO] [net.minecraft.advancements.AdvancementTree/]: Loaded 70 advancements
+[06mar2025 00:34:22.291] [Render thread/INFO] [net.minecraft.advancements.AdvancementTree/]: Loaded 70 advancements
+[06mar2025 00:34:25.097] [Render thread/INFO] [net.minecraft.advancements.AdvancementTree/]: Loaded 70 advancements
+[06mar2025 00:34:25.986] [Render thread/INFO] [net.minecraft.advancements.AdvancementTree/]: Loaded 70 advancements
+[06mar2025 00:34:28.287] [Render thread/INFO] [net.minecraft.advancements.AdvancementTree/]: Loaded 70 advancements
+[06mar2025 00:34:29.441] [Render thread/INFO] [net.minecraft.advancements.AdvancementTree/]: Loaded 71 advancements
+[06mar2025 00:34:31.678] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: [Dev: Set the time to 1000]
+[06mar2025 00:34:31.686] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] Set the time to 1000
+[06mar2025 00:34:32.846] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: [Dev: Set own game mode to Survival Mode]
+[06mar2025 00:34:32.855] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] Set own game mode to Survival Mode
+[06mar2025 00:34:36.551] [Server thread/WARN] [net.minecraft.server.level.ServerPlayerGameMode/]: Mismatch in destroy block pos: BlockPos{x=-108, y=69, z=-144} BlockPos{x=-108, y=69, z=-145}
+[06mar2025 00:34:36.591] [Server thread/WARN] [net.minecraft.server.level.ServerPlayerGameMode/]: Mismatch in destroy block pos: BlockPos{x=-108, y=69, z=-144} BlockPos{x=-108, y=69, z=-145}
+[06mar2025 00:34:36.735] [Server thread/WARN] [net.minecraft.server.level.ServerPlayerGameMode/]: Mismatch in destroy block pos: BlockPos{x=-109, y=67, z=-144} BlockPos{x=-109, y=68, z=-144}
+[06mar2025 00:34:37.390] [Server thread/WARN] [net.minecraft.server.level.ServerPlayerGameMode/]: Mismatch in destroy block pos: BlockPos{x=-107, y=64, z=-145} BlockPos{x=-107, y=66, z=-145}
+[06mar2025 00:34:37.740] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev has made the advancement [Stone Age]
+[06mar2025 00:34:37.753] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] Dev has made the advancement [Stone Age]
+[06mar2025 00:34:37.788] [Render thread/INFO] [net.minecraft.advancements.AdvancementTree/]: Loaded 86 advancements
+[06mar2025 00:34:41.880] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: [Dev: Summoned new Slime]
+[06mar2025 00:34:41.886] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] Summoned new Slime
