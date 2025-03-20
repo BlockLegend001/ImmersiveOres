@@ -6,7 +6,6 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.tag.ItemTags;
-import org.jetbrains.annotations.Nullable;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -167,6 +166,79 @@ public class ModItemTagGenerator extends FabricTagProvider.ItemTagProvider {
                 ModItems.VIBRANIUM_SHOVEL,
                 ModItems.VULPUS_SHOVEL,
                 ModItems.ENDERIUM_SHOVEL,
+                ModItems.VIBRANIUM_PAXEL,
+                ModItems.VULPUS_PAXEL,
+                ModItems.ENDERIUM_PAXEL);
+
+        getOrCreateTagBuilder(ItemTags.FIRE_ASPECT_ENCHANTABLE).add(ModItems.VIBRANIUM_SWORD,
+                ModItems.VULPUS_SWORD,
+                ModItems.ENDERIUM_SWORD);
+
+        getOrCreateTagBuilder(ItemTags.CHEST_ARMOR_ENCHANTABLE).add(ModItems.VIBRANIUM_CHESTPLATE,
+                ModItems.VULPUS_CHESTPLATE,
+                ModItems.ENDERIUM_CHESTPLATE);
+
+        getOrCreateTagBuilder(ItemTags.FOOT_ARMOR_ENCHANTABLE).add(ModItems.VIBRANIUM_BOOTS,
+                ModItems.VULPUS_BOOTS,
+                ModItems.ENDERIUM_BOOTS);
+
+        getOrCreateTagBuilder(ItemTags.LEG_ARMOR_ENCHANTABLE).add(ModItems.VIBRANIUM_LEGGINGS,
+                ModItems.VULPUS_LEGGINGS,
+                ModItems.ENDERIUM_LEGGINGS);
+
+        getOrCreateTagBuilder(ItemTags.HEAD_ARMOR_ENCHANTABLE).add(ModItems.VIBRANIUM_HELMET,
+                ModItems.VULPUS_HELMET,
+                ModItems.ENDERIUM_HELMET);
+
+        getOrCreateTagBuilder(ItemTags.DURABILITY_ENCHANTABLE).add(ModItems.VIBRANIUM_HELMET,
+                ModItems.VIBRANIUM_CHESTPLATE,
+                ModItems.VIBRANIUM_LEGGINGS,
+                ModItems.VIBRANIUM_BOOTS,
+                ModItems.VULPUS_HELMET,
+                ModItems.VULPUS_CHESTPLATE,
+                ModItems.VULPUS_LEGGINGS,
+                ModItems.VULPUS_BOOTS,
+                ModItems.ENDERIUM_HELMET,
+                ModItems.ENDERIUM_CHESTPLATE,
+                ModItems.ENDERIUM_LEGGINGS,
+                ModItems.ENDERIUM_BOOTS,
+                ModItems.VIBRANIUM_HAMMER,
+                ModItems.VULPUS_HAMMER,
+                ModItems.ENDERIUM_HAMMER,
+                ModItems.VIBRANIUM_EXCAVATOR,
+                ModItems.VULPUS_EXCAVATOR,
+                ModItems.ENDERIUM_EXCAVATOR,
+                ModItems.VIBRANIUM_PICKAXE,
+                ModItems.VULPUS_PICKAXE,
+                ModItems.ENDERIUM_PICKAXE,
+                ModItems.VIBRANIUM_HOE,
+                ModItems.VULPUS_HOE,
+                ModItems.ENDERIUM_HOE,
+                ModItems.VIBRANIUM_AXE,
+                ModItems.VULPUS_AXE,
+                ModItems.ENDERIUM_AXE,
+                ModItems.VIBRANIUM_SHOVEL,
+                ModItems.VULPUS_SHOVEL,
+                ModItems.ENDERIUM_SHOVEL,
+                ModItems.VIBRANIUM_PAXEL,
+                ModItems.VULPUS_PAXEL,
+                ModItems.ENDERIUM_PAXEL,
+                ModItems.VIBRANIUM_SWORD,
+                ModItems.VULPUS_SWORD,
+                ModItems.ENDERIUM_SWORD,
+                ModItems.VIBRANIUM_AXE,
+                ModItems.VULPUS_AXE,
+                ModItems.ENDERIUM_AXE,
+                ModItems.VIBRANIUM_PAXEL,
+                ModItems.VULPUS_PAXEL,
+                ModItems.ENDERIUM_PAXEL);
+
+        getOrCreateTagBuilder(ItemTags.SHARP_WEAPON_ENCHANTABLE).add(ModItems.VIBRANIUM_SWORD,
+                ModItems.VULPUS_SWORD,
+                ModItems.ENDERIUM_SWORD,
+                ModItems.VIBRANIUM_AXE,
+                ModItems.VULPUS_AXE,
+                ModItems.ENDERIUM_AXE,
                 ModItems.VIBRANIUM_PAXEL,
                 ModItems.VULPUS_PAXEL,
                 ModItems.ENDERIUM_PAXEL);
