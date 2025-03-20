@@ -1,1 +1,1 @@
-- Added new tooltips
+Added some missing enchantable tag
