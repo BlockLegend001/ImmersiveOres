@@ -247,5 +247,9 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                 ModItems.VIBRANIUM_PAXEL.get(),
                 ModItems.VULPUS_PAXEL.get(),
                 ModItems.ENDERIUM_PAXEL.get());
+
+        tag(ModTags.Items.VIBRANIUM_REPAIRS).add(ModItems.VIBRANIUM_INGOT.get());
+        tag(ModTags.Items.VULPUS_REPAIRS).add(ModItems.VULPUS_INGOT.get());
+        tag(ModTags.Items.ENDERIUM_REPAIRS).add(ModItems.ENDERIUM_INGOT.get());
     }
 }
