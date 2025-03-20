@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "N": {
+      "item": "minecraft:netherite_boots"
+    },
+    "V": {
+      "item": "immersiveores:vibranium_ingot"
+    }
+  },
+  "pattern": [
+    "   ",
+    "V V",
+    "VNV"
+  ],
+  "result": {
+    "count": 1,
+    "id": "immersiveores:vibranium_boots"
+  }
+}
