@@ -1,4 +1,4 @@
-// 1.21.3	2024-12-09T20:12:22.1277003	Tags for minecraft:item mod id immersiveores
+// 1.21.3	2025-03-20T12:54:02.9519209	Tags for minecraft:item mod id immersiveores
 6f6ef5d198b30bb6e688aec463b46e3b047eec57 data/immersiveores/tags/item/enderium_armor.json
 703da89a08878d1c86907889cb8509bfa152df66 data/immersiveores/tags/item/enderium_axe.json
 a5c4f9e60c7c8645158761a86be026d0b61c7854 data/immersiveores/tags/item/enderium_bow.json
@@ -34,8 +34,15 @@ a560531bd0871518600f84c5701e74c65c776af5 data/immersiveores/tags/item/vulpus_pax
 f3ef84379ca563c04e235a659b6e9bf759aded55 data/immersiveores/tags/item/vulpus_sword.json
 ee9b19416bf9206c12e6d80639295b2559bb7fb6 data/minecraft/tags/item/enchantable/armor.json
 9dd29c6236b43b13ec3230e02ccc41d77733af22 data/minecraft/tags/item/enchantable/bow.json
+2ab52baad09c1b06bfaafc7cd87f47505881520f data/minecraft/tags/item/enchantable/chest_armor.json
+2a3e0d70661ec63eb0552045db9926da8f45b553 data/minecraft/tags/item/enchantable/durability.json
+0d064628ab6aeb04136b74229dcf3e324f0e6610 data/minecraft/tags/item/enchantable/fire_aspect.json
+a7b311b73aa20f5a660aae7af5537b92caee8f1b data/minecraft/tags/item/enchantable/foot_armor.json
+77ad9a14282810e51f6568151de5a474c3136893 data/minecraft/tags/item/enchantable/head_armor.json
+58ed652d7031145a8bf422ba90b2e4a58362b882 data/minecraft/tags/item/enchantable/leg_armor.json
 7b5c1a5b3e36c5d844f4f6e589529e5ed14a3965 data/minecraft/tags/item/enchantable/mining.json
 7b5c1a5b3e36c5d844f4f6e589529e5ed14a3965 data/minecraft/tags/item/enchantable/mining_loot.json
+a1f4620168f8c815f87c0145361fb24f119acb48 data/minecraft/tags/item/enchantable/sharp_weapon.json
 0d064628ab6aeb04136b74229dcf3e324f0e6610 data/minecraft/tags/item/enchantable/sword.json
 7b5c1a5b3e36c5d844f4f6e589529e5ed14a3965 data/minecraft/tags/item/enchantable/vanishing.json
 ee9b19416bf9206c12e6d80639295b2559bb7fb6 data/minecraft/tags/item/trimmable_armor.json
