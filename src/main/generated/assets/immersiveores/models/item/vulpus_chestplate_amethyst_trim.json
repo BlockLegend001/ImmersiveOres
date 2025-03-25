@@ -2,6 +2,6 @@
   "parent": "minecraft:item/generated",
   "textures": {
     "layer0": "immersiveores:item/vulpus_chestplate",
-    "layer1": "minecraft:trims/items/vulpus_trim_amethyst"
+    "layer1": "minecraft:trims/items/chestplate_trim_amethyst"
   }
 }
