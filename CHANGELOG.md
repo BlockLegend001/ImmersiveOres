@@ -1,1 +1,1 @@
-- Added some missing enchantable tag
+- Fixed armor item textures missing when trimmed

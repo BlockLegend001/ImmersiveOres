@@ -1,17 +1,19 @@
 package com.blocklegend001.immersiveores.datagen;
 
-import com.blocklegend001.immersiveores.ImmersiveOres;
 import com.blocklegend001.immersiveores.blocks.ModBlocks;
 import com.blocklegend001.immersiveores.item.ModItems;
-import com.blocklegend001.immersiveores.util.ModEquipmentAssets;
 import net.fabricmc.fabric.api.client.datagen.v1.provider.FabricModelProvider;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
-import net.minecraft.client.data.BlockStateModelGenerator;
-import net.minecraft.client.data.ItemModelGenerator;
-import net.minecraft.client.data.Models;
-import net.minecraft.client.render.entity.equipment.EquipmentModel;
+import net.minecraft.client.data.*;
+import net.minecraft.component.DataComponentTypes;
+import net.minecraft.component.type.EquippableComponent;
 import net.minecraft.entity.EquipmentSlot;
-import net.minecraft.util.Identifier;
+import net.minecraft.item.Item;
+import net.minecraft.item.equipment.EquipmentAsset;
+import net.minecraft.item.equipment.EquipmentType;
+import net.minecraft.registry.RegistryKey;
+
+import java.util.Map;
 
 public class ModModelProvider extends FabricModelProvider {
     public ModModelProvider(FabricDataOutput output) {
@@ -47,17 +49,10 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.VIBRANIUM_NUGGET, Models.GENERATED);
         itemModelGenerator.register(ModItems.VIBRANIUM_STICK, Models.GENERATED);
 
-        itemModelGenerator.registerArmor(ModItems.VIBRANIUM_HELMET, ModEquipmentAssets.VIBRANIUM,
-                "vibranium", false);
-
-        itemModelGenerator.registerArmor(ModItems.VIBRANIUM_CHESTPLATE, ModEquipmentAssets.VIBRANIUM,
-                "vibranium", false);
-
-        itemModelGenerator.registerArmor(ModItems.VIBRANIUM_LEGGINGS, ModEquipmentAssets.VIBRANIUM,
-                "vibranium", false);
-
-        itemModelGenerator.registerArmor(ModItems.VIBRANIUM_BOOTS, ModEquipmentAssets.VIBRANIUM,
-                "vibranium", false);
+        registerArmour(ModItems.VIBRANIUM_HELMET, itemModelGenerator);
+        registerArmour(ModItems.VIBRANIUM_CHESTPLATE, itemModelGenerator);
+        registerArmour(ModItems.VIBRANIUM_LEGGINGS, itemModelGenerator);
+        registerArmour(ModItems.VIBRANIUM_BOOTS, itemModelGenerator);
 
         itemModelGenerator.register(ModItems.VULPUS_SWORD, Models.HANDHELD);
         itemModelGenerator.register(ModItems.VULPUS_PAXEL, Models.HANDHELD);
@@ -73,17 +68,10 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.VULPUS_NUGGET, Models.GENERATED);
         itemModelGenerator.register(ModItems.VULPUS_STICK, Models.GENERATED);
 
-        itemModelGenerator.registerArmor(ModItems.VULPUS_HELMET, ModEquipmentAssets.VULPUS,
-                "vulpus", false);
-
-        itemModelGenerator.registerArmor(ModItems.VULPUS_CHESTPLATE, ModEquipmentAssets.VULPUS,
-                "vulpus", false);
-
-        itemModelGenerator.registerArmor(ModItems.VULPUS_LEGGINGS, ModEquipmentAssets.VULPUS,
-                "vulpus", false);
-
-        itemModelGenerator.registerArmor(ModItems.VULPUS_BOOTS, ModEquipmentAssets.VULPUS,
-                "vulpus", false);
+        registerArmour(ModItems.VULPUS_HELMET, itemModelGenerator);
+        registerArmour(ModItems.VULPUS_CHESTPLATE, itemModelGenerator);
+        registerArmour(ModItems.VULPUS_LEGGINGS, itemModelGenerator);
+        registerArmour(ModItems.VULPUS_BOOTS, itemModelGenerator);
 
         itemModelGenerator.register(ModItems.ENDERIUM_SWORD, Models.HANDHELD);
         itemModelGenerator.register(ModItems.ENDERIUM_PAXEL, Models.HANDHELD);
@@ -99,16 +87,26 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.ENDERIUM_NUGGET, Models.GENERATED);
         itemModelGenerator.register(ModItems.ENDERIUM_STICK, Models.GENERATED);
 
-        itemModelGenerator.registerArmor(ModItems.ENDERIUM_HELMET, ModEquipmentAssets.ENDERIUM,
-                "enderium", false);
+        registerArmour(ModItems.ENDERIUM_HELMET, itemModelGenerator);
+        registerArmour(ModItems.ENDERIUM_CHESTPLATE, itemModelGenerator);
+        registerArmour(ModItems.ENDERIUM_LEGGINGS, itemModelGenerator);
+        registerArmour(ModItems.ENDERIUM_BOOTS, itemModelGenerator);
+    }
 
-        itemModelGenerator.registerArmor(ModItems.ENDERIUM_CHESTPLATE, ModEquipmentAssets.ENDERIUM,
-                "enderium", false);
+    private void registerArmour (Item item, ItemModelGenerator itemModelGenerator) {
+        final Map<EquipmentSlot, String> slotToType = Map.of(
+                EquipmentSlot.HEAD, EquipmentType.HELMET.getName(),
+                EquipmentSlot.CHEST, EquipmentType.CHESTPLATE.getName(),
+                EquipmentSlot.LEGS, EquipmentType.LEGGINGS.getName(),
+                EquipmentSlot.FEET, EquipmentType.BOOTS.getName(),
+                EquipmentSlot.BODY, EquipmentType.BODY.getName()
+        );
 
-        itemModelGenerator.registerArmor(ModItems.ENDERIUM_LEGGINGS, ModEquipmentAssets.ENDERIUM,
-                "enderium", false);
-
-        itemModelGenerator.registerArmor(ModItems.ENDERIUM_BOOTS, ModEquipmentAssets.ENDERIUM,
-                "enderium", false);
+        EquippableComponent equippableComponent = item.getComponents().get(DataComponentTypes.EQUIPPABLE);
+        if (equippableComponent == null || equippableComponent.assetId().isEmpty()) {
+            return;
+        }
+        RegistryKey<EquipmentAsset> modelId = equippableComponent.assetId().get();
+        itemModelGenerator.registerArmor(item, modelId, slotToType.getOrDefault(equippableComponent.slot(), "other"), false);
     }
 }
