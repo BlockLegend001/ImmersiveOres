@@ -1,1 +1,1 @@
-- Added some missing enchantable tag
+- Fixed bow pulling animation
