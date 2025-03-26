@@ -1,1 +1,1 @@
-- Fixed armor item textures missing when trimmed
+- Fixed bow pulling animation
