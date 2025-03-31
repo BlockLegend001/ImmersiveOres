@@ -55,7 +55,6 @@ public class PlayerEntityMixin {
                     player.sendAbilitiesUpdate();
                 }
 
-
                 boolean canFlyForOtherReasons = Fly.getOrDefault(player.getUuid(), false);
 
                 if (!isWearingBoots && !canFlyForOtherReasons) {
