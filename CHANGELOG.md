@@ -1,1 +1,1 @@
-- Fixed bow pulling animation
+- Improved flight handling to prevent conflicts with other mods that enable flight.
