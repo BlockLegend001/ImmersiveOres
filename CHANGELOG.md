@@ -1,1 +1,1 @@
-- Added some missing enchantable tag
+- Improved flight handling to prevent conflicts with other mods that enable flight.

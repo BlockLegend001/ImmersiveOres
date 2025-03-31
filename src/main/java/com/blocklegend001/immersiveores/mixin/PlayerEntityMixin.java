@@ -31,7 +31,7 @@ public class PlayerEntityMixin {
         if (!player.isCreative() && !player.isSpectator()) {
 
             if (isWearingBoots && EnderiumConfig.canFlyEnderiumArmor) {
-                Fly.put(player.getUuid(), true);  // Permetti il volo con i boots
+                Fly.put(player.getUuid(), true);
                 player.getAbilities().allowFlying = true;
                 player.sendAbilitiesUpdate();
                 wasWearingBoots = true;
@@ -46,18 +46,21 @@ public class PlayerEntityMixin {
                 }
 
                 if (!isWearingBoots) {
-                    player.getAbilities().allowFlying = Fly.getOrDefault(player.getUuid(), false);
+                    if (!Fly.getOrDefault(player.getUuid(), false) && player.getAbilities().allowFlying) {
+                        return;
+                    }
+                    player.getAbilities().allowFlying = false;
                     player.getAbilities().flying = false;
-                    Fly.replace(player.getUuid(), player.getAbilities().allowFlying, false);
+                    Fly.put(player.getUuid(), false);
                     player.sendAbilitiesUpdate();
                 }
 
                 boolean canFlyForOtherReasons = Fly.getOrDefault(player.getUuid(), false);
 
                 if (!isWearingBoots && !canFlyForOtherReasons) {
-                    player.getAbilities().allowFlying = false;  // Disabilita il volo solo se non ci sono altri motivi
+                    player.getAbilities().allowFlying = false;
                     player.getAbilities().flying = false;
-                    Fly.put(player.getUuid(), false);  // Aggiorna lo stato del volo nel map
+                    Fly.put(player.getUuid(), false);
                     player.sendAbilitiesUpdate();
                 }
             }
