@@ -1,1 +1,1 @@
-- Improved flight handling to prevent conflicts with other mods that enable flight.
+- Fixed the value of spawn height for Vibranium Ore & Vibranium Geode
