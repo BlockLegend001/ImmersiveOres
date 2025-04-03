@@ -27,7 +27,7 @@ public class ModPlacedFeatures {
 
         register(context, VIBRANIUM_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.OVERWORLD_VIBRANIUM_ORE_KEY),
                 ModOrePlacement.commonOrePlacement(6,
-                        HeightRangePlacement.uniform(VerticalAnchor.absolute(-80), VerticalAnchor.absolute(0))));
+                        HeightRangePlacement.uniform(VerticalAnchor.absolute(-60), VerticalAnchor.absolute(0))));
         register(context, NETHER_VULPUS_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.NETHER_VULPUS_ORE_KEY),
                 ModOrePlacement.commonOrePlacement(5,
                         HeightRangePlacement.uniform(VerticalAnchor.absolute(0), VerticalAnchor.absolute(125))));
@@ -37,7 +37,7 @@ public class ModPlacedFeatures {
 
         register(context, VIBRANIUM_GEODE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.VIBRANIUM_GEODE_KEY), List.of(
                 RarityFilter.onAverageOnceEvery(40), InSquarePlacement.spread(),
-                HeightRangePlacement.uniform(VerticalAnchor.absolute(-80), VerticalAnchor.absolute(0)),
+                HeightRangePlacement.uniform(VerticalAnchor.absolute(-60), VerticalAnchor.absolute(0)),
                 BiomeFilter.biome()));
         register(context, VULPUS_GEODE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.VULPUS_GEODE_KEY), List.of(
                 RarityFilter.onAverageOnceEvery(50), InSquarePlacement.spread(),

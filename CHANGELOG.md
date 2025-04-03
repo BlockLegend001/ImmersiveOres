@@ -1,1 +1,1 @@
-- Fixed bow pulling animation
+- Fixed the value of spawn height for Vibranium Ore & Vibranium Geode
