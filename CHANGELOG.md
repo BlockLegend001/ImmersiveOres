@@ -1,1 +1,1 @@
-- Added some missing enchantable tag
+- Fixed the value of spawn height for Vibranium Ore & Vibranium Geode
