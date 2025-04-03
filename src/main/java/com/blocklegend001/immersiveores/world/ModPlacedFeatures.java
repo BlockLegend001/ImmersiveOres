@@ -31,7 +31,7 @@ public class ModPlacedFeatures {
                 
         register(context, VIBRANIUM_ORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.OVERWORLD_VIBRANIUM_ORE_KEY),
                 ModOrePlacement.modifiersWithCount(6,
-                        HeightRangePlacementModifier.uniform(YOffset.fixed(-80), YOffset.fixed(0))));
+                        HeightRangePlacementModifier.uniform(YOffset.fixed(-60), YOffset.fixed(0))));
         register(context, NETHER_VULPUS_ORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.NETHER_VULPUS_ORE_KEY),
                 ModOrePlacement.modifiersWithCount(5,
                         HeightRangePlacementModifier.uniform(YOffset.fixed(0), YOffset.fixed(125))));
@@ -41,7 +41,7 @@ public class ModPlacedFeatures {
 
         register(context, VIBRANIUM_GEODE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.VIBRANIUM_GEODE_KEY), List.of(
                 RarityFilterPlacementModifier.of(40), SquarePlacementModifier.of(),
-                HeightRangePlacementModifier.uniform(YOffset.fixed(-80), YOffset.fixed(0))));
+                HeightRangePlacementModifier.uniform(YOffset.fixed(-60), YOffset.fixed(0))));
         register(context, VULPUS_GEODE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.VULPUS_GEODE_KEY), List.of(
                 RarityFilterPlacementModifier.of(50), SquarePlacementModifier.of(),
                 HeightRangePlacementModifier.uniform(YOffset.fixed(0), YOffset.fixed(125))));
