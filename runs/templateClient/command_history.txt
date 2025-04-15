@@ -1,4 +1,3 @@
-/gamemode survival
 /gamemode cd
 /gamemode creative
 /execute at Dev in minecraft:the_end run tp 0 0 0
@@ -46,3 +45,6 @@
 /time set day
 /gamemode survival
 /summon minecraft:slime
+/time set day
+/gamemode survival
+/xp add Dev 10000
