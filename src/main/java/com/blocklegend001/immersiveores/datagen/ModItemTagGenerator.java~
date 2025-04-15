@@ -170,5 +170,9 @@ public class ModItemTagGenerator extends FabricTagProvider.ItemTagProvider {
                 ModItems.VIBRANIUM_PAXEL,
                 ModItems.VULPUS_PAXEL,
                 ModItems.ENDERIUM_PAXEL);
+
+        getOrCreateTagBuilder(ModTags.Items.VIBRANIUM_REPAIRS).add(ModItems.VIBRANIUM_INGOT);
+        getOrCreateTagBuilder(ModTags.Items.VULPUS_REPAIRS).add(ModItems.VULPUS_INGOT);
+        getOrCreateTagBuilder(ModTags.Items.ENDERIUM_REPAIRS).add(ModItems.ENDERIUM_INGOT);
     }
 }
