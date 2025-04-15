@@ -1,33 +1,33 @@
-[20mar2025 11:27:57.996] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forge_userdev_data, --assetIndex, 17, --assetsDir, C:\Users\rosar\.gradle\caches\forge_gradle\assets, --gameDir, ., --mod, immersiveores, --all, --output, F:\Programmazione\Mod\Immersive Ores\FORGE\1.21.1\src\generated\resources, --existing, F:\Programmazione\Mod\Immersive Ores\FORGE\1.21.1\src\main\resources]
-[20mar2025 11:27:58.002] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: JVM identified as Amazon.com Inc. OpenJDK 64-Bit Server VM 21.0.5+11-LTS
-[20mar2025 11:27:58.003] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 10.2.2 starting: java version 21.0.5 by Amazon.com Inc.; OS Windows 11 arch amd64 version 10.0
-[20mar2025 11:27:58.335] [main/INFO] [net.minecraftforge.fml.loading.ImmediateWindowHandler/]: ImmediateWindowProvider not loading because launch target is forge_userdev_data
-[20mar2025 11:27:58.488] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.7 Source=jar:file:///C:/Users/rosar/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.7/8ab114ac385e6dbdad5efafe28aba4df8120915f/mixin-0.8.7.jar!/ Service=ModLauncher Env=UNKNOWN
-[20mar2025 11:27:59.573] [main/INFO] [net.minecraftforge.fml.loading.moddiscovery.JarInJarDependencyLocator/]: No dependencies to load found. Skipping!
-[20mar2025 11:28:00.288] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forge_userdev_data' with arguments [--gameDir, ., --assetsDir, C:\Users\rosar\.gradle\caches\forge_gradle\assets, --assetIndex, 17, --mod, immersiveores, --all, --output, F:\Programmazione\Mod\Immersive Ores\FORGE\1.21.1\src\generated\resources, --existing, F:\Programmazione\Mod\Immersive Ores\FORGE\1.21.1\src\main\resources]
-[20mar2025 11:28:06.955] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 52.0.22, for MC 1.21.1 with MCP 20240808.132146
-[20mar2025 11:28:06.955] [modloading-worker-0/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v52.0.22 Initialized
-[20mar2025 11:28:07.021] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Opening jdk.naming.dns/com.sun.jndi.dns to java.naming
-[20mar2025 11:28:07.167] [modloading-worker-0/INFO] [mezz.jei.library.load.PluginCaller/]: Sending ConfigManager...
-[20mar2025 11:28:07.173] [modloading-worker-0/INFO] [mezz.jei.library.load.PluginCaller/]: Sending ConfigManager took 4.012 ms
-[20mar2025 11:28:07.764] [main/INFO] [net.minecraftforge.data.loading.DatagenModLoader/]: Initializing Data Gatherer for mods [immersiveores]
-[20mar2025 11:28:07.832] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/rosar/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.21.1-52.0.22_mapped_official_1.21.1/forge-1.21.1-52.0.22_mapped_official_1.21.1.jar%230!/assets/.mcassetsroot' uses unexpected schema
-[20mar2025 11:28:07.832] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/rosar/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.21.1-52.0.22_mapped_official_1.21.1/forge-1.21.1-52.0.22_mapped_official_1.21.1.jar%230!/data/.mcassetsroot' uses unexpected schema
-[20mar2025 11:28:08.002] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Recipes
-[20mar2025 11:28:08.210] [main/INFO] [net.minecraft.data.DataGenerator/]: Recipes finished after 207 ms
-[20mar2025 11:28:08.210] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Block States: immersiveores
-[20mar2025 11:28:08.344] [main/INFO] [net.minecraft.data.DataGenerator/]: Block States: immersiveores finished after 133 ms
-[20mar2025 11:28:08.344] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Item Models: immersiveores
-[20mar2025 11:28:08.400] [main/INFO] [net.minecraft.data.DataGenerator/]: Item Models: immersiveores finished after 55 ms
-[20mar2025 11:28:08.400] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Loot Tables
-[20mar2025 11:28:08.415] [main/INFO] [net.minecraft.data.DataGenerator/]: Loot Tables finished after 14 ms
-[20mar2025 11:28:08.415] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:block mod id immersiveores
-[20mar2025 11:28:08.425] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:block mod id immersiveores finished after 8 ms
-[20mar2025 11:28:08.425] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:item mod id immersiveores
-[20mar2025 11:28:08.437] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:item mod id immersiveores finished after 12 ms
-[20mar2025 11:28:08.437] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Registries
-[20mar2025 11:28:08.443] [main/INFO] [net.minecraft.data.DataGenerator/]: Registries finished after 5 ms
-[20mar2025 11:28:08.443] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Advancements
-[20mar2025 11:28:08.466] [main/INFO] [net.minecraft.data.DataGenerator/]: Advancements finished after 22 ms
-[20mar2025 11:28:08.466] [main/INFO] [net.minecraft.data.DataGenerator/]: All providers took: 464 ms
-[20mar2025 11:28:08.475] [main/INFO] [net.minecraft.data.HashCache/]: Caching: total files: 425, old count: 418, new count: 426, removed stale: 0, written: 7
+[03apr2025 17:32:47.138] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forge_userdev_data, --assetIndex, 17, --assetsDir, C:\Users\rosar\.gradle\caches\forge_gradle\assets, --gameDir, ., --mod, immersiveores, --all, --output, D:\Programmazione\Mod\Immersive Ores\FORGE\1.21.1\src\generated\resources, --existing, D:\Programmazione\Mod\Immersive Ores\FORGE\1.21.1\src\main\resources]
+[03apr2025 17:32:47.143] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: JVM identified as Amazon.com Inc. OpenJDK 64-Bit Server VM 21.0.6+7-LTS
+[03apr2025 17:32:47.144] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 10.2.2 starting: java version 21.0.6 by Amazon.com Inc.; OS Windows 11 arch amd64 version 10.0
+[03apr2025 17:32:47.241] [main/INFO] [net.minecraftforge.fml.loading.ImmediateWindowHandler/]: ImmediateWindowProvider not loading because launch target is forge_userdev_data
+[03apr2025 17:32:47.332] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.7 Source=jar:file:///C:/Users/rosar/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.7/8ab114ac385e6dbdad5efafe28aba4df8120915f/mixin-0.8.7.jar!/ Service=ModLauncher Env=UNKNOWN
+[03apr2025 17:32:48.063] [main/INFO] [net.minecraftforge.fml.loading.moddiscovery.JarInJarDependencyLocator/]: No dependencies to load found. Skipping!
+[03apr2025 17:32:48.888] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forge_userdev_data' with arguments [--gameDir, ., --assetsDir, C:\Users\rosar\.gradle\caches\forge_gradle\assets, --assetIndex, 17, --mod, immersiveores, --all, --output, D:\Programmazione\Mod\Immersive Ores\FORGE\1.21.1\src\generated\resources, --existing, D:\Programmazione\Mod\Immersive Ores\FORGE\1.21.1\src\main\resources]
+[03apr2025 17:32:53.601] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 52.0.22, for MC 1.21.1 with MCP 20240808.132146
+[03apr2025 17:32:53.601] [modloading-worker-0/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v52.0.22 Initialized
+[03apr2025 17:32:53.668] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Opening jdk.naming.dns/com.sun.jndi.dns to java.naming
+[03apr2025 17:32:53.867] [modloading-worker-0/INFO] [mezz.jei.library.load.PluginCaller/]: Sending ConfigManager...
+[03apr2025 17:32:53.871] [modloading-worker-0/INFO] [mezz.jei.library.load.PluginCaller/]: Sending ConfigManager took 3.678 ms
+[03apr2025 17:32:54.240] [main/INFO] [net.minecraftforge.data.loading.DatagenModLoader/]: Initializing Data Gatherer for mods [immersiveores]
+[03apr2025 17:32:54.350] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/rosar/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.21.1-52.0.22_mapped_official_1.21.1/forge-1.21.1-52.0.22_mapped_official_1.21.1.jar%230!/assets/.mcassetsroot' uses unexpected schema
+[03apr2025 17:32:54.351] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/rosar/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.21.1-52.0.22_mapped_official_1.21.1/forge-1.21.1-52.0.22_mapped_official_1.21.1.jar%230!/data/.mcassetsroot' uses unexpected schema
+[03apr2025 17:32:54.543] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Recipes
+[03apr2025 17:32:54.769] [main/INFO] [net.minecraft.data.DataGenerator/]: Recipes finished after 225 ms
+[03apr2025 17:32:54.770] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Block States: immersiveores
+[03apr2025 17:32:55.011] [main/INFO] [net.minecraft.data.DataGenerator/]: Block States: immersiveores finished after 240 ms
+[03apr2025 17:32:55.011] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Item Models: immersiveores
+[03apr2025 17:32:55.073] [main/INFO] [net.minecraft.data.DataGenerator/]: Item Models: immersiveores finished after 62 ms
+[03apr2025 17:32:55.073] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Loot Tables
+[03apr2025 17:32:55.095] [main/INFO] [net.minecraft.data.DataGenerator/]: Loot Tables finished after 21 ms
+[03apr2025 17:32:55.095] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:block mod id immersiveores
+[03apr2025 17:32:55.102] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:block mod id immersiveores finished after 7 ms
+[03apr2025 17:32:55.102] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:item mod id immersiveores
+[03apr2025 17:32:55.107] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:item mod id immersiveores finished after 4 ms
+[03apr2025 17:32:55.107] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Registries
+[03apr2025 17:32:55.121] [main/INFO] [net.minecraft.data.DataGenerator/]: Registries finished after 13 ms
+[03apr2025 17:32:55.121] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Advancements
+[03apr2025 17:32:55.155] [main/INFO] [net.minecraft.data.DataGenerator/]: Advancements finished after 33 ms
+[03apr2025 17:32:55.155] [main/INFO] [net.minecraft.data.DataGenerator/]: All providers took: 613 ms
+[03apr2025 17:32:55.167] [main/INFO] [net.minecraft.data.HashCache/]: Caching: total files: 425, old count: 425, new count: 426, removed stale: 0, written: 2
