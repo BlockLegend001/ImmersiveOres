@@ -28,40 +28,40 @@ public class PlayerEntityMixin {
 
         boolean isWearingBoots = player.getEquippedStack(EquipmentSlot.FEET).getItem() == ModItems.ENDERIUM_BOOTS;
 
-        // Gestiamo il volo solo se il player è in modalità sopravvivenza o avventura
         if (!player.isCreative() && !player.isSpectator()) {
 
             if (isWearingBoots && EnderiumConfig.canFlyEnderiumArmor) {
-                Fly.put(player.getUuid(), true);  // Permetti il volo con i boots
+                Fly.put(player.getUuid(), true);
                 player.getAbilities().allowFlying = true;
                 player.sendAbilitiesUpdate();
                 wasWearingBoots = true;
             } else {
-                // Se il giocatore ha rimosso i boots
                 if (wasWearingBoots && !isWearingBoots) {
                     ModEventHandler.onBootsRemoved();
                     wasWearingBoots = false;
                 }
 
-                // Resetta la prevenzione del danno di caduta quando il player atterra
                 if (player.isOnGround()) {
                     ModEventHandler.resetFallDamagePrevention();
                 }
 
                 if (!isWearingBoots) {
-                    player.getAbilities().allowFlying = Fly.getOrDefault(player.getUuid(), false);
+                    if (!Fly.getOrDefault(player.getUuid(), false) && player.getAbilities().allowFlying) {
+                        return;
+                    }
+                    player.getAbilities().allowFlying = false;
                     player.getAbilities().flying = false;
-                    Fly.replace(player.getUuid(), player.getAbilities().allowFlying, false);
+                    Fly.put(player.getUuid(), false);
                     player.sendAbilitiesUpdate();
                 }
 
-                // Verifica se il giocatore può volare per altri motivi (ad es. altri oggetti)
+
                 boolean canFlyForOtherReasons = Fly.getOrDefault(player.getUuid(), false);
 
                 if (!isWearingBoots && !canFlyForOtherReasons) {
-                    player.getAbilities().allowFlying = false;  // Disabilita il volo solo se non ci sono altri motivi
+                    player.getAbilities().allowFlying = false;
                     player.getAbilities().flying = false;
-                    Fly.put(player.getUuid(), false);  // Aggiorna lo stato del volo nel map
+                    Fly.put(player.getUuid(), false);
                     player.sendAbilitiesUpdate();
                 }
             }
