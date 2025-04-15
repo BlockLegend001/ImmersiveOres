@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_raw_enderium": {
+      "conditions": {
+        "items": [
+          {
+            "items": "immersiveores:raw_enderium"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "immersiveores:enderium_ingot_cooked"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_raw_enderium"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "immersiveores:enderium_ingot_cooked"
+    ]
+  }
+}
