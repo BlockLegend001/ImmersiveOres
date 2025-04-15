@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "E": "immersiveores:vibranium_ingot"
+  },
+  "pattern": [
+    "   ",
+    " E ",
+    " E "
+  ],
+  "result": {
+    "count": 1,
+    "id": "immersiveores:vibranium_stick"
+  }
+}

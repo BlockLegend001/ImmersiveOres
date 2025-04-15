@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 250,
+  "experience": 1.0,
+  "ingredient": "immersiveores:raw_enderium",
+  "result": {
+    "id": "immersiveores:enderium_ingot"
+  }
+}

@@ -1,0 +1,119 @@
+package com.blocklegend001.immersiveores.item;
+
+import com.blocklegend001.immersiveores.config.VibraniumConfig;
+import com.blocklegend001.immersiveores.config.VulpusConfig;
+import com.blocklegend001.immersiveores.config.EnderiumConfig;
+import com.blocklegend001.immersiveores.util.ModTags;
+import net.minecraft.core.HolderGetter;
+import net.minecraft.core.HolderSet;
+import net.minecraft.core.Registry;
+import net.minecraft.core.component.DataComponents;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.tags.TagKey;
+import net.minecraft.world.entity.EquipmentSlotGroup;
+import net.minecraft.world.entity.ai.attributes.AttributeModifier;
+import net.minecraft.world.entity.ai.attributes.Attributes;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ToolMaterial;
+import net.minecraft.world.item.component.ItemAttributeModifiers;
+import net.minecraft.world.item.component.Tool;
+import net.minecraft.world.level.block.Block;
+
+import java.util.List;
+
+public class ModToolTiers {
+
+    private final TagKey<Block> incorrectBlocksForDrops;
+
+    private final int durability;
+
+    private final float speed;
+
+    private final float attackDamageBonus;
+
+    private final int enchantmentValue;
+
+    private final TagKey<Item> repairItems;
+
+    public ModToolTiers(TagKey<Block> incorrectBlocksForDrops, int durability, float speed, float attackDamageBonus, int enchantmentValue, TagKey<Item> repairItems) {
+        this.incorrectBlocksForDrops = incorrectBlocksForDrops;
+        this.durability = durability;
+        this.speed = speed;
+        this.attackDamageBonus = attackDamageBonus;
+        this.enchantmentValue = enchantmentValue;
+        this.repairItems = repairItems;
+    }
+
+//    private Item.Properties applyCommonProperties(Item.Properties properties) {
+//        return properties.durability(this.durability).repairable(this.repairItems).enchantable(this.enchantmentValue);
+//    }
+//
+//    public Item.Properties applyToolProperties(Item.Properties properties, TagKey<Block> mineableBlocks, float attackDamage, float attackSpeed, float p_399983_) {
+//        HolderGetter<Block> holdergetter = BuiltInRegistries.acquireBootstrapRegistrationLookup((Registry)BuiltInRegistries.BLOCK);
+//        return applyCommonProperties(properties).component(DataComponents.TOOL, new Tool(List.of(Tool.Rule.deniesDrops((HolderSet)holdergetter.getOrThrow(this.incorrectBlocksForDrops)), Tool.Rule.minesAndDrops((HolderSet)holdergetter.getOrThrow(mineableBlocks), this.speed)), 1.0F, 1, true)).attributes(createToolAttributes(attackDamage, attackSpeed)).component(DataComponents.WEAPON, new Weapon(2, p_399983_));
+//    }
+//
+//    private ItemAttributeModifiers createToolAttributes(float attackDamage, float attackSpeed) {
+//        return ItemAttributeModifiers.builder().add(Attributes.ATTACK_DAMAGE, new AttributeModifier(Item.BASE_ATTACK_DAMAGE_ID, (attackDamage + this.attackDamageBonus), AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.MAINHAND).add(Attributes.ATTACK_SPEED, new AttributeModifier(Item.BASE_ATTACK_SPEED_ID, attackSpeed, AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.MAINHAND).build();
+//    }
+//
+//    public Item.Properties applySwordProperties(Item.Properties properties, float attackDamage, float attackSpeed) {
+//        HolderGetter<Block> holdergetter = BuiltInRegistries.acquireBootstrapRegistrationLookup((Registry)BuiltInRegistries.BLOCK);
+//        return applyCommonProperties(properties).component(DataComponents.TOOL, new Tool(List.of(Tool.Rule.minesAndDrops((HolderSet)HolderSet.direct(new Holder[] { (Holder)Blocks.COBWEB.builtInRegistryHolder() }, ), 15.0F), Tool.Rule.overrideSpeed((HolderSet)holdergetter.getOrThrow(BlockTags.SWORD_EFFICIENT), Float.MAX_VALUE), Tool.Rule.overrideSpeed((HolderSet)holdergetter.getOrThrow(BlockTags.SWORD_EFFICIENT), 1.5F)), 1.0F, 2, false)).attributes(createSwordAttributes(attackDamage, attackSpeed)).component(DataComponents.WEAPON, new Weapon(1));
+//    }
+//
+//    private ItemAttributeModifiers createSwordAttributes(float attackDamage, float attackSpeed) {
+//        return ItemAttributeModifiers.builder().add(Attributes.ATTACK_DAMAGE, new AttributeModifier(Item.BASE_ATTACK_DAMAGE_ID, (attackDamage + this.attackDamageBonus), AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.MAINHAND).add(Attributes.ATTACK_SPEED, new AttributeModifier(Item.BASE_ATTACK_SPEED_ID, attackSpeed, AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.MAINHAND).build();
+//    }
+
+    public TagKey<Block> incorrectBlocksForDrops() {
+        return this.incorrectBlocksForDrops;
+    }
+
+    public int durability() {
+        return this.durability;
+    }
+
+    public float speed() {
+        return this.speed;
+    }
+
+    public float attackDamageBonus() {
+        return this.attackDamageBonus;
+    }
+
+    public int enchantmentValue() {
+        return this.enchantmentValue;
+    }
+
+    public TagKey<Item> repairItems() {
+        return this.repairItems;
+    }
+
+    public static final ToolMaterial VIBRANIUM = new ToolMaterial(
+            ModTags.Blocks.INCORRECT_FOR_VIBRANIUM_TOOL,
+            0,
+            VibraniumConfig.speedVibraniumTier,
+            VibraniumConfig.attackDamageBonusVibraniumTier,
+            VibraniumConfig.enchantmentValueVibraniumTier,
+            ModTags.Items.VIBRANIUM_REPAIRS
+    );
+
+    public static final ToolMaterial VULPUS = new ToolMaterial(
+            ModTags.Blocks.INCORRECT_FOR_VULPUS_TOOL,
+            0,
+            VulpusConfig.speedVulpusTier,
+            VulpusConfig.attackDamageBonusVulpusTier,
+            VulpusConfig.enchantmentValueVulpusTier,
+            ModTags.Items.VULPUS_REPAIRS
+    );
+
+    public static final ToolMaterial ENDERIUM = new ToolMaterial(
+            ModTags.Blocks.INCORRECT_FOR_ENDERIUM_TOOL,
+            0,
+            EnderiumConfig.speedEnderiumTier,
+            EnderiumConfig.attackDamageBonusEnderiumTier,
+            EnderiumConfig.enchantmentValueEnderiumTier,
+            ModTags.Items.ENDERIUM_REPAIRS
+    );
+}
