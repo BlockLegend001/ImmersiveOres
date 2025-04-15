@@ -1,1 +1,1 @@
-- Fixed the value of spawn height for Vibranium Ore & Vibranium Geode
+- Now the Enderium Excavator break the right area (7x7)
