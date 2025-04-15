@@ -1,160 +1,160 @@
-[20mar2025 12:53:55.518] [main/DEBUG] [io.netty.util.internal.logging.InternalLoggerFactory/]: Using SLF4J as the default logging framework
-[20mar2025 12:53:55.521] [main/DEBUG] [io.netty.util.ResourceLeakDetector/]: -Dio.netty.leakDetection.level: simple
-[20mar2025 12:53:55.522] [main/DEBUG] [io.netty.util.ResourceLeakDetector/]: -Dio.netty.leakDetection.targetRecords: 4
-[20mar2025 12:53:55.676] [main/INFO] [net.neoforged.neoforge.data.loading.DatagenModLoader/]: Initializing Data Gatherer for mods [immersiveores]
-[20mar2025 12:53:55.688] [main/INFO] [MixinExtras|Service/]: Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.4.1).
-[20mar2025 12:53:55.691] [main/DEBUG] [mixin/]: Registering new injector for @SugarWrapper with com.llamalad7.mixinextras.sugar.impl.SugarWrapperInjectionInfo
-[20mar2025 12:53:55.692] [main/DEBUG] [mixin/]: Registering new injector for @FactoryRedirectWrapper with com.llamalad7.mixinextras.wrapper.factory.FactoryRedirectWrapperInjectionInfo
-[20mar2025 12:53:55.696] [main/DEBUG] [mixin/]: Mixing MappedRegistryAccessor from neoforge.mixins.json into net.minecraft.core.MappedRegistry
-[20mar2025 12:53:55.699] [main/DEBUG] [mixin/]: neoforge.mixins.json:MappedRegistryAccessor from mod neoforge: Class version 65 required is higher than the class version supported by the current version of Mixin (JAVA_16 supports class version 60)
-[20mar2025 12:53:55.856] [main/DEBUG] [mixin/]: Mixing inject.MixinBlock from architectury-common.mixins.json into net.minecraft.world.level.block.Block
-[20mar2025 12:53:55.858] [main/DEBUG] [mixin/]: architectury-common.mixins.json:inject.MixinBlock from mod architectury: Class version 65 required is higher than the class version supported by the current version of Mixin (JAVA_16 supports class version 60)
-[20mar2025 12:53:56.450] [main/DEBUG] [mixin/]: Mixing neoforge.LiquidBlockAccessor from architectury.mixins.json into net.minecraft.world.level.block.LiquidBlock
-[20mar2025 12:53:56.450] [main/DEBUG] [mixin/]: architectury.mixins.json:neoforge.LiquidBlockAccessor from mod architectury: Class version 65 required is higher than the class version supported by the current version of Mixin (JAVA_16 supports class version 60)
-[20mar2025 12:53:56.450] [main/DEBUG] [mixin/]: Mixing inject.MixinLiquidBlock from architectury-common.mixins.json into net.minecraft.world.level.block.LiquidBlock
-[20mar2025 12:53:56.451] [main/DEBUG] [mixin/]: architectury-common.mixins.json:inject.MixinLiquidBlock from mod architectury: Class version 65 required is higher than the class version supported by the current version of Mixin (JAVA_16 supports class version 60)
-[20mar2025 12:53:56.509] [main/DEBUG] [mixin/]: Mixing inject.MixinEntityType from architectury-common.mixins.json into net.minecraft.world.entity.EntityType
-[20mar2025 12:53:56.510] [main/DEBUG] [mixin/]: architectury-common.mixins.json:inject.MixinEntityType from mod architectury: Class version 65 required is higher than the class version supported by the current version of Mixin (JAVA_16 supports class version 60)
-[20mar2025 12:53:56.547] [main/DEBUG] [mixin/]: Mixing inject.MixinFluid from architectury-common.mixins.json into net.minecraft.world.level.material.Fluid
-[20mar2025 12:53:56.547] [main/DEBUG] [mixin/]: architectury-common.mixins.json:inject.MixinFluid from mod architectury: Class version 65 required is higher than the class version supported by the current version of Mixin (JAVA_16 supports class version 60)
-[20mar2025 12:53:56.624] [main/DEBUG] [mixin/]: Mixing MixinFallingBlockEntity from architectury.mixins.json into net.minecraft.world.entity.item.FallingBlockEntity
-[20mar2025 12:53:56.626] [main/DEBUG] [mixin/]: architectury.mixins.json:MixinFallingBlockEntity from mod architectury: Class version 65 required is higher than the class version supported by the current version of Mixin (JAVA_16 supports class version 60)
-[20mar2025 12:53:56.692] [main/DEBUG] [mixin/]: architectury.mixins.json:MixinFallingBlockEntity from mod architectury->@Inject::handleLand(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V doesn't use it's CallbackInfo
-[20mar2025 12:53:56.692] [main/DEBUG] [mixin/]: architectury.mixins.json:MixinFallingBlockEntity from mod architectury->@Inject::handleLand(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V has 0 override(s) in child classes
-[20mar2025 12:53:56.692] [main/DEBUG] [mixin/]: architectury.mixins.json:MixinFallingBlockEntity from mod architectury->@Inject::handleLand(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V won't be passed a CallbackInfo as a result
-[20mar2025 12:53:57.056] [main/DEBUG] [mixin/]: Mixing BlockEntityTypeAccessor from neoforge.mixins.json into net.minecraft.world.level.block.entity.BlockEntityType
-[20mar2025 12:53:57.056] [main/DEBUG] [mixin/]: neoforge.mixins.json:BlockEntityTypeAccessor from mod neoforge: Class version 65 required is higher than the class version supported by the current version of Mixin (JAVA_16 supports class version 60)
-[20mar2025 12:53:58.287] [main/DEBUG] [mixin/]: Mixing inject.MixinItem from architectury-common.mixins.json into net.minecraft.world.item.Item
-[20mar2025 12:53:58.287] [main/DEBUG] [mixin/]: architectury-common.mixins.json:inject.MixinItem from mod architectury: Class version 65 required is higher than the class version supported by the current version of Mixin (JAVA_16 supports class version 60)
-[20mar2025 12:53:58.298] [main/DEBUG] [mixin/]: architectury-common.mixins.json:inject.MixinItem from mod architectury->@Inject::init(Lnet/minecraft/world/item/Item$Properties;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V doesn't use it's CallbackInfo
-[20mar2025 12:53:58.298] [main/DEBUG] [mixin/]: architectury-common.mixins.json:inject.MixinItem from mod architectury->@Inject::init(Lnet/minecraft/world/item/Item$Properties;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V has 0 override(s) in child classes
-[20mar2025 12:53:58.299] [main/DEBUG] [mixin/]: architectury-common.mixins.json:inject.MixinItem from mod architectury->@Inject::init(Lnet/minecraft/world/item/Item$Properties;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V won't be passed a CallbackInfo as a result
-[20mar2025 12:53:58.807] [main/DEBUG] [mixin/]: Mixing neoforge.MixinBucketItem from architectury.mixins.json into net.minecraft.world.item.BucketItem
-[20mar2025 12:53:58.808] [main/DEBUG] [mixin/]: architectury.mixins.json:neoforge.MixinBucketItem from mod architectury: Class version 65 required is higher than the class version supported by the current version of Mixin (JAVA_16 supports class version 60)
-[20mar2025 12:53:58.812] [main/DEBUG] [mixin/]: Mixing neoforge.BucketItemAccessor from architectury.mixins.json into net.minecraft.world.item.BucketItem
-[20mar2025 12:53:58.813] [main/DEBUG] [mixin/]: architectury.mixins.json:neoforge.BucketItemAccessor from mod architectury: Class version 65 required is higher than the class version supported by the current version of Mixin (JAVA_16 supports class version 60)
-[20mar2025 12:53:58.813] [main/DEBUG] [mixin/]: Mixing inject.MixinBucketItem from architectury-common.mixins.json into net.minecraft.world.item.BucketItem
-[20mar2025 12:53:58.813] [main/DEBUG] [mixin/]: architectury-common.mixins.json:inject.MixinBucketItem from mod architectury: Class version 65 required is higher than the class version supported by the current version of Mixin (JAVA_16 supports class version 60)
-[20mar2025 12:53:58.830] [main/DEBUG] [mixin/]: architectury.mixins.json:neoforge.MixinBucketItem from mod architectury->@Inject::fillBucket(Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/InteractionHand;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable;Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/phys/BlockHitResult;)V does use it's CallbackInfoReturnable
-[20mar2025 12:53:58.869] [main/DEBUG] [mixin/]: Mixing inject.MixinItemProperties from architectury-common.mixins.json into net.minecraft.world.item.Item$Properties
-[20mar2025 12:53:58.869] [main/DEBUG] [mixin/]: architectury-common.mixins.json:inject.MixinItemProperties from mod architectury: Class version 65 required is higher than the class version supported by the current version of Mixin (JAVA_16 supports class version 60)
-[20mar2025 12:53:58.937] [main/DEBUG] [io.netty.util.internal.PlatformDependent0/]: -Dio.netty.noUnsafe: false
-[20mar2025 12:53:58.939] [main/DEBUG] [io.netty.util.internal.PlatformDependent0/]: Java version: 21
-[20mar2025 12:53:58.940] [main/DEBUG] [io.netty.util.internal.PlatformDependent0/]: sun.misc.Unsafe.theUnsafe: available
-[20mar2025 12:53:58.940] [main/DEBUG] [io.netty.util.internal.PlatformDependent0/]: sun.misc.Unsafe.copyMemory: available
-[20mar2025 12:53:58.941] [main/DEBUG] [io.netty.util.internal.PlatformDependent0/]: sun.misc.Unsafe.storeFence: available
-[20mar2025 12:53:58.942] [main/DEBUG] [io.netty.util.internal.PlatformDependent0/]: java.nio.Buffer.address: available
-[20mar2025 12:53:58.943] [main/DEBUG] [io.netty.util.internal.PlatformDependent0/]: java.nio.Bits.unaligned: available, true
-[20mar2025 12:53:58.944] [main/DEBUG] [io.netty.util.internal.PlatformDependent0/]: java.nio.DirectByteBuffer.<init>(long, {int,long}): unavailable
-[20mar2025 12:53:58.945] [main/DEBUG] [io.netty.util.internal.PlatformDependent/]: sun.misc.Unsafe: available
-[20mar2025 12:53:58.945] [main/DEBUG] [io.netty.util.internal.PlatformDependent/]: maxDirectMemory: 4278190080 bytes (maybe)
-[20mar2025 12:53:58.945] [main/DEBUG] [io.netty.util.internal.PlatformDependent/]: -Dio.netty.tmpdir: C:\Users\rosar\AppData\Local\Temp (java.io.tmpdir)
-[20mar2025 12:53:58.945] [main/DEBUG] [io.netty.util.internal.PlatformDependent/]: -Dio.netty.bitMode: 64 (sun.arch.data.model)
-[20mar2025 12:53:58.947] [main/DEBUG] [io.netty.util.internal.PlatformDependent/]: Platform: Windows
-[20mar2025 12:53:58.947] [main/DEBUG] [io.netty.util.internal.PlatformDependent/]: -Dio.netty.maxDirectMemory: -1 bytes
-[20mar2025 12:53:58.948] [main/DEBUG] [io.netty.util.internal.PlatformDependent/]: -Dio.netty.uninitializedArrayAllocationThreshold: -1
-[20mar2025 12:53:58.949] [main/DEBUG] [io.netty.util.internal.CleanerJava9/]: java.nio.ByteBuffer.cleaner(): available
-[20mar2025 12:53:58.949] [main/DEBUG] [io.netty.util.internal.PlatformDependent/]: -Dio.netty.noPreferDirect: false
-[20mar2025 12:53:59.959] [main/DEBUG] [mixin/]: Mixing MixinLightningBolt from architectury-common.mixins.json into net.minecraft.world.entity.LightningBolt
-[20mar2025 12:53:59.960] [main/DEBUG] [mixin/]: architectury-common.mixins.json:MixinLightningBolt from mod architectury: Class version 65 required is higher than the class version supported by the current version of Mixin (JAVA_16 supports class version 60)
-[20mar2025 12:53:59.971] [main/DEBUG] [mixin/]: architectury-common.mixins.json:MixinLightningBolt from mod architectury->@Inject::handleLightning(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;Ljava/util/List;)V doesn't use it's CallbackInfo
-[20mar2025 12:53:59.971] [main/DEBUG] [mixin/]: architectury-common.mixins.json:MixinLightningBolt from mod architectury->@Inject::handleLightning(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;Ljava/util/List;)V has 0 override(s) in child classes
-[20mar2025 12:53:59.971] [main/DEBUG] [mixin/]: architectury-common.mixins.json:MixinLightningBolt from mod architectury->@Inject::handleLightning(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;Ljava/util/List;)V won't be passed a CallbackInfo as a result
-[20mar2025 12:54:00.827] [main/DEBUG] [mixin/]: Mixing MixinInventory from architectury.mixins.json into net.minecraft.world.entity.player.Inventory
-[20mar2025 12:54:00.827] [main/DEBUG] [mixin/]: architectury.mixins.json:MixinInventory from mod architectury: Class version 65 required is higher than the class version supported by the current version of Mixin (JAVA_16 supports class version 60)
-[20mar2025 12:54:00.833] [main/DEBUG] [mixin/]: architectury.mixins.json:MixinInventory from mod architectury->@Inject::updateItems(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V doesn't use it's CallbackInfo
-[20mar2025 12:54:00.834] [main/DEBUG] [mixin/]: architectury.mixins.json:MixinInventory from mod architectury->@Inject::updateItems(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V has 0 override(s) in child classes
-[20mar2025 12:54:00.834] [main/DEBUG] [mixin/]: architectury.mixins.json:MixinInventory from mod architectury->@Inject::updateItems(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V won't be passed a CallbackInfo as a result
-[20mar2025 12:54:01.252] [main/DEBUG] [mixin/]: Mixing MixinLevelEvent from architectury.mixins.json into net.neoforged.neoforge.event.level.LevelEvent
-[20mar2025 12:54:01.252] [main/DEBUG] [mixin/]: architectury.mixins.json:MixinLevelEvent from mod architectury: Class version 65 required is higher than the class version supported by the current version of Mixin (JAVA_16 supports class version 60)
-[20mar2025 12:54:01.842] [main/DEBUG] [net.neoforged.neoforge.registries.GameData/REGISTRIES]: Creating vanilla freeze snapshot
-[20mar2025 12:54:01.867] [main/DEBUG] [net.neoforged.neoforge.registries.GameData/REGISTRIES]: Vanilla freeze snapshot created
-[20mar2025 12:54:01.870] [main/DEBUG] [net.neoforged.fml.ModWorkManager/LOADING]: Using 6 threads for parallel mod-loading
-[20mar2025 12:54:01.882] [main/DEBUG] [net.neoforged.fml.javafmlmod.FMLModContainer/LOADING]: Creating FMLModContainer instance for [me.shedaniel.rei.forge.RoughlyEnoughItemsForge]
-[20mar2025 12:54:01.887] [main/DEBUG] [net.neoforged.fml.javafmlmod.FMLModContainer/LOADING]: Creating FMLModContainer instance for [me.shedaniel.clothconfig.ClothConfigForge]
-[20mar2025 12:54:01.888] [main/DEBUG] [net.neoforged.fml.javafmlmod.FMLModContainer/LOADING]: Creating FMLModContainer instance for [com.blocklegend001.immersiveores.ImmersiveOres]
-[20mar2025 12:54:01.890] [main/DEBUG] [net.neoforged.fml.javafmlmod.FMLModContainer/LOADING]: Creating FMLModContainer instance for [dev.architectury.neoforge.ArchitecturyNeoForge]
-[20mar2025 12:54:01.891] [main/DEBUG] [net.neoforged.fml.javafmlmod.FMLModContainer/LOADING]: Creating FMLModContainer instance for [net.neoforged.neoforge.common.NeoForgeMod, net.neoforged.neoforge.client.ClientNeoForgeMod]
-[20mar2025 12:54:01.897] [modloading-worker-0/DEBUG] [net.neoforged.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Attempting to inject @EventBusSubscriber classes into the eventbus for roughlyenoughitems
-[20mar2025 12:54:01.898] [modloading-worker-0/DEBUG] [net.neoforged.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Attempting to inject @EventBusSubscriber classes into the eventbus for cloth_config
-[20mar2025 12:54:01.906] [modloading-worker-0/DEBUG] [mixin/]: Mixing MixinClientLevel from architectury.mixins.json into net.minecraft.client.multiplayer.ClientLevel
-[20mar2025 12:54:01.907] [modloading-worker-0/DEBUG] [mixin/]: architectury.mixins.json:MixinClientLevel from mod architectury: Class version 65 required is higher than the class version supported by the current version of Mixin (JAVA_16 supports class version 60)
-[20mar2025 12:54:01.918] [modloading-worker-0/DEBUG] [mixin/]: architectury.mixins.json:MixinClientLevel from mod architectury->@Inject::tickEntities(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V doesn't use it's CallbackInfo
-[20mar2025 12:54:01.918] [modloading-worker-0/DEBUG] [mixin/]: architectury.mixins.json:MixinClientLevel from mod architectury->@Inject::tickEntities(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V has 0 override(s) in child classes
-[20mar2025 12:54:01.918] [modloading-worker-0/DEBUG] [mixin/]: architectury.mixins.json:MixinClientLevel from mod architectury->@Inject::tickEntities(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V won't be passed a CallbackInfo as a result
-[20mar2025 12:54:01.919] [modloading-worker-0/DEBUG] [mixin/]: architectury.mixins.json:MixinClientLevel from mod architectury->@Inject::tickEntitiesPost(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V doesn't use it's CallbackInfo
-[20mar2025 12:54:01.919] [modloading-worker-0/DEBUG] [mixin/]: architectury.mixins.json:MixinClientLevel from mod architectury->@Inject::tickEntitiesPost(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V has 0 override(s) in child classes
-[20mar2025 12:54:01.919] [modloading-worker-0/DEBUG] [mixin/]: architectury.mixins.json:MixinClientLevel from mod architectury->@Inject::tickEntitiesPost(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V won't be passed a CallbackInfo as a result
-[20mar2025 12:54:01.932] [modloading-worker-0/DEBUG] [net.neoforged.neoforge.internal.versions.neoforge.NeoForgeVersion/CORE]: Found NeoForge version 21.3.57
-[20mar2025 12:54:01.933] [modloading-worker-0/DEBUG] [net.neoforged.neoforge.internal.versions.neoforge.NeoForgeVersion/CORE]: Found FML version 5.0.6
-[20mar2025 12:54:01.933] [modloading-worker-0/INFO] [net.neoforged.neoforge.common.NeoForgeMod/NEOFORGE-MOD]: NeoForge mod loading, version 21.3.57, for MC 1.21.3
-[20mar2025 12:54:01.973] [modloading-worker-0/DEBUG] [net.neoforged.fml.config.ConfigTracker/CONFIG]: Config file neoforge-client.toml for neoforge tracking
-[20mar2025 12:54:01.973] [modloading-worker-0/DEBUG] [net.neoforged.fml.config.ConfigTracker/CONFIG]: Config file neoforge-server.toml for neoforge tracking
-[20mar2025 12:54:01.973] [modloading-worker-0/DEBUG] [net.neoforged.fml.config.ConfigTracker/CONFIG]: Config file neoforge-common.toml for neoforge tracking
-[20mar2025 12:54:01.997] [modloading-worker-0/DEBUG] [net.neoforged.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Attempting to inject @EventBusSubscriber classes into the eventbus for immersiveores
-[20mar2025 12:54:01.998] [modloading-worker-0/DEBUG] [net.neoforged.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing com.blocklegend001.immersiveores.datagen.DataGenerators to MOD
-[20mar2025 12:54:02.001] [modloading-worker-0/DEBUG] [net.neoforged.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing com.blocklegend001.immersiveores.event.ModEventHandler to GAME
-[20mar2025 12:54:02.002] [modloading-worker-0/DEBUG] [net.neoforged.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing com.blocklegend001.immersiveores.util.tools.excavator.ModEventsEnderiumExcavator to GAME
-[20mar2025 12:54:02.003] [modloading-worker-0/DEBUG] [net.neoforged.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing com.blocklegend001.immersiveores.util.tools.excavator.ModEventsVibraniumExcavator to GAME
-[20mar2025 12:54:02.005] [modloading-worker-0/DEBUG] [net.neoforged.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing com.blocklegend001.immersiveores.util.tools.excavator.ModEventsVulpusExcavator to GAME
-[20mar2025 12:54:02.007] [modloading-worker-0/DEBUG] [net.neoforged.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing com.blocklegend001.immersiveores.util.tools.hammer.ModEventsEnderiumHammer to GAME
-[20mar2025 12:54:02.008] [modloading-worker-0/DEBUG] [net.neoforged.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing com.blocklegend001.immersiveores.util.tools.hammer.ModEventsVibraniumHammer to GAME
-[20mar2025 12:54:02.010] [modloading-worker-0/DEBUG] [net.neoforged.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing com.blocklegend001.immersiveores.util.tools.hammer.ModEventsVulpusHammer to GAME
-[20mar2025 12:54:02.011] [modloading-worker-0/DEBUG] [net.neoforged.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Attempting to inject @EventBusSubscriber classes into the eventbus for architectury
-[20mar2025 12:54:02.011] [modloading-worker-0/DEBUG] [net.neoforged.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing dev.architectury.hooks.client.forge.ClientExtensionsRegistryImpl to MOD
-[20mar2025 12:54:02.045] [modloading-worker-0/DEBUG] [net.neoforged.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Attempting to inject @EventBusSubscriber classes into the eventbus for neoforge
-[20mar2025 12:54:02.046] [modloading-worker-0/DEBUG] [net.neoforged.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing net.neoforged.neoforge.server.command.ConfigCommand to GAME
-[20mar2025 12:54:02.047] [modloading-worker-0/DEBUG] [net.neoforged.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing net.neoforged.neoforge.network.filters.GenericPacketSplitter to MOD
-[20mar2025 12:54:02.070] [modloading-worker-0/DEBUG] [io.netty.buffer.AbstractByteBuf/]: -Dio.netty.buffer.checkAccessible: true
-[20mar2025 12:54:02.071] [modloading-worker-0/DEBUG] [io.netty.buffer.AbstractByteBuf/]: -Dio.netty.buffer.checkBounds: true
-[20mar2025 12:54:02.071] [modloading-worker-0/DEBUG] [io.netty.util.ResourceLeakDetectorFactory/]: Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@1675b1aa
-[20mar2025 12:54:02.078] [modloading-worker-0/DEBUG] [io.netty.util.internal.InternalThreadLocalMap/]: -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
-[20mar2025 12:54:02.078] [modloading-worker-0/DEBUG] [io.netty.util.internal.InternalThreadLocalMap/]: -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
-[20mar2025 12:54:02.082] [modloading-worker-0/DEBUG] [io.netty.buffer.PooledByteBufAllocator/]: -Dio.netty.allocator.numHeapArenas: 12
-[20mar2025 12:54:02.082] [modloading-worker-0/DEBUG] [io.netty.buffer.PooledByteBufAllocator/]: -Dio.netty.allocator.numDirectArenas: 12
-[20mar2025 12:54:02.082] [modloading-worker-0/DEBUG] [io.netty.buffer.PooledByteBufAllocator/]: -Dio.netty.allocator.pageSize: 8192
-[20mar2025 12:54:02.082] [modloading-worker-0/DEBUG] [io.netty.buffer.PooledByteBufAllocator/]: -Dio.netty.allocator.maxOrder: 9
-[20mar2025 12:54:02.082] [modloading-worker-0/DEBUG] [io.netty.buffer.PooledByteBufAllocator/]: -Dio.netty.allocator.chunkSize: 4194304
-[20mar2025 12:54:02.082] [modloading-worker-0/DEBUG] [io.netty.buffer.PooledByteBufAllocator/]: -Dio.netty.allocator.smallCacheSize: 256
-[20mar2025 12:54:02.082] [modloading-worker-0/DEBUG] [io.netty.buffer.PooledByteBufAllocator/]: -Dio.netty.allocator.normalCacheSize: 64
-[20mar2025 12:54:02.083] [modloading-worker-0/DEBUG] [io.netty.buffer.PooledByteBufAllocator/]: -Dio.netty.allocator.maxCachedBufferCapacity: 32768
-[20mar2025 12:54:02.083] [modloading-worker-0/DEBUG] [io.netty.buffer.PooledByteBufAllocator/]: -Dio.netty.allocator.cacheTrimInterval: 8192
-[20mar2025 12:54:02.083] [modloading-worker-0/DEBUG] [io.netty.buffer.PooledByteBufAllocator/]: -Dio.netty.allocator.cacheTrimIntervalMillis: 0
-[20mar2025 12:54:02.083] [modloading-worker-0/DEBUG] [io.netty.buffer.PooledByteBufAllocator/]: -Dio.netty.allocator.useCacheForAllThreads: false
-[20mar2025 12:54:02.083] [modloading-worker-0/DEBUG] [io.netty.buffer.PooledByteBufAllocator/]: -Dio.netty.allocator.maxCachedByteBuffersPerChunk: 1023
-[20mar2025 12:54:02.090] [modloading-worker-0/DEBUG] [io.netty.buffer.ByteBufUtil/]: -Dio.netty.allocator.type: pooled
-[20mar2025 12:54:02.091] [modloading-worker-0/DEBUG] [io.netty.buffer.ByteBufUtil/]: -Dio.netty.threadLocalDirectBufferSize: 0
-[20mar2025 12:54:02.091] [modloading-worker-0/DEBUG] [io.netty.buffer.ByteBufUtil/]: -Dio.netty.maxThreadLocalCharBufferSize: 16384
-[20mar2025 12:54:02.102] [modloading-worker-0/DEBUG] [net.neoforged.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing net.neoforged.neoforge.network.NetworkInitialization to MOD
-[20mar2025 12:54:02.103] [modloading-worker-0/DEBUG] [net.neoforged.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing net.neoforged.neoforge.network.ConfigurationInitialization to MOD
-[20mar2025 12:54:02.107] [modloading-worker-0/DEBUG] [net.neoforged.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing net.neoforged.neoforge.common.MonsterRoomHooks to GAME
-[20mar2025 12:54:02.109] [modloading-worker-0/DEBUG] [net.neoforged.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing net.neoforged.neoforge.client.model.data.ModelDataManager to GAME
-[20mar2025 12:54:02.113] [modloading-worker-0/DEBUG] [net.neoforged.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing net.neoforged.neoforge.client.ParticleBoundsDebugRenderer to GAME
-[20mar2025 12:54:02.114] [modloading-worker-0/DEBUG] [mixin/]: Mixing client.MixinCommandSourceStack from architectury.mixins.json into net.minecraft.commands.CommandSourceStack
-[20mar2025 12:54:02.115] [modloading-worker-0/DEBUG] [mixin/]: architectury.mixins.json:client.MixinCommandSourceStack from mod architectury: Class version 65 required is higher than the class version supported by the current version of Mixin (JAVA_16 supports class version 60)
-[20mar2025 12:54:02.132] [modloading-worker-0/DEBUG] [net.neoforged.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing net.neoforged.neoforge.client.ClientHooks$ClientEvents to MOD
-[20mar2025 12:54:02.141] [modloading-worker-0/DEBUG] [net.neoforged.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing net.neoforged.neoforge.client.BlockEntityRenderBoundsDebugRenderer to GAME
-[20mar2025 12:54:02.142] [modloading-worker-0/DEBUG] [net.neoforged.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing net.neoforged.neoforge.attachment.AttachmentInternals to GAME
-[20mar2025 12:54:02.185] [modloading-sync-worker/DEBUG] [net.neoforged.neoforge.registries.GameData/REGISTRIES]: Unfreezing registries
-[20mar2025 12:54:02.316] [modloading-sync-worker/DEBUG] [net.neoforged.neoforge.registries.GameData/REGISTRIES]: Freezing registries
-[20mar2025 12:54:02.333] [modloading-sync-worker/DEBUG] [net.neoforged.neoforge.registries.GameData/REGISTRIES]: All registries frozen
-[20mar2025 12:54:02.434] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/F:/Programmazione/Mod/Immersive%20Ores/NEOFORGE/1.21.3/.gradle/repositories/ng_dummy_ng/net/neoforged/neoforge/21.3.57/neoforge-21.3.57.jar%23221!/assets/.mcassetsroot' uses unexpected schema
-[20mar2025 12:54:02.434] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/F:/Programmazione/Mod/Immersive%20Ores/NEOFORGE/1.21.3/.gradle/repositories/ng_dummy_ng/net/neoforged/neoforge/21.3.57/neoforge-21.3.57.jar%23221!/data/.mcassetsroot' uses unexpected schema
-[20mar2025 12:54:02.607] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Recipes
-[20mar2025 12:54:02.781] [main/INFO] [net.minecraft.data.DataGenerator/]: Recipes finished after 172 ms
-[20mar2025 12:54:02.781] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Block States: immersiveores
-[20mar2025 12:54:02.804] [main/INFO] [net.minecraft.data.DataGenerator/]: Block States: immersiveores finished after 23 ms
-[20mar2025 12:54:02.805] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Item Models: immersiveores
-[20mar2025 12:54:02.856] [main/INFO] [net.minecraft.data.DataGenerator/]: Item Models: immersiveores finished after 50 ms
-[20mar2025 12:54:02.856] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Loot Tables
-[20mar2025 12:54:02.873] [main/INFO] [net.minecraft.data.DataGenerator/]: Loot Tables finished after 16 ms
-[20mar2025 12:54:02.873] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:block mod id immersiveores
-[20mar2025 12:54:02.888] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:block mod id immersiveores finished after 15 ms
-[20mar2025 12:54:02.890] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:item mod id immersiveores
-[20mar2025 12:54:02.908] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:item mod id immersiveores finished after 18 ms
-[20mar2025 12:54:02.909] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Registries
-[20mar2025 12:54:02.929] [main/INFO] [net.minecraft.data.DataGenerator/]: Registries finished after 21 ms
-[20mar2025 12:54:02.929] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Advancements
-[20mar2025 12:54:02.950] [main/INFO] [net.minecraft.data.DataGenerator/]: Advancements finished after 20 ms
-[20mar2025 12:54:02.950] [main/INFO] [net.minecraft.data.DataGenerator/]: All providers took: 343 ms
-[20mar2025 12:54:02.960] [main/INFO] [net.minecraft.data.HashCache/]: Caching: total files: 428, old count: 421, new count: 429, removed stale: 0, written: 10
+[03apr2025 19:24:49.438] [main/DEBUG] [io.netty.util.internal.logging.InternalLoggerFactory/]: Using SLF4J as the default logging framework
+[03apr2025 19:24:49.448] [main/DEBUG] [io.netty.util.ResourceLeakDetector/]: -Dio.netty.leakDetection.level: simple
+[03apr2025 19:24:49.449] [main/DEBUG] [io.netty.util.ResourceLeakDetector/]: -Dio.netty.leakDetection.targetRecords: 4
+[03apr2025 19:24:49.899] [main/INFO] [net.neoforged.neoforge.data.loading.DatagenModLoader/]: Initializing Data Gatherer for mods [immersiveores]
+[03apr2025 19:24:49.914] [main/INFO] [MixinExtras|Service/]: Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.4.1).
+[03apr2025 19:24:49.916] [main/DEBUG] [mixin/]: Registering new injector for @SugarWrapper with com.llamalad7.mixinextras.sugar.impl.SugarWrapperInjectionInfo
+[03apr2025 19:24:49.917] [main/DEBUG] [mixin/]: Registering new injector for @FactoryRedirectWrapper with com.llamalad7.mixinextras.wrapper.factory.FactoryRedirectWrapperInjectionInfo
+[03apr2025 19:24:49.924] [main/DEBUG] [mixin/]: Mixing MappedRegistryAccessor from neoforge.mixins.json into net.minecraft.core.MappedRegistry
+[03apr2025 19:24:49.929] [main/DEBUG] [mixin/]: neoforge.mixins.json:MappedRegistryAccessor from mod neoforge: Class version 65 required is higher than the class version supported by the current version of Mixin (JAVA_16 supports class version 60)
+[03apr2025 19:24:50.163] [main/DEBUG] [mixin/]: Mixing inject.MixinBlock from architectury-common.mixins.json into net.minecraft.world.level.block.Block
+[03apr2025 19:24:50.165] [main/DEBUG] [mixin/]: architectury-common.mixins.json:inject.MixinBlock from mod architectury: Class version 65 required is higher than the class version supported by the current version of Mixin (JAVA_16 supports class version 60)
+[03apr2025 19:24:50.523] [main/DEBUG] [mixin/]: Mixing neoforge.LiquidBlockAccessor from architectury.mixins.json into net.minecraft.world.level.block.LiquidBlock
+[03apr2025 19:24:50.524] [main/DEBUG] [mixin/]: architectury.mixins.json:neoforge.LiquidBlockAccessor from mod architectury: Class version 65 required is higher than the class version supported by the current version of Mixin (JAVA_16 supports class version 60)
+[03apr2025 19:24:50.524] [main/DEBUG] [mixin/]: Mixing inject.MixinLiquidBlock from architectury-common.mixins.json into net.minecraft.world.level.block.LiquidBlock
+[03apr2025 19:24:50.524] [main/DEBUG] [mixin/]: architectury-common.mixins.json:inject.MixinLiquidBlock from mod architectury: Class version 65 required is higher than the class version supported by the current version of Mixin (JAVA_16 supports class version 60)
+[03apr2025 19:24:50.587] [main/DEBUG] [mixin/]: Mixing inject.MixinEntityType from architectury-common.mixins.json into net.minecraft.world.entity.EntityType
+[03apr2025 19:24:50.588] [main/DEBUG] [mixin/]: architectury-common.mixins.json:inject.MixinEntityType from mod architectury: Class version 65 required is higher than the class version supported by the current version of Mixin (JAVA_16 supports class version 60)
+[03apr2025 19:24:50.627] [main/DEBUG] [mixin/]: Mixing inject.MixinFluid from architectury-common.mixins.json into net.minecraft.world.level.material.Fluid
+[03apr2025 19:24:50.628] [main/DEBUG] [mixin/]: architectury-common.mixins.json:inject.MixinFluid from mod architectury: Class version 65 required is higher than the class version supported by the current version of Mixin (JAVA_16 supports class version 60)
+[03apr2025 19:24:50.700] [main/DEBUG] [mixin/]: Mixing MixinFallingBlockEntity from architectury.mixins.json into net.minecraft.world.entity.item.FallingBlockEntity
+[03apr2025 19:24:50.702] [main/DEBUG] [mixin/]: architectury.mixins.json:MixinFallingBlockEntity from mod architectury: Class version 65 required is higher than the class version supported by the current version of Mixin (JAVA_16 supports class version 60)
+[03apr2025 19:24:50.758] [main/DEBUG] [mixin/]: architectury.mixins.json:MixinFallingBlockEntity from mod architectury->@Inject::handleLand(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V doesn't use it's CallbackInfo
+[03apr2025 19:24:50.759] [main/DEBUG] [mixin/]: architectury.mixins.json:MixinFallingBlockEntity from mod architectury->@Inject::handleLand(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V has 0 override(s) in child classes
+[03apr2025 19:24:50.759] [main/DEBUG] [mixin/]: architectury.mixins.json:MixinFallingBlockEntity from mod architectury->@Inject::handleLand(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V won't be passed a CallbackInfo as a result
+[03apr2025 19:24:51.125] [main/DEBUG] [mixin/]: Mixing BlockEntityTypeAccessor from neoforge.mixins.json into net.minecraft.world.level.block.entity.BlockEntityType
+[03apr2025 19:24:51.126] [main/DEBUG] [mixin/]: neoforge.mixins.json:BlockEntityTypeAccessor from mod neoforge: Class version 65 required is higher than the class version supported by the current version of Mixin (JAVA_16 supports class version 60)
+[03apr2025 19:24:51.962] [main/DEBUG] [mixin/]: Mixing inject.MixinItem from architectury-common.mixins.json into net.minecraft.world.item.Item
+[03apr2025 19:24:51.963] [main/DEBUG] [mixin/]: architectury-common.mixins.json:inject.MixinItem from mod architectury: Class version 65 required is higher than the class version supported by the current version of Mixin (JAVA_16 supports class version 60)
+[03apr2025 19:24:51.973] [main/DEBUG] [mixin/]: architectury-common.mixins.json:inject.MixinItem from mod architectury->@Inject::init(Lnet/minecraft/world/item/Item$Properties;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V doesn't use it's CallbackInfo
+[03apr2025 19:24:51.974] [main/DEBUG] [mixin/]: architectury-common.mixins.json:inject.MixinItem from mod architectury->@Inject::init(Lnet/minecraft/world/item/Item$Properties;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V has 0 override(s) in child classes
+[03apr2025 19:24:51.974] [main/DEBUG] [mixin/]: architectury-common.mixins.json:inject.MixinItem from mod architectury->@Inject::init(Lnet/minecraft/world/item/Item$Properties;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V won't be passed a CallbackInfo as a result
+[03apr2025 19:24:52.323] [main/DEBUG] [mixin/]: Mixing neoforge.MixinBucketItem from architectury.mixins.json into net.minecraft.world.item.BucketItem
+[03apr2025 19:24:52.324] [main/DEBUG] [mixin/]: architectury.mixins.json:neoforge.MixinBucketItem from mod architectury: Class version 65 required is higher than the class version supported by the current version of Mixin (JAVA_16 supports class version 60)
+[03apr2025 19:24:52.327] [main/DEBUG] [mixin/]: Mixing neoforge.BucketItemAccessor from architectury.mixins.json into net.minecraft.world.item.BucketItem
+[03apr2025 19:24:52.327] [main/DEBUG] [mixin/]: architectury.mixins.json:neoforge.BucketItemAccessor from mod architectury: Class version 65 required is higher than the class version supported by the current version of Mixin (JAVA_16 supports class version 60)
+[03apr2025 19:24:52.327] [main/DEBUG] [mixin/]: Mixing inject.MixinBucketItem from architectury-common.mixins.json into net.minecraft.world.item.BucketItem
+[03apr2025 19:24:52.327] [main/DEBUG] [mixin/]: architectury-common.mixins.json:inject.MixinBucketItem from mod architectury: Class version 65 required is higher than the class version supported by the current version of Mixin (JAVA_16 supports class version 60)
+[03apr2025 19:24:52.336] [main/DEBUG] [mixin/]: architectury.mixins.json:neoforge.MixinBucketItem from mod architectury->@Inject::fillBucket(Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/InteractionHand;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable;Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/phys/BlockHitResult;)V does use it's CallbackInfoReturnable
+[03apr2025 19:24:52.358] [main/DEBUG] [mixin/]: Mixing inject.MixinItemProperties from architectury-common.mixins.json into net.minecraft.world.item.Item$Properties
+[03apr2025 19:24:52.359] [main/DEBUG] [mixin/]: architectury-common.mixins.json:inject.MixinItemProperties from mod architectury: Class version 65 required is higher than the class version supported by the current version of Mixin (JAVA_16 supports class version 60)
+[03apr2025 19:24:52.412] [main/DEBUG] [io.netty.util.internal.PlatformDependent0/]: -Dio.netty.noUnsafe: false
+[03apr2025 19:24:52.412] [main/DEBUG] [io.netty.util.internal.PlatformDependent0/]: Java version: 21
+[03apr2025 19:24:52.413] [main/DEBUG] [io.netty.util.internal.PlatformDependent0/]: sun.misc.Unsafe.theUnsafe: available
+[03apr2025 19:24:52.413] [main/DEBUG] [io.netty.util.internal.PlatformDependent0/]: sun.misc.Unsafe.copyMemory: available
+[03apr2025 19:24:52.414] [main/DEBUG] [io.netty.util.internal.PlatformDependent0/]: sun.misc.Unsafe.storeFence: available
+[03apr2025 19:24:52.414] [main/DEBUG] [io.netty.util.internal.PlatformDependent0/]: java.nio.Buffer.address: available
+[03apr2025 19:24:52.416] [main/DEBUG] [io.netty.util.internal.PlatformDependent0/]: java.nio.Bits.unaligned: available, true
+[03apr2025 19:24:52.418] [main/DEBUG] [io.netty.util.internal.PlatformDependent0/]: java.nio.DirectByteBuffer.<init>(long, {int,long}): unavailable
+[03apr2025 19:24:52.418] [main/DEBUG] [io.netty.util.internal.PlatformDependent/]: sun.misc.Unsafe: available
+[03apr2025 19:24:52.418] [main/DEBUG] [io.netty.util.internal.PlatformDependent/]: maxDirectMemory: 4219469824 bytes (maybe)
+[03apr2025 19:24:52.419] [main/DEBUG] [io.netty.util.internal.PlatformDependent/]: -Dio.netty.tmpdir: C:\Users\rosar\AppData\Local\Temp (java.io.tmpdir)
+[03apr2025 19:24:52.419] [main/DEBUG] [io.netty.util.internal.PlatformDependent/]: -Dio.netty.bitMode: 64 (sun.arch.data.model)
+[03apr2025 19:24:52.419] [main/DEBUG] [io.netty.util.internal.PlatformDependent/]: Platform: Windows
+[03apr2025 19:24:52.421] [main/DEBUG] [io.netty.util.internal.PlatformDependent/]: -Dio.netty.maxDirectMemory: -1 bytes
+[03apr2025 19:24:52.421] [main/DEBUG] [io.netty.util.internal.PlatformDependent/]: -Dio.netty.uninitializedArrayAllocationThreshold: -1
+[03apr2025 19:24:52.422] [main/DEBUG] [io.netty.util.internal.CleanerJava9/]: java.nio.ByteBuffer.cleaner(): available
+[03apr2025 19:24:52.422] [main/DEBUG] [io.netty.util.internal.PlatformDependent/]: -Dio.netty.noPreferDirect: false
+[03apr2025 19:24:53.088] [main/DEBUG] [mixin/]: Mixing MixinLightningBolt from architectury-common.mixins.json into net.minecraft.world.entity.LightningBolt
+[03apr2025 19:24:53.088] [main/DEBUG] [mixin/]: architectury-common.mixins.json:MixinLightningBolt from mod architectury: Class version 65 required is higher than the class version supported by the current version of Mixin (JAVA_16 supports class version 60)
+[03apr2025 19:24:53.097] [main/DEBUG] [mixin/]: architectury-common.mixins.json:MixinLightningBolt from mod architectury->@Inject::handleLightning(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;Ljava/util/List;)V doesn't use it's CallbackInfo
+[03apr2025 19:24:53.098] [main/DEBUG] [mixin/]: architectury-common.mixins.json:MixinLightningBolt from mod architectury->@Inject::handleLightning(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;Ljava/util/List;)V has 0 override(s) in child classes
+[03apr2025 19:24:53.098] [main/DEBUG] [mixin/]: architectury-common.mixins.json:MixinLightningBolt from mod architectury->@Inject::handleLightning(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;Ljava/util/List;)V won't be passed a CallbackInfo as a result
+[03apr2025 19:24:53.624] [main/DEBUG] [mixin/]: Mixing MixinInventory from architectury.mixins.json into net.minecraft.world.entity.player.Inventory
+[03apr2025 19:24:53.625] [main/DEBUG] [mixin/]: architectury.mixins.json:MixinInventory from mod architectury: Class version 65 required is higher than the class version supported by the current version of Mixin (JAVA_16 supports class version 60)
+[03apr2025 19:24:53.629] [main/DEBUG] [mixin/]: architectury.mixins.json:MixinInventory from mod architectury->@Inject::updateItems(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V doesn't use it's CallbackInfo
+[03apr2025 19:24:53.629] [main/DEBUG] [mixin/]: architectury.mixins.json:MixinInventory from mod architectury->@Inject::updateItems(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V has 0 override(s) in child classes
+[03apr2025 19:24:53.629] [main/DEBUG] [mixin/]: architectury.mixins.json:MixinInventory from mod architectury->@Inject::updateItems(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V won't be passed a CallbackInfo as a result
+[03apr2025 19:24:53.992] [main/DEBUG] [mixin/]: Mixing MixinLevelEvent from architectury.mixins.json into net.neoforged.neoforge.event.level.LevelEvent
+[03apr2025 19:24:53.992] [main/DEBUG] [mixin/]: architectury.mixins.json:MixinLevelEvent from mod architectury: Class version 65 required is higher than the class version supported by the current version of Mixin (JAVA_16 supports class version 60)
+[03apr2025 19:24:54.331] [main/DEBUG] [net.neoforged.neoforge.registries.GameData/REGISTRIES]: Creating vanilla freeze snapshot
+[03apr2025 19:24:54.358] [main/DEBUG] [net.neoforged.neoforge.registries.GameData/REGISTRIES]: Vanilla freeze snapshot created
+[03apr2025 19:24:54.362] [main/DEBUG] [net.neoforged.fml.ModWorkManager/LOADING]: Using 16 threads for parallel mod-loading
+[03apr2025 19:24:54.371] [main/DEBUG] [net.neoforged.fml.javafmlmod.FMLModContainer/LOADING]: Creating FMLModContainer instance for [me.shedaniel.rei.forge.RoughlyEnoughItemsForge]
+[03apr2025 19:24:54.375] [main/DEBUG] [net.neoforged.fml.javafmlmod.FMLModContainer/LOADING]: Creating FMLModContainer instance for [me.shedaniel.clothconfig.ClothConfigForge]
+[03apr2025 19:24:54.376] [main/DEBUG] [net.neoforged.fml.javafmlmod.FMLModContainer/LOADING]: Creating FMLModContainer instance for [com.blocklegend001.immersiveores.ImmersiveOres]
+[03apr2025 19:24:54.377] [main/DEBUG] [net.neoforged.fml.javafmlmod.FMLModContainer/LOADING]: Creating FMLModContainer instance for [dev.architectury.neoforge.ArchitecturyNeoForge]
+[03apr2025 19:24:54.377] [main/DEBUG] [net.neoforged.fml.javafmlmod.FMLModContainer/LOADING]: Creating FMLModContainer instance for [net.neoforged.neoforge.common.NeoForgeMod, net.neoforged.neoforge.client.ClientNeoForgeMod]
+[03apr2025 19:24:54.383] [modloading-worker-0/DEBUG] [net.neoforged.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Attempting to inject @EventBusSubscriber classes into the eventbus for roughlyenoughitems
+[03apr2025 19:24:54.384] [modloading-worker-0/DEBUG] [net.neoforged.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Attempting to inject @EventBusSubscriber classes into the eventbus for cloth_config
+[03apr2025 19:24:54.388] [modloading-worker-0/DEBUG] [mixin/]: Mixing MixinClientLevel from architectury.mixins.json into net.minecraft.client.multiplayer.ClientLevel
+[03apr2025 19:24:54.389] [modloading-worker-0/DEBUG] [mixin/]: architectury.mixins.json:MixinClientLevel from mod architectury: Class version 65 required is higher than the class version supported by the current version of Mixin (JAVA_16 supports class version 60)
+[03apr2025 19:24:54.394] [modloading-worker-0/DEBUG] [mixin/]: architectury.mixins.json:MixinClientLevel from mod architectury->@Inject::tickEntities(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V doesn't use it's CallbackInfo
+[03apr2025 19:24:54.394] [modloading-worker-0/DEBUG] [mixin/]: architectury.mixins.json:MixinClientLevel from mod architectury->@Inject::tickEntities(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V has 0 override(s) in child classes
+[03apr2025 19:24:54.396] [modloading-worker-0/DEBUG] [mixin/]: architectury.mixins.json:MixinClientLevel from mod architectury->@Inject::tickEntities(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V won't be passed a CallbackInfo as a result
+[03apr2025 19:24:54.396] [modloading-worker-0/DEBUG] [mixin/]: architectury.mixins.json:MixinClientLevel from mod architectury->@Inject::tickEntitiesPost(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V doesn't use it's CallbackInfo
+[03apr2025 19:24:54.396] [modloading-worker-0/DEBUG] [mixin/]: architectury.mixins.json:MixinClientLevel from mod architectury->@Inject::tickEntitiesPost(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V has 0 override(s) in child classes
+[03apr2025 19:24:54.396] [modloading-worker-0/DEBUG] [mixin/]: architectury.mixins.json:MixinClientLevel from mod architectury->@Inject::tickEntitiesPost(Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V won't be passed a CallbackInfo as a result
+[03apr2025 19:24:54.405] [modloading-worker-0/DEBUG] [net.neoforged.neoforge.internal.versions.neoforge.NeoForgeVersion/CORE]: Found NeoForge version 21.3.57
+[03apr2025 19:24:54.405] [modloading-worker-0/DEBUG] [net.neoforged.neoforge.internal.versions.neoforge.NeoForgeVersion/CORE]: Found FML version 5.0.6
+[03apr2025 19:24:54.405] [modloading-worker-0/INFO] [net.neoforged.neoforge.common.NeoForgeMod/NEOFORGE-MOD]: NeoForge mod loading, version 21.3.57, for MC 1.21.3
+[03apr2025 19:24:54.458] [modloading-worker-0/DEBUG] [net.neoforged.fml.config.ConfigTracker/CONFIG]: Config file neoforge-client.toml for neoforge tracking
+[03apr2025 19:24:54.458] [modloading-worker-0/DEBUG] [net.neoforged.fml.config.ConfigTracker/CONFIG]: Config file neoforge-server.toml for neoforge tracking
+[03apr2025 19:24:54.458] [modloading-worker-0/DEBUG] [net.neoforged.fml.config.ConfigTracker/CONFIG]: Config file neoforge-common.toml for neoforge tracking
+[03apr2025 19:24:54.503] [modloading-worker-0/DEBUG] [net.neoforged.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Attempting to inject @EventBusSubscriber classes into the eventbus for immersiveores
+[03apr2025 19:24:54.505] [modloading-worker-0/DEBUG] [net.neoforged.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing com.blocklegend001.immersiveores.datagen.DataGenerators to MOD
+[03apr2025 19:24:54.509] [modloading-worker-0/DEBUG] [net.neoforged.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing com.blocklegend001.immersiveores.event.ModEventHandler to GAME
+[03apr2025 19:24:54.509] [modloading-worker-0/DEBUG] [net.neoforged.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing com.blocklegend001.immersiveores.util.tools.excavator.ModEventsEnderiumExcavator to GAME
+[03apr2025 19:24:54.510] [modloading-worker-0/DEBUG] [net.neoforged.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing com.blocklegend001.immersiveores.util.tools.excavator.ModEventsVibraniumExcavator to GAME
+[03apr2025 19:24:54.512] [modloading-worker-0/DEBUG] [net.neoforged.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing com.blocklegend001.immersiveores.util.tools.excavator.ModEventsVulpusExcavator to GAME
+[03apr2025 19:24:54.512] [modloading-worker-0/DEBUG] [net.neoforged.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Attempting to inject @EventBusSubscriber classes into the eventbus for architectury
+[03apr2025 19:24:54.512] [modloading-worker-0/DEBUG] [net.neoforged.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing dev.architectury.hooks.client.forge.ClientExtensionsRegistryImpl to MOD
+[03apr2025 19:24:54.513] [modloading-worker-0/DEBUG] [net.neoforged.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing com.blocklegend001.immersiveores.util.tools.hammer.ModEventsEnderiumHammer to GAME
+[03apr2025 19:24:54.515] [modloading-worker-0/DEBUG] [net.neoforged.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing com.blocklegend001.immersiveores.util.tools.hammer.ModEventsVibraniumHammer to GAME
+[03apr2025 19:24:54.516] [modloading-worker-0/DEBUG] [net.neoforged.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing com.blocklegend001.immersiveores.util.tools.hammer.ModEventsVulpusHammer to GAME
+[03apr2025 19:24:54.538] [modloading-worker-0/DEBUG] [net.neoforged.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Attempting to inject @EventBusSubscriber classes into the eventbus for neoforge
+[03apr2025 19:24:54.538] [modloading-worker-0/DEBUG] [net.neoforged.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing net.neoforged.neoforge.server.command.ConfigCommand to GAME
+[03apr2025 19:24:54.540] [modloading-worker-0/DEBUG] [net.neoforged.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing net.neoforged.neoforge.network.filters.GenericPacketSplitter to MOD
+[03apr2025 19:24:54.566] [modloading-worker-0/DEBUG] [io.netty.buffer.AbstractByteBuf/]: -Dio.netty.buffer.checkAccessible: true
+[03apr2025 19:24:54.566] [modloading-worker-0/DEBUG] [io.netty.buffer.AbstractByteBuf/]: -Dio.netty.buffer.checkBounds: true
+[03apr2025 19:24:54.568] [modloading-worker-0/DEBUG] [io.netty.util.ResourceLeakDetectorFactory/]: Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@583c58f1
+[03apr2025 19:24:54.572] [modloading-worker-0/DEBUG] [io.netty.util.internal.InternalThreadLocalMap/]: -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+[03apr2025 19:24:54.572] [modloading-worker-0/DEBUG] [io.netty.util.internal.InternalThreadLocalMap/]: -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+[03apr2025 19:24:54.583] [modloading-worker-0/DEBUG] [io.netty.buffer.PooledByteBufAllocator/]: -Dio.netty.allocator.numHeapArenas: 32
+[03apr2025 19:24:54.583] [modloading-worker-0/DEBUG] [io.netty.buffer.PooledByteBufAllocator/]: -Dio.netty.allocator.numDirectArenas: 32
+[03apr2025 19:24:54.583] [modloading-worker-0/DEBUG] [io.netty.buffer.PooledByteBufAllocator/]: -Dio.netty.allocator.pageSize: 8192
+[03apr2025 19:24:54.583] [modloading-worker-0/DEBUG] [io.netty.buffer.PooledByteBufAllocator/]: -Dio.netty.allocator.maxOrder: 9
+[03apr2025 19:24:54.583] [modloading-worker-0/DEBUG] [io.netty.buffer.PooledByteBufAllocator/]: -Dio.netty.allocator.chunkSize: 4194304
+[03apr2025 19:24:54.583] [modloading-worker-0/DEBUG] [io.netty.buffer.PooledByteBufAllocator/]: -Dio.netty.allocator.smallCacheSize: 256
+[03apr2025 19:24:54.583] [modloading-worker-0/DEBUG] [io.netty.buffer.PooledByteBufAllocator/]: -Dio.netty.allocator.normalCacheSize: 64
+[03apr2025 19:24:54.583] [modloading-worker-0/DEBUG] [io.netty.buffer.PooledByteBufAllocator/]: -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+[03apr2025 19:24:54.584] [modloading-worker-0/DEBUG] [io.netty.buffer.PooledByteBufAllocator/]: -Dio.netty.allocator.cacheTrimInterval: 8192
+[03apr2025 19:24:54.584] [modloading-worker-0/DEBUG] [io.netty.buffer.PooledByteBufAllocator/]: -Dio.netty.allocator.cacheTrimIntervalMillis: 0
+[03apr2025 19:24:54.584] [modloading-worker-0/DEBUG] [io.netty.buffer.PooledByteBufAllocator/]: -Dio.netty.allocator.useCacheForAllThreads: false
+[03apr2025 19:24:54.584] [modloading-worker-0/DEBUG] [io.netty.buffer.PooledByteBufAllocator/]: -Dio.netty.allocator.maxCachedByteBuffersPerChunk: 1023
+[03apr2025 19:24:54.591] [modloading-worker-0/DEBUG] [io.netty.buffer.ByteBufUtil/]: -Dio.netty.allocator.type: pooled
+[03apr2025 19:24:54.591] [modloading-worker-0/DEBUG] [io.netty.buffer.ByteBufUtil/]: -Dio.netty.threadLocalDirectBufferSize: 0
+[03apr2025 19:24:54.591] [modloading-worker-0/DEBUG] [io.netty.buffer.ByteBufUtil/]: -Dio.netty.maxThreadLocalCharBufferSize: 16384
+[03apr2025 19:24:54.598] [modloading-worker-0/DEBUG] [net.neoforged.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing net.neoforged.neoforge.network.NetworkInitialization to MOD
+[03apr2025 19:24:54.599] [modloading-worker-0/DEBUG] [net.neoforged.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing net.neoforged.neoforge.network.ConfigurationInitialization to MOD
+[03apr2025 19:24:54.601] [modloading-worker-0/DEBUG] [net.neoforged.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing net.neoforged.neoforge.common.MonsterRoomHooks to GAME
+[03apr2025 19:24:54.602] [modloading-worker-0/DEBUG] [net.neoforged.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing net.neoforged.neoforge.client.model.data.ModelDataManager to GAME
+[03apr2025 19:24:54.604] [modloading-worker-0/DEBUG] [net.neoforged.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing net.neoforged.neoforge.client.ParticleBoundsDebugRenderer to GAME
+[03apr2025 19:24:54.606] [modloading-worker-0/DEBUG] [mixin/]: Mixing client.MixinCommandSourceStack from architectury.mixins.json into net.minecraft.commands.CommandSourceStack
+[03apr2025 19:24:54.606] [modloading-worker-0/DEBUG] [mixin/]: architectury.mixins.json:client.MixinCommandSourceStack from mod architectury: Class version 65 required is higher than the class version supported by the current version of Mixin (JAVA_16 supports class version 60)
+[03apr2025 19:24:54.613] [modloading-worker-0/DEBUG] [net.neoforged.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing net.neoforged.neoforge.client.ClientHooks$ClientEvents to MOD
+[03apr2025 19:24:54.619] [modloading-worker-0/DEBUG] [net.neoforged.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing net.neoforged.neoforge.client.BlockEntityRenderBoundsDebugRenderer to GAME
+[03apr2025 19:24:54.619] [modloading-worker-0/DEBUG] [net.neoforged.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing net.neoforged.neoforge.attachment.AttachmentInternals to GAME
+[03apr2025 19:24:54.636] [modloading-sync-worker/DEBUG] [net.neoforged.neoforge.registries.GameData/REGISTRIES]: Unfreezing registries
+[03apr2025 19:24:54.711] [modloading-sync-worker/DEBUG] [net.neoforged.neoforge.registries.GameData/REGISTRIES]: Freezing registries
+[03apr2025 19:24:54.727] [modloading-sync-worker/DEBUG] [net.neoforged.neoforge.registries.GameData/REGISTRIES]: All registries frozen
+[03apr2025 19:24:54.826] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/D:/Programmazione/Mod/Immersive%20Ores/NEOFORGE/1.21.3/.gradle/repositories/ng_dummy_ng/net/neoforged/neoforge/21.3.57/neoforge-21.3.57.jar%23221!/assets/.mcassetsroot' uses unexpected schema
+[03apr2025 19:24:54.826] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/D:/Programmazione/Mod/Immersive%20Ores/NEOFORGE/1.21.3/.gradle/repositories/ng_dummy_ng/net/neoforged/neoforge/21.3.57/neoforge-21.3.57.jar%23221!/data/.mcassetsroot' uses unexpected schema
+[03apr2025 19:24:55.038] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Recipes
+[03apr2025 19:24:55.143] [main/INFO] [net.minecraft.data.DataGenerator/]: Recipes finished after 103 ms
+[03apr2025 19:24:55.143] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Block States: immersiveores
+[03apr2025 19:24:55.175] [main/INFO] [net.minecraft.data.DataGenerator/]: Block States: immersiveores finished after 32 ms
+[03apr2025 19:24:55.177] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Item Models: immersiveores
+[03apr2025 19:24:55.204] [main/INFO] [net.minecraft.data.DataGenerator/]: Item Models: immersiveores finished after 28 ms
+[03apr2025 19:24:55.205] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Loot Tables
+[03apr2025 19:24:55.245] [main/INFO] [net.minecraft.data.DataGenerator/]: Loot Tables finished after 39 ms
+[03apr2025 19:24:55.245] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:block mod id immersiveores
+[03apr2025 19:24:55.264] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:block mod id immersiveores finished after 19 ms
+[03apr2025 19:24:55.265] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:item mod id immersiveores
+[03apr2025 19:24:55.269] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:item mod id immersiveores finished after 3 ms
+[03apr2025 19:24:55.269] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Registries
+[03apr2025 19:24:55.278] [main/INFO] [net.minecraft.data.DataGenerator/]: Registries finished after 9 ms
+[03apr2025 19:24:55.279] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Advancements
+[03apr2025 19:24:55.304] [main/INFO] [net.minecraft.data.DataGenerator/]: Advancements finished after 26 ms
+[03apr2025 19:24:55.306] [main/INFO] [net.minecraft.data.DataGenerator/]: All providers took: 268 ms
+[03apr2025 19:24:55.315] [main/INFO] [net.minecraft.data.HashCache/]: Caching: total files: 428, old count: 428, new count: 429, removed stale: 0, written: 2
