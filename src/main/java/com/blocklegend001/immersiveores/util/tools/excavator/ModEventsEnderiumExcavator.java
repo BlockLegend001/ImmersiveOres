@@ -28,7 +28,7 @@ public class ModEventsEnderiumExcavator {
                 return;
             }
 
-            for(BlockPos pos : EnderiumExcavator.getBlocksToBeDestroyed(1, initialBlockPos, serverPlayer)) {
+            for(BlockPos pos : EnderiumExcavator.getBlocksToBeDestroyed(3, initialBlockPos, serverPlayer)) {
                 if(pos == initialBlockPos || !excavator.isCorrectToolForDrops(mainHandItem, event.getLevel().getBlockState(pos))) {
                     continue;
                 }
