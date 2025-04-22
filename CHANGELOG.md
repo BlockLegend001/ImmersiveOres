@@ -1,1 +1,1 @@
-- Now the Enderium Excavator break the right area (7x7)
+- Added Blasting recipes for Ores

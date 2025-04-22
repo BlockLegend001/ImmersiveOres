@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_raw_enderium": {
+    "has_raw_vulpus": {
       "conditions": {
         "items": [
           {
-            "items": "immersiveores:raw_enderium"
+            "items": "immersiveores:raw_vulpus"
           }
         ]
       },
@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "immersiveores:enderium_ingot_cooked"
+        "recipe": "minecraft:vulpus_ingot_from_blasting_raw_vulpus"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -21,12 +21,12 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_raw_enderium"
+      "has_raw_vulpus"
     ]
   ],
   "rewards": {
     "recipes": [
-      "immersiveores:enderium_ingot_cooked"
+      "minecraft:vulpus_ingot_from_blasting_raw_vulpus"
     ]
   }
 }
