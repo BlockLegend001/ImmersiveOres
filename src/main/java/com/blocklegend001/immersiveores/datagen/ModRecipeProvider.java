@@ -19,13 +19,13 @@ import java.util.concurrent.CompletableFuture;
 
 public class ModRecipeProvider extends FabricRecipeProvider {
     private static final List<ItemConvertible> VIBRANIUM_SMELTABLES = List.of(ModItems.RAW_VIBRANIUM,
-            ModBlocks.VIBRANIUM_ORE, ModBlocks.RAW_VIBRANIUM_BLOCK);
+            ModBlocks.VIBRANIUM_ORE);
 
     private static final List<ItemConvertible> VULPUS_SMELTABLES = List.of(ModItems.RAW_VULPUS,
-            ModBlocks.VULPUS_ORE, ModBlocks.RAW_VULPUS_BLOCK);
+            ModBlocks.VULPUS_ORE);
     
     private static final List<ItemConvertible> ENDERIUM_SMELTABLES = List.of(ModItems.RAW_ENDERIUM,
-            ModBlocks.ENDERIUM_ORE, ModBlocks.RAW_ENDERIUM_BLOCK);
+            ModBlocks.ENDERIUM_ORE);
     
     public ModRecipeProvider(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> registryWrapper) {
         super(output, registryWrapper);
