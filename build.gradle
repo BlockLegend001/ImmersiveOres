@@ -98,3 +98,9 @@ publishMods {
         requires("fabric-api")
     }
 }
+
+tasks.publishMods.group = "other"
+tasks.register("publishAll") {
+    group = "publishing"
+    dependsOn(tasks.publishMods)
+}
