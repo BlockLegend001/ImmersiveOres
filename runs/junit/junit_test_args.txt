@@ -1,7 +1,7 @@
 --launchTarget
 forgejunitdev
 --version
-21.3.57
+21.3.74
 --assetIndex
 asset-index
 --assetsDir
@@ -13,6 +13,6 @@ C:\Users\rosar\.gradle\caches\minecraft\assets
 --fml.mcVersion
 1.21.3
 --fml.neoForgeVersion
-21.3.57
+21.3.74
 --fml.neoFormVersion
 20241023.131943

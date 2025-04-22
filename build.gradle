@@ -164,3 +164,9 @@ publishMods {
         minecraftVersions.add(minecraft_version)
     }
 }
+
+tasks.publishMods.group = "other"
+tasks.register("publishAll") {
+    group = "publishing"
+    dependsOn(tasks.publishMods)
+}
