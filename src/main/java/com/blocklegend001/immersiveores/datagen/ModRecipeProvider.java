@@ -52,6 +52,9 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
         offerSmelting(exporter, VIBRANIUM_SMELTABLES, RecipeCategory.MISC, ModItems.VIBRANIUM_INGOT,
                 1.0f, 200, "immersiveores:vibranium_ingot_cooked");
+
+        offerBlasting(exporter, VIBRANIUM_SMELTABLES, RecipeCategory.MISC, ModItems.VIBRANIUM_INGOT,
+                1.0f, 100, "immersiveores:vibranium_ingot_cooked_blast");
         
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.VIBRANIUM_NUGGET, 9)
                 .input(Ingredient.ofItems(ModItems.VIBRANIUM_INGOT.asItem()))
@@ -235,6 +238,9 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         offerSmelting(exporter, VULPUS_SMELTABLES, RecipeCategory.MISC, ModItems.VULPUS_INGOT,
                 1.0f, 225, "immersiveores:vulpus_ingot_cooked");
 
+        offerBlasting(exporter, VULPUS_SMELTABLES, RecipeCategory.MISC, ModItems.VULPUS_INGOT,
+                1.0f, 112, "immersiveores:vulpus_ingot_cooked_blast");
+
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.VULPUS_NUGGET, 9)
                 .input(Ingredient.ofItems(ModItems.VULPUS_INGOT.asItem()))
                 .criterion("has_vulpus_ingot", conditionsFromItem(ModItems.VULPUS_INGOT))
@@ -416,6 +422,9 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
         offerSmelting(exporter, ENDERIUM_SMELTABLES, RecipeCategory.MISC, ModItems.ENDERIUM_INGOT,
                 1.0f, 250, "immersiveores:enderium_ingot_cooked");
+
+        offerBlasting(exporter, ENDERIUM_SMELTABLES, RecipeCategory.MISC, ModItems.ENDERIUM_INGOT,
+                1.0f, 125, "immersiveores:enderium_ingot_cooked_blast");
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.ENDERIUM_NUGGET, 9)
                 .input(Ingredient.ofItems(ModItems.ENDERIUM_INGOT.asItem()))
