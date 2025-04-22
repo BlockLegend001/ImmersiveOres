@@ -1,1 +1,1 @@
-- Fixed the value of spawn height for Vibranium Ore & Vibranium Geode
+- Added Blasting recipes for Ores
