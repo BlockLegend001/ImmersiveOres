@@ -3,7 +3,8 @@
   "category": "misc",
   "cookingtime": 200,
   "experience": 1.0,
-  "ingredient": "immersiveores:raw_vibranium",
+  "group": "immersiveores:vibranium_ingot_cooked",
+  "ingredient": "immersiveores:vibranium_ore",
   "result": {
     "id": "immersiveores:vibranium_ingot"
   }
