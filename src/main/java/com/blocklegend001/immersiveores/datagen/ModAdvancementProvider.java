@@ -9,30 +9,27 @@ import net.minecraft.advancements.AdvancementType;
 import net.minecraft.advancements.critereon.InventoryChangeTrigger;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
+import net.minecraft.data.advancements.AdvancementProvider;
+import net.minecraft.data.advancements.AdvancementSubProvider;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
-import net.neoforged.neoforge.common.data.AdvancementProvider;
-import net.neoforged.neoforge.common.data.ExistingFileHelper;
 
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Consumer;
 
 public class ModAdvancementProvider extends AdvancementProvider {
-
-    public ModAdvancementProvider(PackOutput packOutput, CompletableFuture<HolderLookup.Provider> lookupProvider, ExistingFileHelper existingFileHelper) {
-        super(packOutput, lookupProvider, existingFileHelper, List.of(new ModImmersiveOresAdvancement()));
+    public ModAdvancementProvider(PackOutput packOutput, CompletableFuture<HolderLookup.Provider> provider) {
+        super(packOutput, provider, List.of(new ModImmersiveOresAdvancements()));
     }
 
-    public static class ModImmersiveOresAdvancement implements AdvancementProvider.AdvancementGenerator {
-
+    public static class ModImmersiveOresAdvancements implements AdvancementSubProvider {
         @Override
-        public void generate(HolderLookup.Provider provider, Consumer<AdvancementHolder> consumer, ExistingFileHelper existingFileHelper) {
-
+        public void generate(HolderLookup.Provider provider, Consumer<AdvancementHolder> consumer) {
             AdvancementHolder rootAdvancement = Advancement.Builder.advancement()
                     .display(ModItems.VIBRANIUM_INGOT.get(),
                             Component.translatable("advancement.immersiveores.root.title"), Component.translatable("advancement.immersiveores.root.descrption"),
-                           ResourceLocation.fromNamespaceAndPath(ImmersiveOres.MODID, "textures/item/vulpus_block.png"),
+                            ResourceLocation.fromNamespaceAndPath(ImmersiveOres.MODID, "textures/item/vulpus_block.png"),
                             AdvancementType.TASK, true, true, false)
                     .addCriterion("has_vibranium_ingot", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.VIBRANIUM_INGOT.get()))
                     .save(consumer, String.valueOf(ResourceLocation.fromNamespaceAndPath(ImmersiveOres.MODID, "root")));
