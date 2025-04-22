@@ -8,7 +8,9 @@ import net.minecraft.data.recipes.*;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.level.ItemLike;
 
+import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
 public class ModRecipeProvider extends RecipeProvider {
@@ -35,6 +37,18 @@ public class ModRecipeProvider extends RecipeProvider {
 
     @Override
     protected void buildRecipes() {
+        List<ItemLike> VIBRANIUM_SMELTABLES = List.of(
+                ModItems.RAW_VIBRANIUM.get(),
+                ModBlocks.VIBRANIUM_ORE.get());
+
+        List<ItemLike> VULPUS_SMELTABLES = List.of(
+                ModItems.RAW_VULPUS.get(),
+                ModBlocks.VULPUS_ORE.get());
+
+        List<ItemLike> ENDERIUM_SMELTABLES = List.of(
+                ModItems.RAW_ENDERIUM.get(),
+                ModBlocks.ENDERIUM_ORE.get());
+
         //VIBRANIUM
         shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.RAW_VIBRANIUM_BLOCK.get())
                 .define('V', ModItems.RAW_VIBRANIUM.get())
@@ -52,10 +66,11 @@ public class ModRecipeProvider extends RecipeProvider {
                 .unlockedBy("has_vibranium_ingot", has(ModItems.VIBRANIUM_INGOT.get()))
                 .save(this.output);
 
-        SimpleCookingRecipeBuilder.smelting(Ingredient.of(ModItems.RAW_VIBRANIUM.get()),
-                        RecipeCategory.MISC, ModItems.VIBRANIUM_INGOT.get(), 1.0f, 200)
-                .unlockedBy("has_raw_vibranium", has(ModItems.RAW_VIBRANIUM.get()))
-                .save(this.output, "immersiveores:vibranium_ingot_cooked");
+        oreSmelting(VIBRANIUM_SMELTABLES, RecipeCategory.MISC, ModItems.VIBRANIUM_INGOT.get(),
+                1.0f, 200, "immersiveores:vibranium_ingot_cooked");
+
+        oreBlasting(VIBRANIUM_SMELTABLES, RecipeCategory.MISC, ModItems.VIBRANIUM_INGOT.get(),
+                1.0f, 100, "immersiveores:vibranium_ingot_cooked_blast");
 
         shapeless(RecipeCategory.MISC, ModItems.VIBRANIUM_NUGGET.get(), 9)
                 .requires(Ingredient.of(ModItems.VIBRANIUM_INGOT.get().asItem()))
@@ -236,10 +251,11 @@ public class ModRecipeProvider extends RecipeProvider {
                 .unlockedBy("has_vulpus_ingot", has(ModItems.VULPUS_INGOT.get()))
                 .save(this.output);
 
-        SimpleCookingRecipeBuilder.smelting(Ingredient.of(ModItems.RAW_VULPUS.get()), RecipeCategory.MISC,
-                        ModItems.VULPUS_INGOT.get(), 1.0f, 225)
-                .unlockedBy("has_raw_vulpus", has(ModItems.RAW_VULPUS.get()))
-                .save(this.output, "immersiveores:vulpus_ingot_cooked");
+        oreSmelting(VULPUS_SMELTABLES, RecipeCategory.MISC, ModItems.VULPUS_INGOT.get(),
+                1.0f, 224, "immersiveores:vulpus_ingot_cooked");
+
+        oreBlasting(VULPUS_SMELTABLES, RecipeCategory.MISC, ModItems.VULPUS_INGOT.get(),
+                1.0f, 112, "immersiveores:vulpus_ingot_cooked_blast");
 
         shapeless(RecipeCategory.MISC, ModItems.VULPUS_NUGGET.get(), 9)
                 .requires(Ingredient.of(ModItems.VULPUS_INGOT.get().asItem()))
@@ -420,10 +436,11 @@ public class ModRecipeProvider extends RecipeProvider {
                 .unlockedBy("has_enderium_ingot", has(ModItems.ENDERIUM_INGOT.get()))
                 .save(this.output);
 
-        SimpleCookingRecipeBuilder.smelting(Ingredient.of(ModItems.RAW_ENDERIUM.get()),
-                        RecipeCategory.MISC, ModItems.ENDERIUM_INGOT.get(), 1.0f, 250)
-                .unlockedBy("has_raw_enderium", has(ModItems.RAW_ENDERIUM.get()))
-                .save(this.output, "immersiveores:enderium_ingot_cooked");
+        oreSmelting(ENDERIUM_SMELTABLES, RecipeCategory.MISC, ModItems.ENDERIUM_INGOT.get(),
+                1.0f, 250, "immersiveores:enderium_ingot_cooked");
+
+        oreBlasting(ENDERIUM_SMELTABLES, RecipeCategory.MISC, ModItems.ENDERIUM_INGOT.get(),
+                1.0f, 125, "immersiveores:enderium_ingot_cooked_blast");
 
         shapeless(RecipeCategory.MISC, ModItems.ENDERIUM_NUGGET.get(), 9)
                 .requires(Ingredient.of(ModItems.ENDERIUM_INGOT.get().asItem()))
@@ -439,7 +456,6 @@ public class ModRecipeProvider extends RecipeProvider {
                 .requires(Ingredient.of(ModBlocks.ENDERIUM_BLOCK.get().asItem()))
                 .unlockedBy("has_enderium_block", has(ModBlocks.ENDERIUM_BLOCK.get()))
                 .save(this.output);
-
 
         shaped(RecipeCategory.COMBAT, ModItems.ENDERIUM_HORSE_ARMOR.get())
                 .define('E', ModItems.ENDERIUM_INGOT.get())

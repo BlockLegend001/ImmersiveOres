@@ -1,1 +1,1 @@
-- Added REI compatibility
+- Added Blasting recipes for Ores
