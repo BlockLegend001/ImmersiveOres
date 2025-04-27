@@ -1,1 +1,1 @@
-- Added Blasting recipes for Ores
+- Fixed a bug that let crash the game when breaking any block with the paxel
