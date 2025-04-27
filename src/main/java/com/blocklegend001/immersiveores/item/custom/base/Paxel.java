@@ -27,12 +27,13 @@ public class Paxel extends Item {
 
     private static final Map<Block, BlockState> FLATTENABLES = Shovel.getFlattenables();
     private static final Map<Block, Block> STRIPPABLES = Axe.getStrippables();
-    private static TagKey<Block> paxelMineable;
+    private final TagKey<Block> paxelMineable;
     private final ToolMaterial tier;
 
     public Paxel(ToolMaterial tier, TagKey<Block> paxelMineable, float attackDamage, float attackSpeed, Properties properties) {
         super(computeProperties(tier, attackDamage, attackSpeed, properties));
         this.tier = tier;
+        this.paxelMineable = paxelMineable;
     }
 
     public ToolMaterial getTier() {
@@ -49,7 +50,7 @@ public class Paxel extends Item {
     public boolean mineBlock(ItemStack stack, Level world, BlockState state, BlockPos pos, LivingEntity user) {
         if (!world.isClientSide() && state.is(paxelMineable)) {
             world.setBlock(pos, state, 11);
-            if (user != null) user.getMainHandItem().hurtAndBreak(1, user,
+            user.getMainHandItem().hurtAndBreak(1, user,
                     LivingEntity.getSlotForHand(user.getUsedItemHand()));
             return true;
         }
