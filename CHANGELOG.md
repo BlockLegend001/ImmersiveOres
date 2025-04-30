@@ -1,1 +1,1 @@
-- Added Blasting recipes for Ores
+- Added Highlights Outline to the Blocks
