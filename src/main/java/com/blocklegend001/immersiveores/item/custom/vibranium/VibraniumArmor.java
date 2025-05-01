@@ -44,10 +44,10 @@ public class VibraniumArmor extends Item {
             if(entity instanceof PlayerEntity player) {
                 if (player.getEquippedStack(EquipmentSlot.FEET).getItem() == ModItems.VIBRANIUM_BOOTS) {
                     if (VibraniumConfig.speedIVibraniumArmor) {
-                        player.addStatusEffect(new StatusEffectInstance(StatusEffects.SPEED, 0, 0, false, false));
+                        player.addStatusEffect(new StatusEffectInstance(StatusEffects.SPEED, 400, 0, false, false));
                     }
                     if (VibraniumConfig.jumpIVibraniumArmor) {
-                        player.addStatusEffect(new StatusEffectInstance(StatusEffects.JUMP_BOOST, 0, 0, false, false));
+                        player.addStatusEffect(new StatusEffectInstance(StatusEffects.JUMP_BOOST, 400, 0, false, false));
                     }
                 }
                 if (player.getEquippedStack(EquipmentSlot.HEAD).getItem() == ModItems.VIBRANIUM_HELMET) {
