@@ -8,6 +8,8 @@
     "EndermanMixin"
   ],
   "client": [
+    "LevelRendererExcavatorMixin",
+    "LevelRendererHammerMixin"
   ],
   "injectors": {
     "defaultRequire": 1
