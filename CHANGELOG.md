@@ -1,1 +1,2 @@
-- Added Blasting recipes for Ores
+- Added Highlights Outline to the Blocks
+- Fixed effects doesnt work properly on armor
