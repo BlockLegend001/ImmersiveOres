@@ -30,9 +30,9 @@ public class VibraniumArmor extends ArmorItem {
         if (!world.isClientSide()){
             if (player.getItemBySlot(EquipmentSlot.FEET).getItem() == ModItems.VIBRANIUM_BOOTS.get()) {
                 if (VibraniumConfig.speedIVibraniumArmor) {
-                    player.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 0, 0, false, false));
+                    player.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 400, 0, false, false));
                 } if (VibraniumConfig.jumpIVibraniumArmor) {
-                    player.addEffect(new MobEffectInstance(MobEffects.JUMP, 0, 0, false, false));
+                    player.addEffect(new MobEffectInstance(MobEffects.JUMP, 400, 0, false, false));
                 }
             }
             if (player.getItemBySlot(EquipmentSlot.HEAD).getItem() == ModItems.VIBRANIUM_HELMET.get()) {
