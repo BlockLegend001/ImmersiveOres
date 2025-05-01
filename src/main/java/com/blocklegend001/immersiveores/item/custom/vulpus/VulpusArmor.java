@@ -35,32 +35,32 @@ public class VulpusArmor extends ArmorItem {
             if(entity instanceof PlayerEntity player) {
             if (player.getInventory().getArmorStack(0).getItem() == ModItems.VULPUS_BOOTS) {
                 if (VulpusConfig.speedIIVulpusArmor) {
-                    player.addStatusEffect(new StatusEffectInstance(StatusEffects.SPEED, 0, 1, false, false));
+                    player.addStatusEffect(new StatusEffectInstance(StatusEffects.SPEED, 400, 1, false, false));
                 } if (VulpusConfig.jumpIIVulpusArmor) {
-                    player.addStatusEffect(new StatusEffectInstance(StatusEffects.JUMP_BOOST, 0, 1, false, false));
+                    player.addStatusEffect(new StatusEffectInstance(StatusEffects.JUMP_BOOST, 400, 1, false, false));
                 } if (VulpusConfig.fireResistanceVulpusArmor) {
-                    player.addStatusEffect(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE, 0, 0, false, false));
+                    player.addStatusEffect(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE, 400, 0, false, false));
                 }
                 if (!player.isOnGround() && player.fallDistance >= 1.0F && VulpusConfig.immuneToFallDamageVulpusArmor) {
                     player.fallDistance = 0F;
                 }
             }
             if (player.getInventory().getArmorStack(2).getItem() == ModItems.VULPUS_CHESTPLATE) {
-                player.addStatusEffect(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE, 0, 1, false, false));
+                player.addStatusEffect(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE, 400, 1, false, false));
             }
             if (player.getInventory().getArmorStack(3).getItem() == ModItems.VULPUS_HELMET) {
                 if (VulpusConfig.nightVisionVulpusArmor) {
                     player.addStatusEffect(new StatusEffectInstance(StatusEffects.NIGHT_VISION, 400, 0, false, false));
                 } if (VulpusConfig.fireResistanceVulpusArmor) {
-                    player.addStatusEffect(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE, 0, 0, false, false));
+                    player.addStatusEffect(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE, 400, 0, false, false));
                 }
             }
             if (player.getInventory().getArmorStack(1).getItem() == ModItems.VULPUS_LEGGINGS) {
                 if (VulpusConfig.fireResistanceVulpusArmor) {
-                    player.addStatusEffect(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE, 0, 0, false, false));
+                    player.addStatusEffect(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE, 400, 0, false, false));
                 }
                 if (VulpusConfig.neverLoseHungerVulpusArmor) {
-                    player.addStatusEffect(new StatusEffectInstance(StatusEffects.SATURATION, 0, 99, false, false));
+                    player.addStatusEffect(new StatusEffectInstance(StatusEffects.SATURATION, 400, 99, false, false));
                 }
             }
             }
