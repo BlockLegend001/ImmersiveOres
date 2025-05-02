@@ -26,17 +26,17 @@ import java.util.Map;
 @EventBusSubscriber(modid = ImmersiveOres.MODID)
 public class HammerOverlayRenderer {
 
-    private static Map<Item, Integer> getHammerRanges = null;
+    private static Map<Item, Integer> hammerRanges = null;
 
     private static Map<Item, Integer> getHammerRanges() {
-        if (getHammerRanges == null) {
-            getHammerRanges = Map.of(
+        if (hammerRanges == null) {
+            hammerRanges = Map.of(
                     ModItems.VIBRANIUM_HAMMER.get(), 1,
                     ModItems.VULPUS_HAMMER.get(), 2,
                     ModItems.ENDERIUM_HAMMER.get(), 3
             );
         }
-        return getHammerRanges;
+        return hammerRanges;
     }
 
     private static final Minecraft mc = Minecraft.getInstance();
@@ -53,7 +53,7 @@ public class HammerOverlayRenderer {
 
         BlockPos origin = blockHit.getBlockPos();
         Direction side = blockHit.getDirection();
-        int range = getHammerRanges.getOrDefault(heldItem.getItem(), 1);
+        int range = getHammerRanges().getOrDefault(heldItem.getItem(), 1);
 
         if (!mc.level.getBlockState(origin).is(BlockTags.MINEABLE_WITH_PICKAXE)) return;
 

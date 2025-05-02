@@ -26,17 +26,17 @@ import java.util.Map;
 @EventBusSubscriber(modid = ImmersiveOres.MODID)
 public class ExcavatorOverlayRenderer {
 
-    private static Map<Item, Integer> getExcavatorRanges = null;
+    private static Map<Item, Integer> excavatorRanges = null;
 
     private static Map<Item, Integer> getExcavatorRanges() {
-        if (getExcavatorRanges == null) {
-            getExcavatorRanges = Map.of(
+        if (excavatorRanges == null) {
+            excavatorRanges = Map.of(
                     ModItems.VIBRANIUM_EXCAVATOR.get(), 1,
                     ModItems.VULPUS_EXCAVATOR.get(), 2,
                     ModItems.ENDERIUM_EXCAVATOR.get(), 3
             );
         }
-        return getExcavatorRanges;
+        return excavatorRanges;
     }
 
     private static final Minecraft mc = Minecraft.getInstance();
@@ -53,7 +53,7 @@ public class ExcavatorOverlayRenderer {
 
         BlockPos origin = blockHit.getBlockPos();
         Direction side = blockHit.getDirection();
-        int range = getExcavatorRanges.getOrDefault(heldItem.getItem(), 1);
+        int range = getExcavatorRanges().getOrDefault(heldItem.getItem(), 1);
 
         if (!mc.level.getBlockState(origin).is(BlockTags.MINEABLE_WITH_SHOVEL)) return;
 
