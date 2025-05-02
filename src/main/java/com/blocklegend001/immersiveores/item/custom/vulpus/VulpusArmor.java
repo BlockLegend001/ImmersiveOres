@@ -35,35 +35,35 @@ public class VulpusArmor extends ArmorItem {
             if (entity instanceof Player player) {
                 if (player.getItemBySlot(EquipmentSlot.FEET).getItem() == ModItems.VULPUS_BOOTS.get()) {
                     if (VulpusConfig.speedIIVulpusArmor) {
-                        player.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 0, 1, false, false));
+                        player.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 400, 1, false, false));
                     }
                     if (VulpusConfig.jumpIIVulpusArmor) {
-                        player.addEffect(new MobEffectInstance(MobEffects.JUMP, 0, 1, false, false));
+                        player.addEffect(new MobEffectInstance(MobEffects.JUMP, 400, 1, false, false));
                     }
                     if (VulpusConfig.fireResistanceVulpusArmor) {
-                        player.addEffect(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 0, 0, false, false));
+                        player.addEffect(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 400, 0, false, false));
                     }
                     if (!player.onGround() && player.fallDistance >= 1.0F && VulpusConfig.immuneToFallDamageVulpusArmor) {
                         player.fallDistance = 0F;
                     }
                 }
                 if (player.getItemBySlot(EquipmentSlot.CHEST).getItem() == ModItems.VULPUS_CHESTPLATE.get()) {
-                    player.addEffect(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 0, 1, false, false));
+                    player.addEffect(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 400, 1, false, false));
                 }
                 if (player.getItemBySlot(EquipmentSlot.HEAD).getItem() == ModItems.VULPUS_HELMET.get()) {
                     if (VulpusConfig.nightVisionVulpusArmor) {
                         player.addEffect(new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 0, false, false));
                     }
                     if (VulpusConfig.fireResistanceVulpusArmor) {
-                        player.addEffect(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 0, 0, false, false));
+                        player.addEffect(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 400, 0, false, false));
                     }
                 }
                 if (player.getItemBySlot(EquipmentSlot.LEGS).getItem() == ModItems.VULPUS_LEGGINGS.get()) {
                     if (VulpusConfig.fireResistanceVulpusArmor) {
-                        player.addEffect(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 0, 0, false, false));
+                        player.addEffect(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 400, 0, false, false));
                     }
                     if (VulpusConfig.neverLoseHungerVulpusArmor) {
-                        player.addEffect(new MobEffectInstance(MobEffects.SATURATION, 0, 99, false, false));
+                        player.addEffect(new MobEffectInstance(MobEffects.SATURATION, 400, 99, false, false));
                     }
                 }
             }
