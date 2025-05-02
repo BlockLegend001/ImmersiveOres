@@ -1,1 +1,2 @@
-- Fixed a bug that let crash the game when breaking any block with the paxel
+- Added Highlights Outline to the Blocks
+- Fixed effects doesnt work properly on armor
