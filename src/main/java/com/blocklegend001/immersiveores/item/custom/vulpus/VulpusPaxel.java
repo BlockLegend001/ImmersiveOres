@@ -1,5 +1,6 @@
 package com.blocklegend001.immersiveores.item.custom.vulpus;
 
+import com.blocklegend001.immersiveores.item.ModToolTiers;
 import com.blocklegend001.immersiveores.item.custom.base.Paxel;
 import com.blocklegend001.immersiveores.util.ModTags;
 import net.minecraft.ChatFormatting;
@@ -16,8 +17,8 @@ import java.util.function.Consumer;
 
 public class VulpusPaxel extends Paxel {
 
-    public VulpusPaxel(ToolMaterial pTier, int pAttackDamageModifier, float pAttackSpeedModifier, Properties pProperties) {
-        super(pTier, ModTags.Blocks.VULPUS_PAXEL_MINEABLE, pAttackDamageModifier, pAttackSpeedModifier, pProperties);
+    public VulpusPaxel(ModToolTiers pTier, int pAttackDamageModifier, float pAttackSpeedModifier, Properties pProperties) {
+        super(pTier, pAttackDamageModifier, pAttackSpeedModifier, pProperties);
     }
 
     @Override

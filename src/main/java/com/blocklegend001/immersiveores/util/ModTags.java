@@ -12,34 +12,27 @@ import net.minecraft.world.level.block.Block;
 public class ModTags {
     public static class Blocks {
         public static final TagKey<Block> NEEDS_ENDERIUM_TOOL
-                = tag("needs_enderium_tool");
+                = create("needs_enderium_tool");
 
         public static final TagKey<Block> NEEDS_VIBRANIUM_TOOL
-                = tag("needs_vibranium_tool");
+                = create("needs_vibranium_tool");
 
         public static final TagKey<Block> NEEDS_VULPUS_TOOL
-                = tag("needs_vulpus_tool");
-
-        public static final TagKey<Block> ENDERIUM_PAXEL_MINEABLE =
-                tag("mineable/enderium_paxel");
-
-        public static final TagKey<Block> VIBRANIUM_PAXEL_MINEABLE =
-                tag("mineable/vibranium_paxel");
-
-        public static final TagKey<Block> VULPUS_PAXEL_MINEABLE =
-                tag("mineable/vulpus_paxel");
+                = create("needs_vulpus_tool");
 
         public static final TagKey<Block> BEACON_BASE_BLOCKS =
-                tag("beacon_base_blocks");
+                create("beacon_base_blocks");
 
-        public static final TagKey<Block> INCORRECT_FOR_VIBRANIUM_TOOL = tag("incorrect_for_vibranium_tool");
+        private static TagKey<Block> create(String p_203847_) {
+            return TagKey.create(Registries.BLOCK, ResourceLocation.withDefaultNamespace(p_203847_));
+        }
 
-        public static final TagKey<Block> INCORRECT_FOR_VULPUS_TOOL = tag("incorrect_for_vulpus_tool");
+        public static TagKey<Block> create(String namepsace, String path) {
+            return create(ResourceLocation.fromNamespaceAndPath(namepsace, path));
+        }
 
-        public static final TagKey<Block> INCORRECT_FOR_ENDERIUM_TOOL = tag("incorrect_for_enderium_tool");
-
-        private static TagKey<Block> tag(String name) {
-            return BlockTags.create(ResourceLocation.fromNamespaceAndPath(ImmersiveOres.MODID, name));
+        public static TagKey<Block> create(ResourceLocation name) {
+            return TagKey.create(Registries.BLOCK, name);
         }
     }
 
@@ -84,10 +77,6 @@ public class ModTags {
         public static final TagKey<Item> VIBRANIUM_ARMOR = tag("vibranium_armor");
         public static final TagKey<Item> VULPUS_ARMOR = tag("vulpus_armor");
         public static final TagKey<Item> ENDERIUM_ARMOR = tag("enderium_armor");
-
-        public static final TagKey<Item> VIBRANIUM_REPAIRS = tag("vibranium_repairs");
-        public static final TagKey<Item> VULPUS_REPAIRS = tag("vulpus_repairs");
-        public static final TagKey<Item> ENDERIUM_REPAIRS = tag("enderium_repairs");
 
         private static TagKey<Item> tag(String name) {
             return ItemTags.create(ResourceLocation.fromNamespaceAndPath(ImmersiveOres.MODID, name));

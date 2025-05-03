@@ -80,66 +80,79 @@ public class ModItems {
     public static final RegistryObject<Item> VIBRANIUM_PICKAXE = ITEMS.register("vibranium_pickaxe",
             () -> new VibraniumPickaxe(ModToolTiers.VIBRANIUM, VibraniumConfig.attackDamageVibraniumPickaxe, (float) VibraniumConfig.attackSpeedVibraniumPickaxe,
                     new Item.Properties().fireResistant().stacksTo(1).component(DataComponents.UNBREAKABLE, Unit.INSTANCE)
-                            .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(ImmersiveOres.MODID, "vibranium_pickaxe")))));
+                            .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(ImmersiveOres.MODID, "vibranium_pickaxe")))
+                            .repairable(ModItems.VIBRANIUM_INGOT.get())));
 
     public static final RegistryObject<Item> VIBRANIUM_SHOVEL = ITEMS.register("vibranium_shovel",
             () -> new VibraniumShovel(ModToolTiers.VIBRANIUM, VibraniumConfig.attackDamageVibraniumShovel, (float) VibraniumConfig.attackSpeedVibraniumShovel,
                     new Item.Properties().fireResistant().stacksTo(1).component(DataComponents.UNBREAKABLE, Unit.INSTANCE)
-                            .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(ImmersiveOres.MODID, "vibranium_shovel")))));
+                            .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(ImmersiveOres.MODID, "vibranium_shovel")))
+                            .repairable(ModItems.VIBRANIUM_INGOT.get())));
 
     public static final RegistryObject<Item> VIBRANIUM_AXE = ITEMS.register("vibranium_axe",
             () -> new VibraniumAxe(ModToolTiers.VIBRANIUM, VibraniumConfig.attackDamageVibraniumAxe, (float) VibraniumConfig.attackSpeedVibraniumAxe,
                     new Item.Properties().fireResistant().stacksTo(1).component(DataComponents.UNBREAKABLE, Unit.INSTANCE)
-                            .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(ImmersiveOres.MODID, "vibranium_axe")))));
+                            .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(ImmersiveOres.MODID, "vibranium_axe")))
+                            .repairable(ModItems.VIBRANIUM_INGOT.get())));
 
     public static final RegistryObject<Item> VIBRANIUM_SWORD = ITEMS.register("vibranium_sword",
             () -> new VibraniumSword(ModToolTiers.VIBRANIUM, VibraniumConfig.attackDamageVibraniumSword, (float) VibraniumConfig.attackSpeedVibraniumSword,
                     new Item.Properties().fireResistant().stacksTo(1).component(DataComponents.UNBREAKABLE, Unit.INSTANCE)
-                            .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(ImmersiveOres.MODID, "vibranium_sword")))));
+                            .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(ImmersiveOres.MODID, "vibranium_sword")))
+                            .repairable(ModItems.VIBRANIUM_INGOT.get())));
 
     public static final RegistryObject<Item> VIBRANIUM_BOW = ITEMS.register("vibranium_bow",
             () -> new VibraniumBow(BowTiers.VIBRANIUM, (new Item.Properties().fireResistant().stacksTo(1).component(DataComponents.UNBREAKABLE, Unit.INSTANCE)
-                    .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(ImmersiveOres.MODID, "vibranium_bow"))))));
+                    .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(ImmersiveOres.MODID, "vibranium_bow")))
+                    .repairable(ModItems.VIBRANIUM_INGOT.get()))));
 
     public static final RegistryObject<Item> VIBRANIUM_HOE = ITEMS.register("vibranium_hoe",
             () -> new VibraniumHoe(ModToolTiers.VIBRANIUM, VibraniumConfig.attackDamageVibraniumHoe, (float) VibraniumConfig.attackSpeedVibraniumHoe,
                     new Item.Properties().fireResistant().stacksTo(1).component(DataComponents.UNBREAKABLE, Unit.INSTANCE)
-                            .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(ImmersiveOres.MODID, "vibranium_hoe")))));
+                            .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(ImmersiveOres.MODID, "vibranium_hoe")))
+                            .repairable(ModItems.VIBRANIUM_INGOT.get())));
 
     public static final RegistryObject<Item> VIBRANIUM_PAXEL = ITEMS.register("vibranium_paxel",
             () -> new VibraniumPaxel(ModToolTiers.VIBRANIUM, VibraniumConfig.attackDamageVibraniumPaxel, (float) VibraniumConfig.attackSpeedVibraniumPaxel,
                     new Item.Properties().fireResistant().stacksTo(1).component(DataComponents.UNBREAKABLE, Unit.INSTANCE)
-                            .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(ImmersiveOres.MODID, "vibranium_paxel")))));
+                            .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(ImmersiveOres.MODID, "vibranium_paxel")))
+                            .repairable(ModItems.VIBRANIUM_INGOT.get())));
 
     public static final RegistryObject<Item> VIBRANIUM_HAMMER = ITEMS.register("vibranium_hammer",
             () -> new VibraniumHammer(ModToolTiers.VIBRANIUM, VibraniumConfig.attackDamageVibraniumHammer, (float) VibraniumConfig.attackSpeedVibraniumHammer,
                     new Item.Properties().fireResistant().stacksTo(1).component(DataComponents.UNBREAKABLE, Unit.INSTANCE)
-                            .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(ImmersiveOres.MODID, "vibranium_hammer")))));
+                            .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(ImmersiveOres.MODID, "vibranium_hammer")))
+                            .repairable(ModItems.VIBRANIUM_INGOT.get())));
 
     public static final RegistryObject<Item> VIBRANIUM_EXCAVATOR = ITEMS.register("vibranium_excavator",
             () -> new VibraniumExcavator(ModToolTiers.VIBRANIUM, VibraniumConfig.attackDamageVibraniumExcavator, (float) VibraniumConfig.attackSpeedVibraniumExcavator,
                     new Item.Properties().fireResistant().stacksTo(1).component(DataComponents.UNBREAKABLE, Unit.INSTANCE)
-                            .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(ImmersiveOres.MODID, "vibranium_excavator")))));
+                            .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(ImmersiveOres.MODID, "vibranium_excavator")))
+                            .repairable(ModItems.VIBRANIUM_INGOT.get())));
 
     public static final RegistryObject<Item> VIBRANIUM_HELMET = ITEMS.register("vibranium_helmet",
             () -> new VibraniumArmor(ModArmorMaterials.VIBRANIUM, ArmorType.HELMET,
                     new Item.Properties().fireResistant().stacksTo(1).component(DataComponents.UNBREAKABLE, Unit.INSTANCE)
-                            .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(ImmersiveOres.MODID, "vibranium_helmet")))));
+                            .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(ImmersiveOres.MODID, "vibranium_helmet")))
+                            .repairable(ModItems.VIBRANIUM_INGOT.get())));
 
     public static final RegistryObject<Item> VIBRANIUM_CHESTPLATE = ITEMS.register("vibranium_chestplate",
             () -> new VibraniumArmor(ModArmorMaterials.VIBRANIUM, ArmorType.CHESTPLATE,
                     new Item.Properties().fireResistant().stacksTo(1).component(DataComponents.UNBREAKABLE, Unit.INSTANCE)
-                            .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(ImmersiveOres.MODID, "vibranium_chestplate")))));
+                            .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(ImmersiveOres.MODID, "vibranium_chestplate")))
+                            .repairable(ModItems.VIBRANIUM_INGOT.get())));
 
     public static final RegistryObject<Item> VIBRANIUM_LEGGINGS = ITEMS.register("vibranium_leggings",
             () -> new VibraniumArmor(ModArmorMaterials.VIBRANIUM, ArmorType.LEGGINGS,
                     new Item.Properties().fireResistant().stacksTo(1).component(DataComponents.UNBREAKABLE, Unit.INSTANCE)
-                            .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(ImmersiveOres.MODID, "vibranium_leggings")))));
+                            .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(ImmersiveOres.MODID, "vibranium_leggings")))
+                            .repairable(ModItems.VIBRANIUM_INGOT.get())));
 
     public static final RegistryObject<Item> VIBRANIUM_BOOTS = ITEMS.register("vibranium_boots",
             () -> new VibraniumArmor(ModArmorMaterials.VIBRANIUM, ArmorType.BOOTS,
                     new Item.Properties().fireResistant().stacksTo(1).component(DataComponents.UNBREAKABLE, Unit.INSTANCE)
-                            .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(ImmersiveOres.MODID, "vibranium_boots")))));
+                            .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(ImmersiveOres.MODID, "vibranium_boots")))
+                            .repairable(ModItems.VIBRANIUM_INGOT.get())));
 
     public static final RegistryObject<Item> VIBRANIUM_HORSE_ARMOR = ITEMS.register("vibranium_horse_armor",
             () -> new Item(new Item.Properties().fireResistant().horseArmor(ModArmorMaterials.VIBRANIUM).stacksTo(1).component(DataComponents.UNBREAKABLE, Unit.INSTANCE)
@@ -149,66 +162,79 @@ public class ModItems {
     public static final RegistryObject<Item> VULPUS_PICKAXE = ITEMS.register("vulpus_pickaxe",
             () -> new VulpusPickaxe(ModToolTiers.VULPUS, VulpusConfig.attackDamageVulpusPickaxe, (float) VulpusConfig.attackSpeedVulpusPickaxe,
                     new Item.Properties().fireResistant().stacksTo(1).component(DataComponents.UNBREAKABLE, Unit.INSTANCE)
-                            .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(ImmersiveOres.MODID, "vulpus_pickaxe")))));
+                            .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(ImmersiveOres.MODID, "vulpus_pickaxe")))
+                            .repairable(ModItems.VULPUS_INGOT.get())));
 
     public static final RegistryObject<Item> VULPUS_SHOVEL = ITEMS.register("vulpus_shovel",
             () -> new VulpusShovel(ModToolTiers.VULPUS, VulpusConfig.attackDamageVulpusShovel, (float) VulpusConfig.attackSpeedVulpusShovel,
                     new Item.Properties().fireResistant().stacksTo(1).component(DataComponents.UNBREAKABLE, Unit.INSTANCE)
-                            .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(ImmersiveOres.MODID, "vulpus_shovel")))));
+                            .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(ImmersiveOres.MODID, "vulpus_shovel")))
+                            .repairable(ModItems.VULPUS_INGOT.get())));
 
     public static final RegistryObject<Item> VULPUS_AXE = ITEMS.register("vulpus_axe",
             () -> new VulpusAxe(ModToolTiers.VULPUS, VulpusConfig.attackDamageVulpusAxe, (float) VulpusConfig.attackSpeedVulpusAxe,
                     new Item.Properties().fireResistant().stacksTo(1).component(DataComponents.UNBREAKABLE, Unit.INSTANCE)
-                            .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(ImmersiveOres.MODID, "vulpus_axe")))));
+                            .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(ImmersiveOres.MODID, "vulpus_axe")))
+                            .repairable(ModItems.VULPUS_INGOT.get())));
 
     public static final RegistryObject<Item> VULPUS_SWORD = ITEMS.register("vulpus_sword",
             () -> new VulpusSword(ModToolTiers.VULPUS, VulpusConfig.attackDamageVulpusSword, (float) VulpusConfig.attackSpeedVulpusSword,
                     new Item.Properties().fireResistant().stacksTo(1).component(DataComponents.UNBREAKABLE, Unit.INSTANCE)
-                            .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(ImmersiveOres.MODID, "vulpus_sword")))));
+                            .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(ImmersiveOres.MODID, "vulpus_sword")))
+                            .repairable(ModItems.VULPUS_INGOT.get())));
 
     public static final RegistryObject<Item> VULPUS_BOW = ITEMS.register("vulpus_bow",
             () -> new VulpusBow(BowTiers.VULPUS, (new Item.Properties().fireResistant().stacksTo(1).component(DataComponents.UNBREAKABLE, Unit.INSTANCE)
-                    .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(ImmersiveOres.MODID, "vulpus_bow"))))));
+                    .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(ImmersiveOres.MODID, "vulpus_bow")))
+                    .repairable(ModItems.VULPUS_INGOT.get()))));
 
     public static final RegistryObject<Item> VULPUS_HOE = ITEMS.register("vulpus_hoe",
             () -> new VulpusHoe(ModToolTiers.VULPUS, VulpusConfig.attackDamageVulpusHoe, (float) VulpusConfig.attackSpeedVulpusHoe,
                     new Item.Properties().fireResistant().stacksTo(1).component(DataComponents.UNBREAKABLE, Unit.INSTANCE)
-                            .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(ImmersiveOres.MODID, "vulpus_hoe")))));
+                            .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(ImmersiveOres.MODID, "vulpus_hoe")))
+                            .repairable(ModItems.VULPUS_INGOT.get())));
 
     public static final RegistryObject<Item> VULPUS_PAXEL = ITEMS.register("vulpus_paxel",
             () -> new VulpusPaxel(ModToolTiers.VULPUS, VulpusConfig.attackDamageVulpusPaxel, (float) VulpusConfig.attackSpeedVulpusPaxel,
                     new Item.Properties().fireResistant().stacksTo(1).component(DataComponents.UNBREAKABLE, Unit.INSTANCE)
-                            .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(ImmersiveOres.MODID, "vulpus_paxel")))));
+                            .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(ImmersiveOres.MODID, "vulpus_paxel")))
+                            .repairable(ModItems.VULPUS_INGOT.get())));
 
     public static final RegistryObject<Item> VULPUS_HAMMER = ITEMS.register("vulpus_hammer",
             () -> new VulpusHammer(ModToolTiers.VULPUS, VulpusConfig.attackDamageVulpusHammer, (float) VulpusConfig.attackSpeedVulpusHammer,
                     new Item.Properties().fireResistant().stacksTo(1).component(DataComponents.UNBREAKABLE, Unit.INSTANCE)
-                            .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(ImmersiveOres.MODID, "vulpus_hammer")))));
+                            .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(ImmersiveOres.MODID, "vulpus_hammer")))
+                            .repairable(ModItems.VULPUS_INGOT.get())));
 
     public static final RegistryObject<Item> VULPUS_EXCAVATOR = ITEMS.register("vulpus_excavator",
             () -> new VulpusExcavator(ModToolTiers.VULPUS, VulpusConfig.attackDamageVulpusExcavator, (float) VulpusConfig.attackSpeedVulpusExcavator,
                     new Item.Properties().fireResistant().stacksTo(1).component(DataComponents.UNBREAKABLE, Unit.INSTANCE)
-                            .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(ImmersiveOres.MODID, "vulpus_excavator")))));
+                            .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(ImmersiveOres.MODID, "vulpus_excavator")))
+                            .repairable(ModItems.VULPUS_INGOT.get())));
 
     public static final RegistryObject<Item> VULPUS_HELMET = ITEMS.register("vulpus_helmet",
             () -> new VulpusArmor(ModArmorMaterials.VULPUS, ArmorType.HELMET,
                     new Item.Properties().fireResistant().stacksTo(1).component(DataComponents.UNBREAKABLE, Unit.INSTANCE)
-                            .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(ImmersiveOres.MODID, "vulpus_helmet")))));
+                            .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(ImmersiveOres.MODID, "vulpus_helmet")))
+                            .repairable(ModItems.VULPUS_INGOT.get())));
 
     public static final RegistryObject<Item> VULPUS_CHESTPLATE = ITEMS.register("vulpus_chestplate",
             () -> new VulpusArmor(ModArmorMaterials.VULPUS, ArmorType.CHESTPLATE,
                     new Item.Properties().fireResistant().stacksTo(1).component(DataComponents.UNBREAKABLE, Unit.INSTANCE)
-                            .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(ImmersiveOres.MODID, "vulpus_chestplate")))));
+                            .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(ImmersiveOres.MODID, "vulpus_chestplate")))
+                            .repairable(ModItems.VULPUS_INGOT.get())));
 
     public static final RegistryObject<Item> VULPUS_LEGGINGS = ITEMS.register("vulpus_leggings",
             () -> new VulpusArmor(ModArmorMaterials.VULPUS, ArmorType.LEGGINGS,
                     new Item.Properties().fireResistant().stacksTo(1).component(DataComponents.UNBREAKABLE, Unit.INSTANCE)
-                            .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(ImmersiveOres.MODID, "vulpus_leggings")))));
+                            .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(ImmersiveOres.MODID, "vulpus_leggings")))
+                            .repairable(ModItems.VULPUS_INGOT.get())));
 
     public static final RegistryObject<Item> VULPUS_BOOTS = ITEMS.register("vulpus_boots",
             () -> new VulpusArmor(ModArmorMaterials.VULPUS, ArmorType.BOOTS,
                     new Item.Properties().fireResistant().stacksTo(1).component(DataComponents.UNBREAKABLE, Unit.INSTANCE)
-                            .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(ImmersiveOres.MODID, "vulpus_boots")))));
+                            .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(ImmersiveOres.MODID, "vulpus_boots")))
+                            .repairable(ModItems.VULPUS_INGOT.get())));
 
     public static final RegistryObject<Item> VULPUS_HORSE_ARMOR = ITEMS.register("vulpus_horse_armor",
             () -> new Item(new Item.Properties().fireResistant().horseArmor(ModArmorMaterials.VULPUS).stacksTo(1).component(DataComponents.UNBREAKABLE, Unit.INSTANCE)
@@ -218,66 +244,79 @@ public class ModItems {
     public static final RegistryObject<Item> ENDERIUM_PICKAXE = ITEMS.register("enderium_pickaxe",
             () -> new EnderiumPickaxe(ModToolTiers.ENDERIUM, EnderiumConfig.attackDamageEnderiumPickaxe, (float) EnderiumConfig.attackSpeedEnderiumPickaxe,
                     new Item.Properties().fireResistant().stacksTo(1).component(DataComponents.UNBREAKABLE, Unit.INSTANCE)
-                            .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(ImmersiveOres.MODID, "enderium_pickaxe")))));
+                            .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(ImmersiveOres.MODID, "enderium_pickaxe")))
+                            .repairable(ModItems.ENDERIUM_INGOT.get())));
 
     public static final RegistryObject<Item> ENDERIUM_SHOVEL = ITEMS.register("enderium_shovel",
             () -> new EnderiumShovel(ModToolTiers.ENDERIUM, EnderiumConfig.attackDamageEnderiumShovel, (float) EnderiumConfig.attackSpeedEnderiumShovel,
                     new Item.Properties().fireResistant().stacksTo(1).component(DataComponents.UNBREAKABLE, Unit.INSTANCE)
-                            .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(ImmersiveOres.MODID, "enderium_shovel")))));
+                            .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(ImmersiveOres.MODID, "enderium_shovel")))
+                            .repairable(ModItems.ENDERIUM_INGOT.get())));
 
     public static final RegistryObject<Item> ENDERIUM_AXE = ITEMS.register("enderium_axe",
             () -> new EnderiumAxe(ModToolTiers.ENDERIUM, EnderiumConfig.attackDamageEnderiumAxe, (float) EnderiumConfig.attackSpeedEnderiumAxe,
                     new Item.Properties().fireResistant().stacksTo(1).component(DataComponents.UNBREAKABLE, Unit.INSTANCE)
-                            .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(ImmersiveOres.MODID, "enderium_axe")))));
+                            .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(ImmersiveOres.MODID, "enderium_axe")))
+                            .repairable(ModItems.ENDERIUM_INGOT.get())));
 
     public static final RegistryObject<Item> ENDERIUM_SWORD = ITEMS.register("enderium_sword",
             () -> new EnderiumSword(ModToolTiers.ENDERIUM, EnderiumConfig.attackDamageEnderiumSword, (float) EnderiumConfig.attackSpeedEnderiumSword,
                     new Item.Properties().fireResistant().stacksTo(1).component(DataComponents.UNBREAKABLE, Unit.INSTANCE)
-                            .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(ImmersiveOres.MODID, "enderium_sword")))));
+                            .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(ImmersiveOres.MODID, "enderium_sword")))
+                            .repairable(ModItems.ENDERIUM_INGOT.get())));
 
     public static final RegistryObject<Item> ENDERIUM_BOW = ITEMS.register("enderium_bow",
             () -> new EnderiumBow(BowTiers.ENDERIUM, (new Item.Properties().fireResistant().stacksTo(1).component(DataComponents.UNBREAKABLE, Unit.INSTANCE)
-                    .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(ImmersiveOres.MODID, "enderium_bow"))))));
+                    .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(ImmersiveOres.MODID, "enderium_bow")))
+                    .repairable(ModItems.ENDERIUM_INGOT.get()))));
 
     public static final RegistryObject<Item> ENDERIUM_HOE = ITEMS.register("enderium_hoe",
             () -> new EnderiumHoe(ModToolTiers.ENDERIUM, EnderiumConfig.attackDamageEnderiumHoe, (float) EnderiumConfig.attackSpeedEnderiumHoe,
                     new Item.Properties().fireResistant().stacksTo(1).component(DataComponents.UNBREAKABLE, Unit.INSTANCE)
-                            .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(ImmersiveOres.MODID, "enderium_hoe")))));
+                            .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(ImmersiveOres.MODID, "enderium_hoe")))
+                            .repairable(ModItems.ENDERIUM_INGOT.get())));
 
     public static final RegistryObject<Item> ENDERIUM_PAXEL = ITEMS.register("enderium_paxel",
             () -> new EnderiumPaxel(ModToolTiers.ENDERIUM, EnderiumConfig.attackDamageEnderiumPaxel, (float) EnderiumConfig.attackSpeedEnderiumPaxel,
                     new Item.Properties().fireResistant().stacksTo(1).component(DataComponents.UNBREAKABLE, Unit.INSTANCE)
-                            .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(ImmersiveOres.MODID, "enderium_paxel")))));
+                            .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(ImmersiveOres.MODID, "enderium_paxel")))
+                            .repairable(ModItems.ENDERIUM_INGOT.get())));
 
     public static final RegistryObject<Item> ENDERIUM_HAMMER = ITEMS.register("enderium_hammer",
             () -> new EnderiumHammer(ModToolTiers.ENDERIUM, EnderiumConfig.attackDamageEnderiumHammer, (float) EnderiumConfig.attackSpeedEnderiumHammer,
                     new Item.Properties().fireResistant().stacksTo(1).component(DataComponents.UNBREAKABLE, Unit.INSTANCE)
-                            .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(ImmersiveOres.MODID, "enderium_hammer")))));
+                            .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(ImmersiveOres.MODID, "enderium_hammer")))
+                            .repairable(ModItems.ENDERIUM_INGOT.get())));
 
     public static final RegistryObject<Item> ENDERIUM_EXCAVATOR = ITEMS.register("enderium_excavator",
             () -> new EnderiumExcavator(ModToolTiers.ENDERIUM, EnderiumConfig.attackDamageEnderiumExcavator, (float) EnderiumConfig.attackSpeedEnderiumExcavator,
                     new Item.Properties().fireResistant().stacksTo(1).component(DataComponents.UNBREAKABLE, Unit.INSTANCE)
-                            .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(ImmersiveOres.MODID, "enderium_excavator")))));
+                            .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(ImmersiveOres.MODID, "enderium_excavator")))
+                            .repairable(ModItems.ENDERIUM_INGOT.get())));
 
     public static final RegistryObject<Item> ENDERIUM_HELMET = ITEMS.register("enderium_helmet",
             () -> new EnderiumArmor(ModArmorMaterials.ENDERIUM, ArmorType.HELMET,
                     new Item.Properties().fireResistant().stacksTo(1).component(DataComponents.UNBREAKABLE, Unit.INSTANCE)
-                            .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(ImmersiveOres.MODID, "enderium_helmet")))));
+                            .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(ImmersiveOres.MODID, "enderium_helmet")))
+                            .repairable(ModItems.ENDERIUM_INGOT.get())));
 
     public static final RegistryObject<Item> ENDERIUM_CHESTPLATE = ITEMS.register("enderium_chestplate",
             () -> new EnderiumArmor(ModArmorMaterials.ENDERIUM, ArmorType.CHESTPLATE,
                     new Item.Properties().fireResistant().stacksTo(1).component(DataComponents.UNBREAKABLE, Unit.INSTANCE)
-                            .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(ImmersiveOres.MODID, "enderium_chestplate")))));
+                            .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(ImmersiveOres.MODID, "enderium_chestplate")))
+                            .repairable(ModItems.ENDERIUM_INGOT.get())));
 
     public static final RegistryObject<Item> ENDERIUM_LEGGINGS = ITEMS.register("enderium_leggings",
             () -> new EnderiumArmor(ModArmorMaterials.ENDERIUM, ArmorType.LEGGINGS,
                     new Item.Properties().fireResistant().stacksTo(1).component(DataComponents.UNBREAKABLE, Unit.INSTANCE)
-                            .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(ImmersiveOres.MODID, "enderium_leggings")))));
+                            .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(ImmersiveOres.MODID, "enderium_leggings")))
+                            .repairable(ModItems.ENDERIUM_INGOT.get())));
 
     public static final RegistryObject<Item> ENDERIUM_BOOTS = ITEMS.register("enderium_boots",
             () -> new EnderiumArmor(ModArmorMaterials.ENDERIUM, ArmorType.BOOTS,
                     new Item.Properties().fireResistant().stacksTo(1).component(DataComponents.UNBREAKABLE, Unit.INSTANCE)
-                            .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(ImmersiveOres.MODID, "enderium_boots")))));
+                            .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(ImmersiveOres.MODID, "enderium_boots")))
+                            .repairable(ModItems.ENDERIUM_INGOT.get())));
 
     public static final RegistryObject<Item> ENDERIUM_HORSE_ARMOR = ITEMS.register("enderium_horse_armor",
             () -> new Item(new Item.Properties().fireResistant().horseArmor(ModArmorMaterials.ENDERIUM).stacksTo(1).component(DataComponents.UNBREAKABLE, Unit.INSTANCE)

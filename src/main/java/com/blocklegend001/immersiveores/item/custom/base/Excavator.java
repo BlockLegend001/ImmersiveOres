@@ -1,14 +1,12 @@
 package com.blocklegend001.immersiveores.item.custom.base;
 
+import com.blocklegend001.immersiveores.item.ModToolTiers;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.tags.BlockTags;
-import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ToolMaterial;
 import net.minecraft.world.level.ClipContext;
-import net.minecraft.world.level.block.Block;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.HitResult;
 
@@ -16,16 +14,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Excavator extends Item {
-    private static TagKey<Block> shovelMineable;
-
-    public Excavator(ToolMaterial material, float attackDamage, float attackSpeed, Properties settings) {
-        super(computeSettings(material, BlockTags.MINEABLE_WITH_SHOVEL, settings, attackDamage, attackSpeed));
-    }
-
-    private static Properties computeSettings(ToolMaterial material, TagKey<Block> shovelMineable, Properties settings, float attackDamage, float attackSpeed) {
-        Excavator.shovelMineable = shovelMineable;
-        settings.shovel(wrapMaterial(material, material.durability()), attackDamage, attackSpeed);
-        return settings;
+    public Excavator(ModToolTiers material, float attackDamage, float attackSpeed, Properties settings) {
+        super(material.applyToolProperties(settings, BlockTags.MINEABLE_WITH_SHOVEL, attackDamage, attackSpeed));
     }
 
     public static List<BlockPos> getBlocksToBeDestroyed(int range, BlockPos initalBlockPos, ServerPlayer player) {
@@ -62,16 +52,5 @@ public class Excavator extends Item {
             }
         }
         return positions;
-    }
-
-    private static ToolMaterial wrapMaterial(ToolMaterial toolMaterial, int durability) {
-        return new ToolMaterial(
-                toolMaterial.incorrectBlocksForDrops(),
-                durability,
-                toolMaterial.speed(),
-                toolMaterial.attackDamageBonus(),
-                toolMaterial.enchantmentValue(),
-                toolMaterial.repairItems()
-        );
     }
 }

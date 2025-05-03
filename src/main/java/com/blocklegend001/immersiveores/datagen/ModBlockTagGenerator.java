@@ -55,32 +55,5 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(ModBlocks.ENDERIUM_BLOCK.get(),
                         ModBlocks.ENDERIUM_ORE.get(),
                         ModBlocks.RAW_ENDERIUM_BLOCK.get());
-
-        this.tag(ModTags.Blocks.VIBRANIUM_PAXEL_MINEABLE)
-                .addTag(BlockTags.MINEABLE_WITH_PICKAXE)
-                .addTag(BlockTags.MINEABLE_WITH_AXE)
-                .addTag(BlockTags.MINEABLE_WITH_SHOVEL);
-
-        this.tag(ModTags.Blocks.VULPUS_PAXEL_MINEABLE)
-                .addTag(BlockTags.MINEABLE_WITH_PICKAXE)
-                .addTag(BlockTags.MINEABLE_WITH_AXE)
-                .addTag(BlockTags.MINEABLE_WITH_SHOVEL);
-
-        this.tag(ModTags.Blocks.ENDERIUM_PAXEL_MINEABLE)
-                .addTag(BlockTags.MINEABLE_WITH_PICKAXE)
-                .addTag(BlockTags.MINEABLE_WITH_AXE)
-                .addTag(BlockTags.MINEABLE_WITH_SHOVEL);
-
-        this.tag(ModTags.Blocks.INCORRECT_FOR_ENDERIUM_TOOL)
-                .addTag(BlockTags.INCORRECT_FOR_NETHERITE_TOOL)
-                .remove(ModTags.Blocks.NEEDS_ENDERIUM_TOOL);
-
-        this.tag(ModTags.Blocks.INCORRECT_FOR_VULPUS_TOOL)
-                .addTag(BlockTags.INCORRECT_FOR_NETHERITE_TOOL)
-                .remove(ModTags.Blocks.NEEDS_VULPUS_TOOL);
-
-        this.tag(ModTags.Blocks.INCORRECT_FOR_VIBRANIUM_TOOL)
-                .addTag(BlockTags.INCORRECT_FOR_NETHERITE_TOOL)
-                .remove(ModTags.Blocks.NEEDS_VIBRANIUM_TOOL);
     }
 }

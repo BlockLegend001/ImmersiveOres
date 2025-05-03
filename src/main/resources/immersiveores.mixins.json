@@ -9,5 +9,9 @@
   ],
   "injectors": {
     "defaultRequire": 1
-  }
+  },
+  "client": [
+    "LevelRendererExcavatorMixin",
+    "LevelRendererHammerMixin"
+  ]
 }

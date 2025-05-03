@@ -1,5 +1,6 @@
 package com.blocklegend001.immersiveores.item.custom.vulpus;
 
+import com.blocklegend001.immersiveores.item.ModToolTiers;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.network.chat.Component;
@@ -15,27 +16,9 @@ import net.minecraft.world.level.block.Block;
 import java.util.function.Consumer;
 
 public class VulpusPickaxe extends Item {
-    private static TagKey<Block> pickaxeMineable;
 
-    public VulpusPickaxe(ToolMaterial material, float attackDamage, float attackSpeed, Item.Properties settings) {
-        super(computeSettings(material, BlockTags.MINEABLE_WITH_PICKAXE, settings, attackDamage, attackSpeed));
-    }
-
-    private static Item.Properties computeSettings(ToolMaterial material, TagKey<Block> pickaxeMineable, Item.Properties settings, float attackDamage, float attackSpeed) {
-        VulpusPickaxe.pickaxeMineable = pickaxeMineable;
-        settings.pickaxe(wrapMaterial(material, material.durability()), attackDamage, attackSpeed);
-        return settings;
-    }
-
-    private static ToolMaterial wrapMaterial(ToolMaterial toolMaterial, int durability) {
-        return new ToolMaterial(
-                toolMaterial.incorrectBlocksForDrops(),
-                durability,
-                toolMaterial.speed(),
-                toolMaterial.attackDamageBonus(),
-                toolMaterial.enchantmentValue(),
-                toolMaterial.repairItems()
-        );
+    public VulpusPickaxe(ModToolTiers material, float attackDamage, float attackSpeed, Item.Properties settings) {
+        super(material.applyToolProperties(settings, BlockTags.MINEABLE_WITH_PICKAXE, attackDamage, attackSpeed));
     }
 
     @Override

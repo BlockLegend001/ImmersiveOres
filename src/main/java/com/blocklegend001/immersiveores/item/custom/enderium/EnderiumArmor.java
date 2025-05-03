@@ -46,13 +46,13 @@ public class EnderiumArmor extends Item {
             if (entity instanceof Player player) {
                 if (player.getItemBySlot(EquipmentSlot.FEET).getItem() == ModItems.ENDERIUM_BOOTS.get()) {
                     if (EnderiumConfig.speedIIIEnderiumArmor) {
-                        player.addEffect(new MobEffectInstance(MobEffects.SPEED, 0, 2, false, false));
+                        player.addEffect(new MobEffectInstance(MobEffects.SPEED, 400, 2, false, false));
                     }
                     if (EnderiumConfig.jumpIIIEnderiumArmor) {
-                        player.addEffect(new MobEffectInstance(MobEffects.JUMP_BOOST, 0, 2, false, false));
+                        player.addEffect(new MobEffectInstance(MobEffects.JUMP_BOOST, 400, 2, false, false));
                     }
                     if (EnderiumConfig.fireResistanceEnderiumArmor) {
-                        player.addEffect(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 0, 1, false, false));
+                        player.addEffect(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 400, 1, false, false));
                     }
                     if (!player.onGround() && player.fallDistance >= 1.0F && EnderiumConfig.immuneToFallDamageEnderiumArmor) {
                         player.fallDistance = 0F;
@@ -60,7 +60,7 @@ public class EnderiumArmor extends Item {
                 }
                 if (player.getItemBySlot(EquipmentSlot.CHEST).getItem() == ModItems.ENDERIUM_CHESTPLATE.get()) {
                     if (EnderiumConfig.fireResistanceEnderiumArmor) {
-                        player.addEffect(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 0, 0, false, false));
+                        player.addEffect(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 400, 0, false, false));
                     }
                 }
                 if (player.getItemBySlot(EquipmentSlot.HEAD).getItem() == ModItems.ENDERIUM_HELMET.get()) {
@@ -68,15 +68,15 @@ public class EnderiumArmor extends Item {
                         player.addEffect(new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 0, false, false));
                     }
                     if (EnderiumConfig.fireResistanceEnderiumArmor) {
-                        player.addEffect(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 0, 0, false, false));
+                        player.addEffect(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 400, 0, false, false));
                     }
                 }
                 if (player.getItemBySlot(EquipmentSlot.LEGS).getItem() == ModItems.ENDERIUM_LEGGINGS.get()) {
                     if (EnderiumConfig.neverLoseHungerEnderiumArmor) {
-                        player.addEffect(new MobEffectInstance(MobEffects.SATURATION, 0, 99, false, false));
+                        player.addEffect(new MobEffectInstance(MobEffects.SATURATION, 400, 99, false, false));
                     }
                     if (EnderiumConfig.fireResistanceEnderiumArmor) {
-                        player.addEffect(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 0, 0, false, false));
+                        player.addEffect(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 400, 0, false, false));
                     }
                 }
             }

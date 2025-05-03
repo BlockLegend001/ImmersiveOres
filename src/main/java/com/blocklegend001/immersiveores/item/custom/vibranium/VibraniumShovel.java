@@ -1,18 +1,73 @@
 package com.blocklegend001.immersiveores.item.custom.vibranium;
 
+import com.blocklegend001.immersiveores.item.ModToolTiers;
+import com.blocklegend001.immersiveores.item.custom.enderium.EnderiumShovel;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.gui.screens.Screen;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
 import net.minecraft.network.chat.Component;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.sounds.SoundSource;
+import net.minecraft.tags.BlockTags;
+import net.minecraft.world.InteractionResult;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.*;
 import net.minecraft.world.item.component.TooltipDisplay;
+import net.minecraft.world.item.context.UseOnContext;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.state.BlockState;
 
 import java.util.List;
+import java.util.Map;
 import java.util.function.Consumer;
 
-public class VibraniumShovel extends ShovelItem {
+public class VibraniumShovel extends Item {
+    private static final Map<Block, BlockState> FLATTENABLES = Shovel.getFlattenables();
 
-    public VibraniumShovel(ToolMaterial p_366398_, float p_361074_, float p_368875_, Properties p_43117_) {
-        super(p_366398_, p_361074_, p_368875_, p_43117_);
+    public VibraniumShovel(ModToolTiers material, float attackDamage, float attackSpeed, Item.Properties settings) {
+        super(material.applyToolProperties(settings, BlockTags.MINEABLE_WITH_SHOVEL, attackDamage, attackSpeed));
+    }
+
+    @Override
+    public InteractionResult useOn(UseOnContext context) {
+        Level world = context.getLevel();
+        BlockPos pos = context.getClickedPos();
+        Player player = context.getPlayer();
+        BlockState state = world.getBlockState(pos);
+        BlockState result = getModifiedBlockState(context, state, pos);
+
+        if (result == null) return InteractionResult.PASS;
+
+        if (!world.isClientSide()) {
+            world.setBlock(pos, result, 11);
+        }
+        return InteractionResult.SUCCESS;
+    }
+
+    private BlockState getModifiedBlockState(UseOnContext context, BlockState state, BlockPos pos) {
+        Level world = context.getLevel();
+        Player player = context.getPlayer();
+
+        if (context.getClickedFace() == Direction.DOWN) return null;
+
+        if (FLATTENABLES.containsKey(state.getBlock()) && world.getBlockState(pos.above()).isAir()) {
+            world.playSound(player, pos, SoundEvents.SHOVEL_FLATTEN, SoundSource.BLOCKS, 1.0F, 1.0F);
+            return FLATTENABLES.get(state.getBlock());
+        }
+
+        return null;
+    }
+
+    private static final class Shovel extends ShovelItem {
+        public static Map<Block, BlockState> getFlattenables() {
+            return ShovelItem.FLATTENABLES;
+        }
+
+        private Shovel(ToolMaterial tier, float attackDamage, float attackSpeed, Properties properties) {
+            super(tier, attackDamage, attackSpeed, properties);
+        }
     }
 
     @Override

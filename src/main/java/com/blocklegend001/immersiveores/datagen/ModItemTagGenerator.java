@@ -37,10 +37,6 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                         ModItems.ENDERIUM_LEGGINGS.get(),
                         ModItems.ENDERIUM_BOOTS.get());
 
-        this.tag(ModTags.Items.VIBRANIUM_REPAIRS).add(ModItems.VIBRANIUM_INGOT.get());
-        this.tag(ModTags.Items.VULPUS_REPAIRS).add(ModItems.VULPUS_INGOT.get());
-        this.tag(ModTags.Items.ENDERIUM_REPAIRS).add(ModItems.ENDERIUM_INGOT.get());
-
         tag(ModTags.Items.VIBRANIUM_BOW).add(ModItems.VIBRANIUM_BOW.get());
         tag(ModTags.Items.VULPUS_BOW).add(ModItems.VULPUS_BOW.get());
         tag(ModTags.Items.ENDERIUM_BOW).add(ModItems.ENDERIUM_BOW.get());

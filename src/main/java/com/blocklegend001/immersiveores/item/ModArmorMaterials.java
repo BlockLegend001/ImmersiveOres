@@ -9,6 +9,7 @@ import com.blocklegend001.immersiveores.util.ModTags;
 import net.minecraft.Util;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvents;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.equipment.ArmorMaterial;
 import net.minecraft.world.item.equipment.ArmorType;
 
@@ -24,7 +25,7 @@ public final class ModArmorMaterials {
             attribute.put(ArmorType.HELMET, VibraniumConfig.protectionValueVibraniumHelmet);
     }), VibraniumConfig.enchantmentValueVibraniumArmor, SoundEvents.ARMOR_EQUIP_NETHERITE,
             VibraniumConfig.toughnessValueVibraniumArmor, VibraniumConfig.knockbackResistanceValueVibraniumArmor,
-            ModTags.Items.VIBRANIUM_REPAIRS,
+            ItemTags.REPAIRS_NETHERITE_ARMOR,
             ModEquipmentAssets.VIBRANIUM);
 
     public static final ArmorMaterial VULPUS = new ArmorMaterial(0, Util.make(new EnumMap<>(ArmorType.class),
@@ -35,7 +36,7 @@ public final class ModArmorMaterials {
                 attribute.put(ArmorType.HELMET, VulpusConfig.protectionValueVulpusHelmet);
             }), VulpusConfig.enchantmentValueVulpusArmor, SoundEvents.ARMOR_EQUIP_NETHERITE,
             VulpusConfig.toughnessValueVulpusArmor, VulpusConfig.knockbackResistanceValueVulpusArmor,
-            ModTags.Items.VULPUS_REPAIRS,
+            ItemTags.REPAIRS_NETHERITE_ARMOR,
             ModEquipmentAssets.VULPUS);
 
     public static final ArmorMaterial ENDERIUM = new ArmorMaterial(0, Util.make(new EnumMap<>(ArmorType.class),
@@ -46,6 +47,6 @@ public final class ModArmorMaterials {
                 attribute.put(ArmorType.HELMET, EnderiumConfig.protectionValueEnderiumHelmet);
             }), EnderiumConfig.enchantmentValueEnderiumArmor, SoundEvents.ARMOR_EQUIP_NETHERITE,
             EnderiumConfig.toughnessValueEnderiumArmor, EnderiumConfig.knockbackResistanceValueEnderiumArmor,
-            ModTags.Items.ENDERIUM_REPAIRS,
+            ItemTags.REPAIRS_NETHERITE_ARMOR,
             ModEquipmentAssets.ENDERIUM);
 }

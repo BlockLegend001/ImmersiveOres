@@ -1,5 +1,6 @@
 package com.blocklegend001.immersiveores.item.custom.vibranium;
 
+import com.blocklegend001.immersiveores.item.ModToolTiers;
 import com.blocklegend001.immersiveores.item.custom.base.Hammer;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.gui.screens.Screen;
@@ -15,7 +16,7 @@ import java.util.function.Consumer;
 
 public class VibraniumHammer extends Hammer {
 
-    public VibraniumHammer(ToolMaterial pTier, int pAttackDamageModifier, float pAttackSpeedModifier, Properties pProperties) {
+    public VibraniumHammer(ModToolTiers pTier, int pAttackDamageModifier, float pAttackSpeedModifier, Properties pProperties) {
         super(pTier, pAttackDamageModifier, pAttackSpeedModifier, pProperties);
     }
 

@@ -1,8 +1,10 @@
 package com.blocklegend001.immersiveores.item.custom.enderium;
 
+import com.blocklegend001.immersiveores.item.ModToolTiers;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.network.chat.Component;
+import net.minecraft.tags.BlockTags;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -13,30 +15,14 @@ import net.minecraft.world.item.component.TooltipDisplay;
 import java.util.function.Consumer;
 
 public class EnderiumSword extends Item {
-    public EnderiumSword(ToolMaterial material, float attackDamage, float attackSpeed, Item.Properties settings) {
-        super(computeSettings(material, settings, attackDamage, attackSpeed));
-    }
-
-    private static Item.Properties computeSettings(ToolMaterial material, Item.Properties settings, float attackDamage, float attackSpeed) {
-        settings.sword(wrapMaterial(material, material.durability()), attackDamage, attackSpeed);
-        return settings;
+    public EnderiumSword(ModToolTiers material, float attackDamage, float attackSpeed, Item.Properties settings) {
+        super(material.applySwordProperties(settings, attackDamage, attackSpeed));
     }
 
     @Override
-    public void postHurtEnemy(ItemStack arg, LivingEntity arg2, LivingEntity arg3) {
+    public void hurtEnemy(ItemStack arg, LivingEntity arg2, LivingEntity arg3) {
         arg2.setRemainingFireTicks(30);
-        super.postHurtEnemy(arg, arg2, arg3);
-    }
-
-    private static ToolMaterial wrapMaterial(ToolMaterial toolMaterial, int durability) {
-        return new ToolMaterial(
-                toolMaterial.incorrectBlocksForDrops(),
-                durability,
-                toolMaterial.speed(),
-                toolMaterial.attackDamageBonus(),
-                toolMaterial.enchantmentValue(),
-                toolMaterial.repairItems()
-        );
+        super.hurtEnemy(arg, arg2, arg3);
     }
 
     @Override
