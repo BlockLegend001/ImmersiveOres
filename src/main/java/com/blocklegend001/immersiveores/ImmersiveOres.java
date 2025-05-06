@@ -8,22 +8,12 @@ import com.blocklegend001.immersiveores.event.ModEventHandler;
 import com.blocklegend001.immersiveores.item.ModCreativeModTabs;
 import com.blocklegend001.immersiveores.item.ModItems;
 import com.blocklegend001.immersiveores.util.ModItemProperties;
-import com.blocklegend001.immersiveores.util.tools.excavator.ExcavatorOverlayRenderer;
-import com.blocklegend001.immersiveores.util.tools.hammer.HammerOverlayRenderer;
 import net.neoforged.bus.api.IEventBus;
-import net.neoforged.bus.api.SubscribeEvent;
-import net.neoforged.fml.ModContainer;
-import net.neoforged.fml.ModList;
-import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.common.Mod;
-import net.neoforged.fml.config.ModConfig;
-import net.neoforged.fml.event.config.ModConfigEvent;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.neoforged.fml.loading.FMLPaths;
 import net.neoforged.neoforge.common.NeoForge;
 
-import java.io.IOException;
 import java.util.logging.Logger;
 
 @Mod(ImmersiveOres.MODID)
@@ -40,8 +30,6 @@ public class ImmersiveOres
         modEventBus.addListener(this::clientSetup);
         ModBlocks.register(modEventBus);
         ModItems.register(modEventBus);
-        NeoForge.EVENT_BUS.register(ExcavatorOverlayRenderer.class);
-        NeoForge.EVENT_BUS.register(HammerOverlayRenderer.class);
         ModCreativeModTabs.register(modEventBus);
         modEventBus.addListener(this::commonSetup);
     }
