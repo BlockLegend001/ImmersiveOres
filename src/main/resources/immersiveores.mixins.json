@@ -5,7 +5,9 @@
   "compatibilityLevel": "JAVA_8",
   "refmap": "immersiveores.refmap.json",
   "mixins": [
-    "EndermanMixin"
+    "EndermanMixin",
+    "LevelRendererExcavatorMixin",
+    "LevelRendererHammerMixin"
   ],
   "client": [
     "LevelRendererExcavatorMixin",

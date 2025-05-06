@@ -2,7 +2,7 @@ package com.blocklegend001.immersiveores.mixin;
 
 import com.blocklegend001.immersiveores.item.ModItems;
 import com.blocklegend001.immersiveores.item.custom.base.Excavator;
-import com.blocklegend001.immersiveores.util.OverlayRender;
+import com.blocklegend001.immersiveores.util.tools.OverlayRender;
 import com.mojang.blaze3d.resource.GraphicsResourceAllocator;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import net.minecraft.client.Camera;

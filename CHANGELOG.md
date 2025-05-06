@@ -1,2 +1,1 @@
-- Added Highlights Outline to the Blocks
-- Fixed effects doesnt work properly on armor
+- Fixed a bug that caused the server to crash
