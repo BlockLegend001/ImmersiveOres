@@ -1,4 +1,4 @@
-package com.blocklegend001.immersiveores.util;
+package com.blocklegend001.immersiveores.util.tools;
 
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import net.minecraft.world.phys.AABB;
