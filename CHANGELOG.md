@@ -1,0 +1,1 @@
+- Fixed a bug that caused the server to crash
