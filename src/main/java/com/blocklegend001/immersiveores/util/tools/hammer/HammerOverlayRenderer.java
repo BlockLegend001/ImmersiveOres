@@ -41,7 +41,12 @@ public class HammerOverlayRenderer {
 
             Direction side = blockHit.getSide();
             BlockPos origin = blockHit.getBlockPos();
-            int range = HAMMER_RANGERS.getOrDefault(heldItem.getItem(), 1);
+            int range;
+            if (client.player.isSneaking()) {
+                range = 0;
+            } else {
+                range = HAMMER_RANGERS.get(heldItem.getItem());
+            }
 
             if (!client.world.getBlockState(origin).isIn(BlockTags.PICKAXE_MINEABLE)) return;
 
