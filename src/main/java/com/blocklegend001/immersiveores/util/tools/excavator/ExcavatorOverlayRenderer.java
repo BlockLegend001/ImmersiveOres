@@ -40,7 +40,12 @@ public class ExcavatorOverlayRenderer {
 
             Direction side = blockHit.getSide();
             BlockPos origin = blockHit.getBlockPos();
-            int range = EXCAVATOR_RANGERS.getOrDefault(heldItem.getItem(), 1);
+            int range;
+            if (client.player.isSneaking()) {
+                range = 0;
+            } else {
+                range = EXCAVATOR_RANGERS.get(heldItem.getItem());
+            }
 
             if (!client.world.getBlockState(origin).isIn(BlockTags.SHOVEL_MINEABLE)) return;
 
