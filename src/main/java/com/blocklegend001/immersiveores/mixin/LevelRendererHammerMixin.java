@@ -58,7 +58,12 @@ public class LevelRendererHammerMixin {
 
         BlockPos origin = blockHit.getBlockPos();
         Direction side = blockHit.getDirection();
-        int range = getHammerRanges().getOrDefault(heldItem.getItem(), 1);
+        int range;
+        if (Minecraft.getInstance().player.isShiftKeyDown()) {
+            range = 0;
+        } else {
+            range = getHammerRanges().get(heldItem.getItem());
+        }
 
         if (!Minecraft.getInstance().level.getBlockState(origin).is(BlockTags.MINEABLE_WITH_PICKAXE)) {
             return;
