@@ -59,7 +59,12 @@ public class LevelRendererExcavatorMixin {
 
         BlockPos origin = blockHit.getBlockPos();
         Direction side = blockHit.getDirection();
-        int range = getExcavatorRanges().getOrDefault(heldItem.getItem(), 1);
+        int range;
+        if (Minecraft.getInstance().player.isShiftKeyDown()) {
+            range = 0;
+        } else {
+            range = getExcavatorRanges().get(heldItem.getItem());
+        }
 
         if (!Minecraft.getInstance().level.getBlockState(origin).is(BlockTags.MINEABLE_WITH_SHOVEL)) {
             return;
