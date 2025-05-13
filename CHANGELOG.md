@@ -1,2 +1,1 @@
-- Added Highlights Outline to the Blocks
-- Fixed effects doesnt work properly on armor
+- If the player is sneaking (shift held), the Excavator/Hammer will only break the single targeted block.
