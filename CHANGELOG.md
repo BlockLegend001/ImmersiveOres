@@ -1,1 +1,1 @@
-- Fixed a bug that caused the server to crash
+- If the player is sneaking (shift held), the Excavator/Hammer will only break the single targeted block.

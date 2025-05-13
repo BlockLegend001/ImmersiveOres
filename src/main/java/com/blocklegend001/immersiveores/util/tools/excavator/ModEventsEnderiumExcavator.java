@@ -16,27 +16,37 @@ import java.util.Set;
 @EventBusSubscriber(modid = ImmersiveOres.MODID, bus = EventBusSubscriber.Bus.GAME)
 public class ModEventsEnderiumExcavator {
     private static final Set<BlockPos> HARVESTED_BLOCKS = new HashSet<>();
+    public static boolean isSneaking = false;
 
     @SubscribeEvent
-    public static void onExcavatorUsage(BlockEvent.BreakEvent event) {
+    public static boolean onExcavatorUsage(BlockEvent.BreakEvent event) {
         Player player = event.getPlayer();
         ItemStack mainHandItem = player.getMainHandItem();
 
-        if(mainHandItem.getItem() instanceof EnderiumExcavator excavator && player instanceof ServerPlayer serverPlayer) {
-            BlockPos initialBlockPos = event.getPos();
-            if(HARVESTED_BLOCKS.contains(initialBlockPos)) {
-                return;
-            }
+        if (!(player instanceof ServerPlayer serverPlayer)) return true;
 
-            for(BlockPos pos : EnderiumExcavator.getBlocksToBeDestroyed(3, initialBlockPos, serverPlayer)) {
-                if(pos == initialBlockPos || !excavator.isCorrectToolForDrops(mainHandItem, event.getLevel().getBlockState(pos))) {
-                    continue;
-                }
+        if (!(mainHandItem.getItem() instanceof EnderiumExcavator excavator)) return true;
 
-                HARVESTED_BLOCKS.add(pos);
-                serverPlayer.gameMode.destroyBlock(pos);
-                HARVESTED_BLOCKS.remove(pos);
+        if (HARVESTED_BLOCKS.contains(event.getPos())) return true;
+
+        HARVESTED_BLOCKS.add(event.getPos());
+
+        try {
+            int radius = isSneaking ? 0 : 3;
+            for (BlockPos targetPos : EnderiumExcavator.getBlocksToBeDestroyed(radius, event.getPos(), serverPlayer)) {
+                if (targetPos.equals(event.getPos())) continue;
+
+                if (HARVESTED_BLOCKS.contains(targetPos)) continue;
+                if (!excavator.isCorrectToolForDrops(mainHandItem, event.getLevel().getBlockState(targetPos))) continue;
+
+                HARVESTED_BLOCKS.add(targetPos);
+                serverPlayer.gameMode.destroyBlock(targetPos);
+                HARVESTED_BLOCKS.remove(targetPos);
             }
+        } finally {
+            HARVESTED_BLOCKS.remove(event.getPos());
         }
+
+        return true;
     }
 }
