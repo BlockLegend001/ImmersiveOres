@@ -3,14 +3,12 @@ package com.blocklegend001.immersiveores.item.custom.vibranium;
 import com.blocklegend001.immersiveores.config.VibraniumConfig;
 import com.blocklegend001.immersiveores.item.ModItems;
 import net.minecraft.client.gui.screen.Screen;
+import net.minecraft.component.DataComponentTypes;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.ArmorItem;
-import net.minecraft.item.ArmorMaterial;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
+import net.minecraft.item.*;
 import net.minecraft.item.tooltip.TooltipType;
 import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.text.Text;
@@ -46,6 +44,32 @@ public class VibraniumArmor extends ArmorItem {
                         player.addStatusEffect(new StatusEffectInstance(StatusEffects.NIGHT_VISION, 400, 0, false, false));
                     }
                 }
+            }
+        }
+    }
+
+    @Override
+    public void onCraftByPlayer(ItemStack stack, World world, PlayerEntity player) {
+        super.onCraftByPlayer(stack, world, player);
+
+        for (int i = 1; i <= 9; i++) {
+            ItemStack ingredient = player.currentScreenHandler.getSlot(i).getStack();
+
+            if (ingredient.getItem() instanceof ArmorItem armorItem &&
+                    armorItem.getMaterial() == ArmorMaterials.NETHERITE &&
+                    armorItem.getType() == ((ArmorItem) stack.getItem()).getType()) {
+
+                var ench = ingredient.get(DataComponentTypes.ENCHANTMENTS);
+                if (ench != null) {
+                    stack.set(DataComponentTypes.ENCHANTMENTS, ench);
+                }
+
+                var customName = ingredient.get(DataComponentTypes.CUSTOM_NAME);
+                if (customName != null) {
+                    stack.set(DataComponentTypes.CUSTOM_NAME, customName);
+                }
+
+                break;
             }
         }
     }
