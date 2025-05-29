@@ -77,6 +77,36 @@ public class VulpusArmor extends Item {
     }
 
     @Override
+    public void onCraftByPlayer(ItemStack stack, PlayerEntity player) {
+        super.onCraftByPlayer(stack, player);
+
+        Item resultItem = stack.getItem();
+
+        for (int i = 1; i <= 9; i++) {
+            ItemStack ingredient = player.currentScreenHandler.getSlot(i).getStack();
+            Item ingredientItem = ingredient.getItem();
+
+            if (resultItem == ModItems.VULPUS_HELMET && ingredientItem == ModItems.VIBRANIUM_HELMET
+                    || resultItem == ModItems.VULPUS_CHESTPLATE && ingredientItem == ModItems.VIBRANIUM_CHESTPLATE
+                    || resultItem == ModItems.VULPUS_LEGGINGS && ingredientItem == ModItems.VIBRANIUM_LEGGINGS
+                    || resultItem == ModItems.VULPUS_BOOTS && ingredientItem == ModItems.VIBRANIUM_BOOTS) {
+
+                var ench = ingredient.get(DataComponentTypes.ENCHANTMENTS);
+                if (ench != null) {
+                    stack.set(DataComponentTypes.ENCHANTMENTS, ench);
+                }
+
+                var customName = ingredient.get(DataComponentTypes.CUSTOM_NAME);
+                if (customName != null) {
+                    stack.set(DataComponentTypes.CUSTOM_NAME, customName);
+                }
+
+                break;
+            }
+        }
+    }
+
+    @Override
     public void appendTooltip(ItemStack stack, TooltipContext context, TooltipDisplayComponent displayComponent, Consumer<Text> textConsumer, TooltipType type) {
         super.appendTooltip(stack, context, displayComponent, textConsumer, type);
         if(Screen.hasShiftDown()){

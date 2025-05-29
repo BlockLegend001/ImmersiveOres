@@ -13,6 +13,7 @@ import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.Items;
 import net.minecraft.item.equipment.ArmorMaterial;
 import net.minecraft.item.equipment.EquipmentType;
 import net.minecraft.item.tooltip.TooltipType;
@@ -55,6 +56,36 @@ public class VibraniumArmor extends Item {
                         player.addStatusEffect(new StatusEffectInstance(StatusEffects.NIGHT_VISION, 400, 0, false, false));
                     }
                 }
+            }
+        }
+    }
+
+    @Override
+    public void onCraftByPlayer(ItemStack stack, PlayerEntity player) {
+        super.onCraftByPlayer(stack, player);
+
+        Item resultItem = stack.getItem();
+
+        for (int i = 1; i <= 9; i++) {
+            ItemStack ingredient = player.currentScreenHandler.getSlot(i).getStack();
+            Item ingredientItem = ingredient.getItem();
+
+            if (resultItem == ModItems.VIBRANIUM_HELMET && ingredientItem == Items.NETHERITE_HELMET
+                    || resultItem == ModItems.VIBRANIUM_CHESTPLATE && ingredientItem == Items.NETHERITE_CHESTPLATE
+                    || resultItem == ModItems.VIBRANIUM_LEGGINGS && ingredientItem == Items.NETHERITE_LEGGINGS
+                    || resultItem == ModItems.VIBRANIUM_BOOTS && ingredientItem == Items.NETHERITE_BOOTS) {
+
+                var ench = ingredient.get(DataComponentTypes.ENCHANTMENTS);
+                if (ench != null) {
+                    stack.set(DataComponentTypes.ENCHANTMENTS, ench);
+                }
+
+                var customName = ingredient.get(DataComponentTypes.CUSTOM_NAME);
+                if (customName != null) {
+                    stack.set(DataComponentTypes.CUSTOM_NAME, customName);
+                }
+
+                break;
             }
         }
     }

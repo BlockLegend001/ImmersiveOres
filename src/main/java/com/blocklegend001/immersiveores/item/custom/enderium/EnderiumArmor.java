@@ -82,6 +82,36 @@ public class EnderiumArmor extends Item {
     }
 
     @Override
+    public void onCraftByPlayer(ItemStack stack, PlayerEntity player) {
+        super.onCraftByPlayer(stack, player);
+
+        Item resultItem = stack.getItem();
+
+        for (int i = 1; i <= 9; i++) {
+            ItemStack ingredient = player.currentScreenHandler.getSlot(i).getStack();
+            Item ingredientItem = ingredient.getItem();
+
+            if (resultItem == ModItems.ENDERIUM_HELMET && ingredientItem == ModItems.VULPUS_HELMET
+                    || resultItem == ModItems.ENDERIUM_CHESTPLATE && ingredientItem == ModItems.VULPUS_CHESTPLATE
+                    || resultItem == ModItems.ENDERIUM_LEGGINGS && ingredientItem == ModItems.VULPUS_LEGGINGS
+                    || resultItem == ModItems.ENDERIUM_BOOTS && ingredientItem == ModItems.VULPUS_BOOTS) {
+
+                var ench = ingredient.get(DataComponentTypes.ENCHANTMENTS);
+                if (ench != null) {
+                    stack.set(DataComponentTypes.ENCHANTMENTS, ench);
+                }
+
+                var customName = ingredient.get(DataComponentTypes.CUSTOM_NAME);
+                if (customName != null) {
+                    stack.set(DataComponentTypes.CUSTOM_NAME, customName);
+                }
+
+                break;
+            }
+        }
+    }
+
+    @Override
     public void appendTooltip(ItemStack stack, TooltipContext context, TooltipDisplayComponent displayComponent, Consumer<Text> textConsumer, TooltipType type) {
         super.appendTooltip(stack, context, displayComponent, textConsumer, type);
         if(Screen.hasShiftDown()) {
