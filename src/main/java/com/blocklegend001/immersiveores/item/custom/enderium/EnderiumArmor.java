@@ -84,6 +84,36 @@ public class EnderiumArmor extends Item {
     }
 
     @Override
+    public void onCraftedBy(ItemStack stack, Player player) {
+        super.onCraftedBy(stack, player);
+
+        Item resultItem = stack.getItem();
+
+        for (int i = 1; i <= 9; i++) {
+            ItemStack ingredient = player.containerMenu.getSlot(i).getItem();
+            Item ingredientItem = ingredient.getItem();
+
+            if (resultItem == ModItems.ENDERIUM_HELMET.get() && ingredientItem == ModItems.VULPUS_HELMET.get()
+                    || resultItem == ModItems.ENDERIUM_CHESTPLATE.get() && ingredientItem == ModItems.VULPUS_CHESTPLATE.get()
+                    || resultItem == ModItems.ENDERIUM_LEGGINGS.get() && ingredientItem == ModItems.VULPUS_LEGGINGS.get()
+                    || resultItem == ModItems.ENDERIUM_BOOTS.get() && ingredientItem == ModItems.VULPUS_BOOTS.get()) {
+
+                var ench = ingredient.get(DataComponents.ENCHANTMENTS);
+                if (ench != null) {
+                    stack.set(DataComponents.ENCHANTMENTS, ench);
+                }
+
+                var customName = ingredient.get(DataComponents.CUSTOM_NAME);
+                if (customName != null) {
+                    stack.set(DataComponents.CUSTOM_NAME, customName);
+                }
+
+                break;
+            }
+        }
+    }
+
+    @Override
     public void appendHoverText(ItemStack pStack, Item.TooltipContext p_333372_, TooltipDisplay p_396484_, Consumer<Component> consumer, TooltipFlag p_41424_) {
         super.appendHoverText(pStack, p_333372_, p_396484_, consumer, p_41424_);
         if(Screen.hasShiftDown()) {
