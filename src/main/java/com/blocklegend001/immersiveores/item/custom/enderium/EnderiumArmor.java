@@ -1,9 +1,11 @@
 package com.blocklegend001.immersiveores.item.custom.enderium;
 
 import com.blocklegend001.immersiveores.config.EnderiumConfig;
+import com.blocklegend001.immersiveores.item.ModArmorMaterials;
 import com.blocklegend001.immersiveores.item.ModItems;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.gui.screens.Screen;
+import net.minecraft.core.component.DataComponents;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
@@ -59,6 +61,36 @@ public class EnderiumArmor extends ArmorItem {
                 } if (EnderiumConfig.fireResistanceEnderiumArmor) {
                     player.addEffect(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 400, 0, false, false));
                 }
+            }
+        }
+    }
+
+    @Override
+    public void onCraftedBy(ItemStack stack, Level level, Player player) {
+        super.onCraftedBy(stack, level, player);
+
+        Item resultItem = stack.getItem();
+
+        for (int i = 1; i <= 9; i++) {
+            ItemStack ingredient = player.containerMenu.getSlot(i).getItem();
+            Item ingredientItem = ingredient.getItem();
+
+            if (resultItem == ModItems.ENDERIUM_HELMET.get() && ingredientItem == ModItems.VULPUS_HELMET.get()
+                    || resultItem == ModItems.ENDERIUM_CHESTPLATE.get() && ingredientItem == ModItems.VULPUS_CHESTPLATE.get()
+                    || resultItem == ModItems.ENDERIUM_LEGGINGS.get() && ingredientItem == ModItems.VULPUS_LEGGINGS.get()
+                    || resultItem == ModItems.ENDERIUM_BOOTS.get() && ingredientItem == ModItems.VULPUS_BOOTS.get()) {
+
+                var ench = ingredient.get(DataComponents.ENCHANTMENTS);
+                if (ench != null) {
+                    stack.set(DataComponents.ENCHANTMENTS, ench);
+                }
+
+                var customName = ingredient.get(DataComponents.CUSTOM_NAME);
+                if (customName != null) {
+                    stack.set(DataComponents.CUSTOM_NAME, customName);
+                }
+
+                break;
             }
         }
     }
