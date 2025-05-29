@@ -1,10 +1,12 @@
 package com.blocklegend001.immersiveores.item.custom.vibranium;
 
 import com.blocklegend001.immersiveores.config.VibraniumConfig;
+import com.blocklegend001.immersiveores.item.ModArmorMaterials;
 import com.blocklegend001.immersiveores.item.ModItems;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.core.Holder;
+import net.minecraft.core.component.DataComponents;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -41,6 +43,32 @@ public class VibraniumArmor extends ArmorItem {
                 if (VibraniumConfig.nightVisionVibraniumArmor) {
                     player.addEffect(new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 0, false, false));
                 }
+            }
+        }
+    }
+
+    @Override
+    public void onCraftedBy(ItemStack stack, Level level, Player player) {
+        super.onCraftedBy(stack, level, player);
+
+        for (int i = 1; i <= 9; i++) {
+            ItemStack ingredient = player.containerMenu.getSlot(i).getItem();
+
+            if (ingredient.getItem() instanceof ArmorItem armorItem &&
+                    armorItem.getMaterial() == ArmorMaterials.NETHERITE &&
+                    armorItem.getType() == ((ArmorItem) stack.getItem()).getType()) {
+
+                var ench = ingredient.get(DataComponents.ENCHANTMENTS);
+                if (ench != null) {
+                    stack.set(DataComponents.ENCHANTMENTS, ench);
+                }
+
+                var customName = ingredient.get(DataComponents.CUSTOM_NAME);
+                if (customName != null) {
+                    stack.set(DataComponents.CUSTOM_NAME, customName);
+                }
+
+                break;
             }
         }
     }
