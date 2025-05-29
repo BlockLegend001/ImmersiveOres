@@ -82,6 +82,36 @@ public class VulpusArmor extends Item {
     }
 
     @Override
+    public void onCraftedBy(ItemStack stack, Player player) {
+        super.onCraftedBy(stack, player);
+
+        Item resultItem = stack.getItem();
+
+        for (int i = 1; i <= 9; i++) {
+            ItemStack ingredient = player.containerMenu.getSlot(i).getItem();
+            Item ingredientItem = ingredient.getItem();
+
+            if (resultItem == ModItems.VULPUS_HELMET.get() && ingredientItem == ModItems.VIBRANIUM_HELMET.get()
+                    || resultItem == ModItems.VULPUS_CHESTPLATE.get() && ingredientItem == ModItems.VIBRANIUM_CHESTPLATE.get()
+                    || resultItem == ModItems.VULPUS_LEGGINGS.get() && ingredientItem == ModItems.VIBRANIUM_LEGGINGS.get()
+                    || resultItem == ModItems.VULPUS_BOOTS.get() && ingredientItem == ModItems.VIBRANIUM_BOOTS.get()) {
+
+                var ench = ingredient.get(DataComponents.ENCHANTMENTS);
+                if (ench != null) {
+                    stack.set(DataComponents.ENCHANTMENTS, ench);
+                }
+
+                var customName = ingredient.get(DataComponents.CUSTOM_NAME);
+                if (customName != null) {
+                    stack.set(DataComponents.CUSTOM_NAME, customName);
+                }
+
+                break;
+            }
+        }
+    }
+
+    @Override
     public void appendHoverText(ItemStack pStack, TooltipContext p_333372_, TooltipDisplay p_396484_, Consumer<Component> consumer, TooltipFlag p_41424_) {
         super.appendHoverText(pStack, p_333372_, p_396484_, consumer, p_41424_);
         if(Screen.hasShiftDown()){

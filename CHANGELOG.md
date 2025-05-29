@@ -1,1 +1,1 @@
-- If the player is sneaking (shift held), the Excavator/Hammer will only break the single targeted block.
+- Now when you craft an armor the enchants will be transferred to the old armor to the new one

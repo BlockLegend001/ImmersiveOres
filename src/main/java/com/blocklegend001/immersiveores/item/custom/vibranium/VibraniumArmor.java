@@ -15,6 +15,7 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.component.TooltipDisplay;
 import net.minecraft.world.item.equipment.ArmorMaterial;
@@ -58,6 +59,36 @@ public class VibraniumArmor extends Item {
                         player.addEffect(new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 0, false, false));
                     }
                 }
+            }
+        }
+    }
+
+    @Override
+    public void onCraftedBy(ItemStack stack, Player player) {
+        super.onCraftedBy(stack, player);
+
+        Item resultItem = stack.getItem();
+
+        for (int i = 1; i <= 9; i++) {
+            ItemStack ingredient = player.containerMenu.getSlot(i).getItem();
+            Item ingredientItem = ingredient.getItem();
+
+            if (resultItem == ModItems.VIBRANIUM_HELMET.get() && ingredientItem == Items.NETHERITE_HELMET
+                    || resultItem == ModItems.VIBRANIUM_CHESTPLATE.get() && ingredientItem == Items.NETHERITE_CHESTPLATE
+                    || resultItem == ModItems.VIBRANIUM_LEGGINGS.get() && ingredientItem == Items.NETHERITE_LEGGINGS
+                    || resultItem == ModItems.VIBRANIUM_BOOTS.get() && ingredientItem == Items.NETHERITE_BOOTS) {
+
+                var ench = ingredient.get(DataComponents.ENCHANTMENTS);
+                if (ench != null) {
+                    stack.set(DataComponents.ENCHANTMENTS, ench);
+                }
+
+                var customName = ingredient.get(DataComponents.CUSTOM_NAME);
+                if (customName != null) {
+                    stack.set(DataComponents.CUSTOM_NAME, customName);
+                }
+
+                break;
             }
         }
     }
