@@ -4,6 +4,7 @@ import com.blocklegend001.immersiveores.config.VibraniumConfig;
 import com.blocklegend001.immersiveores.item.ModItems;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.gui.screens.Screen;
+import net.minecraft.core.component.DataComponents;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
@@ -11,9 +12,7 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.ArmorItem;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.item.*;
 import net.minecraft.world.item.equipment.ArmorMaterial;
 import net.minecraft.world.item.equipment.ArmorType;
 import net.minecraft.world.level.Level;
@@ -42,6 +41,36 @@ public class VibraniumArmor extends ArmorItem {
                     player.addEffect(new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 0, false, false));
                 }
             }
+            }
+        }
+    }
+
+    @Override
+    public void onCraftedBy(ItemStack stack, Level level, Player player) {
+        super.onCraftedBy(stack, level, player);
+
+        Item resultItem = stack.getItem();
+
+        for (int i = 1; i <= 9; i++) {
+            ItemStack ingredient = player.containerMenu.getSlot(i).getItem();
+            Item ingredientItem = ingredient.getItem();
+
+            if (resultItem == ModItems.VIBRANIUM_HELMET.get() && ingredientItem == Items.NETHERITE_HELMET
+                    || resultItem == ModItems.VIBRANIUM_CHESTPLATE.get() && ingredientItem == Items.NETHERITE_CHESTPLATE
+                    || resultItem == ModItems.VIBRANIUM_LEGGINGS.get() && ingredientItem == Items.NETHERITE_LEGGINGS
+                    || resultItem == ModItems.VIBRANIUM_BOOTS.get() && ingredientItem == Items.NETHERITE_BOOTS) {
+
+                var ench = ingredient.get(DataComponents.ENCHANTMENTS);
+                if (ench != null) {
+                    stack.set(DataComponents.ENCHANTMENTS, ench);
+                }
+
+                var customName = ingredient.get(DataComponents.CUSTOM_NAME);
+                if (customName != null) {
+                    stack.set(DataComponents.CUSTOM_NAME, customName);
+                }
+
+                break;
             }
         }
     }
