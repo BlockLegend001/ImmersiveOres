@@ -3,6 +3,7 @@ package com.blocklegend001.immersiveores.item.custom.vulpus;
 import com.blocklegend001.immersiveores.config.VulpusConfig;
 import com.blocklegend001.immersiveores.item.ModItems;
 import net.minecraft.client.gui.screen.Screen;
+import net.minecraft.component.DataComponentTypes;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
@@ -58,6 +59,36 @@ public class VulpusArmor extends ArmorItem {
                     player.addStatusEffect(new StatusEffectInstance(StatusEffects.SATURATION, 400, 99, false, false));
                 }
             }
+            }
+        }
+    }
+
+    @Override
+    public void onCraftByPlayer(ItemStack stack, World world, PlayerEntity player) {
+        super.onCraftByPlayer(stack, world, player);
+
+        Item resultItem = stack.getItem();
+
+        for (int i = 1; i <= 9; i++) {
+            ItemStack ingredient = player.currentScreenHandler.getSlot(i).getStack();
+            Item ingredientItem = ingredient.getItem();
+
+            if (resultItem == ModItems.VULPUS_HELMET && ingredientItem == ModItems.VIBRANIUM_HELMET
+                    || resultItem == ModItems.VULPUS_CHESTPLATE && ingredientItem == ModItems.VIBRANIUM_CHESTPLATE
+                    || resultItem == ModItems.VULPUS_LEGGINGS && ingredientItem == ModItems.VIBRANIUM_LEGGINGS
+                    || resultItem == ModItems.VULPUS_BOOTS && ingredientItem == ModItems.VIBRANIUM_BOOTS) {
+
+                var ench = ingredient.get(DataComponentTypes.ENCHANTMENTS);
+                if (ench != null) {
+                    stack.set(DataComponentTypes.ENCHANTMENTS, ench);
+                }
+
+                var customName = ingredient.get(DataComponentTypes.CUSTOM_NAME);
+                if (customName != null) {
+                    stack.set(DataComponentTypes.CUSTOM_NAME, customName);
+                }
+
+                break;
             }
         }
     }
