@@ -25,9 +25,10 @@ public class VulpusSword extends SwordItem {
         return true;
     }
 
-    public boolean hurtEnemy(ItemStack arg, LivingEntity arg2, LivingEntity arg3) {
-        arg2.setOnFireForTicks(15);
-        return true;
+    @Override
+    public boolean postHit(ItemStack stack, LivingEntity target, LivingEntity attacker) {
+        target.setOnFireForTicks(15);
+        return super.postHit(stack, target, attacker);
     }
 
     @Override

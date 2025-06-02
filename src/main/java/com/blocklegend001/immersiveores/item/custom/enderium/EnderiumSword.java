@@ -22,10 +22,10 @@ public class EnderiumSword extends SwordItem {
         return true;
     }
 
-
-    public boolean hurtEnemy(ItemStack arg, LivingEntity arg2, LivingEntity arg3) {
-        arg2.setOnFireForTicks(30);
-        return true;
+    @Override
+    public boolean postHit(ItemStack stack, LivingEntity target, LivingEntity attacker) {
+        target.setOnFireForTicks(30);
+        return super.postHit(stack, target, attacker);
     }
 
     @Override
