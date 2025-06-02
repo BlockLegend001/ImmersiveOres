@@ -21,7 +21,7 @@ public class VulpusBow extends BowItem {
     private final BowTier tier;
 
     public VulpusBow(BowTier tier, Settings properties) {
-        super(properties.maxDamage(tier.getUses()));
+        super(properties.maxDamage(tier.getUses()).enchantable(tier.getEnchantmentValue()));
         this.tier = tier;
     }
 
