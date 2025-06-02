@@ -22,7 +22,7 @@ public class VulpusSword extends SwordItem {
 
     @Override
     public boolean postHit(ItemStack stack, LivingEntity target, LivingEntity attacker) {
-        target.setOnFireForTicks(15);
+        target.setOnFireFor(15);
         return super.postHit(stack, target, attacker);
     }
 
