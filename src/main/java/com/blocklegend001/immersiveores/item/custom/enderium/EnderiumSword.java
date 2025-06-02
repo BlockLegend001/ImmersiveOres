@@ -17,9 +17,10 @@ public class EnderiumSword extends SwordItem {
         super(p_42961_, p_42962_, p_42963_, p_42964_);
     }
 
-    public boolean hurtEnemy(ItemStack arg, LivingEntity arg2, LivingEntity arg3) {
-        arg2.setOnFireForTicks(30);
-        return true;
+    @Override
+    public boolean postHit(ItemStack stack, LivingEntity target, LivingEntity attacker) {
+        target.setOnFireForTicks(30);
+        return super.postHit(stack, target, attacker);
     }
 
     @Override
