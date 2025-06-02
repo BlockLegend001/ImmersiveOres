@@ -25,7 +25,7 @@ public class VulpusSword extends Item {
 
     @Override
     public void postHit(ItemStack stack, LivingEntity target, LivingEntity attacker) {
-        target.setOnFireForTicks(15);
+        target.setOnFireFor(15);
         super.postHit(stack, target, attacker);
     }
 
