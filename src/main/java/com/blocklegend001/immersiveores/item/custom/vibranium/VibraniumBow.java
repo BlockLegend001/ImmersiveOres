@@ -33,6 +33,11 @@ public class VibraniumBow extends BowItem {
     }
 
     @Override
+    public boolean isEnchantable(ItemStack p_41456_) {
+        return true;
+    }
+
+    @Override
     public int getEnchantmentValue() {
         return this.tier.getEnchantmentValue();
     }
