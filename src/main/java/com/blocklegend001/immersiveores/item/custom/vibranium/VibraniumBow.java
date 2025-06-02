@@ -19,7 +19,7 @@ public class VibraniumBow extends BowItem {
     private final BowTier tier;
 
     public VibraniumBow(BowTier tier, Settings properties) {
-        super(properties.maxDamage(tier.getUses()));
+        super(properties.maxDamage(tier.getUses()).enchantable(tier.getEnchantmentValue()));
         this.tier = tier;
     }
 
