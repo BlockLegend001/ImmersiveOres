@@ -19,7 +19,7 @@ public class EnderiumBow extends BowItem {
     private final BowTier tier;
 
     public EnderiumBow(BowTier tier, Settings properties) {
-        super(properties.maxDamage(tier.getUses()));
+        super(properties.maxDamage(tier.getUses()).enchantable(tier.getEnchantmentValue()));
         this.tier = tier;
     }
 
