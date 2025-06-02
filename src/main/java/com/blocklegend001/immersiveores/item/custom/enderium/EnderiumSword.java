@@ -24,7 +24,7 @@ public class EnderiumSword extends SwordItem {
 
     @Override
     public boolean postHit(ItemStack stack, LivingEntity target, LivingEntity attacker) {
-        target.setOnFireForTicks(30);
+        target.setOnFireFor(30);
         return super.postHit(stack, target, attacker);
     }
 
