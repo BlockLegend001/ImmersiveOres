@@ -34,6 +34,11 @@ public class VibraniumBow extends BowItem {
     }
 
     @Override
+    public boolean isEnchantable(ItemStack p_41456_) {
+        return true;
+    }
+
+    @Override
     public void releaseUsing(ItemStack stack, Level world, LivingEntity entityLiving, int timeLeft) {
         if (entityLiving instanceof Player player) {
             ItemStack arrowStack = player.getProjectile(stack);
