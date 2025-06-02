@@ -18,7 +18,7 @@ public class EnderiumBow extends BowItem {
     private final BowTier tier;
 
     public EnderiumBow(BowTier tier, Properties properties) {
-        super(properties.durability(tier.getUses()));
+        super(properties.durability(tier.getUses()).enchantable(tier.getEnchantmentValue()));
         this.tier = tier;
     }
 
