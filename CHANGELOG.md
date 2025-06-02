@@ -1,1 +1,1 @@
-- Now when you craft an armor the enchants will be transferred to the old armor to the new one
+- Now the sword set on fire the mobs
