@@ -1,1 +1,1 @@
-- Now the sword set on fire the mobs
+- Fixed a bug that prevent the swords to 'Sweep' like vanilla swords
