@@ -3,14 +3,26 @@ package com.blocklegend001.immersiveores.item.custom.vulpus;
 import com.blocklegend001.immersiveores.item.ModToolTiers;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.gui.screens.Screen;
+import net.minecraft.core.Holder;
+import net.minecraft.core.Registry;
+import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.sounds.SoundSource;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.ToolMaterial;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.component.TooltipDisplay;
+import net.minecraft.world.item.enchantment.Enchantment;
+import net.minecraft.world.item.enchantment.EnchantmentHelper;
+import net.minecraft.world.item.enchantment.Enchantments;
+import net.minecraft.world.level.Level;
 
 import java.util.List;
 import java.util.function.Consumer;
@@ -21,9 +33,46 @@ public class VulpusSword extends Item {
     }
 
     @Override
-    public void hurtEnemy(ItemStack arg, LivingEntity arg2, LivingEntity arg3) {
-        arg2.setRemainingFireTicks(15);
-        super.hurtEnemy(arg, arg2, arg3);
+    public void hurtEnemy(ItemStack stack, LivingEntity target, LivingEntity attacker) {
+        target.setRemainingFireTicks(15);
+        if (!(attacker instanceof Player player)) return;
+
+        Level world = player.level();
+        if (world.isClientSide) return;
+
+        if (!player.isSprinting()
+                && player.onGround()
+                && target.isDeadOrDying()) {
+
+            double sweepRadius = 1.0;
+            List<LivingEntity> nearby = world.getEntitiesOfClass(LivingEntity.class,
+                    player.getBoundingBox().inflate(sweepRadius, 0.25, sweepRadius),
+                    e -> e != player && e != target && e.isAlive());
+
+            Registry<Enchantment> enchantmentRegistry = world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT);
+            Holder.Reference<Enchantment> enchantmentReference = enchantmentRegistry.getOrThrow(Enchantments.SWEEPING_EDGE);
+
+            int sweepingLevel = EnchantmentHelper.getItemEnchantmentLevel(enchantmentReference, player.getMainHandItem());
+            float sweepDamage = 1.0F + sweepingLevel * 1.0F;
+
+            for (LivingEntity entity : nearby) {
+                entity.hurt(player.damageSources().playerAttack(player), sweepDamage);
+
+                double dx = entity.getX() - player.getX();
+                double dz = entity.getZ() - player.getZ();
+                double dist = Math.max(0.001, dx * dx + dz * dz);
+                entity.knockback(0.4F, dx / dist, dz / dist);
+            }
+
+            world.playSound(null, player.getX(), player.getY(), player.getZ(),
+                    SoundEvents.PLAYER_ATTACK_SWEEP, SoundSource.PLAYERS, 1.0F, 1.0F);
+
+            if (world instanceof ServerLevel serverLevel) {
+                serverLevel.sendParticles(ParticleTypes.SWEEP_ATTACK,
+                        player.getX(), player.getY(0.5D), player.getZ(),
+                        0, 0, 0, 0, 0.0);
+            }
+        }
     }
 
     @Override
