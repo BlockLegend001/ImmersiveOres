@@ -1,1 +1,1 @@
-- Now the bows is enchantable
+- Fixed a bug that prevent the swords to 'Sweep' like vanilla swords
