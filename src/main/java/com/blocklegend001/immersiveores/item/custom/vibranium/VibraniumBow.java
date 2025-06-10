@@ -54,7 +54,7 @@ public class VibraniumBow extends BowItem {
             float arrowVelocity = getPullProgress(charge);
 
             if (arrowVelocity >= 0.1) {
-                int arrowCount = 4;
+                int arrowCount = 2;
                 for (int i = 0; i < arrowCount; i++) {
                     ArrowItem arrowItem = (ArrowItem) (arrowStack.getItem() instanceof ArrowItem ? arrowStack.getItem() : Items.ARROW);
                     PersistentProjectileEntity arrowEntity = arrowItem.createArrow(world, arrowStack, user, stack);
