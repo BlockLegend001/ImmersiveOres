@@ -4,6 +4,7 @@ import com.blocklegend001.immersiveores.config.VibraniumConfig;
 import com.blocklegend001.immersiveores.item.ModItems;
 import net.minecraft.block.PowderSnowBlock;
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.player.PlayerEntity;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
@@ -14,9 +15,9 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 public class PowderSnowBlockMixinVibranium {
     @Inject(method = "canWalkOnPowderSnow", at = @At("HEAD"), cancellable = true)
     private static void canWalkOnPowderSnow(Entity entityIn, CallbackInfoReturnable<Boolean> cir) {
-        if (entityIn instanceof PlayerEntity) {
-            PlayerEntity player = (PlayerEntity) entityIn;
-            if (player.getInventory().getStack(0).getItem() == ModItems.VIBRANIUM_BOOTS && VibraniumConfig.canWalkOnPowderedSnowVibranium) {
+        if (entityIn instanceof PlayerEntity player) {
+            if (player.getEquippedStack(EquipmentSlot.FEET).getItem() == ModItems.VIBRANIUM_BOOTS &&
+                    VibraniumConfig.canWalkOnPowderedSnowVibranium) {
                 cir.setReturnValue(true);
             }
         }
