@@ -1,1 +1,2 @@
-- Fixed a bug that prevent the swords to 'Sweep' like vanilla swords
+- Now Infinity works on bows
+- Now the 'Walking on Powder Snow' features works correctly
