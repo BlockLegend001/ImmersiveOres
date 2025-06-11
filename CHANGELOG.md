@@ -1,1 +1,1 @@
-- Fixed a bug that prevent the swords to 'Sweep' like vanilla swords
+- Now Infinity works on bows
