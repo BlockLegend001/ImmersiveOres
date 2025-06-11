@@ -3,6 +3,9 @@ package com.blocklegend001.immersiveores.item.custom.enderium;
 import com.blocklegend001.immersiveores.util.BowTier;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.gui.screens.Screen;
+import net.minecraft.core.Holder;
+import net.minecraft.core.Registry;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
@@ -10,6 +13,9 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.item.*;
+import net.minecraft.world.item.enchantment.Enchantment;
+import net.minecraft.world.item.enchantment.EnchantmentHelper;
+import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.Level;
 
 import java.util.List;
@@ -43,6 +49,10 @@ public class EnderiumBow extends BowItem {
         if (entityLiving instanceof Player player) {
             ItemStack arrowStack = player.getProjectile(stack);
 
+            Registry<Enchantment> enchantmentRegistry = world.registryAccess().registryOrThrow(Registries.ENCHANTMENT);
+            Holder<Enchantment> enchantmentReference = enchantmentRegistry.getHolderOrThrow(Enchantments.INFINITY);
+            boolean hasInfinity = EnchantmentHelper.getTagEnchantmentLevel(enchantmentReference, player.getMainHandItem()) > 0;
+
             int charge = getUseDuration(stack, entityLiving) - timeLeft;
             float arrowVelocity = getPowerForTime(charge);
             if (arrowVelocity >= 0.1) {
@@ -63,7 +73,7 @@ public class EnderiumBow extends BowItem {
                         arrowEntity.igniteForSeconds(30);
 
                         if (isPrimaryArrow) {
-                            arrowEntity.pickup = AbstractArrow.Pickup.ALLOWED;
+                            arrowEntity.pickup = hasInfinity ? AbstractArrow.Pickup.DISALLOWED : AbstractArrow.Pickup.ALLOWED;
                             isPrimaryArrow = false;
                         } else {
                             arrowEntity.pickup = AbstractArrow.Pickup.DISALLOWED;
@@ -74,7 +84,7 @@ public class EnderiumBow extends BowItem {
                 }
                 world.playSound(null, player.getX(), player.getY(), player.getZ(), SoundEvents.ARROW_SHOOT, SoundSource.PLAYERS, 1.0F, 1.0F / (player.getRandom().nextFloat() * 0.4F + 1.2F) + arrowVelocity * 0.5F);
 
-                if (!player.getAbilities().instabuild) {
+                if (!player.getAbilities().instabuild && !hasInfinity) {
                     arrowStack.shrink(1);
                     if (arrowStack.isEmpty()) {
                         player.getInventory().removeItem(arrowStack);
