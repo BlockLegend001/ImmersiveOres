@@ -1,1 +1,1 @@
-- Now the bows is enchantable
+- Now Infinity works on bows
