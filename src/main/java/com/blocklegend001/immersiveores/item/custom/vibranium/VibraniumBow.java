@@ -1,5 +1,7 @@
 package com.blocklegend001.immersiveores.item.custom.vibranium;
 
+import com.blocklegend001.immersiveores.config.VibraniumConfig;
+import com.blocklegend001.immersiveores.util.ArrowCountMap;
 import com.blocklegend001.immersiveores.util.BowTier;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.enchantment.Enchantment;
@@ -23,6 +25,7 @@ import java.util.List;
 
 public class VibraniumBow extends BowItem {
     private final BowTier tier;
+    private final int ARROW_COUNT = VibraniumConfig.arrowCountVibraniumBow;
 
     public VibraniumBow(BowTier tier, Settings properties) {
         super(properties.maxDamage(tier.getUses()));
@@ -54,8 +57,7 @@ public class VibraniumBow extends BowItem {
             float arrowVelocity = getPullProgress(charge);
 
             if (arrowVelocity >= 0.1) {
-                int arrowCount = 2;
-                for (int i = 0; i < arrowCount; i++) {
+                for (int i = 0; i < ARROW_COUNT; i++) {
                     ArrowItem arrowItem = (ArrowItem) (arrowStack.getItem() instanceof ArrowItem ? arrowStack.getItem() : Items.ARROW);
                     PersistentProjectileEntity arrowEntity = arrowItem.createArrow(world, arrowStack, user, stack);
                     arrowEntity.setVelocity(user, user.getPitch(), user.getYaw(), 0.0F, arrowVelocity * 3.0F, 1.0F);
@@ -89,14 +91,40 @@ public class VibraniumBow extends BowItem {
 
     @Override
     public void appendTooltip(ItemStack stack, Item.TooltipContext context, List<Text> tooltip, TooltipType options) {
-        if(Screen.hasShiftDown()) {
-            tooltip.add(Text.literal("+" + this.tier.getAttackDamageBonus() + " ")
-                    .append(Text.translatable("tooltip.immersiveores.damage.tooltip")).formatted(Formatting.LIGHT_PURPLE));
-            tooltip.add(Text.translatable("tooltip.immersiveores.unbreakble.tooltip").formatted(Formatting.LIGHT_PURPLE));
-            tooltip.add(Text.translatable("tooltip.immersiveores.immunetofire.tooltip").formatted(Formatting.LIGHT_PURPLE));
-            tooltip.add(Text.translatable("tooltip.immersiveores.shoot2arrows.tooltip").formatted(Formatting.LIGHT_PURPLE));
+        int arrowCount = getArrowCount(stack);
+        Formatting color = Formatting.LIGHT_PURPLE;
+
+        if (Screen.hasShiftDown()) {
+            Text damage = Text.literal("+" + this.tier.getAttackDamageBonus() + " ")
+                    .append(Text.translatable("tooltip.immersiveores.damage.tooltip"))
+                    .formatted(color);
+            tooltip.add(damage);
+
+            Text unbreakable = Text.translatable("tooltip.immersiveores.unbreakble.tooltip")
+                    .formatted(color);
+            tooltip.add(unbreakable);
+
+            Text fireImmune = Text.translatable("tooltip.immersiveores.immunetofire.tooltip")
+                    .formatted(color);
+            tooltip.add(fireImmune);
+
+            Text arrow = Text.literal("Can shoot ")
+                    .formatted(color)
+                    .append(Text.literal(String.valueOf(arrowCount)).formatted(Formatting.YELLOW))
+                    .append(Text.literal(" Arrows").formatted(color));
+            tooltip.add(arrow);
         } else {
-            tooltip.add(Text.translatable("tooltip.immersiveores.pressshiftformoreinfo.tooltip").formatted(Formatting.LIGHT_PURPLE));
+            Text pressShift = Text.translatable("tooltip.immersiveores.pressshiftformoreinfo.tooltip")
+                    .formatted(color);
+            tooltip.add(pressShift);
         }
+    }
+
+
+    private int getArrowCount(ItemStack stack) {
+        if (ArrowCountMap.VIBRANIUM_BOW_ARROW_COUNT.containsKey(stack.getItem())) {
+            return ArrowCountMap.VIBRANIUM_BOW_ARROW_COUNT.get(stack.getItem());
+        }
+        return 0;
     }
 }

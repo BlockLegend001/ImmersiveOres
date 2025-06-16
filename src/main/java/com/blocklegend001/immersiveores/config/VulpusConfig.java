@@ -54,6 +54,7 @@ public class VulpusConfig {
     public static double attackSpeedVulpusExcavator = 2.0;
     public static int radiusVulpusHammer = 2;
     public static int radiusVulpusExcavator = 2;
+    public static int arrowCountVulpusBow = 3;
 
     public static void loadConfig() {
         File configDir = new File("config/immersiveores");
@@ -105,6 +106,7 @@ public class VulpusConfig {
                 attackSpeedVulpusExcavator = config.get("attackSpeedVulpusExcavator").getAsDouble();
                 radiusVulpusHammer = config.get("radiusVulpusHammer").getAsInt();
                 radiusVulpusExcavator = config.get("radiusVulpusExcavator").getAsInt();
+                arrowCountVulpusBow = config.get("arrowCountVulpusBow").getAsInt();
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -151,6 +153,7 @@ public class VulpusConfig {
         config.addProperty("attackSpeedVulpusExcavator", attackSpeedVulpusExcavator);
         config.addProperty("radiusVulpusHammer", radiusVulpusHammer);
         config.addProperty("radiusVulpusExcavator", radiusVulpusExcavator);
+        config.addProperty("arrowCountVulpusBow", arrowCountVulpusBow);
 
         try (FileWriter writer = new FileWriter(CONFIG_FILE)) {
                 Gson gson = new GsonBuilder().setPrettyPrinting().create();

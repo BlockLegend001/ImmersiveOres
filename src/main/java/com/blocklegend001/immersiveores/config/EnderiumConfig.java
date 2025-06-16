@@ -56,6 +56,7 @@ public class EnderiumConfig {
     public static double attackSpeedEnderiumExcavator = 2.0;
     public static int radiusEnderiumHammer = 3;
     public static int radiusEnderiumExcavator = 3;
+    public static int arrowCountEnderiumBow = 4;
 
     public static void loadConfig() {
         File configDir = new File("config/immersiveores");
@@ -112,6 +113,7 @@ public class EnderiumConfig {
                 attackSpeedEnderiumExcavator = config.get("attackSpeedEnderiumExcavator").getAsDouble();
                 radiusEnderiumHammer = config.get("radiusEnderiumHammer").getAsInt();
                 radiusEnderiumExcavator = config.get("radiusEnderiumExcavator").getAsInt();
+                arrowCountEnderiumBow = config.get("arrowCountEnderiumBow").getAsInt();
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -161,6 +163,7 @@ public class EnderiumConfig {
         config.addProperty("attackSpeedEnderiumExcavator", attackSpeedEnderiumExcavator);
         config.addProperty("radiusEnderiumHammer", radiusEnderiumHammer);
         config.addProperty("radiusEnderiumExcavator", radiusEnderiumExcavator);
+        config.addProperty("arrowCountEnderiumBow", arrowCountEnderiumBow);
 
         try (FileWriter writer = new FileWriter(CONFIG_FILE)) {
             Gson gson = new GsonBuilder().setPrettyPrinting().create();

@@ -1,1 +1,5 @@
-- Now Infinity works on bows
+- Added support for configuring the hammer and excavator radius for each Hammer and Excavator via config file.
+- Each Hammer and Excavator now displays a tooltip showing its radius based on the current config.
+- Added support for configuring the amount of arrows that can shot the bows
+- Show arrow count in tooltip based on config
+- **WARNING**: This update requires a regeneration of the config file.

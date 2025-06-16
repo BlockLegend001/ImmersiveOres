@@ -50,6 +50,7 @@ public class VibraniumConfig {
     public static double attackSpeedVibraniumExcavator = 2.0;
     public static int radiusVibraniumHammer = 1;
     public static int radiusVibraniumExcavator = 1;
+    public static int arrowCountVibraniumBow = 2;
 
     public static void loadConfig() {
         File configDir = new File("config/immersiveores");
@@ -99,6 +100,7 @@ public class VibraniumConfig {
                 attackSpeedVibraniumExcavator = config.get("attackSpeedVibraniumExcavator").getAsDouble();
                 radiusVibraniumHammer = config.get("radiusVibraniumHammer").getAsInt();
                 radiusVibraniumExcavator = config.get("radiusVibraniumExcavator").getAsInt();
+                arrowCountVibraniumBow = config.get("arrowCountVibraniumBow").getAsInt();
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -141,6 +143,7 @@ public class VibraniumConfig {
         config.addProperty("attackSpeedVibraniumExcavator", attackSpeedVibraniumExcavator);
         config.addProperty("radiusVibraniumHammer", radiusVibraniumHammer);
         config.addProperty("radiusVibraniumExcavator", radiusVibraniumExcavator);
+        config.addProperty("arrowCountVibraniumBow", arrowCountVibraniumBow);
         try (FileWriter writer = new FileWriter(CONFIG_FILE)) {
             Gson gson = new GsonBuilder().setPrettyPrinting().create();
             writer.write(gson.toJson(config));
