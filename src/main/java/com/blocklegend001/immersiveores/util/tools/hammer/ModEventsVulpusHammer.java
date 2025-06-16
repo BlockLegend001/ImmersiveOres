@@ -1,6 +1,7 @@
 package com.blocklegend001.immersiveores.util.tools.hammer;
 
 import com.blocklegend001.immersiveores.item.custom.vulpus.VulpusHammer;
+import com.blocklegend001.immersiveores.util.RadiusMap;
 import net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
@@ -31,7 +32,7 @@ public class ModEventsVulpusHammer implements PlayerBlockBreakEvents.Before{
         HARVESTED_BLOCKS.add(pos);
 
         try {
-            int radius = isSneaking ? 0 : 2;
+            int radius = isSneaking ? 0 : RadiusMap.VULPUS_HAMMER_RADIUS.get(mainHandItem.getItem());
             for (BlockPos targetPos : VulpusHammer.getBlocksToBeDestroyed(radius, pos, serverPlayer)) {
                 if (targetPos.equals(pos)) continue;
 
