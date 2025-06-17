@@ -1,14 +1,13 @@
 package com.blocklegend001.immersiveores.util.tools.hammer;
 
-import com.blocklegend001.immersiveores.item.ModItems;
 import com.blocklegend001.immersiveores.item.custom.base.Hammer;
+import com.blocklegend001.immersiveores.util.map.RadiusMap;
 import net.fabricmc.fabric.api.client.rendering.v1.WorldRenderEvents;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.render.VertexConsumer;
 import net.minecraft.client.render.VertexConsumerProvider;
 import net.minecraft.client.util.math.MatrixStack;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.util.hit.BlockHitResult;
@@ -19,15 +18,7 @@ import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.Vec3d;
 import org.joml.Matrix4f;
 
-import java.util.Map;
-
 public class HammerOverlayRenderer {
-    private static final Map<Item, Integer> HAMMER_RANGERS = Map.of(
-            ModItems.VIBRANIUM_HAMMER, 1,
-            ModItems.VULPUS_HAMMER, 2,
-            ModItems.ENDERIUM_HAMMER, 3
-    );
-
     public static void init() {
         WorldRenderEvents.AFTER_ENTITIES.register(context -> {
             MinecraftClient client = MinecraftClient.getInstance();
@@ -45,7 +36,7 @@ public class HammerOverlayRenderer {
             if (client.player.isSneaking()) {
                 range = 0;
             } else {
-                range = HAMMER_RANGERS.get(heldItem.getItem());
+                range = RadiusMap.HAMMERS_RADIUS.get(heldItem.getItem());
             }
 
             if (!client.world.getBlockState(origin).isIn(BlockTags.PICKAXE_MINEABLE)) return;

@@ -1,6 +1,10 @@
 package com.blocklegend001.immersiveores.item.custom.enderium;
 
+import com.blocklegend001.immersiveores.config.EnderiumConfig;
+import com.blocklegend001.immersiveores.item.ModToolMaterials;
 import net.minecraft.client.gui.screen.Screen;
+import net.minecraft.component.DataComponentTypes;
+import net.minecraft.component.type.UnbreakableComponent;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.PickaxeItem;
@@ -12,14 +16,36 @@ import net.minecraft.util.Formatting;
 import java.util.List;
 
 public class EnderiumPickaxe extends PickaxeItem {
-    public EnderiumPickaxe(ToolMaterial p_42961_, int p_42962_, float p_42963_, Settings p_42964_) {
-        super(p_42961_, p_42964_);
+    private static Settings createSettings(boolean unbreakable, int durability) {
+        Settings settings = new Settings()
+                .maxDamage(durability)
+                .fireproof()
+                .attributeModifiers(EnderiumPickaxe.createAttributeModifiers(ModToolMaterials.ENDERIUM,
+                        EnderiumConfig.attackDamageEnderiumPickaxe, (float) EnderiumConfig.attackSpeedEnderiumPickaxe));
+
+        if (unbreakable) {
+            settings.component(DataComponentTypes.UNBREAKABLE, new UnbreakableComponent(true));
+        }
+
+        return settings;
+    }
+
+    public EnderiumPickaxe(ToolMaterial material, int attackDamage, float attackSpeed) {
+        super(material,
+                createSettings(EnderiumConfig.unbreakableEnderium, EnderiumConfig.durabilityEnderium));
     }
 
     @Override
-    public void appendTooltip(ItemStack stack, Item.TooltipContext context, List<Text> tooltip, TooltipType options) {
+    public boolean isEnchantable(ItemStack stack) {
+        return true;
+    }
+
+    @Override
+    public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType options) {
         if(Screen.hasShiftDown()) {
-            tooltip.add(Text.translatable("tooltip.immersiveores.unbreakble.tooltip").formatted(Formatting.DARK_AQUA));
+            if (EnderiumConfig.unbreakableEnderium) {
+                tooltip.add(Text.translatable("tooltip.immersiveores.unbreakble.tooltip").formatted(Formatting.DARK_AQUA));
+            }
             tooltip.add(Text.translatable("tooltip.immersiveores.immunetofire.tooltip").formatted(Formatting.DARK_AQUA));
         } else {
             tooltip.add(Text.translatable("tooltip.immersiveores.pressshiftformoreinfo.tooltip").formatted(Formatting.DARK_AQUA));

@@ -1,10 +1,12 @@
 package com.blocklegend001.immersiveores.item.custom.vulpus;
 
+import com.blocklegend001.immersiveores.config.VibraniumConfig;
 import com.blocklegend001.immersiveores.config.VulpusConfig;
 import com.blocklegend001.immersiveores.item.ModArmorMaterials;
 import com.blocklegend001.immersiveores.item.ModItems;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.component.DataComponentTypes;
+import net.minecraft.component.type.UnbreakableComponent;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
@@ -19,10 +21,23 @@ import net.minecraft.world.World;
 import java.util.List;
 
 public class VulpusArmor extends ArmorItem {
-    public VulpusArmor(RegistryEntry<ArmorMaterial> material, ArmorItem.Type type, Settings settings) {
-        super(material, type, settings);
+    private static Settings createSettings(boolean unbreakable, int durability) {
+        Settings settings = new Settings()
+                .maxDamage(durability)
+                .fireproof();
+
+        if (unbreakable) {
+            settings.component(DataComponentTypes.UNBREAKABLE, new UnbreakableComponent(true));
+        }
+
+        return settings;
     }
 
+    public VulpusArmor(RegistryEntry<ArmorMaterial> material, Type type, Settings settings) {
+        super(material, type, createSettings(VulpusConfig.unbreakableVulpus, VulpusConfig.durabilityVulpus));
+    }
+
+    
     @Override
     public boolean isEnchantable(ItemStack p_41456_) {
         return true;
@@ -32,36 +47,36 @@ public class VulpusArmor extends ArmorItem {
     public void inventoryTick(ItemStack stack, World world, Entity entity, int slot, boolean selected) {
         if (!world.isClient()) {
             if(entity instanceof PlayerEntity player) {
-                if (player.getInventory().getArmorStack(0).getItem() == ModItems.VULPUS_BOOTS) {
-                    if (VulpusConfig.speedIIVulpusArmor) {
-                        player.addStatusEffect(new StatusEffectInstance(StatusEffects.SPEED, 400, 1, false, false));
-                    } if (VulpusConfig.jumpIIVulpusArmor) {
-                        player.addStatusEffect(new StatusEffectInstance(StatusEffects.JUMP_BOOST, 400, 1, false, false));
-                    } if (VulpusConfig.fireResistanceVulpusArmor) {
-                        player.addStatusEffect(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE, 400, 0, false, false));
-                    }
-                    if (!player.isOnGround() && player.fallDistance >= 1.0F && VulpusConfig.immuneToFallDamageVulpusArmor) {
-                        player.fallDistance = 0F;
-                    }
+            if (player.getInventory().getArmorStack(0).getItem() == ModItems.VULPUS_BOOTS) {
+                if (VulpusConfig.speedIIVulpusArmor) {
+                    player.addStatusEffect(new StatusEffectInstance(StatusEffects.SPEED, 400, 1, false, false));
+                } if (VulpusConfig.jumpIIVulpusArmor) {
+                    player.addStatusEffect(new StatusEffectInstance(StatusEffects.JUMP_BOOST, 400, 1, false, false));
+                } if (VulpusConfig.fireResistanceVulpusArmor) {
+                    player.addStatusEffect(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE, 400, 0, false, false));
                 }
-                if (player.getInventory().getArmorStack(2).getItem() == ModItems.VULPUS_CHESTPLATE) {
-                    player.addStatusEffect(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE, 400, 1, false, false));
+                if (!player.isOnGround() && player.fallDistance >= 1.0F && VulpusConfig.immuneToFallDamageVulpusArmor) {
+                    player.fallDistance = 0F;
                 }
-                if (player.getInventory().getArmorStack(3).getItem() == ModItems.VULPUS_HELMET) {
-                    if (VulpusConfig.nightVisionVulpusArmor) {
-                        player.addStatusEffect(new StatusEffectInstance(StatusEffects.NIGHT_VISION, 400, 0, false, false));
-                    } if (VulpusConfig.fireResistanceVulpusArmor) {
-                        player.addStatusEffect(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE, 400, 0, false, false));
-                    }
+            }
+            if (player.getInventory().getArmorStack(2).getItem() == ModItems.VULPUS_CHESTPLATE) {
+                player.addStatusEffect(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE, 400, 1, false, false));
+            }
+            if (player.getInventory().getArmorStack(3).getItem() == ModItems.VULPUS_HELMET) {
+                if (VulpusConfig.nightVisionVulpusArmor) {
+                    player.addStatusEffect(new StatusEffectInstance(StatusEffects.NIGHT_VISION, 400, 0, false, false));
+                } if (VulpusConfig.fireResistanceVulpusArmor) {
+                    player.addStatusEffect(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE, 400, 0, false, false));
                 }
-                if (player.getInventory().getArmorStack(1).getItem() == ModItems.VULPUS_LEGGINGS) {
-                    if (VulpusConfig.fireResistanceVulpusArmor) {
-                        player.addStatusEffect(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE, 400, 0, false, false));
-                    }
-                    if (VulpusConfig.neverLoseHungerVulpusArmor) {
-                        player.addStatusEffect(new StatusEffectInstance(StatusEffects.SATURATION, 400, 99, false, false));
-                    }
+            }
+            if (player.getInventory().getArmorStack(1).getItem() == ModItems.VULPUS_LEGGINGS) {
+                if (VulpusConfig.fireResistanceVulpusArmor) {
+                    player.addStatusEffect(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE, 400, 0, false, false));
                 }
+                if (VulpusConfig.neverLoseHungerVulpusArmor) {
+                    player.addStatusEffect(new StatusEffectInstance(StatusEffects.SATURATION, 400, 99, false, false));
+                }
+            }
             }
         }
     }
@@ -93,10 +108,12 @@ public class VulpusArmor extends ArmorItem {
     }
 
     @Override
-    public void appendTooltip(ItemStack stack, Item.TooltipContext context, List<Text> tooltip, TooltipType options) {
+    public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType options) {
         if(Screen.hasShiftDown()){
             if (ModItems.VULPUS_BOOTS == stack.getItem()) {
-                tooltip.add(Text.translatable("tooltip.immersiveores.unbreakble.tooltip").formatted(Formatting.RED));
+                if (VulpusConfig.unbreakableVulpus) {
+                    tooltip.add(Text.translatable("tooltip.immersiveores.unbreakble.tooltip").formatted(Formatting.RED));
+                }
                 tooltip.add(Text.translatable("tooltip.immersiveores.immunetofire.tooltip").formatted(Formatting.RED));
                 if (VulpusConfig.speedIIVulpusArmor) {
                     tooltip.add(Text.translatable("tooltip.immersiveores.speed2.tooltip").formatted(Formatting.RED));

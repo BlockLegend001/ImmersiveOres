@@ -1,7 +1,12 @@
 package com.blocklegend001.immersiveores.item.custom.enderium;
 
+import com.blocklegend001.immersiveores.config.EnderiumConfig;
+import com.blocklegend001.immersiveores.item.ModToolMaterials;
 import com.blocklegend001.immersiveores.item.custom.base.Hammer;
+import com.blocklegend001.immersiveores.util.map.RadiusMap;
 import net.minecraft.client.gui.screen.Screen;
+import net.minecraft.component.DataComponentTypes;
+import net.minecraft.component.type.UnbreakableComponent;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ToolMaterial;
@@ -13,19 +18,50 @@ import java.util.List;
 
 public class EnderiumHammer extends Hammer {
 
-    public EnderiumHammer(ToolMaterial pTier, int pAttackDamageModifier, float pAttackSpeedModifier, Settings pProperties) {
-        super(pTier, pProperties);
+    private static Settings createSettings(boolean unbreakable, int durability) {
+        Settings settings = new Settings()
+                .maxDamage(durability)
+                .fireproof()
+                .attributeModifiers(EnderiumHammer.createAttributeModifiers(ModToolMaterials.ENDERIUM,
+                        EnderiumConfig.attackDamageEnderiumHammer, (float) EnderiumConfig.attackSpeedEnderiumHammer));
+
+        if (unbreakable) {
+            settings.component(DataComponentTypes.UNBREAKABLE, new UnbreakableComponent(true));
+        }
+
+        return settings;
+    }
+
+    public EnderiumHammer(ToolMaterial material, int attackDamage, float attackSpeed) {
+        super(material,
+                createSettings(EnderiumConfig.unbreakableEnderium, EnderiumConfig.durabilityEnderium));
     }
 
     @Override
-    public void appendTooltip(ItemStack stack, Item.TooltipContext context, List<Text> tooltip, TooltipType options) {
-        if(Screen.hasShiftDown()) {
+    public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType options) {
+        int radius = getRadiusForHammer(stack);
+        int widht = radius * 2 + 1;
+
+        if (Screen.hasShiftDown()) {
             tooltip.add(Text.translatable("tooltip.immersiveores.unbreakble.tooltip").formatted(Formatting.DARK_AQUA));
             tooltip.add(Text.translatable("tooltip.immersiveores.immunetofire.tooltip").formatted(Formatting.DARK_AQUA));
-            tooltip.add(Text.translatable("tooltip.immersiveores.7x7.tooltip").formatted(Formatting.DARK_AQUA));
+            Text text = Text.literal("Dig area: ")
+                    .formatted(Formatting.DARK_AQUA)
+                    .append(Text.literal(widht + "x1").formatted(Formatting.YELLOW));
+
+            tooltip.add(text);
+
+            super.appendTooltip(stack, context, tooltip, options);
         } else {
             tooltip.add(Text.translatable("tooltip.immersiveores.pressshiftformoreinfo.tooltip").formatted(Formatting.DARK_AQUA));
         }
+    }
+
+    private int getRadiusForHammer(ItemStack stack) {
+        if (RadiusMap.ENDERIUM_HAMMER_RADIUS.containsKey(stack.getItem())) {
+            return RadiusMap.ENDERIUM_HAMMER_RADIUS.get(stack.getItem());
+        }
+        return 0;
     }
 }
 

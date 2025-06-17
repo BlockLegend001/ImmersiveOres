@@ -14,9 +14,9 @@ import java.util.function.Supplier;
 
 public enum ModToolMaterials implements ToolMaterial {
 
-    VIBRANIUM(ModTags.Blocks.INCORRECT_FOR_VIBRANIUM_TOOL, 0, VibraniumConfig.speedVibraniumTier , VibraniumConfig.attackDamageBonusVibraniumTier, VibraniumConfig.enchantmentValueVibraniumTier, () -> Ingredient.ofItems(ModItems.VIBRANIUM_INGOT)),
-    VULPUS(ModTags.Blocks.INCORRECT_FOR_VULPUS_TOOL, 0, VulpusConfig.speedVulpusTier , VulpusConfig.attackDamageBonusVulpusTier, VulpusConfig.enchantmentValueVulpusTier, () -> Ingredient.ofItems(ModItems.VULPUS_INGOT)),
-    ENDERIUM(ModTags.Blocks.INCORRECT_FOR_ENDERIUM_TOOL, 0, EnderiumConfig.speedEnderiumTier , EnderiumConfig.attackDamageBonusEnderiumTier, EnderiumConfig.enchantmentValueEnderiumTier, () -> Ingredient.ofItems(ModItems.ENDERIUM_INGOT));
+    VIBRANIUM(ModTags.Blocks.INCORRECT_FOR_VIBRANIUM_TOOL, VibraniumConfig.durabilityVibranium, VibraniumConfig.speedVibraniumTier , VibraniumConfig.attackDamageBonusVibraniumTier, VibraniumConfig.enchantmentValueVibraniumTier, () -> Ingredient.ofItems(ModItems.VIBRANIUM_INGOT)),
+    VULPUS(ModTags.Blocks.INCORRECT_FOR_VULPUS_TOOL, VulpusConfig.durabilityVulpus, VulpusConfig.speedVulpusTier , VulpusConfig.attackDamageBonusVulpusTier, VulpusConfig.enchantmentValueVulpusTier, () -> Ingredient.ofItems(ModItems.VULPUS_INGOT)),
+    ENDERIUM(ModTags.Blocks.INCORRECT_FOR_ENDERIUM_TOOL, EnderiumConfig.durabilityEnderium, EnderiumConfig.speedEnderiumTier , EnderiumConfig.attackDamageBonusEnderiumTier, EnderiumConfig.enchantmentValueEnderiumTier, () -> Ingredient.ofItems(ModItems.ENDERIUM_INGOT));
 
     private final TagKey<Block> inverseTag;
     private final int itemDurability;
