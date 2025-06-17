@@ -1,6 +1,7 @@
 package com.blocklegend001.immersiveores.util.tools.excavator;
 
 import com.blocklegend001.immersiveores.item.custom.vibranium.VibraniumExcavator;
+import com.blocklegend001.immersiveores.util.map.RadiusMap;
 import net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
@@ -31,7 +32,7 @@ public class ModEventsVibraniumExcavator implements PlayerBlockBreakEvents.Befor
         HARVESTED_BLOCKS.add(pos);
 
         try {
-            int radius = isSneaking ? 0 : 1;
+            int radius = isSneaking ? 0 : RadiusMap.VIBRANIUM_EXCAVATOR_RADIUS.get(mainHandItem.getItem());
             for (BlockPos targetPos : VibraniumExcavator.getBlocksToBeDestroyed(radius, pos, serverPlayer)) {
                 if (targetPos.equals(pos)) continue;
 

@@ -1,6 +1,10 @@
 package com.blocklegend001.immersiveores.item.custom.vulpus;
 
+import com.blocklegend001.immersiveores.config.VulpusConfig;
+import com.blocklegend001.immersiveores.item.ModToolMaterials;
 import net.minecraft.client.gui.screen.Screen;
+import net.minecraft.component.DataComponentTypes;
+import net.minecraft.component.type.UnbreakableComponent;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.enchantment.Enchantments;
@@ -26,8 +30,17 @@ import net.minecraft.world.World;
 import java.util.List;
 
 public class VulpusSword extends SwordItem {
-    public VulpusSword(ToolMaterial pTier, int pAttackDamageModifier, float pAttackSpeedModifier, Settings pProperties) {
-        super(pTier, pAttackDamageModifier, pAttackSpeedModifier, pProperties.enchantable(pTier.enchantmentValue()));
+    private static Settings createSettings(Settings base, boolean unbreakable, int durability) {
+        base.maxDamage(durability).fireproof();
+        if (unbreakable) {
+            base.component(DataComponentTypes.UNBREAKABLE, new UnbreakableComponent(true));
+        }
+        return base;
+    }
+
+    public VulpusSword(ToolMaterial material, int attackDamage, float attackSpeed, Settings settings) {
+        super(material, attackDamage, attackSpeed,
+                createSettings(settings, VulpusConfig.unbreakableVulpus, VulpusConfig.durabilityVulpus));
     }
 
     @Override
@@ -73,9 +86,11 @@ public class VulpusSword extends SwordItem {
     }
 
     @Override
-    public void appendTooltip(ItemStack stack, Item.TooltipContext context, List<Text> tooltip, TooltipType options) {
+    public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType options) {
         if(Screen.hasShiftDown()) {
-            tooltip.add(Text.translatable("tooltip.immersiveores.unbreakble.tooltip").formatted(Formatting.RED));
+            if (VulpusConfig.unbreakableVulpus) {
+                tooltip.add(Text.translatable("tooltip.immersiveores.unbreakble.tooltip").formatted(Formatting.RED));
+            }
             tooltip.add(Text.translatable("tooltip.immersiveores.immunetofire.tooltip").formatted(Formatting.RED));
             tooltip.add(Text.translatable("tooltip.immersiveores.cansetmobonfire.tooltip").formatted(Formatting.RED));
         } else {

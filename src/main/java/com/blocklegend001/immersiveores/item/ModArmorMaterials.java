@@ -14,7 +14,7 @@ import net.minecraft.util.Util;
 import java.util.EnumMap;
 
 public class ModArmorMaterials {
-    public static ArmorMaterial VIBRANIUM = new ArmorMaterial(0, Util.make(new EnumMap<>(EquipmentType.class), map -> {
+    public static ArmorMaterial VIBRANIUM = new ArmorMaterial(VibraniumConfig.durabilityVibranium, Util.make(new EnumMap<>(EquipmentType.class), map -> {
                 map.put(EquipmentType.BOOTS, VibraniumConfig.protectionValueVibraniumBoots);
                 map.put(EquipmentType.LEGGINGS, VibraniumConfig.protectionValueVibraniumLeggings);
                 map.put(EquipmentType.CHESTPLATE, VibraniumConfig.protectionValueVibraniumChestplate);
@@ -22,7 +22,7 @@ public class ModArmorMaterials {
     }), VibraniumConfig.enchantmentValueVibraniumArmor, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, VibraniumConfig.toughnessValueVibraniumArmor, VibraniumConfig.knockbackResistanceValueVibraniumArmor,
             ModTags.Items.VIBRANIUM_REPAIRS, Identifier.of(ImmersiveOres.MOD_ID, "vibranium"));
 
-    public static ArmorMaterial VULPUS = new ArmorMaterial(0, Util.make(new EnumMap<>(EquipmentType.class), map -> {
+    public static ArmorMaterial VULPUS = new ArmorMaterial(VulpusConfig.durabilityVulpus, Util.make(new EnumMap<>(EquipmentType.class), map -> {
         map.put(EquipmentType.BOOTS, VulpusConfig.protectionValueVulpusBoots);
         map.put(EquipmentType.LEGGINGS, VulpusConfig.protectionValueVulpusLeggings);
         map.put(EquipmentType.CHESTPLATE, VulpusConfig.protectionValueVulpusChestplate);
@@ -30,7 +30,7 @@ public class ModArmorMaterials {
     }), VulpusConfig.enchantmentValueVulpusArmor, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, VulpusConfig.toughnessValueVulpusArmor, VulpusConfig.knockbackResistanceValueVulpusArmor,
             ModTags.Items.VULPUS_REPAIRS, Identifier.of(ImmersiveOres.MOD_ID, "vulpus"));
 
-    public static ArmorMaterial ENDERIUM = new ArmorMaterial(0, Util.make(new EnumMap<>(EquipmentType.class), map -> {
+    public static ArmorMaterial ENDERIUM = new ArmorMaterial(EnderiumConfig.durabilityEnderium, Util.make(new EnumMap<>(EquipmentType.class), map -> {
         map.put(EquipmentType.BOOTS, EnderiumConfig.protectionValueEnderiumBoots);
         map.put(EquipmentType.LEGGINGS, EnderiumConfig.protectionValueEnderiumLeggings);
         map.put(EquipmentType.CHESTPLATE, EnderiumConfig.protectionValueEnderiumChestplate);

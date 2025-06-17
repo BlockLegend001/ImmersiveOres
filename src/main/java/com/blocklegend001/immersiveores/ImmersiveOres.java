@@ -24,9 +24,9 @@ public class ImmersiveOres implements ModInitializer {
 
     @Override
     public void onInitialize() {
-        VibraniumConfig.loadConfig();
-        VulpusConfig.loadConfig();
-        EnderiumConfig.loadConfig();
+        VibraniumConfig.registerConfigs();
+        VulpusConfig.registerConfigs();
+        EnderiumConfig.registerConfigs();
         ModItemGroups.registerItemGroups();
         ModItems.registerModItems();
         ModBlocks.registerModels();
