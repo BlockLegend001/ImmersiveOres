@@ -154,7 +154,7 @@ public class VulpusBow extends BowItem {
             Text arrow = Text.literal("Can shoot ")
                     .formatted(color)
                     .append(Text.literal(String.valueOf(arrowCount)).formatted(Formatting.YELLOW))
-                    .append(Text.literal(" Arrows").formatted(color));
+                    .append(Text.literal(" Flaming Arrows").formatted(color));
             tooltip.add(arrow);
         } else {
             Text pressShift = Text.translatable("tooltip.immersiveores.pressshiftformoreinfo.tooltip")
