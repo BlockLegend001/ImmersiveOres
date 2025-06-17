@@ -1,8 +1,12 @@
 package com.blocklegend001.immersiveores.item.custom.enderium;
 
+import com.blocklegend001.immersiveores.config.EnderiumConfig;
+import com.blocklegend001.immersiveores.item.ModToolMaterials;
 import com.blocklegend001.immersiveores.item.custom.base.Excavator;
 import com.blocklegend001.immersiveores.util.map.RadiusMap;
 import net.minecraft.client.gui.screen.Screen;
+import net.minecraft.component.DataComponentTypes;
+import net.minecraft.component.type.UnbreakableComponent;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ToolMaterial;
@@ -14,8 +18,23 @@ import java.util.List;
 
 public class EnderiumExcavator extends Excavator {
 
-    public EnderiumExcavator(ToolMaterial pTier, int pAttackDamageModifier, float pAttackSpeedModifier, Settings pProperties) {
-        super(pTier, pProperties);
+    private static Item.Settings createSettings(boolean unbreakable, int durability) {
+        Item.Settings settings = new Item.Settings()
+                .maxDamage(durability)
+                .fireproof()
+                .attributeModifiers(EnderiumExcavator.createAttributeModifiers(ModToolMaterials.ENDERIUM,
+                        EnderiumConfig.attackDamageEnderiumExcavator, (float) EnderiumConfig.attackSpeedEnderiumExcavator));
+
+        if (unbreakable) {
+            settings.component(DataComponentTypes.UNBREAKABLE, new UnbreakableComponent(true));
+        }
+
+        return settings;
+    }
+
+    public EnderiumExcavator(ToolMaterial material, int attackDamage, float attackSpeed) {
+        super(material,
+                createSettings(EnderiumConfig.unbreakableEnderium, EnderiumConfig.durabilityEnderium));
     }
 
     @Override

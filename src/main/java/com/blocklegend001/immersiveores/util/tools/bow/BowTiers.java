@@ -12,15 +12,15 @@ import java.util.function.Supplier;
 @SuppressWarnings("deprecation")
 public enum BowTiers implements BowTier {
 
-    ENDERIUM(0, EnderiumConfig.damageEnderiumBow, EnderiumConfig.enchantmentValueEnderiumBow, () -> {
+    ENDERIUM(EnderiumConfig.durabilityEnderium, EnderiumConfig.damageEnderiumBow, EnderiumConfig.enchantmentValueEnderiumBow, () -> {
         return Ingredient.ofItems(ModItems.ENDERIUM_INGOT);
     }),
 
-    VIBRANIUM(0, VibraniumConfig.damageVibraniumBow, VibraniumConfig.enchantmentValueVibraniumBow, () -> {
+    VIBRANIUM(VibraniumConfig.durabilityVibranium, VibraniumConfig.damageVibraniumBow, VibraniumConfig.enchantmentValueVibraniumBow, () -> {
         return Ingredient.ofItems(ModItems.VIBRANIUM_INGOT);
     }),
 
-    VULPUS(0, VulpusConfig.damageVulpusBow, VulpusConfig.enchantmentValueVulpusBow, () -> {
+    VULPUS(VulpusConfig.durabilityVulpus, VulpusConfig.damageVulpusBow, VulpusConfig.enchantmentValueVulpusBow, () -> {
         return Ingredient.ofItems(ModItems.VULPUS_INGOT);
     });
 

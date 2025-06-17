@@ -1,10 +1,12 @@
 package com.blocklegend001.immersiveores.item.custom.vulpus;
 
+import com.blocklegend001.immersiveores.config.VibraniumConfig;
 import com.blocklegend001.immersiveores.config.VulpusConfig;
 import com.blocklegend001.immersiveores.item.ModArmorMaterials;
 import com.blocklegend001.immersiveores.item.ModItems;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.component.DataComponentTypes;
+import net.minecraft.component.type.UnbreakableComponent;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
@@ -19,9 +21,22 @@ import net.minecraft.world.World;
 import java.util.List;
 
 public class VulpusArmor extends ArmorItem {
-    public VulpusArmor(RegistryEntry<ArmorMaterial> material, ArmorItem.Type type, Settings settings) {
-        super(material, type, settings);
+    private static Item.Settings createSettings(boolean unbreakable, int durability) {
+        Item.Settings settings = new Item.Settings()
+                .maxDamage(durability)
+                .fireproof();
+
+        if (unbreakable) {
+            settings.component(DataComponentTypes.UNBREAKABLE, new UnbreakableComponent(true));
+        }
+
+        return settings;
     }
+
+    public VulpusArmor(RegistryEntry<ArmorMaterial> material, Type type, Settings settings) {
+        super(material, type, createSettings(VulpusConfig.unbreakableVulpus, VulpusConfig.durabilityVulpus));
+    }
+
     
     @Override
     public boolean isEnchantable(ItemStack p_41456_) {
@@ -96,7 +111,9 @@ public class VulpusArmor extends ArmorItem {
     public void appendTooltip(ItemStack stack, Item.TooltipContext context, List<Text> tooltip, TooltipType options) {
         if(Screen.hasShiftDown()){
             if (ModItems.VULPUS_BOOTS == stack.getItem()) {
-                tooltip.add(Text.translatable("tooltip.immersiveores.unbreakble.tooltip").formatted(Formatting.RED));
+                if (VulpusConfig.unbreakableVulpus) {
+                    tooltip.add(Text.translatable("tooltip.immersiveores.unbreakble.tooltip").formatted(Formatting.RED));
+                }
                 tooltip.add(Text.translatable("tooltip.immersiveores.immunetofire.tooltip").formatted(Formatting.RED));
                 if (VulpusConfig.speedIIVulpusArmor) {
                     tooltip.add(Text.translatable("tooltip.immersiveores.speed2.tooltip").formatted(Formatting.RED));

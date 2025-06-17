@@ -1,8 +1,13 @@
 package com.blocklegend001.immersiveores.item.custom.vibranium;
 
+import com.blocklegend001.immersiveores.config.EnderiumConfig;
+import com.blocklegend001.immersiveores.config.VibraniumConfig;
+import com.blocklegend001.immersiveores.item.ModToolMaterials;
 import com.blocklegend001.immersiveores.item.custom.base.Hammer;
 import com.blocklegend001.immersiveores.util.map.RadiusMap;
 import net.minecraft.client.gui.screen.Screen;
+import net.minecraft.component.DataComponentTypes;
+import net.minecraft.component.type.UnbreakableComponent;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ToolMaterial;
@@ -13,9 +18,23 @@ import net.minecraft.util.Formatting;
 import java.util.List;
 
 public class VibraniumHammer extends Hammer {
+    private static Item.Settings createSettings(boolean unbreakable, int durability) {
+        Item.Settings settings = new Item.Settings()
+                .maxDamage(durability)
+                .fireproof()
+                .attributeModifiers(VibraniumHammer.createAttributeModifiers(ModToolMaterials.VIBRANIUM,
+                        VibraniumConfig.attackDamageVibraniumHammer, (float) VibraniumConfig.attackSpeedVibraniumHammer));
 
-    public VibraniumHammer(ToolMaterial pTier, int pAttackDamageModifier, float pAttackSpeedModifier, Settings pProperties) {
-        super(pTier, pProperties);
+        if (unbreakable) {
+            settings.component(DataComponentTypes.UNBREAKABLE, new UnbreakableComponent(true));
+        }
+
+        return settings;
+    }
+
+    public VibraniumHammer(ToolMaterial material, int attackDamage, float attackSpeed) {
+        super(material,
+                createSettings(VibraniumConfig.unbreakableVibranium, VibraniumConfig.durabilityVibranium));
     }
 
     @Override
@@ -24,7 +43,9 @@ public class VibraniumHammer extends Hammer {
         int widht = radius * 2 + 1;
 
         if (Screen.hasShiftDown()) {
-            tooltip.add(Text.translatable("tooltip.immersiveores.unbreakble.tooltip").formatted(Formatting.LIGHT_PURPLE));
+            if (VibraniumConfig.unbreakableVibranium) {
+                tooltip.add(Text.translatable("tooltip.immersiveores.unbreakble.tooltip").formatted(Formatting.LIGHT_PURPLE));
+            }
             tooltip.add(Text.translatable("tooltip.immersiveores.immunetofire.tooltip").formatted(Formatting.LIGHT_PURPLE));
             Text text = Text.literal("Dig area: ")
                     .formatted(Formatting.LIGHT_PURPLE)

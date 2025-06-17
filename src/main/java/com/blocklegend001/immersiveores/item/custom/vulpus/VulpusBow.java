@@ -4,6 +4,8 @@ import com.blocklegend001.immersiveores.config.VulpusConfig;
 import com.blocklegend001.immersiveores.util.map.ArrowCountMap;
 import com.blocklegend001.immersiveores.util.tools.bow.BowTier;
 import net.minecraft.client.gui.screen.Screen;
+import net.minecraft.component.DataComponentTypes;
+import net.minecraft.component.type.UnbreakableComponent;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.enchantment.Enchantments;
@@ -20,6 +22,7 @@ import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;
+import net.minecraft.util.Hand;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
 
@@ -29,8 +32,20 @@ public class VulpusBow extends BowItem {
     private final BowTier tier;
     private final int ARROW_COUNT = VulpusConfig.arrowCountVulpusBow;
 
-    public VulpusBow(BowTier tier, Settings properties) {
-        super(properties.maxDamage(tier.getUses()));
+    private static Item.Settings createSettings(boolean unbreakable, int durability) {
+        Item.Settings settings = new Item.Settings()
+                .maxDamage(durability)
+                .fireproof();
+
+        if (unbreakable) {
+            settings.component(DataComponentTypes.UNBREAKABLE, new UnbreakableComponent(true));
+        }
+
+        return settings;
+    }
+
+    public VulpusBow(BowTier tier) {
+        super(createSettings(VulpusConfig.unbreakableVulpus, VulpusConfig.durabilityVulpus));
         this.tier = tier;
     }
 
@@ -70,6 +85,8 @@ public class VulpusBow extends BowItem {
                     ArrowItem arrowItem = (ArrowItem) (arrowStack.getItem() instanceof ArrowItem ? arrowStack.getItem() : Items.ARROW);
                     PersistentProjectileEntity arrowEntity = arrowItem.createArrow(world, arrowStack, user, stack);
 
+                    arrowEntity.setVelocity(user, user.getPitch(), user.getYaw(), 0.0F, arrowVelocity * 3.0F, 1.0F);
+
                     if (powerLevel > 0) {
                         arrowEntity.setDamage(arrowEntity.getDamage() + (powerLevel * 0.5 + 1.0));
                     }
@@ -82,8 +99,6 @@ public class VulpusBow extends BowItem {
 
                         arrowEntity.setVelocity(knockbackVec.x, 0.1, knockbackVec.z);
                     }
-
-                    arrowEntity.setVelocity(user, user.getPitch(), user.getYaw(), 0.0F, arrowVelocity * 3.0F, 1.0F);
 
                     PersistentProjectileEntity.PickupPermission pickupPermission = hasInfinity ? PersistentProjectileEntity.PickupPermission.DISALLOWED : PersistentProjectileEntity.PickupPermission.ALLOWED;
 
@@ -109,6 +124,8 @@ public class VulpusBow extends BowItem {
                         player.getInventory().removeOne(arrowStack);
                     }
                 }
+                stack.damage(1, player,
+                        LivingEntity.getSlotForHand(Hand.MAIN_HAND));
             }
         }
     }
@@ -124,9 +141,11 @@ public class VulpusBow extends BowItem {
                     .formatted(color);
             tooltip.add(damage);
 
-            Text unbreakable = Text.translatable("tooltip.immersiveores.unbreakble.tooltip")
-                    .formatted(color);
-            tooltip.add(unbreakable);
+            if (VulpusConfig.unbreakableVulpus) {
+                Text unbreakable = Text.translatable("tooltip.immersiveores.unbreakble.tooltip")
+                        .formatted(color);
+                tooltip.add(unbreakable);
+            }
 
             Text fireImmune = Text.translatable("tooltip.immersiveores.immunetofire.tooltip")
                     .formatted(color);

@@ -1,154 +1,179 @@
 package com.blocklegend001.immersiveores.config;
 
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParser;
-
-import java.io.File;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
+import com.blocklegend001.immersiveores.config.provider.ModConfigProvider;
+import com.blocklegend001.immersiveores.config.provider.SimpleConfig;
+import com.mojang.datafixers.util.Pair;
 
 public class VibraniumConfig {
+    public static SimpleConfig VIBRANIUM_CONFIG;
+    private static ModConfigProvider configs;
 
-    private static final File CONFIG_FILE = new File("config/immersiveores/vibranium-common.toml");
+    public static int toughnessValueVibraniumArmor;
+    public static int enchantmentValueVibraniumArmor;
+    public static int knockbackResistanceValueVibraniumArmor;
+    public static int protectionValueVibraniumBoots;
+    public static int protectionValueVibraniumLeggings;
+    public static int protectionValueVibraniumChestplate;
+    public static int protectionValueVibraniumHelmet;
 
-    public static int toughnessValueVibraniumArmor = 100;
-    public static int enchantmentValueVibraniumArmor = 85;
-    public static int knockbackResistanceValueVibraniumArmor = 1;
-    public static int protectionValueVibraniumBoots = 10;
-    public static int protectionValueVibraniumLeggings = 15;
-    public static int protectionValueVibraniumChestplate = 20;
-    public static int protectionValueVibraniumHelmet = 10;
+    public static boolean speedIVibraniumArmor;
+    public static boolean jumpIVibraniumArmor;
+    public static boolean nightVisionVibraniumArmor;
+    public static boolean canWalkOnPowderedSnowVibranium;
 
-    public static boolean speedIVibraniumArmor = true;
-    public static boolean jumpIVibraniumArmor = true;
-    public static boolean nightVisionVibraniumArmor = true;
-    public static boolean canWalkOnPowderedSnowVibranium = true;
+    public static int speedVibraniumTier;
+    public static int enchantmentValueVibraniumBow;
+    public static int damageVibraniumBow;
+    public static int attackDamageBonusVibraniumTier;
+    public static int enchantmentValueVibraniumTier;
+    public static int attackDamageVibraniumPickaxe;
+    public static double attackSpeedVibraniumPickaxe;
+    public static int attackDamageVibraniumAxe;
+    public static double attackSpeedVibraniumAxe;
+    public static int attackDamageVibraniumShovel;
+    public static double attackSpeedVibraniumShovel;
+    public static int attackDamageVibraniumSword;
+    public static double attackSpeedVibraniumSword;
+    public static int attackDamageVibraniumHoe;
+    public static double attackSpeedVibraniumHoe;
+    public static int attackDamageVibraniumPaxel;
+    public static double attackSpeedVibraniumPaxel;
+    public static int attackDamageVibraniumHammer;
+    public static double attackSpeedVibraniumHammer;
+    public static int attackDamageVibraniumExcavator;
+    public static double attackSpeedVibraniumExcavator;
+    public static int radiusVibraniumHammer;
+    public static int radiusVibraniumExcavator;
+    public static int arrowCountVibraniumBow;
+    public static int durabilityVibranium;
+    public static boolean unbreakableVibranium;
 
-    public static int speedVibraniumTier = 40;
-    public static int enchantmentValueVibraniumBow = 5;
-    public static int damageVibraniumBow = 8;
-    public static int attackDamageBonusVibraniumTier = 11;
-    public static int enchantmentValueVibraniumTier = 85;
-    public static int attackDamageVibraniumPickaxe = 9;
-    public static double attackSpeedVibraniumPickaxe = 2.0;
-    public static int attackDamageVibraniumAxe = 10;
-    public static double attackSpeedVibraniumAxe = 2.0;
-    public static int attackDamageVibraniumShovel = 9;
-    public static double attackSpeedVibraniumShovel = 2.0;
-    public static int attackDamageVibraniumSword = 10;
-    public static double attackSpeedVibraniumSword = 2.0;
-    public static int attackDamageVibraniumHoe = 7;
-    public static double attackSpeedVibraniumHoe = 2.0;
-    public static int attackDamageVibraniumPaxel = 15;
-    public static double attackSpeedVibraniumPaxel = 2.0;
-    public static int attackDamageVibraniumHammer = 13;
-    public static double attackSpeedVibraniumHammer = 2.0;
-    public static int attackDamageVibraniumExcavator = 13;
-    public static double attackSpeedVibraniumExcavator = 2.0;
-    public static int radiusVibraniumHammer = 1;
-    public static int radiusVibraniumExcavator = 1;
-    public static int arrowCountVibraniumBow = 2;
 
-    public static void loadConfig() {
-        File configDir = new File("config/immersiveores");
-        if (!configDir.exists()) {
-            configDir.mkdirs();
-        }
+    public static void registerConfigs() {
+        configs = new ModConfigProvider();
+        createConfigs();
 
-        if (!CONFIG_FILE.exists()) {
-            saveConfig();
-        } else {
-            try (FileReader reader = new FileReader(CONFIG_FILE)) {
-                JsonObject config = JsonParser.parseReader(reader).getAsJsonObject();
+        VIBRANIUM_CONFIG = SimpleConfig.of("vibranium-common.toml")
+                .provider(configs)
+                .request();
 
-                toughnessValueVibraniumArmor = config.get("toughnessValueVibraniumArmor").getAsInt();
-                enchantmentValueVibraniumArmor = config.get("enchantmentValueVibraniumArmor").getAsInt();
-                knockbackResistanceValueVibraniumArmor = config.get("knockbackResistanceValueVibraniumArmor").getAsInt();
-                protectionValueVibraniumBoots = config.get("protectionValueVibraniumBoots").getAsInt();
-                protectionValueVibraniumLeggings = config.get("protectionValueVibraniumLeggings").getAsInt();
-                protectionValueVibraniumChestplate = config.get("protectionValueVibraniumChestplate").getAsInt();
-                protectionValueVibraniumHelmet = config.get("protectionValueVibraniumHelmet").getAsInt();
-
-                speedIVibraniumArmor = config.get("speedIVibraniumArmor").getAsBoolean();
-                jumpIVibraniumArmor = config.get("jumpIVibraniumArmor").getAsBoolean();
-                nightVisionVibraniumArmor = config.get("nightVisionVibraniumArmor").getAsBoolean();
-                canWalkOnPowderedSnowVibranium = config.get("canWalkOnPowderedSnowVibranium").getAsBoolean();
-
-                speedVibraniumTier = config.get("speedVibraniumTier").getAsInt();
-                enchantmentValueVibraniumBow = config.get("enchantmentValueVibraniumBow").getAsInt();
-                damageVibraniumBow = config.get("damageVibraniumBow").getAsInt();
-                attackDamageBonusVibraniumTier = config.get("attackDamageBonusVibraniumTier").getAsInt();
-                enchantmentValueVibraniumTier = config.get("enchantmentValueVibraniumTier").getAsInt();
-                attackDamageVibraniumPickaxe = config.get("attackDamageVibraniumPickaxe").getAsInt();
-                attackSpeedVibraniumPickaxe = config.get("attackSpeedVibraniumPickaxe").getAsDouble();
-                attackDamageVibraniumAxe = config.get("attackDamageVibraniumAxe").getAsInt();
-                attackSpeedVibraniumAxe = config.get("attackSpeedVibraniumAxe").getAsDouble();
-                attackDamageVibraniumShovel = config.get("attackDamageVibraniumShovel").getAsInt();
-                attackSpeedVibraniumShovel = config.get("attackSpeedVibraniumShovel").getAsDouble();
-                attackDamageVibraniumSword = config.get("attackDamageVibraniumSword").getAsInt();
-                attackSpeedVibraniumSword = config.get("attackSpeedVibraniumSword").getAsDouble();
-                attackDamageVibraniumHoe = config.get("attackDamageVibraniumHoe").getAsInt();
-                attackSpeedVibraniumHoe = config.get("attackSpeedVibraniumHoe").getAsDouble();
-                attackDamageVibraniumPaxel = config.get("attackDamageVibraniumPaxel").getAsInt();
-                attackSpeedVibraniumPaxel = config.get("attackSpeedVibraniumPaxel").getAsDouble();
-                attackDamageVibraniumHammer = config.get("attackDamageVibraniumHammer").getAsInt();
-                attackSpeedVibraniumHammer = config.get("attackSpeedVibraniumHammer").getAsDouble();
-                attackDamageVibraniumExcavator = config.get("attackDamageVibraniumExcavator").getAsInt();
-                attackSpeedVibraniumExcavator = config.get("attackSpeedVibraniumExcavator").getAsDouble();
-                radiusVibraniumHammer = config.get("radiusVibraniumHammer").getAsInt();
-                radiusVibraniumExcavator = config.get("radiusVibraniumExcavator").getAsInt();
-                arrowCountVibraniumBow = config.get("arrowCountVibraniumBow").getAsInt();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
+        assignConfigs();
     }
 
-    public static void saveConfig() {
-        JsonObject config = new JsonObject();
-        config.addProperty("toughnessValueVibraniumArmor", toughnessValueVibraniumArmor);
-        config.addProperty("enchantmentValueVibraniumArmor", enchantmentValueVibraniumArmor);
-        config.addProperty("knockbackResistanceValueVibraniumArmor", knockbackResistanceValueVibraniumArmor);
-        config.addProperty("protectionValueVibraniumBoots", protectionValueVibraniumBoots);
-        config.addProperty("protectionValueVibraniumLeggings", protectionValueVibraniumLeggings);
-        config.addProperty("protectionValueVibraniumChestplate", protectionValueVibraniumChestplate);
-        config.addProperty("protectionValueVibraniumHelmet", protectionValueVibraniumHelmet);
-        config.addProperty("speedIVibraniumArmor", speedIVibraniumArmor);
-        config.addProperty("jumpIVibraniumArmor", jumpIVibraniumArmor);
-        config.addProperty("nightVisionVibraniumArmor", nightVisionVibraniumArmor);
-        config.addProperty("canWalkOnPowderedSnowVibranium", canWalkOnPowderedSnowVibranium);
-        config.addProperty("speedVibraniumTier", speedVibraniumTier);
-        config.addProperty("enchantmentValueVibraniumBow", enchantmentValueVibraniumBow);
-        config.addProperty("damageVibraniumBow", damageVibraniumBow);
-        config.addProperty("attackDamageBonusVibraniumTier", attackDamageBonusVibraniumTier);
-        config.addProperty("enchantmentValueVibraniumTier", enchantmentValueVibraniumTier);
-        config.addProperty("attackDamageVibraniumPickaxe", attackDamageVibraniumPickaxe);
-        config.addProperty("attackSpeedVibraniumPickaxe", attackSpeedVibraniumPickaxe);
-        config.addProperty("attackDamageVibraniumAxe", attackDamageVibraniumAxe);
-        config.addProperty("attackSpeedVibraniumAxe", attackSpeedVibraniumAxe);
-        config.addProperty("attackDamageVibraniumShovel", attackDamageVibraniumShovel);
-        config.addProperty("attackSpeedVibraniumShovel", attackSpeedVibraniumShovel);
-        config.addProperty("attackDamageVibraniumSword", attackDamageVibraniumSword);
-        config.addProperty("attackSpeedVibraniumSword", attackSpeedVibraniumSword);
-        config.addProperty("attackDamageVibraniumHoe", attackDamageVibraniumHoe);
-        config.addProperty("attackSpeedVibraniumHoe", attackSpeedVibraniumHoe);
-        config.addProperty("attackDamageVibraniumPaxel", attackDamageVibraniumPaxel);
-        config.addProperty("attackSpeedVibraniumPaxel", attackSpeedVibraniumPaxel);
-        config.addProperty("attackDamageVibraniumHammer", attackDamageVibraniumHammer);
-        config.addProperty("attackSpeedVibraniumHammer", attackSpeedVibraniumHammer);
-        config.addProperty("attackDamageVibraniumExcavator", attackDamageVibraniumExcavator);
-        config.addProperty("attackSpeedVibraniumExcavator", attackSpeedVibraniumExcavator);
-        config.addProperty("radiusVibraniumHammer", radiusVibraniumHammer);
-        config.addProperty("radiusVibraniumExcavator", radiusVibraniumExcavator);
-        config.addProperty("arrowCountVibraniumBow", arrowCountVibraniumBow);
-        try (FileWriter writer = new FileWriter(CONFIG_FILE)) {
-            Gson gson = new GsonBuilder().setPrettyPrinting().create();
-            writer.write(gson.toJson(config));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+    private static void createConfigs() {
+        configs.addComment("Vibranium Armor Protection and Resistance");
+        configs.addKeyValuePair(new Pair<>("protectionValueVibraniumBoots", 10), "Protection value of Vibranium Boots | Default Value = 10");
+        configs.addKeyValuePair(new Pair<>("protectionValueVibraniumLeggings", 15), "Protection value of Vibranium Leggings | Default Value = 15");
+        configs.addKeyValuePair(new Pair<>("protectionValueVibraniumChestplate", 20), "Protection value of Vibranium Chestplate | Default Value = 20");
+        configs.addKeyValuePair(new Pair<>("protectionValueVibraniumHelmet", 10), "Protection value of Vibranium Helmet | Default Value = 10");
+
+        configs.addKeyValuePair(new Pair<>("toughnessValueVibraniumArmor", 100), "Toughness value of Vibranium Armor | Default Value = 100");
+        configs.addKeyValuePair(new Pair<>("knockbackResistanceValueVibraniumArmor", 1), "Knockback resistance of Vibranium Armor | Default Value = 1");
+        configs.addKeyValuePair(new Pair<>("enchantmentValueVibraniumArmor", 85), "Enchantment value of Vibranium Armor | Default Value = 85");
+
+        configs.addComment("Vibranium Armor Special Effects and Abilities");
+        configs.addKeyValuePair(new Pair<>("speedIVibraniumArmor", true), "Speed I effect for Vibranium Armor | Default Value = true");
+        configs.addKeyValuePair(new Pair<>("jumpIVibraniumArmor", true), "Jump I effect for Vibranium Armor | Default Value = true");
+        configs.addKeyValuePair(new Pair<>("nightVisionVibraniumArmor", true), "Night Vision effect for Vibranium Armor | Default Value = true");
+        configs.addKeyValuePair(new Pair<>("canWalkOnPowderedSnowVibranium", true), "Can walk on powdered snow with Vibranium Armor | Default Value = true");
+
+        configs.addComment("Vibranium Bow Settings");
+        configs.addKeyValuePair(new Pair<>("enchantmentValueVibraniumBow", 5), "Enchantment value of Vibranium Bow | Default Value = 5");
+        configs.addKeyValuePair(new Pair<>("damageVibraniumBow", 8), "Damage value of Vibranium Bow | Default Value = 8");
+        configs.addKeyValuePair(new Pair<>("arrowCountVibraniumBow", 2), "Arrow count for Vibranium Bow | Default Value = 2");
+
+        configs.addComment("Vibranium Tool Tier Base Properties");
+        configs.addKeyValuePair(new Pair<>("speedVibraniumTier", 40), "Speed value of Vibranium tier | Default Value = 40");
+        configs.addKeyValuePair(new Pair<>("enchantmentValueVibraniumTier", 85), "Enchantment value of Vibranium tier | Default Value = 85");
+        configs.addKeyValuePair(new Pair<>("attackDamageBonusVibraniumTier", 11), "Attack damage bonus of Vibranium tier | Default Value = 11");
+        configs.addKeyValuePair(new Pair<>("durabilityVibranium", 4324), "Durability of Vibranium tools | Default Value = 4324");
+        configs.addKeyValuePair(new Pair<>("unbreakableVibranium", false), "Whether Vibranium tools are unbreakable | Default Value = true");
+
+        configs.addComment("Vibranium Pickaxe Stats");
+        configs.addKeyValuePair(new Pair<>("attackDamageVibraniumPickaxe", 9), "Attack damage of Vibranium Pickaxe | Default Value = 9");
+        configs.addKeyValuePair(new Pair<>("attackSpeedVibraniumPickaxe", 2.0), "Attack speed of Vibranium Pickaxe | Default Value = 2.0");
+
+        configs.addComment("Vibranium Axe Stats");
+        configs.addKeyValuePair(new Pair<>("attackDamageVibraniumAxe", 10), "Attack damage of Vibranium Axe | Default Value = 10");
+        configs.addKeyValuePair(new Pair<>("attackSpeedVibraniumAxe", 2.0), "Attack speed of Vibranium Axe | Default Value = 2.0");
+
+        configs.addComment("Vibranium Shovel Stats");
+        configs.addKeyValuePair(new Pair<>("attackDamageVibraniumShovel", 9), "Attack damage of Vibranium Shovel | Default Value = 9");
+        configs.addKeyValuePair(new Pair<>("attackSpeedVibraniumShovel", 2.0), "Attack speed of Vibranium Shovel | Default Value = 2.0");
+
+        configs.addComment("Vibranium Sword Stats");
+        configs.addKeyValuePair(new Pair<>("attackDamageVibraniumSword", 10), "Attack damage of Vibranium Sword | Default Value = 10");
+        configs.addKeyValuePair(new Pair<>("attackSpeedVibraniumSword", 2.0), "Attack speed of Vibranium Sword | Default Value = 2.0");
+
+        configs.addComment("Vibranium Hoe Stats");
+        configs.addKeyValuePair(new Pair<>("attackDamageVibraniumHoe", 7), "Attack damage of Vibranium Hoe | Default Value = 7");
+        configs.addKeyValuePair(new Pair<>("attackSpeedVibraniumHoe", 2.0), "Attack speed of Vibranium Hoe | Default Value = 2.0");
+
+        configs.addComment("Vibranium Paxel Stats");
+        configs.addKeyValuePair(new Pair<>("attackDamageVibraniumPaxel", 15), "Attack damage of Vibranium Paxel | Default Value = 15");
+        configs.addKeyValuePair(new Pair<>("attackSpeedVibraniumPaxel", 2.0), "Attack speed of Vibranium Paxel | Default Value = 2.0");
+
+        configs.addComment("Vibranium Hammer Stats");
+        configs.addKeyValuePair(new Pair<>("attackDamageVibraniumHammer", 13), "Attack damage of Vibranium Hammer | Default Value = 13");
+        configs.addKeyValuePair(new Pair<>("attackSpeedVibraniumHammer", 2.0), "Attack speed of Vibranium Hammer | Default Value = 2.0");
+        configs.addKeyValuePair(new Pair<>("radiusVibraniumHammer", 1), "Hammering radius for Vibranium Hammer | Default Value = 1");
+
+        configs.addComment("Vibranium Excavator Stats");
+        configs.addKeyValuePair(new Pair<>("attackDamageVibraniumExcavator", 13), "Attack damage of Vibranium Excavator | Default Value = 13");
+        configs.addKeyValuePair(new Pair<>("attackSpeedVibraniumExcavator", 2.0), "Attack speed of Vibranium Excavator | Default Value = 2.0");
+        configs.addKeyValuePair(new Pair<>("radiusVibraniumExcavator", 1), "Excavation radius for Vibranium Excavator | Default Value = 1");
+
+    }
+
+    private static void assignConfigs() {
+        protectionValueVibraniumBoots = VIBRANIUM_CONFIG.getOrDefault("protectionValueVibraniumBoots", 10);
+        protectionValueVibraniumLeggings = VIBRANIUM_CONFIG.getOrDefault("protectionValueVibraniumLeggings", 15);
+        protectionValueVibraniumChestplate = VIBRANIUM_CONFIG.getOrDefault("protectionValueVibraniumChestplate", 20);
+        protectionValueVibraniumHelmet = VIBRANIUM_CONFIG.getOrDefault("protectionValueVibraniumHelmet", 10);
+
+        toughnessValueVibraniumArmor = VIBRANIUM_CONFIG.getOrDefault("toughnessValueVibraniumArmor", 100);
+        knockbackResistanceValueVibraniumArmor = VIBRANIUM_CONFIG.getOrDefault("knockbackResistanceValueVibraniumArmor", 1);
+        enchantmentValueVibraniumArmor = VIBRANIUM_CONFIG.getOrDefault("enchantmentValueVibraniumArmor", 85);
+        durabilityVibranium = VIBRANIUM_CONFIG.getOrDefault("durabilityVibranium", 4324);
+        unbreakableVibranium = VIBRANIUM_CONFIG.getOrDefault("unbreakableVibranium", false);
+
+        speedIVibraniumArmor = VIBRANIUM_CONFIG.getOrDefault("speedIVibraniumArmor", true);
+        jumpIVibraniumArmor = VIBRANIUM_CONFIG.getOrDefault("jumpIVibraniumArmor", true);
+        nightVisionVibraniumArmor = VIBRANIUM_CONFIG.getOrDefault("nightVisionVibraniumArmor", true);
+        canWalkOnPowderedSnowVibranium = VIBRANIUM_CONFIG.getOrDefault("canWalkOnPowderedSnowVibranium", true);
+
+        speedVibraniumTier = VIBRANIUM_CONFIG.getOrDefault("speedVibraniumTier", 40);
+        enchantmentValueVibraniumBow = VIBRANIUM_CONFIG.getOrDefault("enchantmentValueVibraniumBow", 5);
+        damageVibraniumBow = VIBRANIUM_CONFIG.getOrDefault("damageVibraniumBow", 8);
+        attackDamageBonusVibraniumTier = VIBRANIUM_CONFIG.getOrDefault("attackDamageBonusVibraniumTier", 11);
+        enchantmentValueVibraniumTier = VIBRANIUM_CONFIG.getOrDefault("enchantmentValueVibraniumTier", 85);
+
+        attackDamageVibraniumPickaxe = VIBRANIUM_CONFIG.getOrDefault("attackDamageVibraniumPickaxe", 9);
+        attackSpeedVibraniumPickaxe = VIBRANIUM_CONFIG.getOrDefault("attackSpeedVibraniumPickaxe", 2.0);
+
+        attackDamageVibraniumAxe = VIBRANIUM_CONFIG.getOrDefault("attackDamageVibraniumAxe", 10);
+        attackSpeedVibraniumAxe = VIBRANIUM_CONFIG.getOrDefault("attackSpeedVibraniumAxe", 2.0);
+
+        attackDamageVibraniumShovel = VIBRANIUM_CONFIG.getOrDefault("attackDamageVibraniumShovel", 9);
+        attackSpeedVibraniumShovel = VIBRANIUM_CONFIG.getOrDefault("attackSpeedVibraniumShovel", 2.0);
+
+        attackDamageVibraniumSword = VIBRANIUM_CONFIG.getOrDefault("attackDamageVibraniumSword", 10);
+        attackSpeedVibraniumSword = VIBRANIUM_CONFIG.getOrDefault("attackSpeedVibraniumSword", 2.0);
+
+        attackDamageVibraniumHoe = VIBRANIUM_CONFIG.getOrDefault("attackDamageVibraniumHoe", 7);
+        attackSpeedVibraniumHoe = VIBRANIUM_CONFIG.getOrDefault("attackSpeedVibraniumHoe", 2.0);
+
+        attackDamageVibraniumPaxel = VIBRANIUM_CONFIG.getOrDefault("attackDamageVibraniumPaxel", 15);
+        attackSpeedVibraniumPaxel = VIBRANIUM_CONFIG.getOrDefault("attackSpeedVibraniumPaxel", 2.0);
+
+        attackDamageVibraniumHammer = VIBRANIUM_CONFIG.getOrDefault("attackDamageVibraniumHammer", 13);
+        attackSpeedVibraniumHammer = VIBRANIUM_CONFIG.getOrDefault("attackSpeedVibraniumHammer", 2.0);
+        radiusVibraniumHammer = VIBRANIUM_CONFIG.getOrDefault("radiusVibraniumHammer", 1);
+
+        attackDamageVibraniumExcavator = VIBRANIUM_CONFIG.getOrDefault("attackDamageVibraniumExcavator", 13);
+        attackSpeedVibraniumExcavator = VIBRANIUM_CONFIG.getOrDefault("attackSpeedVibraniumExcavator", 2.0);
+        radiusVibraniumExcavator = VIBRANIUM_CONFIG.getOrDefault("radiusVibraniumExcavator", 1);
+
+        arrowCountVibraniumBow = VIBRANIUM_CONFIG.getOrDefault("arrowCountVibraniumBow", 2);
     }
 }

@@ -1,3 +1,5 @@
+- Provides a config option to enable or disable the “unbreakable” attribute for custom tools. By default, tools now use their configured durability instead of being unbreakable.
+- Completely revamped and cleaned up the config files and loading process for better readability, performance, and maintainability.
 - Added support for configuring the hammer and excavator radius for each Hammer and Excavator via config file.
 - Each Hammer and Excavator now displays a tooltip showing its radius based on the current config.
 - Added support for configuring the amount of arrows that can shot the bows
