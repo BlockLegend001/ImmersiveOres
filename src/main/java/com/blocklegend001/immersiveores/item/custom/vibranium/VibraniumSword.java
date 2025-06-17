@@ -1,6 +1,11 @@
 package com.blocklegend001.immersiveores.item.custom.vibranium;
 
+import com.blocklegend001.immersiveores.config.EnderiumConfig;
+import com.blocklegend001.immersiveores.config.VibraniumConfig;
+import com.blocklegend001.immersiveores.item.ModToolMaterials;
 import net.minecraft.client.gui.screen.Screen;
+import net.minecraft.component.DataComponentTypes;
+import net.minecraft.component.type.UnbreakableComponent;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.enchantment.Enchantments;
@@ -24,8 +29,17 @@ import net.minecraft.world.World;
 import java.util.List;
 
 public class VibraniumSword extends SwordItem {
-    public VibraniumSword(ToolMaterial pTier, int pAttackDamageModifier, float pAttackSpeedModifier, Settings pProperties) {
-        super(pTier, pAttackDamageModifier, pAttackSpeedModifier, pProperties.enchantable(pTier.enchantmentValue()));
+    private static Settings createSettings(Settings base, boolean unbreakable, int durability) {
+        base.maxDamage(durability).fireproof();
+        if (unbreakable) {
+            base.component(DataComponentTypes.UNBREAKABLE, new UnbreakableComponent(true));
+        }
+        return base;
+    }
+
+    public VibraniumSword(ToolMaterial material, int attackDamage, float attackSpeed, Settings settings) {
+        super(material, attackDamage, attackSpeed,
+                createSettings(settings, VibraniumConfig.unbreakableVibranium, VibraniumConfig.durabilityVibranium));
     }
 
     @Override
@@ -69,9 +83,11 @@ public class VibraniumSword extends SwordItem {
     }
 
     @Override
-    public void appendTooltip(ItemStack stack, Item.TooltipContext context, List<Text> tooltip, TooltipType options) {
+    public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType options) {
         if(Screen.hasShiftDown()) {
-            tooltip.add(Text.translatable("tooltip.immersiveores.unbreakble.tooltip").formatted(Formatting.LIGHT_PURPLE));
+            if (VibraniumConfig.unbreakableVibranium) {
+                tooltip.add(Text.translatable("tooltip.immersiveores.unbreakble.tooltip").formatted(Formatting.LIGHT_PURPLE));
+            }
             tooltip.add(Text.translatable("tooltip.immersiveores.immunetofire.tooltip").formatted(Formatting.LIGHT_PURPLE));
         } else {
             tooltip.add(Text.translatable("tooltip.immersiveores.pressshiftformoreinfo.tooltip").formatted(Formatting.LIGHT_PURPLE));

@@ -1,11 +1,17 @@
 package com.blocklegend001.immersiveores.item.custom.vibranium;
 
-import com.blocklegend001.immersiveores.util.BowTier;
+import com.blocklegend001.immersiveores.config.EnderiumConfig;
+import com.blocklegend001.immersiveores.config.VibraniumConfig;
+import com.blocklegend001.immersiveores.util.map.ArrowCountMap;
+import com.blocklegend001.immersiveores.util.tools.bow.BowTier;
 import net.minecraft.client.gui.screen.Screen;
+import net.minecraft.component.DataComponentTypes;
+import net.minecraft.component.type.UnbreakableComponent;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.enchantment.Enchantments;
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.projectile.PersistentProjectileEntity;
 import net.minecraft.item.*;
@@ -17,15 +23,26 @@ import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;
+import net.minecraft.util.Hand;
+import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
 
 import java.util.List;
 
 public class VibraniumBow extends BowItem {
     private final BowTier tier;
+    private final int ARROW_COUNT = VibraniumConfig.arrowCountVibraniumBow;
 
-    public VibraniumBow(BowTier tier, Settings properties) {
-        super(properties.maxDamage(tier.getUses()).enchantable(tier.getEnchantmentValue()));
+    private static Settings createSettings(Settings base, boolean unbreakable, int durability) {
+        base.maxDamage(durability).fireproof();
+        if (unbreakable) {
+            base.component(DataComponentTypes.UNBREAKABLE, new UnbreakableComponent(true));
+        }
+        return base;
+    }
+
+    public VibraniumBow(BowTier tier, Settings settings) {
+        super(createSettings(settings, EnderiumConfig.unbreakableEnderium, EnderiumConfig.durabilityEnderium));
         this.tier = tier;
     }
 
@@ -35,8 +52,15 @@ public class VibraniumBow extends BowItem {
             ItemStack arrowStack = user.getProjectileType(stack);
 
             Registry<Enchantment> enchantmentRegistry = world.getRegistryManager().getOrThrow(RegistryKeys.ENCHANTMENT);
+
             RegistryEntry.Reference<Enchantment> enchantmentReference = enchantmentRegistry.getOrThrow(Enchantments.INFINITY);
             boolean hasInfinity = EnchantmentHelper.getLevel(enchantmentReference, player.getMainHandStack()) > 0;
+
+            RegistryEntry.Reference<Enchantment> enchantmentReferencePower = enchantmentRegistry.getOrThrow(Enchantments.POWER);
+            int powerLevel = EnchantmentHelper.getLevel(enchantmentReferencePower, player.getMainHandStack());
+
+            RegistryEntry.Reference<Enchantment> enchantmentReferencePunch = enchantmentRegistry.getOrThrow(Enchantments.PUNCH);
+            int punchLevel = EnchantmentHelper.getLevel(enchantmentReferencePunch, player.getMainHandStack());
 
             int charge = getMaxUseTime(stack, player) - remainingUseTicks;
             boolean hasArrows = arrowStack.isOf(Items.ARROW);
@@ -44,11 +68,24 @@ public class VibraniumBow extends BowItem {
             float arrowVelocity = getPullProgress(charge);
 
             if (arrowVelocity >= 0.1) {
-                int arrowCount = 2;
-                for (int i = 0; i < arrowCount; i++) {
+                for (int i = 0; i < ARROW_COUNT; i++) {
                     ArrowItem arrowItem = (ArrowItem) (arrowStack.getItem() instanceof ArrowItem ? arrowStack.getItem() : Items.ARROW);
                     PersistentProjectileEntity arrowEntity = arrowItem.createArrow(world, arrowStack, user, stack);
+
                     arrowEntity.setVelocity(user, user.getPitch(), user.getYaw(), 0.0F, arrowVelocity * 3.0F, 1.0F);
+
+                    if (powerLevel > 0) {
+                        arrowEntity.setDamage(arrowEntity.getDamage() + (powerLevel * 0.5 + 1.0));
+                    }
+
+                    if (punchLevel > 0) {
+                        double resistance = Math.max(0.0, 1.0 - user.getAttributeValue(EntityAttributes.KNOCKBACK_RESISTANCE));
+                        Vec3d knockbackVec = arrowEntity.getVelocity()
+                                .normalize()
+                                .multiply(punchLevel * 0.6 * resistance);
+
+                        arrowEntity.setVelocity(knockbackVec.x, 0.1, knockbackVec.z);
+                    }
 
                     PersistentProjectileEntity.PickupPermission pickupPermission = hasInfinity ? PersistentProjectileEntity.PickupPermission.DISALLOWED : PersistentProjectileEntity.PickupPermission.ALLOWED;
 
@@ -73,21 +110,50 @@ public class VibraniumBow extends BowItem {
                         player.getInventory().removeOne(arrowStack);
                     }
                 }
+                stack.damage(1, player,
+                        LivingEntity.getSlotForHand(Hand.MAIN_HAND));
             }
         }
         return false;
     }
 
     @Override
-    public void appendTooltip(ItemStack stack, Item.TooltipContext context, List<Text> tooltip, TooltipType options) {
-        if(Screen.hasShiftDown()) {
-            tooltip.add(Text.literal("+" + this.tier.getAttackDamageBonus() + " ")
-                    .append(Text.translatable("tooltip.immersiveores.damage.tooltip")).formatted(Formatting.LIGHT_PURPLE));
-            tooltip.add(Text.translatable("tooltip.immersiveores.unbreakble.tooltip").formatted(Formatting.LIGHT_PURPLE));
-            tooltip.add(Text.translatable("tooltip.immersiveores.immunetofire.tooltip").formatted(Formatting.LIGHT_PURPLE));
-            tooltip.add(Text.translatable("tooltip.immersiveores.shoot2arrows.tooltip").formatted(Formatting.LIGHT_PURPLE));
+    public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType options) {
+        int arrowCount = getArrowCount(stack);
+        Formatting color = Formatting.LIGHT_PURPLE;
+
+        if (Screen.hasShiftDown()) {
+            Text damage = Text.literal("+" + this.tier.getAttackDamageBonus() + " ")
+                    .append(Text.translatable("tooltip.immersiveores.damage.tooltip"))
+                    .formatted(color);
+            tooltip.add(damage);
+
+            if (VibraniumConfig.unbreakableVibranium) {
+                Text unbreakable = Text.translatable("tooltip.immersiveores.unbreakble.tooltip")
+                        .formatted(color);
+                tooltip.add(unbreakable);
+            }
+
+            Text fireImmune = Text.translatable("tooltip.immersiveores.immunetofire.tooltip")
+                    .formatted(color);
+            tooltip.add(fireImmune);
+
+            Text arrow = Text.literal("Can shoot ")
+                    .formatted(color)
+                    .append(Text.literal(String.valueOf(arrowCount)).formatted(Formatting.YELLOW))
+                    .append(Text.literal(" Arrows").formatted(color));
+            tooltip.add(arrow);
         } else {
-            tooltip.add(Text.translatable("tooltip.immersiveores.pressshiftformoreinfo.tooltip").formatted(Formatting.LIGHT_PURPLE));
+            Text pressShift = Text.translatable("tooltip.immersiveores.pressshiftformoreinfo.tooltip")
+                    .formatted(color);
+            tooltip.add(pressShift);
         }
+    }
+
+    private int getArrowCount(ItemStack stack) {
+        if (ArrowCountMap.VIBRANIUM_BOW_ARROW_COUNT.containsKey(stack.getItem())) {
+            return ArrowCountMap.VIBRANIUM_BOW_ARROW_COUNT.get(stack.getItem());
+        }
+        return 0;
     }
 }

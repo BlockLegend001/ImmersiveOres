@@ -1,4 +1,4 @@
-package com.blocklegend001.immersiveores.util;
+package com.blocklegend001.immersiveores.util.tools.bow;
 
 import net.minecraft.recipe.Ingredient;
 
