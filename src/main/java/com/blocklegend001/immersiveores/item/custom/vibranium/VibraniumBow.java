@@ -8,6 +8,7 @@ import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.enchantment.Enchantments;
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.projectile.PersistentProjectileEntity;
 import net.minecraft.item.*;
@@ -19,6 +20,7 @@ import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;
+import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
 
 import java.util.List;
@@ -48,8 +50,15 @@ public class VibraniumBow extends BowItem {
             ItemStack arrowStack = user.getProjectileType(stack);
 
             Registry<Enchantment> enchantmentRegistry = world.getRegistryManager().get(RegistryKeys.ENCHANTMENT);
+
             RegistryEntry.Reference<Enchantment> enchantmentReference = enchantmentRegistry.getEntry(Enchantments.INFINITY).orElseThrow();
             boolean hasInfinity = EnchantmentHelper.getLevel(enchantmentReference, player.getMainHandStack()) > 0;
+
+            RegistryEntry.Reference<Enchantment> enchantmentReferencePower = enchantmentRegistry.getEntry(Enchantments.POWER).orElseThrow();
+            int powerLevel = EnchantmentHelper.getLevel(enchantmentReferencePower, player.getMainHandStack());
+
+            RegistryEntry.Reference<Enchantment> enchantmentReferencePunch = enchantmentRegistry.getEntry(Enchantments.PUNCH).orElseThrow();
+            int punchLevel = EnchantmentHelper.getLevel(enchantmentReferencePunch, player.getMainHandStack());
 
             int charge = getMaxUseTime(stack, player) - remainingUseTicks;
             boolean hasArrows = arrowStack.isOf(Items.ARROW);
@@ -60,6 +69,20 @@ public class VibraniumBow extends BowItem {
                 for (int i = 0; i < ARROW_COUNT; i++) {
                     ArrowItem arrowItem = (ArrowItem) (arrowStack.getItem() instanceof ArrowItem ? arrowStack.getItem() : Items.ARROW);
                     PersistentProjectileEntity arrowEntity = arrowItem.createArrow(world, arrowStack, user, stack);
+
+                    if (powerLevel > 0) {
+                        arrowEntity.setDamage(arrowEntity.getDamage() + (powerLevel * 0.5 + 1.0));
+                    }
+
+                    if (punchLevel > 0) {
+                        double resistance = Math.max(0.0, 1.0 - user.getAttributeValue(EntityAttributes.GENERIC_KNOCKBACK_RESISTANCE));
+                        Vec3d knockbackVec = arrowEntity.getVelocity()
+                                .normalize()
+                                .multiply(punchLevel * 0.6 * resistance);
+
+                        arrowEntity.setVelocity(knockbackVec.x, 0.1, knockbackVec.z);
+                    }
+
                     arrowEntity.setVelocity(user, user.getPitch(), user.getYaw(), 0.0F, arrowVelocity * 3.0F, 1.0F);
 
                     PersistentProjectileEntity.PickupPermission pickupPermission = hasInfinity ? PersistentProjectileEntity.PickupPermission.DISALLOWED : PersistentProjectileEntity.PickupPermission.ALLOWED;
@@ -119,7 +142,6 @@ public class VibraniumBow extends BowItem {
             tooltip.add(pressShift);
         }
     }
-
 
     private int getArrowCount(ItemStack stack) {
         if (ArrowCountMap.VIBRANIUM_BOW_ARROW_COUNT.containsKey(stack.getItem())) {
