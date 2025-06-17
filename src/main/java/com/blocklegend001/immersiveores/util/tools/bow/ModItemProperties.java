@@ -1,4 +1,4 @@
-package com.blocklegend001.immersiveores.util;
+package com.blocklegend001.immersiveores.util.tools.bow;
 
 import com.blocklegend001.immersiveores.item.ModItems;
 import net.minecraft.client.item.ModelPredicateProviderRegistry;

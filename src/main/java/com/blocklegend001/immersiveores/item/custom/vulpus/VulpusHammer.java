@@ -1,7 +1,7 @@
 package com.blocklegend001.immersiveores.item.custom.vulpus;
 
 import com.blocklegend001.immersiveores.item.custom.base.Hammer;
-import com.blocklegend001.immersiveores.util.RadiusMap;
+import com.blocklegend001.immersiveores.util.map.RadiusMap;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;

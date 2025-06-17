@@ -1,7 +1,7 @@
 package com.blocklegend001.immersiveores.util.tools.excavator;
 
 import com.blocklegend001.immersiveores.item.custom.vulpus.VulpusExcavator;
-import com.blocklegend001.immersiveores.util.RadiusMap;
+import com.blocklegend001.immersiveores.util.map.RadiusMap;
 import net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;

@@ -1,7 +1,7 @@
 package com.blocklegend001.immersiveores.util.tools.hammer;
 
 import com.blocklegend001.immersiveores.item.custom.vulpus.VulpusHammer;
-import com.blocklegend001.immersiveores.util.RadiusMap;
+import com.blocklegend001.immersiveores.util.map.RadiusMap;
 import net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;

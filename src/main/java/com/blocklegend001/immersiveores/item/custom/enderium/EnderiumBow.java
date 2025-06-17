@@ -1,8 +1,8 @@
 package com.blocklegend001.immersiveores.item.custom.enderium;
 
 import com.blocklegend001.immersiveores.config.EnderiumConfig;
-import com.blocklegend001.immersiveores.util.ArrowCountMap;
-import com.blocklegend001.immersiveores.util.BowTier;
+import com.blocklegend001.immersiveores.util.map.ArrowCountMap;
+import com.blocklegend001.immersiveores.util.tools.bow.BowTier;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentHelper;
@@ -20,8 +20,6 @@ import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;
-import net.minecraft.util.Hand;
-import net.minecraft.util.TypedActionResult;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
 
