@@ -19,6 +19,7 @@ import net.minecraft.item.tooltip.TooltipType;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;
+import net.minecraft.util.Unit;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
@@ -27,14 +28,19 @@ import java.util.function.Consumer;
 
 public class VulpusArmor extends Item {
     public VulpusArmor(ArmorMaterial material, EquipmentType type, Item.Settings settings) {
-        super(computeSettings(material, type, settings));
+        super(computeSettings(material, type, settings, VulpusConfig.unbreakableVulpus, VulpusConfig.durabilityVulpus));
     }
 
-    private static Item.Settings computeSettings(ArmorMaterial material, EquipmentType type, Item.Settings settings) {
+    private static Item.Settings computeSettings(ArmorMaterial material, EquipmentType type, Item.Settings settings, boolean unbreakable, int durability) {
         settings.armor(material, EquipmentType.BODY)
                 .attributeModifiers(material.createAttributeModifiers(type))
                 .enchantable(material.enchantmentValue())
-                .component(DataComponentTypes.EQUIPPABLE, EquippableComponent.builder(type.getEquipmentSlot()).equipSound(material.equipSound()).model(material.assetId()).build());
+                .component(DataComponentTypes.EQUIPPABLE, EquippableComponent.builder(type.getEquipmentSlot()).equipSound(material.equipSound()).model(material.assetId()).build())
+                .maxDamage(durability).fireproof();
+                if (unbreakable) {
+                    settings.component(DataComponentTypes.UNBREAKABLE, Unit.INSTANCE);
+                }
+
         return settings;
     }
 
@@ -111,7 +117,9 @@ public class VulpusArmor extends Item {
         super.appendTooltip(stack, context, displayComponent, textConsumer, type);
         if(Screen.hasShiftDown()){
             if (ModItems.VULPUS_BOOTS == stack.getItem()) {
-                textConsumer.accept(Text.translatable("tooltip.immersiveores.unbreakble.tooltip").formatted(Formatting.RED));
+                if (VulpusConfig.unbreakableVulpus) {
+                    textConsumer.accept(Text.translatable("tooltip.immersiveores.unbreakble.tooltip").formatted(Formatting.RED));
+                }
                 textConsumer.accept(Text.translatable("tooltip.immersiveores.immunetofire.tooltip").formatted(Formatting.RED));
                 if (VulpusConfig.speedIIVulpusArmor) {
                     textConsumer.accept(Text.translatable("tooltip.immersiveores.speed2.tooltip").formatted(Formatting.RED));

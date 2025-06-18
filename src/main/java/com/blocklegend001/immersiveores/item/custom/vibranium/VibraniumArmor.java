@@ -20,7 +20,7 @@ import net.minecraft.item.tooltip.TooltipType;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;
-import net.minecraft.world.World;
+import net.minecraft.util.Unit;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
@@ -28,14 +28,18 @@ import java.util.function.Consumer;
 
 public class VibraniumArmor extends Item {
     public VibraniumArmor(ArmorMaterial material, EquipmentType type, Item.Settings settings) {
-        super(computeSettings(material, type, settings));
+        super(computeSettings(material, type, settings, VibraniumConfig.unbreakableVibranium, VibraniumConfig.durabilityVibranium));
     }
 
-    private static Item.Settings computeSettings(ArmorMaterial material, EquipmentType type, Item.Settings settings) {
+    private static Item.Settings computeSettings(ArmorMaterial material, EquipmentType type, Item.Settings settings,  boolean unbreakable, int durability) {
         settings.armor(material, EquipmentType.BODY)
                 .attributeModifiers(material.createAttributeModifiers(type))
                 .enchantable(material.enchantmentValue())
-                .component(DataComponentTypes.EQUIPPABLE, EquippableComponent.builder(type.getEquipmentSlot()).equipSound(material.equipSound()).model(material.assetId()).build());
+                .component(DataComponentTypes.EQUIPPABLE, EquippableComponent.builder(type.getEquipmentSlot()).equipSound(material.equipSound()).model(material.assetId()).build())
+                .maxDamage(durability).fireproof();
+                if (unbreakable) {
+                    settings.component(DataComponentTypes.UNBREAKABLE, Unit.INSTANCE);
+                }
         return settings;
     }
 
@@ -95,7 +99,9 @@ public class VibraniumArmor extends Item {
         super.appendTooltip(stack, context, displayComponent, textConsumer, type);
         if(Screen.hasShiftDown()) {
             if (ModItems.VIBRANIUM_BOOTS == stack.getItem()) {
-                textConsumer.accept(Text.translatable("tooltip.immersiveores.unbreakble.tooltip").formatted(Formatting.LIGHT_PURPLE));
+                if (VibraniumConfig.unbreakableVibranium) {
+                    textConsumer.accept(Text.translatable("tooltip.immersiveores.unbreakble.tooltip").formatted(Formatting.LIGHT_PURPLE));
+                }
                 textConsumer.accept(Text.translatable("tooltip.immersiveores.immunetofire.tooltip").formatted(Formatting.LIGHT_PURPLE));
                 if (VibraniumConfig.speedIVibraniumArmor) {
                     textConsumer.accept(Text.translatable("tooltip.immersiveores.speed1.tooltip").formatted(Formatting.LIGHT_PURPLE));

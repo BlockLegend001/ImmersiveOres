@@ -1,5 +1,6 @@
 package com.blocklegend001.immersiveores.item.custom.enderium;
 
+import com.blocklegend001.immersiveores.config.EnderiumConfig;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.component.DataComponentTypes;
 import net.minecraft.component.type.AttributeModifierSlot;
@@ -22,6 +23,7 @@ import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;
+import net.minecraft.util.Unit;
 import net.minecraft.world.World;
 
 import java.util.List;
@@ -29,11 +31,14 @@ import java.util.function.Consumer;
 
 public class EnderiumSword extends Item {
     public EnderiumSword(ToolMaterial material, float attackDamage, float attackSpeed, Settings settings) {
-        super(computeSettings(material, settings, attackDamage, attackSpeed));
+        super(computeSettings(material, settings, attackDamage, attackSpeed, EnderiumConfig.unbreakableEnderium, EnderiumConfig.durabilityEnderium));
     }
 
-    private static Item.Settings computeSettings(ToolMaterial material, Item.Settings settings, float attackDamage, float attackSpeed) {
-        settings.sword(wrapMaterial(material, material.durability()), attackDamage, attackSpeed);
+    private static Item.Settings computeSettings(ToolMaterial material, Item.Settings settings, float attackDamage, float attackSpeed,  boolean unbreakable, int durability) {
+        settings.sword(wrapMaterial(material, material.durability()), attackDamage, attackSpeed).maxDamage(durability);
+        if (unbreakable) {
+            settings.component(DataComponentTypes.UNBREAKABLE, Unit.INSTANCE);
+        }
         return settings;
     }
 

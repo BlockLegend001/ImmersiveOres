@@ -19,6 +19,7 @@ import net.minecraft.item.tooltip.TooltipType;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;
+import net.minecraft.util.Unit;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
@@ -27,14 +28,18 @@ import java.util.function.Consumer;
 public class EnderiumArmor extends Item {
 
     public EnderiumArmor(ArmorMaterial material, EquipmentType type, Settings settings) {
-        super(computeSettings(material, type, settings));
+        super(computeSettings(material, type, EnderiumConfig.unbreakableEnderium, EnderiumConfig.durabilityEnderium, settings));
     }
 
-    private static Item.Settings computeSettings(ArmorMaterial material, EquipmentType type, Item.Settings settings) {
+    private static Item.Settings computeSettings(ArmorMaterial material, EquipmentType type, boolean unbreakable, int durability, Item.Settings settings) {
         settings.armor(material, EquipmentType.BODY)
                 .attributeModifiers(material.createAttributeModifiers(type))
                 .enchantable(material.enchantmentValue())
-                .component(DataComponentTypes.EQUIPPABLE, EquippableComponent.builder(type.getEquipmentSlot()).equipSound(material.equipSound()).model(material.assetId()).build());
+                .component(DataComponentTypes.EQUIPPABLE, EquippableComponent.builder(type.getEquipmentSlot()).equipSound(material.equipSound()).model(material.assetId()).build())
+                .maxDamage(durability);
+                if (unbreakable) {
+                    settings.component(DataComponentTypes.UNBREAKABLE, Unit.INSTANCE);
+                }
         return settings;
     }
 
@@ -116,7 +121,9 @@ public class EnderiumArmor extends Item {
         super.appendTooltip(stack, context, displayComponent, textConsumer, type);
         if(Screen.hasShiftDown()) {
             if (ModItems.ENDERIUM_BOOTS == stack.getItem()) {
-                textConsumer.accept(Text.translatable("tooltip.immersiveores.unbreakble.tooltip").formatted(Formatting.DARK_AQUA));
+                if (EnderiumConfig.unbreakableEnderium) {
+                    textConsumer.accept(Text.translatable("tooltip.immersiveores.unbreakble.tooltip").formatted(Formatting.DARK_AQUA));
+                }
                 textConsumer.accept(Text.translatable("tooltip.immersiveores.immunetofire.tooltip").formatted(Formatting.DARK_AQUA));
                 if (EnderiumConfig.speedIIIEnderiumArmor) {
                     textConsumer.accept(Text.translatable("tooltip.immersiveores.speed3.tooltip").formatted(Formatting.DARK_AQUA));

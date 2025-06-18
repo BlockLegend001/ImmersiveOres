@@ -1,12 +1,16 @@
 package com.blocklegend001.immersiveores.item.custom.enderium;
 
-import com.blocklegend001.immersiveores.util.BowTier;
+import com.blocklegend001.immersiveores.config.EnderiumConfig;
+import com.blocklegend001.immersiveores.util.map.ArrowCountMap;
+import com.blocklegend001.immersiveores.util.tools.bow.BowTier;
 import net.minecraft.client.gui.screen.Screen;
+import net.minecraft.component.DataComponentTypes;
 import net.minecraft.component.type.TooltipDisplayComponent;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.enchantment.Enchantments;
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.projectile.PersistentProjectileEntity;
 import net.minecraft.item.*;
@@ -18,6 +22,9 @@ import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;
+import net.minecraft.util.Hand;
+import net.minecraft.util.Unit;
+import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
 
 import java.util.List;
@@ -25,9 +32,19 @@ import java.util.function.Consumer;
 
 public class EnderiumBow extends BowItem {
     private final BowTier tier;
+    private final int ARROW_COUNT = EnderiumConfig.arrowCountEnderiumBow;
 
-    public EnderiumBow(BowTier tier, Settings properties) {
-        super(properties.maxDamage(tier.getUses()).enchantable(tier.getEnchantmentValue()));
+    private static Settings createSettings(Settings base, boolean unbreakable, int durability) {
+        base.maxDamage(durability).fireproof();
+        if (unbreakable) {
+            base.component(DataComponentTypes.UNBREAKABLE, Unit.INSTANCE);
+        }
+        return base;
+    }
+
+
+    public EnderiumBow(BowTier tier, Settings settings) {
+        super(createSettings(settings ,EnderiumConfig.unbreakableEnderium, EnderiumConfig.durabilityEnderium));
         this.tier = tier;
     }
 
@@ -37,8 +54,15 @@ public class EnderiumBow extends BowItem {
             ItemStack arrowStack = user.getProjectileType(stack);
 
             Registry<Enchantment> enchantmentRegistry = world.getRegistryManager().getOrThrow(RegistryKeys.ENCHANTMENT);
+
             RegistryEntry.Reference<Enchantment> enchantmentReference = enchantmentRegistry.getOrThrow(Enchantments.INFINITY);
             boolean hasInfinity = EnchantmentHelper.getLevel(enchantmentReference, player.getMainHandStack()) > 0;
+
+            RegistryEntry.Reference<Enchantment> enchantmentReferencePower = enchantmentRegistry.getOrThrow(Enchantments.POWER);
+            int powerLevel = EnchantmentHelper.getLevel(enchantmentReferencePower, player.getMainHandStack());
+
+            RegistryEntry.Reference<Enchantment> enchantmentReferencePunch = enchantmentRegistry.getOrThrow(Enchantments.PUNCH);
+            int punchLevel = EnchantmentHelper.getLevel(enchantmentReferencePunch, player.getMainHandStack());
 
             int charge = getMaxUseTime(stack, player) - remainingUseTicks;
             boolean hasArrows = arrowStack.isOf(Items.ARROW);
@@ -46,11 +70,25 @@ public class EnderiumBow extends BowItem {
             float arrowVelocity = getPullProgress(charge);
 
             if (arrowVelocity >= 0.1) {
-                int arrowCount = 4;
-                for (int i = 0; i < arrowCount; i++) {
+                for (int i = 0; i < ARROW_COUNT; i++) {
                     ArrowItem arrowItem = (ArrowItem) (arrowStack.getItem() instanceof ArrowItem ? arrowStack.getItem() : Items.ARROW);
                     PersistentProjectileEntity arrowEntity = arrowItem.createArrow(world, arrowStack, user, stack);
+                    int damage = stack.getOrDefault(DataComponentTypes.DAMAGE, 0);
+
                     arrowEntity.setVelocity(user, user.getPitch(), user.getYaw(), 0.0F, arrowVelocity * 3.0F, 1.0F);
+
+                    if (powerLevel > 0) {
+                        arrowEntity.setDamage(damage + (powerLevel * 0.5 + 1.0));
+                    }
+
+                    if (punchLevel > 0) {
+                        double resistance = Math.max(0.0, 1.0 - user.getAttributeValue(EntityAttributes.KNOCKBACK_RESISTANCE));
+                        Vec3d knockbackVec = arrowEntity.getVelocity()
+                                .normalize()
+                                .multiply(punchLevel * 0.6 * resistance);
+
+                        arrowEntity.setVelocity(knockbackVec.x, 0.1, knockbackVec.z);
+                    }
 
                     PersistentProjectileEntity.PickupPermission pickupPermission = hasInfinity ? PersistentProjectileEntity.PickupPermission.DISALLOWED : PersistentProjectileEntity.PickupPermission.ALLOWED;
 
@@ -76,22 +114,50 @@ public class EnderiumBow extends BowItem {
                         player.getInventory().removeOne(arrowStack);
                     }
                 }
+                stack.damage(1, player,
+                        LivingEntity.getSlotForHand(Hand.MAIN_HAND));
             }
         }
         return false;
     }
 
     @Override
-    public void appendTooltip(ItemStack stack, TooltipContext context, TooltipDisplayComponent displayComponent, Consumer<Text> textConsumer, TooltipType type) {
-        super.appendTooltip(stack, context, displayComponent, textConsumer, type);
-        if(Screen.hasShiftDown()) {
-            textConsumer.accept(Text.literal("+" + this.tier.getAttackDamageBonus() + " ")
-                    .append(Text.translatable("tooltip.immersiveores.damage.tooltip")).formatted(Formatting.DARK_AQUA));
-            textConsumer.accept(Text.translatable("tooltip.immersiveores.unbreakble.tooltip").formatted(Formatting.DARK_AQUA));
-            textConsumer.accept(Text.translatable("tooltip.immersiveores.immunetofire.tooltip").formatted(Formatting.DARK_AQUA));
-            textConsumer.accept(Text.translatable("tooltip.immersiveores.shoot4arrows.tooltip").formatted(Formatting.DARK_AQUA));
+    public void appendTooltip(ItemStack stack, TooltipContext context, TooltipDisplayComponent tooltip, Consumer<Text> textConsumer, TooltipType options) {
+        int arrowCount = getArrowCount(stack);
+        Formatting color = Formatting.DARK_AQUA;
+
+        if (Screen.hasShiftDown()) {
+            Text damage = Text.literal("+" + this.tier.getAttackDamageBonus() + " ")
+                    .append(Text.translatable("tooltip.immersiveores.damage.tooltip"))
+                    .formatted(color);
+            textConsumer.accept(damage);
+
+            if (EnderiumConfig.unbreakableEnderium) {
+                Text unbreakable = Text.translatable("tooltip.immersiveores.unbreakble.tooltip")
+                        .formatted(color);
+                textConsumer.accept(unbreakable);
+            }
+
+            Text fireImmune = Text.translatable("tooltip.immersiveores.immunetofire.tooltip")
+                    .formatted(color);
+            textConsumer.accept(fireImmune);
+
+            Text arrow = Text.literal("Can shoot ")
+                    .formatted(color)
+                    .append(Text.literal(String.valueOf(arrowCount)).formatted(Formatting.YELLOW))
+                    .append(Text.literal(" Flaming Arrows").formatted(color));
+            textConsumer.accept(arrow);
         } else {
-            textConsumer.accept(Text.translatable("tooltip.immersiveores.pressshiftformoreinfo.tooltip").formatted(Formatting.DARK_AQUA));
+            Text pressShift = Text.translatable("tooltip.immersiveores.pressshiftformoreinfo.tooltip")
+                    .formatted(color);
+            textConsumer.accept(pressShift);
         }
+    }
+
+    private int getArrowCount(ItemStack stack) {
+        if (ArrowCountMap.ENDERIUM_BOW_ARROW_COUNT.containsKey(stack.getItem())) {
+            return ArrowCountMap.ENDERIUM_BOW_ARROW_COUNT.get(stack.getItem());
+        }
+        return 0;
     }
 }
