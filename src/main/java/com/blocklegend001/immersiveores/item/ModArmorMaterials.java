@@ -28,25 +28,25 @@ public final class ModArmorMaterials {
 
     static {
         VIBRANIUM = register("vibranium", Util.make(new EnumMap<>(ArmorItem.Type.class), (attribute) -> {
-            attribute.put(ArmorItem.Type.BOOTS, VibraniumConfig.protectionValueVibraniumBoots);
-            attribute.put(ArmorItem.Type.LEGGINGS, VibraniumConfig.protectionValueVibraniumLeggings);
-            attribute.put(ArmorItem.Type.CHESTPLATE, VibraniumConfig.protectionValueVibraniumChestplate);
-            attribute.put(ArmorItem.Type.HELMET, VibraniumConfig.protectionValueVibraniumHelmet);
-        }), VibraniumConfig.enchantmentValueVibraniumArmor, VibraniumConfig.toughnessValueVibraniumArmor, VibraniumConfig.knockbackResistanceValueVibraniumArmor, ModItems.VIBRANIUM_INGOT.get());
+            attribute.put(ArmorItem.Type.BOOTS, VibraniumConfig.protectionValueVibraniumBoots.get());
+            attribute.put(ArmorItem.Type.LEGGINGS, VibraniumConfig.protectionValueVibraniumLeggings.get());
+            attribute.put(ArmorItem.Type.CHESTPLATE, VibraniumConfig.protectionValueVibraniumChestplate.get());
+            attribute.put(ArmorItem.Type.HELMET, VibraniumConfig.protectionValueVibraniumHelmet.get());
+        }), VibraniumConfig.enchantmentValueVibraniumArmor.get(), VibraniumConfig.toughnessValueVibraniumArmor.get(), VibraniumConfig.knockbackResistanceValueVibraniumArmor.get(), ModItems.VIBRANIUM_INGOT.get());
 
         VULPUS = register("vulpus", Util.make(new EnumMap<>(ArmorItem.Type.class), (attribute) -> {
-            attribute.put(ArmorItem.Type.BOOTS, VulpusConfig.protectionValueVulpusBoots);
-            attribute.put(ArmorItem.Type.LEGGINGS, VulpusConfig.protectionValueVulpusLeggings);
-            attribute.put(ArmorItem.Type.CHESTPLATE, VulpusConfig.protectionValueVulpusChestplate);
-            attribute.put(ArmorItem.Type.HELMET, VulpusConfig.protectionValueVulpusHelmet);
-        }), VulpusConfig.enchantmentValueVulpusArmor, VulpusConfig.toughnessValueVulpusArmor, VulpusConfig.knockbackResistanceValueVulpusArmor, ModItems.VULPUS_INGOT.get());
+            attribute.put(ArmorItem.Type.BOOTS, VulpusConfig.protectionValueVulpusBoots.get());
+            attribute.put(ArmorItem.Type.LEGGINGS, VulpusConfig.protectionValueVulpusLeggings.get());
+            attribute.put(ArmorItem.Type.CHESTPLATE, VulpusConfig.protectionValueVulpusChestplate.get());
+            attribute.put(ArmorItem.Type.HELMET, VulpusConfig.protectionValueVulpusHelmet.get());
+        }), VulpusConfig.enchantmentValueVulpusArmor.get(), VulpusConfig.toughnessValueVulpusArmor.get(), VulpusConfig.knockbackResistanceValueVulpusArmor.get(), ModItems.VULPUS_INGOT.get());
 
         ENDERIUM = register("enderium", Util.make(new EnumMap<>(ArmorItem.Type.class), (attribute) -> {
-            attribute.put(ArmorItem.Type.BOOTS, EnderiumConfig.protectionValueEnderiumBoots);
-            attribute.put(ArmorItem.Type.LEGGINGS, EnderiumConfig.protectionValueEnderiumLeggings);
-            attribute.put(ArmorItem.Type.CHESTPLATE, EnderiumConfig.protectionValueEnderiumChestplate);
-            attribute.put(ArmorItem.Type.HELMET, EnderiumConfig.protectionValueEnderiumHelmet);
-        }), EnderiumConfig.enchantmentValueEnderiumArmor, EnderiumConfig.toughnessValueEnderiumArmor, EnderiumConfig.knockbackResistanceValueEnderiumArmor, ModItems.ENDERIUM_INGOT.get());
+            attribute.put(ArmorItem.Type.BOOTS, EnderiumConfig.protectionValueEnderiumBoots.get());
+            attribute.put(ArmorItem.Type.LEGGINGS, EnderiumConfig.protectionValueEnderiumLeggings.get());
+            attribute.put(ArmorItem.Type.CHESTPLATE, EnderiumConfig.protectionValueEnderiumChestplate.get());
+            attribute.put(ArmorItem.Type.HELMET, EnderiumConfig.protectionValueEnderiumHelmet.get());
+        }), EnderiumConfig.enchantmentValueEnderiumArmor.get(), EnderiumConfig.toughnessValueEnderiumArmor.get(), EnderiumConfig.knockbackResistanceValueEnderiumArmor.get(), ModItems.ENDERIUM_INGOT.get());
     }
 
     private static Holder<ArmorMaterial> register(String name, EnumMap<ArmorItem.Type, Integer> typeProtections, int enchantability, float toughness, float knockbackResistance, Item repairItem) {

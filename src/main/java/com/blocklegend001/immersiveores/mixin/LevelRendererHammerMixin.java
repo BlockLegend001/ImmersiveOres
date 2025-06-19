@@ -1,7 +1,7 @@
 package com.blocklegend001.immersiveores.mixin;
 
-import com.blocklegend001.immersiveores.item.ModItems;
 import com.blocklegend001.immersiveores.item.custom.base.Hammer;
+import com.blocklegend001.immersiveores.util.map.RadiusMap;
 import com.blocklegend001.immersiveores.util.tools.OverlayRender;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import net.minecraft.client.Camera;
@@ -11,7 +11,6 @@ import net.minecraft.client.renderer.*;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.tags.BlockTags;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.BlockHitResult;
@@ -23,22 +22,8 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
-import java.util.Map;
-
 @Mixin(LevelRenderer.class)
 public class LevelRendererHammerMixin {
-    private static Map<Item, Integer> getHammerRanges = null;
-
-    private static Map<Item, Integer> getHammerRanges() {
-        if (getHammerRanges == null) {
-            getHammerRanges = Map.of(
-                    ModItems.VIBRANIUM_HAMMER.get(), 1,
-                    ModItems.VULPUS_HAMMER.get(), 2,
-                    ModItems.ENDERIUM_HAMMER.get(), 3
-            );
-        }
-        return getHammerRanges;
-    }
 
     @Inject(method = "renderLevel", at = @At("TAIL"))
     private void renderLevelAfter(DeltaTracker p_342180_, boolean p_109603_, Camera p_109604_, GameRenderer p_109605_, LightTexture p_109606_, Matrix4f p_254120_, Matrix4f p_330527_, CallbackInfo ci) {
@@ -62,7 +47,7 @@ public class LevelRendererHammerMixin {
         if (Minecraft.getInstance().player.isShiftKeyDown()) {
             range = 0;
         } else {
-            range = getHammerRanges().get(heldItem.getItem());
+            range = RadiusMap.getHammerRadius().get(heldItem.getItem());
         }
 
         if (!Minecraft.getInstance().level.getBlockState(origin).is(BlockTags.MINEABLE_WITH_PICKAXE)) {

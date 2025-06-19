@@ -13,9 +13,9 @@ import java.util.function.Supplier;
 
 public enum ModToolTiers implements Tier {
 
-    VIBRANIUM(ModTags.Blocks.INCORRECT_FOR_VIBRANIUM_TOOL, 0, VibraniumConfig.speedVibraniumTier ,VibraniumConfig.attackDamageBonusVibraniumTier, VibraniumConfig.enchantmentValueVibraniumTier, () -> Ingredient.of(ModItems.VIBRANIUM_INGOT.get())),
-    VULPUS(ModTags.Blocks.INCORRECT_FOR_VULPUS_TOOL, 0, VulpusConfig.speedVulpusTier ,VulpusConfig.attackDamageBonusVulpusTier, VulpusConfig.enchantmentValueVulpusTier, () -> Ingredient.of(ModItems.VULPUS_INGOT.get())),
-    ENDERIUM(ModTags.Blocks.INCORRECT_FOR_ENDERIUM_TOOL, 0, EnderiumConfig.speedEnderiumTier ,EnderiumConfig.attackDamageBonusEnderiumTier, EnderiumConfig.enchantmentValueEnderiumTier, () -> Ingredient.of(ModItems.ENDERIUM_INGOT.get()));
+    VIBRANIUM(ModTags.Blocks.INCORRECT_FOR_VIBRANIUM_TOOL, VibraniumConfig.durabilityVibranium.get(), VibraniumConfig.speedVibraniumTier.get() ,VibraniumConfig.attackDamageBonusVibraniumTier.get(), VibraniumConfig.enchantmentValueVibraniumTier.get(), () -> Ingredient.of(ModItems.VIBRANIUM_INGOT.get())),
+    VULPUS(ModTags.Blocks.INCORRECT_FOR_VULPUS_TOOL, VulpusConfig.durabilityVulpus.get(), VulpusConfig.speedVulpusTier.get() ,VulpusConfig.attackDamageBonusVulpusTier.get(), VulpusConfig.enchantmentValueVulpusTier.get(), () -> Ingredient.of(ModItems.VULPUS_INGOT.get())),
+    ENDERIUM(ModTags.Blocks.INCORRECT_FOR_ENDERIUM_TOOL, EnderiumConfig.durabilityEnderium.get(), EnderiumConfig.speedEnderiumTier.get() ,EnderiumConfig.attackDamageBonusEnderiumTier.get(), EnderiumConfig.enchantmentValueEnderiumTier.get(), () -> Ingredient.of(ModItems.ENDERIUM_INGOT.get()));
 
     private final TagKey<Block> incorrect;
     private final int uses;
