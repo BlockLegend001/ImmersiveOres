@@ -1,25 +1,38 @@
 package com.blocklegend001.immersiveores.item.custom.enderium;
 
+import com.blocklegend001.immersiveores.config.EnderiumConfig;
 import com.blocklegend001.immersiveores.item.custom.base.Excavator;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.gui.screens.Screen;
+import net.minecraft.core.component.DataComponents;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.ToolMaterial;
 import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.item.component.Unbreakable;
 
 import java.util.List;
 
 public class EnderiumExcavator extends Excavator {
+    private static Properties createSettings(Properties properties, boolean unbreakable, int durability) {
+        properties.durability(durability);
+
+        if (unbreakable) {
+            properties.component(DataComponents.UNBREAKABLE, new Unbreakable(true));
+        }
+        return properties;
+    }
 
     public EnderiumExcavator(ToolMaterial pTier, int pAttackDamageModifier, float pAttackSpeedModifier, Properties pProperties) {
-        super(pTier, pAttackDamageModifier, pAttackSpeedModifier, pProperties);
+        super(pTier, pAttackDamageModifier, pAttackSpeedModifier, createSettings(pProperties, EnderiumConfig.unbreakableEnderium.get(), EnderiumConfig.durabilityEnderium.get()));
     }
 
     @Override
     public void appendHoverText(ItemStack pStack, TooltipContext pContext, List<Component> components, TooltipFlag pTooltipFlag) {
         if(Screen.hasShiftDown()) {
-            components.add(Component.translatable("tooltip.immersiveores.unbreakble.tooltip").withStyle(ChatFormatting.DARK_AQUA));
+            if (EnderiumConfig.unbreakableEnderium.get()) {
+                components.add(Component.translatable("tooltip.immersiveores.unbreakble.tooltip").withStyle(ChatFormatting.DARK_AQUA));
+            }
             components.add(Component.translatable("tooltip.immersiveores.immunetofire.tooltip").withStyle(ChatFormatting.DARK_AQUA));
             components.add(Component.translatable("tooltip.immersiveores.7x7.tooltip").withStyle(ChatFormatting.DARK_AQUA));
         } else {

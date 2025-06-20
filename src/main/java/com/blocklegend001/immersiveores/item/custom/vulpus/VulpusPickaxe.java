@@ -1,25 +1,38 @@
 package com.blocklegend001.immersiveores.item.custom.vulpus;
 
+import com.blocklegend001.immersiveores.config.VulpusConfig;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.gui.screens.Screen;
+import net.minecraft.core.component.DataComponents;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.PickaxeItem;
 import net.minecraft.world.item.ToolMaterial;
 import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.item.component.Unbreakable;
 
 import java.util.List;
 
 public class VulpusPickaxe extends PickaxeItem {
+    private static Properties createSettings(Properties properties, boolean unbreakable, int durability) {
+        properties.durability(durability);
 
-    public VulpusPickaxe(ToolMaterial p_363941_, float p_367504_, float p_368380_, Properties p_42964_) {
-        super(p_363941_, p_367504_, p_368380_, p_42964_);
+        if (unbreakable) {
+            properties.component(DataComponents.UNBREAKABLE, new Unbreakable(true));
+        }
+        return properties;
+    }
+
+    public VulpusPickaxe(ToolMaterial p_42961_, int p_42962_, float p_42963_, Properties p_42964_) {
+        super(p_42961_, p_42962_, p_42963_, createSettings(p_42964_, VulpusConfig.unbreakableVulpus.get(), VulpusConfig.durabilityVulpus.get()));
     }
 
     @Override
     public void appendHoverText(ItemStack pStack, TooltipContext pContext, List<Component> components, TooltipFlag pTooltipFlag) {
         if(Screen.hasShiftDown()) {
-            components.add(Component.translatable("tooltip.immersiveores.unbreakble.tooltip").withStyle(ChatFormatting.RED));
+            if (VulpusConfig.unbreakableVulpus.get()) {
+                components.add(Component.translatable("tooltip.immersiveores.unbreakble.tooltip").withStyle(ChatFormatting.RED));
+            }
             components.add(Component.translatable("tooltip.immersiveores.immunetofire.tooltip").withStyle(ChatFormatting.RED));
         } else {
             components.add(Component.translatable("tooltip.immersiveores.pressshiftformoreinfo.tooltip").withStyle(ChatFormatting.RED));
