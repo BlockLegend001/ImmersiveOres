@@ -2,6 +2,7 @@ package com.blocklegend001.immersiveores.util.tools.excavator;
 
 import com.blocklegend001.immersiveores.ImmersiveOres;
 import com.blocklegend001.immersiveores.item.custom.vulpus.VulpusExcavator;
+import com.blocklegend001.immersiveores.util.map.RadiusMap;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.player.Player;
@@ -32,7 +33,7 @@ public class ModEventsVulpusExcavator {
         HARVESTED_BLOCKS.add(event.getPos());
 
         try {
-            int radius = isSneaking ? 0 : 2;
+            int radius = isSneaking ? 0 : RadiusMap.getVulpusExcavatorRadius().get(mainHandItem.getItem());
             for (BlockPos targetPos : VulpusExcavator.getBlocksToBeDestroyed(radius, event.getPos(), serverPlayer)) {
                 if (targetPos.equals(event.getPos())) continue;
 
