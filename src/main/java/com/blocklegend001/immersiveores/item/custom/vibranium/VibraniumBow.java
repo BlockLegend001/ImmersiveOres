@@ -141,7 +141,7 @@ public class VibraniumBow extends BowItem {
             Component arrow = Component.literal("Can shoot ")
                     .withStyle(color)
                     .append(Component.literal(String.valueOf(arrowCount)).withStyle(ChatFormatting.YELLOW))
-                    .append(Component.literal(" Flaming Arrows").withStyle(color));
+                    .append(Component.literal(" Arrows").withStyle(color));
             components.add(arrow);
         } else {
             Component pressShift = Component.translatable("tooltip.immersiveores.pressshiftformoreinfo.tooltip")
