@@ -1,25 +1,39 @@
 package com.blocklegend001.immersiveores.item.custom.vibranium;
 
+import com.blocklegend001.immersiveores.config.EnderiumConfig;
+import com.blocklegend001.immersiveores.config.VibraniumConfig;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.gui.screens.Screen;
+import net.minecraft.core.component.DataComponents;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.AxeItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.ToolMaterial;
 import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.item.component.Unbreakable;
 
 import java.util.List;
 
 public class VibraniumAxe extends AxeItem {
+    private static Properties createSettings(Properties properties, boolean unbreakable, int durability) {
+        properties.durability(durability);
 
-    public VibraniumAxe(ToolMaterial p_365403_, float p_363626_, float p_361899_, Properties p_40524_) {
-        super(p_365403_, p_363626_, p_361899_, p_40524_);
+        if (unbreakable) {
+            properties.component(DataComponents.UNBREAKABLE, new Unbreakable(true));
+        }
+        return properties;
+    }
+
+    public VibraniumAxe(ToolMaterial p_42961_, int p_42962_, float p_42963_, Properties p_42964_) {
+        super(p_42961_, p_42962_, p_42963_, createSettings(p_42964_, VibraniumConfig.unbreakableVibranium.get(), VibraniumConfig.durabilityVibranium.get()));
     }
 
     @Override
     public void appendHoverText(ItemStack pStack, TooltipContext pContext, List<Component> components, TooltipFlag pTooltipFlag) {
         if(Screen.hasShiftDown()) {
-            components.add(Component.translatable("tooltip.immersiveores.unbreakble.tooltip").withStyle(ChatFormatting.LIGHT_PURPLE));
+            if (VibraniumConfig.unbreakableVibranium.get()) {
+                components.add(Component.translatable("tooltip.immersiveores.unbreakble.tooltip").withStyle(ChatFormatting.LIGHT_PURPLE));
+            }
             components.add(Component.translatable("tooltip.immersiveores.immunetofire.tooltip").withStyle(ChatFormatting.LIGHT_PURPLE));
         } else {
             components.add(Component.translatable("tooltip.immersiveores.pressshiftformoreinfo.tooltip").withStyle(ChatFormatting.LIGHT_PURPLE));
