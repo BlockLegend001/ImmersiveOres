@@ -87,7 +87,7 @@ public class VibraniumArmor extends ArmorItem {
     public void appendHoverText(ItemStack pStack, TooltipContext pContext, List<Component> components, TooltipFlag pTooltipFlag) {
         if(Screen.hasShiftDown()) {
             if (ModItems.VIBRANIUM_BOOTS.get() == pStack.getItem()) {
-                if (EnderiumConfig.unbreakableEnderium.get()) {
+                if (VibraniumConfig.unbreakableVibranium.get()) {
                     components.add(Component.translatable("tooltip.immersiveores.unbreakble.tooltip").withStyle(ChatFormatting.LIGHT_PURPLE));
                 }
                 components.add(Component.translatable("tooltip.immersiveores.immunetofire.tooltip").withStyle(ChatFormatting.LIGHT_PURPLE));
