@@ -7,6 +7,7 @@ import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.TagKey;
+import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
@@ -46,12 +47,12 @@ public class Paxel extends Item {
     }
 
     @Override
-    public boolean mineBlock(ItemStack stack, Level world, BlockState state, BlockPos pos, LivingEntity user) {
-        if (!world.isClientSide()) {
-            world.setBlock(pos, state, 11);
-            return true;
+    public boolean mineBlock(ItemStack stack, Level level, BlockState state, BlockPos pos, LivingEntity entity) {
+        if (state.getDestroySpeed(level, pos) != 0.0F) {
+            entity.getMainHandItem().hurtAndBreak(1, entity,
+                    LivingEntity.getSlotForHand(InteractionHand.MAIN_HAND));
         }
-        return false;
+        return super.mineBlock(stack, level, state, pos, entity);
     }
 
     @Override

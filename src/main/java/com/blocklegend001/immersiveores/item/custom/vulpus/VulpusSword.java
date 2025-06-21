@@ -1,10 +1,13 @@
 package com.blocklegend001.immersiveores.item.custom.vulpus;
 
+import com.blocklegend001.immersiveores.config.EnderiumConfig;
+import com.blocklegend001.immersiveores.config.VulpusConfig;
 import com.blocklegend001.immersiveores.item.ModToolTiers;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.core.Holder;
 import net.minecraft.core.Registry;
+import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
@@ -12,6 +15,8 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.util.Unit;
+import net.minecraft.world.InteractionHand;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
@@ -28,13 +33,34 @@ import java.util.List;
 import java.util.function.Consumer;
 
 public class VulpusSword extends Item {
+    private static Properties createSettings(Properties properties, boolean unbreakable, int durability) {
+        properties.durability(durability);
+
+        if (unbreakable) {
+            properties.component(DataComponents.UNBREAKABLE, Unit.INSTANCE);
+        }
+        return properties;
+    }
+
     public VulpusSword(ModToolTiers material, float attackDamage, float attackSpeed, Item.Properties settings) {
-        super(material.applySwordProperties(settings, attackDamage, attackSpeed));
+        super(
+                material.applySwordProperties(
+                        createSettings(settings, VulpusConfig.unbreakableVulpus.get(), VulpusConfig.durabilityVulpus.get()),
+                        attackDamage,
+                        attackSpeed
+                )
+        );
     }
 
     @Override
     public void hurtEnemy(ItemStack stack, LivingEntity target, LivingEntity attacker) {
         target.setRemainingFireTicks(15);
+
+        if (!VulpusConfig.unbreakableVulpus.get()) {
+            attacker.getMainHandItem().hurtAndBreak(1, attacker,
+                    LivingEntity.getSlotForHand(InteractionHand.MAIN_HAND));
+        }
+
         if (!(attacker instanceof Player player)) return;
 
         Level world = player.level();

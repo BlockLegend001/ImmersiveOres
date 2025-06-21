@@ -1,15 +1,18 @@
 package com.blocklegend001.immersiveores.item.custom.enderium;
 
+import com.blocklegend001.immersiveores.config.EnderiumConfig;
 import com.blocklegend001.immersiveores.item.ModToolTiers;
 import com.blocklegend001.immersiveores.item.custom.base.Paxel;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.core.component.DataComponents;
 import net.minecraft.network.chat.Component;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.util.Unit;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.*;
@@ -30,9 +33,24 @@ import java.util.function.Consumer;
 
 public class EnderiumShovel extends Item {
     private static final Map<Block, BlockState> FLATTENABLES = Shovel.getFlattenables();
+    private static Properties createSettings(Properties properties, boolean unbreakable, int durability) {
+        properties.durability(durability);
+
+        if (unbreakable) {
+            properties.component(DataComponents.UNBREAKABLE, Unit.INSTANCE);
+        }
+        return properties;
+    }
 
     public EnderiumShovel(ModToolTiers material, float attackDamage, float attackSpeed, Item.Properties settings) {
-        super(material.applyToolProperties(settings, BlockTags.MINEABLE_WITH_SHOVEL, attackDamage, attackSpeed));
+        super(
+                material.applyToolProperties(
+                        createSettings(settings, EnderiumConfig.unbreakableEnderium.get(), EnderiumConfig.durabilityEnderium.get()),
+                        BlockTags.MINEABLE_WITH_SHOVEL,
+                        attackDamage,
+                        attackSpeed
+                )
+        );
     }
 
     @Override
@@ -79,7 +97,9 @@ public class EnderiumShovel extends Item {
     public void appendHoverText(ItemStack pStack, Item.TooltipContext p_333372_, TooltipDisplay p_396484_, Consumer<Component> consumer, TooltipFlag p_41424_) {
         super.appendHoverText(pStack, p_333372_, p_396484_, consumer, p_41424_);
         if(Screen.hasShiftDown()) {
-            consumer.accept(Component.translatable("tooltip.immersiveores.unbreakble.tooltip").withStyle(ChatFormatting.DARK_AQUA));
+            if (EnderiumConfig.unbreakableEnderium.get()) {
+                consumer.accept(Component.translatable("tooltip.immersiveores.unbreakble.tooltip").withStyle(ChatFormatting.DARK_AQUA));
+            }
             consumer.accept(Component.translatable("tooltip.immersiveores.immunetofire.tooltip").withStyle(ChatFormatting.DARK_AQUA));
         } else {
             consumer.accept(Component.translatable("tooltip.immersiveores.pressshiftformoreinfo.tooltip").withStyle(ChatFormatting.DARK_AQUA));

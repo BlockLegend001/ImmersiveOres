@@ -35,26 +35,26 @@ public record ModToolTiers(TagKey<Block> incorrectBlocksForDrops, int durability
 
     public static final ModToolTiers VIBRANIUM = new ModToolTiers(
             BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
-            0,
-            VibraniumConfig.speedVibraniumTier,
-            VibraniumConfig.attackDamageBonusVibraniumTier,
-            VibraniumConfig.enchantmentValueVibraniumTier
+            VibraniumConfig.durabilityVibranium.get(),
+            VibraniumConfig.speedVibraniumTier.get(),
+            VibraniumConfig.attackDamageBonusVibraniumTier.get(),
+            VibraniumConfig.enchantmentValueVibraniumTier.get()
     );
 
     public static final ModToolTiers VULPUS = new ModToolTiers(
             BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
-            0,
-            VulpusConfig.speedVulpusTier,
-            VulpusConfig.attackDamageBonusVulpusTier,
-            VulpusConfig.enchantmentValueVulpusTier
+            VulpusConfig.durabilityVulpus.get(),
+            VulpusConfig.speedVulpusTier.get(),
+            VulpusConfig.attackDamageBonusVulpusTier.get(),
+            VulpusConfig.enchantmentValueVulpusTier.get()
     );
 
     public static final ModToolTiers ENDERIUM = new ModToolTiers(
             BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
-            0,
-            EnderiumConfig.speedEnderiumTier,
-            EnderiumConfig.attackDamageBonusEnderiumTier,
-            EnderiumConfig.enchantmentValueEnderiumTier
+            EnderiumConfig.durabilityEnderium.get(),
+            EnderiumConfig.speedEnderiumTier.get(),
+            EnderiumConfig.attackDamageBonusEnderiumTier.get(),
+            EnderiumConfig.enchantmentValueEnderiumTier.get()
     );
 
     private Item.Properties applyCommonProperties(Item.Properties props) {

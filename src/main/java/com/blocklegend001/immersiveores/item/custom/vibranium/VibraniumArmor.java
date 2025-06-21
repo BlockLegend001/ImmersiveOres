@@ -6,6 +6,7 @@ import net.minecraft.ChatFormatting;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.network.chat.Component;
+import net.minecraft.util.Unit;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.Entity;
@@ -29,14 +30,19 @@ import java.util.function.Consumer;
 public class VibraniumArmor extends Item {
 
     public VibraniumArmor(ArmorMaterial material, ArmorType type, Properties settings) {
-        super(computeSettings(material, type, settings));
+        super(computeSettings(material, type, VibraniumConfig.unbreakableVibranium.get(), VibraniumConfig.durabilityVibranium.get(), settings));
     }
 
-    private static Properties computeSettings(ArmorMaterial material, ArmorType type, Properties settings) {
+    private static Properties computeSettings(ArmorMaterial material, ArmorType type, boolean unbreakable, int durability, Properties settings) {
         settings.humanoidArmor(material, ArmorType.BODY)
                 .attributes(material.createAttributes(type))
                 .enchantable(material.enchantmentValue())
-                .component(DataComponents.EQUIPPABLE, Equippable.builder(type.getSlot()).setEquipSound(material.equipSound()).setAsset(material.assetId()).build());
+                .component(DataComponents.EQUIPPABLE, Equippable.builder(type.getSlot()).setEquipSound(material.equipSound()).setAsset(material.assetId()).build())
+                .durability(durability);
+
+        if (unbreakable) {
+            settings.component(DataComponents.UNBREAKABLE, Unit.INSTANCE);
+        }
         return settings;
     }
 
@@ -46,15 +52,15 @@ public class VibraniumArmor extends Item {
         if (!level.isClientSide()) {
             if (entity instanceof Player player) {
                 if (player.getItemBySlot(EquipmentSlot.FEET).getItem() == ModItems.VIBRANIUM_BOOTS.get()) {
-                    if (VibraniumConfig.speedIVibraniumArmor) {
+                    if (VibraniumConfig.speedIVibraniumArmor.get()) {
                         player.addEffect(new MobEffectInstance(MobEffects.SPEED, 400, 0, false, false));
                     }
-                    if (VibraniumConfig.jumpIVibraniumArmor) {
+                    if (VibraniumConfig.jumpIVibraniumArmor.get()) {
                         player.addEffect(new MobEffectInstance(MobEffects.JUMP_BOOST, 400, 0, false, false));
                     }
                 }
                 if (player.getItemBySlot(EquipmentSlot.HEAD).getItem() == ModItems.VIBRANIUM_HELMET.get()) {
-                    if (VibraniumConfig.nightVisionVibraniumArmor) {
+                    if (VibraniumConfig.nightVisionVibraniumArmor.get()) {
                         player.addEffect(new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 0, false, false));
                     }
                 }
@@ -97,13 +103,15 @@ public class VibraniumArmor extends Item {
         super.appendHoverText(pStack, p_333372_, p_396484_, consumer, p_41424_);
         if(Screen.hasShiftDown()) {
             if (ModItems.VIBRANIUM_BOOTS.get() == pStack.getItem()) {
-                consumer.accept(Component.translatable("tooltip.immersiveores.unbreakble.tooltip").withStyle(ChatFormatting.LIGHT_PURPLE));
+                if (VibraniumConfig.unbreakableVibranium.get()) {
+                    consumer.accept(Component.translatable("tooltip.immersiveores.unbreakble.tooltip").withStyle(ChatFormatting.LIGHT_PURPLE));
+                }
                 consumer.accept(Component.translatable("tooltip.immersiveores.immunetofire.tooltip").withStyle(ChatFormatting.LIGHT_PURPLE));
-                if (VibraniumConfig.speedIVibraniumArmor) {
+                if (VibraniumConfig.speedIVibraniumArmor.get()) {
                     consumer.accept(Component.translatable("tooltip.immersiveores.speed1.tooltip").withStyle(ChatFormatting.LIGHT_PURPLE));
-                } if (VibraniumConfig.jumpIVibraniumArmor) {
+                } if (VibraniumConfig.jumpIVibraniumArmor.get()) {
                     consumer.accept(Component.translatable("tooltip.immersiveores.jump1.tooltip").withStyle(ChatFormatting.LIGHT_PURPLE));
-                } if (VibraniumConfig.canWalkOnPowderedSnowVibranium) {
+                } if (VibraniumConfig.canWalkOnPowderedSnowVibranium.get()) {
                     consumer.accept(Component.translatable("tooltip.immersiveores.canwalkonpowderedsnow.tooltip").withStyle(ChatFormatting.LIGHT_PURPLE));
                 }
             }
@@ -114,7 +122,7 @@ public class VibraniumArmor extends Item {
             if (ModItems.VIBRANIUM_HELMET.get() == pStack.getItem()) {
                 consumer.accept(Component.translatable("tooltip.immersiveores.unbreakble.tooltip").withStyle(ChatFormatting.LIGHT_PURPLE));
                 consumer.accept(Component.translatable("tooltip.immersiveores.immunetofire.tooltip").withStyle(ChatFormatting.LIGHT_PURPLE));
-                if (VibraniumConfig.nightVisionVibraniumArmor) {
+                if (VibraniumConfig.nightVisionVibraniumArmor.get()) {
                     consumer.accept(Component.translatable("tooltip.immersiveores.nightvision.tooltip").withStyle(ChatFormatting.LIGHT_PURPLE));
                 }
             }
@@ -129,6 +137,6 @@ public class VibraniumArmor extends Item {
 
     @Override
     public boolean canWalkOnPowderedSnow(ItemStack stack, LivingEntity wearer) {
-        return VibraniumConfig.canWalkOnPowderedSnowVibranium;
+        return VibraniumConfig.canWalkOnPowderedSnowVibranium.get();
     }
 }

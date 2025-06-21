@@ -1,15 +1,18 @@
 package com.blocklegend001.immersiveores.item.custom.vulpus;
 
+import com.blocklegend001.immersiveores.config.VulpusConfig;
 import com.blocklegend001.immersiveores.item.ModToolTiers;
 import com.blocklegend001.immersiveores.item.custom.enderium.EnderiumShovel;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.core.component.DataComponents;
 import net.minecraft.network.chat.Component;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.util.Unit;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.*;
@@ -25,9 +28,24 @@ import java.util.function.Consumer;
 
 public class VulpusShovel extends Item {
     private static final Map<Block, BlockState> FLATTENABLES = Shovel.getFlattenables();
+    private static Properties createSettings(Properties properties, boolean unbreakable, int durability) {
+        properties.durability(durability);
+
+        if (unbreakable) {
+            properties.component(DataComponents.UNBREAKABLE, Unit.INSTANCE);
+        }
+        return properties;
+    }
 
     public VulpusShovel(ModToolTiers material, float attackDamage, float attackSpeed, Item.Properties settings) {
-        super(material.applyToolProperties(settings, BlockTags.MINEABLE_WITH_SHOVEL, attackDamage, attackSpeed));
+        super(
+                material.applyToolProperties(
+                        createSettings(settings, VulpusConfig.unbreakableVulpus.get(), VulpusConfig.durabilityVulpus.get()),
+                        BlockTags.MINEABLE_WITH_SHOVEL,
+                        attackDamage,
+                        attackSpeed
+                )
+        );
     }
 
     @Override
