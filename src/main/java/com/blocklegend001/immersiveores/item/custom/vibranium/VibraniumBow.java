@@ -12,6 +12,7 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
+import net.minecraft.world.InteractionHand;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.player.Player;
@@ -112,6 +113,8 @@ public class VibraniumBow extends BowItem {
                         player.getInventory().removeItem(arrowStack);
                     }
                 }
+                player.getMainHandItem().hurtAndBreak(1, player,
+                        LivingEntity.getSlotForHand(InteractionHand.MAIN_HAND));
             }
         }
         return false;
