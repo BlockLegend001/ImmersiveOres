@@ -194,8 +194,8 @@ public class EnderiumConfig {
                 .comment("Enchantment value for Enderium Tool Tier | Default Value = 85")
                 .defineInRange("enchantmentValueEnderiumTier", 85, 0, Integer.MAX_VALUE);
         durabilityEnderium = BUILDER
-                .comment("Durability of Enderium tools | Default Value = 4096")
-                .defineInRange("durabilityEnderium", 4096, 0, Integer.MAX_VALUE);
+                .comment("Durability of Enderium tools | Default Value = 9139")
+                .defineInRange("durabilityEnderium", 9139, 0, Integer.MAX_VALUE);
         unbreakableEnderium = BUILDER
                 .comment("Whether Enderium is unbreakable | Default Value = false")
                 .define("unbreakableEnderium", false);
