@@ -98,7 +98,7 @@ public class VulpusConfig {
         configs.addKeyValuePair(new Pair<>("speedVulpusTier", 75), "Mining speed of Vulpus tier | Default Value = 75");
         configs.addKeyValuePair(new Pair<>("enchantmentValueVulpusTier", 85), "Enchantment value of Vulpus tier | Default Value = 85");
         configs.addKeyValuePair(new Pair<>("attackDamageBonusVulpusTier", 20), "Attack damage bonus of Vulpus tier | Default Value = 20");
-        configs.addKeyValuePair(new Pair<>("durabilityVulpus", 4324), "Durability of Vulpus tools | Default Value = 4324");
+        configs.addKeyValuePair(new Pair<>("durabilityVulpus", 6093), "Durability of Vulpus tools | Default Value = 6093");
         configs.addKeyValuePair(new Pair<>("unbreakableVulpus", false), "Whether Vulpus tools are unbreakable | Default Value = true");
 
 
@@ -170,7 +170,7 @@ public class VulpusConfig {
         speedVulpusTier = VULPUS_CONFIG.getOrDefault("speedVulpusTier", 75);
         attackDamageBonusVulpusTier = VULPUS_CONFIG.getOrDefault("attackDamageBonusVulpusTier", 20);
         enchantmentValueVulpusTier = VULPUS_CONFIG.getOrDefault("enchantmentValueVulpusTier", 85);
-        durabilityVulpus = VULPUS_CONFIG.getOrDefault("durabilityVulpus", 4324);
+        durabilityVulpus = VULPUS_CONFIG.getOrDefault("durabilityVulpus", 6093);
         unbreakableVulpus = VULPUS_CONFIG.getOrDefault("unbreakableVulpus", false);
 
         enchantmentValueVulpusBow = VULPUS_CONFIG.getOrDefault("enchantmentValueVulpusBow", 5);
