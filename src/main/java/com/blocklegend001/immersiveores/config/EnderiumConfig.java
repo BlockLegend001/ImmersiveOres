@@ -98,7 +98,7 @@ public class EnderiumConfig {
         configs.addKeyValuePair(new Pair<>("speedEnderiumTier", 130), "Speed value of Enderium tier | Default Value = 130");
         configs.addKeyValuePair(new Pair<>("enchantmentValueEnderiumTier", 85), "Enchantment value of Enderium tier | Default Value = 85");
         configs.addKeyValuePair(new Pair<>("attackDamageBonusEnderiumTier", 40), "Attack damage bonus of Enderium tier | Default Value = 40");
-        configs.addKeyValuePair(new Pair<>("durabilityEnderium", 4324), "Durability of Enderium tools | Default Value = 4324");
+        configs.addKeyValuePair(new Pair<>("durabilityEnderium", 9139), "Durability of Enderium tools | Default Value = 9139");
         configs.addKeyValuePair(new Pair<>("unbreakableEnderium", false), "Whether Enderium tools are unbreakable | Default Value = true");
 
         configs.addComment("Enderium Pickaxe Stats");
@@ -161,7 +161,7 @@ public class EnderiumConfig {
         speedEnderiumTier = ENDERIUM_CONFIG.getOrDefault("speedEnderiumTier", 130);
         enchantmentValueEnderiumTier = ENDERIUM_CONFIG.getOrDefault("enchantmentValueEnderiumTier", 85);
         attackDamageBonusEnderiumTier = ENDERIUM_CONFIG.getOrDefault("attackDamageBonusEnderiumTier", 40);
-        durabilityEnderium = ENDERIUM_CONFIG.getOrDefault("durabilityEnderium", 4324);
+        durabilityEnderium = ENDERIUM_CONFIG.getOrDefault("durabilityEnderium", 9139);
         unbreakableEnderium = ENDERIUM_CONFIG.getOrDefault("unbreakableEnderium", false);
         attackDamageEnderiumPickaxe = ENDERIUM_CONFIG.getOrDefault("attackDamageEnderiumPickaxe", 18);
         attackSpeedEnderiumPickaxe = ENDERIUM_CONFIG.getOrDefault("attackSpeedEnderiumPickaxe", 2.0);
