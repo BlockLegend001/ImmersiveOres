@@ -161,7 +161,7 @@ public class EnderiumConfig {
         speedEnderiumTier = ENDERIUM_CONFIG.getOrDefault("speedEnderiumTier", 130);
         enchantmentValueEnderiumTier = ENDERIUM_CONFIG.getOrDefault("enchantmentValueEnderiumTier", 85);
         attackDamageBonusEnderiumTier = ENDERIUM_CONFIG.getOrDefault("attackDamageBonusEnderiumTier", 40);
-        durabilityEnderium = ENDERIUM_CONFIG.getOrDefault("durabilityEnderium", 4324);
+        durabilityEnderium = ENDERIUM_CONFIG.getOrDefault("durabilityEnderium", 9139);
         unbreakableEnderium = ENDERIUM_CONFIG.getOrDefault("unbreakableEnderium", false);
         attackDamageEnderiumPickaxe = ENDERIUM_CONFIG.getOrDefault("attackDamageEnderiumPickaxe", 18);
         attackSpeedEnderiumPickaxe = ENDERIUM_CONFIG.getOrDefault("attackSpeedEnderiumPickaxe", 2.0);
