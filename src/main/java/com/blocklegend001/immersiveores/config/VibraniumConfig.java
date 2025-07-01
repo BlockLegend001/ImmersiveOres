@@ -140,8 +140,8 @@ public class VibraniumConfig {
                 .comment("Enchantment value for Vibranium Tool Tier | Default Value = 85")
                 .defineInRange("enchantmentValueVibraniumTier", 85, 0, Integer.MAX_VALUE);
         durabilityVibranium = BUILDER
-                .comment("Durability of Vibranium tools | Default Value = 4096")
-                .defineInRange("durabilityVibranium", 4096, 0, Integer.MAX_VALUE);
+                .comment("Durability of Vibranium tools | Default Value = 4062")
+                .defineInRange("durabilityVibranium", 4062, 0, Integer.MAX_VALUE);
         unbreakableVibranium = BUILDER
                 .comment("Whether Vibranium is unbreakable | Default Value = false")
                 .define("unbreakableVibranium", false);
