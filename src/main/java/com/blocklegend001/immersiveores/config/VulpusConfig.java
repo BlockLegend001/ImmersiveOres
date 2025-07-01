@@ -154,8 +154,8 @@ public class VulpusConfig {
                 .comment("Enchantment value for Vulpus Tool Tier | Default Value = 85")
                 .defineInRange("enchantmentValueVulpusTier", 85, 0, Integer.MAX_VALUE);
         durabilityVulpus = BUILDER
-                .comment("Durability of Vulpus tools | Default Value = 4096")
-                .defineInRange("durabilityVulpus", 4096, 0, Integer.MAX_VALUE);
+                .comment("Durability of Vulpus tools | Default Value = 6093")
+                .defineInRange("durabilityVulpus", 6093, 0, Integer.MAX_VALUE);
         unbreakableVulpus = BUILDER
                 .comment("Whether Vulpus is unbreakable | Default Value = false")
                 .define("unbreakableVulpus", false);
