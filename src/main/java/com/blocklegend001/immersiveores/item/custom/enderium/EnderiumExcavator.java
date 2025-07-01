@@ -3,6 +3,7 @@ package com.blocklegend001.immersiveores.item.custom.enderium;
 import com.blocklegend001.immersiveores.config.EnderiumConfig;
 import com.blocklegend001.immersiveores.item.ModToolTiers;
 import com.blocklegend001.immersiveores.item.custom.base.Excavator;
+import com.blocklegend001.immersiveores.util.map.RadiusMap;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.core.component.DataComponents;
@@ -32,17 +33,32 @@ public class EnderiumExcavator extends Excavator {
     }
 
     @Override
-    public void appendHoverText(ItemStack pStack, Item.TooltipContext p_333372_, TooltipDisplay p_396484_, Consumer<Component> consumer, TooltipFlag p_41424_) {
-        super.appendHoverText(pStack, p_333372_, p_396484_, consumer, p_41424_);
+    public void appendHoverText(ItemStack pStack, Item.TooltipContext context, TooltipDisplay tooltipDisplay, Consumer<Component> consumer, TooltipFlag tooltipFlag) {
+        super.appendHoverText(pStack, context, tooltipDisplay, consumer, tooltipFlag);
+        int radius = getRadiusForHammer(pStack);
+        int widht = radius * 2 + 1;
+
         if(Screen.hasShiftDown()) {
             if (EnderiumConfig.unbreakableEnderium.get()) {
                 consumer.accept(Component.translatable("tooltip.immersiveores.unbreakble.tooltip").withStyle(ChatFormatting.DARK_AQUA));
             }
             consumer.accept(Component.translatable("tooltip.immersiveores.immunetofire.tooltip").withStyle(ChatFormatting.DARK_AQUA));
-            consumer.accept(Component.translatable("tooltip.immersiveores.7x7.tooltip").withStyle(ChatFormatting.DARK_AQUA));
+
+            Component text = Component.literal("Dig area: ")
+                    .withStyle(ChatFormatting.GRAY)
+                    .append(Component.literal(widht + "x1").withStyle(ChatFormatting.YELLOW));
+
+            consumer.accept(text);
         } else {
             consumer.accept(Component.translatable("tooltip.immersiveores.pressshiftformoreinfo.tooltip").withStyle(ChatFormatting.DARK_AQUA));
         }
+    }
+
+    private int getRadiusForHammer(ItemStack stack) {
+        if (RadiusMap.getExcavatorRadius().containsKey(stack.getItem())) {
+            return RadiusMap.getExcavatorRadius().get(stack.getItem());
+        }
+        return 0;
     }
 }
 
