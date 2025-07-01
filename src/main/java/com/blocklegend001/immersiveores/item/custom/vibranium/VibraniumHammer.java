@@ -5,6 +5,7 @@ import com.blocklegend001.immersiveores.config.VibraniumConfig;
 import com.blocklegend001.immersiveores.item.ModToolTiers;
 import com.blocklegend001.immersiveores.item.custom.base.Hammer;
 import com.blocklegend001.immersiveores.item.custom.vulpus.VulpusAxe;
+import com.blocklegend001.immersiveores.util.map.RadiusMap;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.core.component.DataComponents;
@@ -38,15 +39,30 @@ public class VibraniumHammer extends Hammer {
 
     @Override
     public void appendHoverText(ItemStack pStack, TooltipContext pContext, List<Component> components, TooltipFlag pTooltipFlag) {
+        int radius = getRadiusForHammer(pStack);
+        int widht = radius * 2 + 1;
+
         if(Screen.hasShiftDown()) {
             if (VibraniumConfig.unbreakableVibranium.get()) {
                 components.add(Component.translatable("tooltip.immersiveores.unbreakble.tooltip").withStyle(ChatFormatting.LIGHT_PURPLE));
             }
             components.add(Component.translatable("tooltip.immersiveores.immunetofire.tooltip").withStyle(ChatFormatting.LIGHT_PURPLE));
-            components.add(Component.translatable("tooltip.immersiveores.3x3.tooltip").withStyle(ChatFormatting.LIGHT_PURPLE));
+
+            Component text = Component.literal("Dig area: ")
+                    .withStyle(ChatFormatting.GRAY)
+                    .append(Component.literal(widht + "x1").withStyle(ChatFormatting.YELLOW));
+
+            components.add(text);
         } else {
             components.add(Component.translatable("tooltip.immersiveores.pressshiftformoreinfo.tooltip").withStyle(ChatFormatting.LIGHT_PURPLE));
         }
+    }
+
+    private int getRadiusForHammer(ItemStack stack) {
+        if (RadiusMap.getHammerRadius().containsKey(stack.getItem())) {
+            return RadiusMap.getHammerRadius().get(stack.getItem());
+        }
+        return 0;
     }
 }
 
