@@ -170,7 +170,7 @@ public class VulpusConfig {
         speedVulpusTier = VULPUS_CONFIG.getOrDefault("speedVulpusTier", 75);
         attackDamageBonusVulpusTier = VULPUS_CONFIG.getOrDefault("attackDamageBonusVulpusTier", 20);
         enchantmentValueVulpusTier = VULPUS_CONFIG.getOrDefault("enchantmentValueVulpusTier", 85);
-        durabilityVulpus = VULPUS_CONFIG.getOrDefault("durabilityVulpus", 4324);
+        durabilityVulpus = VULPUS_CONFIG.getOrDefault("durabilityVulpus", 6093);
         unbreakableVulpus = VULPUS_CONFIG.getOrDefault("unbreakableVulpus", false);
 
         enchantmentValueVulpusBow = VULPUS_CONFIG.getOrDefault("enchantmentValueVulpusBow", 5);
