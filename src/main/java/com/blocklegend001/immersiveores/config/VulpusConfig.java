@@ -98,7 +98,7 @@ public class VulpusConfig {
         configs.addKeyValuePair(new Pair<>("speedVulpusTier", 75), "Mining speed of Vulpus tier | Default Value = 75");
         configs.addKeyValuePair(new Pair<>("enchantmentValueVulpusTier", 85), "Enchantment value of Vulpus tier | Default Value = 85");
         configs.addKeyValuePair(new Pair<>("attackDamageBonusVulpusTier", 20), "Attack damage bonus of Vulpus tier | Default Value = 20");
-        configs.addKeyValuePair(new Pair<>("durabilityVulpus", 4324), "Durability of Vulpus tools | Default Value = 4324");
+        configs.addKeyValuePair(new Pair<>("durabilityVulpus", 6093), "Durability of Vulpus tools | Default Value = 6093");
         configs.addKeyValuePair(new Pair<>("unbreakableVulpus", false), "Whether Vulpus tools are unbreakable | Default Value = true");
 
 
