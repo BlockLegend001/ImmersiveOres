@@ -86,7 +86,7 @@ public class VibraniumConfig {
         configs.addKeyValuePair(new Pair<>("speedVibraniumTier", 40), "Speed value of Vibranium tier | Default Value = 40");
         configs.addKeyValuePair(new Pair<>("enchantmentValueVibraniumTier", 85), "Enchantment value of Vibranium tier | Default Value = 85");
         configs.addKeyValuePair(new Pair<>("attackDamageBonusVibraniumTier", 11), "Attack damage bonus of Vibranium tier | Default Value = 11");
-        configs.addKeyValuePair(new Pair<>("durabilityVibranium", 4324), "Durability of Vibranium tools | Default Value = 4324");
+        configs.addKeyValuePair(new Pair<>("durabilityVibranium", 4062), "Durability of Vibranium tools | Default Value = 4062");
         configs.addKeyValuePair(new Pair<>("unbreakableVibranium", false), "Whether Vibranium tools are unbreakable | Default Value = true");
 
         configs.addComment("Vibranium Pickaxe Stats");
