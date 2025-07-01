@@ -26,6 +26,7 @@ public class VulpusArmor extends ArmorItem {
     public VulpusArmor(Holder<ArmorMaterial> pMaterial, Type pType, Properties pProperties) {
         super(pMaterial, pType, pProperties);
     }
+
     @Override
     public boolean isEnchantable(ItemStack p_41456_) {
         return true;
@@ -33,40 +34,41 @@ public class VulpusArmor extends ArmorItem {
 
     @Override
     public void inventoryTick(ItemStack stack, Level level, Entity entity, int pSlotId, boolean pIsSelected) {
-        if (!level.isClientSide()) {
-            if (entity instanceof Player player) {
-                if (player.getItemBySlot(EquipmentSlot.FEET).getItem() == ModItems.VULPUS_BOOTS.get()) {
-                    if (VulpusConfig.speedIIVulpusArmor) {
-                        player.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 0, 1, false, false));
-                    }
-                    if (VulpusConfig.jumpIIVulpusArmor) {
-                        player.addEffect(new MobEffectInstance(MobEffects.JUMP, 0, 1, false, false));
-                    }
-                    if (VulpusConfig.fireResistanceVulpusArmor) {
-                        player.addEffect(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 0, 0, false, false));
-                    }
-                    if (!player.onGround() && player.fallDistance >= 1.0F && VulpusConfig.immuneToFallDamageVulpusArmor) {
-                        player.fallDistance = 0F;
-                    }
+        if (!level.isClientSide() && entity instanceof Player player) {
+            if (player.getItemBySlot(EquipmentSlot.FEET).getItem() == ModItems.VULPUS_BOOTS.get()) {
+                if (VulpusConfig.SPEED_II_VULPUS_ARMOR.get()) {
+                    player.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 0, 1, false, false));
                 }
-                if (player.getItemBySlot(EquipmentSlot.CHEST).getItem() == ModItems.VULPUS_CHESTPLATE.get()) {
-                    player.addEffect(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 400, 1, false, false));
+                if (VulpusConfig.JUMP_II_VULPUS_ARMOR.get()) {
+                    player.addEffect(new MobEffectInstance(MobEffects.JUMP, 0, 1, false, false));
                 }
-                if (player.getItemBySlot(EquipmentSlot.HEAD).getItem() == ModItems.VULPUS_HELMET.get()) {
-                    if (VulpusConfig.nightVisionVulpusArmor) {
-                        player.addEffect(new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 0, false, false));
-                    }
-                    if (VulpusConfig.fireResistanceVulpusArmor) {
-                        player.addEffect(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 400, 0, false, false));
-                    }
+                if (VulpusConfig.FIRE_RESISTANCE_VULPUS_ARMOR.get()) {
+                    player.addEffect(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 0, 0, false, false));
                 }
-                if (player.getItemBySlot(EquipmentSlot.LEGS).getItem() == ModItems.VULPUS_LEGGINGS.get()) {
-                    if (VulpusConfig.fireResistanceVulpusArmor) {
-                        player.addEffect(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 400, 0, false, false));
-                    }
-                    if (VulpusConfig.neverLoseHungerVulpusArmor) {
-                        player.addEffect(new MobEffectInstance(MobEffects.SATURATION, 400, 99, false, false));
-                    }
+                if (!player.onGround() && player.fallDistance >= 1.0F && VulpusConfig.IMMUNE_TO_FALL_DAMAGE_VULPUS_ARMOR.get()) {
+                    player.fallDistance = 0F;
+                }
+            }
+
+            if (player.getItemBySlot(EquipmentSlot.CHEST).getItem() == ModItems.VULPUS_CHESTPLATE.get()) {
+                player.addEffect(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 400, 1, false, false));
+            }
+
+            if (player.getItemBySlot(EquipmentSlot.HEAD).getItem() == ModItems.VULPUS_HELMET.get()) {
+                if (VulpusConfig.NIGHT_VISION_VULPUS_ARMOR.get()) {
+                    player.addEffect(new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 0, false, false));
+                }
+                if (VulpusConfig.FIRE_RESISTANCE_VULPUS_ARMOR.get()) {
+                    player.addEffect(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 400, 0, false, false));
+                }
+            }
+
+            if (player.getItemBySlot(EquipmentSlot.LEGS).getItem() == ModItems.VULPUS_LEGGINGS.get()) {
+                if (VulpusConfig.FIRE_RESISTANCE_VULPUS_ARMOR.get()) {
+                    player.addEffect(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 400, 0, false, false));
+                }
+                if (VulpusConfig.NEVER_LOSE_HUNGER_VULPUS_ARMOR.get()) {
+                    player.addEffect(new MobEffectInstance(MobEffects.SATURATION, 400, 99, false, false));
                 }
             }
         }
@@ -100,53 +102,73 @@ public class VulpusArmor extends ArmorItem {
 
     @Override
     public void appendHoverText(ItemStack pStack, TooltipContext pContext, List<Component> components, TooltipFlag pTooltipFlag) {
-        if(Screen.hasShiftDown()){
+        if (Screen.hasShiftDown()) {
             if (ModItems.VULPUS_BOOTS.get() == pStack.getItem()) {
-                components.add(Component.translatable("tooltip.immersiveores.unbreakble.tooltip").withStyle(ChatFormatting.RED));
+                if (VulpusConfig.UNBREAKABLE_VULPUS.get()) {
+                    components.add(Component.translatable("tooltip.immersiveores.unbreakble.tooltip").withStyle(ChatFormatting.RED));
+                }
                 components.add(Component.translatable("tooltip.immersiveores.immunetofire.tooltip").withStyle(ChatFormatting.RED));
-                if (VulpusConfig.speedIIVulpusArmor) {
+                if (VulpusConfig.SPEED_II_VULPUS_ARMOR.get()) {
                     components.add(Component.translatable("tooltip.immersiveores.speed2.tooltip").withStyle(ChatFormatting.RED));
-                } if (VulpusConfig.jumpIIVulpusArmor) {
+                }
+                if (VulpusConfig.JUMP_II_VULPUS_ARMOR.get()) {
                     components.add(Component.translatable("tooltip.immersiveores.jump2.tooltip").withStyle(ChatFormatting.RED));
                 }
-                if (VulpusConfig.canWalkOnPowderedSnowVulpus) {
+                if (VulpusConfig.CAN_WALK_ON_POWDERED_SNOW_VULPUS.get()) {
                     components.add(Component.translatable("tooltip.immersiveores.canwalkonpowderedsnow.tooltip").withStyle(ChatFormatting.RED));
-                } if (VulpusConfig.makesPiglinsNeutralVulpus) {
+                }
+                if (VulpusConfig.MAKES_PIGLINS_NEUTRAL_VULPUS.get()) {
                     components.add(Component.translatable("tooltip.immersiveores.immunetopiglin.tooltip").withStyle(ChatFormatting.RED));
-                } if (VulpusConfig.fireResistanceVulpusArmor) {
+                }
+                if (VulpusConfig.FIRE_RESISTANCE_VULPUS_ARMOR.get()) {
                     components.add(Component.translatable("tooltip.immersiveores.playerimmunetofire.tooltip").withStyle(ChatFormatting.RED));
-                } if (VulpusConfig.immuneToFallDamageVulpusArmor) {
+                }
+                if (VulpusConfig.IMMUNE_TO_FALL_DAMAGE_VULPUS_ARMOR.get()) {
                     components.add(Component.translatable("tooltip.immersiveores.immunetofalldamage.tooltip").withStyle(ChatFormatting.RED));
                 }
             }
+
             if (ModItems.VULPUS_CHESTPLATE.get() == pStack.getItem()) {
-                components.add(Component.translatable("tooltip.immersiveores.unbreakble.tooltip").withStyle(ChatFormatting.RED));
+                if (VulpusConfig.UNBREAKABLE_VULPUS.get()) {
+                    components.add(Component.translatable("tooltip.immersiveores.unbreakble.tooltip").withStyle(ChatFormatting.RED));
+                }
                 components.add(Component.translatable("tooltip.immersiveores.immunetofire.tooltip").withStyle(ChatFormatting.RED));
-                if (VulpusConfig.makesPiglinsNeutralVulpus) {
+                if (VulpusConfig.MAKES_PIGLINS_NEUTRAL_VULPUS.get()) {
                     components.add(Component.translatable("tooltip.immersiveores.immunetopiglin.tooltip").withStyle(ChatFormatting.RED));
-                } if (VulpusConfig.fireResistanceVulpusArmor) {
+                }
+                if (VulpusConfig.FIRE_RESISTANCE_VULPUS_ARMOR.get()) {
                     components.add(Component.translatable("tooltip.immersiveores.playerimmunetofire.tooltip").withStyle(ChatFormatting.RED));
                 }
             }
+
             if (ModItems.VULPUS_HELMET.get() == pStack.getItem()) {
-                components.add(Component.translatable("tooltip.immersiveores.unbreakble.tooltip").withStyle(ChatFormatting.RED));
+                if (VulpusConfig.UNBREAKABLE_VULPUS.get()) {
+                    components.add(Component.translatable("tooltip.immersiveores.unbreakble.tooltip").withStyle(ChatFormatting.RED));
+                }
                 components.add(Component.translatable("tooltip.immersiveores.immunetofire.tooltip").withStyle(ChatFormatting.RED));
-                if (VulpusConfig.nightVisionVulpusArmor) {
+                if (VulpusConfig.NIGHT_VISION_VULPUS_ARMOR.get()) {
                     components.add(Component.translatable("tooltip.immersiveores.nightvision.tooltip").withStyle(ChatFormatting.RED));
-                } if (VulpusConfig.makesPiglinsNeutralVulpus) {
+                }
+                if (VulpusConfig.MAKES_PIGLINS_NEUTRAL_VULPUS.get()) {
                     components.add(Component.translatable("tooltip.immersiveores.immunetopiglin.tooltip").withStyle(ChatFormatting.RED));
-                } if (VulpusConfig.fireResistanceVulpusArmor) {
+                }
+                if (VulpusConfig.FIRE_RESISTANCE_VULPUS_ARMOR.get()) {
                     components.add(Component.translatable("tooltip.immersiveores.playerimmunetofire.tooltip").withStyle(ChatFormatting.RED));
                 }
             }
+
             if (ModItems.VULPUS_LEGGINGS.get() == pStack.getItem()) {
-                components.add(Component.translatable("tooltip.immersiveores.unbreakble.tooltip").withStyle(ChatFormatting.RED));
+                if (VulpusConfig.UNBREAKABLE_VULPUS.get()) {
+                    components.add(Component.translatable("tooltip.immersiveores.unbreakble.tooltip").withStyle(ChatFormatting.RED));
+                }
                 components.add(Component.translatable("tooltip.immersiveores.immunetofire.tooltip").withStyle(ChatFormatting.RED));
-                if (VulpusConfig.makesPiglinsNeutralVulpus) {
+                if (VulpusConfig.MAKES_PIGLINS_NEUTRAL_VULPUS.get()) {
                     components.add(Component.translatable("tooltip.immersiveores.immunetopiglin.tooltip").withStyle(ChatFormatting.RED));
-                } if (VulpusConfig.fireResistanceVulpusArmor) {
+                }
+                if (VulpusConfig.FIRE_RESISTANCE_VULPUS_ARMOR.get()) {
                     components.add(Component.translatable("tooltip.immersiveores.playerimmunetofire.tooltip").withStyle(ChatFormatting.RED));
-                } if (VulpusConfig.neverLoseHungerVulpusArmor) {
+                }
+                if (VulpusConfig.NEVER_LOSE_HUNGER_VULPUS_ARMOR.get()) {
                     components.add(Component.translatable("tooltip.immersiveores.nerverlosehunger.tooltip").withStyle(ChatFormatting.RED));
                 }
             }
@@ -155,13 +177,13 @@ public class VulpusArmor extends ArmorItem {
         }
     }
 
+    @Override
     public boolean makesPiglinsNeutral(ItemStack stack, LivingEntity wearer) {
-        return VulpusConfig.canWalkOnPowderedSnowVulpus;
+        return VulpusConfig.CAN_WALK_ON_POWDERED_SNOW_VULPUS.get();
     }
 
     @Override
     public boolean canWalkOnPowderedSnow(ItemStack stack, LivingEntity wearer) {
-        return VulpusConfig.makesPiglinsNeutralVulpus;
+        return VulpusConfig.MAKES_PIGLINS_NEUTRAL_VULPUS.get();
     }
-
 }

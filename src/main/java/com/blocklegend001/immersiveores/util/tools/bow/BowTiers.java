@@ -1,4 +1,4 @@
-package com.blocklegend001.immersiveores.util;
+package com.blocklegend001.immersiveores.util.tools.bow;
 
 import com.blocklegend001.immersiveores.config.EnderiumConfig;
 import com.blocklegend001.immersiveores.config.VibraniumConfig;
@@ -12,16 +12,16 @@ import java.util.function.Supplier;
 @SuppressWarnings("deprecation")
 public enum BowTiers implements BowTier {
 
-    ENDERIUM(0, EnderiumConfig.damageEnderiumBow, EnderiumConfig.enchantmentValueEnderiumBow, () -> {
-        return Ingredient.of(ModItems.ENDERIUM_INGOT.get());
+    ENDERIUM(EnderiumConfig.DURABILITY_ENDERIUM.get(), EnderiumConfig.DAMAGE_ENDERIUM_BOW.get(), EnderiumConfig.ENCHANTMENT_VALUE_ENDERIUM_BOW.get(), () -> {
+        return Ingredient.of(ModItems.ENDERIUM_INGOT);
     }),
 
-    VIBRANIUM(0, VibraniumConfig.damageVibraniumBow, VibraniumConfig.enchantmentValueVibraniumBow, () -> {
-        return Ingredient.of(ModItems.VIBRANIUM_INGOT.get());
+    VIBRANIUM(VibraniumConfig.DURABILITY_VIBRANIUM.get(), VibraniumConfig.DAMAGE_VIBRANIUM_BOW.get(), VibraniumConfig.ENCHANTMENT_VALUE_VIBRANIUM_BOW.get(), () -> {
+        return Ingredient.of(ModItems.VIBRANIUM_INGOT);
     }),
 
-    VULPUS(0, VulpusConfig.damageVulpusBow, VulpusConfig.enchantmentValueVulpusBow, () -> {
-        return Ingredient.of(ModItems.VULPUS_INGOT.get());
+    VULPUS(VulpusConfig.DURABILITY_VULPUS.get(), VulpusConfig.DAMAGE_VULPUS_BOW.get(), VulpusConfig.ENCHANTMENT_VALUE_VULPUS_BOW.get(), () -> {
+        return Ingredient.of(ModItems.VULPUS_INGOT);
     });
 
     private final int uses;
