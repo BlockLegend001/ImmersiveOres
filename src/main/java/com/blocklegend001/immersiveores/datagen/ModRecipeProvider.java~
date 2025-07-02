@@ -7,9 +7,11 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.data.server.recipe.RecipeExporter;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
+import net.minecraft.data.server.recipe.SmithingTransformRecipeJsonBuilder;
 import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.Ingredient;
+import net.minecraft.recipe.SmithingTransformRecipe;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.tag.ItemTags;
@@ -18,14 +20,17 @@ import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
 public class ModRecipeProvider extends FabricRecipeProvider {
-    private static final List<ItemConvertible> VIBRANIUM_SMELTABLES = List.of(ModItems.RAW_VIBRANIUM,
-            ModBlocks.VIBRANIUM_ORE, ModBlocks.RAW_VIBRANIUM_BLOCK);
+    private static final List<ItemConvertible> VIBRANIUM_SMELTABLES = List.of(
+            ModItems.RAW_VIBRANIUM,
+            ModBlocks.VIBRANIUM_ORE);
 
-    private static final List<ItemConvertible> VULPUS_SMELTABLES = List.of(ModItems.RAW_VULPUS,
-            ModBlocks.VULPUS_ORE, ModBlocks.RAW_VULPUS_BLOCK);
+    private static final List<ItemConvertible> VULPUS_SMELTABLES = List.of(
+            ModItems.RAW_VULPUS,
+            ModBlocks.VULPUS_ORE);
     
-    private static final List<ItemConvertible> ENDERIUM_SMELTABLES = List.of(ModItems.RAW_ENDERIUM,
-            ModBlocks.ENDERIUM_ORE, ModBlocks.RAW_ENDERIUM_BLOCK);
+    private static final List<ItemConvertible> ENDERIUM_SMELTABLES = List.of(
+            ModItems.RAW_ENDERIUM,
+            ModBlocks.ENDERIUM_ORE);
     
     public ModRecipeProvider(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> registryWrapper) {
         super(output, registryWrapper);
@@ -39,7 +44,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .pattern("VVV")
                 .pattern("VVV")
                 .pattern("VVV")
-                .criterion("conditionsFromItem_raw_vibranium", conditionsFromItem(ModItems.RAW_VIBRANIUM))
+                .criterion("has_raw_vibranium", conditionsFromItem(ModItems.RAW_VIBRANIUM))
                 .offerTo(exporter);
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.VIBRANIUM_BLOCK)
@@ -47,20 +52,28 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .pattern("VVV")
                 .pattern("VVV")
                 .pattern("VVV")
-                .criterion("conditionsFromItem_vibranium_ingot", conditionsFromItem(ModItems.VIBRANIUM_INGOT))
+                .criterion("has_vibranium_ingot", conditionsFromItem(ModItems.VIBRANIUM_INGOT))
                 .offerTo(exporter);
 
         offerSmelting(exporter, VIBRANIUM_SMELTABLES, RecipeCategory.MISC, ModItems.VIBRANIUM_INGOT,
                 1.0f, 200, "immersiveores:vibranium_ingot_cooked");
+
+        offerBlasting(exporter, VIBRANIUM_SMELTABLES, RecipeCategory.MISC, ModItems.VIBRANIUM_INGOT,
+                1.0f, 100, "immersiveores:vibranium_ingot_cooked_blast");
         
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.VIBRANIUM_NUGGET, 9)
                 .input(Ingredient.ofItems(ModItems.VIBRANIUM_INGOT.asItem()))
-                .criterion("conditionsFromItem_vibranium_ingot", conditionsFromItem(ModItems.VIBRANIUM_INGOT))
+                .criterion("has_vibranium_ingot", conditionsFromItem(ModItems.VIBRANIUM_INGOT))
                 .offerTo(exporter);
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.RAW_VIBRANIUM, 9)
                 .input(Ingredient.ofItems(ModBlocks.RAW_VIBRANIUM_BLOCK.asItem()))
-                .criterion("conditionsFromItem_vibranium_block", conditionsFromItem(ModBlocks.RAW_VIBRANIUM_BLOCK))
+                .criterion("has_vibranium_block", conditionsFromItem(ModBlocks.RAW_VIBRANIUM_BLOCK))
+                .offerTo(exporter);
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.VIBRANIUM_INGOT, 9)
+                .input(Ingredient.ofItems(ModBlocks.VIBRANIUM_BLOCK.asItem()))
+                .criterion("has_vibranium_block", conditionsFromItem(ModBlocks.VIBRANIUM_BLOCK))
                 .offerTo(exporter);
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.VIBRANIUM_INGOT)
@@ -68,7 +81,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .pattern("EEE")
                 .pattern("EEE")
                 .pattern("EEE")
-                .criterion("conditionsFromItem_vibranium_nugget", conditionsFromItem(ModItems.VIBRANIUM_NUGGET))
+                .criterion("has_vibranium_nugget", conditionsFromItem(ModItems.VIBRANIUM_NUGGET))
                 .offerTo(exporter, "immersiveores:vibranium_ingot_craft");
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.VIBRANIUM_HELMET)
@@ -77,7 +90,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .pattern("VVV")
                 .pattern("VNV")
                 .pattern("   ")
-                .criterion("conditionsFromItem_vibranium_ingot", conditionsFromItem(ModItems.VIBRANIUM_INGOT))
+                .criterion("has_vibranium_ingot", conditionsFromItem(ModItems.VIBRANIUM_INGOT))
                 .offerTo(exporter);
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.VIBRANIUM_CHESTPLATE)
@@ -86,7 +99,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .pattern("VNV")
                 .pattern("VVV")
                 .pattern("VVV")
-                .criterion("conditionsFromItem_vibranium_ingot", conditionsFromItem(ModItems.VIBRANIUM_INGOT))
+                .criterion("has_vibranium_ingot", conditionsFromItem(ModItems.VIBRANIUM_INGOT))
                 .offerTo(exporter);
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.VIBRANIUM_LEGGINGS)
@@ -95,7 +108,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .pattern("VVV")
                 .pattern("VNV")
                 .pattern("V V")
-                .criterion("conditionsFromItem_vibranium_ingot", conditionsFromItem(ModItems.VIBRANIUM_INGOT))
+                .criterion("has_vibranium_ingot", conditionsFromItem(ModItems.VIBRANIUM_INGOT))
                 .offerTo(exporter);
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.VIBRANIUM_BOOTS)
@@ -104,7 +117,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .pattern("   ")
                 .pattern("V V")
                 .pattern("VNV")
-                .criterion("conditionsFromItem_vibranium_ingot", conditionsFromItem(ModItems.VIBRANIUM_INGOT))
+                .criterion("has_vibranium_ingot", conditionsFromItem(ModItems.VIBRANIUM_INGOT))
                 .offerTo(exporter);
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.VIBRANIUM_HORSE_ARMOR)
@@ -113,7 +126,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .pattern("E E")
                 .pattern("EEE")
                 .pattern("EWE")
-                .criterion("conditionsFromItem_vibranium_ingot", conditionsFromItem(ModItems.VIBRANIUM_INGOT))
+                .criterion("has_vibranium_ingot", conditionsFromItem(ModItems.VIBRANIUM_INGOT))
                 .offerTo(exporter);
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.VIBRANIUM_STICK)
@@ -121,7 +134,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .pattern("   ")
                 .pattern(" E ")
                 .pattern(" E ")
-                .criterion("conditionsFromItem_vibranium_ingot", conditionsFromItem(ModItems.VIBRANIUM_INGOT))
+                .criterion("has_vibranium_ingot", conditionsFromItem(ModItems.VIBRANIUM_INGOT))
                 .offerTo(exporter);
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.VIBRANIUM_HAMMER)
@@ -131,7 +144,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .pattern("WEW")
                 .pattern(" S ")
                 .pattern(" S ")
-                .criterion("conditionsFromItem_vibranium_ingot", conditionsFromItem(ModItems.VIBRANIUM_INGOT))
+                .criterion("has_vibranium_ingot", conditionsFromItem(ModItems.VIBRANIUM_INGOT))
                 .offerTo(exporter);
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.VIBRANIUM_EXCAVATOR)
@@ -141,7 +154,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .pattern(" E ")
                 .pattern("WSW")
                 .pattern(" S ")
-                .criterion("conditionsFromItem_vibranium_ingot", conditionsFromItem(ModItems.VIBRANIUM_INGOT))
+                .criterion("has_vibranium_ingot", conditionsFromItem(ModItems.VIBRANIUM_INGOT))
                 .offerTo(exporter);
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.VIBRANIUM_PAXEL)
@@ -152,7 +165,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .pattern("WTE")
                 .pattern(" S ")
                 .pattern(" S ")
-                .criterion("conditionsFromItem_vibranium_stick", conditionsFromItem(ModItems.VIBRANIUM_STICK))
+                .criterion("has_vibranium_stick", conditionsFromItem(ModItems.VIBRANIUM_STICK))
                 .offerTo(exporter);
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.VIBRANIUM_AXE)
@@ -161,7 +174,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .pattern(" EE")
                 .pattern(" SE")
                 .pattern(" S ")
-                .criterion("conditionsFromItem_vibranium_ingot", conditionsFromItem(ModItems.VIBRANIUM_INGOT))
+                .criterion("has_vibranium_ingot", conditionsFromItem(ModItems.VIBRANIUM_INGOT))
                 .offerTo(exporter);
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.VIBRANIUM_PICKAXE)
@@ -170,7 +183,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .pattern("EEE")
                 .pattern(" S ")
                 .pattern(" S ")
-                .criterion("conditionsFromItem_vibranium_ingot", conditionsFromItem(ModItems.VIBRANIUM_INGOT))
+                .criterion("has_vibranium_ingot", conditionsFromItem(ModItems.VIBRANIUM_INGOT))
                 .offerTo(exporter);
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.VIBRANIUM_SWORD)
@@ -179,7 +192,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .pattern(" E ")
                 .pattern(" E ")
                 .pattern(" S ")
-                .criterion("conditionsFromItem_vibranium_ingot", conditionsFromItem(ModItems.VIBRANIUM_INGOT))
+                .criterion("has_vibranium_ingot", conditionsFromItem(ModItems.VIBRANIUM_INGOT))
                 .offerTo(exporter);
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.VIBRANIUM_SHOVEL)
@@ -188,7 +201,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .pattern(" E ")
                 .pattern(" S ")
                 .pattern(" S ")
-                .criterion("conditionsFromItem_vibranium_ingot", conditionsFromItem(ModItems.VIBRANIUM_INGOT))
+                .criterion("has_vibranium_ingot", conditionsFromItem(ModItems.VIBRANIUM_INGOT))
                 .offerTo(exporter);
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.VIBRANIUM_HOE)
@@ -197,7 +210,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .pattern(" EE")
                 .pattern(" S ")
                 .pattern(" S ")
-                .criterion("conditionsFromItem_vibranium_ingot", conditionsFromItem(ModItems.VIBRANIUM_INGOT))
+                .criterion("has_vibranium_ingot", conditionsFromItem(ModItems.VIBRANIUM_INGOT))
                 .offerTo(exporter);
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.VIBRANIUM_BOW)
@@ -207,7 +220,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .pattern(" SD")
                 .pattern("SED")
                 .pattern(" SD")
-                .criterion("conditionsFromItem_vibranium_ingot", conditionsFromItem(ModItems.VIBRANIUM_INGOT))
+                .criterion("has_vibranium_ingot", conditionsFromItem(ModItems.VIBRANIUM_INGOT))
                 .offerTo(exporter);
 
        //VULPUS
@@ -216,7 +229,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .pattern("VVV")
                 .pattern("VVV")
                 .pattern("VVV")
-                .criterion("conditionsFromItem_raw_vulpus", conditionsFromItem(ModItems.RAW_VULPUS))
+                .criterion("has_raw_vulpus", conditionsFromItem(ModItems.RAW_VULPUS))
                 .offerTo(exporter);
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.VULPUS_BLOCK)
@@ -224,20 +237,28 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .pattern("VVV")
                 .pattern("VVV")
                 .pattern("VVV")
-                .criterion("conditionsFromItem_vulpus_ingot", conditionsFromItem(ModItems.VULPUS_INGOT))
+                .criterion("has_vulpus_ingot", conditionsFromItem(ModItems.VULPUS_INGOT))
                 .offerTo(exporter);
 
         offerSmelting(exporter, VULPUS_SMELTABLES, RecipeCategory.MISC, ModItems.VULPUS_INGOT,
                 1.0f, 225, "immersiveores:vulpus_ingot_cooked");
 
+        offerBlasting(exporter, VULPUS_SMELTABLES, RecipeCategory.MISC, ModItems.VULPUS_INGOT,
+                1.0f, 112, "immersiveores:vulpus_ingot_cooked_blast");
+
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.VULPUS_NUGGET, 9)
                 .input(Ingredient.ofItems(ModItems.VULPUS_INGOT.asItem()))
-                .criterion("conditionsFromItem_vulpus_ingot", conditionsFromItem(ModItems.VULPUS_INGOT))
+                .criterion("has_vulpus_ingot", conditionsFromItem(ModItems.VULPUS_INGOT))
                 .offerTo(exporter);
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.RAW_VULPUS, 9)
                 .input(Ingredient.ofItems(ModBlocks.RAW_VULPUS_BLOCK.asItem()))
-                .criterion("conditionsFromItem_vulpus_block", conditionsFromItem(ModBlocks.RAW_VULPUS_BLOCK))
+                .criterion("has_vulpus_block", conditionsFromItem(ModBlocks.RAW_VULPUS_BLOCK))
+                .offerTo(exporter);
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.VULPUS_INGOT, 9)
+                .input(Ingredient.ofItems(ModBlocks.VULPUS_BLOCK.asItem()))
+                .criterion("has_vulpus_block", conditionsFromItem(ModBlocks.VULPUS_BLOCK))
                 .offerTo(exporter);
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.VULPUS_INGOT)
@@ -245,7 +266,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .pattern("EEE")
                 .pattern("EEE")
                 .pattern("EEE")
-                .criterion("conditionsFromItem_vulpus_nugget", conditionsFromItem(ModItems.VULPUS_NUGGET))
+                .criterion("has_vulpus_nugget", conditionsFromItem(ModItems.VULPUS_NUGGET))
                 .offerTo(exporter, "immersiveores:vulpus_ingot_craft");
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.VULPUS_HELMET)
@@ -254,7 +275,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .pattern("EEE")
                 .pattern("ENE")
                 .pattern("   ")
-                .criterion("conditionsFromItem_vulpus_ingot", conditionsFromItem(ModItems.VULPUS_INGOT))
+                .criterion("has_vulpus_ingot", conditionsFromItem(ModItems.VULPUS_INGOT))
                 .offerTo(exporter);
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.VULPUS_CHESTPLATE)
@@ -263,7 +284,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .pattern("ENE")
                 .pattern("EEE")
                 .pattern("EEE")
-                .criterion("conditionsFromItem_vulpus_ingot", conditionsFromItem(ModItems.VULPUS_INGOT))
+                .criterion("has_vulpus_ingot", conditionsFromItem(ModItems.VULPUS_INGOT))
                 .offerTo(exporter);
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.VULPUS_LEGGINGS)
@@ -272,7 +293,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .pattern("EEE")
                 .pattern("ENE")
                 .pattern("E E")
-                .criterion("conditionsFromItem_vulpus_ingot", conditionsFromItem(ModItems.VULPUS_INGOT))
+                .criterion("has_vulpus_ingot", conditionsFromItem(ModItems.VULPUS_INGOT))
                 .offerTo(exporter);
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.VULPUS_BOOTS)
@@ -281,7 +302,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .pattern("   ")
                 .pattern("E E")
                 .pattern("ENE")
-                .criterion("conditionsFromItem_vulpus_ingot", conditionsFromItem(ModItems.VULPUS_INGOT))
+                .criterion("has_vulpus_ingot", conditionsFromItem(ModItems.VULPUS_INGOT))
                 .offerTo(exporter);
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.VULPUS_HORSE_ARMOR)
@@ -290,7 +311,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .pattern("E E")
                 .pattern("EEE")
                 .pattern("EWE")
-                .criterion("conditionsFromItem_vulpus_ingot", conditionsFromItem(ModItems.VULPUS_INGOT))
+                .criterion("has_vulpus_ingot", conditionsFromItem(ModItems.VULPUS_INGOT))
                 .offerTo(exporter);
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.VULPUS_STICK)
@@ -298,7 +319,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .pattern("   ")
                 .pattern(" E ")
                 .pattern(" E ")
-                .criterion("conditionsFromItem_vulpus_ingot", conditionsFromItem(ModItems.VULPUS_INGOT))
+                .criterion("has_vulpus_ingot", conditionsFromItem(ModItems.VULPUS_INGOT))
                 .offerTo(exporter);
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.VULPUS_HAMMER)
@@ -308,7 +329,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .pattern("WEW")
                 .pattern(" S ")
                 .pattern(" S ")
-                .criterion("conditionsFromItem_vulpus_ingot", conditionsFromItem(ModItems.VULPUS_INGOT))
+                .criterion("has_vulpus_ingot", conditionsFromItem(ModItems.VULPUS_INGOT))
                 .offerTo(exporter);
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.VULPUS_EXCAVATOR)
@@ -318,7 +339,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .pattern(" E ")
                 .pattern("WSW")
                 .pattern(" S ")
-                .criterion("conditionsFromItem_vulpus_ingot", conditionsFromItem(ModItems.VULPUS_INGOT))
+                .criterion("has_vulpus_ingot", conditionsFromItem(ModItems.VULPUS_INGOT))
                 .offerTo(exporter);
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.VULPUS_PAXEL)
@@ -329,7 +350,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .pattern("WTE")
                 .pattern(" S ")
                 .pattern(" S ")
-                .criterion("conditionsFromItem_vulpus_stick", conditionsFromItem(ModItems.VULPUS_STICK))
+                .criterion("has_vulpus_stick", conditionsFromItem(ModItems.VULPUS_STICK))
                 .offerTo(exporter);
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.VULPUS_AXE)
@@ -338,7 +359,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .pattern(" EE")
                 .pattern(" SE")
                 .pattern(" S ")
-                .criterion("conditionsFromItem_vulpus_ingot", conditionsFromItem(ModItems.VULPUS_INGOT))
+                .criterion("has_vulpus_ingot", conditionsFromItem(ModItems.VULPUS_INGOT))
                 .offerTo(exporter);
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.VULPUS_PICKAXE)
@@ -347,7 +368,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .pattern("EEE")
                 .pattern(" S ")
                 .pattern(" S ")
-                .criterion("conditionsFromItem_vulpus_ingot", conditionsFromItem(ModItems.VULPUS_INGOT))
+                .criterion("has_vulpus_ingot", conditionsFromItem(ModItems.VULPUS_INGOT))
                 .offerTo(exporter);
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.VULPUS_SWORD)
@@ -356,7 +377,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .pattern(" E ")
                 .pattern(" E ")
                 .pattern(" S ")
-                .criterion("conditionsFromItem_vulpus_ingot", conditionsFromItem(ModItems.VULPUS_INGOT))
+                .criterion("has_vulpus_ingot", conditionsFromItem(ModItems.VULPUS_INGOT))
                 .offerTo(exporter);
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.VULPUS_SHOVEL)
@@ -365,7 +386,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .pattern(" E ")
                 .pattern(" S ")
                 .pattern(" S ")
-                .criterion("conditionsFromItem_vulpus_ingot", conditionsFromItem(ModItems.VULPUS_INGOT))
+                .criterion("has_vulpus_ingot", conditionsFromItem(ModItems.VULPUS_INGOT))
                 .offerTo(exporter);
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.VULPUS_HOE)
@@ -374,7 +395,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .pattern(" EE")
                 .pattern(" S ")
                 .pattern(" S ")
-                .criterion("conditionsFromItem_vulpus_ingot", conditionsFromItem(ModItems.VULPUS_INGOT))
+                .criterion("has_vulpus_ingot", conditionsFromItem(ModItems.VULPUS_INGOT))
                 .offerTo(exporter);
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.VULPUS_BOW)
@@ -384,7 +405,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .pattern(" SD")
                 .pattern("SED")
                 .pattern(" SD")
-                .criterion("conditionsFromItem_vulpus_ingot", conditionsFromItem(ModItems.VULPUS_INGOT))
+                .criterion("has_vulpus_ingot", conditionsFromItem(ModItems.VULPUS_INGOT))
                 .offerTo(exporter);
 
         //ENDERIUM
@@ -393,7 +414,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .pattern("EEE")
                 .pattern("EEE")
                 .pattern("EEE")
-                .criterion("conditionsFromItem_raw_enderium", conditionsFromItem(ModItems.RAW_ENDERIUM))
+                .criterion("has_raw_enderium", conditionsFromItem(ModItems.RAW_ENDERIUM))
                 .offerTo(exporter);
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ENDERIUM_BLOCK)
@@ -401,20 +422,30 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .pattern("EEE")
                 .pattern("EEE")
                 .pattern("EEE")
-                .criterion("conditionsFromItem_enderium_ingot", conditionsFromItem(ModItems.ENDERIUM_INGOT))
+                .criterion("has_enderium_ingot", conditionsFromItem(ModItems.ENDERIUM_INGOT))
                 .offerTo(exporter);
+
+        SmithingTransformRecipeJsonBuilder
 
         offerSmelting(exporter, ENDERIUM_SMELTABLES, RecipeCategory.MISC, ModItems.ENDERIUM_INGOT,
                 1.0f, 250, "immersiveores:enderium_ingot_cooked");
 
+        offerBlasting(exporter, ENDERIUM_SMELTABLES, RecipeCategory.MISC, ModItems.ENDERIUM_INGOT,
+                1.0f, 125, "immersiveores:enderium_ingot_cooked_blast");
+
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.ENDERIUM_NUGGET, 9)
                 .input(Ingredient.ofItems(ModItems.ENDERIUM_INGOT.asItem()))
-                .criterion("conditionsFromItem_enderium_ingot", conditionsFromItem(ModItems.ENDERIUM_INGOT))
+                .criterion("has_enderium_ingot", conditionsFromItem(ModItems.ENDERIUM_INGOT))
                 .offerTo(exporter);
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.RAW_ENDERIUM, 9)
                 .input(Ingredient.ofItems(ModBlocks.RAW_ENDERIUM_BLOCK.asItem()))
-                .criterion("conditionsFromItem_enderium_block", conditionsFromItem(ModBlocks.RAW_ENDERIUM_BLOCK))
+                .criterion("has_enderium_block", conditionsFromItem(ModBlocks.RAW_ENDERIUM_BLOCK))
+                .offerTo(exporter);
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.ENDERIUM_INGOT, 9)
+                .input(Ingredient.ofItems(ModBlocks.ENDERIUM_BLOCK.asItem()))
+                .criterion("has_enderium_block", conditionsFromItem(ModBlocks.ENDERIUM_BLOCK))
                 .offerTo(exporter);
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.ENDERIUM_HORSE_ARMOR)
@@ -423,7 +454,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .pattern("E E")
                 .pattern("EEE")
                 .pattern("EWE")
-                .criterion("conditionsFromItem_enderium_ingot", conditionsFromItem(ModItems.ENDERIUM_INGOT))
+                .criterion("has_enderium_ingot", conditionsFromItem(ModItems.ENDERIUM_INGOT))
                 .offerTo(exporter);
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.ENDERIUM_STICK)
@@ -431,7 +462,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .pattern("   ")
                 .pattern(" E ")
                 .pattern(" E ")
-                .criterion("conditionsFromItem_enderium_ingot", conditionsFromItem(ModItems.ENDERIUM_INGOT))
+                .criterion("has_enderium_ingot", conditionsFromItem(ModItems.ENDERIUM_INGOT))
                 .offerTo(exporter);
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.ENDERIUM_INGOT)
@@ -439,7 +470,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .pattern("EEE")
                 .pattern("EEE")
                 .pattern("EEE")
-                .criterion("conditionsFromItem_enderium_nugget", conditionsFromItem(ModItems.ENDERIUM_NUGGET))
+                .criterion("has_enderium_nugget", conditionsFromItem(ModItems.ENDERIUM_NUGGET))
                 .offerTo(exporter, "immersiveores:enderium_ingot_craft");
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.ENDERIUM_HAMMER)
@@ -449,7 +480,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .pattern("WEW")
                 .pattern(" S ")
                 .pattern(" S ")
-                .criterion("conditionsFromItem_enderium_ingot", conditionsFromItem(ModItems.ENDERIUM_INGOT))
+                .criterion("has_enderium_ingot", conditionsFromItem(ModItems.ENDERIUM_INGOT))
                 .offerTo(exporter);
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.ENDERIUM_EXCAVATOR)
@@ -459,7 +490,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .pattern(" E ")
                 .pattern("WSW")
                 .pattern(" S ")
-                .criterion("conditionsFromItem_enderium_ingot", conditionsFromItem(ModItems.ENDERIUM_INGOT))
+                .criterion("has_enderium_ingot", conditionsFromItem(ModItems.ENDERIUM_INGOT))
                 .offerTo(exporter);
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.ENDERIUM_PAXEL)
@@ -470,7 +501,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .pattern("WTE")
                 .pattern(" S ")
                 .pattern(" S ")
-                .criterion("conditionsFromItem_enderium_stick", conditionsFromItem(ModItems.ENDERIUM_STICK))
+                .criterion("has_enderium_stick", conditionsFromItem(ModItems.ENDERIUM_STICK))
                 .offerTo(exporter);
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.ENDERIUM_AXE)
@@ -479,7 +510,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .pattern(" EE")
                 .pattern(" SE")
                 .pattern(" S ")
-                .criterion("conditionsFromItem_enderium_ingot", conditionsFromItem(ModItems.ENDERIUM_INGOT))
+                .criterion("has_enderium_ingot", conditionsFromItem(ModItems.ENDERIUM_INGOT))
                 .offerTo(exporter);
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.ENDERIUM_PICKAXE)
@@ -488,7 +519,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .pattern("EEE")
                 .pattern(" S ")
                 .pattern(" S ")
-                .criterion("conditionsFromItem_enderium_ingot", conditionsFromItem(ModItems.ENDERIUM_INGOT))
+                .criterion("has_enderium_ingot", conditionsFromItem(ModItems.ENDERIUM_INGOT))
                 .offerTo(exporter);
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.ENDERIUM_SWORD)
@@ -497,7 +528,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .pattern(" E ")
                 .pattern(" E ")
                 .pattern(" S ")
-                .criterion("conditionsFromItem_enderium_ingot", conditionsFromItem(ModItems.ENDERIUM_INGOT))
+                .criterion("has_enderium_ingot", conditionsFromItem(ModItems.ENDERIUM_INGOT))
                 .offerTo(exporter);
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.ENDERIUM_SHOVEL)
@@ -506,7 +537,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .pattern(" E ")
                 .pattern(" S ")
                 .pattern(" S ")
-                .criterion("conditionsFromItem_enderium_ingot", conditionsFromItem(ModItems.ENDERIUM_INGOT))
+                .criterion("has_enderium_ingot", conditionsFromItem(ModItems.ENDERIUM_INGOT))
                 .offerTo(exporter);
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.ENDERIUM_HOE)
@@ -515,7 +546,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .pattern(" EE")
                 .pattern(" S ")
                 .pattern(" S ")
-                .criterion("conditionsFromItem_enderium_ingot", conditionsFromItem(ModItems.ENDERIUM_INGOT))
+                .criterion("has_enderium_ingot", conditionsFromItem(ModItems.ENDERIUM_INGOT))
                 .offerTo(exporter);
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.ENDERIUM_BOW)
@@ -525,7 +556,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .pattern(" SD")
                 .pattern("SED")
                 .pattern(" SD")
-                .criterion("conditionsFromItem_enderium_ingot", conditionsFromItem(ModItems.ENDERIUM_INGOT))
+                .criterion("has_enderium_ingot", conditionsFromItem(ModItems.ENDERIUM_INGOT))
                 .offerTo(exporter);
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.ENDERIUM_HELMET)
@@ -534,7 +565,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .pattern("EEE")
                 .pattern("ENE")
                 .pattern("   ")
-                .criterion("conditionsFromItem_enderium_ingot", conditionsFromItem(ModItems.ENDERIUM_INGOT))
+                .criterion("has_enderium_ingot", conditionsFromItem(ModItems.ENDERIUM_INGOT))
                 .offerTo(exporter);
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.ENDERIUM_CHESTPLATE)
@@ -543,7 +574,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .pattern("ENE")
                 .pattern("EEE")
                 .pattern("EEE")
-                .criterion("conditionsFromItem_enderium_ingot", conditionsFromItem(ModItems.ENDERIUM_INGOT))
+                .criterion("has_enderium_ingot", conditionsFromItem(ModItems.ENDERIUM_INGOT))
                 .offerTo(exporter);
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.ENDERIUM_LEGGINGS)
@@ -552,7 +583,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .pattern("EEE")
                 .pattern("ENE")
                 .pattern("E E")
-                .criterion("conditionsFromItem_enderium_ingot", conditionsFromItem(ModItems.ENDERIUM_INGOT))
+                .criterion("has_enderium_ingot", conditionsFromItem(ModItems.ENDERIUM_INGOT))
                 .offerTo(exporter);
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.ENDERIUM_BOOTS)
@@ -561,7 +592,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .pattern("   ")
                 .pattern("E E")
                 .pattern("ENE")
-                .criterion("conditionsFromItem_enderium_ingot", conditionsFromItem(ModItems.ENDERIUM_INGOT))
+                .criterion("has_enderium_ingot", conditionsFromItem(ModItems.ENDERIUM_INGOT))
                 .offerTo(exporter);
     }
 }

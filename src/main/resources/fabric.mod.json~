@@ -28,6 +28,7 @@
   "depends": {
     "fabricloader": ">=${loader_version}",
     "fabric": "*",
+    "fabric-lifecycle-events-v1": "*",
     "minecraft": "${minecraft_version}"
   }
 }

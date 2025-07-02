@@ -1,0 +1,29 @@
+package com.blocklegend001.immersiveores.mixin;
+
+import net.minecraft.entity.projectile.PersistentProjectileEntity;
+import net.minecraft.util.hit.BlockHitResult;
+import net.minecraft.util.hit.HitResult;
+import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.Overwrite;
+import org.spongepowered.asm.mixin.Shadow;
+
+@Mixin(PersistentProjectileEntity.class)
+public abstract class PersistentProjectileEntityMixin {
+
+    // Metodo che sovrascrive la logica di rimbalzo per evitare il rimbalzo
+
+    @Shadow public abstract void tick();
+
+    /**
+     * @author
+     * @reason
+     */
+    @Overwrite
+    public void onBlockHit(BlockHitResult hitResult) {
+        // Qui controlli il tipo di colpo e impedisci il rimbalzo
+        if (hitResult.getType() == HitResult.Type.BLOCK) {
+            // Fai in modo che la freccia non rimbalzi
+            this.tick();
+        }
+    }
+}

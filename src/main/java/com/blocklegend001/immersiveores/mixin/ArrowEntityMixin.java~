@@ -1,0 +1,34 @@
+package com.blocklegend001.immersiveores.mixin;
+
+import net.minecraft.entity.EntityType;
+import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.projectile.ArrowEntity;
+import net.minecraft.entity.projectile.PersistentProjectileEntity;
+import net.minecraft.item.BowItem;
+import net.minecraft.item.ItemStack;
+import net.minecraft.world.World;
+import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.injection.At;
+import org.spongepowered.asm.mixin.injection.Inject;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
+
+// Mixin per la gestione delle frecce
+@Mixin(ArrowEntity.class)
+public abstract class ArrowEntityMixin extends PersistentProjectileEntity {
+
+    protected ArrowEntityMixin(EntityType<? extends PersistentProjectileEntity> entityType, World world) {
+        super(entityType, world);
+    }
+
+    @Inject(method = "onHit", at = @At("HEAD"), cancellable = true)
+    public void onArrowHit(LivingEntity entity, CallbackInfo ci) {
+        // Controlliamo se la freccia è stata lanciata da un arco moddato
+        if (this.getOwner() instanceof PlayerEntity player) {
+            ItemStack bowStack = player.getMainHandStack();
+            if (bowStack.getItem() instanceof BowItem) {
+                this.remove(RemovalReason.KILLED);
+            }
+        }
+    }
+}

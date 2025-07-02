@@ -1,0 +1,41 @@
+package com.blocklegend001.immersiveores.mixin;
+
+import com.blocklegend001.immersiveores.event.ModEventHandler;
+import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.damage.DamageSource;
+import net.minecraft.entity.damage.DamageTypes;
+import net.minecraft.entity.projectile.ArrowEntity;
+import net.minecraft.server.network.ServerPlayerEntity;
+import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.injection.At;
+import org.spongepowered.asm.mixin.injection.Inject;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
+
+@Mixin(LivingEntity.class)
+public class LivingEntityMixin {
+
+    @Inject(method = "handleFallDamage", at = @At("HEAD"), cancellable = true)
+    public void onHandleFallDamage(float fallDistance, float damageMultiplier, DamageSource source, CallbackInfoReturnable<Boolean> cir) {
+        if (source.isOf(DamageTypes.FALL)) {
+            if (ModEventHandler.shouldPreventFallDamage()) {
+                cir.setReturnValue(false);
+            }
+        }
+    }
+
+    @Inject(method = "damage", at = @At("HEAD"), cancellable = true)
+    public void onDamage(DamageSource source, float amount, CallbackInfoReturnable<Boolean> cir) {
+        if (source instanceof ArrowEntity arrow) {
+            // Verifica se il danno proviene da un arco moddato
+            LivingEntity owner = (LivingEntity) arrow.getOwner();
+            if (owner instanceof ServerPlayerEntity player) {
+                // Recupera il tag dai dati persistenti del giocatore
+                if (player.getPersistentData().getBoolean("fromModdedBow")) {
+                    // Personalizza il comportamento (ad esempio, disabilitare il rimbalzo)
+                    ((LivingEntity) (Object) this).maxHurtTime = 0;
+                    // Puoi aggiungere altre logiche personalizzate qui
+                }
+            }
+        }
+    }
+}
