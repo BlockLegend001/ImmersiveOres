@@ -10,28 +10,28 @@ public class ModToolTiers {
 
     public static final ToolMaterial VIBRANIUM = new ToolMaterial(
             ModTags.Blocks.INCORRECT_FOR_VIBRANIUM_TOOL,
-            0,
-            VibraniumConfig.speedVibraniumTier,
-            VibraniumConfig.attackDamageBonusVibraniumTier,
-            VibraniumConfig.enchantmentValueVibraniumTier,
+            VibraniumConfig.DURABILITY_VIBRANIUM.get(),
+            VibraniumConfig.SPEED_VIBRANIUM_TIER.get(),
+            VibraniumConfig.ATTACK_DAMAGE_BONUS_VIBRANIUM_TIER.get(),
+            VibraniumConfig.ENCHANTMENT_VALUE_VIBRANIUM_TIER.get(),
             ModTags.Items.VIBRANIUM_REPAIRS
     );
 
     public static final ToolMaterial VULPUS = new ToolMaterial(
             ModTags.Blocks.INCORRECT_FOR_VULPUS_TOOL,
-            0,
-            VulpusConfig.speedVulpusTier,
-            VulpusConfig.attackDamageBonusVulpusTier,
-            VulpusConfig.enchantmentValueVulpusTier,
+            VulpusConfig.DURABILITY_VULPUS.get(),
+            VulpusConfig.SPEED_VULPUS_TIER.get(),
+            VulpusConfig.ATTACK_DAMAGE_BONUS_VULPUS_TIER.get(),
+            VulpusConfig.ENCHANTMENT_VALUE_VULPUS_TIER.get(),
             ModTags.Items.VULPUS_REPAIRS
     );
 
     public static final ToolMaterial ENDERIUM = new ToolMaterial(
             ModTags.Blocks.INCORRECT_FOR_ENDERIUM_TOOL,
-            0,
-            EnderiumConfig.speedEnderiumTier,
-            EnderiumConfig.attackDamageBonusEnderiumTier,
-            EnderiumConfig.enchantmentValueEnderiumTier,
+            EnderiumConfig.DURABILITY_ENDERIUM.get(),
+            EnderiumConfig.SPEED_ENDERIUM_TIER.get(),
+            EnderiumConfig.ATTACK_DAMAGE_BONUS_ENDERIUM_TIER.get(),
+            EnderiumConfig.ENCHANTMENT_VALUE_ENDERIUM_TIER.get(),
             ModTags.Items.ENDERIUM_REPAIRS
     );
 }

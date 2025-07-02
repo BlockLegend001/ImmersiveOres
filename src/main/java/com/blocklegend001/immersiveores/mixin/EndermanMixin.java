@@ -22,7 +22,7 @@ public abstract class EndermanMixin extends Entity {
     @Inject(at = @At("HEAD"), cancellable = true, method = "isBeingStaredBy")
     private void isPlayerWearingEnderMask(Player player, CallbackInfoReturnable<Boolean> cir) {
         ItemStack stack = player.getInventory().getArmor(3);
-        if (stack.getItem() == ModItems.ENDERIUM_HELMET.get() && EnderiumConfig.endermanWillNotBeAngryWithYouEnderium) {
+        if (stack.getItem() == ModItems.ENDERIUM_HELMET.get() && EnderiumConfig.ENDERMAN_WILL_NOT_BE_ANGRY_WITH_YOU_ENDERIUM.get()) {
             cir.setReturnValue(false);
         }
     }
