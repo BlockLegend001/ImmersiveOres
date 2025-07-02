@@ -12,3 +12,6 @@
 /gamemode creative
 /gamemode spectator
 /gamemode creative
+/gamemode survival
+/time set night
+/gamemode survival
