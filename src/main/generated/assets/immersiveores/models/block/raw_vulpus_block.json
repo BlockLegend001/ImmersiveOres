@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "immersiveores:block/raw_vulpus_block"
+  }
+}
