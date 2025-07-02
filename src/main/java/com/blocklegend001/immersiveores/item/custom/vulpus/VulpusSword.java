@@ -1,15 +1,22 @@
 package com.blocklegend001.immersiveores.item.custom.vulpus;
 
+import com.blocklegend001.immersiveores.config.EnderiumConfig;
+import com.blocklegend001.immersiveores.config.VulpusConfig;
+import com.blocklegend001.immersiveores.item.ModToolTiers;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.core.Holder;
 import net.minecraft.core.Registry;
+import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
+import net.minecraft.tags.BlockTags;
+import net.minecraft.util.Unit;
+import net.minecraft.world.InteractionHand;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
@@ -26,18 +33,34 @@ import java.util.List;
 import java.util.function.Consumer;
 
 public class VulpusSword extends Item {
-    public VulpusSword(ToolMaterial material, float attackDamage, float attackSpeed, Properties settings) {
-        super(computeSettings(material, settings, attackDamage, attackSpeed));
+    private static Properties createSettings(Properties properties, boolean unbreakable, int durability) {
+        properties.durability(durability);
+
+        if (unbreakable) {
+            properties.component(DataComponents.UNBREAKABLE, Unit.INSTANCE);
+        }
+        return properties;
     }
 
-    private static Properties computeSettings(ToolMaterial material, Properties settings, float attackDamage, float attackSpeed) {
-        settings.sword(wrapMaterial(material, material.durability()), attackDamage, attackSpeed);
-        return settings;
+    public VulpusSword(ModToolTiers material, float attackDamage, float attackSpeed, Properties settings) {
+        super(
+                material.applySwordProperties(
+                        createSettings(settings, VulpusConfig.UNBREAKABLE_VULPUS.get(), VulpusConfig.DURABILITY_VULPUS.get()),
+                        attackDamage,
+                        attackSpeed
+                )
+        );
     }
 
     @Override
     public void hurtEnemy(ItemStack stack, LivingEntity target, LivingEntity attacker) {
         target.setRemainingFireTicks(15);
+
+        if (!VulpusConfig.UNBREAKABLE_VULPUS.get()) {
+            attacker.getMainHandItem().hurtAndBreak(1, attacker,
+                    LivingEntity.getSlotForHand(InteractionHand.MAIN_HAND));
+        }
+
         if (!(attacker instanceof Player player)) return;
 
         Level world = player.level();
@@ -78,22 +101,13 @@ public class VulpusSword extends Item {
         }
     }
 
-    private static ToolMaterial wrapMaterial(ToolMaterial toolMaterial, int durability) {
-        return new ToolMaterial(
-                toolMaterial.incorrectBlocksForDrops(),
-                durability,
-                toolMaterial.speed(),
-                toolMaterial.attackDamageBonus(),
-                toolMaterial.enchantmentValue(),
-                toolMaterial.repairItems()
-        );
-    }
-
     @Override
     public void appendHoverText(ItemStack pStack, TooltipContext p_333372_, TooltipDisplay p_396484_, Consumer<Component> consumer, TooltipFlag p_41424_) {
         super.appendHoverText(pStack, p_333372_, p_396484_, consumer, p_41424_);
         if(Screen.hasShiftDown()) {
-            consumer.accept(Component.translatable("tooltip.immersiveores.unbreakble.tooltip").withStyle(ChatFormatting.RED));
+            if (VulpusConfig.UNBREAKABLE_VULPUS.get()) {
+                consumer.accept(Component.translatable("tooltip.immersiveores.unbreakble.tooltip").withStyle(ChatFormatting.RED));
+            }
             consumer.accept(Component.translatable("tooltip.immersiveores.immunetofire.tooltip").withStyle(ChatFormatting.RED));
             consumer.accept(Component.translatable("tooltip.immersiveores.cansetmobonfire.tooltip").withStyle(ChatFormatting.RED));
         } else {

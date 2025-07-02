@@ -1,15 +1,21 @@
 package com.blocklegend001.immersiveores.item.custom.vulpus;
 
-import com.blocklegend001.immersiveores.util.BowTier;
+import com.blocklegend001.immersiveores.config.VulpusConfig;
+import com.blocklegend001.immersiveores.util.map.ArrowCountMap;
+import com.blocklegend001.immersiveores.util.tools.bow.BowTier;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.core.Holder;
 import net.minecraft.core.Registry;
+import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
+import net.minecraft.util.Unit;
+import net.minecraft.world.InteractionHand;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.item.*;
@@ -18,15 +24,27 @@ import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.phys.Vec3;
 
 import java.util.List;
+import java.util.Objects;
 import java.util.function.Consumer;
 
 public class VulpusBow extends BowItem {
     private final BowTier tier;
+    private final int ARROW_COUNT = VulpusConfig.ARROW_COUNT_VULPUS_BOW.get();
 
-    public VulpusBow(BowTier tier, Properties properties) {
-        super(properties.durability(tier.getUses()).enchantable(tier.getEnchantmentValue()));
+    private static Properties createSettings(Properties properties, boolean unbreakable, int durability) {
+        properties.durability(durability);
+
+        if (unbreakable) {
+            properties.component(DataComponents.UNBREAKABLE, Unit.INSTANCE);
+        }
+        return properties;
+    }
+
+    public VulpusBow(com.blocklegend001.immersiveores.util.tools.bow.BowTier tier, Properties properties) {
+        super(createSettings(properties, VulpusConfig.UNBREAKABLE_VULPUS.get(), VulpusConfig.DURABILITY_VULPUS.get()));
         this.tier = tier;
     }
 
@@ -36,21 +54,40 @@ public class VulpusBow extends BowItem {
             ItemStack arrowStack = player.getProjectile(stack);
 
             Registry<Enchantment> enchantmentRegistry = world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT);
+
             Holder<Enchantment> enchantmentReference = enchantmentRegistry.getOrThrow(Enchantments.INFINITY);
-            boolean hasInfinity = EnchantmentHelper.getTagEnchantmentLevel(enchantmentReference, player.getMainHandItem()) > 0;
+            boolean hasInfinity = EnchantmentHelper.getItemEnchantmentLevel(enchantmentReference, player.getMainHandItem()) > 0;
+
+            Holder<Enchantment> enchantmentReferencePower = enchantmentRegistry.getOrThrow(Enchantments.INFINITY);
+            int powerLevel = EnchantmentHelper.getItemEnchantmentLevel(enchantmentReferencePower, player.getMainHandItem());
+
+            Holder<Enchantment> enchantmentReferencePunch = enchantmentRegistry.getOrThrow(Enchantments.INFINITY);
+            int punchLevel = EnchantmentHelper.getItemEnchantmentLevel(enchantmentReferencePunch, player.getMainHandItem());
 
             int charge = getUseDuration(stack, entityLiving) - timeLeft;
             float arrowVelocity = getPowerForTime(charge);
             if (arrowVelocity >= 0.1) {
                 if (!world.isClientSide) {
-                    int arrowCount = 3;
                     boolean isPrimaryArrow = true;
 
-                    for (int i = 0; i < arrowCount; i++) {
+                    for (int i = 0; i < ARROW_COUNT; i++) {
                         ArrowItem arrowItem = (ArrowItem) (arrowStack.getItem() instanceof ArrowItem ? arrowStack.getItem() : Items.ARROW);
                         AbstractArrow arrowEntity = arrowItem.createArrow(world, arrowStack, player, stack);
+                        int damage = stack.getOrDefault(DataComponents.DAMAGE, 0);
 
                         arrowEntity.shootFromRotation(player, player.getXRot(), player.getYRot(), 0.0F, arrowVelocity * 3.0F, 1.0F);
+
+                        if (powerLevel > 0) {
+                            arrowEntity.setBaseDamage(damage + (powerLevel * 0.5 + 1.0));
+                        }
+
+                        if (punchLevel > 0) {
+                            double resistance = Math.max(0.0, 1.0 - entityLiving.getAttributeValue(Attributes.KNOCKBACK_RESISTANCE));
+                            double factor = punchLevel * 0.6 * resistance;
+                            Vec3 knockbackVec = arrowEntity.getDeltaMovement().normalize().multiply(factor, factor, factor);
+
+                            arrowEntity.addDeltaMovement(new Vec3(knockbackVec.x, 0.1, knockbackVec.z));
+                        }
 
                         if (arrowVelocity == 1.0F) {
                             arrowEntity.setCritArrow(true);
@@ -76,22 +113,50 @@ public class VulpusBow extends BowItem {
                         player.getInventory().removeItem(arrowStack);
                     }
                 }
+                player.getMainHandItem().hurtAndBreak(1, player,
+                        LivingEntity.getSlotForHand(InteractionHand.MAIN_HAND));
             }
         }
         return false;
     }
 
     @Override
-    public void appendHoverText(ItemStack pStack, TooltipContext p_333372_, TooltipDisplay p_396484_, Consumer<Component> consumer, TooltipFlag p_41424_) {
-        super.appendHoverText(pStack, p_333372_, p_396484_, consumer, p_41424_);
-        if(Screen.hasShiftDown()) {
-            consumer.accept(Component.literal("+" + this.tier.getAttackDamageBonus() + " ")
-                    .append(Component.translatable("tooltip.immersiveores.damage.tooltip")).withStyle(ChatFormatting.RED));
-            consumer.accept(Component.translatable("tooltip.immersiveores.unbreakble.tooltip").withStyle(ChatFormatting.RED));
-            consumer.accept(Component.translatable("tooltip.immersiveores.immunetofire.tooltip").withStyle(ChatFormatting.RED));
-            consumer.accept(Component.translatable("tooltip.immersiveores.shoot3arrows.tooltip").withStyle(ChatFormatting.RED));
+    public void appendHoverText(ItemStack pStack, TooltipContext pContext, TooltipDisplay display, Consumer<Component> components, TooltipFlag pTooltipFlag) {
+        int arrowCount = getArrowCount(pStack);
+        ChatFormatting color = ChatFormatting.RED;
+
+        if (Screen.hasShiftDown()) {
+            Component damage = Component.literal("+" + this.tier.getAttackDamageBonus() + " ")
+                    .append(Component.translatable("tooltip.immersiveores.damage.tooltip"))
+                    .withStyle(color);
+            components.accept(damage);
+
+            if (VulpusConfig.UNBREAKABLE_VULPUS.get()) {
+                Component unbreakable = Component.translatable("tooltip.immersiveores.unbreakble.tooltip")
+                        .withStyle(color);
+                components.accept(unbreakable);
+            }
+
+            Component fireImmune = Component.translatable("tooltip.immersiveores.immunetofire.tooltip")
+                    .withStyle(color);
+            components.accept(fireImmune);
+
+            Component arrow = Component.literal("Can shoot ")
+                    .withStyle(color)
+                    .append(Component.literal(String.valueOf(arrowCount)).withStyle(ChatFormatting.YELLOW))
+                    .append(Component.literal(" Flaming Arrows").withStyle(color));
+            components.accept(arrow);
         } else {
-            consumer.accept(Component.translatable("tooltip.immersiveores.pressshiftformoreinfo.tooltip").withStyle(ChatFormatting.RED));
+            Component pressShift = Component.translatable("tooltip.immersiveores.pressshiftformoreinfo.tooltip")
+                    .withStyle(color);
+            components.accept(pressShift);
         }
+    }
+
+    private int getArrowCount(ItemStack stack) {
+        if (ArrowCountMap.getVulpusBowArrowCount().containsKey(stack.getItem())) {
+            return ArrowCountMap.getVulpusBowArrowCount().get(stack.getItem());
+        }
+        return 0;
     }
 }

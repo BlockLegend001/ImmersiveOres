@@ -84,10 +84,6 @@ public class ModTags {
         public static final TagKey<Item> VULPUS_ARMOR = tag("vulpus_armor");
         public static final TagKey<Item> ENDERIUM_ARMOR = tag("enderium_armor");
 
-        public static final TagKey<Item> VIBRANIUM_REPAIRS = tag("vibranium_repairs");
-        public static final TagKey<Item> VULPUS_REPAIRS = tag("vulpus_repairs");
-        public static final TagKey<Item> ENDERIUM_REPAIRS = tag("enderium_repairs");
-
         private static TagKey<Item> tag(String name) {
             return TagKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(ImmersiveOres.MODID, name));
         }

@@ -1,15 +1,23 @@
 package com.blocklegend001.immersiveores.item.custom.vibranium;
 
+import com.blocklegend001.immersiveores.config.EnderiumConfig;
+import com.blocklegend001.immersiveores.config.VibraniumConfig;
+import com.blocklegend001.immersiveores.item.ModToolTiers;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.core.Holder;
 import net.minecraft.core.Registry;
+import net.minecraft.core.RegistryAccess;
+import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
+import net.minecraft.tags.BlockTags;
+import net.minecraft.util.Unit;
+import net.minecraft.world.InteractionHand;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
@@ -26,18 +34,31 @@ import java.util.List;
 import java.util.function.Consumer;
 
 public class VibraniumSword extends Item {
+    private static Properties createSettings(Properties properties, boolean unbreakable, int durability) {
+        properties.durability(durability);
 
-    public VibraniumSword(ToolMaterial material, float attackDamage, float attackSpeed, Properties settings) {
-        super(computeSettings(material, settings, attackDamage, attackSpeed));
+        if (unbreakable) {
+            properties.component(DataComponents.UNBREAKABLE, Unit.INSTANCE);
+        }
+        return properties;
     }
 
-    private static Properties computeSettings(ToolMaterial material, Properties settings, float attackDamage, float attackSpeed) {
-        settings.sword(wrapMaterial(material, material.durability()), attackDamage, attackSpeed);
-        return settings;
+    public VibraniumSword(ModToolTiers material, float attackDamage, float attackSpeed, Properties settings) {
+        super(
+                material.applySwordProperties(
+                        createSettings(settings, VibraniumConfig.UNBREAKABLE_VIBRANIUM.get(), VibraniumConfig.DURABILITY_VIBRANIUM.get()),
+                        attackDamage,
+                        attackSpeed
+                )
+        );
     }
-
     @Override
     public void hurtEnemy(ItemStack stack, LivingEntity target, LivingEntity attacker) {
+        if (!VibraniumConfig.UNBREAKABLE_VIBRANIUM.get()) {
+            attacker.getMainHandItem().hurtAndBreak(1, attacker,
+                    LivingEntity.getSlotForHand(InteractionHand.MAIN_HAND));
+        }
+
         if (!(attacker instanceof Player player)) return;
 
         Level world = player.level();
@@ -52,11 +73,11 @@ public class VibraniumSword extends Item {
                     player.getBoundingBox().inflate(sweepRadius, 0.25, sweepRadius),
                     e -> e != player && e != target && e.isAlive());
 
-            Registry<Enchantment> enchantmentRegistry = world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT);
-            Holder.Reference<Enchantment> enchantmentReference = enchantmentRegistry.getOrThrow(Enchantments.SWEEPING_EDGE);
+                Registry<Enchantment> enchantmentRegistry = world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT);
+                Holder.Reference<Enchantment> enchantmentReference = enchantmentRegistry.getOrThrow(Enchantments.SWEEPING_EDGE);
 
-            int sweepingLevel = EnchantmentHelper.getItemEnchantmentLevel(enchantmentReference, player.getMainHandItem());
-            float sweepDamage = 1.0F + sweepingLevel * 1.0F;
+                int sweepingLevel = EnchantmentHelper.getItemEnchantmentLevel(enchantmentReference, player.getMainHandItem());
+                float sweepDamage = 1.0F + sweepingLevel * 1.0F;
 
             for (LivingEntity entity : nearby) {
                 entity.hurt(player.damageSources().playerAttack(player), sweepDamage);
@@ -78,21 +99,13 @@ public class VibraniumSword extends Item {
         }
     }
 
-    private static ToolMaterial wrapMaterial(ToolMaterial toolMaterial, int durability) {
-        return new ToolMaterial(
-                toolMaterial.incorrectBlocksForDrops(),
-                durability,
-                toolMaterial.speed(),
-                toolMaterial.attackDamageBonus(),
-                toolMaterial.enchantmentValue(),
-                toolMaterial.repairItems()
-        );
-    }
     @Override
     public void appendHoverText(ItemStack pStack, TooltipContext p_333372_, TooltipDisplay p_396484_, Consumer<Component> consumer, TooltipFlag p_41424_) {
         super.appendHoverText(pStack, p_333372_, p_396484_, consumer, p_41424_);
         if(Screen.hasShiftDown()) {
-            consumer.accept(Component.translatable("tooltip.immersiveores.unbreakble.tooltip").withStyle(ChatFormatting.LIGHT_PURPLE));
+            if (VibraniumConfig.UNBREAKABLE_VIBRANIUM.get()) {
+                consumer.accept(Component.translatable("tooltip.immersiveores.unbreakble.tooltip").withStyle(ChatFormatting.LIGHT_PURPLE));
+            }
             consumer.accept(Component.translatable("tooltip.immersiveores.immunetofire.tooltip").withStyle(ChatFormatting.LIGHT_PURPLE));
         } else {
             consumer.accept(Component.translatable("tooltip.immersiveores.pressshiftformoreinfo.tooltip").withStyle(ChatFormatting.LIGHT_PURPLE));

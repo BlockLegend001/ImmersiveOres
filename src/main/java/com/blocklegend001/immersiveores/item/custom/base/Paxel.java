@@ -1,12 +1,13 @@
 package com.blocklegend001.immersiveores.item.custom.base;
 
+import com.blocklegend001.immersiveores.item.ModToolTiers;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.core.component.DataComponents;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.TagKey;
+import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
@@ -22,48 +23,38 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.Map;
 import java.util.Optional;
+import java.util.Set;
 
 public class Paxel extends Item {
+    private static Set<TagKey<Block>> paxelMineable = null;
+
+    public static Set<TagKey<Block>> getPaxelMineable() {
+        if (paxelMineable == null) {
+            paxelMineable = Set.of(
+                    BlockTags.MINEABLE_WITH_PICKAXE,
+                    BlockTags.MINEABLE_WITH_SHOVEL,
+                    BlockTags.MINEABLE_WITH_AXE
+            );
+        }
+        return paxelMineable;
+    }
 
     private static final Map<Block, BlockState> FLATTENABLES = Shovel.getFlattenables();
     private static final Map<Block, Block> STRIPPABLES = Axe.getStrippables();
-    private final TagKey<Block> paxelMineable;
-    private final ToolMaterial tier;
 
-    public Paxel(ToolMaterial tier, TagKey<Block> paxelMineable, float attackDamage, float attackSpeed, Properties properties) {
-        super(computeProperties(tier, attackDamage, attackSpeed, properties));
-        this.tier = tier;
-        this.paxelMineable = paxelMineable;
-    }
-
-    public ToolMaterial getTier() {
-        return tier;
+    public Paxel(ModToolTiers material, float attackDamage, float attackSpeed, Properties settings) {
+        super(material.applyPaxelProperties(settings, getPaxelMineable(), attackDamage, attackSpeed));
     }
 
     @Override
-    public float getDestroySpeed(ItemStack stack, BlockState state) {
-        stack.get(DataComponents.TOOL);
-        return state.is(paxelMineable) ? tier.speed() : 1.0F;
-    }
-
-    @Override
-    public boolean mineBlock(ItemStack stack, Level world, BlockState state, BlockPos pos, LivingEntity user) {
-        if (!world.isClientSide() && state.is(paxelMineable)) {
-            world.setBlock(pos, state, 11);
-            user.getMainHandItem().hurtAndBreak(1, user,
-                    LivingEntity.getSlotForHand(user.getUsedItemHand()));
-            return true;
+    public boolean mineBlock(ItemStack stack, Level level, BlockState state, BlockPos pos, LivingEntity entity) {
+        if (state.getDestroySpeed(level, pos) != 0.0F) {
+            entity.getMainHandItem().hurtAndBreak(1, entity,
+                    LivingEntity.getSlotForHand(InteractionHand.MAIN_HAND));
         }
-        return false;
+        return super.mineBlock(stack, level, state, pos, entity);
     }
 
-    private static Properties computeProperties(ToolMaterial tier, float attackDamage, float attackSpeed, Properties properties) {
-        properties.pickaxe(wrapMaterial(tier, tier.durability()), attackDamage, attackSpeed);
-        properties.shovel(wrapMaterial(tier, tier.durability()), attackDamage, attackSpeed);
-        properties.axe(wrapMaterial(tier, tier.durability()), attackDamage, attackSpeed);
-        properties.tool(tier, BlockTags.MINEABLE_WITH_PICKAXE, attackDamage, attackSpeed, 0.0F);
-        return properties;
-    }
     @Override
     public InteractionResult useOn(UseOnContext context) {
         Level world = context.getLevel();
@@ -135,17 +126,6 @@ public class Paxel extends Item {
                 }
             }
         }
-    }
-
-    private static ToolMaterial wrapMaterial(ToolMaterial toolMaterial, int durability) {
-        return new ToolMaterial(
-                toolMaterial.incorrectBlocksForDrops(),
-                durability,
-                toolMaterial.speed(),
-                toolMaterial.attackDamageBonus(),
-                toolMaterial.enchantmentValue(),
-                toolMaterial.repairItems()
-        );
     }
 
     private Optional<BlockState> getStripped(BlockState state) {
