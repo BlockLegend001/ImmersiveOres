@@ -15,7 +15,7 @@ import java.util.EnumMap;
 
 public final class ModArmorMaterials {
 
-    public static final ArmorMaterial VIBRANIUM = new ArmorMaterial(0, Util.make(new EnumMap<>(ArmorType.class),
+    public static final ArmorMaterial VIBRANIUM = new ArmorMaterial(VibraniumConfig.DURABILITY_VIBRANIUM.get(), Util.make(new EnumMap<>(ArmorType.class),
             attribute -> {
                 attribute.put(ArmorType.BOOTS, VibraniumConfig.PROTECTION_VALUE_VIBRANIUM_BOOTS.get());
                 attribute.put(ArmorType.LEGGINGS, VibraniumConfig.PROTECTION_VALUE_VIBRANIUM_LEGGINGS.get());
@@ -26,7 +26,7 @@ public final class ModArmorMaterials {
             ModTags.Items.VIBRANIUM_REPAIRS,
             ResourceLocation.fromNamespaceAndPath(ImmersiveOres.MODID, "vibranium"));
 
-    public static final ArmorMaterial VULPUS = new ArmorMaterial(0, Util.make(new EnumMap<>(ArmorType.class),
+    public static final ArmorMaterial VULPUS = new ArmorMaterial(VulpusConfig.DURABILITY_VULPUS.get(), Util.make(new EnumMap<>(ArmorType.class),
             attribute -> {
                 attribute.put(ArmorType.BOOTS, VulpusConfig.PROTECTION_VALUE_VULPUS_BOOTS.get());
                 attribute.put(ArmorType.LEGGINGS, VulpusConfig.PROTECTION_VALUE_VULPUS_LEGGINGS.get());
@@ -37,7 +37,7 @@ public final class ModArmorMaterials {
             ModTags.Items.VULPUS_REPAIRS,
             ResourceLocation.fromNamespaceAndPath(ImmersiveOres.MODID, "vulpus"));
 
-    public static final ArmorMaterial ENDERIUM = new ArmorMaterial(0, Util.make(new EnumMap<>(ArmorType.class),
+    public static final ArmorMaterial ENDERIUM = new ArmorMaterial(EnderiumConfig.DURABILITY_ENDERIUM.get(), Util.make(new EnumMap<>(ArmorType.class),
             attribute -> {
                 attribute.put(ArmorType.BOOTS, EnderiumConfig.PROTECTION_VALUE_ENDERIUM_BOOTS.get());
                 attribute.put(ArmorType.LEGGINGS, EnderiumConfig.PROTECTION_VALUE_ENDERIUM_LEGGINGS.get());
