@@ -5,3 +5,6 @@
 /gamemode creative
 /gamemode survival
 /summon minecraft:slime
+/gamemode survival
+/time set night
+/gamemode survival
