@@ -83,10 +83,9 @@ public class VulpusBow extends BowItem {
             float arrowVelocity = getPowerForTime(charge);
             if (arrowVelocity >= 0.1) {
                 if (!world.isClientSide) {
-                    int arrowCount = 3;
                     boolean isPrimaryArrow = true;
 
-                    for (int i = 0; i < arrowCount; i++) {
+                    for (int i = 0; i < ARROW_COUNT; i++) {
                         ArrowItem arrowItem = (ArrowItem) (arrowStack.getItem() instanceof ArrowItem ? arrowStack.getItem() : Items.ARROW);
                         AbstractArrow arrowEntity = arrowItem.createArrow(world, arrowStack, player, stack);
 
