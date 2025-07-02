@@ -40,7 +40,7 @@ public class VulpusExcavator extends Excavator {
             components.add(Component.translatable("tooltip.immersiveores.immunetofire.tooltip").withStyle(ChatFormatting.RED));
 
             Component text = Component.literal("Dig area: ")
-                    .withStyle(ChatFormatting.GRAY)
+                    .withStyle(ChatFormatting.RED)
                     .append(Component.literal(widht + "x1").withStyle(ChatFormatting.YELLOW));
 
             components.add(text);

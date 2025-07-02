@@ -41,7 +41,7 @@ public class VibraniumExcavator extends Excavator {
             components.add(Component.translatable("tooltip.immersiveores.immunetofire.tooltip").withStyle(ChatFormatting.LIGHT_PURPLE));
 
             Component text = Component.literal("Dig area: ")
-                    .withStyle(ChatFormatting.GRAY)
+                    .withStyle(ChatFormatting.LIGHT_PURPLE)
                     .append(Component.literal(widht + "x1").withStyle(ChatFormatting.YELLOW));
 
             components.add(text);
