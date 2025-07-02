@@ -1,159 +1,237 @@
 package com.blocklegend001.immersiveores.config;
 
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParser;
+import net.neoforged.neoforge.common.ModConfigSpec;
 
-import java.io.File;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
+public final class VulpusConfig {
+    public static final ModConfigSpec COMMON;
 
-import static com.blocklegend001.immersiveores.ImmersiveOres.LOGGER;
+    // Armor Protection and Resistance
+    public static ModConfigSpec.IntValue TOUGHNESS_VALUE_VULPUS_ARMOR;
+    public static ModConfigSpec.IntValue ENCHANTMENT_VALUE_VULPUS_ARMOR;
+    public static ModConfigSpec.IntValue KNOCKBACK_RESISTANCE_VALUE_VULPUS_ARMOR;
+    public static ModConfigSpec.IntValue PROTECTION_VALUE_VULPUS_BOOTS;
+    public static ModConfigSpec.IntValue PROTECTION_VALUE_VULPUS_LEGGINGS;
+    public static ModConfigSpec.IntValue PROTECTION_VALUE_VULPUS_CHESTPLATE;
+    public static ModConfigSpec.IntValue PROTECTION_VALUE_VULPUS_HELMET;
 
-public class VulpusConfig {
+    // Armor Special Effects and Abilities
+    public static ModConfigSpec.BooleanValue SPEED_II_VULPUS_ARMOR;
+    public static ModConfigSpec.BooleanValue JUMP_II_VULPUS_ARMOR;
+    public static ModConfigSpec.BooleanValue NIGHT_VISION_VULPUS_ARMOR;
+    public static ModConfigSpec.BooleanValue FIRE_RESISTANCE_VULPUS_ARMOR;
+    public static ModConfigSpec.BooleanValue IMMUNE_TO_FALL_DAMAGE_VULPUS_ARMOR;
+    public static ModConfigSpec.BooleanValue NEVER_LOSE_HUNGER_VULPUS_ARMOR;
+    public static ModConfigSpec.BooleanValue CAN_WALK_ON_POWDERED_SNOW_VULPUS;
+    public static ModConfigSpec.BooleanValue MAKES_PIGLINS_NEUTRAL_VULPUS;
 
-    private static final File CONFIG_FILE = new File("config/immersiveores/vulpus-common.toml");
+    // Bow Settings
+    public static ModConfigSpec.IntValue ENCHANTMENT_VALUE_VULPUS_BOW;
+    public static ModConfigSpec.IntValue DAMAGE_VULPUS_BOW;
+    public static ModConfigSpec.IntValue ARROW_COUNT_VULPUS_BOW;
 
-    public static int toughnessValueVulpusArmor = 150;
-    public static int enchantmentValueVulpusArmor = 85;
-    public static int knockbackResistanceValueVulpusArmor = 2;
-    public static int protectionValueVulpusBoots = 20;
-    public static int protectionValueVulpusLeggings = 25;
-    public static int protectionValueVulpusChestplate = 35;
-    public static int protectionValueVulpusHelmet = 20;
+    // Tool Tier Base Properties
+    public static ModConfigSpec.IntValue SPEED_VULPUS_TIER;
+    public static ModConfigSpec.IntValue ATTACK_DAMAGE_BONUS_VULPUS_TIER;
+    public static ModConfigSpec.IntValue ENCHANTMENT_VALUE_VULPUS_TIER;
+    public static ModConfigSpec.IntValue DURABILITY_VULPUS;
+    public static ModConfigSpec.BooleanValue UNBREAKABLE_VULPUS;
 
-    public static boolean speedIIVulpusArmor = true;
-    public static boolean jumpIIVulpusArmor = true;
-    public static boolean nightVisionVulpusArmor = true;
-    public static boolean fireResistanceVulpusArmor = true;
-    public static boolean immuneToFallDamageVulpusArmor = true;
-    public static boolean neverLoseHungerVulpusArmor = true;
-    public static boolean canWalkOnPowderedSnowVulpus = true;
-    public static boolean makesPiglinsNeutralVulpus = true;
+    // Pickaxe Stats
+    public static ModConfigSpec.IntValue ATTACK_DAMAGE_VULPUS_PICKAXE;
+    public static ModConfigSpec.DoubleValue ATTACK_SPEED_VULPUS_PICKAXE;
 
-    public static int speedVulpusTier = 75;
-    public static int enchantmentValueVulpusBow = 5;
-    public static int damageVulpusBow = 10;
-    public static int attackDamageBonusVulpusTier = 20;
-    public static int enchantmentValueVulpusTier = 85;
-    public static int attackDamageVulpusPickaxe = 10;
-    public static double attackSpeedVulpusPickaxe = 2.0;
-    public static int attackDamageVulpusAxe = 15;
-    public static double attackSpeedVulpusAxe = 2.0;
-    public static int attackDamageVulpusShovel = 12;
-    public static double attackSpeedVulpusShovel = 2.0;
-    public static int attackDamageVulpusSword = 14;
-    public static double attackSpeedVulpusSword = 2.0;
-    public static int attackDamageVulpusHoe = 10;
-    public static double attackSpeedVulpusHoe = 2.0;
-    public static int attackDamageVulpusPaxel = 18;
-    public static double attackSpeedVulpusPaxel = 2.0;
-    public static int attackDamageVulpusHammer = 17;
-    public static double attackSpeedVulpusHammer = 2.0;
-    public static int attackDamageVulpusExcavator = 17;
-    public static double attackSpeedVulpusExcavator = 2.0;
+    // Axe Stats
+    public static ModConfigSpec.IntValue ATTACK_DAMAGE_VULPUS_AXE;
+    public static ModConfigSpec.DoubleValue ATTACK_SPEED_VULPUS_AXE;
 
-    public static void loadConfig() {
-        LOGGER.info("Loading Vulpus Config...");
-        File configDir = new File("config/immersiveores");
-        if (!configDir.exists()) {
-            configDir.mkdirs();
-        }
+    // Shovel Stats
+    public static ModConfigSpec.IntValue ATTACK_DAMAGE_VULPUS_SHOVEL;
+    public static ModConfigSpec.DoubleValue ATTACK_SPEED_VULPUS_SHOVEL;
 
-        if (!CONFIG_FILE.exists()) {
-            saveConfig();
-        } else {
-            try (FileReader reader = new FileReader(CONFIG_FILE)) {
-                JsonObject config = JsonParser.parseReader(reader).getAsJsonObject();
+    // Sword Stats
+    public static ModConfigSpec.IntValue ATTACK_DAMAGE_VULPUS_SWORD;
+    public static ModConfigSpec.DoubleValue ATTACK_SPEED_VULPUS_SWORD;
 
-                toughnessValueVulpusArmor = config.get("toughnessValueVulpusArmor").getAsInt();
-                enchantmentValueVulpusArmor = config.get("enchantmentValueVulpusArmor").getAsInt();
-                knockbackResistanceValueVulpusArmor = config.get("knockbackResistanceValueVulpusArmor").getAsInt();
-                protectionValueVulpusBoots = config.get("protectionValueVulpusBoots").getAsInt();
-                protectionValueVulpusLeggings = config.get("protectionValueVulpusLeggings").getAsInt();
-                protectionValueVulpusChestplate = config.get("protectionValueVulpusChestplate").getAsInt();
-                protectionValueVulpusHelmet = config.get("protectionValueVulpusHelmet").getAsInt();
-                speedIIVulpusArmor = config.get("speedIIVulpusArmor").getAsBoolean();
-                jumpIIVulpusArmor = config.get("jumpIIVulpusArmor").getAsBoolean();
-                nightVisionVulpusArmor = config.get("nightVisionVulpusArmor").getAsBoolean();
-                fireResistanceVulpusArmor = config.get("fireResistanceVulpusArmor").getAsBoolean();
-                immuneToFallDamageVulpusArmor = config.get("immuneToFallDamageVulpusArmor").getAsBoolean();
-                neverLoseHungerVulpusArmor = config.get("neverLoseHungerVulpusArmor").getAsBoolean();
-                canWalkOnPowderedSnowVulpus = config.get("canWalkOnPowderedSnowVulpus").getAsBoolean();
-                makesPiglinsNeutralVulpus = config.get("makesPiglinsNeutralVulpus").getAsBoolean();
-                speedVulpusTier = config.get("speedVulpusTier").getAsInt();
-                enchantmentValueVulpusBow = config.get("enchantmentValueVulpusBow").getAsInt();
-                damageVulpusBow = config.get("damageVulpusBow").getAsInt();
-                attackDamageBonusVulpusTier = config.get("attackDamageBonusVulpusTier").getAsInt();
-                enchantmentValueVulpusTier = config.get("enchantmentValueVulpusTier").getAsInt();
-                attackDamageVulpusPickaxe = config.get("attackDamageVulpusPickaxe").getAsInt();
-                attackSpeedVulpusPickaxe = config.get("attackSpeedVulpusPickaxe").getAsDouble();
-                attackDamageVulpusAxe = config.get("attackDamageVulpusAxe").getAsInt();
-                attackSpeedVulpusAxe = config.get("attackSpeedVulpusAxe").getAsDouble();
-                attackDamageVulpusShovel = config.get("attackDamageVulpusShovel").getAsInt();
-                attackSpeedVulpusShovel = config.get("attackSpeedVulpusShovel").getAsDouble();
-                attackDamageVulpusSword = config.get("attackDamageVulpusSword").getAsInt();
-                attackSpeedVulpusSword = config.get("attackSpeedVulpusSword").getAsDouble();
-                attackDamageVulpusHoe = config.get("attackDamageVulpusHoe").getAsInt();
-                attackSpeedVulpusHoe = config.get("attackSpeedVulpusHoe").getAsDouble();
-                attackDamageVulpusPaxel = config.get("attackDamageVulpusPaxel").getAsInt();
-                attackSpeedVulpusPaxel = config.get("attackSpeedVulpusPaxel").getAsDouble();
-                attackDamageVulpusHammer = config.get("attackDamageVulpusHammer").getAsInt();
-                attackSpeedVulpusHammer = config.get("attackSpeedVulpusHammer").getAsDouble();
-                attackDamageVulpusExcavator = config.get("attackDamageVulpusExcavator").getAsInt();
-                attackSpeedVulpusExcavator = config.get("attackSpeedVulpusExcavator").getAsDouble();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
+    // Hoe Stats
+    public static ModConfigSpec.IntValue ATTACK_DAMAGE_VULPUS_HOE;
+    public static ModConfigSpec.DoubleValue ATTACK_SPEED_VULPUS_HOE;
+
+    // Paxel Stats
+    public static ModConfigSpec.IntValue ATTACK_DAMAGE_VULPUS_PAXEL;
+    public static ModConfigSpec.DoubleValue ATTACK_SPEED_VULPUS_PAXEL;
+
+    // Hammer Stats
+    public static ModConfigSpec.IntValue ATTACK_DAMAGE_VULPUS_HAMMER;
+    public static ModConfigSpec.DoubleValue ATTACK_SPEED_VULPUS_HAMMER;
+    public static ModConfigSpec.IntValue RADIUS_VULPUS_HAMMER;
+
+    // Excavator Stats
+    public static ModConfigSpec.IntValue ATTACK_DAMAGE_VULPUS_EXCAVATOR;
+    public static ModConfigSpec.DoubleValue ATTACK_SPEED_VULPUS_EXCAVATOR;
+    public static ModConfigSpec.IntValue RADIUS_VULPUS_EXCAVATOR;
+
+    static {
+        final var BUILDER = new ModConfigSpec.Builder();
+
+        BUILDER.push("Armor Protection and Resistance");
+        TOUGHNESS_VALUE_VULPUS_ARMOR = BUILDER
+                .comment("Toughness value for Vulpus Armor | Default Value = 150")
+                .defineInRange("toughnessValueVulpusArmor", 150, 0, Integer.MAX_VALUE);
+        ENCHANTMENT_VALUE_VULPUS_ARMOR = BUILDER
+                .comment("Enchantment value for Vulpus Armor | Default Value = 85")
+                .defineInRange("enchantmentValueVulpusArmor", 85, 0, Integer.MAX_VALUE);
+        KNOCKBACK_RESISTANCE_VALUE_VULPUS_ARMOR = BUILDER
+                .comment("Knockback resistance for Vulpus Armor | Default Value = 2")
+                .defineInRange("knockbackResistanceValueVulpusArmor", 2, 0, Integer.MAX_VALUE);
+        PROTECTION_VALUE_VULPUS_BOOTS = BUILDER
+                .comment("Protection value for Vulpus Boots | Default Value = 20")
+                .defineInRange("protectionValueVulpusBoots", 20, 0, Integer.MAX_VALUE);
+        PROTECTION_VALUE_VULPUS_LEGGINGS = BUILDER
+                .comment("Protection value for Vulpus Leggings | Default Value = 25")
+                .defineInRange("protectionValueVulpusLeggings", 25, 0, Integer.MAX_VALUE);
+        PROTECTION_VALUE_VULPUS_CHESTPLATE = BUILDER
+                .comment("Protection value for Vulpus Chestplate | Default Value = 35")
+                .defineInRange("protectionValueVulpusChestplate", 35, 0, Integer.MAX_VALUE);
+        PROTECTION_VALUE_VULPUS_HELMET = BUILDER
+                .comment("Protection value for Vulpus Helmet | Default Value = 20")
+                .defineInRange("protectionValueVulpusHelmet", 20, 0, Integer.MAX_VALUE);
+        BUILDER.pop();
+
+        BUILDER.push("Armor Special Effects and Abilities");
+        SPEED_II_VULPUS_ARMOR = BUILDER
+                .comment("Whether Vulpus Armor gives Speed II | Default Value = true")
+                .define("speedIIVulpusArmor", true);
+        JUMP_II_VULPUS_ARMOR = BUILDER
+                .comment("Whether Vulpus Armor gives Jump II | Default Value = true")
+                .define("jumpIIVulpusArmor", true);
+        NIGHT_VISION_VULPUS_ARMOR = BUILDER
+                .comment("Whether Vulpus Armor gives Night Vision | Default Value = true")
+                .define("nightVisionVulpusArmor", true);
+        FIRE_RESISTANCE_VULPUS_ARMOR = BUILDER
+                .comment("Whether Vulpus Armor gives Fire Resistance | Default Value = true")
+                .define("fireResistanceVulpusArmor", true);
+        IMMUNE_TO_FALL_DAMAGE_VULPUS_ARMOR = BUILDER
+                .comment("Whether Vulpus Armor gives Immunity to Fall Damage | Default Value = true")
+                .define("immuneToFallDamageVulpusArmor", true);
+        NEVER_LOSE_HUNGER_VULPUS_ARMOR = BUILDER
+                .comment("Whether Vulpus Armor prevents Hunger loss | Default Value = true")
+                .define("neverLoseHungerVulpusArmor", true);
+        CAN_WALK_ON_POWDERED_SNOW_VULPUS = BUILDER
+                .comment("Whether Vulpus Armor allows walking on Powdered Snow | Default Value = true")
+                .define("canWalkOnPowderedSnowVulpus", true);
+        MAKES_PIGLINS_NEUTRAL_VULPUS = BUILDER
+                .comment("Whether Vulpus Armor makes Piglins Neutral | Default Value = true")
+                .define("makesPiglinsNeutralVulpus", true);
+        BUILDER.pop();
+
+        BUILDER.push("Bow Settings");
+        ENCHANTMENT_VALUE_VULPUS_BOW = BUILDER
+                .comment("Enchantment value for Vulpus Bow | Default Value = 5")
+                .defineInRange("enchantmentValueVulpusBow", 5, 0, Integer.MAX_VALUE);
+        DAMAGE_VULPUS_BOW = BUILDER
+                .comment("Damage of Vulpus Bow | Default Value = 10")
+                .defineInRange("damageVulpusBow", 10, 0, Integer.MAX_VALUE);
+        ARROW_COUNT_VULPUS_BOW = BUILDER
+                .comment("Arrow count for Vulpus Bow | Default = 3")
+                .defineInRange("arrowCountVulpusBow", 3, 0, Integer.MAX_VALUE);
+        BUILDER.pop();
+
+        BUILDER.push("Tool Tier Base Properties");
+        SPEED_VULPUS_TIER = BUILDER
+                .comment("Speed value of Vulpus Tool Tier | Default Value = 75")
+                .defineInRange("speedVulpusTier", 75, 0, Integer.MAX_VALUE);
+        ATTACK_DAMAGE_BONUS_VULPUS_TIER = BUILDER
+                .comment("Bonus attack damage for Vulpus Tool Tier | Default Value = 20")
+                .defineInRange("attackDamageBonusVulpusTier", 20, 0, Integer.MAX_VALUE);
+        ENCHANTMENT_VALUE_VULPUS_TIER = BUILDER
+                .comment("Enchantment value for Vulpus Tool Tier | Default Value = 85")
+                .defineInRange("enchantmentValueVulpusTier", 85, 0, Integer.MAX_VALUE);
+        DURABILITY_VULPUS = BUILDER
+                .comment("Durability of Vulpus tools | Default Value = 6093")
+                .defineInRange("durabilityVulpus", 6093, 0, Integer.MAX_VALUE);
+        UNBREAKABLE_VULPUS = BUILDER
+                .comment("Whether Vulpus is unbreakable | Default Value = false")
+                .define("unbreakableVulpus", false);
+        BUILDER.pop();
+
+        BUILDER.push("Pickaxe Stats");
+        ATTACK_DAMAGE_VULPUS_PICKAXE = BUILDER
+                .comment("Attack damage of Vulpus Pickaxe | Default Value = 10")
+                .defineInRange("attackDamageVulpusPickaxe", 10, 0, Integer.MAX_VALUE);
+        ATTACK_SPEED_VULPUS_PICKAXE = BUILDER
+                .comment("Attack speed of Vulpus Pickaxe | Default Value = 2.0")
+                .defineInRange("attackSpeedVulpusPickaxe", 2.0, 0.0, 1024.0);
+        BUILDER.pop();
+
+        BUILDER.push("Axe Stats");
+        ATTACK_DAMAGE_VULPUS_AXE = BUILDER
+                .comment("Attack damage of Vulpus Axe | Default Value = 15")
+                .defineInRange("attackDamageVulpusAxe", 15, 0, Integer.MAX_VALUE);
+        ATTACK_SPEED_VULPUS_AXE = BUILDER
+                .comment("Attack speed of Vulpus Axe | Default Value = 2.0")
+                .defineInRange("attackSpeedVulpusAxe", 2.0, 0.0, 1024.0);
+        BUILDER.pop();
+
+        BUILDER.push("Shovel Stats");
+        ATTACK_DAMAGE_VULPUS_SHOVEL = BUILDER
+                .comment("Attack damage of Vulpus Shovel | Default Value = 12")
+                .defineInRange("attackDamageVulpusShovel", 12, 0, Integer.MAX_VALUE);
+        ATTACK_SPEED_VULPUS_SHOVEL = BUILDER
+                .comment("Attack speed of Vulpus Shovel | Default Value = 2.0")
+                .defineInRange("attackSpeedVulpusShovel", 2.0, 0.0, 1024.0);
+        BUILDER.pop();
+
+        BUILDER.push("Sword Stats");
+        ATTACK_DAMAGE_VULPUS_SWORD = BUILDER
+                .comment("Attack damage of Vulpus Sword | Default Value = 14")
+                .defineInRange("attackDamageVulpusSword", 14, 0, Integer.MAX_VALUE);
+        ATTACK_SPEED_VULPUS_SWORD = BUILDER
+                .comment("Attack speed of Vulpus Sword | Default Value = 2.0")
+                .defineInRange("attackSpeedVulpusSword", 2.0, 0.0, 1024.0);
+        BUILDER.pop();
+
+        BUILDER.push("Hoe Stats");
+        ATTACK_DAMAGE_VULPUS_HOE = BUILDER
+                .comment("Attack damage of Vulpus Hoe | Default Value = 10")
+                .defineInRange("attackDamageVulpusHoe", 10, 0, Integer.MAX_VALUE);
+        ATTACK_SPEED_VULPUS_HOE = BUILDER
+                .comment("Attack speed of Vulpus Hoe | Default Value = 2.0")
+                .defineInRange("attackSpeedVulpusHoe", 2.0, 0.0, 1024.0);
+        BUILDER.pop();
+
+        BUILDER.push("Paxel Stats");
+        ATTACK_DAMAGE_VULPUS_PAXEL = BUILDER
+                .comment("Attack damage of Vulpus Paxel | Default Value = 18")
+                .defineInRange("attackDamageVulpusPaxel", 18, 0, Integer.MAX_VALUE);
+        ATTACK_SPEED_VULPUS_PAXEL = BUILDER
+                .comment("Attack speed of Vulpus Paxel | Default Value = 2.0")
+                .defineInRange("attackSpeedVulpusPaxel", 2.0, 0.0, 1024.0);
+        BUILDER.pop();
+
+        BUILDER.push("Hammer Stats");
+        ATTACK_DAMAGE_VULPUS_HAMMER = BUILDER
+                .comment("Attack damage of Vulpus Hammer | Default Value = 22")
+                .defineInRange("attackDamageVulpusHammer", 22, 0, Integer.MAX_VALUE);
+        ATTACK_SPEED_VULPUS_HAMMER = BUILDER
+                .comment("Attack speed of Vulpus Hammer | Default Value = 2.0")
+                .defineInRange("attackSpeedVulpusHammer", 2.0, 0.0, 1024.0);
+        RADIUS_VULPUS_HAMMER = BUILDER
+                .comment("Radius of Vulpus Hammer effect | Default Value = 2")
+                .defineInRange("radiusVulpusHammer", 2, 0, Integer.MAX_VALUE);
+        BUILDER.pop();
+
+        BUILDER.push("Excavator Stats");
+        ATTACK_DAMAGE_VULPUS_EXCAVATOR = BUILDER
+                .comment("Attack damage of Vulpus Excavator | Default Value = 20")
+                .defineInRange("attackDamageVulpusExcavator", 20, 0, Integer.MAX_VALUE);
+        ATTACK_SPEED_VULPUS_EXCAVATOR = BUILDER
+                .comment("Attack speed of Vulpus Excavator | Default Value = 2.0")
+                .defineInRange("attackSpeedVulpusExcavator", 2.0, 0.0, 1024.0);
+        RADIUS_VULPUS_EXCAVATOR = BUILDER
+                .comment("Radius of Vulpus Excavator effect | Default Value = 2")
+                .defineInRange("radiusVulpusExcavator", 2, 0, Integer.MAX_VALUE);
+        BUILDER.pop();
+
+        COMMON = BUILDER.build();
     }
-
-    public static void saveConfig() {
-        JsonObject config = new JsonObject();
-        config.addProperty("toughnessValueVulpusArmor", toughnessValueVulpusArmor);
-        config.addProperty("enchantmentValueVulpusArmor", enchantmentValueVulpusArmor);
-        config.addProperty("knockbackResistanceValueVulpusArmor", knockbackResistanceValueVulpusArmor);
-        config.addProperty("protectionValueVulpusBoots", protectionValueVulpusBoots);
-        config.addProperty("protectionValueVulpusLeggings", protectionValueVulpusLeggings);
-        config.addProperty("protectionValueVulpusChestplate", protectionValueVulpusChestplate);
-        config.addProperty("protectionValueVulpusHelmet", protectionValueVulpusHelmet);
-        config.addProperty("speedIIVulpusArmor", speedIIVulpusArmor);
-        config.addProperty("jumpIIVulpusArmor", jumpIIVulpusArmor);
-        config.addProperty("nightVisionVulpusArmor", nightVisionVulpusArmor);
-        config.addProperty("fireResistanceVulpusArmor", fireResistanceVulpusArmor);
-        config.addProperty("immuneToFallDamageVulpusArmor", immuneToFallDamageVulpusArmor);
-        config.addProperty("neverLoseHungerVulpusArmor", neverLoseHungerVulpusArmor);
-        config.addProperty("canWalkOnPowderedSnowVulpus", canWalkOnPowderedSnowVulpus);
-        config.addProperty("makesPiglinsNeutralVulpus", makesPiglinsNeutralVulpus);
-        config.addProperty("speedVulpusTier", speedVulpusTier);
-        config.addProperty("enchantmentValueVulpusBow", enchantmentValueVulpusBow);
-        config.addProperty("damageVulpusBow", damageVulpusBow);
-        config.addProperty("attackDamageBonusVulpusTier", attackDamageBonusVulpusTier);
-        config.addProperty("enchantmentValueVulpusTier", enchantmentValueVulpusTier);
-        config.addProperty("attackDamageVulpusPickaxe", attackDamageVulpusPickaxe);
-        config.addProperty("attackSpeedVulpusPickaxe", attackSpeedVulpusPickaxe);
-        config.addProperty("attackDamageVulpusAxe", attackDamageVulpusAxe);
-        config.addProperty("attackSpeedVulpusAxe", attackSpeedVulpusAxe);
-        config.addProperty("attackDamageVulpusShovel", attackDamageVulpusShovel);
-        config.addProperty("attackSpeedVulpusShovel", attackSpeedVulpusShovel);
-        config.addProperty("attackDamageVulpusSword", attackDamageVulpusSword);
-        config.addProperty("attackSpeedVulpusSword", attackSpeedVulpusSword);
-        config.addProperty("attackDamageVulpusHoe", attackDamageVulpusHoe);
-        config.addProperty("attackSpeedVulpusHoe", attackSpeedVulpusHoe);
-        config.addProperty("attackDamageVulpusPaxel", attackDamageVulpusPaxel);
-        config.addProperty("attackSpeedVulpusPaxel", attackSpeedVulpusPaxel);
-        config.addProperty("attackDamageVulpusHammer", attackDamageVulpusHammer);
-        config.addProperty("attackSpeedVulpusHammer", attackSpeedVulpusHammer);
-        config.addProperty("attackDamageVulpusExcavator", attackDamageVulpusExcavator);
-        config.addProperty("attackSpeedVulpusExcavator", attackSpeedVulpusExcavator);
-
-        try (FileWriter writer = new FileWriter(CONFIG_FILE)) {
-                Gson gson = new GsonBuilder().setPrettyPrinting().create();
-                writer.write(gson.toJson(config));
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
-    }
+}

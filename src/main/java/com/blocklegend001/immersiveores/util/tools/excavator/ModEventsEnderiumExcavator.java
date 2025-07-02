@@ -2,6 +2,7 @@ package com.blocklegend001.immersiveores.util.tools.excavator;
 
 import com.blocklegend001.immersiveores.ImmersiveOres;
 import com.blocklegend001.immersiveores.item.custom.enderium.EnderiumExcavator;
+import com.blocklegend001.immersiveores.util.map.RadiusMap;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.player.Player;
@@ -32,7 +33,7 @@ public class ModEventsEnderiumExcavator {
         HARVESTED_BLOCKS.add(event.getPos());
 
         try {
-            int radius = isSneaking ? 0 : 3;
+            int radius = isSneaking ? 0 : RadiusMap.getEnderiumExcavatorRadius().get(mainHandItem.getItem());
             for (BlockPos targetPos : EnderiumExcavator.getBlocksToBeDestroyed(radius, event.getPos(), serverPlayer)) {
                 if (targetPos.equals(event.getPos())) continue;
 

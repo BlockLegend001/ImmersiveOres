@@ -24,7 +24,7 @@ public class ModAdvancementProvider extends AdvancementProvider {
         super(packOutput, lookupProvider, existingFileHelper, List.of(new ModImmersiveOresAdvancement()));
     }
 
-    public static class ModImmersiveOresAdvancement implements AdvancementProvider.AdvancementGenerator {
+    public static class ModImmersiveOresAdvancement implements AdvancementGenerator {
 
         @Override
         public void generate(HolderLookup.Provider provider, Consumer<AdvancementHolder> consumer, ExistingFileHelper existingFileHelper) {

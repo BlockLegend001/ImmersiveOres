@@ -30,7 +30,7 @@ public class ModEventHandler {
         if (!level.isClientSide() && entity instanceof Player player) {
             UUID playerUUID = player.getUUID();
 
-            if (player.getItemBySlot(EquipmentSlot.FEET).getItem() == ModItems.ENDERIUM_BOOTS.get() && EnderiumConfig.canFlyEnderiumArmor) {
+            if (player.getItemBySlot(EquipmentSlot.FEET).getItem() == ModItems.ENDERIUM_BOOTS.get() && EnderiumConfig.CAN_FLY_ENDERIUM_ARMOR.getAsBoolean()) {
                 Fly.putIfAbsent(playerUUID, player.getAbilities().mayfly);
 
                 player.getAbilities().mayfly = true;
