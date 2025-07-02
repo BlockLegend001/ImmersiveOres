@@ -1,0 +1,59 @@
+{
+  "parent": "immersiveores:vulpustools",
+  "criteria": {
+    "has_vulpus_excavator": {
+      "conditions": {
+        "items": [
+          {
+            "items": "immersiveores:vulpus_excavator"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_vulpus_hammer": {
+      "conditions": {
+        "items": [
+          {
+            "items": "immersiveores:vulpus_hammer"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_vulpus_paxel": {
+      "conditions": {
+        "items": [
+          {
+            "items": "immersiveores:vulpus_paxel"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancement.immersiveores.vulpusspecialtools.descrption"
+    },
+    "icon": {
+      "count": 1,
+      "id": "immersiveores:vulpus_paxel"
+    },
+    "title": {
+      "translate": "advancement.immersiveores.vulpusspecialtools.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_vulpus_hammer"
+    ],
+    [
+      "has_vulpus_paxel"
+    ],
+    [
+      "has_vulpus_excavator"
+    ]
+  ],
+  "sends_telemetry_event": true
+}
