@@ -1,169 +1,235 @@
 package com.blocklegend001.immersiveores.config;
 
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParser;
+import net.neoforged.neoforge.common.ModConfigSpec;
 
-import java.io.File;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
+public final class EnderiumConfig {
+    public static final ModConfigSpec COMMON;
 
-import static com.blocklegend001.immersiveores.ImmersiveOres.LOGGER;
+    public static ModConfigSpec.IntValue TOUGHNESS_VALUE_ENDERIUM_ARMOR;
+    public static ModConfigSpec.IntValue ENCHANTMENT_VALUE_ENDERIUM_ARMOR;
+    public static ModConfigSpec.IntValue KNOCKBACK_RESISTANCE_VALUE_ENDERIUM_ARMOR;
+    public static ModConfigSpec.IntValue PROTECTION_VALUE_ENDERIUM_BOOTS;
+    public static ModConfigSpec.IntValue PROTECTION_VALUE_ENDERIUM_LEGGINGS;
+    public static ModConfigSpec.IntValue PROTECTION_VALUE_ENDERIUM_CHESTPLATE;
+    public static ModConfigSpec.IntValue PROTECTION_VALUE_ENDERIUM_HELMET;
 
-public class EnderiumConfig {
+    public static ModConfigSpec.BooleanValue SPEED_III_ENDERIUM_ARMOR;
+    public static ModConfigSpec.BooleanValue JUMP_III_ENDERIUM_ARMOR;
+    public static ModConfigSpec.BooleanValue NIGHT_VISION_ENDERIUM_ARMOR;
+    public static ModConfigSpec.BooleanValue IMMUNE_TO_FALL_DAMAGE_ENDERIUM_ARMOR;
+    public static ModConfigSpec.BooleanValue FIRE_RESISTANCE_ENDERIUM_ARMOR;
+    public static ModConfigSpec.BooleanValue NEVER_LOSE_HUNGER_ENDERIUM_ARMOR;
+    public static ModConfigSpec.BooleanValue CAN_FLY_ENDERIUM_ARMOR;
+    public static ModConfigSpec.BooleanValue CAN_WALK_ON_POWDERED_SNOW_ENDERIUM;
+    public static ModConfigSpec.BooleanValue MAKES_PIGLINS_NEUTRAL_ENDERIUM;
+    public static ModConfigSpec.BooleanValue ENDERMAN_WILL_NOT_BE_ANGRY_WITH_YOU_ENDERIUM;
 
-    private static final File CONFIG_FILE = new File("config/immersiveores/enderium-common.toml");
+    public static ModConfigSpec.IntValue ENCHANTMENT_VALUE_ENDERIUM_BOW;
+    public static ModConfigSpec.IntValue DAMAGE_ENDERIUM_BOW;
+    public static ModConfigSpec.IntValue ARROW_COUNT_ENDERIUM_BOW;
 
-    public static int toughnessValueEnderiumArmor = 200;
-    public static int enchantmentValueEnderiumArmor = 85;
-    public static int knockbackResistanceValueEnderiumArmor = 3;
-    public static int protectionValueEnderiumBoots = 30;
-    public static int protectionValueEnderiumLeggings = 50;
-    public static int protectionValueEnderiumChestplate = 70;
-    public static int protectionValueEnderiumHelmet = 30;
+    public static ModConfigSpec.IntValue SPEED_ENDERIUM_TIER;
+    public static ModConfigSpec.IntValue ATTACK_DAMAGE_BONUS_ENDERIUM_TIER;
+    public static ModConfigSpec.IntValue ENCHANTMENT_VALUE_ENDERIUM_TIER;
 
-    public static boolean speedIIIEnderiumArmor = true;
-    public static boolean jumpIIIEnderiumArmor = true;
-    public static boolean nightVisionEnderiumArmor = true;
-    public static boolean immuneToFallDamageEnderiumArmor = true;
-    public static boolean fireResistanceEnderiumArmor = true;
-    public static boolean neverLoseHungerEnderiumArmor = true;
-    public static boolean canFlyEnderiumArmor = true;
-    public static boolean canWalkOnPowderedSnowEnderium = true;
-    public static boolean makesPiglinsNeutralEnderium = true;
-    public static boolean endermanWillNotBeAngryWithYouEnderium = true;
+    public static ModConfigSpec.IntValue DURABILITY_ENDERIUM;
+    public static ModConfigSpec.BooleanValue UNBREAKABLE_ENDERIUM;
 
-    public static int speedEnderiumTier = 130;
-    public static int enchantmentValueEnderiumBow = 5;
-    public static int damageEnderiumBow = 14;
-    public static int attackDamageBonusEnderiumTier = 40;
-    public static int enchantmentValueEnderiumTier = 85;
-    public static int attackDamageEnderiumPickaxe = 18;
-    public static double attackSpeedEnderiumPickaxe = 2.0;
-    public static int attackDamageEnderiumAxe = 20;
-    public static double attackSpeedEnderiumAxe = 2.0;
-    public static int attackDamageEnderiumShovel = 17;
-    public static double attackSpeedEnderiumShovel = 2.0;
-    public static int attackDamageEnderiumSword = 22;
-    public static double attackSpeedEnderiumSword = 2.0;
-    public static int attackDamageEnderiumHoe = 14;
-    public static double attackSpeedEnderiumHoe = 2.0;
-    public static int attackDamageEnderiumPaxel = 20;
-    public static double attackSpeedEnderiumPaxel = 2.0;
-    public static int attackDamageEnderiumHammer = 20;
-    public static double attackSpeedEnderiumHammer = 2.0;
-    public static int attackDamageEnderiumExcavator = 20;
-    public static double attackSpeedEnderiumExcavator = 2.0;
+    public static ModConfigSpec.IntValue ATTACK_DAMAGE_ENDERIUM_PICKAXE;
+    public static ModConfigSpec.DoubleValue ATTACK_SPEED_ENDERIUM_PICKAXE;
 
-    public static void loadConfig() {
-        LOGGER.info("Loading Enderium Config...");
-        File configDir = new File("config/immersiveores");
-        if (!configDir.exists()) {
-            configDir.mkdirs();
-        }
+    public static ModConfigSpec.IntValue ATTACK_DAMAGE_ENDERIUM_AXE;
+    public static ModConfigSpec.DoubleValue ATTACK_SPEED_ENDERIUM_AXE;
 
-        if (!CONFIG_FILE.exists()) {
-            saveConfig();
-        } else {
-            try (FileReader reader = new FileReader(CONFIG_FILE)) {
-                JsonObject config = JsonParser.parseReader(reader).getAsJsonObject();
+    public static ModConfigSpec.IntValue ATTACK_DAMAGE_ENDERIUM_SHOVEL;
+    public static ModConfigSpec.DoubleValue ATTACK_SPEED_ENDERIUM_SHOVEL;
 
-                toughnessValueEnderiumArmor = config.get("toughnessValueEnderiumArmor").getAsInt();
-                enchantmentValueEnderiumArmor = config.get("enchantmentValueEnderiumArmor").getAsInt();
-                knockbackResistanceValueEnderiumArmor = config.get("knockbackResistanceValueEnderiumArmor").getAsInt();
-                protectionValueEnderiumBoots = config.get("protectionValueEnderiumBoots").getAsInt();
-                protectionValueEnderiumLeggings = config.get("protectionValueEnderiumLeggings").getAsInt();
-                protectionValueEnderiumChestplate = config.get("protectionValueEnderiumChestplate").getAsInt();
-                protectionValueEnderiumHelmet = config.get("protectionValueEnderiumHelmet").getAsInt();
+    public static ModConfigSpec.IntValue ATTACK_DAMAGE_ENDERIUM_SWORD;
+    public static ModConfigSpec.DoubleValue ATTACK_SPEED_ENDERIUM_SWORD;
 
-                speedIIIEnderiumArmor = config.get("speedIIIEnderiumArmor").getAsBoolean();
-                jumpIIIEnderiumArmor = config.get("jumpIIIEnderiumArmor").getAsBoolean();
-                nightVisionEnderiumArmor = config.get("nightVisionEnderiumArmor").getAsBoolean();
-                immuneToFallDamageEnderiumArmor = config.get("immuneToFallDamageEnderiumArmor").getAsBoolean();
-                fireResistanceEnderiumArmor = config.get("fireResistanceEnderiumArmor").getAsBoolean();
-                neverLoseHungerEnderiumArmor = config.get("neverLoseHungerEnderiumArmor").getAsBoolean();
-                canFlyEnderiumArmor = config.get("canFlyEnderiumArmor").getAsBoolean();
-                canWalkOnPowderedSnowEnderium = config.get("canWalkOnPowderedSnowEnderium").getAsBoolean();
-                makesPiglinsNeutralEnderium = config.get("makesPiglinsNeutralEnderium").getAsBoolean();
-                endermanWillNotBeAngryWithYouEnderium = config.get("endermanWillNotBeAngryWithYouEnderium").getAsBoolean();
+    public static ModConfigSpec.IntValue ATTACK_DAMAGE_ENDERIUM_HOE;
+    public static ModConfigSpec.DoubleValue ATTACK_SPEED_ENDERIUM_HOE;
 
-                speedEnderiumTier = config.get("speedEnderiumTier").getAsInt();
+    public static ModConfigSpec.IntValue ATTACK_DAMAGE_ENDERIUM_PAXEL;
+    public static ModConfigSpec.DoubleValue ATTACK_SPEED_ENDERIUM_PAXEL;
 
-                enchantmentValueEnderiumBow = config.get("enchantmentValueEnderiumBow").getAsInt();
-                damageEnderiumBow = config.get("damageEnderiumBow").getAsInt();
-                attackDamageBonusEnderiumTier = config.get("attackDamageBonusEnderiumTier").getAsInt();
-                enchantmentValueEnderiumTier = config.get("enchantmentValueEnderiumTier").getAsInt();
-                attackDamageEnderiumPickaxe = config.get("attackDamageEnderiumPickaxe").getAsInt();
-                attackSpeedEnderiumPickaxe = config.get("attackSpeedEnderiumPickaxe").getAsDouble();
-                attackDamageEnderiumAxe = config.get("attackDamageEnderiumAxe").getAsInt();
-                attackSpeedEnderiumAxe = config.get("attackSpeedEnderiumAxe").getAsDouble();
-                attackDamageEnderiumShovel = config.get("attackDamageEnderiumShovel").getAsInt();
-                attackSpeedEnderiumShovel = config.get("attackSpeedEnderiumShovel").getAsDouble();
-                attackDamageEnderiumSword = config.get("attackDamageEnderiumSword").getAsInt();
-                attackSpeedEnderiumSword = config.get("attackSpeedEnderiumSword").getAsDouble();
-                attackDamageEnderiumHoe = config.get("attackDamageEnderiumHoe").getAsInt();
-                attackSpeedEnderiumHoe = config.get("attackSpeedEnderiumHoe").getAsDouble();
-                attackDamageEnderiumPaxel = config.get("attackDamageEnderiumPaxel").getAsInt();
-                attackSpeedEnderiumPaxel = config.get("attackSpeedEnderiumPaxel").getAsDouble();
-                attackDamageEnderiumHammer = config.get("attackDamageEnderiumHammer").getAsInt();
-                attackSpeedEnderiumHammer = config.get("attackSpeedEnderiumHammer").getAsDouble();
-                attackDamageEnderiumExcavator = config.get("attackDamageEnderiumExcavator").getAsInt();
-                attackSpeedEnderiumExcavator = config.get("attackSpeedEnderiumExcavator").getAsDouble();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
-    }
+    public static ModConfigSpec.IntValue ATTACK_DAMAGE_ENDERIUM_HAMMER;
+    public static ModConfigSpec.DoubleValue ATTACK_SPEED_ENDERIUM_HAMMER;
 
-    public static void saveConfig() {
-        JsonObject config = new JsonObject();
+    public static ModConfigSpec.IntValue ATTACK_DAMAGE_ENDERIUM_EXCAVATOR;
+    public static ModConfigSpec.DoubleValue ATTACK_SPEED_ENDERIUM_EXCAVATOR;
 
-        config.addProperty("toughnessValueEnderiumArmor", toughnessValueEnderiumArmor);
-        config.addProperty("enchantmentValueEnderiumArmor", enchantmentValueEnderiumArmor);
-        config.addProperty("knockbackResistanceValueEnderiumArmor", knockbackResistanceValueEnderiumArmor);
-        config.addProperty("protectionValueEnderiumBoots", protectionValueEnderiumBoots);
-        config.addProperty("protectionValueEnderiumLeggings", protectionValueEnderiumLeggings);
-        config.addProperty("protectionValueEnderiumChestplate", protectionValueEnderiumChestplate);
-        config.addProperty("protectionValueEnderiumHelmet", protectionValueEnderiumHelmet);
-        config.addProperty("speedIIIEnderiumArmor", speedIIIEnderiumArmor);
-        config.addProperty("jumpIIIEnderiumArmor", jumpIIIEnderiumArmor);
-        config.addProperty("nightVisionEnderiumArmor", nightVisionEnderiumArmor);
-        config.addProperty("fireResistanceEnderiumArmor", fireResistanceEnderiumArmor);
-        config.addProperty("immuneToFallDamageEnderiumArmor", immuneToFallDamageEnderiumArmor);
-        config.addProperty("canFlyEnderiumArmor", canFlyEnderiumArmor);
-        config.addProperty("neverLoseHungerEnderiumArmor", neverLoseHungerEnderiumArmor);
-        config.addProperty("canWalkOnPowderedSnowEnderium", canWalkOnPowderedSnowEnderium);
-        config.addProperty("makesPiglinsNeutralEnderium", makesPiglinsNeutralEnderium);
-        config.addProperty("endermanWillNotBeAngryWithYouEnderium", endermanWillNotBeAngryWithYouEnderium);
-        config.addProperty("speedEnderiumTier", speedEnderiumTier);
-        config.addProperty("enchantmentValueEnderiumBow", enchantmentValueEnderiumBow);
-        config.addProperty("damageEnderiumBow", damageEnderiumBow);
-        config.addProperty("attackDamageBonusEnderiumTier", attackDamageBonusEnderiumTier);
-        config.addProperty("enchantmentValueEnderiumTier", enchantmentValueEnderiumTier);
-        config.addProperty("attackDamageEnderiumPickaxe", attackDamageEnderiumPickaxe);
-        config.addProperty("attackSpeedEnderiumPickaxe", attackSpeedEnderiumPickaxe);
-        config.addProperty("attackDamageEnderiumAxe", attackDamageEnderiumAxe);
-        config.addProperty("attackSpeedEnderiumAxe", attackSpeedEnderiumAxe);
-        config.addProperty("attackDamageEnderiumShovel", attackDamageEnderiumShovel);
-        config.addProperty("attackSpeedEnderiumShovel", attackSpeedEnderiumShovel);
-        config.addProperty("attackDamageEnderiumSword", attackDamageEnderiumSword);
-        config.addProperty("attackSpeedEnderiumSword", attackSpeedEnderiumSword);
-        config.addProperty("attackDamageEnderiumHoe", attackDamageEnderiumHoe);
-        config.addProperty("attackSpeedEnderiumHoe", attackSpeedEnderiumHoe);
-        config.addProperty("attackDamageEnderiumPaxel", attackDamageEnderiumPaxel);
-        config.addProperty("attackSpeedEnderiumPaxel", attackSpeedEnderiumPaxel);
-        config.addProperty("attackDamageEnderiumHammer", attackDamageEnderiumHammer);
-        config.addProperty("attackSpeedEnderiumHammer", attackSpeedEnderiumHammer);
-        config.addProperty("attackDamageEnderiumExcavator", attackDamageEnderiumExcavator);
-        config.addProperty("attackSpeedEnderiumExcavator", attackSpeedEnderiumExcavator);
+    public static ModConfigSpec.IntValue RADIUS_ENDERIUM_HAMMER;
+    public static ModConfigSpec.IntValue RADIUS_ENDERIUM_EXCAVATOR;
 
-        try (FileWriter writer = new FileWriter(CONFIG_FILE)) {
-            Gson gson = new GsonBuilder().setPrettyPrinting().create();
-            writer.write(gson.toJson(config));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+    static {
+        final var BUILDER = new ModConfigSpec.Builder();
+
+        BUILDER.push("Armor Protection and Resistance");
+        TOUGHNESS_VALUE_ENDERIUM_ARMOR = BUILDER
+                .comment("Toughness value for Enderium Armor | Default Value = 200")
+                .defineInRange("toughnessValueEnderiumArmor", 200, 0, Integer.MAX_VALUE);
+        ENCHANTMENT_VALUE_ENDERIUM_ARMOR = BUILDER
+                .comment("Enchantment value for Enderium Armor | Default Value = 85")
+                .defineInRange("enchantmentValueEnderiumArmor", 85, 0, Integer.MAX_VALUE);
+        KNOCKBACK_RESISTANCE_VALUE_ENDERIUM_ARMOR = BUILDER
+                .comment("Knockback resistance for Enderium Armor | Default Value = 3")
+                .defineInRange("knockbackResistanceValueEnderiumArmor", 3, 0, Integer.MAX_VALUE);
+        PROTECTION_VALUE_ENDERIUM_BOOTS = BUILDER
+                .comment("Protection value for Enderium Boots | Default Value = 30")
+                .defineInRange("protectionValueEnderiumBoots", 30, 0, Integer.MAX_VALUE);
+        PROTECTION_VALUE_ENDERIUM_LEGGINGS = BUILDER
+                .comment("Protection value for Enderium Leggings | Default Value = 50")
+                .defineInRange("protectionValueEnderiumLeggings", 50, 0, Integer.MAX_VALUE);
+        PROTECTION_VALUE_ENDERIUM_CHESTPLATE = BUILDER
+                .comment("Protection value for Enderium Chestplate | Default Value = 70")
+                .defineInRange("protectionValueEnderiumChestplate", 70, 0, Integer.MAX_VALUE);
+        PROTECTION_VALUE_ENDERIUM_HELMET = BUILDER
+                .comment("Protection value for Enderium Helmet | Default Value = 30")
+                .defineInRange("protectionValueEnderiumHelmet", 30, 0, Integer.MAX_VALUE);
+        BUILDER.pop();
+
+        BUILDER.push("Armor Special Effects and Abilities");
+        SPEED_III_ENDERIUM_ARMOR = BUILDER
+                .comment("Whether Enderium Armor gives Speed III | Default Value = true")
+                .define("speedIIIEnderiumArmor", true);
+        JUMP_III_ENDERIUM_ARMOR = BUILDER
+                .comment("Whether Enderium Armor gives Jump III | Default Value = true")
+                .define("jumpIIIEnderiumArmor", true);
+        NIGHT_VISION_ENDERIUM_ARMOR = BUILDER
+                .comment("Whether Enderium Armor gives Night Vision | Default Value = true")
+                .define("nightVisionEnderiumArmor", true);
+        IMMUNE_TO_FALL_DAMAGE_ENDERIUM_ARMOR = BUILDER
+                .comment("Whether Enderium Armor negates fall damage | Default Value = true")
+                .define("immuneToFallDamageEnderiumArmor", true);
+        FIRE_RESISTANCE_ENDERIUM_ARMOR = BUILDER
+                .comment("Whether Enderium Armor grants fire resistance | Default Value = true")
+                .define("fireResistanceEnderiumArmor", true);
+        NEVER_LOSE_HUNGER_ENDERIUM_ARMOR = BUILDER
+                .comment("Whether Enderium Armor prevents hunger loss | Default Value = true")
+                .define("neverLoseHungerEnderiumArmor", true);
+        CAN_FLY_ENDERIUM_ARMOR = BUILDER
+                .comment("Whether Enderium Armor allows flight | Default Value = true")
+                .define("canFlyEnderiumArmor", true);
+        CAN_WALK_ON_POWDERED_SNOW_ENDERIUM = BUILDER
+                .comment("Whether Enderium Armor allows walking on Powdered Snow | Default Value = true")
+                .define("canWalkOnPowderedSnowEnderium", true);
+        MAKES_PIGLINS_NEUTRAL_ENDERIUM = BUILDER
+                .comment("Whether Enderium Armor makes Piglins neutral | Default Value = true")
+                .define("makesPiglinsNeutralEnderium", true);
+        ENDERMAN_WILL_NOT_BE_ANGRY_WITH_YOU_ENDERIUM = BUILDER
+                .comment("Whether Endermen will not be angry at player wearing Enderium Armor | Default Value = true")
+                .define("endermanWillNotBeAngryWithYouEnderium", true);
+        BUILDER.pop();
+
+        BUILDER.push("Bow Settings");
+        ENCHANTMENT_VALUE_ENDERIUM_BOW = BUILDER
+                .comment("Enchantment value for Enderium Bow | Default Value = 5")
+                .defineInRange("enchantmentValueEnderiumBow", 5, 0, Integer.MAX_VALUE);
+        DAMAGE_ENDERIUM_BOW = BUILDER
+                .comment("Damage of Enderium Bow | Default Value = 14")
+                .defineInRange("damageEnderiumBow", 14, 0, Integer.MAX_VALUE);
+        ARROW_COUNT_ENDERIUM_BOW = BUILDER
+                .comment("Arrow count for Enderium Bow | Default = 4")
+                .defineInRange("arrowCountEnderiumBow", 4, 0, Integer.MAX_VALUE);
+        BUILDER.pop();
+
+        BUILDER.push("Tool Tier Base Properties");
+        SPEED_ENDERIUM_TIER = BUILDER
+                .comment("Speed value of Enderium Tool Tier | Default Value = 130")
+                .defineInRange("speedEnderiumTier", 130, 0, Integer.MAX_VALUE);
+        ATTACK_DAMAGE_BONUS_ENDERIUM_TIER = BUILDER
+                .comment("Bonus attack damage for Enderium Tool Tier | Default Value = 40")
+                .defineInRange("attackDamageBonusEnderiumTier", 40, 0, Integer.MAX_VALUE);
+        ENCHANTMENT_VALUE_ENDERIUM_TIER = BUILDER
+                .comment("Enchantment value for Enderium Tool Tier | Default Value = 85")
+                .defineInRange("enchantmentValueEnderiumTier", 85, 0, Integer.MAX_VALUE);
+        DURABILITY_ENDERIUM = BUILDER
+                .comment("Durability of Enderium tools | Default Value = 9139")
+                .defineInRange("durabilityEnderium", 9139, 0, Integer.MAX_VALUE);
+        UNBREAKABLE_ENDERIUM = BUILDER
+                .comment("Whether Enderium is unbreakable | Default Value = false")
+                .define("unbreakableEnderium", false);
+        BUILDER.pop();
+
+        BUILDER.push("Pickaxe Stats");
+        ATTACK_DAMAGE_ENDERIUM_PICKAXE = BUILDER
+                .comment("Attack damage of Enderium Pickaxe | Default Value = 18")
+                .defineInRange("attackDamageEnderiumPickaxe", 18, 0, Integer.MAX_VALUE);
+        ATTACK_SPEED_ENDERIUM_PICKAXE = BUILDER
+                .comment("Attack speed of Enderium Pickaxe | Default Value = 2.0")
+                .defineInRange("attackSpeedEnderiumPickaxe", 2.0, 0.0, 1024.0);
+        BUILDER.pop();
+
+        BUILDER.push("Axe Stats");
+        ATTACK_DAMAGE_ENDERIUM_AXE = BUILDER
+                .comment("Attack damage of Enderium Axe | Default Value = 20")
+                .defineInRange("attackDamageEnderiumAxe", 20, 0, Integer.MAX_VALUE);
+        ATTACK_SPEED_ENDERIUM_AXE = BUILDER
+                .comment("Attack speed of Enderium Axe | Default Value = 2.0")
+                .defineInRange("attackSpeedEnderiumAxe", 2.0, 0.0, 1024.0);
+        BUILDER.pop();
+
+        BUILDER.push("Shovel Stats");
+        ATTACK_DAMAGE_ENDERIUM_SHOVEL = BUILDER
+                .comment("Attack damage of Enderium Shovel | Default Value = 17")
+                .defineInRange("attackDamageEnderiumShovel", 17, 0, Integer.MAX_VALUE);
+        ATTACK_SPEED_ENDERIUM_SHOVEL = BUILDER
+                .comment("Attack speed of Enderium Shovel | Default Value = 2.0")
+                .defineInRange("attackSpeedEnderiumShovel", 2.0, 0.0, 1024.0);
+        BUILDER.pop();
+
+        BUILDER.push("Sword Stats");
+        ATTACK_DAMAGE_ENDERIUM_SWORD = BUILDER
+                .comment("Attack damage of Enderium Sword | Default Value = 22")
+                .defineInRange("attackDamageEnderiumSword", 22, 0, Integer.MAX_VALUE);
+        ATTACK_SPEED_ENDERIUM_SWORD = BUILDER
+                .comment("Attack speed of Enderium Sword | Default Value = 2.0")
+                .defineInRange("attackSpeedEnderiumSword", 2.0, 0.0, 1024.0);
+        BUILDER.pop();
+
+        BUILDER.push("Hoe Stats");
+        ATTACK_DAMAGE_ENDERIUM_HOE = BUILDER
+                .comment("Attack damage of Enderium Hoe | Default Value = 14")
+                .defineInRange("attackDamageEnderiumHoe", 14, 0, Integer.MAX_VALUE);
+        ATTACK_SPEED_ENDERIUM_HOE = BUILDER
+                .comment("Attack speed of Enderium Hoe | Default Value = 2.0")
+                .defineInRange("attackSpeedEnderiumHoe", 2.0, 0.0, 1024.0);
+        BUILDER.pop();
+
+        BUILDER.push("Paxel Stats");
+        ATTACK_DAMAGE_ENDERIUM_PAXEL = BUILDER
+                .comment("Attack damage of Enderium Paxel | Default Value = 20")
+                .defineInRange("attackDamageEnderiumPaxel", 20, 0, Integer.MAX_VALUE);
+        ATTACK_SPEED_ENDERIUM_PAXEL = BUILDER
+                .comment("Attack speed of Enderium Paxel | Default Value = 2.0")
+                .defineInRange("attackSpeedEnderiumPaxel", 2.0, 0.0, 1024.0);
+        BUILDER.pop();
+
+        BUILDER.push("Hammer Stats");
+        ATTACK_DAMAGE_ENDERIUM_HAMMER = BUILDER
+                .comment("Attack damage of Enderium Hammer | Default Value = 20")
+                .defineInRange("attackDamageEnderiumHammer", 20, 0, Integer.MAX_VALUE);
+        ATTACK_SPEED_ENDERIUM_HAMMER = BUILDER
+                .comment("Attack speed of Enderium Hammer | Default Value = 2.0")
+                .defineInRange("attackSpeedEnderiumHammer", 2.0, 0.0, 1024.0);
+        RADIUS_ENDERIUM_HAMMER = BUILDER
+                .comment("Hammering radius for Enderium Hammer | Default = 3")
+                .defineInRange("radiusEnderiumHammer", 3, 0, Integer.MAX_VALUE);
+        BUILDER.pop();
+
+        BUILDER.push("Excavator Stats");
+        ATTACK_DAMAGE_ENDERIUM_EXCAVATOR = BUILDER
+                .comment("Attack damage of Enderium Excavator | Default Value = 20")
+                .defineInRange("attackDamageEnderiumExcavator", 20, 0, Integer.MAX_VALUE);
+        ATTACK_SPEED_ENDERIUM_EXCAVATOR = BUILDER
+                .comment("Attack speed of Enderium Excavator | Default Value = 2.0")
+                .defineInRange("attackSpeedEnderiumExcavator", 2.0, 0.0, 1024.0);
+        RADIUS_ENDERIUM_EXCAVATOR = BUILDER
+                .comment("Excavation radius for Enderium Excavator | Default = 3")
+                .defineInRange("radiusEnderiumExcavator", 3, 0, Integer.MAX_VALUE);
+        BUILDER.pop();
+
+        COMMON = BUILDER.build();
     }
 }

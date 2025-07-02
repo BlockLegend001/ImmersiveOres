@@ -16,36 +16,36 @@ import java.util.EnumMap;
 
 public final class ModArmorMaterials {
 
-    public static final ArmorMaterial VIBRANIUM = new ArmorMaterial(0, Util.make(new EnumMap<>(ArmorType.class),
+    public static final ArmorMaterial VIBRANIUM = new ArmorMaterial(VibraniumConfig.DURABILITY_VIBRANIUM.get(), Util.make(new EnumMap<>(ArmorType.class),
             attribute -> {
-                attribute.put(ArmorType.BOOTS, VibraniumConfig.protectionValueVibraniumBoots);
-                attribute.put(ArmorType.LEGGINGS, VibraniumConfig.protectionValueVibraniumLeggings);
-                attribute.put(ArmorType.CHESTPLATE, VibraniumConfig.protectionValueVibraniumChestplate);
-                attribute.put(ArmorType.HELMET, VibraniumConfig.protectionValueVibraniumHelmet);
-            }), VibraniumConfig.enchantmentValueVibraniumArmor, SoundEvents.ARMOR_EQUIP_NETHERITE,
-            VibraniumConfig.toughnessValueVibraniumArmor, VibraniumConfig.knockbackResistanceValueVibraniumArmor,
+                attribute.put(ArmorType.BOOTS, VibraniumConfig.PROTECTION_VALUE_VIBRANIUM_BOOTS.get());
+                attribute.put(ArmorType.LEGGINGS, VibraniumConfig.PROTECTION_VALUE_VIBRANIUM_LEGGINGS.get());
+                attribute.put(ArmorType.CHESTPLATE, VibraniumConfig.PROTECTION_VALUE_VIBRANIUM_CHESTPLATE.get());
+                attribute.put(ArmorType.HELMET, VibraniumConfig.PROTECTION_VALUE_VIBRANIUM_HELMET.get());
+            }), VibraniumConfig.ENCHANTMENT_VALUE_VIBRANIUM_ARMOR.get(), SoundEvents.ARMOR_EQUIP_NETHERITE,
+            VibraniumConfig.TOUGHNESS_VALUE_VIBRANIUM_ARMOR.get(), VibraniumConfig.KNOCKBACK_RESISTANCE_VALUE_VIBRANIUM_ARMOR.get(),
             ModTags.Items.VIBRANIUM_REPAIRS,
             ModEquipmentAssets.VIBRANIUM);
 
-    public static final ArmorMaterial VULPUS = new ArmorMaterial(0, Util.make(new EnumMap<>(ArmorType.class),
+    public static final ArmorMaterial VULPUS = new ArmorMaterial(VulpusConfig.DURABILITY_VULPUS.get(), Util.make(new EnumMap<>(ArmorType.class),
             attribute -> {
-                attribute.put(ArmorType.BOOTS, VulpusConfig.protectionValueVulpusBoots);
-                attribute.put(ArmorType.LEGGINGS, VulpusConfig.protectionValueVulpusLeggings);
-                attribute.put(ArmorType.CHESTPLATE, VulpusConfig.protectionValueVulpusChestplate);
-                attribute.put(ArmorType.HELMET, VulpusConfig.protectionValueVulpusHelmet);
-            }), VulpusConfig.enchantmentValueVulpusArmor, SoundEvents.ARMOR_EQUIP_NETHERITE,
-            VulpusConfig.toughnessValueVulpusArmor, VulpusConfig.knockbackResistanceValueVulpusArmor,
+                attribute.put(ArmorType.BOOTS, VulpusConfig.PROTECTION_VALUE_VULPUS_BOOTS.get());
+                attribute.put(ArmorType.LEGGINGS, VulpusConfig.PROTECTION_VALUE_VULPUS_LEGGINGS.get());
+                attribute.put(ArmorType.CHESTPLATE, VulpusConfig.PROTECTION_VALUE_VULPUS_CHESTPLATE.get());
+                attribute.put(ArmorType.HELMET, VulpusConfig.PROTECTION_VALUE_VULPUS_HELMET.get());
+            }), VulpusConfig.ENCHANTMENT_VALUE_VULPUS_ARMOR.get(), SoundEvents.ARMOR_EQUIP_NETHERITE,
+            VulpusConfig.TOUGHNESS_VALUE_VULPUS_ARMOR.get(), VulpusConfig.KNOCKBACK_RESISTANCE_VALUE_VULPUS_ARMOR.get(),
             ModTags.Items.VULPUS_REPAIRS,
             ModEquipmentAssets.VULPUS);
 
-    public static final ArmorMaterial ENDERIUM = new ArmorMaterial(0, Util.make(new EnumMap<>(ArmorType.class),
+    public static final ArmorMaterial ENDERIUM = new ArmorMaterial(EnderiumConfig.DURABILITY_ENDERIUM.get(), Util.make(new EnumMap<>(ArmorType.class),
             attribute -> {
-                attribute.put(ArmorType.BOOTS, EnderiumConfig.protectionValueEnderiumBoots);
-                attribute.put(ArmorType.LEGGINGS, EnderiumConfig.protectionValueEnderiumLeggings);
-                attribute.put(ArmorType.CHESTPLATE, EnderiumConfig.protectionValueEnderiumChestplate);
-                attribute.put(ArmorType.HELMET, EnderiumConfig.protectionValueEnderiumHelmet);
-            }), EnderiumConfig.enchantmentValueEnderiumArmor, SoundEvents.ARMOR_EQUIP_NETHERITE,
-            EnderiumConfig.toughnessValueEnderiumArmor, EnderiumConfig.knockbackResistanceValueEnderiumArmor,
+                attribute.put(ArmorType.BOOTS, EnderiumConfig.PROTECTION_VALUE_ENDERIUM_BOOTS.get());
+                attribute.put(ArmorType.LEGGINGS, EnderiumConfig.PROTECTION_VALUE_ENDERIUM_LEGGINGS.get());
+                attribute.put(ArmorType.CHESTPLATE, EnderiumConfig.PROTECTION_VALUE_ENDERIUM_CHESTPLATE.get());
+                attribute.put(ArmorType.HELMET, EnderiumConfig.PROTECTION_VALUE_ENDERIUM_HELMET.get());
+            }), EnderiumConfig.ENCHANTMENT_VALUE_ENDERIUM_ARMOR.get(), SoundEvents.ARMOR_EQUIP_NETHERITE,
+            EnderiumConfig.TOUGHNESS_VALUE_ENDERIUM_ARMOR.get(), EnderiumConfig.KNOCKBACK_RESISTANCE_VALUE_ENDERIUM_ARMOR.get(),
             ModTags.Items.ENDERIUM_REPAIRS,
             ModEquipmentAssets.ENDERIUM);
 }

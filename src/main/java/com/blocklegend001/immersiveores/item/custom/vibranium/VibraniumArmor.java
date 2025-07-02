@@ -13,6 +13,7 @@ import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.*;
+import net.minecraft.world.item.component.Unbreakable;
 import net.minecraft.world.item.equipment.ArmorMaterial;
 import net.minecraft.world.item.equipment.ArmorType;
 import net.minecraft.world.level.Level;
@@ -20,27 +21,36 @@ import net.minecraft.world.level.Level;
 import java.util.List;
 
 public class VibraniumArmor extends ArmorItem {
+    private static Properties createSettings(Properties properties, boolean unbreakable, int durability) {
+        properties.durability(durability);
+
+        if (unbreakable) {
+            properties.component(DataComponents.UNBREAKABLE, new Unbreakable(true));
+        }
+        return properties;
+    }
 
     public VibraniumArmor(ArmorMaterial p_371793_, ArmorType p_371848_, Properties p_40388_) {
-        super(p_371793_, p_371848_, p_40388_);
+        super(p_371793_, p_371848_, createSettings(p_40388_, VibraniumConfig.UNBREAKABLE_VIBRANIUM.get(), VibraniumConfig.DURABILITY_VIBRANIUM.get()));
     }
 
     @Override
     public void inventoryTick(ItemStack stack, Level level, Entity entity, int pSlotId, boolean pIsSelected) {
         if (!level.isClientSide()) {
             if (entity instanceof Player player) {
-            if (player.getItemBySlot(EquipmentSlot.FEET).getItem() == ModItems.VIBRANIUM_BOOTS.get()) {
-                if (VibraniumConfig.speedIVibraniumArmor) {
-                    player.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 400, 0, false, false));
-                } if (VibraniumConfig.jumpIVibraniumArmor) {
-                    player.addEffect(new MobEffectInstance(MobEffects.JUMP, 400, 0, false, false));
+                if (player.getItemBySlot(EquipmentSlot.FEET).getItem() == ModItems.VIBRANIUM_BOOTS.get()) {
+                    if (VibraniumConfig.SPEED_I_VIBRANIUM_ARMOR.get()) {
+                        player.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 400, 0, false, false));
+                    }
+                    if (VibraniumConfig.JUMP_I_VIBRANIUM_ARMOR.get()) {
+                        player.addEffect(new MobEffectInstance(MobEffects.JUMP, 400, 0, false, false));
+                    }
                 }
-            }
-            if (player.getItemBySlot(EquipmentSlot.HEAD).getItem() == ModItems.VIBRANIUM_HELMET.get()) {
-                if (VibraniumConfig.nightVisionVibraniumArmor) {
-                    player.addEffect(new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 0, false, false));
+                if (player.getItemBySlot(EquipmentSlot.HEAD).getItem() == ModItems.VIBRANIUM_HELMET.get()) {
+                    if (VibraniumConfig.NIGHT_VISION_VIBRANIUM_ARMOR.get()) {
+                        player.addEffect(new MobEffectInstance(MobEffects.NIGHT_VISION, 400, 0, false, false));
+                    }
                 }
-            }
             }
         }
     }
@@ -81,11 +91,13 @@ public class VibraniumArmor extends ArmorItem {
             if (ModItems.VIBRANIUM_BOOTS.get() == pStack.getItem()) {
                 components.add(Component.translatable("tooltip.immersiveores.unbreakble.tooltip").withStyle(ChatFormatting.LIGHT_PURPLE));
                 components.add(Component.translatable("tooltip.immersiveores.immunetofire.tooltip").withStyle(ChatFormatting.LIGHT_PURPLE));
-                if (VibraniumConfig.speedIVibraniumArmor) {
+                if (VibraniumConfig.SPEED_I_VIBRANIUM_ARMOR.get()) {
                     components.add(Component.translatable("tooltip.immersiveores.speed1.tooltip").withStyle(ChatFormatting.LIGHT_PURPLE));
-                } if (VibraniumConfig.jumpIVibraniumArmor) {
+                }
+                if (VibraniumConfig.JUMP_I_VIBRANIUM_ARMOR.get()) {
                     components.add(Component.translatable("tooltip.immersiveores.jump1.tooltip").withStyle(ChatFormatting.LIGHT_PURPLE));
-                } if (VibraniumConfig.canWalkOnPowderedSnowVibranium) {
+                }
+                if (VibraniumConfig.CAN_WALK_ON_POWDERED_SNOW_VIBRANIUM.get()) {
                     components.add(Component.translatable("tooltip.immersiveores.canwalkonpowderedsnow.tooltip").withStyle(ChatFormatting.LIGHT_PURPLE));
                 }
             }
@@ -96,7 +108,7 @@ public class VibraniumArmor extends ArmorItem {
             if (ModItems.VIBRANIUM_HELMET.get() == pStack.getItem()) {
                 components.add(Component.translatable("tooltip.immersiveores.unbreakble.tooltip").withStyle(ChatFormatting.LIGHT_PURPLE));
                 components.add(Component.translatable("tooltip.immersiveores.immunetofire.tooltip").withStyle(ChatFormatting.LIGHT_PURPLE));
-                if (VibraniumConfig.nightVisionVibraniumArmor) {
+                if (VibraniumConfig.NIGHT_VISION_VIBRANIUM_ARMOR.get()) {
                     components.add(Component.translatable("tooltip.immersiveores.nightvision.tooltip").withStyle(ChatFormatting.LIGHT_PURPLE));
                 }
             }
@@ -109,8 +121,9 @@ public class VibraniumArmor extends ArmorItem {
         }
     }
 
+
     @Override
     public boolean canWalkOnPowderedSnow(ItemStack stack, LivingEntity wearer) {
-        return VibraniumConfig.canWalkOnPowderedSnowVibranium;
+        return VibraniumConfig.CAN_WALK_ON_POWDERED_SNOW_VIBRANIUM.get();
     }
 }

@@ -1,20 +1,31 @@
 package com.blocklegend001.immersiveores.item.custom.enderium;
 
+import com.blocklegend001.immersiveores.config.EnderiumConfig;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.gui.screens.Screen;
+import net.minecraft.core.component.DataComponents;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.SwordItem;
 import net.minecraft.world.item.ToolMaterial;
 import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.item.component.Unbreakable;
 
 import java.util.List;
 
 public class EnderiumSword extends SwordItem {
+    private static Properties createSettings(Properties properties, boolean unbreakable, int durability) {
+        properties.durability(durability);
 
-    public EnderiumSword(ToolMaterial p_361460_, float p_362481_, float p_364182_, Properties p_43272_) {
-        super(p_361460_, p_362481_, p_364182_, p_43272_);
+        if (unbreakable) {
+            properties.component(DataComponents.UNBREAKABLE, new Unbreakable(true));
+        }
+        return properties;
+    }
+
+    public EnderiumSword(ToolMaterial p_42961_, int p_42962_, float p_42963_, Properties p_42964_) {
+        super(p_42961_, p_42962_, p_42963_, createSettings(p_42964_, EnderiumConfig.UNBREAKABLE_ENDERIUM.get(), EnderiumConfig.DURABILITY_ENDERIUM.get()));
     }
 
     @Override
@@ -26,7 +37,9 @@ public class EnderiumSword extends SwordItem {
     @Override
     public void appendHoverText(ItemStack pStack, TooltipContext pContext, List<Component> components, TooltipFlag pTooltipFlag) {
         if(Screen.hasShiftDown()) {
-            components.add(Component.translatable("tooltip.immersiveores.unbreakble.tooltip").withStyle(ChatFormatting.DARK_AQUA));
+            if (EnderiumConfig.UNBREAKABLE_ENDERIUM.get()) {
+                components.add(Component.translatable("tooltip.immersiveores.unbreakble.tooltip").withStyle(ChatFormatting.DARK_AQUA));
+            }
             components.add(Component.translatable("tooltip.immersiveores.immunetofire.tooltip").withStyle(ChatFormatting.DARK_AQUA));
             components.add(Component.translatable("tooltip.immersiveores.cansetmobonfire.tooltip").withStyle(ChatFormatting.DARK_AQUA));
         } else {
