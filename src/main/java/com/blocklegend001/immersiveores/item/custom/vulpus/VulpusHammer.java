@@ -1,6 +1,5 @@
 package com.blocklegend001.immersiveores.item.custom.vulpus;
 
-import com.blocklegend001.immersiveores.config.EnderiumConfig;
 import com.blocklegend001.immersiveores.config.VulpusConfig;
 import com.blocklegend001.immersiveores.item.ModToolTiers;
 import com.blocklegend001.immersiveores.item.custom.base.Hammer;
@@ -48,7 +47,7 @@ public class VulpusHammer extends Hammer {
             components.add(Component.translatable("tooltip.immersiveores.immunetofire.tooltip").withStyle(ChatFormatting.RED));
 
             Component text = Component.literal("Dig area: ")
-                    .withStyle(ChatFormatting.GRAY)
+                    .withStyle(ChatFormatting.RED)
                     .append(Component.literal(widht + "x1").withStyle(ChatFormatting.YELLOW));
 
             components.add(text);

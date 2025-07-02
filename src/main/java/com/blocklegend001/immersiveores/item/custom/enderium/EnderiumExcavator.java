@@ -47,7 +47,7 @@ public class EnderiumExcavator extends Excavator {
             components.add(Component.translatable("tooltip.immersiveores.immunetofire.tooltip").withStyle(ChatFormatting.DARK_AQUA));
 
             Component text = Component.literal("Dig area: ")
-                    .withStyle(ChatFormatting.GRAY)
+                    .withStyle(ChatFormatting.DARK_AQUA)
                     .append(Component.literal(widht + "x1").withStyle(ChatFormatting.YELLOW));
 
             components.add(text);
