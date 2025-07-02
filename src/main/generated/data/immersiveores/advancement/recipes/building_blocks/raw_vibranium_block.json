@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_raw_vibranium": {
+      "conditions": {
+        "items": [
+          {
+            "items": "immersiveores:raw_vibranium"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "immersiveores:raw_vibranium_block"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_raw_vibranium"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "immersiveores:raw_vibranium_block"
+    ]
+  }
+}

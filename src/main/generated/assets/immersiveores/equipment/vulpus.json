@@ -1,0 +1,19 @@
+{
+  "layers": {
+    "horse_body": [
+      {
+        "texture": "immersiveores:vulpus"
+      }
+    ],
+    "humanoid": [
+      {
+        "texture": "immersiveores:vulpus"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "immersiveores:vulpus"
+      }
+    ]
+  }
+}
