@@ -1,0 +1,24 @@
+package com.blocklegend001.immersiveores.event;
+
+import com.blocklegend001.immersiveores.ImmersiveOres;
+import net.minecraft.client.Minecraft;
+import net.neoforged.api.distmarker.Dist;
+import net.neoforged.fml.common.EventBusSubscriber;
+import com.blocklegend001.immersiveores.util.tools.excavator.*;
+import com.blocklegend001.immersiveores.util.tools.hammer.*;
+import net.neoforged.neoforge.client.event.ClientTickEvent;
+
+@EventBusSubscriber(modid = ImmersiveOres.MODID, value = Dist.CLIENT)
+public class ClientEvents {
+    public static void onClientTick(ClientTickEvent.Pre event) {
+        if (Minecraft.getInstance().player != null) {
+            ModEventsVibraniumHammer.isSneaking = Minecraft.getInstance().player.isShiftKeyDown();
+            ModEventsVulpusHammer.isSneaking = Minecraft.getInstance().player.isShiftKeyDown();
+            ModEventsEnderiumHammer.isSneaking = Minecraft.getInstance().player.isShiftKeyDown();
+
+            ModEventsVibraniumExcavator.isSneaking = Minecraft.getInstance().player.isShiftKeyDown();
+            ModEventsVulpusExcavator.isSneaking = Minecraft.getInstance().player.isShiftKeyDown();
+            ModEventsEnderiumExcavator.isSneaking = Minecraft.getInstance().player.isShiftKeyDown();
+        }
+    }
+}

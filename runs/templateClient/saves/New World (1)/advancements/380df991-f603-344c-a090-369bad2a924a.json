@@ -42,12 +42,6 @@
     },
     "done": true
   },
-  "immersiveores:recipes/misc/vibranium_ingot_cooked": {
-    "criteria": {
-      "has_raw_vibranium": "2024-10-02 19:25:07 +0200"
-    },
-    "done": true
-  },
   "immersiveores:vibraniumarmor": {
     "criteria": {
       "has_vibranium_helmet": "2025-01-30 14:32:53 +0100"
@@ -383,6 +377,13 @@
       "has_enderium_ingot": "2025-01-30 14:33:18 +0100"
     },
     "done": true
+  },
+  "immersiveores:vibraniumspecialtools": {
+    "criteria": {
+      "has_vibranium_excavator": "2025-05-02 19:16:18 +0200",
+      "has_vibranium_hammer": "2025-05-02 19:16:18 +0200"
+    },
+    "done": false
   },
   "DataVersion": 3953
 }

@@ -1,5 +1,7 @@
 {
-	"favorites": [],
+	"favorites": [
+		"{data:{count:1,id:\"immersiveores:enderium_bow\",type:\"minecraft:item\"},type:\"roughlyenoughitems:entry_stack\"}"
+	],
 	"hiddenFavorites": [],
 	"displays": []
 }

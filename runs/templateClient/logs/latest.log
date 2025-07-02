@@ -1,442 +1,195 @@
-[20mar2025 12:21:58.172] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgeclientuserdev, --version, 21.0.167, --assetIndex, asset-index, --assetsDir, C:\Users\rosar\.gradle\caches\minecraft\assets, --gameDir, ., --fml.neoForgeVersion, 21.0.167, --fml.fmlVersion, 4.0.23, --fml.mcVersion, 1.21, --fml.neoFormVersion, 20240613.152323]
-[20mar2025 12:21:58.181] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: JVM identified as Amazon.com Inc. OpenJDK 64-Bit Server VM 21.0.5+11-LTS
-[20mar2025 12:21:58.182] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 11.0.4+main.d2e20e43 starting: java version 21.0.5 by Amazon.com Inc.; OS Windows 11 arch amd64 version 10.0
-[20mar2025 12:21:58.375] [main/INFO] [net.neoforged.fml.loading.ImmediateWindowHandler/]: Loading ImmediateWindowProvider fmlearlywindow
-[20mar2025 12:21:58.502] [main/INFO] [EARLYDISPLAY/]: Trying GL version 4.6
-[20mar2025 12:21:58.895] [main/INFO] [EARLYDISPLAY/]: Requested GL version 4.6 got version 4.6
-[20mar2025 12:21:59.050] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.6 Source=union:/C:/Users/rosar/.gradle/caches/modules-2/files-2.1/net.fabricmc/sponge-mixin/0.14.0+mixin.0.8.6/c265173c84346e9e5d42a2384b2b02bd39a4a899/sponge-mixin-0.14.0+mixin.0.8.6.jar%23135!/ Service=ModLauncher Env=CLIENT
-[20mar2025 12:21:59.326] [main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file "neoforge-21.0.167.jar" [locator: neoforge devenv provider ([F:\Programmazione\Mod\Immersive Ores\NEOFORGE\1.21\.gradle\repositories\ng_dummy_ng\net\neoforged\neoforge\21.0.167\neoforge-21.0.167.jar])]
-[20mar2025 12:21:59.330] [pool-2-thread-1/INFO] [EARLYDISPLAY/]: GL info: NVIDIA GeForce GTX 1650/PCIe/SSE2 GL version 4.6.0 NVIDIA 566.14, NVIDIA Corporation
-[20mar2025 12:21:59.350] [main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file "neoforge-21.0.167.jar" [locator: neoforge devenv provider ([F:\Programmazione\Mod\Immersive Ores\NEOFORGE\1.21\.gradle\repositories\ng_dummy_ng\net\neoforged\neoforge\21.0.167\neoforge-21.0.167.jar])]
-[20mar2025 12:21:59.366] [main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file "main" [locator: userdev mods and services, reader: mod manifest]
-[20mar2025 12:21:59.381] [main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file "neoforge-21.0.167.jar" [locator: userdev mods and services, reader: mod manifest]
-[20mar2025 12:21:59.388] [main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file "architectury-neoforge-13.0.5.jar" [locator: userdev mods and services, reader: mod manifest]
-[20mar2025 12:21:59.396] [main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file "RoughlyEnoughItems-neoforge-16.0.744.jar" [locator: userdev mods and services, reader: mod manifest]
-[20mar2025 12:21:59.409] [main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file "jei-1.21-neoforge-19.8.2.99.jar" [locator: userdev mods and services, reader: mod manifest]
-[20mar2025 12:21:59.415] [main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file "cloth-config-neoforge-15.0.127-neoforge.jar" [locator: userdev mods and services, reader: mod manifest]
-[20mar2025 12:21:59.457] [main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Found gamelibrary file "mixinextras-neoforge-0.3.5.jar" [locator: userdev mods and services, reader: mod manifest]
-[20mar2025 12:21:59.705] [main/WARN] [net.neoforged.jarjar.selection.JarSelector/]: Attempted to select a dependency jar for JarJar which was passed in as source: mixinextras-neoforge-0.3.5.jar. Using Mod File: C:\Users\rosar\.gradle\caches\modules-2\files-2.1\io.github.llamalad7\mixinextras-neoforge\0.3.5\ef3ffcf309dae656517b2f120189b1c9b21737dd\mixinextras-neoforge-0.3.5.jar
-[20mar2025 12:21:59.706] [main/INFO] [net.neoforged.fml.loading.moddiscovery.locators.JarInJarDependencyLocator/]: No dependencies to load found. Skipping!
-[20mar2025 12:22:00.054] [main/INFO] [net.neoforged.fml.loading.FMLServiceProvider/CORE]: Loading coremod script-engine for [neoforge]
-[20mar2025 12:22:01.497] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgeclientuserdev' with arguments [--version, 21.0.167, --gameDir, ., --assetsDir, C:\Users\rosar\.gradle\caches\minecraft\assets, --assetIndex, asset-index]
-[20mar2025 12:22:02.800] [main/INFO] [MixinExtras|Service/]: Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.3.5).
-[20mar2025 12:22:04.600] [Datafixer Bootstrap/INFO] [com.mojang.datafixers.DataFixerBuilder/]: 229 Datafixer optimizations took 395 milliseconds
-[20mar2025 12:22:11.971] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, location] and [teleport, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
-[20mar2025 12:22:11.973] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, location] and [teleport, targets] with inputs: [0.1 -0.5 .9, 0 0 0]
-[20mar2025 12:22:11.976] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, destination] and [teleport, targets] with inputs: [Player, 0123, @e, dd12be42-52a9-4a91-a8a1-11c01849e498]
-[20mar2025 12:22:11.977] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, targets] and [teleport, destination] with inputs: [Player, 0123, dd12be42-52a9-4a91-a8a1-11c01849e498]
-[20mar2025 12:22:11.979] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, targets, location] and [teleport, targets, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
-[20mar2025 12:22:12.128] [Render thread/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/F:/Programmazione/Mod/Immersive%20Ores/NEOFORGE/1.21/.gradle/repositories/ng_dummy_ng/net/neoforged/neoforge/21.0.167/neoforge-21.0.167.jar%23189!/assets/.mcassetsroot' uses unexpected schema
-[20mar2025 12:22:12.128] [Render thread/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/F:/Programmazione/Mod/Immersive%20Ores/NEOFORGE/1.21/.gradle/repositories/ng_dummy_ng/net/neoforged/neoforge/21.0.167/neoforge-21.0.167.jar%23189!/data/.mcassetsroot' uses unexpected schema
-[20mar2025 12:22:12.161] [Render thread/INFO] [com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService/]: Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, name=PROD]
-[20mar2025 12:22:12.177] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Setting user: Dev
-[20mar2025 12:22:12.305] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Backend library: LWJGL version 3.3.3+5
-[20mar2025 12:22:12.627] [modloading-worker-0/INFO] [net.neoforged.neoforge.common.NeoForgeMod/NEOFORGE-MOD]: NeoForge mod loading, version 21.0.167, for MC 1.21
-[20mar2025 12:22:12.750] [modloading-worker-0/ERROR] [mezz.jei.common.config.file.ConfigSchema/]: Failed to save config file: 'F:\Programmazione\Mod\Immersive Ores\NEOFORGE\1.21\runs\templateClient\config\jei\jei-colors.ini'
-java.nio.file.FileSystemException: F:\Programmazione\Mod\Immersive Ores\NEOFORGE\1.21\runs\templateClient\config\jei\15909588447978525024.tmp: Impossibile accedere al file. Il file è utilizzato da un altro processo
-	at java.base/sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:92) ~[?:?]
-	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:103) ~[?:?]
-	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:108) ~[?:?]
-	at java.base/sun.nio.fs.WindowsFileSystemProvider.implDelete(WindowsFileSystemProvider.java:273) ~[?:?]
-	at java.base/sun.nio.fs.AbstractFileSystemProvider.delete(AbstractFileSystemProvider.java:104) ~[?:?]
-	at java.base/java.nio.file.Files.delete(Files.java:1152) ~[?:?]
-	at TRANSFORMER/jei@19.8.2.99/mezz.jei.core.util.PathUtil.writeUsingTempFile(PathUtil.java:25) ~[jei-1.21-neoforge-19.8.2.99.jar%23195!/:19.8.2.99]
-	at TRANSFORMER/jei@19.8.2.99/mezz.jei.common.config.file.ConfigSerializer.save(ConfigSerializer.java:130) ~[jei-1.21-neoforge-19.8.2.99.jar%23195!/:19.8.2.99]
-	at TRANSFORMER/jei@19.8.2.99/mezz.jei.common.config.file.ConfigSchema.save(ConfigSchema.java:65) ~[jei-1.21-neoforge-19.8.2.99.jar%23195!/:19.8.2.99]
-	at TRANSFORMER/jei@19.8.2.99/mezz.jei.common.config.file.ConfigSchema.register(ConfigSchema.java:57) ~[jei-1.21-neoforge-19.8.2.99.jar%23195!/:19.8.2.99]
-	at TRANSFORMER/jei@19.8.2.99/mezz.jei.library.startup.JeiStarter.<init>(JeiStarter.java:85) ~[jei-1.21-neoforge-19.8.2.99.jar%23195!/:19.8.2.99]
-	at TRANSFORMER/jei@19.8.2.99/mezz.jei.neoforge.JustEnoughItemsClient.<init>(JustEnoughItemsClient.java:51) ~[jei-1.21-neoforge-19.8.2.99.jar%23195!/:19.8.2.99]
-	at TRANSFORMER/jei@19.8.2.99/mezz.jei.neoforge.JustEnoughItemsClientSafeRunner.registerClient(JustEnoughItemsClientSafeRunner.java:19) ~[jei-1.21-neoforge-19.8.2.99.jar%23195!/:19.8.2.99]
-	at TRANSFORMER/jei@19.8.2.99/mezz.jei.neoforge.JustEnoughItems.<init>(JustEnoughItems.java:32) ~[jei-1.21-neoforge-19.8.2.99.jar%23195!/:19.8.2.99]
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62) ~[?:?]
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502) ~[?:?]
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486) ~[?:?]
-	at MC-BOOTSTRAP/fml_loader@4.0.23/net.neoforged.fml.javafmlmod.FMLModContainer.constructMod(FMLModContainer.java:115) ~[loader-4.0.23.jar%23143!/:4.0]
-	at MC-BOOTSTRAP/fml_loader@4.0.23/net.neoforged.fml.ModLoader.lambda$constructMods$3(ModLoader.java:153) ~[loader-4.0.23.jar%23143!/:4.0]
-	at MC-BOOTSTRAP/fml_loader@4.0.23/net.neoforged.fml.ModLoader.lambda$dispatchParallelTask$7(ModLoader.java:231) ~[loader-4.0.23.jar%23143!/:4.0]
-	at java.base/java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:934) [?:?]
-	at java.base/java.util.concurrent.CompletableFuture$UniHandle.tryFire(CompletableFuture.java:911) [?:?]
-	at java.base/java.util.concurrent.CompletableFuture$Completion.exec(CompletableFuture.java:483) [?:?]
-	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:387) [?:?]
-	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1312) [?:?]
-	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1843) [?:?]
-	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1808) [?:?]
-	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188) [?:?]
-[20mar2025 12:22:12.765] [modloading-worker-0/ERROR] [mezz.jei.common.config.file.ConfigSchema/]: Failed to save config file: 'F:\Programmazione\Mod\Immersive Ores\NEOFORGE\1.21\runs\templateClient\config\jei\jei-client.ini'
-java.nio.file.FileSystemException: F:\Programmazione\Mod\Immersive Ores\NEOFORGE\1.21\runs\templateClient\config\jei\10357210020390989845.tmp: Impossibile accedere al file. Il file è utilizzato da un altro processo
-	at java.base/sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:92) ~[?:?]
-	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:103) ~[?:?]
-	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:108) ~[?:?]
-	at java.base/sun.nio.fs.WindowsFileSystemProvider.implDelete(WindowsFileSystemProvider.java:273) ~[?:?]
-	at java.base/sun.nio.fs.AbstractFileSystemProvider.delete(AbstractFileSystemProvider.java:104) ~[?:?]
-	at java.base/java.nio.file.Files.delete(Files.java:1152) ~[?:?]
-	at TRANSFORMER/jei@19.8.2.99/mezz.jei.core.util.PathUtil.writeUsingTempFile(PathUtil.java:25) ~[jei-1.21-neoforge-19.8.2.99.jar%23195!/:19.8.2.99]
-	at TRANSFORMER/jei@19.8.2.99/mezz.jei.common.config.file.ConfigSerializer.save(ConfigSerializer.java:130) ~[jei-1.21-neoforge-19.8.2.99.jar%23195!/:19.8.2.99]
-	at TRANSFORMER/jei@19.8.2.99/mezz.jei.common.config.file.ConfigSchema.save(ConfigSchema.java:65) ~[jei-1.21-neoforge-19.8.2.99.jar%23195!/:19.8.2.99]
-	at TRANSFORMER/jei@19.8.2.99/mezz.jei.common.config.file.ConfigSchema.register(ConfigSchema.java:57) ~[jei-1.21-neoforge-19.8.2.99.jar%23195!/:19.8.2.99]
-	at TRANSFORMER/jei@19.8.2.99/mezz.jei.common.config.JeiClientConfigs.register(JeiClientConfigs.java:31) ~[jei-1.21-neoforge-19.8.2.99.jar%23195!/:19.8.2.99]
-	at TRANSFORMER/jei@19.8.2.99/mezz.jei.library.startup.JeiStarter.<init>(JeiStarter.java:88) ~[jei-1.21-neoforge-19.8.2.99.jar%23195!/:19.8.2.99]
-	at TRANSFORMER/jei@19.8.2.99/mezz.jei.neoforge.JustEnoughItemsClient.<init>(JustEnoughItemsClient.java:51) ~[jei-1.21-neoforge-19.8.2.99.jar%23195!/:19.8.2.99]
-	at TRANSFORMER/jei@19.8.2.99/mezz.jei.neoforge.JustEnoughItemsClientSafeRunner.registerClient(JustEnoughItemsClientSafeRunner.java:19) ~[jei-1.21-neoforge-19.8.2.99.jar%23195!/:19.8.2.99]
-	at TRANSFORMER/jei@19.8.2.99/mezz.jei.neoforge.JustEnoughItems.<init>(JustEnoughItems.java:32) ~[jei-1.21-neoforge-19.8.2.99.jar%23195!/:19.8.2.99]
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62) ~[?:?]
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502) ~[?:?]
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486) ~[?:?]
-	at MC-BOOTSTRAP/fml_loader@4.0.23/net.neoforged.fml.javafmlmod.FMLModContainer.constructMod(FMLModContainer.java:115) ~[loader-4.0.23.jar%23143!/:4.0]
-	at MC-BOOTSTRAP/fml_loader@4.0.23/net.neoforged.fml.ModLoader.lambda$constructMods$3(ModLoader.java:153) ~[loader-4.0.23.jar%23143!/:4.0]
-	at MC-BOOTSTRAP/fml_loader@4.0.23/net.neoforged.fml.ModLoader.lambda$dispatchParallelTask$7(ModLoader.java:231) ~[loader-4.0.23.jar%23143!/:4.0]
-	at java.base/java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:934) [?:?]
-	at java.base/java.util.concurrent.CompletableFuture$UniHandle.tryFire(CompletableFuture.java:911) [?:?]
-	at java.base/java.util.concurrent.CompletableFuture$Completion.exec(CompletableFuture.java:483) [?:?]
-	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:387) [?:?]
-	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1312) [?:?]
-	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1843) [?:?]
-	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1808) [?:?]
-	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188) [?:?]
-[20mar2025 12:22:12.771] [modloading-worker-0/INFO] [mezz.jei.library.load.PluginCaller/]: Sending ConfigManager...
-[20mar2025 12:22:12.776] [modloading-worker-0/INFO] [mezz.jei.library.load.PluginCaller/]: Sending ConfigManager took 2.267 ms
-[20mar2025 12:22:12.850] [modloading-worker-0/INFO] [REI/]: [REI] Config loaded
-[20mar2025 12:22:12.963] [modloading-worker-0/INFO] [REI/]: [REI] Registered plugin provider DefaultPluginImpl [roughlyenoughitems] for REIServerPlugin
-[20mar2025 12:22:12.963] [modloading-worker-0/INFO] [REI/]: [REI] Registered plugin provider DefaultPluginImpl [roughlyenoughitems] for REIPlugin
-[20mar2025 12:22:12.964] [modloading-worker-0/INFO] [REI/]: [REI] Registered plugin provider DefaultRuntimePlugin [roughlyenoughitems] for REIServerPlugin
-[20mar2025 12:22:12.964] [modloading-worker-0/INFO] [REI/]: [REI] Registered plugin provider DefaultRuntimePlugin [roughlyenoughitems] for REIPlugin
-[20mar2025 12:22:12.986] [modloading-worker-0/INFO] [REI/]: [REI] Registered plugin provider DefaultClientPluginImpl [roughlyenoughitems] for REIClientPlugin
-[20mar2025 12:22:12.986] [modloading-worker-0/INFO] [REI/]: [REI] Registered plugin provider DefaultClientPluginImpl [roughlyenoughitems] for REIPlugin
-[20mar2025 12:22:13.002] [modloading-worker-0/INFO] [REI/]: [REI] Registered plugin provider DefaultClientRuntimePlugin [roughlyenoughitems] for REIClientPlugin
-[20mar2025 12:22:13.002] [modloading-worker-0/INFO] [REI/]: [REI] Registered plugin provider DefaultClientRuntimePlugin [roughlyenoughitems] for REIPlugin
-[20mar2025 12:22:13.004] [modloading-worker-0/INFO] [REI/]: [REI] Registered plugin provider HideIngredientsFromTagsPlugin [roughlyenoughitems] for REIClientPlugin
-[20mar2025 12:22:13.004] [modloading-worker-0/INFO] [REI/]: [REI] Registered plugin provider HideIngredientsFromTagsPlugin [roughlyenoughitems] for REIPlugin
-[20mar2025 12:22:13.783] [Render thread/INFO] [net.neoforged.neoforge.gametest.GameTestHooks/]: Enabled Gametest Namespaces: []
-[20mar2025 12:22:13.911] [Render thread/INFO] [net.minecraft.server.packs.resources.ReloadableResourceManager/]: Reloading ResourceManager: vanilla, mod_resources, mod/roughlyenoughitems, mod/cloth_config, mod/immersiveores, mod/architectury, mod/neoforge, mod/jei
-[20mar2025 12:22:14.071] [Worker-Main-3/INFO] [net.minecraft.client.gui.font.providers.UnihexProvider/]: Found unifont_all_no_pua-15.1.05.hex, loading
-[20mar2025 12:22:14.461] [Worker-Main-3/INFO] [net.minecraft.client.gui.font.providers.UnihexProvider/]: Found unifont_jp_patch-15.1.05.hex, loading
-[20mar2025 12:22:15.784] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:item.goat_horn.play
-[20mar2025 12:22:15.784] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:entity.goat.screaming.horn_break
-[20mar2025 12:22:15.852] [Render thread/INFO] [com.mojang.blaze3d.audio.Library/]: OpenAL initialized on device OpenAL Soft on Altoparlanti (Maonocaster G1 Neo)
-[20mar2025 12:22:15.853] [Render thread/INFO] [net.minecraft.client.sounds.SoundEngine/SOUNDS]: Sound engine started
-[20mar2025 12:22:15.959] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 1024x512x4 minecraft:textures/atlas/blocks.png-atlas
-[20mar2025 12:22:15.967] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x4 minecraft:textures/atlas/signs.png-atlas
-[20mar2025 12:22:15.967] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x512x4 minecraft:textures/atlas/shield_patterns.png-atlas
-[20mar2025 12:22:15.967] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x512x4 minecraft:textures/atlas/banner_patterns.png-atlas
-[20mar2025 12:22:15.969] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 1024x1024x4 minecraft:textures/atlas/armor_trims.png-atlas
-[20mar2025 12:22:15.971] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 128x64x4 minecraft:textures/atlas/decorated_pot.png-atlas
-[20mar2025 12:22:15.971] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x4 minecraft:textures/atlas/chest.png-atlas
-[20mar2025 12:22:15.971] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x4 minecraft:textures/atlas/shulker_boxes.png-atlas
-[20mar2025 12:22:15.972] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x4 minecraft:textures/atlas/beds.png-atlas
-[20mar2025 12:22:16.166] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x0 minecraft:textures/atlas/particles.png-atlas
-[20mar2025 12:22:16.168] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x0 minecraft:textures/atlas/paintings.png-atlas
-[20mar2025 12:22:16.168] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x128x0 minecraft:textures/atlas/mob_effects.png-atlas
-[20mar2025 12:22:16.170] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 64x64x0 minecraft:textures/atlas/map_decorations.png-atlas
-[20mar2025 12:22:16.170] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 1024x512x0 minecraft:textures/atlas/gui.png-atlas
-[20mar2025 12:22:16.194] [Render thread/WARN] [net.minecraft.client.renderer.ShaderInstance/]: Shader rendertype_entity_translucent_emissive could not find sampler named Sampler2 in the specified shader program.
-[20mar2025 12:22:16.259] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x0 jei:textures/atlas/gui.png-atlas
-[20mar2025 12:22:24.555] [Render thread/INFO] [net.minecraft.world.item.crafting.RecipeManager/]: Loaded 1356 recipes
-[20mar2025 12:22:24.771] [Render thread/INFO] [net.minecraft.advancements.AdvancementTree/]: Loaded 1477 advancements
-[20mar2025 12:22:25.245] [Render thread/INFO] [mezz.jei.neoforge.startup.StartEventObserver/]: JEI StartEventObserver received class net.neoforged.neoforge.event.TagsUpdatedEvent too early, ignoring
-[20mar2025 12:22:25.351] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Starting integrated minecraft server version 1.21
-[20mar2025 12:22:25.351] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Generating keypair
-[20mar2025 12:22:27.582] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Preparing start region for dimension minecraft:overworld
-[20mar2025 12:22:27.889] [progressListener/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
-[20mar2025 12:22:28.032] [Server thread/INFO] [net.neoforged.neoforge.server.permission.PermissionAPI/]: Successfully initialized permission handler neoforge:default_handler
-[20mar2025 12:22:28.047] [progressListener/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Time elapsed: 459 ms
-[20mar2025 12:22:28.154] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Changing view distance to 12, from 10
-[20mar2025 12:22:28.154] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Changing simulation distance to 12, from 0
-[20mar2025 12:22:28.773] [Render thread/INFO] [mezz.jei.neoforge.startup.StartEventObserver/]: JEI StartEventObserver received class net.neoforged.neoforge.event.TagsUpdatedEvent
-[20mar2025 12:22:28.992] [Server thread/INFO] [net.minecraft.server.players.PlayerList/]: Dev[local:E:c7a83752] logged in with entity id 133 at (-106.01569778083095, 70.0, -144.11518259489438)
-[20mar2025 12:22:29.064] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev joined the game
-[20mar2025 12:22:29.186] [REI-ReloadPlugins/INFO] [REI/]: [REI] ++++++++++++++++++++++++++++++++++++++++
-[20mar2025 12:22:29.187] [REI-ReloadPlugins/INFO] [REI/]: [REI] REIPlugin starting main-reload for START.
-[20mar2025 12:22:29.188] [REI-ReloadPlugins/INFO] [REI/]: [REI] Plugins (5):
-[20mar2025 12:22:29.189] [REI-ReloadPlugins/INFO] [REI/]: [REI]  - (-100,00) DefaultClientPluginImpl of DefaultClientPluginImpl [roughlyenoughitems]
-[20mar2025 12:22:29.189] [REI-ReloadPlugins/INFO] [REI/]: [REI]  - (-100,00) DefaultPluginImpl of DefaultPluginImpl [roughlyenoughitems]
-[20mar2025 12:22:29.189] [REI-ReloadPlugins/INFO] [REI/]: [REI]  - (0,00) HideIngredientsFromTagsPlugin of HideIngredientsFromTagsPlugin [roughlyenoughitems]
-[20mar2025 12:22:29.189] [REI-ReloadPlugins/INFO] [REI/]: [REI]  - (0,00) DefaultClientRuntimePlugin of DefaultClientRuntimePlugin [roughlyenoughitems]
-[20mar2025 12:22:29.189] [REI-ReloadPlugins/INFO] [REI/]: [REI]  - (0,00) DefaultRuntimePlugin of DefaultRuntimePlugin [roughlyenoughitems]
-[20mar2025 12:22:29.190] [REI-ReloadPlugins/INFO] [REI/]: [REI] ++++++++++++++++++++++++++++++++++++++++
-[20mar2025 12:22:29.217] [REI-ReloadPlugins/INFO] [REI/]: [REI] ========================================
-[20mar2025 12:22:29.218] [REI-ReloadPlugins/INFO] [REI/]: [REI] REIClientPlugin starting main-reload for START.
-[20mar2025 12:22:29.219] [REI-ReloadPlugins/INFO] [REI/]: [REI] Plugins (3):
-[20mar2025 12:22:29.219] [REI-ReloadPlugins/INFO] [REI/]: [REI]  - (-100,00) DefaultClientPluginImpl of DefaultClientPluginImpl [roughlyenoughitems]
-[20mar2025 12:22:29.219] [REI-ReloadPlugins/INFO] [REI/]: [REI]  - (0,00) HideIngredientsFromTagsPlugin of HideIngredientsFromTagsPlugin [roughlyenoughitems]
-[20mar2025 12:22:29.220] [REI-ReloadPlugins/INFO] [REI/]: [REI]  - (0,00) DefaultClientRuntimePlugin of DefaultClientRuntimePlugin [roughlyenoughitems]
-[20mar2025 12:22:29.220] [REI-ReloadPlugins/INFO] [REI/]: [REI] ========================================
-[20mar2025 12:22:29.241] [REI-ReloadPlugins/ERROR] [REI/]: [REI] DefaultClientPluginImpl of DefaultClientPluginImpl [roughlyenoughitems] plugin failed to reloadable-plugin/EntryRegistryImpl/!
-java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
-	at TRANSFORMER/roughlyenoughitems@16.0.744/me.shedaniel.rei.plugin.client.DefaultClientPlugin.collectTabs(DefaultClientPlugin.java:197) ~[RoughlyEnoughItems-neoforge-16.0.744.jar%23194!/:?]
-	at TRANSFORMER/roughlyenoughitems@16.0.744/me.shedaniel.rei.plugin.client.DefaultClientPlugin.registerEntries(DefaultClientPlugin.java:156) ~[RoughlyEnoughItems-neoforge-16.0.744.jar%23194!/:?]
-	at TRANSFORMER/roughlyenoughitems@16.0.744/me.shedaniel.rei.impl.common.entry.type.EntryRegistryImpl.acceptPlugin(EntryRegistryImpl.java:69) ~[RoughlyEnoughItems-neoforge-16.0.744.jar%23194!/:?]
-	at TRANSFORMER/roughlyenoughitems@16.0.744/me.shedaniel.rei.impl.common.entry.type.EntryRegistryImpl.acceptPlugin(EntryRegistryImpl.java:51) ~[RoughlyEnoughItems-neoforge-16.0.744.jar%23194!/:?]
-	at TRANSFORMER/roughlyenoughitems@16.0.744/me.shedaniel.rei.api.common.registry.Reloadable.acceptPlugin(Reloadable.java:78) ~[RoughlyEnoughItems-neoforge-16.0.744.jar%23194!/:?]
-	at TRANSFORMER/roughlyenoughitems@16.0.744/me.shedaniel.rei.impl.common.plugins.PluginManagerImpl.lambda$startReload$9(PluginManagerImpl.java:417) ~[RoughlyEnoughItems-neoforge-16.0.744.jar%23194!/:?]
-	at TRANSFORMER/roughlyenoughitems@16.0.744/me.shedaniel.rei.impl.common.plugins.PluginManagerImpl.lambda$pluginSection$4(PluginManagerImpl.java:199) ~[RoughlyEnoughItems-neoforge-16.0.744.jar%23194!/:?]
-	at TRANSFORMER/roughlyenoughitems@16.0.744/me.shedaniel.rei.impl.common.plugins.PluginManagerImpl.lambda$startReload$10(PluginManagerImpl.java:407) ~[RoughlyEnoughItems-neoforge-16.0.744.jar%23194!/:?]
-	at TRANSFORMER/roughlyenoughitems@16.0.744/me.shedaniel.rei.impl.common.plugins.PluginManagerImpl.pluginSection(PluginManagerImpl.java:197) ~[RoughlyEnoughItems-neoforge-16.0.744.jar%23194!/:?]
-	at TRANSFORMER/roughlyenoughitems@16.0.744/me.shedaniel.rei.impl.common.plugins.PluginManagerImpl.startReload(PluginManagerImpl.java:405) ~[RoughlyEnoughItems-neoforge-16.0.744.jar%23194!/:?]
-	at TRANSFORMER/roughlyenoughitems@16.0.744/me.shedaniel.rei.RoughlyEnoughItemsCore._reloadPlugins(RoughlyEnoughItemsCore.java:162) ~[RoughlyEnoughItems-neoforge-16.0.744.jar%23194!/:?]
-	at TRANSFORMER/roughlyenoughitems@16.0.744/me.shedaniel.rei.RoughlyEnoughItemsCoreClient.lambda$reloadPlugins$25(RoughlyEnoughItemsCoreClient.java:483) ~[RoughlyEnoughItems-neoforge-16.0.744.jar%23194!/:?]
-	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804) ~[?:?]
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572) ~[?:?]
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[?:?]
-	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) ~[?:?]
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[?:?]
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[?:?]
-	at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
-Caused by: java.lang.reflect.InvocationTargetException
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:115) ~[?:?]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
-	at TRANSFORMER/roughlyenoughitems@16.0.744/me.shedaniel.rei.plugin.client.DefaultClientPlugin.collectTabs(DefaultClientPlugin.java:195) ~[RoughlyEnoughItems-neoforge-16.0.744.jar%23194!/:?]
-	... 18 more
-Caused by: java.lang.NullPointerException: Cannot invoke "net.minecraft.client.player.LocalPlayer.level()" because "dev.architectury.utils.GameInstance.getClient().player" is null
-	at TRANSFORMER/roughlyenoughitems@16.0.744/me.shedaniel.rei.api.common.display.basic.BasicDisplay.lambda$static$0(BasicDisplay.java:49) ~[RoughlyEnoughItems-neoforge-16.0.744.jar%23194!/:?]
-	at TRANSFORMER/roughlyenoughitems@16.0.744/me.shedaniel.rei.api.common.display.basic.BasicDisplay.registryAccess(BasicDisplay.java:67) ~[RoughlyEnoughItems-neoforge-16.0.744.jar%23194!/:?]
-	at TRANSFORMER/roughlyenoughitems@16.0.744/me.shedaniel.rei.impl.client.forge.CreativeModeTabCollectorImpl.collectTabs(CreativeModeTabCollectorImpl.java:48) ~[RoughlyEnoughItems-neoforge-16.0.744.jar%23194!/:?]
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
-	at TRANSFORMER/roughlyenoughitems@16.0.744/me.shedaniel.rei.plugin.client.DefaultClientPlugin.collectTabs(DefaultClientPlugin.java:195) ~[RoughlyEnoughItems-neoforge-16.0.744.jar%23194!/:?]
-	... 18 more
-[20mar2025 12:22:29.315] [REI-ReloadPlugins/INFO] [REI/]: [REI] ++++++++++++++++++++++++++++++++++++++++
-[20mar2025 12:22:29.316] [REI-ReloadPlugins/INFO] [REI/]: [REI] REIServerPlugin starting main-reload for START.
-[20mar2025 12:22:29.316] [REI-ReloadPlugins/INFO] [REI/]: [REI] Plugins (2):
-[20mar2025 12:22:29.316] [REI-ReloadPlugins/INFO] [REI/]: [REI]  - (-100,00) DefaultPluginImpl of DefaultPluginImpl [roughlyenoughitems]
-[20mar2025 12:22:29.316] [REI-ReloadPlugins/INFO] [REI/]: [REI]  - (0,00) DefaultRuntimePlugin of DefaultRuntimePlugin [roughlyenoughitems]
-[20mar2025 12:22:29.316] [REI-ReloadPlugins/INFO] [REI/]: [REI] ++++++++++++++++++++++++++++++++++++++++
-[20mar2025 12:22:29.322] [REI-ReloadPlugins/INFO] [REI/]: [REI] REIPlugin finished post-reload for START in 1.933 ms, totaling 65.84 ms.
-[20mar2025 12:22:29.328] [REI-ReloadPlugins/INFO] [REI/]: [REI] REIClientPlugin finished post-reload for START in 2.035 ms, totaling 101.5 ms.
-[20mar2025 12:22:29.329] [REI-ReloadPlugins/INFO] [REI/]: [REI] REIServerPlugin finished post-reload for START in 775.3 μs, totaling 4.391 ms.
-[20mar2025 12:22:30.837] [Render thread/WARN] [REI/]: [REI] Suppressing Reload Plugins of stage START
-[20mar2025 12:22:30.860] [Render thread/INFO] [mezz.jei.neoforge.startup.StartEventObserver/]: JEI StartEventObserver received class net.neoforged.neoforge.client.event.RecipesUpdatedEvent
-[20mar2025 12:22:30.860] [Render thread/INFO] [mezz.jei.neoforge.startup.StartEventObserver/]: JEI StartEventObserver transitioning state from LISTENING to JEI_STARTED
-[20mar2025 12:22:30.861] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Starting JEI...
-[20mar2025 12:22:30.867] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering item subtypes...
-[20mar2025 12:22:30.871] [REI-ReloadPlugins/INFO] [REI/]: [REI] @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-[20mar2025 12:22:30.871] [REI-ReloadPlugins/INFO] [REI/]: [REI] REIPlugin starting main-reload for END.
-[20mar2025 12:22:30.872] [REI-ReloadPlugins/INFO] [REI/]: [REI] Plugins (5):
-[20mar2025 12:22:30.872] [REI-ReloadPlugins/INFO] [REI/]: [REI]  - (-100,00) DefaultClientPluginImpl of DefaultClientPluginImpl [roughlyenoughitems]
-[20mar2025 12:22:30.872] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering item subtypes took 5.086 ms
-[20mar2025 12:22:30.872] [REI-ReloadPlugins/INFO] [REI/]: [REI]  - (-100,00) DefaultPluginImpl of DefaultPluginImpl [roughlyenoughitems]
-[20mar2025 12:22:30.873] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering fluid subtypes...
-[20mar2025 12:22:30.873] [REI-ReloadPlugins/INFO] [REI/]: [REI]  - (0,00) HideIngredientsFromTagsPlugin of HideIngredientsFromTagsPlugin [roughlyenoughitems]
-[20mar2025 12:22:30.874] [REI-ReloadPlugins/INFO] [REI/]: [REI]  - (0,00) DefaultClientRuntimePlugin of DefaultClientRuntimePlugin [roughlyenoughitems]
-[20mar2025 12:22:30.874] [REI-ReloadPlugins/INFO] [REI/]: [REI]  - (0,00) DefaultRuntimePlugin of DefaultRuntimePlugin [roughlyenoughitems]
-[20mar2025 12:22:30.874] [REI-ReloadPlugins/INFO] [REI/]: [REI] @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-[20mar2025 12:22:30.875] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering fluid subtypes took 1.632 ms
-[20mar2025 12:22:30.876] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering ingredients...
-[20mar2025 12:22:30.959] [REI-ReloadPlugins/INFO] [REI/]: [REI] ========================================
-[20mar2025 12:22:30.959] [REI-ReloadPlugins/INFO] [REI/]: [REI] REIClientPlugin starting main-reload for END.
-[20mar2025 12:22:30.963] [REI-ReloadPlugins/INFO] [REI/]: [REI] Plugins (3):
-[20mar2025 12:22:30.963] [REI-ReloadPlugins/INFO] [REI/]: [REI]  - (-100,00) DefaultClientPluginImpl of DefaultClientPluginImpl [roughlyenoughitems]
-[20mar2025 12:22:30.964] [REI-ReloadPlugins/INFO] [REI/]: [REI]  - (0,00) HideIngredientsFromTagsPlugin of HideIngredientsFromTagsPlugin [roughlyenoughitems]
-[20mar2025 12:22:30.964] [REI-ReloadPlugins/INFO] [REI/]: [REI]  - (0,00) DefaultClientRuntimePlugin of DefaultClientRuntimePlugin [roughlyenoughitems]
-[20mar2025 12:22:30.964] [REI-ReloadPlugins/INFO] [REI/]: [REI] ========================================
-[20mar2025 12:22:30.979] [Render thread/WARN] [mezz.jei.library.plugins.vanilla.ingredients.ItemStackListFactory/]: Item Group has no display items and no search tab display items. Items from this group will be missing from the JEI ingredient list. Operator Utilities
-[20mar2025 12:22:30.998] [Render thread/INFO] [mezz.jei.library.load.PluginCallerTimerRunnable/]: Registering ingredients: jei:minecraft took 120.6 milliseconds
-[20mar2025 12:22:30.998] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering ingredients took 121.4 ms
-[20mar2025 12:22:31.003] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering Mod Info...
-[20mar2025 12:22:31.004] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering Mod Info took 558.3 μs
-[20mar2025 12:22:31.031] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering categories...
-[20mar2025 12:22:31.047] [Render thread/INFO] [mezz.jei.library.load.PluginCallerTimerRunnable/]: Registering categories: jei:minecraft took 16.55 milliseconds
-[20mar2025 12:22:31.054] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering categories took 23.80 ms
-[20mar2025 12:22:31.055] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering vanilla category extensions...
-[20mar2025 12:22:31.060] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering vanilla category extensions took 3.807 ms
-[20mar2025 12:22:31.062] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipe catalysts...
-[20mar2025 12:22:31.063] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipe catalysts took 1.010 ms
-[20mar2025 12:22:31.064] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering advanced plugins...
-[20mar2025 12:22:31.065] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering advanced plugins took 521.5 μs
-[20mar2025 12:22:31.065] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Building recipe registry...
-[20mar2025 12:22:31.083] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Building recipe registry took 18.36 ms
-[20mar2025 12:22:31.086] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipes...
-[20mar2025 12:22:31.218] [Render thread/INFO] [mezz.jei.library.load.PluginCallerTimerRunnable/]: Registering recipes: jei:minecraft took 132.9 milliseconds
-[20mar2025 12:22:31.293] [Render thread/INFO] [mezz.jei.library.load.PluginCallerTimerRunnable/]: Registering recipes: jei:internal took 74.02 milliseconds
-[20mar2025 12:22:31.293] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipes took 207.9 ms
-[20mar2025 12:22:31.298] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipes transfer handlers...
-[20mar2025 12:22:31.301] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipes transfer handlers took 2.991 ms
-[20mar2025 12:22:31.322] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Building runtime...
-[20mar2025 12:22:31.327] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering gui handlers...
-[20mar2025 12:22:31.333] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering gui handlers took 7.357 ms
-[20mar2025 12:22:31.337] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering Runtime...
-[20mar2025 12:22:31.338] [Render thread/INFO] [mezz.jei.gui.startup.JeiGuiStarter/]: Starting JEI GUI
-[20mar2025 12:22:31.340] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Building ingredient list...
-[20mar2025 12:22:31.344] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Building ingredient list took 3.382 ms
-[20mar2025 12:22:31.344] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Building ingredient filter...
-[20mar2025 12:22:31.367] [Render thread/INFO] [mezz.jei.gui.ingredients.IngredientFilter/]: Adding 1751 ingredients
-[20mar2025 12:22:31.638] [Render thread/INFO] [mezz.jei.gui.ingredients.IngredientFilter/]: Added 1751/1751 ingredients
-[20mar2025 12:22:31.641] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Building ingredient filter took 297.3 ms
-[20mar2025 12:22:31.734] [Render thread/INFO] [mezz.jei.library.load.PluginCallerTimerRunnable/]: Registering Runtime: jei:neoforge_gui took 397.0 milliseconds
-[20mar2025 12:22:31.735] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering Runtime took 397.7 ms
-[20mar2025 12:22:31.735] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Building runtime took 413.7 ms
-[20mar2025 12:22:31.736] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Sending Runtime...
-[20mar2025 12:22:31.736] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Sending Runtime took 554.1 μs
-[20mar2025 12:22:31.736] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Starting JEI took 875.4 ms
-[20mar2025 12:22:31.751] [Render thread/INFO] [net.minecraft.advancements.AdvancementTree/]: Loaded 70 advancements
-[20mar2025 12:22:32.347] [REI-ReloadPlugins/INFO] [REI/]: [REI] ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-[20mar2025 12:22:32.347] [REI-ReloadPlugins/INFO] [REI/]: [REI] REIServerPlugin starting main-reload for END.
-[20mar2025 12:22:32.348] [REI-ReloadPlugins/INFO] [REI/]: [REI] Plugins (2):
-[20mar2025 12:22:32.348] [REI-ReloadPlugins/INFO] [REI/]: [REI]  - (-100,00) DefaultPluginImpl of DefaultPluginImpl [roughlyenoughitems]
-[20mar2025 12:22:32.348] [REI-ReloadPlugins/INFO] [REI/]: [REI]  - (0,00) DefaultRuntimePlugin of DefaultRuntimePlugin [roughlyenoughitems]
-[20mar2025 12:22:32.348] [REI-ReloadPlugins/INFO] [REI/]: [REI] ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-[20mar2025 12:22:32.358] [REI-ReloadPlugins/INFO] [REI/]: [REI] REIPlugin finished post-reload for END in 1.149 ms, totaling 89.23 ms.
-[20mar2025 12:22:32.363] [REI-ReloadPlugins/INFO] [REI/]: [REI] REIClientPlugin finished post-reload for END in 1.232 ms, totaling 1.392 s.
-[20mar2025 12:22:32.384] [REI-ReloadPlugins/INFO] [REI/]: [REI] REIServerPlugin finished post-reload for END in 18.42 ms, totaling 27.58 ms.
-[20mar2025 12:22:32.497] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Saving and pausing game...
-[20mar2025 12:22:32.527] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
-[20mar2025 12:22:32.578] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
-[20mar2025 12:22:32.587] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
-[20mar2025 12:22:52.034] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Saving and pausing game...
-[20mar2025 12:22:52.040] [Server thread/ERROR] [net.minecraft.Util/]: Failed to rename
-java.nio.file.FileSystemException: .\saves\New World (1)\playerdata\380df991-f603-344c-a090-369bad2a924a-16311052007348556749.dat -> .\saves\New World (1)\playerdata\380df991-f603-344c-a090-369bad2a924a.dat: Impossibile accedere al file. Il file è utilizzato da un altro processo
-	at java.base/sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:92) ~[?:?]
-	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:103) ~[?:?]
-	at java.base/sun.nio.fs.WindowsFileCopy.move(WindowsFileCopy.java:414) ~[?:?]
-	at java.base/sun.nio.fs.WindowsFileSystemProvider.move(WindowsFileSystemProvider.java:291) ~[?:?]
-	at java.base/java.nio.file.Files.move(Files.java:1430) ~[?:?]
-	at TRANSFORMER/minecraft@1.21/net.minecraft.Util$3.getAsBoolean(Util.java:592) ~[neoforge-21.0.167.jar%23189!/:?]
-	at TRANSFORMER/minecraft@1.21/net.minecraft.Util.executeInSequence(Util.java:657) ~[neoforge-21.0.167.jar%23189!/:?]
-	at TRANSFORMER/minecraft@1.21/net.minecraft.Util.runWithRetries(Util.java:668) ~[neoforge-21.0.167.jar%23189!/:?]
-	at TRANSFORMER/minecraft@1.21/net.minecraft.Util.safeReplaceOrMoveFile(Util.java:691) ~[neoforge-21.0.167.jar%23189!/:?]
-	at TRANSFORMER/minecraft@1.21/net.minecraft.Util.safeReplaceFile(Util.java:680) ~[neoforge-21.0.167.jar%23189!/:?]
-	at TRANSFORMER/minecraft@1.21/net.minecraft.world.level.storage.PlayerDataStorage.save(PlayerDataStorage.java:41) ~[neoforge-21.0.167.jar%23189!/:?]
-	at TRANSFORMER/minecraft@1.21/net.minecraft.server.players.PlayerList.save(PlayerList.java:346) ~[neoforge-21.0.167.jar%23189!/:?]
-	at TRANSFORMER/minecraft@1.21/net.minecraft.client.server.IntegratedPlayerList.save(IntegratedPlayerList.java:32) ~[neoforge-21.0.167.jar%23189!/:?]
-	at TRANSFORMER/minecraft@1.21/net.minecraft.server.players.PlayerList.saveAll(PlayerList.java:675) ~[neoforge-21.0.167.jar%23189!/:?]
-	at TRANSFORMER/minecraft@1.21/net.minecraft.server.MinecraftServer.saveEverything(MinecraftServer.java:575) ~[neoforge-21.0.167.jar%23189!/:?]
-	at TRANSFORMER/minecraft@1.21/net.minecraft.client.server.IntegratedServer.saveEverything(IntegratedServer.java:303) ~[neoforge-21.0.167.jar%23189!/:?]
-	at TRANSFORMER/minecraft@1.21/net.minecraft.client.server.IntegratedServer.tickServer(IntegratedServer.java:98) ~[neoforge-21.0.167.jar%23189!/:?]
-	at TRANSFORMER/minecraft@1.21/net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:707) ~[neoforge-21.0.167.jar%23189!/:?]
-	at TRANSFORMER/minecraft@1.21/net.minecraft.server.MinecraftServer.lambda$spin$2(MinecraftServer.java:267) ~[neoforge-21.0.167.jar%23189!/:?]
-	at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
-[20mar2025 12:22:52.041] [Server thread/WARN] [net.minecraft.Util/]: Failed to execute rename .\saves\New World (1)\playerdata\380df991-f603-344c-a090-369bad2a924a-16311052007348556749.dat to .\saves\New World (1)\playerdata\380df991-f603-344c-a090-369bad2a924a.dat
-[20mar2025 12:22:52.041] [Server thread/ERROR] [net.minecraft.Util/]: Failed to replace .\saves\New World (1)\playerdata\380df991-f603-344c-a090-369bad2a924a.dat with .\saves\New World (1)\playerdata\380df991-f603-344c-a090-369bad2a924a-16311052007348556749.dat, retrying 0/10
-[20mar2025 12:22:52.042] [Server thread/ERROR] [net.minecraft.Util/]: Failed to rename
-java.nio.file.FileSystemException: .\saves\New World (1)\playerdata\380df991-f603-344c-a090-369bad2a924a-16311052007348556749.dat -> .\saves\New World (1)\playerdata\380df991-f603-344c-a090-369bad2a924a.dat: Impossibile accedere al file. Il file è utilizzato da un altro processo
-	at java.base/sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:92) ~[?:?]
-	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:103) ~[?:?]
-	at java.base/sun.nio.fs.WindowsFileCopy.move(WindowsFileCopy.java:414) ~[?:?]
-	at java.base/sun.nio.fs.WindowsFileSystemProvider.move(WindowsFileSystemProvider.java:291) ~[?:?]
-	at java.base/java.nio.file.Files.move(Files.java:1430) ~[?:?]
-	at TRANSFORMER/minecraft@1.21/net.minecraft.Util$3.getAsBoolean(Util.java:592) ~[neoforge-21.0.167.jar%23189!/:?]
-	at TRANSFORMER/minecraft@1.21/net.minecraft.Util.executeInSequence(Util.java:657) ~[neoforge-21.0.167.jar%23189!/:?]
-	at TRANSFORMER/minecraft@1.21/net.minecraft.Util.runWithRetries(Util.java:668) ~[neoforge-21.0.167.jar%23189!/:?]
-	at TRANSFORMER/minecraft@1.21/net.minecraft.Util.safeReplaceOrMoveFile(Util.java:691) ~[neoforge-21.0.167.jar%23189!/:?]
-	at TRANSFORMER/minecraft@1.21/net.minecraft.Util.safeReplaceFile(Util.java:680) ~[neoforge-21.0.167.jar%23189!/:?]
-	at TRANSFORMER/minecraft@1.21/net.minecraft.world.level.storage.PlayerDataStorage.save(PlayerDataStorage.java:41) ~[neoforge-21.0.167.jar%23189!/:?]
-	at TRANSFORMER/minecraft@1.21/net.minecraft.server.players.PlayerList.save(PlayerList.java:346) ~[neoforge-21.0.167.jar%23189!/:?]
-	at TRANSFORMER/minecraft@1.21/net.minecraft.client.server.IntegratedPlayerList.save(IntegratedPlayerList.java:32) ~[neoforge-21.0.167.jar%23189!/:?]
-	at TRANSFORMER/minecraft@1.21/net.minecraft.server.players.PlayerList.saveAll(PlayerList.java:675) ~[neoforge-21.0.167.jar%23189!/:?]
-	at TRANSFORMER/minecraft@1.21/net.minecraft.server.MinecraftServer.saveEverything(MinecraftServer.java:575) ~[neoforge-21.0.167.jar%23189!/:?]
-	at TRANSFORMER/minecraft@1.21/net.minecraft.client.server.IntegratedServer.saveEverything(IntegratedServer.java:303) ~[neoforge-21.0.167.jar%23189!/:?]
-	at TRANSFORMER/minecraft@1.21/net.minecraft.client.server.IntegratedServer.tickServer(IntegratedServer.java:98) ~[neoforge-21.0.167.jar%23189!/:?]
-	at TRANSFORMER/minecraft@1.21/net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:707) ~[neoforge-21.0.167.jar%23189!/:?]
-	at TRANSFORMER/minecraft@1.21/net.minecraft.server.MinecraftServer.lambda$spin$2(MinecraftServer.java:267) ~[neoforge-21.0.167.jar%23189!/:?]
-	at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
-[20mar2025 12:22:52.042] [Server thread/WARN] [net.minecraft.Util/]: Failed to execute rename .\saves\New World (1)\playerdata\380df991-f603-344c-a090-369bad2a924a-16311052007348556749.dat to .\saves\New World (1)\playerdata\380df991-f603-344c-a090-369bad2a924a.dat
-[20mar2025 12:22:52.042] [Server thread/ERROR] [net.minecraft.Util/]: Failed to replace .\saves\New World (1)\playerdata\380df991-f603-344c-a090-369bad2a924a.dat with .\saves\New World (1)\playerdata\380df991-f603-344c-a090-369bad2a924a-16311052007348556749.dat, retrying 1/10
-[20mar2025 12:22:52.043] [Server thread/ERROR] [net.minecraft.Util/]: Failed to rename
-java.nio.file.FileSystemException: .\saves\New World (1)\playerdata\380df991-f603-344c-a090-369bad2a924a-16311052007348556749.dat -> .\saves\New World (1)\playerdata\380df991-f603-344c-a090-369bad2a924a.dat: Impossibile accedere al file. Il file è utilizzato da un altro processo
-	at java.base/sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:92) ~[?:?]
-	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:103) ~[?:?]
-	at java.base/sun.nio.fs.WindowsFileCopy.move(WindowsFileCopy.java:414) ~[?:?]
-	at java.base/sun.nio.fs.WindowsFileSystemProvider.move(WindowsFileSystemProvider.java:291) ~[?:?]
-	at java.base/java.nio.file.Files.move(Files.java:1430) ~[?:?]
-	at TRANSFORMER/minecraft@1.21/net.minecraft.Util$3.getAsBoolean(Util.java:592) ~[neoforge-21.0.167.jar%23189!/:?]
-	at TRANSFORMER/minecraft@1.21/net.minecraft.Util.executeInSequence(Util.java:657) ~[neoforge-21.0.167.jar%23189!/:?]
-	at TRANSFORMER/minecraft@1.21/net.minecraft.Util.runWithRetries(Util.java:668) ~[neoforge-21.0.167.jar%23189!/:?]
-	at TRANSFORMER/minecraft@1.21/net.minecraft.Util.safeReplaceOrMoveFile(Util.java:691) ~[neoforge-21.0.167.jar%23189!/:?]
-	at TRANSFORMER/minecraft@1.21/net.minecraft.Util.safeReplaceFile(Util.java:680) ~[neoforge-21.0.167.jar%23189!/:?]
-	at TRANSFORMER/minecraft@1.21/net.minecraft.world.level.storage.PlayerDataStorage.save(PlayerDataStorage.java:41) ~[neoforge-21.0.167.jar%23189!/:?]
-	at TRANSFORMER/minecraft@1.21/net.minecraft.server.players.PlayerList.save(PlayerList.java:346) ~[neoforge-21.0.167.jar%23189!/:?]
-	at TRANSFORMER/minecraft@1.21/net.minecraft.client.server.IntegratedPlayerList.save(IntegratedPlayerList.java:32) ~[neoforge-21.0.167.jar%23189!/:?]
-	at TRANSFORMER/minecraft@1.21/net.minecraft.server.players.PlayerList.saveAll(PlayerList.java:675) ~[neoforge-21.0.167.jar%23189!/:?]
-	at TRANSFORMER/minecraft@1.21/net.minecraft.server.MinecraftServer.saveEverything(MinecraftServer.java:575) ~[neoforge-21.0.167.jar%23189!/:?]
-	at TRANSFORMER/minecraft@1.21/net.minecraft.client.server.IntegratedServer.saveEverything(IntegratedServer.java:303) ~[neoforge-21.0.167.jar%23189!/:?]
-	at TRANSFORMER/minecraft@1.21/net.minecraft.client.server.IntegratedServer.tickServer(IntegratedServer.java:98) ~[neoforge-21.0.167.jar%23189!/:?]
-	at TRANSFORMER/minecraft@1.21/net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:707) ~[neoforge-21.0.167.jar%23189!/:?]
-	at TRANSFORMER/minecraft@1.21/net.minecraft.server.MinecraftServer.lambda$spin$2(MinecraftServer.java:267) ~[neoforge-21.0.167.jar%23189!/:?]
-	at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
-[20mar2025 12:22:52.044] [Server thread/WARN] [net.minecraft.Util/]: Failed to execute rename .\saves\New World (1)\playerdata\380df991-f603-344c-a090-369bad2a924a-16311052007348556749.dat to .\saves\New World (1)\playerdata\380df991-f603-344c-a090-369bad2a924a.dat
-[20mar2025 12:22:52.044] [Server thread/ERROR] [net.minecraft.Util/]: Failed to replace .\saves\New World (1)\playerdata\380df991-f603-344c-a090-369bad2a924a.dat with .\saves\New World (1)\playerdata\380df991-f603-344c-a090-369bad2a924a-16311052007348556749.dat, retrying 2/10
-[20mar2025 12:22:52.044] [Server thread/ERROR] [net.minecraft.Util/]: Failed to rename
-java.nio.file.FileSystemException: .\saves\New World (1)\playerdata\380df991-f603-344c-a090-369bad2a924a-16311052007348556749.dat -> .\saves\New World (1)\playerdata\380df991-f603-344c-a090-369bad2a924a.dat: Impossibile accedere al file. Il file è utilizzato da un altro processo
-	at java.base/sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:92) ~[?:?]
-	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:103) ~[?:?]
-	at java.base/sun.nio.fs.WindowsFileCopy.move(WindowsFileCopy.java:414) ~[?:?]
-	at java.base/sun.nio.fs.WindowsFileSystemProvider.move(WindowsFileSystemProvider.java:291) ~[?:?]
-	at java.base/java.nio.file.Files.move(Files.java:1430) ~[?:?]
-	at TRANSFORMER/minecraft@1.21/net.minecraft.Util$3.getAsBoolean(Util.java:592) ~[neoforge-21.0.167.jar%23189!/:?]
-	at TRANSFORMER/minecraft@1.21/net.minecraft.Util.executeInSequence(Util.java:657) ~[neoforge-21.0.167.jar%23189!/:?]
-	at TRANSFORMER/minecraft@1.21/net.minecraft.Util.runWithRetries(Util.java:668) ~[neoforge-21.0.167.jar%23189!/:?]
-	at TRANSFORMER/minecraft@1.21/net.minecraft.Util.safeReplaceOrMoveFile(Util.java:691) ~[neoforge-21.0.167.jar%23189!/:?]
-	at TRANSFORMER/minecraft@1.21/net.minecraft.Util.safeReplaceFile(Util.java:680) ~[neoforge-21.0.167.jar%23189!/:?]
-	at TRANSFORMER/minecraft@1.21/net.minecraft.world.level.storage.PlayerDataStorage.save(PlayerDataStorage.java:41) ~[neoforge-21.0.167.jar%23189!/:?]
-	at TRANSFORMER/minecraft@1.21/net.minecraft.server.players.PlayerList.save(PlayerList.java:346) ~[neoforge-21.0.167.jar%23189!/:?]
-	at TRANSFORMER/minecraft@1.21/net.minecraft.client.server.IntegratedPlayerList.save(IntegratedPlayerList.java:32) ~[neoforge-21.0.167.jar%23189!/:?]
-	at TRANSFORMER/minecraft@1.21/net.minecraft.server.players.PlayerList.saveAll(PlayerList.java:675) ~[neoforge-21.0.167.jar%23189!/:?]
-	at TRANSFORMER/minecraft@1.21/net.minecraft.server.MinecraftServer.saveEverything(MinecraftServer.java:575) ~[neoforge-21.0.167.jar%23189!/:?]
-	at TRANSFORMER/minecraft@1.21/net.minecraft.client.server.IntegratedServer.saveEverything(IntegratedServer.java:303) ~[neoforge-21.0.167.jar%23189!/:?]
-	at TRANSFORMER/minecraft@1.21/net.minecraft.client.server.IntegratedServer.tickServer(IntegratedServer.java:98) ~[neoforge-21.0.167.jar%23189!/:?]
-	at TRANSFORMER/minecraft@1.21/net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:707) ~[neoforge-21.0.167.jar%23189!/:?]
-	at TRANSFORMER/minecraft@1.21/net.minecraft.server.MinecraftServer.lambda$spin$2(MinecraftServer.java:267) ~[neoforge-21.0.167.jar%23189!/:?]
-	at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
-[20mar2025 12:22:52.045] [Server thread/WARN] [net.minecraft.Util/]: Failed to execute rename .\saves\New World (1)\playerdata\380df991-f603-344c-a090-369bad2a924a-16311052007348556749.dat to .\saves\New World (1)\playerdata\380df991-f603-344c-a090-369bad2a924a.dat
-[20mar2025 12:22:52.045] [Server thread/ERROR] [net.minecraft.Util/]: Failed to replace .\saves\New World (1)\playerdata\380df991-f603-344c-a090-369bad2a924a.dat with .\saves\New World (1)\playerdata\380df991-f603-344c-a090-369bad2a924a-16311052007348556749.dat, retrying 3/10
-[20mar2025 12:22:52.045] [Server thread/ERROR] [net.minecraft.Util/]: Failed to rename
-java.nio.file.FileSystemException: .\saves\New World (1)\playerdata\380df991-f603-344c-a090-369bad2a924a-16311052007348556749.dat -> .\saves\New World (1)\playerdata\380df991-f603-344c-a090-369bad2a924a.dat: Impossibile accedere al file. Il file è utilizzato da un altro processo
-	at java.base/sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:92) ~[?:?]
-	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:103) ~[?:?]
-	at java.base/sun.nio.fs.WindowsFileCopy.move(WindowsFileCopy.java:414) ~[?:?]
-	at java.base/sun.nio.fs.WindowsFileSystemProvider.move(WindowsFileSystemProvider.java:291) ~[?:?]
-	at java.base/java.nio.file.Files.move(Files.java:1430) ~[?:?]
-	at TRANSFORMER/minecraft@1.21/net.minecraft.Util$3.getAsBoolean(Util.java:592) ~[neoforge-21.0.167.jar%23189!/:?]
-	at TRANSFORMER/minecraft@1.21/net.minecraft.Util.executeInSequence(Util.java:657) ~[neoforge-21.0.167.jar%23189!/:?]
-	at TRANSFORMER/minecraft@1.21/net.minecraft.Util.runWithRetries(Util.java:668) ~[neoforge-21.0.167.jar%23189!/:?]
-	at TRANSFORMER/minecraft@1.21/net.minecraft.Util.safeReplaceOrMoveFile(Util.java:691) ~[neoforge-21.0.167.jar%23189!/:?]
-	at TRANSFORMER/minecraft@1.21/net.minecraft.Util.safeReplaceFile(Util.java:680) ~[neoforge-21.0.167.jar%23189!/:?]
-	at TRANSFORMER/minecraft@1.21/net.minecraft.world.level.storage.PlayerDataStorage.save(PlayerDataStorage.java:41) ~[neoforge-21.0.167.jar%23189!/:?]
-	at TRANSFORMER/minecraft@1.21/net.minecraft.server.players.PlayerList.save(PlayerList.java:346) ~[neoforge-21.0.167.jar%23189!/:?]
-	at TRANSFORMER/minecraft@1.21/net.minecraft.client.server.IntegratedPlayerList.save(IntegratedPlayerList.java:32) ~[neoforge-21.0.167.jar%23189!/:?]
-	at TRANSFORMER/minecraft@1.21/net.minecraft.server.players.PlayerList.saveAll(PlayerList.java:675) ~[neoforge-21.0.167.jar%23189!/:?]
-	at TRANSFORMER/minecraft@1.21/net.minecraft.server.MinecraftServer.saveEverything(MinecraftServer.java:575) ~[neoforge-21.0.167.jar%23189!/:?]
-	at TRANSFORMER/minecraft@1.21/net.minecraft.client.server.IntegratedServer.saveEverything(IntegratedServer.java:303) ~[neoforge-21.0.167.jar%23189!/:?]
-	at TRANSFORMER/minecraft@1.21/net.minecraft.client.server.IntegratedServer.tickServer(IntegratedServer.java:98) ~[neoforge-21.0.167.jar%23189!/:?]
-	at TRANSFORMER/minecraft@1.21/net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:707) ~[neoforge-21.0.167.jar%23189!/:?]
-	at TRANSFORMER/minecraft@1.21/net.minecraft.server.MinecraftServer.lambda$spin$2(MinecraftServer.java:267) ~[neoforge-21.0.167.jar%23189!/:?]
-	at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
-[20mar2025 12:22:52.046] [Server thread/WARN] [net.minecraft.Util/]: Failed to execute rename .\saves\New World (1)\playerdata\380df991-f603-344c-a090-369bad2a924a-16311052007348556749.dat to .\saves\New World (1)\playerdata\380df991-f603-344c-a090-369bad2a924a.dat
-[20mar2025 12:22:52.046] [Server thread/ERROR] [net.minecraft.Util/]: Failed to replace .\saves\New World (1)\playerdata\380df991-f603-344c-a090-369bad2a924a.dat with .\saves\New World (1)\playerdata\380df991-f603-344c-a090-369bad2a924a-16311052007348556749.dat, retrying 4/10
-[20mar2025 12:22:52.047] [Server thread/ERROR] [net.minecraft.Util/]: Failed to rename
-java.nio.file.FileSystemException: .\saves\New World (1)\playerdata\380df991-f603-344c-a090-369bad2a924a-16311052007348556749.dat -> .\saves\New World (1)\playerdata\380df991-f603-344c-a090-369bad2a924a.dat: Impossibile accedere al file. Il file è utilizzato da un altro processo
-	at java.base/sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:92) ~[?:?]
-	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:103) ~[?:?]
-	at java.base/sun.nio.fs.WindowsFileCopy.move(WindowsFileCopy.java:414) ~[?:?]
-	at java.base/sun.nio.fs.WindowsFileSystemProvider.move(WindowsFileSystemProvider.java:291) ~[?:?]
-	at java.base/java.nio.file.Files.move(Files.java:1430) ~[?:?]
-	at TRANSFORMER/minecraft@1.21/net.minecraft.Util$3.getAsBoolean(Util.java:592) ~[neoforge-21.0.167.jar%23189!/:?]
-	at TRANSFORMER/minecraft@1.21/net.minecraft.Util.executeInSequence(Util.java:657) ~[neoforge-21.0.167.jar%23189!/:?]
-	at TRANSFORMER/minecraft@1.21/net.minecraft.Util.runWithRetries(Util.java:668) ~[neoforge-21.0.167.jar%23189!/:?]
-	at TRANSFORMER/minecraft@1.21/net.minecraft.Util.safeReplaceOrMoveFile(Util.java:691) ~[neoforge-21.0.167.jar%23189!/:?]
-	at TRANSFORMER/minecraft@1.21/net.minecraft.Util.safeReplaceFile(Util.java:680) ~[neoforge-21.0.167.jar%23189!/:?]
-	at TRANSFORMER/minecraft@1.21/net.minecraft.world.level.storage.PlayerDataStorage.save(PlayerDataStorage.java:41) ~[neoforge-21.0.167.jar%23189!/:?]
-	at TRANSFORMER/minecraft@1.21/net.minecraft.server.players.PlayerList.save(PlayerList.java:346) ~[neoforge-21.0.167.jar%23189!/:?]
-	at TRANSFORMER/minecraft@1.21/net.minecraft.client.server.IntegratedPlayerList.save(IntegratedPlayerList.java:32) ~[neoforge-21.0.167.jar%23189!/:?]
-	at TRANSFORMER/minecraft@1.21/net.minecraft.server.players.PlayerList.saveAll(PlayerList.java:675) ~[neoforge-21.0.167.jar%23189!/:?]
-	at TRANSFORMER/minecraft@1.21/net.minecraft.server.MinecraftServer.saveEverything(MinecraftServer.java:575) ~[neoforge-21.0.167.jar%23189!/:?]
-	at TRANSFORMER/minecraft@1.21/net.minecraft.client.server.IntegratedServer.saveEverything(IntegratedServer.java:303) ~[neoforge-21.0.167.jar%23189!/:?]
-	at TRANSFORMER/minecraft@1.21/net.minecraft.client.server.IntegratedServer.tickServer(IntegratedServer.java:98) ~[neoforge-21.0.167.jar%23189!/:?]
-	at TRANSFORMER/minecraft@1.21/net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:707) ~[neoforge-21.0.167.jar%23189!/:?]
-	at TRANSFORMER/minecraft@1.21/net.minecraft.server.MinecraftServer.lambda$spin$2(MinecraftServer.java:267) ~[neoforge-21.0.167.jar%23189!/:?]
-	at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
-[20mar2025 12:22:52.050] [Server thread/WARN] [net.minecraft.Util/]: Failed to execute rename .\saves\New World (1)\playerdata\380df991-f603-344c-a090-369bad2a924a-16311052007348556749.dat to .\saves\New World (1)\playerdata\380df991-f603-344c-a090-369bad2a924a.dat
-[20mar2025 12:22:52.050] [Server thread/ERROR] [net.minecraft.Util/]: Failed to replace .\saves\New World (1)\playerdata\380df991-f603-344c-a090-369bad2a924a.dat with .\saves\New World (1)\playerdata\380df991-f603-344c-a090-369bad2a924a-16311052007348556749.dat, retrying 5/10
-[20mar2025 12:22:52.057] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
-[20mar2025 12:22:52.079] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
-[20mar2025 12:22:52.091] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
-[20mar2025 12:23:09.718] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: [Dev: Set the time to 1000]
-[20mar2025 12:23:09.730] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] Set the time to 1000
-[20mar2025 12:23:54.592] [Render thread/INFO] [net.minecraft.advancements.AdvancementTree/]: Loaded 70 advancements
-[20mar2025 12:23:54.700] [Render thread/INFO] [net.minecraft.advancements.AdvancementTree/]: Loaded 70 advancements
-[20mar2025 12:23:54.797] [Render thread/INFO] [net.minecraft.advancements.AdvancementTree/]: Loaded 71 advancements
-[20mar2025 12:23:55.344] [Render thread/INFO] [net.minecraft.advancements.AdvancementTree/]: Loaded 71 advancements
-[20mar2025 12:24:04.844] [Render thread/INFO] [net.minecraft.advancements.AdvancementTree/]: Loaded 71 advancements
-[20mar2025 12:24:13.232] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: [Dev: Set own game mode to Survival Mode]
-[20mar2025 12:24:13.235] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] Set own game mode to Survival Mode
-[20mar2025 12:24:17.342] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: [Dev: Gave 10000 experience points to Dev]
-[20mar2025 12:24:17.347] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] Gave 10000 experience points to Dev
+[01lug2025 17:12:54.397] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgeclientuserdev, --version, 21.0.167, --assetIndex, asset-index, --assetsDir, C:\Users\rosar\.gradle\caches\minecraft\assets, --gameDir, ., --fml.neoForgeVersion, 21.0.167, --fml.fmlVersion, 4.0.23, --fml.mcVersion, 1.21, --fml.neoFormVersion, 20240613.152323]
+[01lug2025 17:12:54.400] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: JVM identified as Amazon.com Inc. OpenJDK 64-Bit Server VM 21.0.6+7-LTS
+[01lug2025 17:12:54.401] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 11.0.4+main.d2e20e43 starting: java version 21.0.6 by Amazon.com Inc.; OS Windows 11 arch amd64 version 10.0
+[01lug2025 17:12:54.608] [main/INFO] [net.neoforged.fml.loading.ImmediateWindowHandler/]: Loading ImmediateWindowProvider fmlearlywindow
+[01lug2025 17:12:54.727] [main/INFO] [EARLYDISPLAY/]: Trying GL version 4.6
+[01lug2025 17:12:54.844] [main/INFO] [EARLYDISPLAY/]: Requested GL version 4.6 got version 4.6
+[01lug2025 17:12:54.912] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.6 Source=union:/C:/Users/rosar/.gradle/caches/modules-2/files-2.1/net.fabricmc/sponge-mixin/0.14.0+mixin.0.8.6/c265173c84346e9e5d42a2384b2b02bd39a4a899/sponge-mixin-0.14.0+mixin.0.8.6.jar%23135!/ Service=ModLauncher Env=CLIENT
+[01lug2025 17:12:55.082] [pool-2-thread-1/INFO] [EARLYDISPLAY/]: GL info: Intel(R) UHD Graphics GL version 4.6.0 - Build 31.0.101.5592, Intel
+[01lug2025 17:12:55.131] [main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file "neoforge-21.0.167.jar" [locator: neoforge devenv provider ([D:\Programmazione\Mod\Immersive Ores\NEOFORGE\1.21\.gradle\repositories\ng_dummy_ng\net\neoforged\neoforge\21.0.167\neoforge-21.0.167.jar])]
+[01lug2025 17:12:55.151] [main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file "neoforge-21.0.167.jar" [locator: neoforge devenv provider ([D:\Programmazione\Mod\Immersive Ores\NEOFORGE\1.21\.gradle\repositories\ng_dummy_ng\net\neoforged\neoforge\21.0.167\neoforge-21.0.167.jar])]
+[01lug2025 17:12:55.172] [main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file "main" [locator: userdev mods and services, reader: mod manifest]
+[01lug2025 17:12:55.184] [main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file "neoforge-21.0.167.jar" [locator: userdev mods and services, reader: mod manifest]
+[01lug2025 17:12:55.188] [main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file "architectury-neoforge-13.0.5.jar" [locator: userdev mods and services, reader: mod manifest]
+[01lug2025 17:12:55.192] [main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file "RoughlyEnoughItems-neoforge-16.0.799.jar" [locator: userdev mods and services, reader: mod manifest]
+[01lug2025 17:12:55.195] [main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file "jei-1.21-neoforge-19.8.2.99.jar" [locator: userdev mods and services, reader: mod manifest]
+[01lug2025 17:12:55.199] [main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file "cloth-config-neoforge-15.0.130-neoforge.jar" [locator: userdev mods and services, reader: mod manifest]
+[01lug2025 17:12:55.217] [main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Found gamelibrary file "mixinextras-neoforge-0.3.5.jar" [locator: userdev mods and services, reader: mod manifest]
+[01lug2025 17:12:55.338] [main/WARN] [net.neoforged.jarjar.selection.JarSelector/]: Attempted to select a dependency jar for JarJar which was passed in as source: mixinextras-neoforge-0.3.5.jar. Using Mod File: C:\Users\rosar\.gradle\caches\modules-2\files-2.1\io.github.llamalad7\mixinextras-neoforge\0.3.5\ef3ffcf309dae656517b2f120189b1c9b21737dd\mixinextras-neoforge-0.3.5.jar
+[01lug2025 17:12:55.339] [main/INFO] [net.neoforged.fml.loading.moddiscovery.locators.JarInJarDependencyLocator/]: No dependencies to load found. Skipping!
+[01lug2025 17:12:55.521] [main/INFO] [net.neoforged.fml.loading.FMLServiceProvider/CORE]: Loading coremod script-engine for [neoforge]
+[01lug2025 17:12:56.707] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgeclientuserdev' with arguments [--version, 21.0.167, --gameDir, ., --assetsDir, C:\Users\rosar\.gradle\caches\minecraft\assets, --assetIndex, asset-index]
+[01lug2025 17:12:56.788] [main/WARN] [mixin/]: Reference map 'onlyexcavators.refmap.json' for immersiveores.mixins.json could not be read. If this is a development environment you can ignore this message
+[01lug2025 17:12:57.287] [main/INFO] [MixinExtras|Service/]: Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.3.5).
+[01lug2025 17:12:58.627] [Datafixer Bootstrap/INFO] [com.mojang.datafixers.DataFixerBuilder/]: 229 Datafixer optimizations took 277 milliseconds
+[01lug2025 17:13:02.857] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, location] and [teleport, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+[01lug2025 17:13:02.857] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, location] and [teleport, targets] with inputs: [0.1 -0.5 .9, 0 0 0]
+[01lug2025 17:13:02.859] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, destination] and [teleport, targets] with inputs: [Player, 0123, @e, dd12be42-52a9-4a91-a8a1-11c01849e498]
+[01lug2025 17:13:02.860] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, targets] and [teleport, destination] with inputs: [Player, 0123, dd12be42-52a9-4a91-a8a1-11c01849e498]
+[01lug2025 17:13:02.860] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, targets, location] and [teleport, targets, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+[01lug2025 17:13:02.977] [Render thread/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/D:/Programmazione/Mod/Immersive%20Ores/NEOFORGE/1.21/.gradle/repositories/ng_dummy_ng/net/neoforged/neoforge/21.0.167/neoforge-21.0.167.jar%23189!/assets/.mcassetsroot' uses unexpected schema
+[01lug2025 17:13:02.978] [Render thread/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/D:/Programmazione/Mod/Immersive%20Ores/NEOFORGE/1.21/.gradle/repositories/ng_dummy_ng/net/neoforged/neoforge/21.0.167/neoforge-21.0.167.jar%23189!/data/.mcassetsroot' uses unexpected schema
+[01lug2025 17:13:03.015] [Render thread/INFO] [com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService/]: Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, name=PROD]
+[01lug2025 17:13:03.026] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Setting user: Dev
+[01lug2025 17:13:03.111] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Backend library: LWJGL version 3.3.3+5
+[01lug2025 17:13:03.385] [modloading-worker-0/INFO] [net.neoforged.neoforge.common.NeoForgeMod/NEOFORGE-MOD]: NeoForge mod loading, version 21.0.167, for MC 1.21
+[01lug2025 17:13:03.562] [modloading-worker-0/INFO] [mezz.jei.library.load.PluginCaller/]: Sending ConfigManager...
+[01lug2025 17:13:03.569] [modloading-worker-0/INFO] [mezz.jei.library.load.PluginCaller/]: Sending ConfigManager took 2.959 ms
+[01lug2025 17:13:03.652] [modloading-worker-0/INFO] [REI/]: [REI] Config loaded
+[01lug2025 17:13:03.719] [modloading-worker-0/INFO] [REI/]: [REI] Registered plugin provider DefaultPluginImpl [roughlyenoughitems] for REIServerPlugin
+[01lug2025 17:13:03.719] [modloading-worker-0/INFO] [REI/]: [REI] Registered plugin provider DefaultPluginImpl [roughlyenoughitems] for REIPlugin
+[01lug2025 17:13:03.720] [modloading-worker-0/INFO] [REI/]: [REI] Registered plugin provider DefaultRuntimePlugin [roughlyenoughitems] for REIServerPlugin
+[01lug2025 17:13:03.720] [modloading-worker-0/INFO] [REI/]: [REI] Registered plugin provider DefaultRuntimePlugin [roughlyenoughitems] for REIPlugin
+[01lug2025 17:13:03.738] [modloading-worker-0/INFO] [REI/]: [REI] Registered plugin provider DefaultClientPluginImpl [roughlyenoughitems] for REIClientPlugin
+[01lug2025 17:13:03.739] [modloading-worker-0/INFO] [REI/]: [REI] Registered plugin provider DefaultClientPluginImpl [roughlyenoughitems] for REIPlugin
+[01lug2025 17:13:03.749] [modloading-worker-0/INFO] [REI/]: [REI] Registered plugin provider DefaultClientRuntimePlugin [roughlyenoughitems] for REIClientPlugin
+[01lug2025 17:13:03.749] [modloading-worker-0/INFO] [REI/]: [REI] Registered plugin provider DefaultClientRuntimePlugin [roughlyenoughitems] for REIPlugin
+[01lug2025 17:13:03.751] [modloading-worker-0/INFO] [REI/]: [REI] Registered plugin provider HideIngredientsFromTagsPlugin [roughlyenoughitems] for REIClientPlugin
+[01lug2025 17:13:03.751] [modloading-worker-0/INFO] [REI/]: [REI] Registered plugin provider HideIngredientsFromTagsPlugin [roughlyenoughitems] for REIPlugin
+[01lug2025 17:13:04.298] [Render thread/WARN] [mixin/]: Method overwrite conflict for getSelectionBox in immersiveores.mixins.json:LevelRendererHammerMixin from mod immersiveores, previously written by com.blocklegend001.immersiveores.mixin.LevelRendererExcavatorMixin. Skipping method.
+[01lug2025 17:13:04.526] [Render thread/INFO] [net.neoforged.neoforge.gametest.GameTestHooks/]: Enabled Gametest Namespaces: []
+[01lug2025 17:13:04.611] [Render thread/INFO] [net.minecraft.server.packs.resources.ReloadableResourceManager/]: Reloading ResourceManager: vanilla, mod_resources, mod/roughlyenoughitems, mod/cloth_config, mod/immersiveores, mod/architectury, mod/neoforge, mod/jei
+[01lug2025 17:13:04.743] [Worker-Main-11/INFO] [net.minecraft.client.gui.font.providers.UnihexProvider/]: Found unifont_all_no_pua-15.1.05.hex, loading
+[01lug2025 17:13:04.762] [Worker-Main-8/INFO] [net.minecraft.client.gui.font.providers.UnihexProvider/]: Found unifont_jp_patch-15.1.05.hex, loading
+[01lug2025 17:13:05.804] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:item.goat_horn.play
+[01lug2025 17:13:05.804] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:entity.goat.screaming.horn_break
+[01lug2025 17:13:05.927] [Render thread/INFO] [com.mojang.blaze3d.audio.Library/]: OpenAL initialized on device OpenAL Soft on Altoparlanti (Maonocaster G1 Neo)
+[01lug2025 17:13:05.927] [Render thread/INFO] [net.minecraft.client.sounds.SoundEngine/SOUNDS]: Sound engine started
+[01lug2025 17:13:06.045] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 1024x512x4 minecraft:textures/atlas/blocks.png-atlas
+[01lug2025 17:13:06.115] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x4 minecraft:textures/atlas/signs.png-atlas
+[01lug2025 17:13:06.117] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x512x4 minecraft:textures/atlas/banner_patterns.png-atlas
+[01lug2025 17:13:06.121] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x512x4 minecraft:textures/atlas/shield_patterns.png-atlas
+[01lug2025 17:13:06.125] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 1024x1024x4 minecraft:textures/atlas/armor_trims.png-atlas
+[01lug2025 17:13:06.168] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x4 minecraft:textures/atlas/chest.png-atlas
+[01lug2025 17:13:06.169] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 128x64x4 minecraft:textures/atlas/decorated_pot.png-atlas
+[01lug2025 17:13:06.171] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x4 minecraft:textures/atlas/beds.png-atlas
+[01lug2025 17:13:06.173] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x4 minecraft:textures/atlas/shulker_boxes.png-atlas
+[01lug2025 17:13:06.321] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x0 minecraft:textures/atlas/particles.png-atlas
+[01lug2025 17:13:06.330] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x0 minecraft:textures/atlas/paintings.png-atlas
+[01lug2025 17:13:06.333] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x128x0 minecraft:textures/atlas/mob_effects.png-atlas
+[01lug2025 17:13:06.335] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 64x64x0 minecraft:textures/atlas/map_decorations.png-atlas
+[01lug2025 17:13:06.336] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 1024x512x0 minecraft:textures/atlas/gui.png-atlas
+[01lug2025 17:13:06.378] [Render thread/WARN] [net.minecraft.client.renderer.ShaderInstance/]: Shader rendertype_entity_translucent_emissive could not find sampler named Sampler2 in the specified shader program.
+[01lug2025 17:13:06.449] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x0 jei:textures/atlas/gui.png-atlas
+[01lug2025 17:13:11.267] [Render thread/INFO] [net.minecraft.world.item.crafting.RecipeManager/]: Loaded 1365 recipes
+[01lug2025 17:13:11.426] [Render thread/INFO] [net.minecraft.advancements.AdvancementTree/]: Loaded 1486 advancements
+[01lug2025 17:13:11.660] [Render thread/INFO] [mezz.jei.neoforge.startup.StartEventObserver/]: JEI StartEventObserver received class net.neoforged.neoforge.event.TagsUpdatedEvent too early, ignoring
+[01lug2025 17:13:11.719] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Starting integrated minecraft server version 1.21
+[01lug2025 17:13:11.719] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Generating keypair
+[01lug2025 17:13:12.588] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Preparing start region for dimension minecraft:overworld
+[01lug2025 17:13:12.861] [progressListener/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
+[01lug2025 17:13:13.040] [Server thread/INFO] [net.neoforged.neoforge.server.permission.PermissionAPI/]: Successfully initialized permission handler neoforge:default_handler
+[01lug2025 17:13:13.045] [progressListener/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Time elapsed: 445 ms
+[01lug2025 17:13:13.096] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Changing view distance to 12, from 10
+[01lug2025 17:13:13.096] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Changing simulation distance to 12, from 0
+[01lug2025 17:13:13.715] [Render thread/INFO] [mezz.jei.neoforge.startup.StartEventObserver/]: JEI StartEventObserver received class net.neoforged.neoforge.event.TagsUpdatedEvent
+[01lug2025 17:13:13.864] [Server thread/INFO] [net.minecraft.server.players.PlayerList/]: Dev[local:E:57126cbf] logged in with entity id 137 at (-106.85929190681665, 63.0, -144.4339945788195)
+[01lug2025 17:13:13.925] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev joined the game
+[01lug2025 17:13:14.054] [Render thread/WARN] [REI/]: [REI] Found 1 existing reload task(s) after trying to terminate them!
+[01lug2025 17:13:14.054] [Render thread/INFO] [mezz.jei.neoforge.startup.StartEventObserver/]: JEI StartEventObserver received class net.neoforged.neoforge.client.event.RecipesUpdatedEvent
+[01lug2025 17:13:14.054] [Render thread/INFO] [mezz.jei.neoforge.startup.StartEventObserver/]: JEI StartEventObserver transitioning state from LISTENING to JEI_STARTED
+[01lug2025 17:13:14.055] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Starting JEI...
+[01lug2025 17:13:14.071] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering item subtypes...
+[01lug2025 17:13:14.083] [Render thread/INFO] [mezz.jei.library.load.PluginCallerTimerRunnable/]: Registering item subtypes: jei:minecraft took 11.31 milliseconds
+[01lug2025 17:13:14.083] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering item subtypes took 12.56 ms
+[01lug2025 17:13:14.084] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering fluid subtypes...
+[01lug2025 17:13:14.088] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering fluid subtypes took 3.591 ms
+[01lug2025 17:13:14.091] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering ingredients...
+[01lug2025 17:13:14.115] [REI-ReloadPlugins/INFO] [REI/]: [REI] ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[01lug2025 17:13:14.116] [REI-ReloadPlugins/INFO] [REI/]: [REI] REIPlugin starting main-reload for START.
+[01lug2025 17:13:14.116] [REI-ReloadPlugins/INFO] [REI/]: [REI] Plugins (5):
+[01lug2025 17:13:14.117] [REI-ReloadPlugins/INFO] [REI/]: [REI]  - (-100,00) DefaultClientPluginImpl of DefaultClientPluginImpl [roughlyenoughitems]
+[01lug2025 17:13:14.117] [REI-ReloadPlugins/INFO] [REI/]: [REI]  - (-100,00) DefaultPluginImpl of DefaultPluginImpl [roughlyenoughitems]
+[01lug2025 17:13:14.117] [REI-ReloadPlugins/INFO] [REI/]: [REI]  - (0,00) HideIngredientsFromTagsPlugin of HideIngredientsFromTagsPlugin [roughlyenoughitems]
+[01lug2025 17:13:14.117] [REI-ReloadPlugins/INFO] [REI/]: [REI]  - (0,00) DefaultClientRuntimePlugin of DefaultClientRuntimePlugin [roughlyenoughitems]
+[01lug2025 17:13:14.117] [REI-ReloadPlugins/INFO] [REI/]: [REI]  - (0,00) DefaultRuntimePlugin of DefaultRuntimePlugin [roughlyenoughitems]
+[01lug2025 17:13:14.117] [REI-ReloadPlugins/INFO] [REI/]: [REI] ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[01lug2025 17:13:14.175] [REI-ReloadPlugins/INFO] [REI/]: [REI] ########################################
+[01lug2025 17:13:14.175] [REI-ReloadPlugins/INFO] [REI/]: [REI] REIClientPlugin starting main-reload for START.
+[01lug2025 17:13:14.176] [REI-ReloadPlugins/INFO] [REI/]: [REI] Plugins (3):
+[01lug2025 17:13:14.176] [REI-ReloadPlugins/INFO] [REI/]: [REI]  - (-100,00) DefaultClientPluginImpl of DefaultClientPluginImpl [roughlyenoughitems]
+[01lug2025 17:13:14.176] [REI-ReloadPlugins/INFO] [REI/]: [REI]  - (0,00) HideIngredientsFromTagsPlugin of HideIngredientsFromTagsPlugin [roughlyenoughitems]
+[01lug2025 17:13:14.176] [REI-ReloadPlugins/INFO] [REI/]: [REI]  - (0,00) DefaultClientRuntimePlugin of DefaultClientRuntimePlugin [roughlyenoughitems]
+[01lug2025 17:13:14.176] [REI-ReloadPlugins/INFO] [REI/]: [REI] ########################################
+[01lug2025 17:13:14.196] [Render thread/WARN] [mezz.jei.library.plugins.vanilla.ingredients.ItemStackListFactory/]: Item Group has no display items and no search tab display items. Items from this group will be missing from the JEI ingredient list. Operator Utilities
+[01lug2025 17:13:14.239] [Render thread/INFO] [mezz.jei.library.load.PluginCallerTimerRunnable/]: Registering ingredients: jei:minecraft took 146.9 milliseconds
+[01lug2025 17:13:14.239] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering ingredients took 147.8 ms
+[01lug2025 17:13:14.254] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering Mod Info...
+[01lug2025 17:13:14.255] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering Mod Info took 570.8 μs
+[01lug2025 17:13:14.288] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering categories...
+[01lug2025 17:13:14.347] [Render thread/INFO] [mezz.jei.library.load.PluginCallerTimerRunnable/]: Registering categories: jei:minecraft took 57.96 milliseconds
+[01lug2025 17:13:14.369] [Render thread/INFO] [mezz.jei.library.load.PluginCallerTimerRunnable/]: Registering categories: jei:internal took 21.69 milliseconds
+[01lug2025 17:13:14.369] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering categories took 80.38 ms
+[01lug2025 17:13:14.372] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering vanilla category extensions...
+[01lug2025 17:13:14.384] [Render thread/INFO] [mezz.jei.library.load.PluginCallerTimerRunnable/]: Registering vanilla category extensions: jei:minecraft took 11.75 milliseconds
+[01lug2025 17:13:14.385] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering vanilla category extensions took 12.91 ms
+[01lug2025 17:13:14.389] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipe catalysts...
+[01lug2025 17:13:14.390] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipe catalysts took 1.195 ms
+[01lug2025 17:13:14.392] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering advanced plugins...
+[01lug2025 17:13:14.393] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering advanced plugins took 614.3 μs
+[01lug2025 17:13:14.393] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Building recipe registry...
+[01lug2025 17:13:14.415] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Building recipe registry took 21.35 ms
+[01lug2025 17:13:14.422] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipes...
+[01lug2025 17:13:14.555] [REI-ReloadPlugins/INFO] [REI/]: [REI] ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[01lug2025 17:13:14.555] [REI-ReloadPlugins/INFO] [REI/]: [REI] REIServerPlugin starting main-reload for START.
+[01lug2025 17:13:14.555] [REI-ReloadPlugins/INFO] [REI/]: [REI] Plugins (2):
+[01lug2025 17:13:14.555] [REI-ReloadPlugins/INFO] [REI/]: [REI]  - (-100,00) DefaultPluginImpl of DefaultPluginImpl [roughlyenoughitems]
+[01lug2025 17:13:14.555] [REI-ReloadPlugins/INFO] [REI/]: [REI]  - (0,00) DefaultRuntimePlugin of DefaultRuntimePlugin [roughlyenoughitems]
+[01lug2025 17:13:14.555] [REI-ReloadPlugins/INFO] [REI/]: [REI] ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[01lug2025 17:13:14.562] [REI-ReloadPlugins/INFO] [REI/]: [REI] REIPlugin finished post-reload for START in 3.134 ms, totaling 133.3 ms.
+[01lug2025 17:13:14.564] [REI-ReloadPlugins/INFO] [REI/]: [REI] REIClientPlugin finished post-reload for START in 1.050 ms, totaling 381.9 ms.
+[01lug2025 17:13:14.565] [REI-ReloadPlugins/INFO] [REI/]: [REI] REIServerPlugin finished post-reload for START in 769.5 μs, totaling 2.850 ms.
+[01lug2025 17:13:14.571] [REI-ReloadPlugins/INFO] [REI/]: [REI] ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[01lug2025 17:13:14.571] [REI-ReloadPlugins/INFO] [REI/]: [REI] REIPlugin starting main-reload for END.
+[01lug2025 17:13:14.571] [REI-ReloadPlugins/INFO] [REI/]: [REI] Plugins (5):
+[01lug2025 17:13:14.571] [REI-ReloadPlugins/INFO] [REI/]: [REI]  - (-100,00) DefaultClientPluginImpl of DefaultClientPluginImpl [roughlyenoughitems]
+[01lug2025 17:13:14.571] [REI-ReloadPlugins/INFO] [REI/]: [REI]  - (-100,00) DefaultPluginImpl of DefaultPluginImpl [roughlyenoughitems]
+[01lug2025 17:13:14.571] [REI-ReloadPlugins/INFO] [REI/]: [REI]  - (0,00) HideIngredientsFromTagsPlugin of HideIngredientsFromTagsPlugin [roughlyenoughitems]
+[01lug2025 17:13:14.571] [REI-ReloadPlugins/INFO] [REI/]: [REI]  - (0,00) DefaultClientRuntimePlugin of DefaultClientRuntimePlugin [roughlyenoughitems]
+[01lug2025 17:13:14.571] [REI-ReloadPlugins/INFO] [REI/]: [REI]  - (0,00) DefaultRuntimePlugin of DefaultRuntimePlugin [roughlyenoughitems]
+[01lug2025 17:13:14.571] [REI-ReloadPlugins/INFO] [REI/]: [REI] ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[01lug2025 17:13:14.635] [Render thread/INFO] [mezz.jei.library.load.PluginCallerTimerRunnable/]: Registering recipes: jei:minecraft took 213.0 milliseconds
+[01lug2025 17:13:14.646] [REI-ReloadPlugins/INFO] [REI/]: [REI] ########################################
+[01lug2025 17:13:14.647] [REI-ReloadPlugins/INFO] [REI/]: [REI] REIClientPlugin starting main-reload for END.
+[01lug2025 17:13:14.647] [REI-ReloadPlugins/INFO] [REI/]: [REI] Plugins (3):
+[01lug2025 17:13:14.647] [REI-ReloadPlugins/INFO] [REI/]: [REI]  - (-100,00) DefaultClientPluginImpl of DefaultClientPluginImpl [roughlyenoughitems]
+[01lug2025 17:13:14.647] [REI-ReloadPlugins/INFO] [REI/]: [REI]  - (0,00) HideIngredientsFromTagsPlugin of HideIngredientsFromTagsPlugin [roughlyenoughitems]
+[01lug2025 17:13:14.647] [REI-ReloadPlugins/INFO] [REI/]: [REI]  - (0,00) DefaultClientRuntimePlugin of DefaultClientRuntimePlugin [roughlyenoughitems]
+[01lug2025 17:13:14.647] [REI-ReloadPlugins/INFO] [REI/]: [REI] ########################################
+[01lug2025 17:13:14.669] [Render thread/INFO] [mezz.jei.library.load.PluginCallerTimerRunnable/]: Registering recipes: jei:internal took 33.30 milliseconds
+[01lug2025 17:13:14.669] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipes took 247.3 ms
+[01lug2025 17:13:14.683] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipes transfer handlers...
+[01lug2025 17:13:14.689] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipes transfer handlers took 5.699 ms
+[01lug2025 17:13:14.703] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Building runtime...
+[01lug2025 17:13:14.717] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering gui handlers...
+[01lug2025 17:13:14.735] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering gui handlers took 17.29 ms
+[01lug2025 17:13:14.746] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering Runtime...
+[01lug2025 17:13:14.749] [Render thread/INFO] [mezz.jei.gui.startup.JeiGuiStarter/]: Starting JEI GUI
+[01lug2025 17:13:14.750] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Building ingredient list...
+[01lug2025 17:13:14.755] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Building ingredient list took 5.151 ms
+[01lug2025 17:13:14.755] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Building ingredient filter...
+[01lug2025 17:13:14.818] [Render thread/INFO] [mezz.jei.gui.ingredients.IngredientFilter/]: Adding 1751 ingredients
+[01lug2025 17:13:15.037] [Render thread/INFO] [mezz.jei.gui.ingredients.IngredientFilter/]: Added 1751/1751 ingredients
+[01lug2025 17:13:15.039] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Building ingredient filter took 284.6 ms
+[01lug2025 17:13:15.238] [Render thread/INFO] [mezz.jei.library.load.PluginCallerTimerRunnable/]: Registering Runtime: jei:neoforge_gui took 491.7 milliseconds
+[01lug2025 17:13:15.239] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering Runtime took 492.9 ms
+[01lug2025 17:13:15.246] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Building runtime took 542.7 ms
+[01lug2025 17:13:15.246] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Sending Runtime...
+[01lug2025 17:13:15.247] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Sending Runtime took 551.1 μs
+[01lug2025 17:13:15.247] [Render thread/INFO] [mezz.jei.core.util.LoggedTimer/]: Starting JEI took 1.191 s
+[01lug2025 17:13:15.271] [Render thread/INFO] [net.minecraft.advancements.AdvancementTree/]: Loaded 69 advancements
+[01lug2025 17:13:15.414] [REI-ReloadPlugins/INFO] [REI/]: [REI] OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+[01lug2025 17:13:15.414] [REI-ReloadPlugins/INFO] [REI/]: [REI] REIServerPlugin starting main-reload for END.
+[01lug2025 17:13:15.414] [REI-ReloadPlugins/INFO] [REI/]: [REI] Plugins (2):
+[01lug2025 17:13:15.414] [REI-ReloadPlugins/INFO] [REI/]: [REI]  - (-100,00) DefaultPluginImpl of DefaultPluginImpl [roughlyenoughitems]
+[01lug2025 17:13:15.414] [REI-ReloadPlugins/INFO] [REI/]: [REI]  - (0,00) DefaultRuntimePlugin of DefaultRuntimePlugin [roughlyenoughitems]
+[01lug2025 17:13:15.414] [REI-ReloadPlugins/INFO] [REI/]: [REI] OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+[01lug2025 17:13:15.431] [REI-ReloadPlugins/INFO] [REI/]: [REI] REIPlugin finished post-reload for END in 7.362 ms, totaling 83.88 ms.
+[01lug2025 17:13:15.435] [REI-ReloadPlugins/INFO] [REI/]: [REI] REIClientPlugin finished post-reload for END in 3.551 ms, totaling 772.7 ms.
+[01lug2025 17:13:15.436] [REI-ReloadPlugins/INFO] [REI/]: [REI] REIServerPlugin finished post-reload for END in 188.3 μs, totaling 8.362 ms.
+[01lug2025 17:13:15.822] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Saving and pausing game...
+[01lug2025 17:13:15.875] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[01lug2025 17:13:15.921] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[01lug2025 17:13:15.930] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[01lug2025 17:13:20.411] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: [Dev: Set own game mode to Survival Mode]
+[01lug2025 17:13:20.416] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] Set own game mode to Survival Mode
