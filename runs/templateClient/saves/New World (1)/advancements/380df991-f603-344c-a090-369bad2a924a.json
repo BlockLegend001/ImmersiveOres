@@ -42,11 +42,11 @@
     },
     "done": true
   },
-  "immersiveores:recipes/misc/vibranium_ingot_cooked": {
+  "immersiveores:vibraniumspecialtools": {
     "criteria": {
-      "has_raw_vibranium": "2024-10-02 19:25:07 +0200"
+      "has_vibranium_hammer": "2025-05-02 19:09:44 +0200"
     },
-    "done": true
+    "done": false
   },
   "DataVersion": 3955
 }
