@@ -1,0 +1,9 @@
+package com.blocklegend001.immersiveores.util.tools.excavator;
+
+import com.blocklegend001.immersiveores.ImmersiveOres;
+import net.minecraftforge.fml.common.Mod;
+
+@Mod.EventBusSubscriber(modid = ImmersiveOres.MODID)
+public class HammerOverlayRenderer {
+    
+}
