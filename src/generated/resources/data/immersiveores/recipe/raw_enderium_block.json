@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "E": "immersiveores:raw_enderium"
+  },
+  "pattern": [
+    "EEE",
+    "EEE",
+    "EEE"
+  ],
+  "result": {
+    "count": 1,
+    "id": "immersiveores:raw_enderium_block"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "D": "minecraft:string",
+    "E": "immersiveores:vibranium_ingot",
+    "S": "immersiveores:vibranium_stick"
+  },
+  "pattern": [
+    " SD",
+    "SED",
+    " SD"
+  ],
+  "result": {
+    "count": 1,
+    "id": "immersiveores:vibranium_bow"
+  }
+}

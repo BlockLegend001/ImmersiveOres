@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "E": "immersiveores:vulpus_ingot"
+  },
+  "pattern": [
+    "   ",
+    " E ",
+    " E "
+  ],
+  "result": {
+    "count": 1,
+    "id": "immersiveores:vulpus_stick"
+  }
+}
