@@ -121,7 +121,9 @@ public class VulpusArmor extends Item {
         super.appendHoverText(pStack, p_333372_, p_396484_, consumer, p_41424_);
         if(Screen.hasShiftDown()){
             if (ModItems.VULPUS_BOOTS.get() == pStack.getItem()) {
-                consumer.accept(Component.translatable("tooltip.immersiveores.unbreakble.tooltip").withStyle(ChatFormatting.RED));
+                if (VulpusConfig.unbreakableVulpus.get()) {
+                    consumer.accept(Component.translatable("tooltip.immersiveores.unbreakble.tooltip").withStyle(ChatFormatting.RED));
+                }
                 consumer.accept(Component.translatable("tooltip.immersiveores.immunetofire.tooltip").withStyle(ChatFormatting.RED));
                 if (VulpusConfig.speedIIVulpusArmor.get()) {
                     consumer.accept(Component.translatable("tooltip.immersiveores.speed2.tooltip").withStyle(ChatFormatting.RED));
