@@ -4,6 +4,7 @@ import com.blocklegend001.immersiveores.blocks.ModBlocks;
 import com.blocklegend001.immersiveores.util.ModTags;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
+import net.fabricmc.fabric.api.tag.convention.v2.ConventionalBlockTags;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.tag.BlockTags;
 
@@ -78,5 +79,10 @@ public class ModBlockTagGenerator extends FabricTagProvider.BlockTagProvider {
 
         valueLookupBuilder(ModTags.Blocks.INCORRECT_FOR_VIBRANIUM_TOOL)
                 .forceAddTag(BlockTags.INCORRECT_FOR_NETHERITE_TOOL);
+
+        valueLookupBuilder(ConventionalBlockTags.ORES)
+                .add(ModBlocks.VIBRANIUM_ORE,
+                        ModBlocks.VULPUS_ORE,
+                        ModBlocks.ENDERIUM_ORE);
     }
 }
