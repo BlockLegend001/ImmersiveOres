@@ -4,6 +4,7 @@ import com.blocklegend001.immersiveores.item.ModItems;
 import com.blocklegend001.immersiveores.util.ModTags;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
+import net.fabricmc.fabric.api.tag.convention.v2.ConventionalItemTags;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.tag.ItemTags;
 import org.jetbrains.annotations.Nullable;
@@ -243,5 +244,10 @@ public class ModItemTagGenerator extends FabricTagProvider.ItemTagProvider {
                 ModItems.VIBRANIUM_PAXEL,
                 ModItems.VULPUS_PAXEL,
                 ModItems.ENDERIUM_PAXEL);
+
+        getOrCreateTagBuilder(ConventionalItemTags.INGOTS)
+                .add(ModItems.VIBRANIUM_INGOT,
+                        ModItems.VULPUS_INGOT,
+                        ModItems.ENDERIUM_INGOT);
     }
 }
