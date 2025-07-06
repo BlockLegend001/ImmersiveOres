@@ -55,5 +55,10 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(ModBlocks.ENDERIUM_BLOCK.get(),
                         ModBlocks.ENDERIUM_ORE.get(),
                         ModBlocks.RAW_ENDERIUM_BLOCK.get());
+
+        this.tag(Tags.Blocks.ORES)
+                .add(ModBlocks.VIBRANIUM_ORE.get())
+                .add(ModBlocks.VULPUS_ORE.get())
+                .add(ModBlocks.ENDERIUM_ORE.get());
     }
 }
