@@ -8,6 +8,7 @@ import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.level.block.Block;
+import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.data.ExistingFileHelper;
 
 import javax.annotation.Nullable;
@@ -247,5 +248,10 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                 ModItems.VIBRANIUM_PAXEL.get(),
                 ModItems.VULPUS_PAXEL.get(),
                 ModItems.ENDERIUM_PAXEL.get());
+
+        tag(Tags.Items.INGOTS)
+                .add(ModItems.VIBRANIUM_INGOT.get())
+                .add(ModItems.VULPUS_INGOT.get())
+                .add(ModItems.ENDERIUM_INGOT.get());
     }
 }
