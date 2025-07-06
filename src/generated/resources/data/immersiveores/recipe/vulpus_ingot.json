@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "immersiveores:vulpus_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "immersiveores:vulpus_ingot"
+  }
+}

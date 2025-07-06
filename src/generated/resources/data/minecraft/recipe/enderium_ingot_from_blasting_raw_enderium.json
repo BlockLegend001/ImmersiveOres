@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 125,
+  "experience": 1.0,
+  "group": "immersiveores:enderium_ingot_cooked_blast",
+  "ingredient": {
+    "item": "immersiveores:raw_enderium"
+  },
+  "result": {
+    "count": 1,
+    "id": "immersiveores:enderium_ingot"
+  }
+}
