@@ -85,5 +85,10 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
         this.tag(ModTags.Blocks.INCORRECT_FOR_VIBRANIUM_TOOL)
                 .addTag(BlockTags.INCORRECT_FOR_NETHERITE_TOOL)
                 .remove(ModTags.Blocks.NEEDS_VIBRANIUM_TOOL);
+
+        this.tag(Tags.Blocks.ORES)
+                .add(ModBlocks.VIBRANIUM_ORE.get())
+                .add(ModBlocks.VULPUS_ORE.get())
+                .add(ModBlocks.ENDERIUM_ORE.get());
     }
 }
