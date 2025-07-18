@@ -56,7 +56,9 @@ public class VulpusArmor extends ArmorItem {
                     }
                 }
                 if (player.getItemBySlot(EquipmentSlot.CHEST).getItem() == ModItems.VULPUS_CHESTPLATE.get()) {
-                    player.addEffect(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 400, 1, false, false));
+                    if (VulpusConfig.FIRE_RESISTANCE_VULPUS_ARMOR.get()) {
+                        player.addEffect(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 400, 0, false, false));
+                    }
                 }
                 if (player.getItemBySlot(EquipmentSlot.HEAD).getItem() == ModItems.VULPUS_HELMET.get()) {
                     if (VulpusConfig.NIGHT_VISION_VULPUS_ARMOR.get()) {
