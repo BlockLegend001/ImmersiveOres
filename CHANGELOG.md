@@ -1,1 +1,1 @@
-- Added more tags
+- Fixed a bug that prevent to disable the fire resistance effect on vulpus armor
