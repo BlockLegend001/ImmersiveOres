@@ -50,7 +50,9 @@ public class VulpusArmor extends ArmorItem {
                 }
             }
             if (player.getInventory().getArmorStack(2).getItem() == ModItems.VULPUS_CHESTPLATE) {
-                player.addStatusEffect(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE, 400, 1, false, false));
+                if (VulpusConfig.fireResistanceVulpusArmor) {
+                    player.addStatusEffect(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE, 400, 0, false, false));
+                }
             }
             if (player.getInventory().getArmorStack(3).getItem() == ModItems.VULPUS_HELMET) {
                 if (VulpusConfig.nightVisionVulpusArmor) {
