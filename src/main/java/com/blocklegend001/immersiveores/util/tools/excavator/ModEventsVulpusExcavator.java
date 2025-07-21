@@ -17,7 +17,6 @@ import java.util.Set;
 
 public class ModEventsVulpusExcavator implements PlayerBlockBreakEvents.Before{
     private static final Set<BlockPos> HARVESTED_BLOCKS = new HashSet<>();
-    public static boolean isSneaking = false;
 
     @Override
     public boolean beforeBlockBreak(World world, PlayerEntity player, BlockPos pos,
@@ -26,16 +25,17 @@ public class ModEventsVulpusExcavator implements PlayerBlockBreakEvents.Before{
 
         ItemStack mainHandItem = player.getMainHandStack();
         if (!(mainHandItem.getItem() instanceof VulpusExcavator excavator)) return true;
-
         if (HARVESTED_BLOCKS.contains(pos)) return true;
+
+        boolean isSneaking = player.isSneaking();
 
         HARVESTED_BLOCKS.add(pos);
 
         try {
             int radius = isSneaking ? 0 : RadiusMap.VULPUS_EXCAVATOR_RADIUS.get(mainHandItem.getItem());
+
             for (BlockPos targetPos : VulpusExcavator.getBlocksToBeDestroyed(radius, pos, serverPlayer)) {
                 if (targetPos.equals(pos)) continue;
-
                 if (HARVESTED_BLOCKS.contains(targetPos)) continue;
                 if (!excavator.isCorrectForDrops(mainHandItem, world.getBlockState(targetPos))) continue;
 
