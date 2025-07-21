@@ -17,7 +17,6 @@ import java.util.Set;
 @EventBusSubscriber(modid = ImmersiveOres.MODID)
 public class ModEventsVulpusExcavator {
     private static final Set<BlockPos> HARVESTED_BLOCKS = new HashSet<>();
-    public static boolean isSneaking = false;
 
     @SubscribeEvent
     public static boolean onExcavatorUsage(BlockEvent.BreakEvent event) {
@@ -25,10 +24,10 @@ public class ModEventsVulpusExcavator {
         ItemStack mainHandItem = player.getMainHandItem();
 
         if (!(player instanceof ServerPlayer serverPlayer)) return true;
-
         if (!(mainHandItem.getItem() instanceof VulpusExcavator excavator)) return true;
-
         if (HARVESTED_BLOCKS.contains(event.getPos())) return true;
+
+        boolean isSneaking = player.isCrouching() || player.isShiftKeyDown();
 
         HARVESTED_BLOCKS.add(event.getPos());
 
