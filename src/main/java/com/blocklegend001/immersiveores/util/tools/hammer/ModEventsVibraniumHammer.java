@@ -17,7 +17,6 @@ import java.util.Set;
 @Mod.EventBusSubscriber(modid = ImmersiveOres.MODID, bus = Mod.EventBusSubscriber.Bus.FORGE)
 public class ModEventsVibraniumHammer {
     private static final Set<BlockPos> HARVESTED_BLOCKS = new HashSet<>();
-    public static boolean isSneaking = false;
 
     @SubscribeEvent
     public static boolean onExcavatorUsage(BlockEvent.BreakEvent event) {
@@ -25,18 +24,18 @@ public class ModEventsVibraniumHammer {
         ItemStack mainHandItem = player.getMainHandItem();
 
         if (!(player instanceof ServerPlayer serverPlayer)) return true;
-
         if (!(mainHandItem.getItem() instanceof VibraniumHammer excavator)) return true;
-
         if (HARVESTED_BLOCKS.contains(event.getPos())) return true;
+
+        boolean isSneaking = player.isCrouching() || player.isShiftKeyDown();
 
         HARVESTED_BLOCKS.add(event.getPos());
 
         try {
             int radius = isSneaking ? 0 : RadiusMap.getVibraniumHammerRadius().get(mainHandItem.getItem());
+
             for (BlockPos targetPos : VibraniumHammer.getBlocksToBeDestroyed(radius, event.getPos(), serverPlayer)) {
                 if (targetPos.equals(event.getPos())) continue;
-
                 if (HARVESTED_BLOCKS.contains(targetPos)) continue;
                 if (!excavator.isCorrectToolForDrops(mainHandItem, event.getLevel().getBlockState(targetPos))) continue;
 
@@ -47,7 +46,6 @@ public class ModEventsVibraniumHammer {
         } finally {
             HARVESTED_BLOCKS.remove(event.getPos());
         }
-
         return true;
     }
 }
