@@ -1,1 +1,1 @@
-- Fixed a bug that prevent to disable the fire resistance effect on vulpus armor
+- Fixed a bug that not let the player break one block when shifting in multiplayer
