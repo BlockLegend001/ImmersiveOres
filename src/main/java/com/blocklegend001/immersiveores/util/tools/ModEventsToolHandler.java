@@ -18,7 +18,6 @@ import java.util.Set;
 @Mod.EventBusSubscriber(modid = ImmersiveOres.MODID, bus = Mod.EventBusSubscriber.Bus.FORGE)
 public class ModEventsToolHandler {
     private static final Set<BlockPos> HARVESTED_BLOCKS = new HashSet<>();
-    public static boolean isSneaking = false;
 
     @SubscribeEvent
     public static void onToolUsage(BlockEvent.BreakEvent event) {
@@ -27,9 +26,9 @@ public class ModEventsToolHandler {
 
         ItemStack mainHandItem = player.getMainHandItem();
         BlockPos origin = event.getPos();
-
-        // Se lo abbiamo già gestito, saltiamo
         if (HARVESTED_BLOCKS.contains(origin)) return;
+		
+		boolean isSneaking = player.isCrouching() || player.isShiftKeyDown();
 
         HARVESTED_BLOCKS.add(origin);
 
