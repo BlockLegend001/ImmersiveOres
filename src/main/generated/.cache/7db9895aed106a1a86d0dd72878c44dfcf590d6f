@@ -1,8 +1,9 @@
-// 1.21.1	2025-04-22T15:01:02.5550499	ImmersiveOres/Tags for minecraft:item
+// 1.21.1	2025-07-05T16:35:11.6695184	ImmersiveOres/Tags for minecraft:item
 1d1d0bcb7c7e861b2deb6535e3e858f231b7b1b6 data\immersiveores\tags\item\vulpus_hoe.json
 358b460696e007ecac2aad8b5c671670b5da044f data\immersiveores\tags\item\vulpus_axe.json
 8f372ef2c5da54eec9c0461973bff0aa3e0451ba data\immersiveores\tags\item\enderium_shovel.json
 d4ccf21f0b8d61a896e6e635b9756c509d7da517 data\immersiveores\tags\item\vulpus_bow.json
+84d40d1c79905cad9bd2bacaaca1d5c3bb97bd74 data\c\tags\item\ingots.json
 b4efdcba7e4915e0944d78430376e2aaed87f42b data\immersiveores\tags\item\enderium_excavator.json
 ee9b19416bf9206c12e6d80639295b2559bb7fb6 data\minecraft\tags\item\enchantable\armor.json
 d99d1a8261bb5042a61d2c74d2134c0cbc30cdd9 data\immersiveores\tags\item\enderium_hoe.json
