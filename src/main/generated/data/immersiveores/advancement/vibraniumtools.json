@@ -1,0 +1,85 @@
+{
+  "parent": "immersiveores:root",
+  "criteria": {
+    "has_vibranium_axe": {
+      "conditions": {
+        "items": [
+          {
+            "items": "immersiveores:vibranium_axe"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_vibranium_hoe": {
+      "conditions": {
+        "items": [
+          {
+            "items": "immersiveores:vibranium_hoe"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_vibranium_pickaxe": {
+      "conditions": {
+        "items": [
+          {
+            "items": "immersiveores:vibranium_pickaxe"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_vibranium_shovel": {
+      "conditions": {
+        "items": [
+          {
+            "items": "immersiveores:vibranium_shovel"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_vibranium_sword": {
+      "conditions": {
+        "items": [
+          {
+            "items": "immersiveores:vibranium_sword"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancement.immersiveores.vibraniumtools.descrption"
+    },
+    "icon": {
+      "count": 1,
+      "id": "immersiveores:vibranium_pickaxe"
+    },
+    "title": {
+      "translate": "advancement.immersiveores.vibraniumtools.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_vibranium_pickaxe"
+    ],
+    [
+      "has_vibranium_axe"
+    ],
+    [
+      "has_vibranium_sword"
+    ],
+    [
+      "has_vibranium_shovel"
+    ],
+    [
+      "has_vibranium_hoe"
+    ]
+  ],
+  "sends_telemetry_event": true
+}
