@@ -1,4 +1,4 @@
-// 1.21	2025-04-22T14:56:57.8612961	ImmersiveOres/Tags for minecraft:item
+// 1.21	2025-07-05T16:11:20.8232311	ImmersiveOres/Tags for minecraft:item
 d4ccf21f0b8d61a896e6e635b9756c509d7da517 data\immersiveores\tags\item\vulpus_bow.json
 03f65d7df76f08c3ac5641beedbd6f8de9a0f5c0 data\immersiveores\tags\item\vibranium_bow.json
 1d1d0bcb7c7e861b2deb6535e3e858f231b7b1b6 data\immersiveores\tags\item\vulpus_hoe.json
@@ -32,6 +32,7 @@ db32b5a8b4bcf4752367686a04783639824ab1ee data\immersiveores\tags\item\vulpus_ham
 159e3edcd9e05327f9c36185f62b17c53ee1d2d6 data\immersiveores\tags\item\enderium_hammer.json
 58ed652d7031145a8bf422ba90b2e4a58362b882 data\minecraft\tags\item\enchantable\leg_armor.json
 0d064628ab6aeb04136b74229dcf3e324f0e6610 data\minecraft\tags\item\enchantable\sword.json
+84d40d1c79905cad9bd2bacaaca1d5c3bb97bd74 data\c\tags\item\ingots.json
 7b5c1a5b3e36c5d844f4f6e589529e5ed14a3965 data\minecraft\tags\item\enchantable\vanishing.json
 7d4bc4b64d3482f72395abbb5b28beaff6c963bb data\immersiveores\tags\item\vulpus_armor.json
 06de980a62e584230ae7e33f88c9ad0f1e7092ab data\immersiveores\tags\item\vulpus_pickaxe.json
