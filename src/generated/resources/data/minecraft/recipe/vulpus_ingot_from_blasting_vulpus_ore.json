@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 112,
+  "experience": 1.0,
+  "group": "immersiveores:vulpus_ingot_cooked_blast",
+  "ingredient": "immersiveores:vulpus_ore",
+  "result": {
+    "count": 1,
+    "id": "immersiveores:vulpus_ingot"
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "parent": "immersiveores:root",
+  "criteria": {
+    "has_vibranium_boots": {
+      "conditions": {
+        "items": [
+          {
+            "items": "immersiveores:vibranium_boots"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_vibranium_chestplate": {
+      "conditions": {
+        "items": [
+          {
+            "items": "immersiveores:vibranium_chestplate"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_vibranium_helmet": {
+      "conditions": {
+        "items": [
+          {
+            "items": "immersiveores:vibranium_helmet"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_vibranium_leggings": {
+      "conditions": {
+        "items": [
+          {
+            "items": "immersiveores:vibranium_leggings"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancement.immersiveores.vibraniumarmor.descrption"
+    },
+    "icon": {
+      "count": 1,
+      "id": "immersiveores:vibranium_chestplate"
+    },
+    "title": {
+      "translate": "advancement.immersiveores.vibraniumarmor.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_vibranium_helmet"
+    ],
+    [
+      "has_vibranium_chestplate"
+    ],
+    [
+      "has_vibranium_leggings"
+    ],
+    [
+      "has_vibranium_boots"
+    ]
+  ],
+  "sends_telemetry_event": true
+}
