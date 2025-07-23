@@ -1,4 +1,5 @@
-// 1.21.1	2025-02-19T12:08:32.4703132	Tags for minecraft:block mod id immersiveores
+// 1.21.1	2025-07-06T12:30:28.8308428	Tags for minecraft:block mod id immersiveores
+b43285c9e8eb2914cc095e16b018c3bf4a901220 data/c/tags/block/ores.json
 d9d0296142a9fda45b65522807fa440cf379c272 data/forge/tags/block/needs_netherite_tool.json
 5137df884e2fcfae692016692d7cba2aebe147bb data/immersiveores/tags/block/beacon_base_blocks.json
 c46c4900800161396d2a811d8be6f41f53961172 data/immersiveores/tags/block/incorrect_for_enderium_tool.json
