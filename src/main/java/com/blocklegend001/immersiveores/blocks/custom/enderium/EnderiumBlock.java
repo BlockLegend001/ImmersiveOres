@@ -2,6 +2,7 @@ package com.blocklegend001.immersiveores.blocks.custom.enderium;
 
 import com.blocklegend001.immersiveores.blocks.ModBlocks;
 import com.blocklegend001.immersiveores.item.ModItems;
+import com.blocklegend001.immersiveores.tooltip.TooltipBlock;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
@@ -15,20 +16,10 @@ import net.minecraft.world.level.block.state.BlockState;
 
 import java.util.List;
 
-public class EnderiumBlock extends Block {
+public class EnderiumBlock extends Block implements TooltipBlock {
     public EnderiumBlock(Properties p_49795_) {
         super(p_49795_);
     }
-
-//    @Override
-//    public void appendHoverText(ItemStack pStack, Item.TooltipContext pContext, List<Component> components, TooltipFlag pTooltipFlag) {
-//
-//        {
-//            components.add(Component.translatable("tooltip.immersiveores.breakenderium.tooltip").withStyle(ChatFormatting.DARK_AQUA));
-//        }
-//
-//        super.appendHoverText(pStack, pContext, components, pTooltipFlag);
-//    }
 
     @Override
     public boolean canHarvestBlock(BlockState state, BlockGetter level, BlockPos pos, Player player) {
@@ -43,5 +34,10 @@ public class EnderiumBlock extends Block {
                     || itemInHand.is(ModItems.ENDERIUM_PAXEL.get());
         }
         return super.canHarvestBlock(state, level, pos, player);
+    }
+
+    @Override
+    public void appendClientTooltip(ItemStack stack, TooltipAccept tooltips) {
+        tooltips.accept(Component.translatable("tooltip.immersiveores.breakenderium.tooltip").withStyle(ChatFormatting.DARK_AQUA));
     }
 }
