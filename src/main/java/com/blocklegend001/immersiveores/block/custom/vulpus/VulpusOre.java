@@ -2,6 +2,7 @@ package com.blocklegend001.immersiveores.block.custom.vulpus;
 
 import com.blocklegend001.immersiveores.block.ModBlocks;
 import com.blocklegend001.immersiveores.item.ModItems;
+import com.blocklegend001.immersiveores.tooltip.TooltipBlock;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
@@ -15,23 +16,10 @@ import net.minecraft.world.level.block.state.BlockState;
 
 import java.util.List;
 
-public class VulpusOre extends Block {
-
+public class VulpusOre extends Block implements TooltipBlock {
     public VulpusOre(Properties arg) {
         super(arg);
     }
-
-//    @Override
-//    public void appendHoverText(ItemStack pStack, Item.TooltipContext pContext, List<Component> components, TooltipFlag pTooltipFlag) {
-//
-//        {
-//            components.add(Component.translatable("tooltip.immersiveores.vulpusore.tooltip").withStyle(ChatFormatting.RED));
-//            components.add(Component.translatable("tooltip.immersiveores.vulpusorelevel.tooltip").withStyle(ChatFormatting.RED));
-//            components.add(Component.translatable("tooltip.immersiveores.breakvulpus.tooltip").withStyle(ChatFormatting.RED));
-//        }
-//
-//        super.appendHoverText(pStack, pContext, components, pTooltipFlag);
-//    }
 
     @Override
     public boolean canHarvestBlock(BlockState state, BlockGetter level, BlockPos pos, Player player) {
@@ -49,5 +37,12 @@ public class VulpusOre extends Block {
                     || itemInHand.is(ModItems.ENDERIUM_PAXEL.get());
         }
         return super.canHarvestBlock(state, level, pos, player);
+    }
+
+    @Override
+    public void appendClientTooltip(ItemStack stack, TooltipAccept tooltips) {
+        tooltips.accept(Component.translatable("tooltip.immersiveores.vulpusore.tooltip").withStyle(ChatFormatting.RED));
+        tooltips.accept(Component.translatable("tooltip.immersiveores.vulpusorelevel.tooltip").withStyle(ChatFormatting.RED));
+        tooltips.accept(Component.translatable("tooltip.immersiveores.breakvulpus.tooltip").withStyle(ChatFormatting.RED));
     }
 }

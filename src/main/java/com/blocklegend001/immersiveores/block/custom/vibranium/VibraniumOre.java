@@ -2,6 +2,7 @@ package com.blocklegend001.immersiveores.block.custom.vibranium;
 
 import com.blocklegend001.immersiveores.block.ModBlocks;
 import com.blocklegend001.immersiveores.item.ModItems;
+import com.blocklegend001.immersiveores.tooltip.TooltipBlock;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
@@ -16,23 +17,10 @@ import net.minecraft.world.level.block.state.BlockState;
 
 import java.util.List;
 
-public class VibraniumOre extends Block {
-
+public class VibraniumOre extends Block implements TooltipBlock {
     public VibraniumOre(Properties arg) {
         super(arg);
     }
-
-//    @Override
-//    public void appendHoverText(ItemStack pStack, Item.TooltipContext pContext, List<Component> components, TooltipFlag pTooltipFlag) {
-//
-//        {
-//            components.add(Component.translatable("tooltip.immersiveores.vibraniumore.tooltip").withStyle(ChatFormatting.LIGHT_PURPLE));
-//            components.add(Component.translatable("tooltip.immersiveores.vibraniumorelevel.tooltip").withStyle(ChatFormatting.LIGHT_PURPLE));
-//            components.add(Component.translatable("tooltip.immersiveores.breakvibranium.tooltip").withStyle(ChatFormatting.LIGHT_PURPLE));
-//        }
-//
-//        super.appendHoverText(pStack, pContext, components, pTooltipFlag);
-//    }
 
     @Override
     public boolean canHarvestBlock(BlockState state, BlockGetter level, BlockPos pos, Player player) {
@@ -51,5 +39,12 @@ public class VibraniumOre extends Block {
                     || itemInHand.is(ModItems.ENDERIUM_PAXEL.get());
         }
         return super.canHarvestBlock(state, level, pos, player);
+    }
+
+    @Override
+    public void appendClientTooltip(ItemStack stack, TooltipAccept tooltips) {
+        tooltips.accept(Component.translatable("tooltip.immersiveores.vibraniumore.tooltip").withStyle(ChatFormatting.LIGHT_PURPLE));
+        tooltips.accept(Component.translatable("tooltip.immersiveores.vibraniumorelevel.tooltip").withStyle(ChatFormatting.LIGHT_PURPLE));
+        tooltips.accept(Component.translatable("tooltip.immersiveores.breakvibranium.tooltip").withStyle(ChatFormatting.LIGHT_PURPLE));
     }
 }
