@@ -1,1 +1,1 @@
-- Fixed a bug that not let the player break one block when shifting in multiplayer
+- Added some missed tooltips to blocks
