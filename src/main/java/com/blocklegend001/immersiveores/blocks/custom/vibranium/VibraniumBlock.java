@@ -1,5 +1,6 @@
 package com.blocklegend001.immersiveores.blocks.custom.vibranium;
 
+import com.blocklegend001.immersiveores.tooltip.TooltipBlock;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
@@ -10,17 +11,13 @@ import net.minecraft.util.Formatting;
 
 import java.util.List;
 
-public class VibraniumBlock extends Block {
+public class VibraniumBlock extends Block implements TooltipBlock {
     public VibraniumBlock(Settings p_49795_) {
         super(p_49795_);
     }
 
-//    @Override
-//    public void appendTooltip(ItemStack stack, Item.TooltipContext context, List<Text> tooltip, TooltipType options) {
-//        {
-//            tooltip.add(Text.translatable("tooltip.immersiveores.breakvibranium.tooltip").formatted(Formatting.LIGHT_PURPLE));
-//        }
-//
-//        super.appendTooltip(stack, context, tooltip, options);
-//    }
+    @Override
+    public void appendClientTooltip(ItemStack stack, TooltipAccept tooltips) {
+        tooltips.accept(Text.translatable("tooltip.immersiveores.breakvibranium.tooltip").formatted(Formatting.LIGHT_PURPLE));
+    }
 }
