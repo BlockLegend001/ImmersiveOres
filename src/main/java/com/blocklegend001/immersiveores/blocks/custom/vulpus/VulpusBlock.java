@@ -1,5 +1,6 @@
 package com.blocklegend001.immersiveores.blocks.custom.vulpus;
 
+import com.blocklegend001.immersiveores.tooltip.TooltipBlock;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -9,18 +10,13 @@ import net.minecraft.util.Formatting;
 
 import java.util.List;
 
-public class VulpusBlock extends Block {
+public class VulpusBlock extends Block implements TooltipBlock {
     public VulpusBlock(Settings p_49795_) {
         super(p_49795_);
     }
 
-//    @Override
-//    public void appendTooltip(ItemStack stack, Item.TooltipContext context, List<Text> tooltip, TooltipType options) {
-//
-//        {
-//            tooltip.add(Text.translatable("tooltip.immersiveores.breakvulpus.tooltip").formatted(Formatting.RED));
-//        }
-//
-//        super.appendTooltip(stack, context, tooltip, options);
-//    }
+    @Override
+    public void appendClientTooltip(ItemStack stack, TooltipAccept tooltips) {
+        tooltips.accept(Text.translatable("tooltip.immersiveores.breakvulpus.tooltip").formatted(Formatting.RED));
+    }
 }

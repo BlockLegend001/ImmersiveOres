@@ -4,6 +4,8 @@ import com.blocklegend001.immersiveores.ImmersiveOres;
 import com.blocklegend001.immersiveores.blocks.custom.enderium.*;
 import com.blocklegend001.immersiveores.blocks.custom.vibranium.*;
 import com.blocklegend001.immersiveores.blocks.custom.vulpus.*;
+import com.blocklegend001.immersiveores.tooltip.TooltipBlock;
+import com.blocklegend001.immersiveores.tooltip.TooltipBlockItem;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
@@ -69,9 +71,19 @@ public class ModBlocks {
     }
 
     private static void registerBlockItem(String name, Block block) {
-        Registry.register(Registries.ITEM, Identifier.of(ImmersiveOres.MOD_ID, name),
-                new BlockItem(block, new Item.Settings()
-                        .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(ImmersiveOres.MOD_ID, name))).useBlockPrefixedTranslationKey()));
+        Item item;
+
+        if (block instanceof TooltipBlock tooltipBlock) {
+            item = new TooltipBlockItem(tooltipBlock, new Item.Settings()
+                    .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(ImmersiveOres.MOD_ID, name)))
+                    .useBlockPrefixedTranslationKey());
+        } else {
+            item = new BlockItem(block, new Item.Settings()
+                    .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(ImmersiveOres.MOD_ID, name)))
+                    .useBlockPrefixedTranslationKey());
+        }
+
+        Registry.register(Registries.ITEM, Identifier.of(ImmersiveOres.MOD_ID, name), item);
     }
 
     public static void registerModBlocks() {
