@@ -11,6 +11,8 @@ import com.blocklegend001.immersiveores.blocks.custom.vulpus.RawVulpusBlock;
 import com.blocklegend001.immersiveores.blocks.custom.vulpus.VulpusBlock;
 import com.blocklegend001.immersiveores.blocks.custom.vulpus.VulpusOre;
 import com.blocklegend001.immersiveores.item.ModItems;
+import com.blocklegend001.immersiveores.tooltip.TooltipBlock;
+import com.blocklegend001.immersiveores.tooltip.TooltipBlockItem;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
@@ -82,8 +84,16 @@ public class ModBlocks {
     }
 
     private static <T extends Block> RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block) {
-        return ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()
-                .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(ImmersiveOres.MODID, name)))));
+        return ModItems.ITEMS.register(name, () -> {
+            Item.Properties properties = new Item.Properties()
+                    .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(ImmersiveOres.MODID, name)));
+
+            if (block.get() instanceof TooltipBlock tooltipBlock) {
+                return new TooltipBlockItem(tooltipBlock, properties);
+            } else {
+                return new BlockItem(block.get(), properties);
+            }
+        });
     }
 
     public static void register(BusGroup eventBus) {
