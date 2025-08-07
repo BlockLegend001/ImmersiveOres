@@ -11,6 +11,8 @@ import com.blocklegend001.immersiveores.block.custom.vulpus.RawVulpusBlock;
 import com.blocklegend001.immersiveores.block.custom.vulpus.VulpusBlock;
 import com.blocklegend001.immersiveores.block.custom.vulpus.VulpusOre;
 import com.blocklegend001.immersiveores.item.ModItems;
+import com.blocklegend001.immersiveores.tooltip.TooltipBlock;
+import com.blocklegend001.immersiveores.tooltip.TooltipBlockItem;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
@@ -21,6 +23,7 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
+import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
 import java.util.function.Supplier;
@@ -80,9 +83,17 @@ public class ModBlocks {
         return toReturn;
     }
 
-    private static <T extends Block> void registerBlockItem(String name, DeferredBlock<T> block) {
-        ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()
-                .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(ImmersiveOres.MODID, name)))));
+    private static <T extends Block> DeferredItem<Item> registerBlockItem(String name, DeferredBlock<T> block) {
+        return ModItems.ITEMS.register(name, () -> {
+            Item.Properties properties = new Item.Properties()
+                    .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(ImmersiveOres.MODID, name)));
+
+            if (block.get() instanceof TooltipBlock tooltipBlock) {
+                return new TooltipBlockItem(tooltipBlock, properties);
+            } else {
+                return new BlockItem(block.get(), properties);
+            }
+        });
     }
 
     public static void register(IEventBus eventBus) {
