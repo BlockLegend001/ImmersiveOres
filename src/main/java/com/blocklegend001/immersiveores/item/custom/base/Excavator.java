@@ -21,7 +21,7 @@ public class Excavator extends Item {
         super(computeSettings(material, BlockTags.SHOVEL_MINEABLE, settings, attackDamage, attackSpeed));
     }
 
-    private static Item.Settings computeSettings(ToolMaterial material, TagKey<Block> shovelMineable, Item.Settings settings, float attackDamage, float attackSpeed) {
+    private static Settings computeSettings(ToolMaterial material, TagKey<Block> shovelMineable, Settings settings, float attackDamage, float attackSpeed) {
         Excavator.shovelMineable = shovelMineable;
         settings.shovel(wrapMaterial(material, material.durability()), attackDamage, attackSpeed);
         return settings;

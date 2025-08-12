@@ -46,7 +46,7 @@ public class Paxel extends Item {
         return state.isIn(paxelMineable);
     }
 
-    private static Item.Settings computeSettings(ToolMaterial material, TagKey<Block> paxelMineable, Item.Settings settings, float attackDamage, float attackSpeed) {
+    private static Settings computeSettings(ToolMaterial material, TagKey<Block> paxelMineable, Settings settings, float attackDamage, float attackSpeed) {
         Paxel.paxelMineable = paxelMineable;
         settings.pickaxe(wrapMaterial(material, material.durability()), attackDamage, attackSpeed);
         settings.shovel(wrapMaterial(material, material.durability()), attackDamage, attackSpeed);

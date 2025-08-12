@@ -21,7 +21,7 @@ public class Hammer extends Item {
         super(computeSettings(material, BlockTags.PICKAXE_MINEABLE, settings, attackDamage, attackSpeed));
     }
 
-    private static Item.Settings computeSettings(ToolMaterial material, TagKey<Block> pickaxeMineable, Item.Settings settings, float attackDamage, float attackSpeed) {
+    private static Settings computeSettings(ToolMaterial material, TagKey<Block> pickaxeMineable, Settings settings, float attackDamage, float attackSpeed) {
         Hammer.pickaxeMineable = pickaxeMineable;
         settings.pickaxe(wrapMaterial(material, material.durability()), attackDamage, attackSpeed);
         return settings;

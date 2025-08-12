@@ -21,11 +21,11 @@ import java.util.function.Consumer;
 public class VibraniumPickaxe extends Item {
     private static TagKey<Block> pickaxeMineable;
 
-    public VibraniumPickaxe(ToolMaterial material, float attackDamage, float attackSpeed, Item.Settings settings) {
+    public VibraniumPickaxe(ToolMaterial material, float attackDamage, float attackSpeed, Settings settings) {
         super(computeSettings(material, BlockTags.PICKAXE_MINEABLE, settings, attackDamage, attackSpeed, VibraniumConfig.unbreakableVibranium, VibraniumConfig.durabilityVibranium));
     }
 
-    private static Item.Settings computeSettings(ToolMaterial material, TagKey<Block> pickaxeMineable, Item.Settings settings, float attackDamage, float attackSpeed, boolean unbreakable, int durability) {
+    private static Settings computeSettings(ToolMaterial material, TagKey<Block> pickaxeMineable, Settings settings, float attackDamage, float attackSpeed, boolean unbreakable, int durability) {
         VibraniumPickaxe.pickaxeMineable = pickaxeMineable;
         settings.pickaxe(wrapMaterial(material, material.durability()), attackDamage, attackSpeed).
         maxDamage(durability).fireproof();
@@ -44,6 +44,11 @@ public class VibraniumPickaxe extends Item {
                 toolMaterial.enchantmentValue(),
                 toolMaterial.repairItems()
         );
+    }
+
+    @Override
+    public Text getName(ItemStack stack) {
+        return super.getName(stack).copy().formatted(Formatting.LIGHT_PURPLE);
     }
 
     @Override
