@@ -6,15 +6,20 @@ import com.blocklegend001.immersiveores.blocks.custom.vibranium.*;
 import com.blocklegend001.immersiveores.blocks.custom.vulpus.*;
 import com.blocklegend001.immersiveores.tooltip.TooltipBlock;
 import com.blocklegend001.immersiveores.tooltip.TooltipBlockItem;
+import com.blocklegend001.immersiveores.util.color.ColoredBlock;
+import com.blocklegend001.immersiveores.util.color.ColoredBlockItem;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
+import net.minecraft.text.Style;
+import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 
 public class ModBlocks {
@@ -71,20 +76,32 @@ public class ModBlocks {
     }
 
     private static void registerBlockItem(String name, Block block) {
+        Item.Settings settings = new Item.Settings()
+                .fireproof()
+                .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(ImmersiveOres.MOD_ID, name)))
+                .useBlockPrefixedTranslationKey();
+
         Item item;
 
-        if (block instanceof TooltipBlock tooltipBlock) {
-            item = new TooltipBlockItem(tooltipBlock, new Item.Settings()
-                    .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(ImmersiveOres.MOD_ID, name)))
-                    .useBlockPrefixedTranslationKey());
+        if (block instanceof ColoredBlock colored && block instanceof TooltipBlock tooltip) {
+            item = new TooltipBlockItem(tooltip, settings) {
+                @Override
+                public Text getName(ItemStack stack) {
+                    return super.getName(stack).copy()
+                            .setStyle(Style.EMPTY.withColor(colored.getColor()));
+                }
+            };
+        } else if (block instanceof ColoredBlock colored) {
+            item = new ColoredBlockItem(block, settings, colored.getColor());
+        } else if (block instanceof TooltipBlock tooltip) {
+            item = new TooltipBlockItem(tooltip, settings);
         } else {
-            item = new BlockItem(block, new Item.Settings()
-                    .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(ImmersiveOres.MOD_ID, name)))
-                    .useBlockPrefixedTranslationKey());
+            item = new BlockItem(block, settings);
         }
 
         Registry.register(Registries.ITEM, Identifier.of(ImmersiveOres.MOD_ID, name), item);
     }
+
 
     public static void registerModBlocks() {
         ImmersiveOres.LOGGER.info("Registering Mod Blocks for " + ImmersiveOres.MOD_ID);

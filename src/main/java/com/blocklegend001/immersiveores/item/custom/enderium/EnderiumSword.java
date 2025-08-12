@@ -34,12 +34,17 @@ public class EnderiumSword extends Item {
         super(computeSettings(material, settings, attackDamage, attackSpeed, EnderiumConfig.unbreakableEnderium, EnderiumConfig.durabilityEnderium));
     }
 
-    private static Item.Settings computeSettings(ToolMaterial material, Item.Settings settings, float attackDamage, float attackSpeed,  boolean unbreakable, int durability) {
+    private static Settings computeSettings(ToolMaterial material, Settings settings, float attackDamage, float attackSpeed,  boolean unbreakable, int durability) {
         settings.sword(wrapMaterial(material, material.durability()), attackDamage, attackSpeed).maxDamage(durability);
         if (unbreakable) {
             settings.component(DataComponentTypes.UNBREAKABLE, Unit.INSTANCE);
         }
         return settings;
+    }
+
+    @Override
+    public Text getName(ItemStack stack) {
+        return super.getName(stack).copy().formatted(Formatting.DARK_AQUA);
     }
 
     @Override

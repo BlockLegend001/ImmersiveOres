@@ -25,7 +25,7 @@ public class EnderiumPickaxe extends Item {
         super(computeSettings(material, BlockTags.PICKAXE_MINEABLE, settings, attackDamage, attackSpeed, EnderiumConfig.unbreakableEnderium, EnderiumConfig.durabilityEnderium));
     }
 
-    private static Item.Settings computeSettings(ToolMaterial material, TagKey<Block> pickaxeMineable, Item.Settings settings, float attackDamage, float attackSpeed, boolean unbreakable, int durability) {
+    private static Settings computeSettings(ToolMaterial material, TagKey<Block> pickaxeMineable, Settings settings, float attackDamage, float attackSpeed, boolean unbreakable, int durability) {
         EnderiumPickaxe.pickaxeMineable = pickaxeMineable;
         settings.pickaxe(wrapMaterial(material, material.durability()), attackDamage, attackSpeed).maxDamage(durability);
         if (unbreakable) {
@@ -43,6 +43,11 @@ public class EnderiumPickaxe extends Item {
                 toolMaterial.enchantmentValue(),
                 toolMaterial.repairItems()
         );
+    }
+
+    @Override
+    public Text getName(ItemStack stack) {
+        return super.getName(stack).copy().formatted(Formatting.DARK_AQUA);
     }
 
     @Override
