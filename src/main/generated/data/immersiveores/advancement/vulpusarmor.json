@@ -44,6 +44,7 @@
   },
   "display": {
     "description": {
+      "color": "red",
       "translate": "advancement.immersiveores.vulpusarmor.descrption"
     },
     "icon": {
@@ -51,6 +52,7 @@
       "id": "immersiveores:vulpus_chestplate"
     },
     "title": {
+      "color": "red",
       "translate": "advancement.immersiveores.vulpusarmor.title"
     }
   },

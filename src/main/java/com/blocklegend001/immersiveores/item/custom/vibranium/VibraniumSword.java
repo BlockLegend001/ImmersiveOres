@@ -43,6 +43,11 @@ public class VibraniumSword extends SwordItem {
     }
 
     @Override
+    public Text getName(ItemStack stack) {
+        return super.getName(stack).copy().formatted(Formatting.LIGHT_PURPLE);
+    }
+
+    @Override
     public boolean postHit(ItemStack stack, LivingEntity target, LivingEntity attacker) {
         if (attacker instanceof PlayerEntity player) {
             if (!player.isSprinting() &&

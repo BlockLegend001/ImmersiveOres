@@ -28,6 +28,12 @@ public class VibraniumPaxel extends Paxel {
         super(material, ModTags.Blocks.VIBRANIUM_PAXEL_MINEABLE, attackDamage, attackSpeed,
                 createSettings(settings, VibraniumConfig.unbreakableVibranium, VibraniumConfig.durabilityVibranium));
     }
+
+    @Override
+    public Text getName(ItemStack stack) {
+        return super.getName(stack).copy().formatted(Formatting.LIGHT_PURPLE);
+    }
+
     @Override
     public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType options) {
         if(Screen.hasShiftDown()) {

@@ -4,6 +4,8 @@ import com.blocklegend001.immersiveores.ImmersiveOres;
 import com.blocklegend001.immersiveores.blocks.custom.enderium.*;
 import com.blocklegend001.immersiveores.blocks.custom.vibranium.*;
 import com.blocklegend001.immersiveores.blocks.custom.vulpus.*;
+import com.blocklegend001.immersiveores.util.color.ColoredBlock;
+import com.blocklegend001.immersiveores.util.color.ColoredBlockItem;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
@@ -69,9 +71,17 @@ public class ModBlocks {
     }
 
     private static void registerBlockItem(String name, Block block) {
-        Registry.register(Registries.ITEM, Identifier.of(ImmersiveOres.MOD_ID, name),
-                new BlockItem(block, new Item.Settings()
-                        .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(ImmersiveOres.MOD_ID, name))).useBlockPrefixedTranslationKey()));
+        if (block instanceof ColoredBlock) {
+            Registry.register(Registries.ITEM, Identifier.of(ImmersiveOres.MOD_ID, name),
+                    new ColoredBlockItem(block, new Item.Settings().fireproof()
+                            .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(ImmersiveOres.MOD_ID, name))),
+                            ((ColoredBlock) block).getColor()));
+        } else {
+            Registry.register(Registries.ITEM, Identifier.of(ImmersiveOres.MOD_ID, name),
+                    new BlockItem(block, new Item.Settings().fireproof()
+                            .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(ImmersiveOres.MOD_ID, name)))
+                            .useBlockPrefixedTranslationKey()));
+        }
     }
 
     public static void registerModels() {

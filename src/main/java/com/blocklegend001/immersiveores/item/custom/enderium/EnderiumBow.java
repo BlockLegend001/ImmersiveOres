@@ -40,10 +40,14 @@ public class EnderiumBow extends BowItem {
         return base;
     }
 
-
     public EnderiumBow(BowTier tier, Settings settings) {
         super(createSettings(settings ,EnderiumConfig.unbreakableEnderium, EnderiumConfig.durabilityEnderium));
         this.tier = tier;
+    }
+
+    @Override
+    public Text getName(ItemStack stack) {
+        return super.getName(stack).copy().formatted(Formatting.DARK_AQUA);
     }
 
     @Override
