@@ -36,6 +36,10 @@ public class VulpusHammer extends Hammer {
                 createSettings(VulpusConfig.unbreakableVulpus, VulpusConfig.durabilityVulpus));
     }
 
+    @Override
+    public Text getName(ItemStack stack) {
+        return super.getName(stack).copy().formatted(Formatting.RED);
+    }
 
     @Override
     public void appendTooltip(ItemStack stack, Item.TooltipContext context, List<Text> tooltip, TooltipType options) {

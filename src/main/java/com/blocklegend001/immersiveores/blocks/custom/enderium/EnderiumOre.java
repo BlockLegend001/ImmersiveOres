@@ -1,5 +1,6 @@
 package com.blocklegend001.immersiveores.blocks.custom.enderium;
 
+import com.blocklegend001.immersiveores.util.color.ColoredBlock;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -9,10 +10,14 @@ import net.minecraft.util.Formatting;
 
 import java.util.List;
 
-public class EnderiumOre extends Block {
-
+public class EnderiumOre extends Block implements ColoredBlock {
     public EnderiumOre(Settings arg) {
         super(arg);
+    }
+
+    @Override
+    public Formatting getColor() {
+        return Formatting.DARK_AQUA;
     }
 
     @Override

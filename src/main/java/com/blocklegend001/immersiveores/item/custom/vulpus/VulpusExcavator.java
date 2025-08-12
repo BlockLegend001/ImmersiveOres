@@ -37,6 +37,11 @@ public class VulpusExcavator extends Excavator {
     }
 
     @Override
+    public Text getName(ItemStack stack) {
+        return super.getName(stack).copy().formatted(Formatting.RED);
+    }
+
+    @Override
     public void appendTooltip(ItemStack stack, Item.TooltipContext context, List<Text> tooltip, TooltipType options) {
         int radius = getRadiusForExcavator(stack);
         int widht = radius * 2 + 1;

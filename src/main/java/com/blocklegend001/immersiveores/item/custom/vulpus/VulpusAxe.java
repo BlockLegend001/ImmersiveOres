@@ -35,10 +35,14 @@ public class VulpusAxe extends AxeItem {
                 createSettings(VulpusConfig.unbreakableVulpus, VulpusConfig.durabilityVulpus));
     }
 
-
     @Override
     public boolean isEnchantable(ItemStack stack) {
         return true;
+    }
+
+    @Override
+    public Text getName(ItemStack stack) {
+        return super.getName(stack).copy().formatted(Formatting.RED);
     }
 
     @Override
