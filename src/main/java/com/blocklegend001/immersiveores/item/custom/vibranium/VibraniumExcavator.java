@@ -32,6 +32,11 @@ public class VibraniumExcavator extends Excavator {
     }
 
     @Override
+    public Text getName(ItemStack stack) {
+        return super.getName(stack).copy().formatted(Formatting.LIGHT_PURPLE);
+    }
+
+    @Override
     public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType options) {
         int radius = getRadiusForExcavator(stack);
         int widht = radius * 2 + 1;

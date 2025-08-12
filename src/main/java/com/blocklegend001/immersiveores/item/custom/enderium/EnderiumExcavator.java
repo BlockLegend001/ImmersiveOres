@@ -32,6 +32,11 @@ public class EnderiumExcavator extends Excavator {
     }
 
     @Override
+    public Text getName(ItemStack stack) {
+        return super.getName(stack).copy().formatted(Formatting.DARK_AQUA);
+    }
+
+    @Override
     public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType options) {
         int radius = getRadiusForExcavator(stack);
         int widht = radius * 2 + 1;

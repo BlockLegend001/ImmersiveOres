@@ -14,6 +14,7 @@
   "display": {
     "background": "immersiveores:textures/item/vulpus_block.png",
     "description": {
+      "color": "light_purple",
       "translate": "advancement.immersiveores.root.descrption"
     },
     "icon": {
@@ -21,6 +22,7 @@
       "id": "immersiveores:vibranium_ingot"
     },
     "title": {
+      "color": "light_purple",
       "translate": "advancement.immersiveores.root.title"
     }
   },

@@ -44,6 +44,7 @@
   },
   "display": {
     "description": {
+      "color": "dark_aqua",
       "translate": "advancement.immersiveores.enderiumarmor.descrption"
     },
     "icon": {
@@ -51,6 +52,7 @@
       "id": "immersiveores:enderium_chestplate"
     },
     "title": {
+      "color": "dark_aqua",
       "translate": "advancement.immersiveores.enderiumarmor.title"
     }
   },

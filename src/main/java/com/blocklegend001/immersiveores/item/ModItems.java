@@ -7,69 +7,73 @@ import com.blocklegend001.immersiveores.config.VulpusConfig;
 import com.blocklegend001.immersiveores.item.custom.enderium.*;
 import com.blocklegend001.immersiveores.item.custom.vibranium.*;
 import com.blocklegend001.immersiveores.item.custom.vulpus.*;
+import com.blocklegend001.immersiveores.util.color.ColoredItem;
 import com.blocklegend001.immersiveores.util.tools.bow.BowTiers;
 import net.minecraft.item.AnimalArmorItem;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraft.item.equipment.EquipmentType;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
+import net.minecraft.text.Text;
+import net.minecraft.util.Formatting;
 import net.minecraft.util.Identifier;
 
 public class ModItems {
 
     //RAW
     public static final Item RAW_VIBRANIUM = registerItem("raw_vibranium",
-            new Item(new Item.Settings().fireproof()
-                    .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(ImmersiveOres.MOD_ID, "raw_vibranium")))));
+            new ColoredItem(new Item.Settings().fireproof()
+                    .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(ImmersiveOres.MOD_ID, "raw_vibranium"))), Formatting.LIGHT_PURPLE));
 
     public static final Item RAW_VULPUS = registerItem("raw_vulpus",
-            new Item(new Item.Settings().fireproof()
-                    .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(ImmersiveOres.MOD_ID, "raw_vulpus")))));
+            new ColoredItem(new Item.Settings().fireproof()
+                    .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(ImmersiveOres.MOD_ID, "raw_vulpus"))), Formatting.RED));
 
     public static final Item RAW_ENDERIUM = registerItem("raw_enderium",
-            new Item(new Item.Settings().fireproof()
-                    .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(ImmersiveOres.MOD_ID, "raw_enderium")))));
+            new ColoredItem(new Item.Settings().fireproof()
+                    .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(ImmersiveOres.MOD_ID, "raw_enderium"))), Formatting.DARK_AQUA));
 
     //INGOT
     public static final Item VIBRANIUM_INGOT = registerItem("vibranium_ingot",
-            new Item(new Item.Settings().fireproof()
-                    .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(ImmersiveOres.MOD_ID, "vibranium_ingot")))));
+            new ColoredItem(new Item.Settings().fireproof()
+                    .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(ImmersiveOres.MOD_ID, "vibranium_ingot"))), Formatting.LIGHT_PURPLE));
 
     public static final Item VULPUS_INGOT = registerItem("vulpus_ingot",
-            new Item(new Item.Settings().fireproof()
-                    .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(ImmersiveOres.MOD_ID, "vulpus_ingot")))));
+            new ColoredItem(new Item.Settings().fireproof()
+                    .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(ImmersiveOres.MOD_ID, "vulpus_ingot"))), Formatting.RED));
 
     public static final Item ENDERIUM_INGOT = registerItem("enderium_ingot",
-            new Item(new Item.Settings().fireproof()
-                    .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(ImmersiveOres.MOD_ID, "enderium_ingot")))));
+            new ColoredItem(new Item.Settings().fireproof()
+                    .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(ImmersiveOres.MOD_ID, "enderium_ingot"))), Formatting.DARK_AQUA));
 
     //NUGGET
     public static final Item VIBRANIUM_NUGGET = registerItem("vibranium_nugget",
-            new Item(new Item.Settings().fireproof()
-                    .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(ImmersiveOres.MOD_ID, "vibranium_nugget")))));
+            new ColoredItem(new Item.Settings().fireproof()
+                    .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(ImmersiveOres.MOD_ID, "vibranium_nugget"))), Formatting.LIGHT_PURPLE));
 
     public static final Item VULPUS_NUGGET = registerItem("vulpus_nugget",
-            new Item(new Item.Settings().fireproof()
-                    .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(ImmersiveOres.MOD_ID, "vulpus_nugget")))));
+            new ColoredItem(new Item.Settings().fireproof()
+                    .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(ImmersiveOres.MOD_ID, "vulpus_nugget"))), Formatting.RED));
 
     public static final Item ENDERIUM_NUGGET = registerItem("enderium_nugget",
-            new Item(new Item.Settings().fireproof()
-                    .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(ImmersiveOres.MOD_ID, "enderium_nugget")))));
+            new ColoredItem(new Item.Settings().fireproof()
+                    .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(ImmersiveOres.MOD_ID, "enderium_nugget"))), Formatting.DARK_AQUA));
 
     //STICK
     public static final Item VIBRANIUM_STICK = registerItem("vibranium_stick",
-            new Item(new Item.Settings().fireproof()
-                    .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(ImmersiveOres.MOD_ID, "vibranium_stick")))));
+            new ColoredItem(new Item.Settings().fireproof()
+                    .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(ImmersiveOres.MOD_ID, "vibranium_stick"))), Formatting.LIGHT_PURPLE));
 
     public static final Item VULPUS_STICK = registerItem("vulpus_stick",
-            new Item(new Item.Settings().fireproof()
-                    .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(ImmersiveOres.MOD_ID, "vulpus_stick")))));
+            new ColoredItem(new Item.Settings().fireproof()
+                    .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(ImmersiveOres.MOD_ID, "vulpus_stick"))), Formatting.RED));
 
     public static final Item ENDERIUM_STICK = registerItem("enderium_stick",
-            new Item(new Item.Settings().fireproof()
-                    .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(ImmersiveOres.MOD_ID, "enderium_stick")))));
+            new ColoredItem(new Item.Settings().fireproof()
+                    .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(ImmersiveOres.MOD_ID, "enderium_stick"))), Formatting.DARK_AQUA));
 
     //VIBRANIUM
     public static final Item VIBRANIUM_PICKAXE = registerItem("vibranium_pickaxe",
@@ -139,7 +143,12 @@ public class ModItems {
     public static final Item VIBRANIUM_HORSE_ARMOR = registerItem("vibranium_horse_armor",
             new AnimalArmorItem(ModArmorMaterials.VIBRANIUM, AnimalArmorItem.Type.EQUESTRIAN,
                     new Item.Settings().fireproof().maxCount(1)
-                            .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(ImmersiveOres.MOD_ID, "vibranium_horse_armor")))));
+                            .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(ImmersiveOres.MOD_ID, "vibranium_horse_armor")))) {
+                @Override
+                public Text getName(ItemStack stack) {
+                    return super.getName(stack).copy().formatted(Formatting.LIGHT_PURPLE);
+                }
+            });
 
     //VULPUS
     public static final Item VULPUS_PICKAXE = registerItem("vulpus_pickaxe",
@@ -209,7 +218,12 @@ public class ModItems {
     public static final Item VULPUS_HORSE_ARMOR = registerItem("vulpus_horse_armor",
             new AnimalArmorItem(ModArmorMaterials.VULPUS, AnimalArmorItem.Type.EQUESTRIAN,
                     new Item.Settings().fireproof().maxCount(1)
-                            .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(ImmersiveOres.MOD_ID, "vulpus_horse_armor")))));
+                            .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(ImmersiveOres.MOD_ID, "vulpus_horse_armor")))) {
+                @Override
+                public Text getName(ItemStack stack) {
+                    return super.getName(stack).copy().formatted(Formatting.RED);
+                }
+            });
 
     //ENDERIUM
     public static final Item ENDERIUM_PICKAXE = registerItem("enderium_pickaxe",
@@ -279,7 +293,12 @@ public class ModItems {
     public static final Item ENDERIUM_HORSE_ARMOR = registerItem("enderium_horse_armor",
             new AnimalArmorItem(ModArmorMaterials.ENDERIUM, AnimalArmorItem.Type.EQUESTRIAN,
                     new Item.Settings().fireproof().maxCount(1)
-                            .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(ImmersiveOres.MOD_ID, "enderium_horse_armor")))));
+                            .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(ImmersiveOres.MOD_ID, "enderium_horse_armor")))) {
+                @Override
+                public Text getName(ItemStack stack) {
+                    return super.getName(stack).copy().formatted(Formatting.DARK_AQUA);
+                }
+            });
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, Identifier.of(ImmersiveOres.MOD_ID, name), item);

@@ -34,6 +34,7 @@
   },
   "display": {
     "description": {
+      "color": "red",
       "translate": "advancement.immersiveores.vulpusspecialtools.descrption"
     },
     "icon": {
@@ -41,6 +42,7 @@
       "id": "immersiveores:vulpus_paxel"
     },
     "title": {
+      "color": "red",
       "translate": "advancement.immersiveores.vulpusspecialtools.title"
     }
   },
