@@ -43,6 +43,11 @@ public class EnderiumSword extends Item {
     }
 
     @Override
+    public Text getName(ItemStack stack) {
+        return super.getName(stack).copy().formatted(Formatting.DARK_AQUA);
+    }
+
+    @Override
     public void postHit(ItemStack stack, LivingEntity target, LivingEntity attacker) {
         target.setOnFireFor(30);
 

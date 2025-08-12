@@ -42,6 +42,11 @@ public class VulpusSword extends Item {
     }
 
     @Override
+    public Text getName(ItemStack stack) {
+        return super.getName(stack).copy().formatted(Formatting.RED);
+    }
+
+    @Override
     public void postHit(ItemStack stack, LivingEntity target, LivingEntity attacker) {
         target.setOnFireFor(15);
 

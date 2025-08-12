@@ -49,6 +49,11 @@ public class EnderiumBow extends BowItem {
     }
 
     @Override
+    public Text getName(ItemStack stack) {
+        return super.getName(stack).copy().formatted(Formatting.DARK_AQUA);
+    }
+
+    @Override
     public boolean onStoppedUsing(ItemStack stack, World world, LivingEntity user, int remainingUseTicks) {
         if (user instanceof PlayerEntity player) {
             ItemStack arrowStack = user.getProjectileType(stack);

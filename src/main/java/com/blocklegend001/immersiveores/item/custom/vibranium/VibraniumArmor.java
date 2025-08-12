@@ -44,6 +44,11 @@ public class VibraniumArmor extends Item {
     }
 
     @Override
+    public Text getName(ItemStack stack) {
+        return super.getName(stack).copy().formatted(Formatting.LIGHT_PURPLE);
+    }
+
+    @Override
     public void inventoryTick(ItemStack stack, ServerWorld world, Entity entity, @Nullable EquipmentSlot slot) {
         if (!world.isClient()){
             if(entity instanceof PlayerEntity player) {
