@@ -14,6 +14,7 @@
   },
   "display": {
     "description": {
+      "color": "dark_aqua",
       "translate": "advancement.immersiveores.enderium.descrption"
     },
     "icon": {
@@ -21,6 +22,7 @@
       "id": "immersiveores:enderium_ingot"
     },
     "title": {
+      "color": "dark_aqua",
       "translate": "advancement.immersiveores.enderium.title"
     }
   },

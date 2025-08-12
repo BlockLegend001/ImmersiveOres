@@ -102,6 +102,7 @@ public class Paxel extends MiningToolItem {
                     world.syncWorldEvent(player, 3004, pos, 0);
                     return optional2;
                 } else {
+
                     return Optional.empty();
                 }
             }

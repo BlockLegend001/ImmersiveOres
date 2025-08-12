@@ -38,6 +38,11 @@ public class EnderiumHammer extends Hammer {
     }
 
     @Override
+    public Text getName(ItemStack stack) {
+        return super.getName(stack).copy().formatted(Formatting.DARK_AQUA);
+    }
+
+    @Override
     public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType options) {
         int radius = getRadiusForHammer(stack);
         int widht = radius * 2 + 1;

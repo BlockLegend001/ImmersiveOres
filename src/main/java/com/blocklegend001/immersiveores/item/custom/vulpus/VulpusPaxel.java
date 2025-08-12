@@ -34,6 +34,10 @@ public class VulpusPaxel extends Paxel {
                 createSettings(VulpusConfig.unbreakableVulpus, VulpusConfig.durabilityVulpus));
     }
 
+    @Override
+    public Text getName(ItemStack stack) {
+        return super.getName(stack).copy().formatted(Formatting.RED);
+    }
 
     @Override
     public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType options) {

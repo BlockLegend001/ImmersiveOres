@@ -42,6 +42,11 @@ public class VibraniumHoe extends HoeItem {
     }
 
     @Override
+    public Text getName(ItemStack stack) {
+        return super.getName(stack).copy().formatted(Formatting.LIGHT_PURPLE);
+    }
+
+    @Override
     public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType options) {
         if(Screen.hasShiftDown()) {
             if (VibraniumConfig.unbreakableVibranium) {

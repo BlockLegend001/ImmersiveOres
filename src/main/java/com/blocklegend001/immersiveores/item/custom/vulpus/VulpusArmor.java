@@ -37,10 +37,14 @@ public class VulpusArmor extends ArmorItem {
         super(material, type, createSettings(VulpusConfig.unbreakableVulpus, VulpusConfig.durabilityVulpus));
     }
 
-    
     @Override
     public boolean isEnchantable(ItemStack p_41456_) {
         return true;
+    }
+
+    @Override
+    public Text getName(ItemStack stack) {
+        return super.getName(stack).copy().formatted(Formatting.RED);
     }
 
     @Override
