@@ -111,7 +111,7 @@
   "item.immersiveores.enderium_ore": "Эндериевая руда",
   "item.immersiveores.vibranium_ore": "Вибраниевая руда",
   "item.immersiveores.vulpus_ore": "Вульпусовая руда",
-  "advancement.immersiveores.root.title": "§bImmersive Ores",
+  "advancement.immersiveores.root.title": "Immersive Ores",
   "advancement.immersiveores.root.descrption": "Отправьтесь в путешествие с открытием иммерсивных руд. Начните собирать и создавать, используя мощные ресурсы, спрятанные под поверхностью.",
 
   "advancement.immersiveores.vibraniumtools.title": "Мастер вибраниевых инструментов",
@@ -139,5 +139,5 @@
   "advancement.immersiveores.enderiumspecialtools.title": "Мастер эндериевых инструментов",
   "advancement.immersiveores.enderiumspecialtools.descrption": "Создайте все специальные эндериевые инструменты, включая эндериевые молот, мультиинструмент и экскаватор. Овладейте этими передовыми инструментами для достижения исключительной эффективности и возможностей.",
 
-  "itemGroup.immersiveorestab": "§bImmersive Ores"
+  "itemGroup.immersiveorestab": "Immersive Ores"
 }

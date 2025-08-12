@@ -112,7 +112,7 @@
   "item.immersiveores.vibranium_ore": "Minerale di Vibranium",
   "item.immersiveores.vulpus_ore": "Minerale di Vulpus",
 
-  "advancement.immersiveores.root.title": "§bImmersive Ores",
+  "advancement.immersiveores.root.title": "Immersive Ores",
   "advancement.immersiveores.root.descrption": "Inizia il tuo viaggio con la scoperta di Immersive Ores. Inizia a raccogliere e a creare con le potenti risorse nascoste sotto la superficie",
 
   "advancement.immersiveores.vibraniumtools.title": "Maestro degli Strumenti di Vibranium",
@@ -140,5 +140,5 @@
   "advancement.immersiveores.enderiumspecialtools.title": "Maestro degli Strumenti di Enderium",
   "advancement.immersiveores.enderiumspecialtools.descrption": "Crea tutti gli strumenti speciali di Enderium, incluso il Martello, il Paxel e l'Escavatore di Enderium. Domina questi strumenti avanzati per un'efficienza e capacità eccezionali",
 
-  "itemGroup.immersiveorestab": "§bImmersive Ores"
+  "itemGroup.immersiveorestab": "Immersive Ores"
 }
