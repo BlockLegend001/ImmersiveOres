@@ -1,6 +1,7 @@
 package com.blocklegend001.immersiveores.blocks.custom.vibranium;
 
 import com.blocklegend001.immersiveores.tooltip.TooltipBlock;
+import com.blocklegend001.immersiveores.util.color.ColoredBlock;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -10,9 +11,14 @@ import net.minecraft.util.Formatting;
 
 import java.util.List;
 
-public class VibraniumOre extends Block implements TooltipBlock {
+public class VibraniumOre extends Block implements TooltipBlock, ColoredBlock {
     public VibraniumOre(Settings arg) {
         super(arg);
+    }
+
+    @Override
+    public Formatting getColor() {
+        return Formatting.LIGHT_PURPLE;
     }
 
     @Override

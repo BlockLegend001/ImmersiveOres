@@ -31,7 +31,7 @@ public class EnderiumArmor extends Item {
         super(computeSettings(material, type, EnderiumConfig.unbreakableEnderium, EnderiumConfig.durabilityEnderium, settings));
     }
 
-    private static Item.Settings computeSettings(ArmorMaterial material, EquipmentType type, boolean unbreakable, int durability, Item.Settings settings) {
+    private static Settings computeSettings(ArmorMaterial material, EquipmentType type, boolean unbreakable, int durability, Settings settings) {
         settings.armor(material, EquipmentType.BODY)
                 .attributeModifiers(material.createAttributeModifiers(type))
                 .enchantable(material.enchantmentValue())
@@ -41,6 +41,11 @@ public class EnderiumArmor extends Item {
                     settings.component(DataComponentTypes.UNBREAKABLE, Unit.INSTANCE);
                 }
         return settings;
+    }
+
+    @Override
+    public Text getName(ItemStack stack) {
+        return super.getName(stack).copy().formatted(Formatting.DARK_AQUA);
     }
 
     @Override

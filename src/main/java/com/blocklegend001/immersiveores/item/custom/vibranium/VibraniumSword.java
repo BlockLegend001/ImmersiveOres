@@ -28,17 +28,22 @@ import java.util.List;
 import java.util.function.Consumer;
 
 public class VibraniumSword extends Item {
-    public VibraniumSword(ToolMaterial material, float attackDamage, float attackSpeed, Item.Settings settings) {
+    public VibraniumSword(ToolMaterial material, float attackDamage, float attackSpeed, Settings settings) {
         super(computeSettings(material, settings, attackDamage, attackSpeed, VibraniumConfig.unbreakableVibranium, VibraniumConfig.durabilityVibranium));
     }
 
-    private static Item.Settings computeSettings(ToolMaterial material, Item.Settings settings, float attackDamage, float attackSpeed, boolean unbreakable, int durability) {
+    private static Settings computeSettings(ToolMaterial material, Settings settings, float attackDamage, float attackSpeed, boolean unbreakable, int durability) {
         settings.sword(wrapMaterial(material, material.durability()), attackDamage, attackSpeed)
         .maxDamage(durability).fireproof();
         if (unbreakable) {
             settings.component(DataComponentTypes.UNBREAKABLE, Unit.INSTANCE);
         }
         return settings;
+    }
+
+    @Override
+    public Text getName(ItemStack stack) {
+        return super.getName(stack).copy().formatted(Formatting.LIGHT_PURPLE);
     }
 
     @Override

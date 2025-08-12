@@ -27,11 +27,11 @@ import java.util.List;
 import java.util.function.Consumer;
 
 public class VulpusArmor extends Item {
-    public VulpusArmor(ArmorMaterial material, EquipmentType type, Item.Settings settings) {
+    public VulpusArmor(ArmorMaterial material, EquipmentType type, Settings settings) {
         super(computeSettings(material, type, settings, VulpusConfig.unbreakableVulpus, VulpusConfig.durabilityVulpus));
     }
 
-    private static Item.Settings computeSettings(ArmorMaterial material, EquipmentType type, Item.Settings settings, boolean unbreakable, int durability) {
+    private static Settings computeSettings(ArmorMaterial material, EquipmentType type, Settings settings, boolean unbreakable, int durability) {
         settings.armor(material, EquipmentType.BODY)
                 .attributeModifiers(material.createAttributeModifiers(type))
                 .enchantable(material.enchantmentValue())
@@ -42,6 +42,11 @@ public class VulpusArmor extends Item {
                 }
 
         return settings;
+    }
+
+    @Override
+    public Text getName(ItemStack stack) {
+        return super.getName(stack).copy().formatted(Formatting.RED);
     }
 
     @Override
