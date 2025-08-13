@@ -129,7 +129,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .criterion("has_vibranium_ingot", conditionsFromItem(ModItems.VIBRANIUM_INGOT))
                         .offerTo(exporter);
 
-                createShaped(RecipeCategory.MISC, ModItems.VIBRANIUM_STICK)
+                createShaped(RecipeCategory.MISC, ModItems.VIBRANIUM_STICK, 2)
                         .input('E', ModItems.VIBRANIUM_INGOT)
                         .pattern("   ")
                         .pattern(" E ")
@@ -314,7 +314,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .criterion("has_vulpus_ingot", conditionsFromItem(ModItems.VULPUS_INGOT))
                         .offerTo(exporter);
 
-                createShaped(RecipeCategory.MISC, ModItems.VULPUS_STICK)
+                createShaped(RecipeCategory.MISC, ModItems.VULPUS_STICK, 2)
                         .input('E', ModItems.VULPUS_INGOT)
                         .pattern("   ")
                         .pattern(" E ")
@@ -455,7 +455,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .criterion("has_enderium_ingot", conditionsFromItem(ModItems.ENDERIUM_INGOT))
                         .offerTo(exporter);
 
-                createShaped(RecipeCategory.MISC, ModItems.ENDERIUM_STICK)
+                createShaped(RecipeCategory.MISC, ModItems.ENDERIUM_STICK, 2)
                         .input('E', ModItems.ENDERIUM_INGOT)
                         .pattern("   ")
                         .pattern(" E ")
