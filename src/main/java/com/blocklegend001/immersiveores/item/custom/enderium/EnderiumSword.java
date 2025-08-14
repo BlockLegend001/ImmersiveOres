@@ -1,14 +1,18 @@
 package com.blocklegend001.immersiveores.item.custom.enderium;
 
+import com.blocklegend001.immersiveores.ImmersiveOres;
 import com.blocklegend001.immersiveores.config.EnderiumConfig;
 import com.blocklegend001.immersiveores.item.ModToolMaterials;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.component.DataComponentTypes;
+import net.minecraft.component.type.AttributeModifierSlot;
 import net.minecraft.component.type.UnbreakableComponent;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.enchantment.Enchantments;
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.attribute.EntityAttributeModifier;
+import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -22,17 +26,32 @@ import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;
+import net.minecraft.util.Identifier;
 import net.minecraft.world.World;
 
 import java.util.List;
 
 public class EnderiumSword extends SwordItem {
     private static Item.Settings createSettings(boolean unbreakable, int durability) {
+        var base = SwordItem.createAttributeModifiers(
+                        ModToolMaterials.ENDERIUM,
+                        EnderiumConfig.attackDamageEnderiumSword,
+                        (float) EnderiumConfig.attackSpeedEnderiumSword
+                )
+                .with(
+                        EntityAttributes.PLAYER_ENTITY_INTERACTION_RANGE,
+                        new EntityAttributeModifier(
+                                Identifier.of(ImmersiveOres.MOD_ID, "enderium_entity_reach"),
+                                EnderiumConfig.attackRangeEnderiumSword,
+                                EntityAttributeModifier.Operation.ADD_VALUE
+                        ),
+                        AttributeModifierSlot.MAINHAND
+                );
+
         Item.Settings settings = new Item.Settings()
                 .maxDamage(durability)
                 .fireproof()
-                .attributeModifiers(EnderiumSword.createAttributeModifiers(ModToolMaterials.ENDERIUM,
-                        EnderiumConfig.attackDamageEnderiumSword, (float) EnderiumConfig.attackSpeedEnderiumSword));
+                .attributeModifiers(base);
 
         if (unbreakable) {
             settings.component(DataComponentTypes.UNBREAKABLE, new UnbreakableComponent(true));

@@ -1,10 +1,14 @@
 package com.blocklegend001.immersiveores.item.custom.enderium;
 
+import com.blocklegend001.immersiveores.ImmersiveOres;
 import com.blocklegend001.immersiveores.config.EnderiumConfig;
 import com.blocklegend001.immersiveores.item.ModToolMaterials;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.component.DataComponentTypes;
+import net.minecraft.component.type.AttributeModifierSlot;
 import net.minecraft.component.type.UnbreakableComponent;
+import net.minecraft.entity.attribute.EntityAttributeModifier;
+import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.item.AxeItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -12,16 +16,31 @@ import net.minecraft.item.ToolMaterial;
 import net.minecraft.item.tooltip.TooltipType;
 import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;
+import net.minecraft.util.Identifier;
 
 import java.util.List;
 
 public class EnderiumAxe extends AxeItem {
     private static Item.Settings createSettings(boolean unbreakable, int durability) {
+        var base = EnderiumAxe.createAttributeModifiers(
+                        ModToolMaterials.ENDERIUM,
+                        EnderiumConfig.attackDamageEnderiumAxe,
+                        (float) EnderiumConfig.attackSpeedEnderiumAxe
+                )
+                .with(
+                        EntityAttributes.PLAYER_BLOCK_INTERACTION_RANGE,
+                        new EntityAttributeModifier(
+                                Identifier.of(ImmersiveOres.MOD_ID, "enderium_block_reach"),
+                                EnderiumConfig.blockRangeEnderiumTool,
+                                EntityAttributeModifier.Operation.ADD_VALUE
+                        ),
+                        AttributeModifierSlot.MAINHAND
+                );
+
         Item.Settings settings = new Item.Settings()
                 .maxDamage(durability)
                 .fireproof()
-                .attributeModifiers(EnderiumAxe.createAttributeModifiers(ModToolMaterials.ENDERIUM,
-                        EnderiumConfig.attackDamageEnderiumAxe, (float) EnderiumConfig.attackSpeedEnderiumAxe));
+                .attributeModifiers(base);
 
         if (unbreakable) {
             settings.component(DataComponentTypes.UNBREAKABLE, new UnbreakableComponent(true));
