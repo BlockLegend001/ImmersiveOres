@@ -1,10 +1,14 @@
 package com.blocklegend001.immersiveores.item.custom.vulpus;
 
+import com.blocklegend001.immersiveores.ImmersiveOres;
 import com.blocklegend001.immersiveores.config.VulpusConfig;
 import com.blocklegend001.immersiveores.item.ModToolMaterials;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.component.DataComponentTypes;
+import net.minecraft.component.type.AttributeModifierSlot;
 import net.minecraft.component.type.UnbreakableComponent;
+import net.minecraft.entity.attribute.EntityAttributeModifier;
+import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.item.AxeItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -12,16 +16,31 @@ import net.minecraft.item.ToolMaterial;
 import net.minecraft.item.tooltip.TooltipType;
 import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;
+import net.minecraft.util.Identifier;
 
 import java.util.List;
 
 public class VulpusAxe extends AxeItem {
     private static Settings createSettings(boolean unbreakable, int durability) {
+        var base = VulpusAxe.createAttributeModifiers(
+                        ModToolMaterials.VULPUS,
+                        VulpusConfig.attackDamageVulpusAxe,
+                        (float) VulpusConfig.attackSpeedVulpusAxe
+                )
+                .with(
+                        EntityAttributes.PLAYER_BLOCK_INTERACTION_RANGE,
+                        new EntityAttributeModifier(
+                                Identifier.of(ImmersiveOres.MOD_ID, "vulpus_block_reach"),
+                                VulpusConfig.blockRangeVulpusTool,
+                                EntityAttributeModifier.Operation.ADD_VALUE
+                        ),
+                        AttributeModifierSlot.MAINHAND
+                );
+
         Settings settings = new Settings()
                 .maxDamage(durability)
                 .fireproof()
-                .attributeModifiers(VulpusAxe.createAttributeModifiers(ModToolMaterials.VULPUS,
-                        VulpusConfig.attackDamageVulpusAxe, (float) VulpusConfig.attackSpeedVulpusAxe));
+                .attributeModifiers(base);
 
         if (unbreakable) {
             settings.component(DataComponentTypes.UNBREAKABLE, new UnbreakableComponent(true));
