@@ -90,7 +90,6 @@ public class VibraniumConfig {
         configs.addKeyValuePair(new Pair<>("attackDamageBonusVibraniumTier", 11), "Attack damage bonus of Vibranium tier");
         configs.addKeyValuePair(new Pair<>("durabilityVibranium", 4062), "Durability of Vibranium tools");
         configs.addKeyValuePair(new Pair<>("unbreakableVibranium", false), "Whether Vibranium tools are unbreakable");
-        configs.addKeyValuePair(new Pair<>("blockRangeVibraniumTool", 0.75), "Block range of Vibranium tools");
 
         configs.addComment("Vibranium Pickaxe Stats");
         configs.addKeyValuePair(new Pair<>("attackDamageVibraniumPickaxe", 9), "Attack damage of Vibranium Pickaxe");
@@ -107,7 +106,6 @@ public class VibraniumConfig {
         configs.addComment("Vibranium Sword Stats");
         configs.addKeyValuePair(new Pair<>("attackDamageVibraniumSword", 10), "Attack damage of Vibranium Sword");
         configs.addKeyValuePair(new Pair<>("attackSpeedVibraniumSword", 2.0), "Attack speed of Vibranium Sword");
-        configs.addKeyValuePair(new Pair<>("attackRangeVibraniumSword", 0.75), "Attack range of Vibranium Sword");
 
         configs.addComment("Vibranium Hoe Stats");
         configs.addKeyValuePair(new Pair<>("attackDamageVibraniumHoe", 7), "Attack damage of Vibranium Hoe");
@@ -139,7 +137,6 @@ public class VibraniumConfig {
         enchantmentValueVibraniumArmor = VIBRANIUM_CONFIG.getOrDefault("enchantmentValueVibraniumArmor", 85);
         durabilityVibranium = VIBRANIUM_CONFIG.getOrDefault("durabilityVibranium", 4062);
         unbreakableVibranium = VIBRANIUM_CONFIG.getOrDefault("unbreakableVibranium", false);
-        blockRangeVibraniumTool = VIBRANIUM_CONFIG.getOrDefault("blockRangeVibraniumTool", 0.75);
 
         speedIVibraniumArmor = VIBRANIUM_CONFIG.getOrDefault("speedIVibraniumArmor", true);
         jumpIVibraniumArmor = VIBRANIUM_CONFIG.getOrDefault("jumpIVibraniumArmor", true);
@@ -179,6 +176,5 @@ public class VibraniumConfig {
         radiusVibraniumExcavator = VIBRANIUM_CONFIG.getOrDefault("radiusVibraniumExcavator", 1);
 
         arrowCountVibraniumBow = VIBRANIUM_CONFIG.getOrDefault("arrowCountVibraniumBow", 2);
-        attackRangeVibraniumSword = VIBRANIUM_CONFIG.getOrDefault("attackRangeVibraniumSword", 0.75);
     }
 }
