@@ -1,18 +1,14 @@
 package com.blocklegend001.immersiveores.item.custom.vulpus;
 
-import com.blocklegend001.immersiveores.ImmersiveOres;
 import com.blocklegend001.immersiveores.config.VulpusConfig;
 import com.blocklegend001.immersiveores.item.ModToolMaterials;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.component.DataComponentTypes;
-import net.minecraft.component.type.AttributeModifierSlot;
 import net.minecraft.component.type.UnbreakableComponent;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.enchantment.Enchantments;
 import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.attribute.EntityAttributeModifier;
-import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -28,32 +24,17 @@ import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Formatting;
 import net.minecraft.util.Hand;
-import net.minecraft.util.Identifier;
 import net.minecraft.world.World;
 
 import java.util.List;
 
 public class VulpusSword extends SwordItem {
-    private static Item.Settings createSettings(boolean unbreakable, int durability) {
-        var base = SwordItem.createAttributeModifiers(
-                        ModToolMaterials.VULPUS,
-                        VulpusConfig.attackDamageVulpusSword,
-                        (float) VulpusConfig.attackSpeedVulpusSword
-                )
-                .with(
-                        EntityAttributes.PLAYER_ENTITY_INTERACTION_RANGE,
-                        new EntityAttributeModifier(
-                                Identifier.of(ImmersiveOres.MOD_ID, "vulpus_entity_reach"),
-                                VulpusConfig.attackRangeVulpusSword,
-                                EntityAttributeModifier.Operation.ADD_VALUE
-                        ),
-                        AttributeModifierSlot.MAINHAND
-                );
-
-        Item.Settings settings = new Item.Settings()
+    private static Settings createSettings(boolean unbreakable, int durability) {
+        Settings settings = new Settings()
                 .maxDamage(durability)
                 .fireproof()
-                .attributeModifiers(base);
+                .attributeModifiers(VulpusSword.createAttributeModifiers(ModToolMaterials.VULPUS,
+                        VulpusConfig.attackDamageVulpusSword, (float) VulpusConfig.attackSpeedVulpusSword));
 
         if (unbreakable) {
             settings.component(DataComponentTypes.UNBREAKABLE, new UnbreakableComponent(true));
@@ -121,7 +102,7 @@ public class VulpusSword extends SwordItem {
     }
 
     @Override
-    public void appendTooltip(ItemStack stack, Item.TooltipContext context, List<Text> tooltip, TooltipType options) {
+    public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType options) {
         if(Screen.hasShiftDown()) {
             if (VulpusConfig.unbreakableVulpus) {
                 tooltip.add(Text.translatable("tooltip.immersiveores.unbreakble.tooltip").formatted(Formatting.RED));

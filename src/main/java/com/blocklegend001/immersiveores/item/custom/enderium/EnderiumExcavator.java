@@ -1,47 +1,29 @@
 package com.blocklegend001.immersiveores.item.custom.enderium;
 
-import com.blocklegend001.immersiveores.ImmersiveOres;
 import com.blocklegend001.immersiveores.config.EnderiumConfig;
 import com.blocklegend001.immersiveores.item.ModToolMaterials;
 import com.blocklegend001.immersiveores.item.custom.base.Excavator;
 import com.blocklegend001.immersiveores.util.map.RadiusMap;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.component.DataComponentTypes;
-import net.minecraft.component.type.AttributeModifierSlot;
 import net.minecraft.component.type.UnbreakableComponent;
-import net.minecraft.entity.attribute.EntityAttributeModifier;
-import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.item.tooltip.TooltipType;
 import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;
-import net.minecraft.util.Identifier;
 
 import java.util.List;
 
 public class EnderiumExcavator extends Excavator {
-    private static Item.Settings createSettings(boolean unbreakable, int durability) {
-        var base = EnderiumExcavator.createAttributeModifiers(
-                        ModToolMaterials.ENDERIUM,
-                        EnderiumConfig.attackDamageEnderiumExcavator,
-                        (float) EnderiumConfig.attackSpeedEnderiumExcavator
-                )
-                .with(
-                        EntityAttributes.PLAYER_BLOCK_INTERACTION_RANGE,
-                        new EntityAttributeModifier(
-                                Identifier.of(ImmersiveOres.MOD_ID, "enderium_block_reach"),
-                                EnderiumConfig.blockRangeEnderiumTool,
-                                EntityAttributeModifier.Operation.ADD_VALUE
-                        ),
-                        AttributeModifierSlot.MAINHAND
-                );
 
-        Item.Settings settings = new Item.Settings()
+    private static Settings createSettings(boolean unbreakable, int durability) {
+        Settings settings = new Settings()
                 .maxDamage(durability)
                 .fireproof()
-                .attributeModifiers(base);
+                .attributeModifiers(EnderiumExcavator.createAttributeModifiers(ModToolMaterials.ENDERIUM,
+                        EnderiumConfig.attackDamageEnderiumExcavator, (float) EnderiumConfig.attackSpeedEnderiumExcavator));
 
         if (unbreakable) {
             settings.component(DataComponentTypes.UNBREAKABLE, new UnbreakableComponent(true));
@@ -61,7 +43,7 @@ public class EnderiumExcavator extends Excavator {
     }
 
     @Override
-    public void appendTooltip(ItemStack stack, Item.TooltipContext context, List<Text> tooltip, TooltipType options) {
+    public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType options) {
         int radius = getRadiusForExcavator(stack);
         int widht = radius * 2 + 1;
 

@@ -21,8 +21,8 @@ import net.minecraft.world.World;
 import java.util.List;
 
 public class VulpusArmor extends ArmorItem {
-    private static Item.Settings createSettings(boolean unbreakable, int durability) {
-        Item.Settings settings = new Item.Settings()
+    private static Settings createSettings(boolean unbreakable, int durability) {
+        Settings settings = new Settings()
                 .maxDamage(durability)
                 .fireproof();
 
@@ -114,7 +114,7 @@ public class VulpusArmor extends ArmorItem {
     }
 
     @Override
-    public void appendTooltip(ItemStack stack, Item.TooltipContext context, List<Text> tooltip, TooltipType options) {
+    public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType options) {
         if(Screen.hasShiftDown()){
             if (ModItems.VULPUS_BOOTS == stack.getItem()) {
                 if (VulpusConfig.unbreakableVulpus) {

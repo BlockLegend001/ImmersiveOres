@@ -20,8 +20,8 @@ import net.minecraft.world.World;
 import java.util.List;
 
 public class VibraniumArmor extends ArmorItem {
-    private static Item.Settings createSettings(boolean unbreakable, int durability) {
-        Item.Settings settings = new Item.Settings()
+    private static Settings createSettings(boolean unbreakable, int durability) {
+        Settings settings = new Settings()
                 .maxDamage(durability)
                 .fireproof();
 
@@ -94,7 +94,7 @@ public class VibraniumArmor extends ArmorItem {
     }
 
     @Override
-    public void appendTooltip(ItemStack stack, Item.TooltipContext context, List<Text> tooltip, TooltipType options) {
+    public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType options) {
         if(Screen.hasShiftDown()) {
             if (ModItems.VIBRANIUM_BOOTS == stack.getItem()) {
                 if (VibraniumConfig.unbreakableVibranium) {

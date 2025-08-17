@@ -1,1 +1,5 @@
-- Fixed a bug that not let the player break one block when shifting in multiplayer
+- Removed unnecessary color codes from lang files. Colors are now fully managed by code.
+- Now if you craft any type of stick you will receive 2 instead of 1
+- Added new attributes to the tools (reach)
+- Redone the paxel textures
+- **WARNING**: This update requires a regeneration of the config file.

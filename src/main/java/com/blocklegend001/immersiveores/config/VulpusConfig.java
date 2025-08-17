@@ -97,7 +97,6 @@ public class VulpusConfig {
         configs.addKeyValuePair(new Pair<>("attackDamageBonusVulpusTier", 20), "Attack damage bonus of Vulpus tier");
         configs.addKeyValuePair(new Pair<>("durabilityVulpus", 6093), "Durability of Vulpus tools");
         configs.addKeyValuePair(new Pair<>("unbreakableVulpus", false), "Whether Vulpus tools are unbreakable");
-        configs.addKeyValuePair(new Pair<>("blockRangeVulpusTool", 1.25), "Block range of Vulpus Tools");
 
         configs.addComment("Vulpus Pickaxe");
         configs.addKeyValuePair(new Pair<>("attackDamageVulpusPickaxe", 10), "Attack damage of Vulpus Pickaxe");
@@ -114,7 +113,6 @@ public class VulpusConfig {
         configs.addComment("Vulpus Sword");
         configs.addKeyValuePair(new Pair<>("attackDamageVulpusSword", 14), "Attack damage of Vulpus Sword");
         configs.addKeyValuePair(new Pair<>("attackSpeedVulpusSword", 2.0), "Attack speed of Vulpus Sword");
-        configs.addKeyValuePair(new Pair<>("attackRangeVulpusSword", 1.25), "Attack range of Vulpus Sword");
 
         configs.addComment("Vulpus Hoe");
         configs.addKeyValuePair(new Pair<>("attackDamageVulpusHoe", 10), "Attack damage of Vulpus Hoe");
@@ -162,7 +160,6 @@ public class VulpusConfig {
         enchantmentValueVulpusTier = VULPUS_CONFIG.getOrDefault("enchantmentValueVulpusTier", 85);
         durabilityVulpus = VULPUS_CONFIG.getOrDefault("durabilityVulpus", 6093);
         unbreakableVulpus = VULPUS_CONFIG.getOrDefault("unbreakableVulpus", false);
-        blockRangeVulpusTool = VULPUS_CONFIG.getOrDefault("blockRangeVulpusTool", 1.25);
 
         enchantmentValueVulpusBow = VULPUS_CONFIG.getOrDefault("enchantmentValueVulpusBow", 5);
         damageVulpusBow = VULPUS_CONFIG.getOrDefault("damageVulpusBow", 10);
@@ -193,7 +190,6 @@ public class VulpusConfig {
         attackDamageVulpusExcavator = VULPUS_CONFIG.getOrDefault("attackDamageVulpusExcavator", 17);
         attackSpeedVulpusExcavator = VULPUS_CONFIG.getOrDefault("attackSpeedVulpusExcavator", 2.0);
         radiusVulpusExcavator = VULPUS_CONFIG.getOrDefault("radiusVulpusExcavator", 2);
-        attackRangeVulpusSword = VULPUS_CONFIG.getOrDefault("attackRangeVulpusSword", 1.25);
     }
 
 }

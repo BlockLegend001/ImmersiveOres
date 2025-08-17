@@ -32,8 +32,8 @@ public class EnderiumBow extends BowItem {
     private final BowTier tier;
     private final int ARROW_COUNT = EnderiumConfig.arrowCountEnderiumBow;
 
-    private static Item.Settings createSettings(boolean unbreakable, int durability) {
-        Item.Settings settings = new Item.Settings()
+    private static Settings createSettings(boolean unbreakable, int durability) {
+        Settings settings = new Settings()
                 .maxDamage(durability)
                 .fireproof();
 
@@ -136,7 +136,7 @@ public class EnderiumBow extends BowItem {
     }
 
     @Override
-    public void appendTooltip(ItemStack stack, Item.TooltipContext context, List<Text> tooltip, TooltipType options) {
+    public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType options) {
         int arrowCount = getArrowCount(stack);
         Formatting color = Formatting.DARK_AQUA;
 

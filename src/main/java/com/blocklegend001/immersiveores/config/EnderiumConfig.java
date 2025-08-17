@@ -102,7 +102,6 @@ public class EnderiumConfig {
         configs.addKeyValuePair(new Pair<>("attackDamageBonusEnderiumTier", 40), "Attack damage bonus of Enderium tier");
         configs.addKeyValuePair(new Pair<>("durabilityEnderium", 9139), "Durability of Enderium tools");
         configs.addKeyValuePair(new Pair<>("unbreakableEnderium", false), "Whether Enderium tools are unbreakable");
-        configs.addKeyValuePair(new Pair<>("blockRangeEnderiumTool", 1.75), "Block range of Enderium Tools");
 
         configs.addComment("Enderium Pickaxe Stats");
         configs.addKeyValuePair(new Pair<>("attackDamageEnderiumPickaxe", 18), "Attack damage of Enderium Pickaxe");
@@ -119,7 +118,6 @@ public class EnderiumConfig {
         configs.addComment("Enderium Sword Stats");
         configs.addKeyValuePair(new Pair<>("attackDamageEnderiumSword", 22), "Attack damage of Enderium Sword");
         configs.addKeyValuePair(new Pair<>("attackSpeedEnderiumSword", 2.0), "Attack speed of Enderium Sword");
-        configs.addKeyValuePair(new Pair<>("attackRangeEnderiumSword", 1.75), "Attack range of Enderium Sword");
 
         configs.addComment("Enderium Hoe Stats");
         configs.addKeyValuePair(new Pair<>("attackDamageEnderiumHoe", 14), "Attack damage of Enderium Hoe");
@@ -184,8 +182,6 @@ public class EnderiumConfig {
         attackDamageEnderiumExcavator = ENDERIUM_CONFIG.getOrDefault("attackDamageEnderiumExcavator", 20);
         attackSpeedEnderiumExcavator = ENDERIUM_CONFIG.getOrDefault("attackSpeedEnderiumExcavator", 2.0);
         radiusEnderiumExcavator = ENDERIUM_CONFIG.getOrDefault("radiusEnderiumExcavator", 3);
-        attackRangeEnderiumSword = ENDERIUM_CONFIG.getOrDefault("attackRangeEnderiumSword", 1.75);
-        blockRangeEnderiumTool = ENDERIUM_CONFIG.getOrDefault("blockRangeEnderiumTool", 1.75);
 
         System.out.println("All " + configs.getConfigsList().size() + " have been set properly");
     }

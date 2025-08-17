@@ -20,8 +20,8 @@ import net.minecraft.world.World;
 import java.util.List;
 
 public class EnderiumArmor extends ArmorItem {
-    private static Item.Settings createSettings(boolean unbreakable, int durability) {
-        Item.Settings settings = new Item.Settings()
+    private static Settings createSettings(boolean unbreakable, int durability) {
+        Settings settings = new Settings()
                 .maxDamage(durability)
                 .fireproof();
 
@@ -116,7 +116,7 @@ public class EnderiumArmor extends ArmorItem {
     }
 
     @Override
-    public void appendTooltip(ItemStack stack, Item.TooltipContext context, List<Text> tooltip, TooltipType options) {
+    public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType options) {
         if(Screen.hasShiftDown()) {
             if (ModItems.ENDERIUM_BOOTS == stack.getItem()) {
                 if (EnderiumConfig.unbreakableEnderium) {
