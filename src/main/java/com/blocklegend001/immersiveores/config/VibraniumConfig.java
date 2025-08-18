@@ -102,7 +102,7 @@ public class VibraniumConfig {
 
         configs.addComment("--- Vibranium Sword Stats ---");
         configs.addKeyValuePair(new Pair<>("attackDamageVibraniumSword", 10), "Attack damage of Vibranium Sword");
-        configs.addKeyValuePair(new Pair<>("attackSpeedVibraniumSword", 10.0), "Attack speed of Vibranium Sword");
+        configs.addKeyValuePair(new Pair<>("attackSpeedVibraniumSword", 0.5), "Attack speed of Vibranium Sword");
 
         configs.addComment("--- Vibranium Hoe Stats ---");
         configs.addKeyValuePair(new Pair<>("attackDamageVibraniumHoe", 7), "Attack damage of Vibranium Hoe");
@@ -156,7 +156,7 @@ public class VibraniumConfig {
         attackSpeedVibraniumShovel = VIBRANIUM_CONFIG.getOrDefault("attackSpeedVibraniumShovel", 0.5);
 
         attackDamageVibraniumSword = VIBRANIUM_CONFIG.getOrDefault("attackDamageVibraniumSword", 10);
-        attackSpeedVibraniumSword = VIBRANIUM_CONFIG.getOrDefault("attackSpeedVibraniumSword", 10.0);
+        attackSpeedVibraniumSword = VIBRANIUM_CONFIG.getOrDefault("attackSpeedVibraniumSword", 0.5);
 
         attackDamageVibraniumHoe = VIBRANIUM_CONFIG.getOrDefault("attackDamageVibraniumHoe", 7);
         attackSpeedVibraniumHoe = VIBRANIUM_CONFIG.getOrDefault("attackSpeedVibraniumHoe", 0.5);
