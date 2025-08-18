@@ -110,18 +110,24 @@ public class VibraniumArmor extends ArmorItem {
                 }
             }
             if (ModItems.VIBRANIUM_CHESTPLATE == stack.getItem()) {
-                tooltip.add(Text.translatable("tooltip.immersiveores.unbreakble.tooltip").formatted(Formatting.LIGHT_PURPLE));
+                if (VibraniumConfig.unbreakableVibranium) {
+                    tooltip.add(Text.translatable("tooltip.immersiveores.unbreakble.tooltip").formatted(Formatting.LIGHT_PURPLE));
+                }
                 tooltip.add(Text.translatable("tooltip.immersiveores.immunetofire.tooltip").formatted(Formatting.LIGHT_PURPLE));
             }
             if (ModItems.VIBRANIUM_HELMET == stack.getItem()) {
-                tooltip.add(Text.translatable("tooltip.immersiveores.unbreakble.tooltip").formatted(Formatting.LIGHT_PURPLE));
+                if (VibraniumConfig.unbreakableVibranium) {
+                    tooltip.add(Text.translatable("tooltip.immersiveores.unbreakble.tooltip").formatted(Formatting.LIGHT_PURPLE));
+                }
                 tooltip.add(Text.translatable("tooltip.immersiveores.immunetofire.tooltip").formatted(Formatting.LIGHT_PURPLE));
                 if (VibraniumConfig.nightVisionVibraniumArmor) {
                     tooltip.add(Text.translatable("tooltip.immersiveores.nightvision.tooltip").formatted(Formatting.LIGHT_PURPLE));
                 }
             }
             if (ModItems.VIBRANIUM_LEGGINGS == stack.getItem()) {
-                tooltip.add(Text.translatable("tooltip.immersiveores.unbreakble.tooltip").formatted(Formatting.LIGHT_PURPLE));
+                if (VibraniumConfig.unbreakableVibranium) {
+                    tooltip.add(Text.translatable("tooltip.immersiveores.unbreakble.tooltip").formatted(Formatting.LIGHT_PURPLE));
+                }
                 tooltip.add(Text.translatable("tooltip.immersiveores.immunetofire.tooltip").formatted(Formatting.LIGHT_PURPLE));
             }
         } else {

@@ -154,8 +154,9 @@ public class EnderiumArmor extends ArmorItem {
                 if (EnderiumConfig.unbreakableEnderium) {
                     tooltip.add(Text.translatable("tooltip.immersiveores.unbreakble.tooltip").formatted(Formatting.DARK_AQUA));
                 }
+                tooltip.add(Text.translatable("tooltip.immersiveores.immunetofire.tooltip").formatted(Formatting.DARK_AQUA));
                 if (EnderiumConfig.fireResistanceEnderiumArmor) {
-                    tooltip.add(Text.translatable("tooltip.immersiveores.immunetofire.tooltip").formatted(Formatting.DARK_AQUA));
+                    tooltip.add(Text.translatable("tooltip.immersiveores.playerimmunetofire.tooltip").formatted(Formatting.DARK_AQUA));
                 } if (EnderiumConfig.makesPiglinsNeutralEnderium) {
                     tooltip.add(Text.translatable("tooltip.immersiveores.immunetopiglin.tooltip").formatted(Formatting.DARK_AQUA));
                 } if (EnderiumConfig.neverLoseHungerEnderiumArmor) {

@@ -137,7 +137,9 @@ public class VulpusArmor extends ArmorItem {
                 }
             }
             if (ModItems.VULPUS_CHESTPLATE == stack.getItem()) {
-                tooltip.add(Text.translatable("tooltip.immersiveores.unbreakble.tooltip").formatted(Formatting.RED));
+                if (VulpusConfig.unbreakableVulpus) {
+                    tooltip.add(Text.translatable("tooltip.immersiveores.unbreakble.tooltip").formatted(Formatting.RED));
+                }
                 tooltip.add(Text.translatable("tooltip.immersiveores.immunetofire.tooltip").formatted(Formatting.RED));
                 if (VulpusConfig.makesPiglinsNeutralVulpus) {
                     tooltip.add(Text.translatable("tooltip.immersiveores.immunetopiglin.tooltip").formatted(Formatting.RED));
@@ -146,7 +148,9 @@ public class VulpusArmor extends ArmorItem {
                 }
             }
             if (ModItems.VULPUS_HELMET == stack.getItem()) {
-                tooltip.add(Text.translatable("tooltip.immersiveores.unbreakble.tooltip").formatted(Formatting.RED));
+                if (VulpusConfig.unbreakableVulpus) {
+                    tooltip.add(Text.translatable("tooltip.immersiveores.unbreakble.tooltip").formatted(Formatting.RED));
+                }
                 tooltip.add(Text.translatable("tooltip.immersiveores.immunetofire.tooltip").formatted(Formatting.RED));
                 if (VulpusConfig.nightVisionVulpusArmor) {
                     tooltip.add(Text.translatable("tooltip.immersiveores.nightvision.tooltip").formatted(Formatting.RED));
@@ -157,7 +161,9 @@ public class VulpusArmor extends ArmorItem {
                 }
             }
             if (ModItems.VULPUS_LEGGINGS == stack.getItem()) {
-                tooltip.add(Text.translatable("tooltip.immersiveores.unbreakble.tooltip").formatted(Formatting.RED));
+                if (VulpusConfig.unbreakableVulpus) {
+                    tooltip.add(Text.translatable("tooltip.immersiveores.unbreakble.tooltip").formatted(Formatting.RED));
+                }
                 tooltip.add(Text.translatable("tooltip.immersiveores.immunetofire.tooltip").formatted(Formatting.RED));
                 if (VulpusConfig.makesPiglinsNeutralVulpus) {
                     tooltip.add(Text.translatable("tooltip.immersiveores.immunetopiglin.tooltip").formatted(Formatting.RED));
