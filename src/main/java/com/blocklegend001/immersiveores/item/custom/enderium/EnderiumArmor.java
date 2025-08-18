@@ -171,6 +171,8 @@ public class EnderiumArmor extends ArmorItem {
                     tooltip.add(Text.translatable("tooltip.immersiveores.immunetopiglin.tooltip").formatted(Formatting.DARK_AQUA));
                 } if (EnderiumConfig.endermanWillNotBeAngryWithYouEnderium) {
                     tooltip.add(Text.translatable("tooltip.immersiveores.endermanwillnotbeangrywithyou.tooltip").formatted(Formatting.DARK_AQUA));
+                } if (EnderiumConfig.fireResistanceEnderiumArmor) {
+                    tooltip.add(Text.translatable("tooltip.immersiveores.playerimmunetofire.tooltip").formatted(Formatting.DARK_AQUA));
                 }
             }
         } else {
