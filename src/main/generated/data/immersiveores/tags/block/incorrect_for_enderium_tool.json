@@ -1,5 +1,4 @@
 {
-  "values": [
-    "#minecraft:incorrect_for_netherite_tool"
-  ]
+  "replace": true,
+  "values": []
 }
