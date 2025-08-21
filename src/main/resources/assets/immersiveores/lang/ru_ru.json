@@ -15,6 +15,13 @@
   "item.immersiveores.vibranium_ingot": "Вибраниевый слиток",
   "item.immersiveores.vulpus_ingot": "Вульпусовый слиток",
 
+  "item.immersiveores.enderium_block": "Блок эндерия",
+  "item.immersiveores.vibranium_block": "Блок вибрания",
+  "item.immersiveores.vulpus_block": "Блок вульпуса",
+  "item.immersiveores.raw_enderium_block": "Блок рудного эндерия",
+  "item.immersiveores.raw_vibranium_block": "Блок рудного вибрания",
+  "item.immersiveores.raw_vulpus_block": "Блок рудного вульпуса",
+
   "block.immersiveores.enderium_block": "Блок эндерия",
   "block.immersiveores.vibranium_block": "Блок вибрания",
   "block.immersiveores.vulpus_block": "Блок вульпуса",
@@ -108,9 +115,14 @@
   "tooltip.immersiveores.breakvulpus.tooltip": "Нужна кирка из вибраниума или что-то получше, чтобы сломать ее.",
   "tooltip.immersiveores.breakenderium.tooltip": "Нужна кирка Вульпуса, чтобы сломать ее.",
 
+  "item.immersiveores.enderium_ore": "Эндериевая руда",
+  "item.immersiveores.vibranium_ore": "Вибраниевая руда",
+  "item.immersiveores.vulpus_ore": "Вульпусовая руда",
+
   "block.immersiveores.enderium_ore": "Эндериевая руда",
   "block.immersiveores.vibranium_ore": "Вибраниевая руда",
   "block.immersiveores.vulpus_ore": "Вульпусовая руда",
+
   "advancement.immersiveores.root.title": "Immersive Ores",
   "advancement.immersiveores.root.descrption": "Отправьтесь в путешествие с открытием иммерсивных руд. Начните собирать и создавать, используя мощные ресурсы, спрятанные под поверхностью.",
 
