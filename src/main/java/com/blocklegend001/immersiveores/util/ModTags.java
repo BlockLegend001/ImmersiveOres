@@ -9,6 +9,9 @@ import net.minecraft.util.Identifier;
 
 public class ModTags {
     public static class Blocks {
+        public static final TagKey<Block> NEEDS_NETHERITE_TOOL
+                = createTag("needs_netherite_tool");
+
         public static final TagKey<Block> NEEDS_ENDERIUM_TOOL
                 = createTag("needs_enderium_tool");
 
@@ -42,6 +45,8 @@ public class ModTags {
     }
 
     public static class Items {
+
+        public static final TagKey<Item> TOOLS_NETHERITE = createTag("tools_netherite");
 
         public static final TagKey<Item> VIBRANIUM_BOW = createTag("vibranium_bow");
         public static final TagKey<Item> VULPUS_BOW = createTag("vulpus_bow");

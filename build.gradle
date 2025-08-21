@@ -23,6 +23,13 @@ repositories {
     maven {
         url "https://maven.shedaniel.me"
     }
+    maven {
+        url "https://maven2.bai.lol"
+        content {
+            includeGroup "lol.bai"
+            includeGroup "mcp.mobius.waila"
+        }
+    }
 }
 
 fabricApi {
@@ -41,6 +48,13 @@ dependencies {
 
     modCompileOnly "me.shedaniel:RoughlyEnoughItems-api-fabric:${rei_version}"
     modRuntimeOnly "me.shedaniel:RoughlyEnoughItems-fabric:${rei_version}"
+
+    // compile against the API
+    modCompileOnly "mcp.mobius.waila:wthit-api:fabric-${wthitVersion}"
+
+    // run against the full jar
+    modRuntimeOnly "mcp.mobius.waila:wthit:fabric-${wthitVersion}"
+    modRuntimeOnly "lol.bai:badpackets:fabric-${badpacketsVersion}"
 
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 }
