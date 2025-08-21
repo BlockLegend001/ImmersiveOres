@@ -15,6 +15,13 @@
   "item.immersiveores.vibranium_ingot": "Vibranium Ingot",
   "item.immersiveores.vulpus_ingot": "Vulpus Ingot",
 
+  "item.immersiveores.enderium_block": "Enderium Block",
+  "item.immersiveores.vibranium_block": "Vibranium Block",
+  "item.immersiveores.vulpus_block": "Vulpus Block",
+  "item.immersiveores.raw_enderium_block": "Raw Enderium Block",
+  "item.immersiveores.raw_vibranium_block": "Raw Vibranium Block",
+  "item.immersiveores.raw_vulpus_block": "Raw Vulpus Block",
+
   "block.immersiveores.enderium_block": "Enderium Block",
   "block.immersiveores.vibranium_block": "Vibranium Block",
   "block.immersiveores.vulpus_block": "Vulpus Block",
@@ -107,6 +114,10 @@
   "tooltip.immersiveores.breakvibranium.tooltip": "Need Netherite Pickaxe or better to break it",
   "tooltip.immersiveores.breakvulpus.tooltip": "Need Vibranium Pickaxe or better to break it",
   "tooltip.immersiveores.breakenderium.tooltip": "Need Vulpus Pickaxe to break it",
+
+  "item.immersiveores.enderium_ore": "Enderium Ore",
+  "item.immersiveores.vibranium_ore": "Vibranium Ore",
+  "item.immersiveores.vulpus_ore": "Vulpus Ore",
 
   "block.immersiveores.enderium_ore": "Enderium Ore",
   "block.immersiveores.vibranium_ore": "Vibranium Ore",
