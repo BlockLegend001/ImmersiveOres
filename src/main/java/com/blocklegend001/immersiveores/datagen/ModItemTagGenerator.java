@@ -5,9 +5,9 @@ import com.blocklegend001.immersiveores.util.ModTags;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.fabricmc.fabric.api.tag.convention.v2.ConventionalItemTags;
+import net.minecraft.item.Items;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.tag.ItemTags;
-import org.jetbrains.annotations.Nullable;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -253,5 +253,8 @@ public class ModItemTagGenerator extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.VIBRANIUM_INGOT,
                         ModItems.VULPUS_INGOT,
                         ModItems.ENDERIUM_INGOT);
+
+        getOrCreateTagBuilder(ModTags.Items.TOOLS_NETHERITE)
+                .add(Items.NETHERITE_PICKAXE);
     }
 }
