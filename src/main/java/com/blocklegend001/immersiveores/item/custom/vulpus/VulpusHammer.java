@@ -1,6 +1,5 @@
 package com.blocklegend001.immersiveores.item.custom.vulpus;
 
-import com.blocklegend001.immersiveores.config.EnderiumConfig;
 import com.blocklegend001.immersiveores.config.VulpusConfig;
 import com.blocklegend001.immersiveores.item.ModToolTiers;
 import com.blocklegend001.immersiveores.item.custom.base.Hammer;
@@ -37,6 +36,11 @@ public class VulpusHammer extends Hammer {
     }
 
     @Override
+    public Component getName(ItemStack stack) {
+        return super.getName(stack).copy().withStyle(ChatFormatting.RED);
+    }
+
+    @Override
     public void appendHoverText(ItemStack pStack, TooltipContext pContext, List<Component> components, TooltipFlag pTooltipFlag) {
         int radius = getRadiusForHammer(pStack);
         int widht = radius * 2 + 1;
@@ -64,3 +68,4 @@ public class VulpusHammer extends Hammer {
         return 0;
     }
 }
+

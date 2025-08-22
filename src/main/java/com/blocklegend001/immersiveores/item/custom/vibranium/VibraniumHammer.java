@@ -38,6 +38,11 @@ public class VibraniumHammer extends Hammer {
     }
 
     @Override
+    public Component getName(ItemStack stack) {
+        return super.getName(stack).copy().withStyle(ChatFormatting.LIGHT_PURPLE);
+    }
+
+    @Override
     public void appendHoverText(ItemStack pStack, TooltipContext pContext, List<Component> components, TooltipFlag pTooltipFlag) {
         int radius = getRadiusForHammer(pStack);
         int widht = radius * 2 + 1;
@@ -65,3 +70,4 @@ public class VibraniumHammer extends Hammer {
         return 0;
     }
 }
+
