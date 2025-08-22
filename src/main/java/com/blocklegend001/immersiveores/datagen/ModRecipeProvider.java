@@ -8,6 +8,8 @@ import net.minecraft.data.recipes.*;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.item.crafting.SmithingRecipe;
+import net.minecraft.world.item.crafting.SmithingTransformRecipe;
 import net.minecraft.world.level.ItemLike;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
 
@@ -124,7 +126,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_vibranium_ingot", has(ModItems.VIBRANIUM_INGOT.get()))
                 .save(recipeOutput);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.VIBRANIUM_STICK.get())
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.VIBRANIUM_STICK.get(), 2)
                 .define('E', ModItems.VIBRANIUM_INGOT.get())
                 .pattern("   ")
                 .pattern(" E ")
@@ -309,7 +311,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_vulpus_ingot", has(ModItems.VULPUS_INGOT.get()))
                 .save(recipeOutput);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.VULPUS_STICK.get())
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.VULPUS_STICK.get(), 2)
                 .define('E', ModItems.VULPUS_INGOT.get())
                 .pattern("   ")
                 .pattern(" E ")
@@ -450,7 +452,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_enderium_ingot", has(ModItems.ENDERIUM_INGOT.get()))
                 .save(recipeOutput);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.ENDERIUM_STICK.get())
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.ENDERIUM_STICK.get(), 2)
                 .define('E', ModItems.ENDERIUM_INGOT.get())
                 .pattern("   ")
                 .pattern(" E ")
@@ -587,5 +589,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("ENE")
                 .unlockedBy("has_enderium_ingot", has(ModItems.ENDERIUM_INGOT.get()))
                 .save(recipeOutput);
+
     }
 }
