@@ -17,7 +17,7 @@ public class ModCreativeModTabs {
 
     public static final RegistryObject<CreativeModeTab> IMMERSIVEORES = CREATIVE_MODE_TABS.register("immersiveores",
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.ENDERIUM_INGOT.get()))
-                    .title(Component.translatable("itemGroup.immersiveorestab").withStyle(ChatFormatting.LIGHT_PURPLE))
+                    .title(Component.translatable("itemGroup.immersiveorestab").withStyle(ChatFormatting.DARK_AQUA))
                     .displayItems((pParameters, pOutput) -> {
                         pOutput.accept(ModBlocks.VIBRANIUM_ORE.get());
                         pOutput.accept(ModBlocks.VULPUS_ORE.get());
