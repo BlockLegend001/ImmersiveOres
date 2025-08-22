@@ -41,7 +41,7 @@ public class EnderiumAxe extends Item {
         return properties;
     }
 
-    public EnderiumAxe(ModToolTiers material, float attackDamage, float attackSpeed, Item.Properties settings) {
+    public EnderiumAxe(ModToolTiers material, float attackDamage, float attackSpeed, Properties settings) {
         super(
                 material.applyToolProperties(
                         createSettings(settings, EnderiumConfig.unbreakableEnderium.get(), EnderiumConfig.durabilityEnderium.get()),
@@ -50,6 +50,11 @@ public class EnderiumAxe extends Item {
                         attackSpeed
                 )
         );
+    }
+
+    @Override
+    public Component getName(ItemStack stack) {
+        return super.getName(stack).copy().withStyle(ChatFormatting.DARK_AQUA);
     }
 
     @Override
@@ -136,7 +141,7 @@ public class EnderiumAxe extends Item {
     }
 
     @Override
-    public void appendHoverText(ItemStack pStack, Item.TooltipContext p_333372_, TooltipDisplay p_396484_, Consumer<Component> consumer, TooltipFlag p_41424_) {
+    public void appendHoverText(ItemStack pStack, TooltipContext p_333372_, TooltipDisplay p_396484_, Consumer<Component> consumer, TooltipFlag p_41424_) {
         super.appendHoverText(pStack, p_333372_, p_396484_, consumer, p_41424_);
         if(Screen.hasShiftDown()) {
             if (EnderiumConfig.unbreakableEnderium.get()) {

@@ -26,6 +26,7 @@ import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.Vec3;
 
+import java.util.List;
 import java.util.Objects;
 import java.util.function.Consumer;
 
@@ -45,6 +46,11 @@ public class VulpusBow extends BowItem {
     public VulpusBow(BowTier tier, Properties properties) {
         super(createSettings(properties, VulpusConfig.unbreakableVulpus.get(), VulpusConfig.durabilityVulpus.get()));
         this.tier = tier;
+    }
+
+    @Override
+    public Component getName(ItemStack stack) {
+        return super.getName(stack).copy().withStyle(ChatFormatting.RED);
     }
 
     @Override

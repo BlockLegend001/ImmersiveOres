@@ -33,7 +33,12 @@ public class EnderiumExcavator extends Excavator {
     }
 
     @Override
-    public void appendHoverText(ItemStack pStack, Item.TooltipContext context, TooltipDisplay tooltipDisplay, Consumer<Component> consumer, TooltipFlag tooltipFlag) {
+    public Component getName(ItemStack stack) {
+        return super.getName(stack).copy().withStyle(ChatFormatting.DARK_AQUA);
+    }
+
+    @Override
+    public void appendHoverText(ItemStack pStack, TooltipContext context, TooltipDisplay tooltipDisplay, Consumer<Component> consumer, TooltipFlag tooltipFlag) {
         super.appendHoverText(pStack, context, tooltipDisplay, consumer, tooltipFlag);
         int radius = getRadiusForHammer(pStack);
         int widht = radius * 2 + 1;
@@ -61,3 +66,4 @@ public class EnderiumExcavator extends Excavator {
         return 0;
     }
 }
+

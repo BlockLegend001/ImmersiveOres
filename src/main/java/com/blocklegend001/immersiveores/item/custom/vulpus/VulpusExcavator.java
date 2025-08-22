@@ -9,10 +9,13 @@ import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.network.chat.Component;
 import net.minecraft.util.Unit;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.ToolMaterial;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.component.TooltipDisplay;
 
+import java.util.List;
 import java.util.function.Consumer;
 
 public class VulpusExcavator extends Excavator {
@@ -27,6 +30,11 @@ public class VulpusExcavator extends Excavator {
 
     public VulpusExcavator(ModToolTiers pTier, int pAttackDamageModifier, float pAttackSpeedModifier, Properties pProperties) {
         super(pTier, pAttackDamageModifier, pAttackSpeedModifier, createSettings(pProperties, VulpusConfig.unbreakableVulpus.get(), VulpusConfig.durabilityVulpus.get()));
+    }
+
+    @Override
+    public Component getName(ItemStack stack) {
+        return super.getName(stack).copy().withStyle(ChatFormatting.RED);
     }
 
     @Override

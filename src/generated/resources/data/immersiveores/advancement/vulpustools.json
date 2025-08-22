@@ -54,6 +54,7 @@
   },
   "display": {
     "description": {
+      "color": "red",
       "translate": "advancement.immersiveores.vulpustools.descrption"
     },
     "icon": {
@@ -61,6 +62,7 @@
       "id": "immersiveores:vulpus_pickaxe"
     },
     "title": {
+      "color": "red",
       "translate": "advancement.immersiveores.vulpustools.title"
     }
   },

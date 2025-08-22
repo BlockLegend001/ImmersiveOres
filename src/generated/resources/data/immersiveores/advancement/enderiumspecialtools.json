@@ -34,6 +34,7 @@
   },
   "display": {
     "description": {
+      "color": "dark_aqua",
       "translate": "advancement.immersiveores.enderiumspecialtools.descrption"
     },
     "icon": {
@@ -41,6 +42,7 @@
       "id": "immersiveores:enderium_paxel"
     },
     "title": {
+      "color": "dark_aqua",
       "translate": "advancement.immersiveores.enderiumspecialtools.title"
     }
   },

@@ -2,6 +2,7 @@ package com.blocklegend001.immersiveores.item.custom.vulpus;
 
 import com.blocklegend001.immersiveores.config.VulpusConfig;
 import com.blocklegend001.immersiveores.item.ModToolTiers;
+import com.blocklegend001.immersiveores.item.custom.enderium.EnderiumShovel;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.core.BlockPos;
@@ -21,6 +22,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 
+import java.util.List;
 import java.util.Map;
 import java.util.function.Consumer;
 
@@ -44,6 +46,11 @@ public class VulpusShovel extends Item {
                         attackSpeed
                 )
         );
+    }
+
+    @Override
+    public Component getName(ItemStack stack) {
+        return super.getName(stack).copy().withStyle(ChatFormatting.RED);
     }
 
     @Override
