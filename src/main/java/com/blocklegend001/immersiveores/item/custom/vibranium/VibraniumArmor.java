@@ -35,6 +35,11 @@ public class VibraniumArmor extends ArmorItem {
     }
 
     @Override
+    public Component getName(ItemStack stack) {
+        return super.getName(stack).copy().withStyle(ChatFormatting.LIGHT_PURPLE);
+    }
+
+    @Override
     public boolean isEnchantable(ItemStack p_41456_) {
         return true;
     }

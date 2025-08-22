@@ -11,6 +11,11 @@ import com.blocklegend001.immersiveores.blocks.custom.vulpus.RawVulpusBlock;
 import com.blocklegend001.immersiveores.blocks.custom.vulpus.VulpusBlock;
 import com.blocklegend001.immersiveores.blocks.custom.vulpus.VulpusOre;
 import com.blocklegend001.immersiveores.item.ModItems;
+import com.blocklegend001.immersiveores.util.color.ColoredBlock;
+import com.blocklegend001.immersiveores.util.color.ColoredBlockItem;
+import net.minecraft.core.Registry;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
@@ -70,8 +75,19 @@ public class ModBlocks {
     }
 
     private static <T extends Block> RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block) {
-        return ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
+        return ModItems.ITEMS.register(name, () -> {
+            Block realBlock = block.get();
+            if (realBlock instanceof ColoredBlock coloredBlock) {
+                return new ColoredBlockItem((Block) coloredBlock,
+                        new Item.Properties().fireResistant(),
+                        coloredBlock.getColor());
+            } else {
+                return new BlockItem(realBlock, new Item.Properties().fireResistant());
+            }
+        });
     }
+
+
 
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);

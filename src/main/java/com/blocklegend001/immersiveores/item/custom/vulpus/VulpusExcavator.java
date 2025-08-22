@@ -37,6 +37,11 @@ public class VulpusExcavator extends Excavator {
     }
 
     @Override
+    public Component getName(ItemStack stack) {
+        return super.getName(stack).copy().withStyle(ChatFormatting.RED);
+    }
+
+    @Override
     public void appendHoverText(ItemStack pStack, TooltipContext pContext, List<Component> components, TooltipFlag pTooltipFlag) {
         int radius = getRadiusForHammer(pStack);
         int widht = radius * 2 + 1;

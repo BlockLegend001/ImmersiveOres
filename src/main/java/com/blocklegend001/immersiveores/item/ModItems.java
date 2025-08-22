@@ -7,10 +7,14 @@ import com.blocklegend001.immersiveores.config.VulpusConfig;
 import com.blocklegend001.immersiveores.item.custom.enderium.*;
 import com.blocklegend001.immersiveores.item.custom.vibranium.*;
 import com.blocklegend001.immersiveores.item.custom.vulpus.*;
+import com.blocklegend001.immersiveores.util.color.ColoredItem;
 import com.blocklegend001.immersiveores.util.tools.bow.BowTiers;
+import net.minecraft.ChatFormatting;
+import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.AnimalArmorItem;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -22,43 +26,43 @@ public class ModItems {
 
     //RAW
     public static final RegistryObject<Item> RAW_VIBRANIUM = ITEMS.register("raw_vibranium",
-            () -> new Item(new Item.Properties().fireResistant()));
+            () -> new ColoredItem(new Item.Properties().fireResistant(), ChatFormatting.LIGHT_PURPLE));
 
     public static final RegistryObject<Item> RAW_VULPUS = ITEMS.register("raw_vulpus",
-            () -> new Item(new Item.Properties().fireResistant()));
+            () -> new ColoredItem(new Item.Properties().fireResistant(), ChatFormatting.RED));
 
     public static final RegistryObject<Item> RAW_ENDERIUM = ITEMS.register("raw_enderium",
-            () -> new Item(new Item.Properties().fireResistant()));
+            () -> new ColoredItem(new Item.Properties().fireResistant(), ChatFormatting.DARK_AQUA));
 
     //INGOT
     public static final RegistryObject<Item> VIBRANIUM_INGOT = ITEMS.register("vibranium_ingot",
-            () -> new Item(new Item.Properties().fireResistant()));
+            () -> new ColoredItem(new Item.Properties().fireResistant(), ChatFormatting.LIGHT_PURPLE));
 
     public static final RegistryObject<Item> VULPUS_INGOT = ITEMS.register("vulpus_ingot",
-            () -> new Item(new Item.Properties().fireResistant()));
+            () -> new ColoredItem(new Item.Properties().fireResistant(), ChatFormatting.RED));
 
     public static final RegistryObject<Item> ENDERIUM_INGOT = ITEMS.register("enderium_ingot",
-            () -> new Item(new Item.Properties().fireResistant()));
+            () -> new ColoredItem(new Item.Properties().fireResistant(), ChatFormatting.DARK_AQUA));
 
     //NUGGET
     public static final RegistryObject<Item> VIBRANIUM_NUGGET = ITEMS.register("vibranium_nugget",
-            () -> new Item(new Item.Properties().fireResistant()));
+            () -> new ColoredItem(new Item.Properties().fireResistant(), ChatFormatting.LIGHT_PURPLE));
 
     public static final RegistryObject<Item> VULPUS_NUGGET = ITEMS.register("vulpus_nugget",
-            () -> new Item(new Item.Properties().fireResistant()));
+            () -> new ColoredItem(new Item.Properties().fireResistant(), ChatFormatting.RED));
 
     public static final RegistryObject<Item> ENDERIUM_NUGGET = ITEMS.register("enderium_nugget",
-            () -> new Item(new Item.Properties().fireResistant()));
+            () -> new ColoredItem(new Item.Properties().fireResistant(), ChatFormatting.DARK_AQUA));
 
     //STICK
     public static final RegistryObject<Item> VIBRANIUM_STICK = ITEMS.register("vibranium_stick",
-            () -> new Item(new Item.Properties().fireResistant()));
+            () -> new ColoredItem(new Item.Properties().fireResistant(), ChatFormatting.LIGHT_PURPLE));
 
     public static final RegistryObject<Item> VULPUS_STICK = ITEMS.register("vulpus_stick",
-            () -> new Item(new Item.Properties().fireResistant()));
+            () -> new ColoredItem(new Item.Properties().fireResistant(), ChatFormatting.RED));
 
     public static final RegistryObject<Item> ENDERIUM_STICK = ITEMS.register("enderium_stick",
-            () -> new Item(new Item.Properties().fireResistant()));
+            () -> new ColoredItem(new Item.Properties().fireResistant(), ChatFormatting.DARK_AQUA));
 
     //VIBRANIUM
     public static final RegistryObject<Item> VIBRANIUM_PICKAXE = ITEMS.register("vibranium_pickaxe",
@@ -114,7 +118,12 @@ public class ModItems {
 
     public static final RegistryObject<Item> VIBRANIUM_HORSE_ARMOR = ITEMS.register("vibranium_horse_armor",
             () -> new AnimalArmorItem(ModArmorMaterials.VIBRANIUM, AnimalArmorItem.BodyType.EQUESTRIAN, false,
-                    new Item.Properties().fireResistant().stacksTo(1)));
+                    new Item.Properties().fireResistant().stacksTo(1)) {
+                @Override
+                public Component getName(ItemStack stack) {
+                    return super.getName(stack).copy().withStyle(ChatFormatting.LIGHT_PURPLE);
+                }
+            });
 
     //VULPUS
     public static final RegistryObject<Item> VULPUS_PICKAXE = ITEMS.register("vulpus_pickaxe",
@@ -170,7 +179,13 @@ public class ModItems {
 
     public static final RegistryObject<Item> VULPUS_HORSE_ARMOR = ITEMS.register("vulpus_horse_armor",
             () -> new AnimalArmorItem(ModArmorMaterials.VULPUS, AnimalArmorItem.BodyType.EQUESTRIAN, false,
-                    new Item.Properties().fireResistant().stacksTo(1)));
+                    new Item.Properties().fireResistant().stacksTo(1)) {
+                @Override
+                public Component getName(ItemStack stack) {
+                    return super.getName(stack).copy().withStyle(ChatFormatting.RED);
+                }
+            });
+
 
     //ENDERIUM
     public static final RegistryObject<Item> ENDERIUM_PICKAXE = ITEMS.register("enderium_pickaxe",
@@ -226,7 +241,13 @@ public class ModItems {
 
     public static final RegistryObject<Item> ENDERIUM_HORSE_ARMOR = ITEMS.register("enderium_horse_armor",
             () -> new AnimalArmorItem(ModArmorMaterials.ENDERIUM, AnimalArmorItem.BodyType.EQUESTRIAN, false,
-                    new Item.Properties().fireResistant().stacksTo(1)));
+                    new Item.Properties().fireResistant().stacksTo(1)) {
+                @Override
+                public Component getName(ItemStack stack) {
+                    return super.getName(stack).copy().withStyle(ChatFormatting.DARK_AQUA);
+                }
+            });
+
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

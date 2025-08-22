@@ -54,6 +54,7 @@
   },
   "display": {
     "description": {
+      "color": "light_purple",
       "translate": "advancement.immersiveores.vibraniumtools.descrption"
     },
     "icon": {
@@ -61,6 +62,7 @@
       "id": "immersiveores:vibranium_pickaxe"
     },
     "title": {
+      "color": "light_purple",
       "translate": "advancement.immersiveores.vibraniumtools.title"
     }
   },

@@ -2,6 +2,7 @@ package com.blocklegend001.immersiveores.item;
 
 import com.blocklegend001.immersiveores.ImmersiveOres;
 import com.blocklegend001.immersiveores.blocks.ModBlocks;
+import net.minecraft.ChatFormatting;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
@@ -16,7 +17,7 @@ public class ModCreativeModTabs {
 
     public static final RegistryObject<CreativeModeTab> IMMERSIVEORES = CREATIVE_MODE_TABS.register("immersiveores",
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.ENDERIUM_INGOT.get()))
-                    .title(Component.translatable("itemGroup.immersiveorestab"))
+                    .title(Component.translatable("itemGroup.immersiveorestab").withStyle(ChatFormatting.LIGHT_PURPLE))
                     .displayItems((pParameters, pOutput) -> {
                         pOutput.accept(ModBlocks.VIBRANIUM_ORE.get());
                         pOutput.accept(ModBlocks.VULPUS_ORE.get());
