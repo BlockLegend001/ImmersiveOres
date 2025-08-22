@@ -38,6 +38,11 @@ public class VulpusArmor extends ArmorItem {
     }
 
     @Override
+    public Component getName(ItemStack stack) {
+        return super.getName(stack).copy().withStyle(ChatFormatting.RED);
+    }
+
+    @Override
     public void onInventoryTick(ItemStack stack, Level world, Player player, int slotIndex, int selectedIndex) {
         if (!world.isClientSide()){
             if (player.getItemBySlot(EquipmentSlot.FEET).getItem() == ModItems.VULPUS_BOOTS.get()) {

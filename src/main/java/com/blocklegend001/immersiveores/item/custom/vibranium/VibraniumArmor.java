@@ -36,6 +36,11 @@ public class VibraniumArmor extends ArmorItem {
     }
 
     @Override
+    public Component getName(ItemStack stack) {
+        return super.getName(stack).copy().withStyle(ChatFormatting.LIGHT_PURPLE);
+    }
+
+    @Override
     public void onInventoryTick(ItemStack stack, Level world, Player player, int slotIndex, int selectedIndex) {
         if (!world.isClientSide()){
             if (player.getItemBySlot(EquipmentSlot.FEET).getItem() == ModItems.VIBRANIUM_BOOTS.get()) {

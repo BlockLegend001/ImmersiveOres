@@ -39,6 +39,11 @@ public class EnderiumArmor extends ArmorItem {
     }
 
     @Override
+    public Component getName(ItemStack stack) {
+        return super.getName(stack).copy().withStyle(ChatFormatting.DARK_AQUA);
+    }
+
+    @Override
     public void onInventoryTick(ItemStack stack, Level world, Player player, int slotIndex, int selectedIndex) {
         if (!world.isClientSide()) {
             if (player.getItemBySlot(EquipmentSlot.FEET).getItem() == ModItems.ENDERIUM_BOOTS.get()) {
