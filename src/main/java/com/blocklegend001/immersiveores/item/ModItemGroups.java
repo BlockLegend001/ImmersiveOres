@@ -8,13 +8,14 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.text.Text;
+import net.minecraft.util.Formatting;
 import net.minecraft.util.Identifier;
 
 public class ModItemGroups {
     public static final ItemGroup IMMERSIVEORES = Registry.register(Registries.ITEM_GROUP,
             Identifier.of(ImmersiveOres.MOD_ID, "immersiveores"),
             FabricItemGroup.builder().icon(() -> new ItemStack(ModItems.ENDERIUM_INGOT))
-                    .displayName(Text.translatable("itemGroup.immersiveorestab"))
+                    .displayName(Text.translatable("itemGroup.immersiveorestab").formatted(Formatting.DARK_AQUA))
                     .entries((displayContext, entries) -> {
                         entries.add(ModBlocks.VIBRANIUM_ORE);
                         entries.add(ModBlocks.VULPUS_ORE);
