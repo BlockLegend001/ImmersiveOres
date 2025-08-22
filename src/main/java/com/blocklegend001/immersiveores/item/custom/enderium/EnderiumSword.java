@@ -29,6 +29,11 @@ public class EnderiumSword extends SwordItem {
     }
 
     @Override
+    public Component getName(ItemStack stack) {
+        return super.getName(stack).copy().withStyle(ChatFormatting.DARK_AQUA);
+    }
+
+    @Override
     public boolean hurtEnemy(ItemStack arg, LivingEntity arg2, LivingEntity arg3) {
         arg2.igniteForSeconds(30);
         return super.hurtEnemy(arg, arg2, arg3);

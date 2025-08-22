@@ -46,6 +46,11 @@ public class EnderiumBow extends BowItem {
     }
 
     @Override
+    public Component getName(ItemStack stack) {
+        return super.getName(stack).copy().withStyle(ChatFormatting.DARK_AQUA);
+    }
+
+    @Override
     public AbstractArrow customArrow(AbstractArrow arrow) {
         arrow.setBaseDamage(arrow.getBaseDamage() + this.tier.getAttackDamageBonus());
         return arrow;

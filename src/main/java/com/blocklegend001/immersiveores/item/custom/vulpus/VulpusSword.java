@@ -29,6 +29,11 @@ public class VulpusSword extends SwordItem {
     }
 
     @Override
+    public Component getName(ItemStack stack) {
+        return super.getName(stack).copy().withStyle(ChatFormatting.RED);
+    }
+
+    @Override
     public boolean hurtEnemy(ItemStack arg, LivingEntity arg2, LivingEntity arg3) {
         arg2.igniteForSeconds(15);
         return super.hurtEnemy(arg, arg2, arg3);

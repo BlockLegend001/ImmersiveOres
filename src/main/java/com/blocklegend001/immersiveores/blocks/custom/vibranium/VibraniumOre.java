@@ -2,6 +2,7 @@ package com.blocklegend001.immersiveores.blocks.custom.vibranium;
 
 import com.blocklegend001.immersiveores.blocks.ModBlocks;
 import com.blocklegend001.immersiveores.item.ModItems;
+import com.blocklegend001.immersiveores.util.color.ColoredBlock;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
@@ -16,10 +17,14 @@ import net.minecraft.world.level.block.state.BlockState;
 
 import java.util.List;
 
-public class VibraniumOre extends Block {
-
+public class VibraniumOre extends Block implements ColoredBlock {
     public VibraniumOre(Properties arg) {
         super(arg);
+    }
+
+    @Override
+    public ChatFormatting getColor() {
+        return ChatFormatting.LIGHT_PURPLE;
     }
 
     @Override
