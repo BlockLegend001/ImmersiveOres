@@ -46,6 +46,11 @@ public class EnderiumArmor extends Item {
     }
 
     @Override
+    public Component getName(ItemStack stack) {
+        return super.getName(stack).copy().withStyle(ChatFormatting.DARK_AQUA);
+    }
+
+    @Override
     public void inventoryTick(ItemStack stack, Level level, Entity entity, @Nullable EquipmentSlot slot, int slotIndex) {
         super.inventoryTick(stack, level, entity, slot, slotIndex);
         if (!level.isClientSide()) {
@@ -120,7 +125,7 @@ public class EnderiumArmor extends Item {
     }
 
     @Override
-    public void appendHoverText(ItemStack pStack, Item.TooltipContext p_333372_, TooltipDisplay p_396484_, Consumer<Component> consumer, TooltipFlag p_41424_) {
+    public void appendHoverText(ItemStack pStack, TooltipContext p_333372_, TooltipDisplay p_396484_, Consumer<Component> consumer, TooltipFlag p_41424_) {
         super.appendHoverText(pStack, p_333372_, p_396484_, consumer, p_41424_);
         if(Screen.hasShiftDown()) {
             if (ModItems.ENDERIUM_BOOTS.get() == pStack.getItem()) {

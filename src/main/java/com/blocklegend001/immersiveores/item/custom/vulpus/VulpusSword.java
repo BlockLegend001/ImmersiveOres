@@ -1,5 +1,6 @@
 package com.blocklegend001.immersiveores.item.custom.vulpus;
 
+import com.blocklegend001.immersiveores.config.EnderiumConfig;
 import com.blocklegend001.immersiveores.config.VulpusConfig;
 import com.blocklegend001.immersiveores.item.ModToolTiers;
 import net.minecraft.ChatFormatting;
@@ -13,12 +14,14 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
+import net.minecraft.tags.BlockTags;
 import net.minecraft.util.Unit;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.ToolMaterial;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.component.TooltipDisplay;
 import net.minecraft.world.item.enchantment.Enchantment;
@@ -47,6 +50,11 @@ public class VulpusSword extends Item {
                         attackSpeed
                 )
         );
+    }
+
+    @Override
+    public Component getName(ItemStack stack) {
+        return super.getName(stack).copy().withStyle(ChatFormatting.RED);
     }
 
     @Override
