@@ -83,11 +83,6 @@ public class ModBlocks {
         return toReturn;
     }
 
-//    private static <T extends Block> RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block) {
-//        return ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()
-//                .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(ImmersiveOres.MODID, name)))));
-//    }
-
     private static <T extends Block> RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block) {
         return ModItems.ITEMS.register(name, () -> {
             Block realBlock = block.get();
