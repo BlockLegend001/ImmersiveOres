@@ -49,6 +49,11 @@ public class VulpusBow extends BowItem {
     }
 
     @Override
+    public Component getName(ItemStack stack) {
+        return super.getName(stack).copy().withStyle(ChatFormatting.RED);
+    }
+
+    @Override
     public AbstractArrow customArrow(AbstractArrow arrow) {
         int damage = Objects.requireNonNullElse(arrow.get(DataComponents.DAMAGE), 0);
         arrow.setBaseDamage(damage + this.tier.getAttackDamageBonus());

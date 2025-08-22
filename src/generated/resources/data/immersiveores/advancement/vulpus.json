@@ -14,6 +14,7 @@
   },
   "display": {
     "description": {
+      "color": "red",
       "translate": "advancement.immersiveores.vulpus.descrption"
     },
     "icon": {
@@ -21,6 +22,7 @@
       "id": "immersiveores:vulpus_ingot"
     },
     "title": {
+      "color": "red",
       "translate": "advancement.immersiveores.vulpus.title"
     }
   },
