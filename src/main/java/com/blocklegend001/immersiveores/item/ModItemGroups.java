@@ -15,7 +15,7 @@ public class ModItemGroups {
     public static final ItemGroup IMMERSIVEORES = Registry.register(Registries.ITEM_GROUP,
             Identifier.of(ImmersiveOres.MOD_ID, "immersiveores"),
             FabricItemGroup.builder().icon(() -> new ItemStack(ModItems.ENDERIUM_INGOT))
-                    .displayName(Text.translatable("itemGroup.immersiveorestab").formatted(Formatting.LIGHT_PURPLE))
+                    .displayName(Text.translatable("itemGroup.immersiveorestab").formatted(Formatting.DARK_AQUA))
                     .entries((displayContext, entries) -> {
                         entries.add(ModBlocks.VIBRANIUM_ORE);
                         entries.add(ModBlocks.VULPUS_ORE);
