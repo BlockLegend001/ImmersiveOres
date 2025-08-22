@@ -141,7 +141,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_vibranium_ingot", has(ModItems.VIBRANIUM_INGOT.get()))
                 .save(this.output);
 
-        shaped(RecipeCategory.MISC, ModItems.VIBRANIUM_STICK.get())
+        shaped(RecipeCategory.MISC, ModItems.VIBRANIUM_STICK.get(), 2)
                 .define('E', ModItems.VIBRANIUM_INGOT.get())
                 .pattern("   ")
                 .pattern(" E ")
@@ -326,7 +326,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_vulpus_ingot", has(ModItems.VULPUS_INGOT.get()))
                 .save(this.output);
 
-        shaped(RecipeCategory.MISC, ModItems.VULPUS_STICK.get())
+        shaped(RecipeCategory.MISC, ModItems.VULPUS_STICK.get(), 2)
                 .define('E', ModItems.VULPUS_INGOT.get())
                 .pattern("   ")
                 .pattern(" E ")
@@ -467,7 +467,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_enderium_ingot", has(ModItems.ENDERIUM_INGOT.get()))
                 .save(this.output);
 
-        shaped(RecipeCategory.MISC, ModItems.ENDERIUM_STICK.get())
+        shaped(RecipeCategory.MISC, ModItems.ENDERIUM_STICK.get(), 2)
                 .define('E', ModItems.ENDERIUM_INGOT.get())
                 .pattern("   ")
                 .pattern(" E ")
