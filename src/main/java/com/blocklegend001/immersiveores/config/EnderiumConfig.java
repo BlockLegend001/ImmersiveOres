@@ -116,26 +116,26 @@ public class EnderiumConfig {
     static {
         BUILDER.push("Armor Protection and Resistance");
         toughnessValueEnderiumArmor = BUILDER
-                .comment("Toughness value for Enderium Armor | Default Value = 200")
-                .defineInRange("toughnessValueEnderiumArmor", 200, 0, Integer.MAX_VALUE);
+                .comment("Toughness value for Enderium Armor | Default Value = 10")
+                .defineInRange("toughnessValueEnderiumArmor", 10, 0, Integer.MAX_VALUE);
         enchantmentValueEnderiumArmor = BUILDER
-                .comment("Enchantment value for Enderium Armor | Default Value = 85")
-                .defineInRange("enchantmentValueEnderiumArmor", 85, 0, Integer.MAX_VALUE);
+                .comment("Enchantment value for Enderium Armor | Default Value = 65")
+                .defineInRange("enchantmentValueEnderiumArmor", 65, 0, Integer.MAX_VALUE);
         knockbackResistanceValueEnderiumArmor = BUILDER
                 .comment("Knockback resistance for Enderium Armor | Default Value = 3")
                 .defineInRange("knockbackResistanceValueEnderiumArmor", 3, 0, Integer.MAX_VALUE);
         protectionValueEnderiumBoots = BUILDER
-                .comment("Protection value for Enderium Boots | Default Value = 30")
-                .defineInRange("protectionValueEnderiumBoots", 30, 0, Integer.MAX_VALUE);
+                .comment("Protection value for Enderium Boots | Default Value = 12")
+                .defineInRange("protectionValueEnderiumBoots", 12, 0, Integer.MAX_VALUE);
         protectionValueEnderiumLeggings = BUILDER
-                .comment("Protection value for Enderium Leggings | Default Value = 50")
-                .defineInRange("protectionValueEnderiumLeggings", 50, 0, Integer.MAX_VALUE);
+                .comment("Protection value for Enderium Leggings | Default Value = 16")
+                .defineInRange("protectionValueEnderiumLeggings", 16, 0, Integer.MAX_VALUE);
         protectionValueEnderiumChestplate = BUILDER
-                .comment("Protection value for Enderium Chestplate | Default Value = 70")
-                .defineInRange("protectionValueEnderiumChestplate", 70, 0, Integer.MAX_VALUE);
+                .comment("Protection value for Enderium Chestplate | Default Value = 20")
+                .defineInRange("protectionValueEnderiumChestplate", 20, 0, Integer.MAX_VALUE);
         protectionValueEnderiumHelmet = BUILDER
-                .comment("Protection value for Enderium Helmet | Default Value = 30")
-                .defineInRange("protectionValueEnderiumHelmet", 30, 0, Integer.MAX_VALUE);
+                .comment("Protection value for Enderium Helmet | Default Value = 12")
+                .defineInRange("protectionValueEnderiumHelmet", 12, 0, Integer.MAX_VALUE);
         BUILDER.pop();
 
         BUILDER.push("Armor Special Effects and Abilities");
@@ -185,17 +185,17 @@ public class EnderiumConfig {
 
         BUILDER.push("Tool Tier Base Properties");
         speedEnderiumTier = BUILDER
-                .comment("Speed value of Enderium Tool Tier | Default Value = 130")
-                .defineInRange("speedEnderiumTier", 130, 0, Integer.MAX_VALUE);
+                .comment("Speed value of Enderium Tool Tier | Default Value = 50")
+                .defineInRange("speedEnderiumTier", 50, 0, Integer.MAX_VALUE);
         attackDamageBonusEnderiumTier = BUILDER
-                .comment("Bonus attack damage for Enderium Tool Tier | Default Value = 40")
-                .defineInRange("attackDamageBonusEnderiumTier", 40, 0, Integer.MAX_VALUE);
+                .comment("Bonus attack damage for Enderium Tool Tier | Default Value = 3")
+                .defineInRange("attackDamageBonusEnderiumTier", 3, 0, Integer.MAX_VALUE);
         enchantmentValueEnderiumTier = BUILDER
-                .comment("Enchantment value for Enderium Tool Tier | Default Value = 85")
-                .defineInRange("enchantmentValueEnderiumTier", 85, 0, Integer.MAX_VALUE);
+                .comment("Enchantment value for Enderium Tool Tier | Default Value = 65")
+                .defineInRange("enchantmentValueEnderiumTier", 65, 0, Integer.MAX_VALUE);
         durabilityEnderium = BUILDER
-                .comment("Durability of Enderium tools | Default Value = 9139")
-                .defineInRange("durabilityEnderium", 9139, 0, Integer.MAX_VALUE);
+                .comment("Durability of Enderium tools | Default Value = 5139")
+                .defineInRange("durabilityEnderium", 5139, 0, Integer.MAX_VALUE);
         unbreakableEnderium = BUILDER
                 .comment("Whether Enderium is unbreakable | Default Value = false")
                 .define("unbreakableEnderium", false);
@@ -203,29 +203,29 @@ public class EnderiumConfig {
 
         BUILDER.push("Pickaxe Stats");
         attackDamageEnderiumPickaxe = BUILDER
-                .comment("Attack damage of Enderium Pickaxe | Default Value = 18")
-                .defineInRange("attackDamageEnderiumPickaxe", 18, 0, Integer.MAX_VALUE);
+                .comment("Attack damage of Enderium Pickaxe | Default Value = 15")
+                .defineInRange("attackDamageEnderiumPickaxe", 15, 0, Integer.MAX_VALUE);
         attackSpeedEnderiumPickaxe = BUILDER
-                .comment("Attack speed of Enderium Pickaxe | Default Value = 2.0")
-                .defineInRange("attackSpeedEnderiumPickaxe", 2.0, 0.0, 1024.0);
+                .comment("Attack speed of Enderium Pickaxe | Default Value = 1.0")
+                .defineInRange("attackSpeedEnderiumPickaxe", 1.0, 0.0, 1024.0);
         BUILDER.pop();
 
         BUILDER.push("Axe Stats");
         attackDamageEnderiumAxe = BUILDER
-                .comment("Attack damage of Enderium Axe | Default Value = 20")
-                .defineInRange("attackDamageEnderiumAxe", 20, 0, Integer.MAX_VALUE);
+                .comment("Attack damage of Enderium Axe | Default Value = 18")
+                .defineInRange("attackDamageEnderiumAxe", 18, 0, Integer.MAX_VALUE);
         attackSpeedEnderiumAxe = BUILDER
-                .comment("Attack speed of Enderium Axe | Default Value = 2.0")
-                .defineInRange("attackSpeedEnderiumAxe", 2.0, 0.0, 1024.0);
+                .comment("Attack speed of Enderium Axe | Default Value = 1.0")
+                .defineInRange("attackSpeedEnderiumAxe", 1.0, 0.0, 1024.0);
         BUILDER.pop();
 
         BUILDER.push("Shovel Stats");
         attackDamageEnderiumShovel = BUILDER
-                .comment("Attack damage of Enderium Shovel | Default Value = 17")
-                .defineInRange("attackDamageEnderiumShovel", 17, 0, Integer.MAX_VALUE);
+                .comment("Attack damage of Enderium Shovel | Default Value = 15")
+                .defineInRange("attackDamageEnderiumShovel", 15, 0, Integer.MAX_VALUE);
         attackSpeedEnderiumShovel = BUILDER
-                .comment("Attack speed of Enderium Shovel | Default Value = 2.0")
-                .defineInRange("attackSpeedEnderiumShovel", 2.0, 0.0, 1024.0);
+                .comment("Attack speed of Enderium Shovel | Default Value = 1.0")
+                .defineInRange("attackSpeedEnderiumShovel", 1.0, 0.0, 1024.0);
         BUILDER.pop();
 
         BUILDER.push("Sword Stats");
@@ -233,35 +233,35 @@ public class EnderiumConfig {
                 .comment("Attack damage of Enderium Sword | Default Value = 22")
                 .defineInRange("attackDamageEnderiumSword", 22, 0, Integer.MAX_VALUE);
         attackSpeedEnderiumSword = BUILDER
-                .comment("Attack speed of Enderium Sword | Default Value = 2.0")
-                .defineInRange("attackSpeedEnderiumSword", 2.0, 0.0, 1024.0);
+                .comment("Attack speed of Enderium Sword | Default Value = 1.0")
+                .defineInRange("attackSpeedEnderiumSword", 1.0, 0.0, 1024.0);
         BUILDER.pop();
 
         BUILDER.push("Hoe Stats");
         attackDamageEnderiumHoe = BUILDER
-                .comment("Attack damage of Enderium Hoe | Default Value = 14")
-                .defineInRange("attackDamageEnderiumHoe", 14, 0, Integer.MAX_VALUE);
+                .comment("Attack damage of Enderium Hoe | Default Value = 15")
+                .defineInRange("attackDamageEnderiumHoe", 15, 0, Integer.MAX_VALUE);
         attackSpeedEnderiumHoe = BUILDER
-                .comment("Attack speed of Enderium Hoe | Default Value = 2.0")
-                .defineInRange("attackSpeedEnderiumHoe", 2.0, 0.0, 1024.0);
+                .comment("Attack speed of Enderium Hoe | Default Value = 1.0")
+                .defineInRange("attackSpeedEnderiumHoe", 1.0, 0.0, 1024.0);
         BUILDER.pop();
 
         BUILDER.push("Paxel Stats");
         attackDamageEnderiumPaxel = BUILDER
-                .comment("Attack damage of Enderium Paxel | Default Value = 20")
-                .defineInRange("attackDamageEnderiumPaxel", 20, 0, Integer.MAX_VALUE);
+                .comment("Attack damage of Enderium Paxel | Default Value = 18")
+                .defineInRange("attackDamageEnderiumPaxel", 18, 0, Integer.MAX_VALUE);
         attackSpeedEnderiumPaxel = BUILDER
-                .comment("Attack speed of Enderium Paxel | Default Value = 2.0")
-                .defineInRange("attackSpeedEnderiumPaxel", 2.0, 0.0, 1024.0);
+                .comment("Attack speed of Enderium Paxel | Default Value = 1.0")
+                .defineInRange("attackSpeedEnderiumPaxel", 1.0, 0.0, 1024.0);
         BUILDER.pop();
 
         BUILDER.push("Hammer Stats");
         attackDamageEnderiumHammer = BUILDER
-                .comment("Attack damage of Enderium Hammer | Default Value = 20")
-                .defineInRange("attackDamageEnderiumHammer", 20, 0, Integer.MAX_VALUE);
+                .comment("Attack damage of Enderium Hammer | Default Value = 16")
+                .defineInRange("attackDamageEnderiumHammer", 16, 0, Integer.MAX_VALUE);
         attackSpeedEnderiumHammer = BUILDER
-                .comment("Attack speed of Enderium Hammer | Default Value = 2.0")
-                .defineInRange("attackSpeedEnderiumHammer", 2.0, 0.0, 1024.0);
+                .comment("Attack speed of Enderium Hammer | Default Value = 1.0")
+                .defineInRange("attackSpeedEnderiumHammer", 1.0, 0.0, 1024.0);
         radiusEnderiumHammer = BUILDER
                 .comment("Hammering radius for Enderium Hammer | Default = 3")
                 .defineInRange("radiusEnderiumHammer", 3, 0, Integer.MAX_VALUE);
@@ -269,11 +269,11 @@ public class EnderiumConfig {
 
         BUILDER.push("Excavator Stats");
         attackDamageEnderiumExcavator = BUILDER
-                .comment("Attack damage of Enderium Excavator | Default Value = 20")
-                .defineInRange("attackDamageEnderiumExcavator", 20, 0, Integer.MAX_VALUE);
+                .comment("Attack damage of Enderium Excavator | Default Value = 16")
+                .defineInRange("attackDamageEnderiumExcavator", 16, 0, Integer.MAX_VALUE);
         attackSpeedEnderiumExcavator = BUILDER
-                .comment("Attack speed of Enderium Excavator | Default Value = 2.0")
-                .defineInRange("attackSpeedEnderiumExcavator", 2.0, 0.0, 1024.0);
+                .comment("Attack speed of Enderium Excavator | Default Value = 1.0")
+                .defineInRange("attackSpeedEnderiumExcavator", 1.0, 0.0, 1024.0);
         radiusEnderiumExcavator = BUILDER
                 .comment("Excavation radius for Enderium Excavator | Default = 3")
                 .defineInRange("radiusEnderiumExcavator", 3, 0, Integer.MAX_VALUE);

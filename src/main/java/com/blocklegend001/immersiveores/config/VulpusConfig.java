@@ -82,26 +82,26 @@ public class VulpusConfig {
     static {
         BUILDER.push("Armor Protection and Resistance");
         toughnessValueVulpusArmor = BUILDER
-                .comment("Toughness value for Vulpus Armor | Default Value = 150")
-                .defineInRange("toughnessValueVulpusArmor", 150, 0, Integer.MAX_VALUE);
+                .comment("Toughness value for Vulpus Armor | Default Value = 7")
+                .defineInRange("toughnessValueVulpusArmor", 7, 0, Integer.MAX_VALUE);
         enchantmentValueVulpusArmor = BUILDER
-                .comment("Enchantment value for Vulpus Armor | Default Value = 85")
-                .defineInRange("enchantmentValueVulpusArmor", 85, 0, Integer.MAX_VALUE);
+                .comment("Enchantment value for Vulpus Armor | Default Value = 65")
+                .defineInRange("enchantmentValueVulpusArmor", 65, 0, Integer.MAX_VALUE);
         knockbackResistanceValueVulpusArmor = BUILDER
                 .comment("Knockback resistance for Vulpus Armor | Default Value = 2")
                 .defineInRange("knockbackResistanceValueVulpusArmor", 2, 0, Integer.MAX_VALUE);
         protectionValueVulpusBoots = BUILDER
-                .comment("Protection value for Vulpus Boots | Default Value = 20")
-                .defineInRange("protectionValueVulpusBoots", 20, 0, Integer.MAX_VALUE);
+                .comment("Protection value for Vulpus Boots | Default Value = 9")
+                .defineInRange("protectionValueVulpusBoots", 9, 0, Integer.MAX_VALUE);
         protectionValueVulpusLeggings = BUILDER
-                .comment("Protection value for Vulpus Leggings | Default Value = 25")
-                .defineInRange("protectionValueVulpusLeggings", 25, 0, Integer.MAX_VALUE);
+                .comment("Protection value for Vulpus Leggings | Default Value = 12")
+                .defineInRange("protectionValueVulpusLeggings", 12, 0, Integer.MAX_VALUE);
         protectionValueVulpusChestplate = BUILDER
-                .comment("Protection value for Vulpus Chestplate | Default Value = 35")
-                .defineInRange("protectionValueVulpusChestplate", 35, 0, Integer.MAX_VALUE);
+                .comment("Protection value for Vulpus Chestplate | Default Value = 16")
+                .defineInRange("protectionValueVulpusChestplate", 16, 0, Integer.MAX_VALUE);
         protectionValueVulpusHelmet = BUILDER
-                .comment("Protection value for Vulpus Helmet | Default Value = 20")
-                .defineInRange("protectionValueVulpusHelmet", 20, 0, Integer.MAX_VALUE);
+                .comment("Protection value for Vulpus Helmet | Default Value = 9")
+                .defineInRange("protectionValueVulpusHelmet", 9, 0, Integer.MAX_VALUE);
         BUILDER.pop();
 
         BUILDER.push("Armor Special Effects and Abilities");
@@ -145,17 +145,17 @@ public class VulpusConfig {
 
         BUILDER.push("Tool Tier Base Properties");
         speedVulpusTier = BUILDER
-                .comment("Speed value of Vulpus Tool Tier | Default Value = 75")
-                .defineInRange("speedVulpusTier", 75, 0, Integer.MAX_VALUE);
+                .comment("Speed value of Vulpus Tool Tier | Default Value = 40")
+                .defineInRange("speedVulpusTier", 40, 0, Integer.MAX_VALUE);
         attackDamageBonusVulpusTier = BUILDER
-                .comment("Bonus attack damage for Vulpus Tool Tier | Default Value = 20")
-                .defineInRange("attackDamageBonusVulpusTier", 20, 0, Integer.MAX_VALUE);
+                .comment("Bonus attack damage for Vulpus Tool Tier | Default Value = 3")
+                .defineInRange("attackDamageBonusVulpusTier", 3, 0, Integer.MAX_VALUE);
         enchantmentValueVulpusTier = BUILDER
-                .comment("Enchantment value for Vulpus Tool Tier | Default Value = 85")
-                .defineInRange("enchantmentValueVulpusTier", 85, 0, Integer.MAX_VALUE);
+                .comment("Enchantment value for Vulpus Tool Tier | Default Value = 65")
+                .defineInRange("enchantmentValueVulpusTier", 65, 0, Integer.MAX_VALUE);
         durabilityVulpus = BUILDER
-                .comment("Durability of Vulpus tools | Default Value = 6093")
-                .defineInRange("durabilityVulpus", 6093, 0, Integer.MAX_VALUE);
+                .comment("Durability of Vulpus tools | Default Value = 3093")
+                .defineInRange("durabilityVulpus", 3093, 0, Integer.MAX_VALUE);
         unbreakableVulpus = BUILDER
                 .comment("Whether Vulpus is unbreakable | Default Value = false")
                 .define("unbreakableVulpus", false);
@@ -166,8 +166,8 @@ public class VulpusConfig {
                 .comment("Attack damage of Vulpus Pickaxe | Default Value = 10")
                 .defineInRange("attackDamageVulpusPickaxe", 10, 0, Integer.MAX_VALUE);
         attackSpeedVulpusPickaxe = BUILDER
-                .comment("Attack speed of Vulpus Pickaxe | Default Value = 2.0")
-                .defineInRange("attackSpeedVulpusPickaxe", 2.0, 0.0, 1024.0);
+                .comment("Attack speed of Vulpus Pickaxe | Default Value = 0.5")
+                .defineInRange("attackSpeedVulpusPickaxe", 0.5, 0.0, 1024.0);
         BUILDER.pop();
 
         BUILDER.push("Axe Stats");
@@ -175,17 +175,17 @@ public class VulpusConfig {
                 .comment("Attack damage of Vulpus Axe | Default Value = 15")
                 .defineInRange("attackDamageVulpusAxe", 15, 0, Integer.MAX_VALUE);
         attackSpeedVulpusAxe = BUILDER
-                .comment("Attack speed of Vulpus Axe | Default Value = 2.0")
-                .defineInRange("attackSpeedVulpusAxe", 2.0, 0.0, 1024.0);
+                .comment("Attack speed of Vulpus Axe | Default Value = 0.5")
+                .defineInRange("attackSpeedVulpusAxe", 0.5, 0.0, 1024.0);
         BUILDER.pop();
 
         BUILDER.push("Shovel Stats");
         attackDamageVulpusShovel = BUILDER
-                .comment("Attack damage of Vulpus Shovel | Default Value = 12")
-                .defineInRange("attackDamageVulpusShovel", 12, 0, Integer.MAX_VALUE);
+                .comment("Attack damage of Vulpus Shovel | Default Value = 10")
+                .defineInRange("attackDamageVulpusShovel", 10, 0, Integer.MAX_VALUE);
         attackSpeedVulpusShovel = BUILDER
-                .comment("Attack speed of Vulpus Shovel | Default Value = 2.0")
-                .defineInRange("attackSpeedVulpusShovel", 2.0, 0.0, 1024.0);
+                .comment("Attack speed of Vulpus Shovel | Default Value = 0.5")
+                .defineInRange("attackSpeedVulpusShovel", 0.5, 0.0, 1024.0);
         BUILDER.pop();
 
         BUILDER.push("Sword Stats");
@@ -193,8 +193,8 @@ public class VulpusConfig {
                 .comment("Attack damage of Vulpus Sword | Default Value = 14")
                 .defineInRange("attackDamageVulpusSword", 14, 0, Integer.MAX_VALUE);
         attackSpeedVulpusSword = BUILDER
-                .comment("Attack speed of Vulpus Sword | Default Value = 2.0")
-                .defineInRange("attackSpeedVulpusSword", 2.0, 0.0, 1024.0);
+                .comment("Attack speed of Vulpus Sword | Default Value = 0.5")
+                .defineInRange("attackSpeedVulpusSword", 0.5, 0.0, 1024.0);
         BUILDER.pop();
 
         BUILDER.push("Hoe Stats");
@@ -202,26 +202,26 @@ public class VulpusConfig {
                 .comment("Attack damage of Vulpus Hoe | Default Value = 10")
                 .defineInRange("attackDamageVulpusHoe", 10, 0, Integer.MAX_VALUE);
         attackSpeedVulpusHoe = BUILDER
-                .comment("Attack speed of Vulpus Hoe | Default Value = 2.0")
-                .defineInRange("attackSpeedVulpusHoe", 2.0, 0.0, 1024.0);
+                .comment("Attack speed of Vulpus Hoe | Default Value = 0.5")
+                .defineInRange("attackSpeedVulpusHoe", 0.5, 0.0, 1024.0);
         BUILDER.pop();
 
         BUILDER.push("Paxel Stats");
         attackDamageVulpusPaxel = BUILDER
-                .comment("Attack damage of Vulpus Paxel | Default Value = 18")
-                .defineInRange("attackDamageVulpusPaxel", 18, 0, Integer.MAX_VALUE);
+                .comment("Attack damage of Vulpus Paxel | Default Value = 15")
+                .defineInRange("attackDamageVulpusPaxel", 15, 0, Integer.MAX_VALUE);
         attackSpeedVulpusPaxel = BUILDER
-                .comment("Attack speed of Vulpus Paxel | Default Value = 2.0")
-                .defineInRange("attackSpeedVulpusPaxel", 2.0, 0.0, 1024.0);
+                .comment("Attack speed of Vulpus Paxel | Default Value = 0.5")
+                .defineInRange("attackSpeedVulpusPaxel", 0.5, 0.0, 1024.0);
         BUILDER.pop();
 
         BUILDER.push("Hammer Stats");
         attackDamageVulpusHammer = BUILDER
-                .comment("Attack damage of Vulpus Hammer | Default Value = 22")
-                .defineInRange("attackDamageVulpusHammer", 22, 0, Integer.MAX_VALUE);
+                .comment("Attack damage of Vulpus Hammer | Default Value = 11")
+                .defineInRange("attackDamageVulpusHammer", 11, 0, Integer.MAX_VALUE);
         attackSpeedVulpusHammer = BUILDER
-                .comment("Attack speed of Vulpus Hammer | Default Value = 2.0")
-                .defineInRange("attackSpeedVulpusHammer", 2.0, 0.0, 1024.0);
+                .comment("Attack speed of Vulpus Hammer | Default Value = 0.5")
+                .defineInRange("attackSpeedVulpusHammer", 0.5, 0.0, 1024.0);
         radiusVulpusHammer = BUILDER
                 .comment("Radius of Vulpus Hammer effect | Default Value = 2")
                 .defineInRange("radiusVulpusHammer", 2, 0, Integer.MAX_VALUE);
@@ -229,11 +229,11 @@ public class VulpusConfig {
 
         BUILDER.push("Excavator Stats");
         attackDamageVulpusExcavator = BUILDER
-                .comment("Attack damage of Vulpus Excavator | Default Value = 20")
-                .defineInRange("attackDamageVulpusExcavator", 20, 0, Integer.MAX_VALUE);
+                .comment("Attack damage of Vulpus Excavator | Default Value = 11")
+                .defineInRange("attackDamageVulpusExcavator", 11, 0, Integer.MAX_VALUE);
         attackSpeedVulpusExcavator = BUILDER
-                .comment("Attack speed of Vulpus Excavator | Default Value = 2.0")
-                .defineInRange("attackSpeedVulpusExcavator", 2.0, 0.0, 1024.0);
+                .comment("Attack speed of Vulpus Excavator | Default Value = 0.5")
+                .defineInRange("attackSpeedVulpusExcavator", 0.5, 0.0, 1024.0);
         radiusVulpusExcavator = BUILDER
                 .comment("Radius of Vulpus Excavator effect | Default Value = 2")
                 .defineInRange("radiusVulpusExcavator", 2, 0, Integer.MAX_VALUE);
