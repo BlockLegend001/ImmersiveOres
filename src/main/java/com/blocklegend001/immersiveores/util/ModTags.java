@@ -13,6 +13,9 @@ public class ModTags {
         public static final TagKey<Block> NEEDS_ENDERIUM_TOOL
                 = tag("needs_enderium_tool");
 
+        public static final TagKey<Block> NEEDS_NETHERITE_TOOL
+                = tag("needs_netherite_tool");
+
         public static final TagKey<Block> NEEDS_VIBRANIUM_TOOL
                 = tag("needs_vibranium_tool");
 
@@ -43,6 +46,8 @@ public class ModTags {
     }
 
     public static class Items {
+
+        public static final TagKey<Item> TOOLS_NETHERITE = tag("tools_netherite");
 
         public static final TagKey<Item> VIBRANIUM_BOW = tag("vibranium_bow");
         public static final TagKey<Item> VULPUS_BOW = tag("vulpus_bow");
