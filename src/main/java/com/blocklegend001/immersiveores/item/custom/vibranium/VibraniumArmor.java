@@ -121,18 +121,24 @@ public class VibraniumArmor extends Item {
                 }
             }
             if (ModItems.VIBRANIUM_CHESTPLATE.get() == pStack.getItem()) {
-                consumer.accept(Component.translatable("tooltip.immersiveores.unbreakble.tooltip").withStyle(ChatFormatting.LIGHT_PURPLE));
+                if (VibraniumConfig.unbreakableVibranium.get()) {
+                    consumer.accept(Component.translatable("tooltip.immersiveores.unbreakble.tooltip").withStyle(ChatFormatting.LIGHT_PURPLE));
+                }
                 consumer.accept(Component.translatable("tooltip.immersiveores.immunetofire.tooltip").withStyle(ChatFormatting.LIGHT_PURPLE));
             }
             if (ModItems.VIBRANIUM_HELMET.get() == pStack.getItem()) {
-                consumer.accept(Component.translatable("tooltip.immersiveores.unbreakble.tooltip").withStyle(ChatFormatting.LIGHT_PURPLE));
+                if (VibraniumConfig.unbreakableVibranium.get()) {
+                    consumer.accept(Component.translatable("tooltip.immersiveores.unbreakble.tooltip").withStyle(ChatFormatting.LIGHT_PURPLE));
+                }
                 consumer.accept(Component.translatable("tooltip.immersiveores.immunetofire.tooltip").withStyle(ChatFormatting.LIGHT_PURPLE));
                 if (VibraniumConfig.nightVisionVibraniumArmor.get()) {
                     consumer.accept(Component.translatable("tooltip.immersiveores.nightvision.tooltip").withStyle(ChatFormatting.LIGHT_PURPLE));
                 }
             }
             if (ModItems.VIBRANIUM_LEGGINGS.get() == pStack.getItem()) {
-                consumer.accept(Component.translatable("tooltip.immersiveores.unbreakble.tooltip").withStyle(ChatFormatting.LIGHT_PURPLE));
+                if (VibraniumConfig.unbreakableVibranium.get()) {
+                    consumer.accept(Component.translatable("tooltip.immersiveores.unbreakble.tooltip").withStyle(ChatFormatting.LIGHT_PURPLE));
+                }
                 consumer.accept(Component.translatable("tooltip.immersiveores.immunetofire.tooltip").withStyle(ChatFormatting.LIGHT_PURPLE));
             }
         } else {
