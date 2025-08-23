@@ -80,26 +80,26 @@ public class VibraniumConfig {
     static {
         BUILDER.push("Armor Protection and Resistance");
         toughnessValueVibraniumArmor = BUILDER
-                .comment("Toughness value for Vibranium Armor | Default Value = 100")
-                .defineInRange("toughnessValueVibraniumArmor", 100, 0, Integer.MAX_VALUE);
+                .comment("Toughness value for Vibranium Armor | Default Value = 3")
+                .defineInRange("toughnessValueVibraniumArmor", 3, 0, Integer.MAX_VALUE);
         enchantmentValueVibraniumArmor = BUILDER
-                .comment("Enchantment value for Vibranium Armor | Default Value = 85")
-                .defineInRange("enchantmentValueVibraniumArmor", 85, 0, Integer.MAX_VALUE);
+                .comment("Enchantment value for Vibranium Armor | Default Value = 55")
+                .defineInRange("enchantmentValueVibraniumArmor", 55, 0, Integer.MAX_VALUE);
         knockbackResistanceValueVibraniumArmor = BUILDER
                 .comment("Knockback resistance for Vibranium Armor | Default Value = 1")
                 .defineInRange("knockbackResistanceValueVibraniumArmor", 1, 0, Integer.MAX_VALUE);
         protectionValueVibraniumBoots = BUILDER
-                .comment("Protection value for Vibranium Boots | Default Value = 10")
-                .defineInRange("protectionValueVibraniumBoots", 10, 0, Integer.MAX_VALUE);
+                .comment("Protection value for Vibranium Boots | Default Value = 6")
+                .defineInRange("protectionValueVibraniumBoots", 6, 0, Integer.MAX_VALUE);
         protectionValueVibraniumLeggings = BUILDER
-                .comment("Protection value for Vibranium Leggings | Default Value = 15")
-                .defineInRange("protectionValueVibraniumLeggings", 15, 0, Integer.MAX_VALUE);
+                .comment("Protection value for Vibranium Leggings | Default Value = 9")
+                .defineInRange("protectionValueVibraniumLeggings", 9, 0, Integer.MAX_VALUE);
         protectionValueVibraniumChestplate = BUILDER
-                .comment("Protection value for Vibranium Chestplate | Default Value = 20")
-                .defineInRange("protectionValueVibraniumChestplate", 20, 0, Integer.MAX_VALUE);
+                .comment("Protection value for Vibranium Chestplate | Default Value = 12")
+                .defineInRange("protectionValueVibraniumChestplate", 12, 0, Integer.MAX_VALUE);
         protectionValueVibraniumHelmet = BUILDER
-                .comment("Protection value for Vibranium Helmet | Default Value = 10")
-                .defineInRange("protectionValueVibraniumHelmet", 10, 0, Integer.MAX_VALUE);
+                .comment("Protection value for Vibranium Helmet | Default Value = 6")
+                .defineInRange("protectionValueVibraniumHelmet", 6, 0, Integer.MAX_VALUE);
         BUILDER.pop();
 
         BUILDER.push("Armor Special Effects and Abilities");
@@ -122,8 +122,8 @@ public class VibraniumConfig {
                 .comment("Enchantment value for Vibranium Bow | Default Value = 5")
                 .defineInRange("enchantmentValueVibraniumBow", 5, 0, Integer.MAX_VALUE);
         damageVibraniumBow = BUILDER
-                .comment("Damage of Vibranium Bow | Default Value = 8")
-                .defineInRange("damageVibraniumBow", 8, 0, Integer.MAX_VALUE);
+                .comment("Damage of Vibranium Bow | Default Value = 5")
+                .defineInRange("damageVibraniumBow", 5, 0, Integer.MAX_VALUE);
         arrowCountVibraniumBow = BUILDER
                 .comment("Arrow count for Vibranium Bow | Default = 2")
                 .defineInRange("arrowCountVibraniumBow", 2, 0, Integer.MAX_VALUE);
@@ -131,17 +131,17 @@ public class VibraniumConfig {
 
         BUILDER.push("Tool Tier Base Properties");
         speedVibraniumTier = BUILDER
-                .comment("Speed value of Vibranium Tool Tier | Default Value = 40")
-                .defineInRange("speedVibraniumTier", 40, 0, Integer.MAX_VALUE);
+                .comment("Speed value of Vibranium Tool Tier | Default Value = 30")
+                .defineInRange("speedVibraniumTier", 30, 0, Integer.MAX_VALUE);
         attackDamageBonusVibraniumTier = BUILDER
-                .comment("Bonus attack damage for Vibranium Tool Tier | Default Value = 11")
-                .defineInRange("attackDamageBonusVibraniumTier", 11, 0, Integer.MAX_VALUE);
+                .comment("Bonus attack damage for Vibranium Tool Tier | Default Value = 1")
+                .defineInRange("attackDamageBonusVibraniumTier", 1, 0, Integer.MAX_VALUE);
         enchantmentValueVibraniumTier = BUILDER
-                .comment("Enchantment value for Vibranium Tool Tier | Default Value = 85")
-                .defineInRange("enchantmentValueVibraniumTier", 85, 0, Integer.MAX_VALUE);
+                .comment("Enchantment value for Vibranium Tool Tier | Default Value = 55")
+                .defineInRange("enchantmentValueVibraniumTier", 55, 0, Integer.MAX_VALUE);
         durabilityVibranium = BUILDER
-                .comment("Durability of Vibranium tools | Default Value = 4062")
-                .defineInRange("durabilityVibranium", 4062, 0, Integer.MAX_VALUE);
+                .comment("Durability of Vibranium tools | Default Value = 2562")
+                .defineInRange("durabilityVibranium", 2562, 0, Integer.MAX_VALUE);
         unbreakableVibranium = BUILDER
                 .comment("Whether Vibranium is unbreakable | Default Value = false")
                 .define("unbreakableVibranium", false);
@@ -149,29 +149,29 @@ public class VibraniumConfig {
 
         BUILDER.push("Pickaxe Stats");
         attackDamageVibraniumPickaxe = BUILDER
-                .comment("Attack damage of Vibranium Pickaxe | Default Value = 9")
-                .defineInRange("attackDamageVibraniumPickaxe", 9, 0, Integer.MAX_VALUE);
+                .comment("Attack damage of Vibranium Pickaxe | Default Value = 7")
+                .defineInRange("attackDamageVibraniumPickaxe", 7, 0, Integer.MAX_VALUE);
         attackSpeedVibraniumPickaxe = BUILDER
-                .comment("Attack speed of Vibranium Pickaxe | Default Value = 2.0")
-                .defineInRange("attackSpeedVibraniumPickaxe", 2.0, 0.0, 1024.0);
+                .comment("Attack speed of Vibranium Pickaxe | Default Value = 0.5")
+                .defineInRange("attackSpeedVibraniumPickaxe", 0.5, 0.0, 1024.0);
         BUILDER.pop();
 
         BUILDER.push("Axe Stats");
         attackDamageVibraniumAxe = BUILDER
-                .comment("Attack damage of Vibranium Axe | Default Value = 10")
-                .defineInRange("attackDamageVibraniumAxe", 10, 0, Integer.MAX_VALUE);
+                .comment("Attack damage of Vibranium Axe | Default Value = 12")
+                .defineInRange("attackDamageVibraniumAxe", 12, 0, Integer.MAX_VALUE);
         attackSpeedVibraniumAxe = BUILDER
-                .comment("Attack speed of Vibranium Axe | Default Value = 2.0")
-                .defineInRange("attackSpeedVibraniumAxe", 2.0, 0.0, 1024.0);
+                .comment("Attack speed of Vibranium Axe | Default Value = 0.5")
+                .defineInRange("attackSpeedVibraniumAxe", 0.5, 0.0, 1024.0);
         BUILDER.pop();
 
         BUILDER.push("Shovel Stats");
         attackDamageVibraniumShovel = BUILDER
-                .comment("Attack damage of Vibranium Shovel | Default Value = 9")
-                .defineInRange("attackDamageVibraniumShovel", 9, 0, Integer.MAX_VALUE);
+                .comment("Attack damage of Vibranium Shovel | Default Value = 7")
+                .defineInRange("attackDamageVibraniumShovel", 7, 0, Integer.MAX_VALUE);
         attackSpeedVibraniumShovel = BUILDER
-                .comment("Attack speed of Vibranium Shovel | Default Value = 2.0")
-                .defineInRange("attackSpeedVibraniumShovel", 2.0, 0.0, 1024.0);
+                .comment("Attack speed of Vibranium Shovel | Default Value = 0.5")
+                .defineInRange("attackSpeedVibraniumShovel", 0.5, 0.0, 1024.0);
         BUILDER.pop();
 
         BUILDER.push("Sword Stats");
@@ -179,8 +179,8 @@ public class VibraniumConfig {
                 .comment("Attack damage of Vibranium Sword | Default Value = 10")
                 .defineInRange("attackDamageVibraniumSword", 10, 0, Integer.MAX_VALUE);
         attackSpeedVibraniumSword = BUILDER
-                .comment("Attack speed of Vibranium Sword | Default Value = 2.0")
-                .defineInRange("attackSpeedVibraniumSword", 2.0, 0.0, 1024.0);
+                .comment("Attack speed of Vibranium Sword | Default Value = 0.5")
+                .defineInRange("attackSpeedVibraniumSword", 0.5, 0.0, 1024.0);
         BUILDER.pop();
 
         BUILDER.push("Hoe Stats");
@@ -188,26 +188,26 @@ public class VibraniumConfig {
                 .comment("Attack damage of Vibranium Hoe | Default Value = 7")
                 .defineInRange("attackDamageVibraniumHoe", 7, 0, Integer.MAX_VALUE);
         attackSpeedVibraniumHoe = BUILDER
-                .comment("Attack speed of Vibranium Hoe | Default Value = 2.0")
-                .defineInRange("attackSpeedVibraniumHoe", 2.0, 0.0, 1024.0);
+                .comment("Attack speed of Vibranium Hoe | Default Value = 0.5")
+                .defineInRange("attackSpeedVibraniumHoe", 0.5, 0.0, 1024.0);
         BUILDER.pop();
 
         BUILDER.push("Paxel Stats");
         attackDamageVibraniumPaxel = BUILDER
-                .comment("Attack damage of Vibranium Paxel | Default Value = 15")
-                .defineInRange("attackDamageVibraniumPaxel", 15, 0, Integer.MAX_VALUE);
+                .comment("Attack damage of Vibranium Paxel | Default Value = 11")
+                .defineInRange("attackDamageVibraniumPaxel", 11, 0, Integer.MAX_VALUE);
         attackSpeedVibraniumPaxel = BUILDER
-                .comment("Attack speed of Vibranium Paxel | Default Value = 2.0")
-                .defineInRange("attackSpeedVibraniumPaxel", 2.0, 0.0, 1024.0);
+                .comment("Attack speed of Vibranium Paxel | Default Value = 0.5")
+                .defineInRange("attackSpeedVibraniumPaxel", 0.5, 0.0, 1024.0);
         BUILDER.pop();
 
         BUILDER.push("Hammer Stats");
         attackDamageVibraniumHammer = BUILDER
-                .comment("Attack damage of Vibranium Hammer | Default Value = 13")
-                .defineInRange("attackDamageVibraniumHammer", 13, 0, Integer.MAX_VALUE);
+                .comment("Attack damage of Vibranium Hammer | Default Value = 7")
+                .defineInRange("attackDamageVibraniumHammer", 7, 0, Integer.MAX_VALUE);
         attackSpeedVibraniumHammer = BUILDER
-                .comment("Attack speed of Vibranium Hammer | Default Value = 2.0")
-                .defineInRange("attackSpeedVibraniumHammer", 2.0, 0.0, 1024.0);
+                .comment("Attack speed of Vibranium Hammer | Default Value = 0.5")
+                .defineInRange("attackSpeedVibraniumHammer", 0.5, 0.0, 1024.0);
         radiusVibraniumHammer = BUILDER
                 .comment("Hammering radius for Vibranium Hammer | Default = 1")
                 .defineInRange("radiusVibraniumHammer", 1, 0, Integer.MAX_VALUE);
@@ -215,11 +215,11 @@ public class VibraniumConfig {
 
         BUILDER.push("Excavator Stats");
         attackDamageVibraniumExcavator = BUILDER
-                .comment("Attack damage of Vibranium Excavator | Default Value = 13")
-                .defineInRange("attackDamageVibraniumExcavator", 13, 0, Integer.MAX_VALUE);
+                .comment("Attack damage of Vibranium Excavator | Default Value = 7")
+                .defineInRange("attackDamageVibraniumExcavator", 7, 0, Integer.MAX_VALUE);
         attackSpeedVibraniumExcavator = BUILDER
-                .comment("Attack speed of Vibranium Excavator | Default Value = 2.0")
-                .defineInRange("attackSpeedVibraniumExcavator", 2.0, 0.0, 1024.0);
+                .comment("Attack speed of Vibranium Excavator | Default Value = 0.5")
+                .defineInRange("attackSpeedVibraniumExcavator", 0.5, 0.0, 1024.0);
         radiusVibraniumExcavator = BUILDER
                 .comment("Excavation radius for Vibranium Excavator | Default = 1")
                 .defineInRange("radiusVibraniumExcavator", 1, 0, Integer.MAX_VALUE);
