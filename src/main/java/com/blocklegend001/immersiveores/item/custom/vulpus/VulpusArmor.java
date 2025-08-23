@@ -133,7 +133,9 @@ public class VulpusArmor extends ArmorItem {
                 }
             }
             if (ModItems.VULPUS_CHESTPLATE.get() == pStack.getItem()) {
-                components.add(Component.translatable("tooltip.immersiveores.unbreakble.tooltip").withStyle(ChatFormatting.RED));
+                if (VulpusConfig.unbreakableVulpus.get()) {
+                    components.add(Component.translatable("tooltip.immersiveores.unbreakble.tooltip").withStyle(ChatFormatting.RED));
+                }
                 components.add(Component.translatable("tooltip.immersiveores.immunetofire.tooltip").withStyle(ChatFormatting.RED));
                 if (VulpusConfig.makesPiglinsNeutralVulpus.get()) {
                     components.add(Component.translatable("tooltip.immersiveores.immunetopiglin.tooltip").withStyle(ChatFormatting.RED));
@@ -142,7 +144,9 @@ public class VulpusArmor extends ArmorItem {
                 }
             }
             if (ModItems.VULPUS_HELMET.get() == pStack.getItem()) {
-                components.add(Component.translatable("tooltip.immersiveores.unbreakble.tooltip").withStyle(ChatFormatting.RED));
+                if (VulpusConfig.unbreakableVulpus.get()) {
+                    components.add(Component.translatable("tooltip.immersiveores.unbreakble.tooltip").withStyle(ChatFormatting.RED));
+                }
                 components.add(Component.translatable("tooltip.immersiveores.immunetofire.tooltip").withStyle(ChatFormatting.RED));
                 if (VulpusConfig.nightVisionVulpusArmor.get()) {
                     components.add(Component.translatable("tooltip.immersiveores.nightvision.tooltip").withStyle(ChatFormatting.RED));
@@ -153,7 +157,9 @@ public class VulpusArmor extends ArmorItem {
                 }
             }
             if (ModItems.VULPUS_LEGGINGS.get() == pStack.getItem()) {
-                components.add(Component.translatable("tooltip.immersiveores.unbreakble.tooltip").withStyle(ChatFormatting.RED));
+                if (VulpusConfig.unbreakableVulpus.get()) {
+                    components.add(Component.translatable("tooltip.immersiveores.unbreakble.tooltip").withStyle(ChatFormatting.RED));
+                }
                 components.add(Component.translatable("tooltip.immersiveores.immunetofire.tooltip").withStyle(ChatFormatting.RED));
                 if (VulpusConfig.makesPiglinsNeutralVulpus.get()) {
                     components.add(Component.translatable("tooltip.immersiveores.immunetopiglin.tooltip").withStyle(ChatFormatting.RED));

@@ -134,7 +134,9 @@ public class EnderiumArmor extends ArmorItem {
                 }
             }
             if (ModItems.ENDERIUM_CHESTPLATE.get() == pStack.getItem()) {
-                components.add(Component.translatable("tooltip.immersiveores.unbreakble.tooltip").withStyle(ChatFormatting.DARK_AQUA));
+                if (EnderiumConfig.unbreakableEnderium.get()) {
+                    components.add(Component.translatable("tooltip.immersiveores.unbreakble.tooltip").withStyle(ChatFormatting.DARK_AQUA));
+                }
                 components.add(Component.translatable("tooltip.immersiveores.immunetofire.tooltip").withStyle(ChatFormatting.DARK_AQUA));
                 if (EnderiumConfig.fireResistanceEnderiumArmor.get()) {
                     components.add(Component.translatable("tooltip.immersiveores.playerimmunetofire.tooltip").withStyle(ChatFormatting.DARK_AQUA));
@@ -143,9 +145,12 @@ public class EnderiumArmor extends ArmorItem {
                 }
             }
             if (ModItems.ENDERIUM_LEGGINGS.get() == pStack.getItem()) {
-                components.add(Component.translatable("tooltip.immersiveores.unbreakble.tooltip").withStyle(ChatFormatting.DARK_AQUA));
+                if (EnderiumConfig.unbreakableEnderium.get()) {
+                    components.add(Component.translatable("tooltip.immersiveores.unbreakble.tooltip").withStyle(ChatFormatting.DARK_AQUA));
+                }
+                components.add(Component.translatable("tooltip.immersiveores.immunetofire.tooltip").withStyle(ChatFormatting.DARK_AQUA));
                 if (EnderiumConfig.fireResistanceEnderiumArmor.get()) {
-                    components.add(Component.translatable("tooltip.immersiveores.immunetofire.tooltip").withStyle(ChatFormatting.DARK_AQUA));
+                    components.add(Component.translatable("tooltip.immersiveores.playerimmunetofire.tooltip").withStyle(ChatFormatting.DARK_AQUA));
                 } if (EnderiumConfig.makesPiglinsNeutralEnderium.get()) {
                     components.add(Component.translatable("tooltip.immersiveores.immunetopiglin.tooltip").withStyle(ChatFormatting.DARK_AQUA));
                 } if (EnderiumConfig.neverLoseHungerEnderiumArmor.get()) {
@@ -153,7 +158,9 @@ public class EnderiumArmor extends ArmorItem {
                 }
             }
             if (ModItems.ENDERIUM_HELMET.get() == pStack.getItem()) {
-                components.add(Component.translatable("tooltip.immersiveores.unbreakble.tooltip").withStyle(ChatFormatting.DARK_AQUA));
+                if (EnderiumConfig.unbreakableEnderium.get()) {
+                    components.add(Component.translatable("tooltip.immersiveores.unbreakble.tooltip").withStyle(ChatFormatting.DARK_AQUA));
+                }
                 components.add(Component.translatable("tooltip.immersiveores.immunetofire.tooltip").withStyle(ChatFormatting.DARK_AQUA));
                 if (EnderiumConfig.nightVisionEnderiumArmor.get()) {
                     components.add(Component.translatable("tooltip.immersiveores.nightvision.tooltip").withStyle(ChatFormatting.DARK_AQUA));
