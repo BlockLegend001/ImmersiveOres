@@ -22,6 +22,13 @@
   "item.immersiveores.raw_vibranium_block": "Blocco di Vibranium Grezzo",
   "item.immersiveores.raw_vulpus_block": "Blocco di Vulpus Grezzo",
 
+  "block.immersiveores.enderium_block": "Blocco di Enderium",
+  "block.immersiveores.vibranium_block": "Blocco di Vibranium",
+  "block.immersiveores.vulpus_block": "Blocco di Vulpus",
+  "block.immersiveores.raw_enderium_block": "Blocco di Enderium Grezzo",
+  "block.immersiveores.raw_vibranium_block": "Blocco di Vibranium Grezzo",
+  "block.immersiveores.raw_vulpus_block": "Blocco di Vulpus Grezzo",
+
   "item.immersiveores.enderium_pickaxe": "Piccone di Enderium",
   "item.immersiveores.enderium_sword": "Spada di Enderium",
   "item.immersiveores.enderium_bow": "Arco di Enderium",
@@ -111,6 +118,10 @@
   "item.immersiveores.enderium_ore": "Minerale di Enderium",
   "item.immersiveores.vibranium_ore": "Minerale di Vibranium",
   "item.immersiveores.vulpus_ore": "Minerale di Vulpus",
+
+  "block.immersiveores.enderium_ore": "Minerale di Enderium",
+  "block.immersiveores.vibranium_ore": "Minerale di Vibranium",
+  "block.immersiveores.vulpus_ore": "Minerale di Vulpus",
 
   "advancement.immersiveores.root.title": "Immersive Ores",
   "advancement.immersiveores.root.descrption": "Inizia il tuo viaggio con la scoperta di Immersive Ores. Inizia a raccogliere e a creare con le potenti risorse nascoste sotto la superficie",
