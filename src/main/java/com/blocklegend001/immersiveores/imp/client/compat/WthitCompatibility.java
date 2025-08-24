@@ -5,12 +5,10 @@ import com.blocklegend001.immersiveores.util.ModTags;
 import mcp.mobius.waila.api.*;
 import mcp.mobius.waila.api.component.ItemComponent;
 import net.minecraft.ChatFormatting;
-import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
-import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 
@@ -58,24 +56,27 @@ public class WthitCompatibility implements IWailaPlugin {
         private static boolean canHarvestWithTag(ItemStack held, BlockState state) {
             if (held.isEmpty()) return false;
 
-            // Netherite -> solo blocchi Vibranium
             if (held.is(Items.NETHERITE_PICKAXE)) {
-                return state.is(ModTags.Blocks.NEEDS_NETHERITE_TOOL);
+                return state.is(ModTags.Blocks.NEEDS_VIBRANIUM_TOOL);
             }
 
-            // Vibranium -> blocchi Netherite, Vibranium, Vulpus
-            if (held.is(ModItems.VIBRANIUM_PICKAXE.get())) {
+            if (held.is(ModItems.VIBRANIUM_PICKAXE.get()) ||
+                    held.is(ModItems.VIBRANIUM_HAMMER.get()) ||
+                    held.is(ModItems.VIBRANIUM_PAXEL.get())) {
+
                 return state.is(ModTags.Blocks.NEEDS_NETHERITE_TOOL) ||
                         state.is(ModTags.Blocks.NEEDS_VIBRANIUM_TOOL);
             }
 
-            // Vulpus -> tutti
-            if (held.is(ModItems.VULPUS_PICKAXE.get())) {
+            if (held.is(ModItems.VULPUS_PICKAXE.get()) ||
+                    held.is(ModItems.VULPUS_HAMMER.get()) ||
+                    held.is(ModItems.VULPUS_PAXEL.get())) {
                 return true;
             }
 
-            // Enderium -> tutti
-            if (held.is(ModItems.ENDERIUM_PICKAXE.get())) {
+            if (held.is(ModItems.ENDERIUM_PICKAXE.get()) ||
+                    held.is(ModItems.ENDERIUM_HAMMER.get()) ||
+                    held.is(ModItems.ENDERIUM_PAXEL.get())) {
                 return true;
             }
 
