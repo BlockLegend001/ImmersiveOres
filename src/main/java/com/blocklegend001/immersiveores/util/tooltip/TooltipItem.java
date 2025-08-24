@@ -1,4 +1,4 @@
-package com.blocklegend001.immersiveores.tooltip;
+package com.blocklegend001.immersiveores.util.tooltip;
 
 import net.minecraft.item.ItemStack;
 import net.minecraft.text.Text;

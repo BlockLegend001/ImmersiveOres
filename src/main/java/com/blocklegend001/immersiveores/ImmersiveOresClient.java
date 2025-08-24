@@ -1,6 +1,6 @@
 package com.blocklegend001.immersiveores;
 
-import com.blocklegend001.immersiveores.tooltip.TooltipItem;
+import com.blocklegend001.immersiveores.util.tooltip.TooltipItem;
 import com.blocklegend001.immersiveores.util.tools.excavator.*;
 import com.blocklegend001.immersiveores.util.tools.hammer.*;
 import net.fabricmc.api.ClientModInitializer;
