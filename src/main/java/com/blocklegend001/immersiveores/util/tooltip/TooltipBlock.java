@@ -1,4 +1,4 @@
-package com.blocklegend001.immersiveores.tooltip;
+package com.blocklegend001.immersiveores.util.tooltip;
 
 import net.fabricmc.fabric.api.block.v1.FabricBlock;
 
