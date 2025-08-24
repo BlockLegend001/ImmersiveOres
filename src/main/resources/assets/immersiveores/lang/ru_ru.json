@@ -22,6 +22,13 @@
   "item.immersiveores.raw_vibranium_block": "Блок рудного вибрания",
   "item.immersiveores.raw_vulpus_block": "Блок рудного вульпуса",
 
+  "block.immersiveores.enderium_block": "Блок эндерия",
+  "block.immersiveores.vibranium_block": "Блок вибрания",
+  "block.immersiveores.vulpus_block": "Блок вульпуса",
+  "block.immersiveores.raw_enderium_block": "Блок рудного эндерия",
+  "block.immersiveores.raw_vibranium_block": "Блок рудного вибрания",
+  "block.immersiveores.raw_vulpus_block": "Блок рудного вульпуса",
+
   "item.immersiveores.enderium_pickaxe": "Эндериевая кирка",
   "item.immersiveores.enderium_sword": "Эндериевый меч",
   "item.immersiveores.enderium_bow": "Эндериевый лук",
@@ -111,6 +118,11 @@
   "item.immersiveores.enderium_ore": "Эндериевая руда",
   "item.immersiveores.vibranium_ore": "Вибраниевая руда",
   "item.immersiveores.vulpus_ore": "Вульпусовая руда",
+
+  "block.immersiveores.enderium_ore": "Эндериевая руда",
+  "block.immersiveores.vibranium_ore": "Вибраниевая руда",
+  "block.immersiveores.vulpus_ore": "Вульпусовая руда",
+
   "advancement.immersiveores.root.title": "Immersive Ores",
   "advancement.immersiveores.root.descrption": "Отправьтесь в путешествие с открытием иммерсивных руд. Начните собирать и создавать, используя мощные ресурсы, спрятанные под поверхностью.",
 

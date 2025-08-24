@@ -1,4 +1,4 @@
-// 1.21.5	2025-07-06T12:36:54.3493105	Tags for minecraft:item mod id immersiveores
+// 1.21.5	2025-08-24T12:37:10.2349178	Tags for minecraft:item mod id immersiveores
 84d40d1c79905cad9bd2bacaaca1d5c3bb97bd74 data/c/tags/item/ingots.json
 6f6ef5d198b30bb6e688aec463b46e3b047eec57 data/immersiveores/tags/item/enderium_armor.json
 703da89a08878d1c86907889cb8509bfa152df66 data/immersiveores/tags/item/enderium_axe.json
@@ -10,6 +10,7 @@ e270a04ed14cdf57e715cb6fbc3b62611d676639 data/immersiveores/tags/item/enderium_p
 21302b6860e339db5d1791697389f070c8796cb3 data/immersiveores/tags/item/enderium_pickaxe.json
 8f372ef2c5da54eec9c0461973bff0aa3e0451ba data/immersiveores/tags/item/enderium_shovel.json
 f91f95d9121b79f8fddbc103a925459cb3e6ee35 data/immersiveores/tags/item/enderium_sword.json
+a102816f072b82dd5e9a67c810e1ebfd58720e16 data/immersiveores/tags/item/tools_netherite.json
 d98511bbec1a3f02c259395c61f879dd73fda8a7 data/immersiveores/tags/item/vibranium_armor.json
 5142cae31cc004088ee61727009e82abddb121e8 data/immersiveores/tags/item/vibranium_axe.json
 03f65d7df76f08c3ac5641beedbd6f8de9a0f5c0 data/immersiveores/tags/item/vibranium_bow.json
