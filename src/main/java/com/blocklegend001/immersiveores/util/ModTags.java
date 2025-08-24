@@ -11,6 +11,9 @@ import net.minecraft.world.level.block.Block;
 
 public class ModTags {
     public static class Blocks {
+        public static final TagKey<Block> NEEDS_NETHERITE_TOOL
+                = create("needs_netherite_tool");
+
         public static final TagKey<Block> NEEDS_ENDERIUM_TOOL
                 = create("needs_enderium_tool");
 
@@ -23,12 +26,23 @@ public class ModTags {
         public static final TagKey<Block> BEACON_BASE_BLOCKS =
                 create("beacon_base_blocks");
 
-        private static TagKey<Block> create(String p_203847_) {
-            return TagKey.create(Registries.BLOCK, ResourceLocation.withDefaultNamespace(p_203847_));
+        public static final TagKey<Block> INCORRECT_FOR_VIBRANIUM_TOOL =
+                create("incorrect_for_vibranium_tool");
+
+        public static final TagKey<Block> INCORRECT_FOR_VULPUS_TOOL =
+                create("incorrect_for_vulpus_tool");
+
+        public static final TagKey<Block> INCORRECT_FOR_ENDERIUM_TOOL =
+                create("incorrect_for_enderium_tool");
+
+        private static TagKey<Block> create(String path) {
+            return TagKey.create(Registries.BLOCK,
+                    ResourceLocation.fromNamespaceAndPath(ImmersiveOres.MODID, path));
         }
 
-        public static TagKey<Block> create(String namepsace, String path) {
-            return create(ResourceLocation.fromNamespaceAndPath(namepsace, path));
+        public static TagKey<Block> create(String namespace, String path) {
+            return TagKey.create(Registries.BLOCK,
+                    ResourceLocation.fromNamespaceAndPath(namespace, path));
         }
 
         public static TagKey<Block> create(ResourceLocation name) {
@@ -37,6 +51,8 @@ public class ModTags {
     }
 
     public static class Items {
+
+        public static final TagKey<Item> TOOLS_NETHERITE = tag("tools_netherite");
 
         public static final TagKey<Item> VIBRANIUM_BOW = tag("vibranium_bow");
         public static final TagKey<Item> VULPUS_BOW = tag("vulpus_bow");
