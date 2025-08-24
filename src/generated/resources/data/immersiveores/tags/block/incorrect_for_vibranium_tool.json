@@ -1,0 +1,8 @@
+{
+  "replace": true,
+  "values": [
+    "immersiveores:enderium_block",
+    "immersiveores:enderium_ore",
+    "immersiveores:raw_enderium_block"
+  ]
+}
