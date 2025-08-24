@@ -1,4 +1,4 @@
-package com.blocklegend001.immersiveores.tooltip;
+package com.blocklegend001.immersiveores.util.tooltip;
 
 import net.minecraft.component.DataComponentTypes;
 import net.minecraft.block.Block;
