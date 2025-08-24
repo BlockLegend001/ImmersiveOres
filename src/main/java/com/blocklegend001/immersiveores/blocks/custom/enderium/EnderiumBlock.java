@@ -1,6 +1,6 @@
 package com.blocklegend001.immersiveores.blocks.custom.enderium;
 
-import com.blocklegend001.immersiveores.tooltip.TooltipBlock;
+import com.blocklegend001.immersiveores.util.tooltip.TooltipBlock;
 import com.blocklegend001.immersiveores.util.color.ColoredBlock;
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemStack;

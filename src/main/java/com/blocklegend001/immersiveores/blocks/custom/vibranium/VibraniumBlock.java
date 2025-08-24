@@ -1,16 +1,11 @@
 package com.blocklegend001.immersiveores.blocks.custom.vibranium;
 
-import com.blocklegend001.immersiveores.tooltip.TooltipBlock;
+import com.blocklegend001.immersiveores.util.tooltip.TooltipBlock;
 import com.blocklegend001.immersiveores.util.color.ColoredBlock;
-import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.tooltip.TooltipType;
 import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;
-
-import java.util.List;
 
 public class VibraniumBlock extends Block implements TooltipBlock, ColoredBlock {
     public VibraniumBlock(Settings p_49795_) {
