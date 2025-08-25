@@ -1,1 +1,7 @@
-- Added some missed tooltips to blocks
+- Removed unnecessary color codes from lang files. Colors are now fully managed by code.
+- Now if you craft any type of stick you will receive 2 instead of 1
+- Redone the paxel textures
+- Balanced the config
+- Fixed some tooltips not displayed correctly on the armors
+- Fixed some incompatibility issues with Jade & WTHIT
+- **WARNING**: This update requires a regeneration of the config file.
