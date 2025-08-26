@@ -46,6 +46,11 @@ public class VibraniumBow extends BowItem {
     }
 
     @Override
+    public Component getName(ItemStack stack) {
+        return super.getName(stack).copy().withStyle(ChatFormatting.LIGHT_PURPLE);
+    }
+
+    @Override
     public AbstractArrow customArrow(AbstractArrow arrow, ItemStack projectileStack, ItemStack weaponStack) {
         arrow.setBaseDamage(arrow.getBaseDamage() + this.tier.getAttackDamageBonus());
         return arrow;

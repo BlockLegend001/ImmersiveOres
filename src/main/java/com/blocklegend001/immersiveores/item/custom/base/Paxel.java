@@ -38,9 +38,9 @@ public class Paxel extends DiggerItem {
         BlockState state = world.getBlockState(pos);
         BlockState result = getModifiedBlockState(context, state, pos);
 
-        if (result == null) return InteractionResult.PASS;
-
         if (playerHasShieldUseIntent(context)) return InteractionResult.PASS;
+
+        if (result == null) return InteractionResult.PASS;
 
         if (!world.isClientSide()) {
             world.setBlock(pos, result, 11);

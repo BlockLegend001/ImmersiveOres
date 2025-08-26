@@ -29,6 +29,11 @@ public class VulpusPaxel extends Paxel {
     }
 
     @Override
+    public Component getName(ItemStack stack) {
+        return super.getName(stack).copy().withStyle(ChatFormatting.RED);
+    }
+
+    @Override
     public void appendHoverText(ItemStack pStack, TooltipContext pContext, List<Component> components, TooltipFlag pTooltipFlag) {
         if(Screen.hasShiftDown()) {
             if (VulpusConfig.UNBREAKABLE_VULPUS.get()) {
