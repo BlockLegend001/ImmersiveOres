@@ -2,6 +2,7 @@ package com.blocklegend001.immersiveores.block.custom.enderium;
 
 import com.blocklegend001.immersiveores.block.ModBlocks;
 import com.blocklegend001.immersiveores.item.ModItems;
+import com.blocklegend001.immersiveores.util.color.ColoredBlock;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
@@ -15,9 +16,14 @@ import net.minecraft.world.level.block.state.BlockState;
 
 import java.util.List;
 
-public class RawEnderiumBlock extends Block {
+public class RawEnderiumBlock extends Block implements ColoredBlock {
     public RawEnderiumBlock(Properties p_49795_) {
         super(p_49795_);
+    }
+
+    @Override
+    public ChatFormatting getColor() {
+        return ChatFormatting.DARK_AQUA;
     }
 
     @Override

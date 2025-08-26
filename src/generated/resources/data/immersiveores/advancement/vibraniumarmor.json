@@ -44,6 +44,7 @@
   },
   "display": {
     "description": {
+      "color": "light_purple",
       "translate": "advancement.immersiveores.vibraniumarmor.descrption"
     },
     "icon": {
@@ -51,6 +52,7 @@
       "id": "immersiveores:vibranium_chestplate"
     },
     "title": {
+      "color": "light_purple",
       "translate": "advancement.immersiveores.vibraniumarmor.title"
     }
   },

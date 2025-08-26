@@ -40,6 +40,11 @@ public class EnderiumArmor extends ArmorItem {
     }
 
     @Override
+    public Component getName(ItemStack stack) {
+        return super.getName(stack).copy().withStyle(ChatFormatting.DARK_AQUA);
+    }
+
+    @Override
     public boolean isEnchantable(ItemStack p_41456_) {
         return true;
     }

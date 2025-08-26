@@ -2,6 +2,7 @@ package com.blocklegend001.immersiveores.block.custom.vulpus;
 
 import com.blocklegend001.immersiveores.block.ModBlocks;
 import com.blocklegend001.immersiveores.item.ModItems;
+import com.blocklegend001.immersiveores.util.color.ColoredBlock;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
@@ -15,10 +16,14 @@ import net.minecraft.world.level.block.state.BlockState;
 
 import java.util.List;
 
-public class VulpusOre extends Block {
-
+public class VulpusOre extends Block implements ColoredBlock {
     public VulpusOre(Properties arg) {
         super(arg);
+    }
+
+    @Override
+    public ChatFormatting getColor() {
+        return ChatFormatting.RED;
     }
 
     @Override
