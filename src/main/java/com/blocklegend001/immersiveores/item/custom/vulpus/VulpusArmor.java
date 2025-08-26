@@ -38,6 +38,11 @@ public class VulpusArmor extends ArmorItem {
     }
 
     @Override
+    public Component getName(ItemStack stack) {
+        return super.getName(stack).copy().withStyle(ChatFormatting.RED);
+    }
+
+    @Override
     public void inventoryTick(ItemStack stack, Level level, Entity entity, int pSlotId, boolean pIsSelected) {
         if (!level.isClientSide()) {
             if (entity instanceof Player player) {

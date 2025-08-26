@@ -2,6 +2,7 @@ package com.blocklegend001.immersiveores.datagen;
 
 import com.blocklegend001.immersiveores.ImmersiveOres;
 import com.blocklegend001.immersiveores.item.ModItems;
+import net.minecraft.ChatFormatting;
 import net.minecraft.advancements.Advancement;
 import net.minecraft.advancements.AdvancementHolder;
 import net.minecraft.advancements.AdvancementRequirements;
@@ -24,15 +25,15 @@ public class ModAdvancementProvider extends AdvancementProvider {
         super(packOutput, lookupProvider, existingFileHelper, List.of(new ModImmersiveOresAdvancement()));
     }
 
-    public static class ModImmersiveOresAdvancement implements AdvancementProvider.AdvancementGenerator {
+    public static class ModImmersiveOresAdvancement implements AdvancementGenerator {
 
         @Override
         public void generate(HolderLookup.Provider provider, Consumer<AdvancementHolder> consumer, ExistingFileHelper existingFileHelper) {
 
             AdvancementHolder rootAdvancement = Advancement.Builder.advancement()
                     .display(ModItems.VIBRANIUM_INGOT.get(),
-                            Component.translatable("advancement.immersiveores.root.title"), Component.translatable("advancement.immersiveores.root.descrption"),
-                           ResourceLocation.fromNamespaceAndPath(ImmersiveOres.MODID, "textures/item/vulpus_block.png"),
+                            Component.translatable("advancement.immersiveores.root.title").withStyle(ChatFormatting.LIGHT_PURPLE), Component.translatable("advancement.immersiveores.root.descrption").withStyle(ChatFormatting.LIGHT_PURPLE),
+                            ResourceLocation.fromNamespaceAndPath(ImmersiveOres.MODID, "textures/item/vulpus_block.png"),
                             AdvancementType.TASK, true, true, false)
                     .addCriterion("has_vibranium_ingot", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.VIBRANIUM_INGOT.get()))
                     .save(consumer, String.valueOf(ResourceLocation.fromNamespaceAndPath(ImmersiveOres.MODID, "root")));
@@ -40,7 +41,7 @@ public class ModAdvancementProvider extends AdvancementProvider {
             AdvancementHolder vibraniumTools = Advancement.Builder.advancement()
                     .parent(rootAdvancement)
                     .display(ModItems.VIBRANIUM_PICKAXE.get(),
-                            Component.translatable("advancement.immersiveores.vibraniumtools.title"), Component.translatable("advancement.immersiveores.vibraniumtools.descrption"),
+                            Component.translatable("advancement.immersiveores.vibraniumtools.title").withStyle(ChatFormatting.LIGHT_PURPLE), Component.translatable("advancement.immersiveores.vibraniumtools.descrption").withStyle(ChatFormatting.LIGHT_PURPLE),
                             null,
                             AdvancementType.TASK, true, true, false)
                     .addCriterion("has_vibranium_pickaxe", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.VIBRANIUM_PICKAXE.get()))
@@ -54,7 +55,7 @@ public class ModAdvancementProvider extends AdvancementProvider {
             AdvancementHolder vibraniumArmor = Advancement.Builder.advancement()
                     .parent(rootAdvancement)
                     .display(ModItems.VIBRANIUM_CHESTPLATE.get(),
-                            Component.translatable("advancement.immersiveores.vibraniumarmor.title"), Component.translatable("advancement.immersiveores.vibraniumarmor.descrption"),
+                            Component.translatable("advancement.immersiveores.vibraniumarmor.title").withStyle(ChatFormatting.LIGHT_PURPLE), Component.translatable("advancement.immersiveores.vibraniumarmor.descrption").withStyle(ChatFormatting.LIGHT_PURPLE),
                             null,
                             AdvancementType.TASK, true, true, false)
                     .addCriterion("has_vibranium_helmet", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.VIBRANIUM_HELMET.get()))
@@ -67,7 +68,7 @@ public class ModAdvancementProvider extends AdvancementProvider {
             AdvancementHolder vibraniumSpecialTools = Advancement.Builder.advancement()
                     .parent(vibraniumTools)
                     .display(ModItems.VIBRANIUM_PAXEL.get(),
-                            Component.translatable("advancement.immersiveores.vibraniumspecialtools.title"), Component.translatable("advancement.immersiveores.vibraniumspecialtools.descrption"),
+                            Component.translatable("advancement.immersiveores.vibraniumspecialtools.title").withStyle(ChatFormatting.LIGHT_PURPLE), Component.translatable("advancement.immersiveores.vibraniumspecialtools.descrption").withStyle(ChatFormatting.LIGHT_PURPLE),
                             null,
                             AdvancementType.TASK, true, true, false)
                     .addCriterion("has_vibranium_hammer", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.VIBRANIUM_HAMMER.get()))
@@ -79,7 +80,7 @@ public class ModAdvancementProvider extends AdvancementProvider {
             AdvancementHolder vulpus = Advancement.Builder.advancement()
                     .parent(vibraniumTools)
                     .display(ModItems.VULPUS_INGOT.get(),
-                            Component.translatable("advancement.immersiveores.vulpus.title"), Component.translatable("advancement.immersiveores.vulpus.descrption"),
+                            Component.translatable("advancement.immersiveores.vulpus.title").withStyle(ChatFormatting.RED), Component.translatable("advancement.immersiveores.vulpus.descrption").withStyle(ChatFormatting.RED),
                             null,
                             AdvancementType.TASK, true, true, false)
                     .addCriterion("has_vulpus_ingot", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.VULPUS_INGOT.get()))
@@ -89,7 +90,7 @@ public class ModAdvancementProvider extends AdvancementProvider {
             AdvancementHolder vulpusTools = Advancement.Builder.advancement()
                     .parent(vulpus)
                     .display(ModItems.VULPUS_PICKAXE.get(),
-                            Component.translatable("advancement.immersiveores.vulpustools.title"), Component.translatable("advancement.immersiveores.vulpustools.descrption"),
+                            Component.translatable("advancement.immersiveores.vulpustools.title").withStyle(ChatFormatting.RED), Component.translatable("advancement.immersiveores.vulpustools.descrption").withStyle(ChatFormatting.RED),
                             null,
                             AdvancementType.TASK, true, true, false)
                     .addCriterion("has_vulpus_pickaxe", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.VULPUS_PICKAXE.get()))
@@ -103,7 +104,7 @@ public class ModAdvancementProvider extends AdvancementProvider {
             AdvancementHolder vulpusArmor = Advancement.Builder.advancement()
                     .parent(vulpus)
                     .display(ModItems.VULPUS_CHESTPLATE.get(),
-                            Component.translatable("advancement.immersiveores.vulpusarmor.title"), Component.translatable("advancement.immersiveores.vulpusarmor.descrption"),
+                            Component.translatable("advancement.immersiveores.vulpusarmor.title").withStyle(ChatFormatting.RED), Component.translatable("advancement.immersiveores.vulpusarmor.descrption").withStyle(ChatFormatting.RED),
                             null,
                             AdvancementType.TASK, true, true, false)
                     .addCriterion("has_vulpus_helmet", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.VULPUS_HELMET.get()))
@@ -116,7 +117,7 @@ public class ModAdvancementProvider extends AdvancementProvider {
             AdvancementHolder vulpusSpecialTools = Advancement.Builder.advancement()
                     .parent(vulpusTools)
                     .display(ModItems.VULPUS_PAXEL.get(),
-                            Component.translatable("advancement.immersiveores.vulpusspecialtools.title"), Component.translatable("advancement.immersiveores.vulpusspecialtools.descrption"),
+                            Component.translatable("advancement.immersiveores.vulpusspecialtools.title").withStyle(ChatFormatting.RED), Component.translatable("advancement.immersiveores.vulpusspecialtools.descrption").withStyle(ChatFormatting.RED),
                             null,
                             AdvancementType.TASK, true, true, false)
                     .addCriterion("has_vulpus_hammer", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.VULPUS_HAMMER.get()))
@@ -128,7 +129,7 @@ public class ModAdvancementProvider extends AdvancementProvider {
             AdvancementHolder enderium = Advancement.Builder.advancement()
                     .parent(vulpusTools)
                     .display(ModItems.ENDERIUM_INGOT.get(),
-                            Component.translatable("advancement.immersiveores.enderium.title"), Component.translatable("advancement.immersiveores.enderium.descrption"),
+                            Component.translatable("advancement.immersiveores.enderium.title").withStyle(ChatFormatting.DARK_AQUA), Component.translatable("advancement.immersiveores.enderium.descrption").withStyle(ChatFormatting.DARK_AQUA),
                             null,
                             AdvancementType.TASK, true, true, false)
                     .addCriterion("has_enderium_ingot", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.ENDERIUM_INGOT.get()))
@@ -138,7 +139,7 @@ public class ModAdvancementProvider extends AdvancementProvider {
             AdvancementHolder enderiumTools = Advancement.Builder.advancement()
                     .parent(enderium)
                     .display(ModItems.ENDERIUM_PICKAXE.get(),
-                            Component.translatable("advancement.immersiveores.enderiumtools.title"), Component.translatable("advancement.immersiveores.enderiumtools.descrption"),
+                            Component.translatable("advancement.immersiveores.enderiumtools.title").withStyle(ChatFormatting.DARK_AQUA), Component.translatable("advancement.immersiveores.enderiumtools.descrption").withStyle(ChatFormatting.DARK_AQUA),
                             null,
                             AdvancementType.TASK, true, true, false)
                     .addCriterion("has_enderium_pickaxe", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.ENDERIUM_PICKAXE.get()))
@@ -152,7 +153,7 @@ public class ModAdvancementProvider extends AdvancementProvider {
             AdvancementHolder enderiumArmor = Advancement.Builder.advancement()
                     .parent(enderium)
                     .display(ModItems.ENDERIUM_CHESTPLATE.get(),
-                            Component.translatable("advancement.immersiveores.enderiumarmor.title"), Component.translatable("advancement.immersiveores.enderiumarmor.descrption"),
+                            Component.translatable("advancement.immersiveores.enderiumarmor.title").withStyle(ChatFormatting.DARK_AQUA), Component.translatable("advancement.immersiveores.enderiumarmor.descrption").withStyle(ChatFormatting.DARK_AQUA),
                             null,
                             AdvancementType.TASK, true, true, false)
                     .addCriterion("has_enderium_helmet", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.ENDERIUM_HELMET.get()))
@@ -165,7 +166,7 @@ public class ModAdvancementProvider extends AdvancementProvider {
             AdvancementHolder enderiumSpecialTools = Advancement.Builder.advancement()
                     .parent(enderiumTools)
                     .display(ModItems.ENDERIUM_PAXEL.get(),
-                            Component.translatable("advancement.immersiveores.enderiumspecialtools.title"), Component.translatable("advancement.immersiveores.enderiumspecialtools.descrption"),
+                            Component.translatable("advancement.immersiveores.enderiumspecialtools.title").withStyle(ChatFormatting.DARK_AQUA), Component.translatable("advancement.immersiveores.enderiumspecialtools.descrption").withStyle(ChatFormatting.DARK_AQUA),
                             null,
                             AdvancementType.TASK, true, true, false)
                     .addCriterion("has_enderium_hammer", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.ENDERIUM_HAMMER.get()))

@@ -29,6 +29,11 @@ public class VibraniumShovel extends ShovelItem {
     }
 
     @Override
+    public Component getName(ItemStack stack) {
+        return super.getName(stack).copy().withStyle(ChatFormatting.LIGHT_PURPLE);
+    }
+
+    @Override
     public void appendHoverText(ItemStack pStack, TooltipContext pContext, List<Component> components, TooltipFlag pTooltipFlag) {
         if(Screen.hasShiftDown()) {
             if (VibraniumConfig.UNBREAKABLE_VIBRANIUM.get()) {
