@@ -49,6 +49,11 @@ public class VulpusBow extends BowItem {
     }
 
     @Override
+    public Component getName(ItemStack stack) {
+        return super.getName(stack).copy().withStyle(ChatFormatting.RED);
+    }
+
+    @Override
     public boolean releaseUsing(ItemStack stack, Level world, LivingEntity entityLiving, int timeLeft) {
         if (entityLiving instanceof Player player) {
             ItemStack arrowStack = player.getProjectile(stack);

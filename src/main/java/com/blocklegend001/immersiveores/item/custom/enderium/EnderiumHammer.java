@@ -33,6 +33,11 @@ public class EnderiumHammer extends Hammer {
     }
 
     @Override
+    public Component getName(ItemStack stack) {
+        return super.getName(stack).copy().withStyle(ChatFormatting.DARK_AQUA);
+    }
+
+    @Override
     public void appendHoverText(ItemStack pStack, TooltipContext context, TooltipDisplay tooltipDisplay, Consumer<Component> consumer, TooltipFlag tooltipFlag) {
         super.appendHoverText(pStack, context, tooltipDisplay, consumer, tooltipFlag);
         int radius = getRadiusForHammer(pStack);

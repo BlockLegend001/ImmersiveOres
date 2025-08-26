@@ -11,13 +11,18 @@ import com.blocklegend001.immersiveores.block.custom.vulpus.RawVulpusBlock;
 import com.blocklegend001.immersiveores.block.custom.vulpus.VulpusBlock;
 import com.blocklegend001.immersiveores.block.custom.vulpus.VulpusOre;
 import com.blocklegend001.immersiveores.item.ModItems;
-import com.blocklegend001.immersiveores.tooltip.TooltipBlock;
-import com.blocklegend001.immersiveores.tooltip.TooltipBlockItem;
+import com.blocklegend001.immersiveores.util.color.ColoredBlock;
+import com.blocklegend001.immersiveores.util.color.ColoredBlockItem;
+import com.blocklegend001.immersiveores.util.tooltip.TooltipBlock;
+import com.blocklegend001.immersiveores.util.tooltip.TooltipBlockItem;
 import net.minecraft.core.registries.Registries;
+import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.Style;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -83,13 +88,25 @@ public class ModBlocks {
         return toReturn;
     }
 
-    private static <T extends Block> DeferredItem<Item> registerBlockItem(String name, DeferredBlock<T> block) {
+    private static <T extends Block> DeferredItem<BlockItem> registerBlockItem(String name, DeferredBlock<T> block) {
         return ModItems.ITEMS.register(name, () -> {
             Item.Properties properties = new Item.Properties()
                     .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(ImmersiveOres.MODID, name)));
 
-            if (block.get() instanceof TooltipBlock tooltipBlock) {
+            if (block.get() instanceof ColoredBlock coloredBlock && block.get() instanceof TooltipBlock tooltipBlock) {
+                return new TooltipBlockItem(tooltipBlock, properties) {
+                    @Override
+                    public Component getName(ItemStack stack) {
+                        return super.getName(stack).copy().withStyle(Style.EMPTY.withColor(coloredBlock.getColor()));
+                    }
+                };
+            } else if (block.get() instanceof TooltipBlock tooltipBlock) {
                 return new TooltipBlockItem(tooltipBlock, properties);
+            } else if (block.get() instanceof ColoredBlock coloredBlock) {
+                return new ColoredBlockItem((Block) coloredBlock,
+                        new Item.Properties().fireResistant()
+                                .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(ImmersiveOres.MODID, name))),
+                        coloredBlock.getColor());
             } else {
                 return new BlockItem(block.get(), properties);
             }

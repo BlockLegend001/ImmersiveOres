@@ -34,6 +34,7 @@
   },
   "display": {
     "description": {
+      "color": "light_purple",
       "translate": "advancement.immersiveores.vibraniumspecialtools.descrption"
     },
     "icon": {
@@ -41,6 +42,7 @@
       "id": "immersiveores:vibranium_paxel"
     },
     "title": {
+      "color": "light_purple",
       "translate": "advancement.immersiveores.vibraniumspecialtools.title"
     }
   },
