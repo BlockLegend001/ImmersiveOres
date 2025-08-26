@@ -18,13 +18,29 @@ import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.ArmorMaterial;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.item.component.Unbreakable;
 import net.minecraft.world.level.Level;
 
 import java.util.List;
 
 public class VulpusArmor extends ArmorItem {
+    private static Properties createSettings(boolean unbreakable, int durability) {
+        Properties settings = new Properties()
+                .durability(durability);
+
+        if (unbreakable) {
+            settings.component(DataComponents.UNBREAKABLE, new Unbreakable(true));
+        }
+        return settings;
+    }
+
     public VulpusArmor(Holder<ArmorMaterial> pMaterial, Type pType, Properties pProperties) {
-        super(pMaterial, pType, pProperties);
+        super(pMaterial, pType, createSettings(VulpusConfig.UNBREAKABLE_VULPUS.get(), VulpusConfig.DURABILITY_VULPUS.get()));
+    }
+
+    @Override
+    public Component getName(ItemStack stack) {
+        return super.getName(stack).copy().withStyle(ChatFormatting.RED);
     }
 
     @Override

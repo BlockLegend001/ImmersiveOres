@@ -35,6 +35,11 @@ public class VulpusHoe extends HoeItem {
     }
 
     @Override
+    public Component getName(ItemStack stack) {
+        return super.getName(stack).copy().withStyle(ChatFormatting.RED);
+    }
+
+    @Override
     public boolean isEnchantable(ItemStack p_41456_) {
         return true;
     }
