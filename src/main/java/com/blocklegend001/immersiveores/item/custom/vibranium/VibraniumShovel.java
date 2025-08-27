@@ -47,6 +47,12 @@ public class VibraniumShovel extends Item {
                 )
         );
     }
+
+    @Override
+    public Component getName(ItemStack stack) {
+        return super.getName(stack).copy().withStyle(ChatFormatting.LIGHT_PURPLE);
+    }
+
     @Override
     public InteractionResult useOn(UseOnContext context) {
         Level world = context.getLevel();

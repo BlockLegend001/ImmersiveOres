@@ -43,9 +43,14 @@ public class VulpusBow extends BowItem {
         return properties;
     }
 
-    public VulpusBow(com.blocklegend001.immersiveores.util.tools.bow.BowTier tier, Properties properties) {
+    public VulpusBow(BowTier tier, Properties properties) {
         super(createSettings(properties, VulpusConfig.UNBREAKABLE_VULPUS.get(), VulpusConfig.DURABILITY_VULPUS.get()));
         this.tier = tier;
+    }
+
+    @Override
+    public Component getName(ItemStack stack) {
+        return super.getName(stack).copy().withStyle(ChatFormatting.RED);
     }
 
     @Override
