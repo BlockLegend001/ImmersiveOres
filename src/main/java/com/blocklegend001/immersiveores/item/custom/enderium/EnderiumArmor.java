@@ -149,7 +149,9 @@ public class EnderiumArmor extends Item {
                 }
             }
             if (ModItems.ENDERIUM_CHESTPLATE.get() == pStack.getItem()) {
-                consumer.accept(Component.translatable("tooltip.immersiveores.unbreakble.tooltip").withStyle(ChatFormatting.DARK_AQUA));
+                if (EnderiumConfig.UNBREAKABLE_ENDERIUM.get()) {
+                    consumer.accept(Component.translatable("tooltip.immersiveores.unbreakble.tooltip").withStyle(ChatFormatting.DARK_AQUA));
+                }
                 consumer.accept(Component.translatable("tooltip.immersiveores.immunetofire.tooltip").withStyle(ChatFormatting.DARK_AQUA));
                 if (EnderiumConfig.FIRE_RESISTANCE_ENDERIUM_ARMOR.get()) {
                     consumer.accept(Component.translatable("tooltip.immersiveores.playerimmunetofire.tooltip").withStyle(ChatFormatting.DARK_AQUA));
@@ -158,17 +160,23 @@ public class EnderiumArmor extends Item {
                 }
             }
             if (ModItems.ENDERIUM_LEGGINGS.get() == pStack.getItem()) {
-                consumer.accept(Component.translatable("tooltip.immersiveores.unbreakble.tooltip").withStyle(ChatFormatting.DARK_AQUA));
-                if (EnderiumConfig.FIRE_RESISTANCE_ENDERIUM_ARMOR.get()) {
+                if (EnderiumConfig.UNBREAKABLE_ENDERIUM.get()) {
+                    consumer.accept(Component.translatable("tooltip.immersiveores.unbreakble.tooltip").withStyle(ChatFormatting.DARK_AQUA));
+                }
+                consumer.accept(Component.translatable("tooltip.immersiveores.immunetofire.tooltip").withStyle(ChatFormatting.DARK_AQUA));                if (EnderiumConfig.FIRE_RESISTANCE_ENDERIUM_ARMOR.get()) {
                     consumer.accept(Component.translatable("tooltip.immersiveores.immunetofire.tooltip").withStyle(ChatFormatting.DARK_AQUA));
                 } if (EnderiumConfig.MAKES_PIGLINS_NEUTRAL_ENDERIUM.get()) {
                     consumer.accept(Component.translatable("tooltip.immersiveores.immunetopiglin.tooltip").withStyle(ChatFormatting.DARK_AQUA));
                 } if (EnderiumConfig.NEVER_LOSE_HUNGER_ENDERIUM_ARMOR.get()) {
                     consumer.accept(Component.translatable("tooltip.immersiveores.nerverlosehunger.tooltip").withStyle(ChatFormatting.DARK_AQUA));
+                } if (EnderiumConfig.FIRE_RESISTANCE_ENDERIUM_ARMOR.get()) {
+                    consumer.accept(Component.translatable("tooltip.immersiveores.playerimmunetofire.tooltip").withStyle(ChatFormatting.DARK_AQUA));
                 }
             }
             if (ModItems.ENDERIUM_HELMET.get() == pStack.getItem()) {
-                consumer.accept(Component.translatable("tooltip.immersiveores.unbreakble.tooltip").withStyle(ChatFormatting.DARK_AQUA));
+                if (EnderiumConfig.UNBREAKABLE_ENDERIUM.get()) {
+                    consumer.accept(Component.translatable("tooltip.immersiveores.unbreakble.tooltip").withStyle(ChatFormatting.DARK_AQUA));
+                }
                 consumer.accept(Component.translatable("tooltip.immersiveores.immunetofire.tooltip").withStyle(ChatFormatting.DARK_AQUA));
                 if (EnderiumConfig.NIGHT_VISION_ENDERIUM_ARMOR.get()) {
                     consumer.accept(Component.translatable("tooltip.immersiveores.nightvision.tooltip").withStyle(ChatFormatting.DARK_AQUA));
@@ -176,6 +184,8 @@ public class EnderiumArmor extends Item {
                     consumer.accept(Component.translatable("tooltip.immersiveores.immunetopiglin.tooltip").withStyle(ChatFormatting.DARK_AQUA));
                 } if (EnderiumConfig.ENDERMAN_WILL_NOT_BE_ANGRY_WITH_YOU_ENDERIUM.get()) {
                     consumer.accept(Component.translatable("tooltip.immersiveores.endermanwillnotbeangrywithyou.tooltip").withStyle(ChatFormatting.DARK_AQUA));
+                } if (EnderiumConfig.FIRE_RESISTANCE_ENDERIUM_ARMOR.get()) {
+                    consumer.accept(Component.translatable("tooltip.immersiveores.playerimmunetofire.tooltip").withStyle(ChatFormatting.DARK_AQUA));
                 }
             }
         } else {
