@@ -3,7 +3,7 @@
   "minVersion": "0.8",
   "package": "com.blocklegend001.immersiveores.mixin",
   "compatibilityLevel": "JAVA_8",
-  "refmap": "onlyexcavators.refmap.json",
+  "refmap": "immersiveores.refmap.json",
   "mixins": [
     "LevelRendererExcavatorMixin",
     "LevelRendererHammerMixin"
