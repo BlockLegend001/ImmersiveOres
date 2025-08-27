@@ -52,6 +52,12 @@ public class VibraniumSword extends Item {
                 )
         );
     }
+
+    @Override
+    public Component getName(ItemStack stack) {
+        return super.getName(stack).copy().withStyle(ChatFormatting.LIGHT_PURPLE);
+    }
+
     @Override
     public void hurtEnemy(ItemStack stack, LivingEntity target, LivingEntity attacker) {
         if (!VibraniumConfig.UNBREAKABLE_VIBRANIUM.get()) {

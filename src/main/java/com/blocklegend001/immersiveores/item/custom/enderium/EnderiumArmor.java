@@ -47,6 +47,11 @@ public class EnderiumArmor extends Item {
     }
 
     @Override
+    public Component getName(ItemStack stack) {
+        return super.getName(stack).copy().withStyle(ChatFormatting.DARK_AQUA);
+    }
+
+    @Override
     public void inventoryTick(ItemStack stack, ServerLevel level, Entity entity, @Nullable EquipmentSlot equipmentSlot) {
         super.inventoryTick(stack, level, entity, equipmentSlot);
         if (entity instanceof Player player) {

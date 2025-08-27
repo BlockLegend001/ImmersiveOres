@@ -54,6 +54,11 @@ public class EnderiumShovel extends Item {
     }
 
     @Override
+    public Component getName(ItemStack stack) {
+        return super.getName(stack).copy().withStyle(ChatFormatting.DARK_AQUA);
+    }
+
+    @Override
     public InteractionResult useOn(UseOnContext context) {
         Level world = context.getLevel();
         BlockPos pos = context.getClickedPos();
