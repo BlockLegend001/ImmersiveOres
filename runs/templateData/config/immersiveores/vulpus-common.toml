@@ -1,30 +1,30 @@
 ["Armor Protection and Resistance"]
-	#Toughness value for Vulpus Armor | Default Value = 150
-	# Default: 150
+	#Toughness value for Vulpus Armor | Default Value = 7
+	# Default: 7
 	# Range: > 0
 	toughnessValueVulpusArmor = 150
-	#Enchantment value for Vulpus Armor | Default Value = 85
-	# Default: 85
+	#Enchantment value for Vulpus Armor | Default Value = 65
+	# Default: 65
 	# Range: > 0
 	enchantmentValueVulpusArmor = 85
 	#Knockback resistance for Vulpus Armor | Default Value = 2
 	# Default: 2
 	# Range: > 0
 	knockbackResistanceValueVulpusArmor = 2
-	#Protection value for Vulpus Boots | Default Value = 20
-	# Default: 20
+	#Protection value for Vulpus Boots | Default Value = 9
+	# Default: 9
 	# Range: > 0
 	protectionValueVulpusBoots = 20
-	#Protection value for Vulpus Leggings | Default Value = 25
-	# Default: 25
+	#Protection value for Vulpus Leggings | Default Value = 12
+	# Default: 12
 	# Range: > 0
 	protectionValueVulpusLeggings = 25
-	#Protection value for Vulpus Chestplate | Default Value = 35
-	# Default: 35
+	#Protection value for Vulpus Chestplate | Default Value = 16
+	# Default: 16
 	# Range: > 0
 	protectionValueVulpusChestplate = 35
-	#Protection value for Vulpus Helmet | Default Value = 20
-	# Default: 20
+	#Protection value for Vulpus Helmet | Default Value = 9
+	# Default: 9
 	# Range: > 0
 	protectionValueVulpusHelmet = 20
 
@@ -61,20 +61,20 @@
 	arrowCountVulpusBow = 3
 
 ["Tool Tier Base Properties"]
-	#Speed value of Vulpus Tool Tier | Default Value = 75
-	# Default: 75
+	#Speed value of Vulpus Tool Tier | Default Value = 40
+	# Default: 40
 	# Range: > 0
 	speedVulpusTier = 75
-	#Bonus attack damage for Vulpus Tool Tier | Default Value = 20
-	# Default: 20
+	#Bonus attack damage for Vulpus Tool Tier | Default Value = 3
+	# Default: 3
 	# Range: > 0
 	attackDamageBonusVulpusTier = 20
-	#Enchantment value for Vulpus Tool Tier | Default Value = 85
-	# Default: 85
+	#Enchantment value for Vulpus Tool Tier | Default Value = 65
+	# Default: 65
 	# Range: > 0
 	enchantmentValueVulpusTier = 85
-	#Durability of Vulpus tools | Default Value = 6093
-	# Default: 6093
+	#Durability of Vulpus tools | Default Value = 3093
+	# Default: 3093
 	# Range: > 0
 	durabilityVulpus = 6093
 	#Whether Vulpus is unbreakable | Default Value = false
@@ -85,8 +85,8 @@
 	# Default: 10
 	# Range: > 0
 	attackDamageVulpusPickaxe = 10
-	#Attack speed of Vulpus Pickaxe | Default Value = 2.0
-	# Default: 2.0
+	#Attack speed of Vulpus Pickaxe | Default Value = 0.5
+	# Default: 0.5
 	# Range: 0.0 ~ 1024.0
 	attackSpeedVulpusPickaxe = 2.0
 
@@ -95,18 +95,18 @@
 	# Default: 15
 	# Range: > 0
 	attackDamageVulpusAxe = 15
-	#Attack speed of Vulpus Axe | Default Value = 2.0
-	# Default: 2.0
+	#Attack speed of Vulpus Axe | Default Value = 0.5
+	# Default: 0.5
 	# Range: 0.0 ~ 1024.0
 	attackSpeedVulpusAxe = 2.0
 
 ["Shovel Stats"]
-	#Attack damage of Vulpus Shovel | Default Value = 12
-	# Default: 12
+	#Attack damage of Vulpus Shovel | Default Value = 10
+	# Default: 10
 	# Range: > 0
 	attackDamageVulpusShovel = 12
-	#Attack speed of Vulpus Shovel | Default Value = 2.0
-	# Default: 2.0
+	#Attack speed of Vulpus Shovel | Default Value = 0.5
+	# Default: 0.5
 	# Range: 0.0 ~ 1024.0
 	attackSpeedVulpusShovel = 2.0
 
@@ -115,8 +115,8 @@
 	# Default: 14
 	# Range: > 0
 	attackDamageVulpusSword = 14
-	#Attack speed of Vulpus Sword | Default Value = 2.0
-	# Default: 2.0
+	#Attack speed of Vulpus Sword | Default Value = 0.5
+	# Default: 0.5
 	# Range: 0.0 ~ 1024.0
 	attackSpeedVulpusSword = 2.0
 
@@ -125,28 +125,28 @@
 	# Default: 10
 	# Range: > 0
 	attackDamageVulpusHoe = 10
-	#Attack speed of Vulpus Hoe | Default Value = 2.0
-	# Default: 2.0
+	#Attack speed of Vulpus Hoe | Default Value = 0.5
+	# Default: 0.5
 	# Range: 0.0 ~ 1024.0
 	attackSpeedVulpusHoe = 2.0
 
 ["Paxel Stats"]
-	#Attack damage of Vulpus Paxel | Default Value = 18
-	# Default: 18
+	#Attack damage of Vulpus Paxel | Default Value = 15
+	# Default: 15
 	# Range: > 0
 	attackDamageVulpusPaxel = 18
-	#Attack speed of Vulpus Paxel | Default Value = 2.0
-	# Default: 2.0
+	#Attack speed of Vulpus Paxel | Default Value = 0.5
+	# Default: 0.5
 	# Range: 0.0 ~ 1024.0
 	attackSpeedVulpusPaxel = 2.0
 
 ["Hammer Stats"]
-	#Attack damage of Vulpus Hammer | Default Value = 22
-	# Default: 22
+	#Attack damage of Vulpus Hammer | Default Value = 11
+	# Default: 11
 	# Range: > 0
 	attackDamageVulpusHammer = 22
-	#Attack speed of Vulpus Hammer | Default Value = 2.0
-	# Default: 2.0
+	#Attack speed of Vulpus Hammer | Default Value = 0.5
+	# Default: 0.5
 	# Range: 0.0 ~ 1024.0
 	attackSpeedVulpusHammer = 2.0
 	#Radius of Vulpus Hammer effect | Default Value = 2
@@ -155,12 +155,12 @@
 	radiusVulpusHammer = 2
 
 ["Excavator Stats"]
-	#Attack damage of Vulpus Excavator | Default Value = 20
-	# Default: 20
+	#Attack damage of Vulpus Excavator | Default Value = 11
+	# Default: 11
 	# Range: > 0
 	attackDamageVulpusExcavator = 20
-	#Attack speed of Vulpus Excavator | Default Value = 2.0
-	# Default: 2.0
+	#Attack speed of Vulpus Excavator | Default Value = 0.5
+	# Default: 0.5
 	# Range: 0.0 ~ 1024.0
 	attackSpeedVulpusExcavator = 2.0
 	#Radius of Vulpus Excavator effect | Default Value = 2
