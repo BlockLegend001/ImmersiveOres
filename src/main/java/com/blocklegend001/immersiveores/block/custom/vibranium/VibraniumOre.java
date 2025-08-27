@@ -2,22 +2,19 @@ package com.blocklegend001.immersiveores.block.custom.vibranium;
 
 import com.blocklegend001.immersiveores.block.ModBlocks;
 import com.blocklegend001.immersiveores.item.ModItems;
-import com.blocklegend001.immersiveores.tooltip.TooltipBlock;
+import com.blocklegend001.immersiveores.util.color.ColoredBlock;
+import com.blocklegend001.immersiveores.util.tooltip.TooltipBlock;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
-import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 
-import java.util.List;
-
-public class VibraniumOre extends Block implements TooltipBlock {
+public class VibraniumOre extends Block implements TooltipBlock, ColoredBlock {
     public VibraniumOre(Properties arg) {
         super(arg);
     }
@@ -39,6 +36,11 @@ public class VibraniumOre extends Block implements TooltipBlock {
                     || itemInHand.is(ModItems.ENDERIUM_PAXEL.get());
         }
         return super.canHarvestBlock(state, level, pos, player);
+    }
+
+    @Override
+    public ChatFormatting getColor() {
+        return ChatFormatting.LIGHT_PURPLE;
     }
 
     @Override

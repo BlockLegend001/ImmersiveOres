@@ -41,9 +41,14 @@ public class VibraniumBow extends BowItem {
         return properties;
     }
 
-    public VibraniumBow(com.blocklegend001.immersiveores.util.tools.bow.BowTier tier, Properties properties) {
+    public VibraniumBow(BowTier tier, Properties properties) {
         super(createSettings(properties, VibraniumConfig.UNBREAKABLE_VIBRANIUM.get(), VibraniumConfig.DURABILITY_VIBRANIUM.get()));
         this.tier = tier;
+    }
+
+    @Override
+    public Component getName(ItemStack stack) {
+        return super.getName(stack).copy().withStyle(ChatFormatting.LIGHT_PURPLE);
     }
 
     @Override

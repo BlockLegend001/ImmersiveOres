@@ -7,11 +7,15 @@ import com.blocklegend001.immersiveores.config.VulpusConfig;
 import com.blocklegend001.immersiveores.item.custom.enderium.*;
 import com.blocklegend001.immersiveores.item.custom.vibranium.*;
 import com.blocklegend001.immersiveores.item.custom.vulpus.*;
+import com.blocklegend001.immersiveores.util.color.ColoredItem;
 import com.blocklegend001.immersiveores.util.tools.bow.BowTiers;
+import net.minecraft.ChatFormatting;
 import net.minecraft.core.registries.Registries;
+import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.equipment.ArmorType;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
@@ -23,55 +27,55 @@ public class ModItems {
 
     //RAW
     public static final DeferredItem<Item> RAW_VIBRANIUM = ITEMS.register("raw_vibranium",
-            () -> new Item(new Item.Properties().fireResistant()
-                    .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(ImmersiveOres.MODID, "raw_vibranium")))));
+            () -> new ColoredItem(new Item.Properties().fireResistant()
+                    .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(ImmersiveOres.MODID, "raw_vibranium"))), ChatFormatting.LIGHT_PURPLE));
 
     public static final DeferredItem<Item> RAW_VULPUS = ITEMS.register("raw_vulpus",
-            () -> new Item(new Item.Properties().fireResistant()
-                    .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(ImmersiveOres.MODID, "raw_vulpus")))));
+            () -> new ColoredItem(new Item.Properties().fireResistant()
+                    .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(ImmersiveOres.MODID, "raw_vulpus"))), ChatFormatting.RED));
 
     public static final DeferredItem<Item> RAW_ENDERIUM = ITEMS.register("raw_enderium",
-            () -> new Item(new Item.Properties().fireResistant()
-                    .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(ImmersiveOres.MODID, "raw_enderium")))));
+            () -> new ColoredItem(new Item.Properties().fireResistant()
+                    .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(ImmersiveOres.MODID, "raw_enderium"))), ChatFormatting.DARK_AQUA));
 
     //INGOT
     public static final DeferredItem<Item> VIBRANIUM_INGOT = ITEMS.register("vibranium_ingot",
-            () -> new Item(new Item.Properties().fireResistant()
-                    .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(ImmersiveOres.MODID, "vibranium_ingot")))));
+            () -> new ColoredItem(new Item.Properties().fireResistant()
+                    .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(ImmersiveOres.MODID, "vibranium_ingot"))), ChatFormatting.LIGHT_PURPLE));
 
     public static final DeferredItem<Item> VULPUS_INGOT = ITEMS.register("vulpus_ingot",
-            () -> new Item(new Item.Properties().fireResistant()
-                    .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(ImmersiveOres.MODID, "vulpus_ingot")))));
+            () -> new ColoredItem(new Item.Properties().fireResistant()
+                    .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(ImmersiveOres.MODID, "vulpus_ingot"))), ChatFormatting.RED));
 
     public static final DeferredItem<Item> ENDERIUM_INGOT = ITEMS.register("enderium_ingot",
-            () -> new Item(new Item.Properties().fireResistant()
-                    .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(ImmersiveOres.MODID, "enderium_ingot")))));
+            () -> new ColoredItem(new Item.Properties().fireResistant()
+                    .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(ImmersiveOres.MODID, "enderium_ingot"))), ChatFormatting.DARK_AQUA));
 
     //NUGGET
     public static final DeferredItem<Item> VIBRANIUM_NUGGET = ITEMS.register("vibranium_nugget",
-            () -> new Item(new Item.Properties().fireResistant()
-                    .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(ImmersiveOres.MODID, "vibranium_nugget")))));
+            () -> new ColoredItem(new Item.Properties().fireResistant()
+                    .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(ImmersiveOres.MODID, "vibranium_nugget"))), ChatFormatting.LIGHT_PURPLE));
 
     public static final DeferredItem<Item> VULPUS_NUGGET = ITEMS.register("vulpus_nugget",
-            () -> new Item(new Item.Properties().fireResistant()
-                    .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(ImmersiveOres.MODID, "vulpus_nugget")))));
+            () -> new ColoredItem(new Item.Properties().fireResistant()
+                    .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(ImmersiveOres.MODID, "vulpus_nugget"))), ChatFormatting.RED));
 
     public static final DeferredItem<Item> ENDERIUM_NUGGET = ITEMS.register("enderium_nugget",
-            () -> new Item(new Item.Properties().fireResistant()
-                    .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(ImmersiveOres.MODID, "enderium_nugget")))));
+            () -> new ColoredItem(new Item.Properties().fireResistant()
+                    .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(ImmersiveOres.MODID, "enderium_nugget"))), ChatFormatting.DARK_AQUA));
 
     //STICK
     public static final DeferredItem<Item> VIBRANIUM_STICK = ITEMS.register("vibranium_stick",
-            () -> new Item(new Item.Properties().fireResistant()
-                    .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(ImmersiveOres.MODID, "vibranium_stick")))));
+            () -> new ColoredItem(new Item.Properties().fireResistant()
+                    .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(ImmersiveOres.MODID, "vibranium_stick"))), ChatFormatting.LIGHT_PURPLE));
 
     public static final DeferredItem<Item> VULPUS_STICK = ITEMS.register("vulpus_stick",
-            () -> new Item(new Item.Properties().fireResistant()
-                    .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(ImmersiveOres.MODID, "vulpus_stick")))));
+            () -> new ColoredItem(new Item.Properties().fireResistant()
+                    .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(ImmersiveOres.MODID, "vulpus_stick"))), ChatFormatting.RED));
 
     public static final DeferredItem<Item> ENDERIUM_STICK = ITEMS.register("enderium_stick",
-            () -> new Item(new Item.Properties().fireResistant()
-                    .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(ImmersiveOres.MODID, "enderium_stick")))));
+            () -> new ColoredItem(new Item.Properties().fireResistant()
+                    .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(ImmersiveOres.MODID, "enderium_stick"))), ChatFormatting.DARK_AQUA));
 
     //VIBRANIUM
     public static final DeferredItem<Item> VIBRANIUM_PICKAXE = ITEMS.register("vibranium_pickaxe",
@@ -153,7 +157,12 @@ public class ModItems {
 
     public static final DeferredItem<Item> VIBRANIUM_HORSE_ARMOR = ITEMS.register("vibranium_horse_armor",
             () -> new Item(new Item.Properties().fireResistant().horseArmor(ModArmorMaterials.VIBRANIUM).stacksTo(1)
-                    .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(ImmersiveOres.MODID, "vibranium_horse_armor")))));
+                    .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(ImmersiveOres.MODID, "vibranium_horse_armor")))) {
+                @Override
+                public Component getName(ItemStack stack) {
+                    return super.getName(stack).copy().withStyle(ChatFormatting.LIGHT_PURPLE);
+                }
+            });
 
     //VULPUS
     public static final DeferredItem<Item> VULPUS_PICKAXE = ITEMS.register("vulpus_pickaxe",
@@ -235,7 +244,12 @@ public class ModItems {
 
     public static final DeferredItem<Item> VULPUS_HORSE_ARMOR = ITEMS.register("vulpus_horse_armor",
             () -> new Item(new Item.Properties().fireResistant().horseArmor(ModArmorMaterials.VULPUS).stacksTo(1)
-                    .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(ImmersiveOres.MODID, "vulpus_horse_armor")))));
+                    .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(ImmersiveOres.MODID, "vulpus_horse_armor")))) {
+                @Override
+                public Component getName(ItemStack stack) {
+                    return super.getName(stack).copy().withStyle(ChatFormatting.RED);
+                }
+            });
 
     //ENDERIUM
     public static final DeferredItem<Item> ENDERIUM_PICKAXE = ITEMS.register("enderium_pickaxe",
@@ -317,7 +331,12 @@ public class ModItems {
 
     public static final DeferredItem<Item> ENDERIUM_HORSE_ARMOR = ITEMS.register("enderium_horse_armor",
             () -> new Item(new Item.Properties().fireResistant().horseArmor(ModArmorMaterials.ENDERIUM).stacksTo(1)
-                    .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(ImmersiveOres.MODID, "enderium_horse_armor")))));
+                    .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(ImmersiveOres.MODID, "enderium_horse_armor")))) {
+                @Override
+                public Component getName(ItemStack stack) {
+                    return super.getName(stack).copy().withStyle(ChatFormatting.DARK_AQUA);
+                }
+            });
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
