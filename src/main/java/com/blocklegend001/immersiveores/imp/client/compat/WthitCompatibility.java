@@ -45,12 +45,42 @@ public class WthitCompatibility implements IWailaPlugin {
             }
 
             if (requiredTool != null) {
-                boolean canHarvest = player != null && player.canHarvest(state);
+                boolean canHarvest = player != null && canHarvestWithTag(player.getMainHandStack(), state);
                 String symbol = canHarvest ? Formatting.GREEN + "✔ " : Formatting.RED + "✖ ";
 
                 tooltip.addLine(new ItemComponent(requiredTool));
                 tooltip.addLine(Text.literal(symbol + "Requires " + toolName).formatted(Formatting.GRAY));
             }
         }
+    }
+
+    private static boolean canHarvestWithTag(ItemStack held, BlockState state) {
+        if (held.isEmpty()) return false;
+
+        if (held.isOf(Items.NETHERITE_PICKAXE)) {
+            return state.isIn(ModTags.Blocks.NEEDS_VIBRANIUM_TOOL);
+        }
+
+        if (held.isOf(ModItems.VIBRANIUM_PICKAXE) ||
+                held.isOf(ModItems.VIBRANIUM_HAMMER) ||
+                held.isOf(ModItems.VIBRANIUM_PAXEL)) {
+
+            return state.isIn(ModTags.Blocks.NEEDS_NETHERITE_TOOL) ||
+                    state.isIn(ModTags.Blocks.NEEDS_VIBRANIUM_TOOL);
+        }
+
+        if (held.isOf(ModItems.VULPUS_PICKAXE) ||
+                held.isOf(ModItems.VULPUS_HAMMER) ||
+                held.isOf(ModItems.VULPUS_PAXEL)) {
+            return true;
+        }
+
+        if (held.isOf(ModItems.ENDERIUM_PICKAXE) ||
+                held.isOf(ModItems.ENDERIUM_HAMMER) ||
+                held.isOf(ModItems.ENDERIUM_PAXEL)) {
+            return true;
+        }
+
+        return false;
     }
 }
