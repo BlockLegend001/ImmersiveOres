@@ -1,8 +1,3 @@
 {
-  "remove": [
-    "#immersiveores:needs_vibranium_tool"
-  ],
-  "values": [
-    "#minecraft:incorrect_for_netherite_tool"
-  ]
+  "values": []
 }
