@@ -43,6 +43,8 @@ public class JadeCompatibility implements IWailaPlugin {
                 pickaxe = new ItemStack(ModItems.VULPUS_PICKAXE.get());
             } else if (state.is(ModTags.Blocks.NEEDS_ENDERIUM_TOOL)) {
                 pickaxe = new ItemStack(ModItems.ENDERIUM_PICKAXE.get());
+            } else if (state.is(ModTags.Blocks.NEEDS_NETHERITE_TOOL)) {
+                pickaxe = new ItemStack(Items.NETHERITE_PICKAXE);
             }
 
             if (pickaxe != null) {
