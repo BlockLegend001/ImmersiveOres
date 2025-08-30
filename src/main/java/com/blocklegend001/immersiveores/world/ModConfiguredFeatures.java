@@ -41,11 +41,11 @@ public class ModConfiguredFeatures {
         List<OreConfiguration.TargetBlockState> overworldVibraniumOres = List.of(OreConfiguration.target(deepslateReplaceables,
                 ModBlocks.VIBRANIUM_ORE.get().defaultBlockState()));
 
-        register(context, OVERWORLD_VIBRANIUM_ORE_KEY, Feature.ORE, new OreConfiguration(overworldVibraniumOres, 4));
+        register(context, OVERWORLD_VIBRANIUM_ORE_KEY, Feature.ORE, new OreConfiguration(overworldVibraniumOres, 5));
         register(context, NETHER_VULPUS_ORE_KEY, Feature.ORE, new OreConfiguration(netherrackReplaceables,
-                ModBlocks.VULPUS_ORE.get().defaultBlockState(), 3));
+                ModBlocks.VULPUS_ORE.get().defaultBlockState(), 4));
         register(context, END_ENDERIUM_ORE_KEY, Feature.ORE, new OreConfiguration(endReplaceables,
-                ModBlocks.ENDERIUM_ORE.get().defaultBlockState(), 3));
+                ModBlocks.ENDERIUM_ORE.get().defaultBlockState(), 4));
 
         register(context, VIBRANIUM_GEODE_KEY, Feature.GEODE,
                 new GeodeConfiguration(new GeodeBlockSettings(BlockStateProvider.simple(Blocks.AIR),
