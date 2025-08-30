@@ -30,23 +30,23 @@ public class ModPlacedFeatures {
         var configuredFeatureRegistryEntryLookup = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
                 
         register(context, VIBRANIUM_ORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.OVERWORLD_VIBRANIUM_ORE_KEY),
-                ModOrePlacement.modifiersWithCount(6,
+                ModOrePlacement.modifiersWithCount(7,
                         HeightRangePlacementModifier.uniform(YOffset.fixed(-60), YOffset.fixed(0))));
         register(context, NETHER_VULPUS_ORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.NETHER_VULPUS_ORE_KEY),
-                ModOrePlacement.modifiersWithCount(5,
+                ModOrePlacement.modifiersWithCount(6,
                         HeightRangePlacementModifier.uniform(YOffset.fixed(0), YOffset.fixed(125))));
         register(context, END_ENDERIUM_ORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.END_ENDERIUM_ORE_KEY),
-                ModOrePlacement.modifiersWithCount(4,
+                ModOrePlacement.modifiersWithCount(5,
                         HeightRangePlacementModifier.uniform(YOffset.fixed(0), YOffset.fixed(125))));
 
         register(context, VIBRANIUM_GEODE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.VIBRANIUM_GEODE_KEY), List.of(
-                RarityFilterPlacementModifier.of(40), SquarePlacementModifier.of(),
+                RarityFilterPlacementModifier.of(35), SquarePlacementModifier.of(),
                 HeightRangePlacementModifier.uniform(YOffset.fixed(-60), YOffset.fixed(0))));
         register(context, VULPUS_GEODE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.VULPUS_GEODE_KEY), List.of(
-                RarityFilterPlacementModifier.of(50), SquarePlacementModifier.of(),
+                RarityFilterPlacementModifier.of(45), SquarePlacementModifier.of(),
                 HeightRangePlacementModifier.uniform(YOffset.fixed(0), YOffset.fixed(125))));
         register(context, ENDERIUM_GEODE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.ENDERIUM_GEODE_KEY), List.of(
-                RarityFilterPlacementModifier.of(55), SquarePlacementModifier.of(),
+                RarityFilterPlacementModifier.of(50), SquarePlacementModifier.of(),
                 HeightRangePlacementModifier.uniform(YOffset.fixed(0), YOffset.fixed(125))));
     }
 
