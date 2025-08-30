@@ -38,9 +38,9 @@ public class ModConfiguredFeatures {
         List<OreFeatureConfig.Target> endEnderiumOres = List.of(OreFeatureConfig.createTarget(endReplacables,
                 ModBlocks.ENDERIUM_ORE.getDefaultState()));
 
-        register(context, OVERWORLD_VIBRANIUM_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldVibraniumOres, 4));
-        register(context, NETHER_VULPUS_ORE_KEY, Feature.ORE, new OreFeatureConfig(netherVulpusOres, 3));
-        register(context, END_ENDERIUM_ORE_KEY, Feature.ORE, new OreFeatureConfig(endEnderiumOres, 3));
+        register(context, OVERWORLD_VIBRANIUM_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldVibraniumOres, 5));
+        register(context, NETHER_VULPUS_ORE_KEY, Feature.ORE, new OreFeatureConfig(netherVulpusOres, 4));
+        register(context, END_ENDERIUM_ORE_KEY, Feature.ORE, new OreFeatureConfig(endEnderiumOres, 4));
 
         register(context, VIBRANIUM_GEODE_KEY, Feature.GEODE,
                 new GeodeFeatureConfig(new GeodeLayerConfig(
