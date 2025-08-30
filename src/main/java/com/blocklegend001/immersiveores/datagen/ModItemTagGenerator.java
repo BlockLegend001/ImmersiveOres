@@ -6,6 +6,7 @@ import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.VanillaItemTagsProvider;
 import net.minecraft.tags.ItemTags;
+import net.minecraft.world.item.Items;
 import net.neoforged.neoforge.common.Tags;
 
 import java.util.concurrent.CompletableFuture;
@@ -248,5 +249,8 @@ public class ModItemTagGenerator extends VanillaItemTagsProvider {
                 .add(ModItems.VIBRANIUM_INGOT.get())
                 .add(ModItems.VULPUS_INGOT.get())
                 .add(ModItems.ENDERIUM_INGOT.get());
+
+        tag(ModTags.Items.TOOLS_NETHERITE)
+                .add(Items.NETHERITE_PICKAXE);
     }
 }
