@@ -57,7 +57,7 @@ public class WthitCompatibility implements IWailaPlugin {
             if (held.isEmpty()) return false;
 
             if (held.is(Items.NETHERITE_PICKAXE)) {
-                return state.is(ModTags.Blocks.NEEDS_VIBRANIUM_TOOL);
+                return state.is(ModTags.Blocks.NEEDS_NETHERITE_TOOL);
             }
 
             if (held.is(ModItems.VIBRANIUM_PICKAXE.get()) ||
