@@ -4,4 +4,5 @@
 - Balanced the config
 - Fixed some tooltips not displayed correctly on the armors
 - Fixed some incompatibility issues with Jade & WTHIT
+- Balanced the generation of Vibranium, Vulpus, and Enderium ores
 - **WARNING**: This update requires a regeneration of the config file.
