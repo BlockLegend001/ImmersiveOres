@@ -26,25 +26,25 @@ public class ModPlacedFeatures {
         HolderGetter<ConfiguredFeature<?, ?>> configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
 
         register(context, VIBRANIUM_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.OVERWORLD_VIBRANIUM_ORE_KEY),
-                ModOrePlacement.commonOrePlacement(6,
+                ModOrePlacement.commonOrePlacement(7,
                         HeightRangePlacement.uniform(VerticalAnchor.absolute(-60), VerticalAnchor.absolute(0))));
         register(context, NETHER_VULPUS_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.NETHER_VULPUS_ORE_KEY),
-                ModOrePlacement.commonOrePlacement(5,
+                ModOrePlacement.commonOrePlacement(6,
                         HeightRangePlacement.uniform(VerticalAnchor.absolute(0), VerticalAnchor.absolute(125))));
         register(context, END_ENDERIUM_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.END_ENDERIUM_ORE_KEY),
-                ModOrePlacement.commonOrePlacement(4,
+                ModOrePlacement.commonOrePlacement(5,
                         HeightRangePlacement.uniform(VerticalAnchor.absolute(0), VerticalAnchor.absolute(125))));
 
         register(context, VIBRANIUM_GEODE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.VIBRANIUM_GEODE_KEY), List.of(
-                RarityFilter.onAverageOnceEvery(40), InSquarePlacement.spread(),
+                RarityFilter.onAverageOnceEvery(35), InSquarePlacement.spread(),
                 HeightRangePlacement.uniform(VerticalAnchor.absolute(-60), VerticalAnchor.absolute(0)),
                 BiomeFilter.biome()));
         register(context, VULPUS_GEODE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.VULPUS_GEODE_KEY), List.of(
-                RarityFilter.onAverageOnceEvery(50), InSquarePlacement.spread(),
+                RarityFilter.onAverageOnceEvery(45), InSquarePlacement.spread(),
                 HeightRangePlacement.uniform(VerticalAnchor.absolute(0), VerticalAnchor.absolute(125)),
                 BiomeFilter.biome()));
         register(context, ENDERIUM_GEODE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.ENDERIUM_GEODE_KEY), List.of(
-                RarityFilter.onAverageOnceEvery(55), InSquarePlacement.spread(),
+                RarityFilter.onAverageOnceEvery(40), InSquarePlacement.spread(),
                 HeightRangePlacement.uniform(VerticalAnchor.absolute(0), VerticalAnchor.absolute(125)),
                 BiomeFilter.biome()));
     }
