@@ -7,6 +7,7 @@ import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
 import net.minecraft.tags.ItemTags;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
 import net.neoforged.neoforge.common.Tags;
 
@@ -251,5 +252,8 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                 .add(ModItems.VIBRANIUM_INGOT.get())
                 .add(ModItems.VULPUS_INGOT.get())
                 .add(ModItems.ENDERIUM_INGOT.get());
+
+        tag(ModTags.Items.TOOLS_NETHERITE)
+                .add(Items.NETHERITE_PICKAXE);
     }
 }
