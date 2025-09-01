@@ -252,5 +252,143 @@ public class ModItemTagGenerator extends FabricTagProvider.ItemTagProvider {
 
         getOrCreateTagBuilder(ModTags.Items.TOOLS_NETHERITE)
                 .add(Items.NETHERITE_PICKAXE);
+
+        getOrCreateTagBuilder(ItemTags.PICKAXES).add(ModItems.VIBRANIUM_PICKAXE,
+                ModItems.VULPUS_PICKAXE,
+                ModItems.ENDERIUM_PICKAXE,
+                ModItems.VIBRANIUM_PAXEL,
+                ModItems.VULPUS_PAXEL,
+                ModItems.ENDERIUM_PAXEL);
+
+        getOrCreateTagBuilder(ItemTags.SHOVELS).add(ModItems.VIBRANIUM_SHOVEL,
+                ModItems.VULPUS_SHOVEL,
+                ModItems.ENDERIUM_SHOVEL,
+                ModItems.VIBRANIUM_PAXEL,
+                ModItems.VULPUS_PAXEL,
+                ModItems.ENDERIUM_PAXEL);
+
+        getOrCreateTagBuilder(ItemTags.AXES).add(ModItems.VIBRANIUM_AXE,
+                ModItems.VULPUS_AXE,
+                ModItems.ENDERIUM_AXE,
+                ModItems.VIBRANIUM_PAXEL,
+                ModItems.VULPUS_PAXEL,
+                ModItems.ENDERIUM_PAXEL);
+
+        getOrCreateTagBuilder(ItemTags.HOES).add(ModItems.VIBRANIUM_HOE,
+                ModItems.VULPUS_HOE,
+                ModItems.ENDERIUM_HOE);
+
+        getOrCreateTagBuilder(ItemTags.SWORDS).add(ModItems.VIBRANIUM_SWORD,
+                ModItems.VULPUS_SWORD,
+                ModItems.ENDERIUM_SWORD);
+
+        getOrCreateTagBuilder(ConventionalItemTags.BOW_TOOLS).add(ModItems.VIBRANIUM_BOW,
+                ModItems.VULPUS_BOW,
+                ModItems.ENDERIUM_BOW);
+
+        getOrCreateTagBuilder(ConventionalItemTags.TOOLS).add(ModItems.VIBRANIUM_HAMMER,
+                ModItems.VULPUS_HAMMER,
+                ModItems.ENDERIUM_HAMMER,
+                ModItems.VIBRANIUM_EXCAVATOR,
+                ModItems.VULPUS_EXCAVATOR,
+                ModItems.ENDERIUM_EXCAVATOR,
+                ModItems.VIBRANIUM_PICKAXE,
+                ModItems.VULPUS_PICKAXE,
+                ModItems.ENDERIUM_PICKAXE,
+                ModItems.VIBRANIUM_HOE,
+                ModItems.VULPUS_HOE,
+                ModItems.ENDERIUM_HOE,
+                ModItems.VIBRANIUM_AXE,
+                ModItems.VULPUS_AXE,
+                ModItems.ENDERIUM_AXE,
+                ModItems.VIBRANIUM_SHOVEL,
+                ModItems.VULPUS_SHOVEL,
+                ModItems.ENDERIUM_SHOVEL,
+                ModItems.VIBRANIUM_PAXEL,
+                ModItems.VULPUS_PAXEL,
+                ModItems.ENDERIUM_PAXEL);
+
+        getOrCreateTagBuilder(ConventionalItemTags.MINING_TOOL_TOOLS).add(ModItems.VIBRANIUM_HAMMER,
+                ModItems.VULPUS_HAMMER,
+                ModItems.ENDERIUM_HAMMER,
+                ModItems.VIBRANIUM_EXCAVATOR,
+                ModItems.VULPUS_EXCAVATOR,
+                ModItems.ENDERIUM_EXCAVATOR,
+                ModItems.VIBRANIUM_PICKAXE,
+                ModItems.VULPUS_PICKAXE,
+                ModItems.ENDERIUM_PICKAXE,
+                ModItems.VIBRANIUM_HOE,
+                ModItems.VULPUS_HOE,
+                ModItems.ENDERIUM_HOE,
+                ModItems.VIBRANIUM_AXE,
+                ModItems.VULPUS_AXE,
+                ModItems.ENDERIUM_AXE,
+                ModItems.VIBRANIUM_SHOVEL,
+                ModItems.VULPUS_SHOVEL,
+                ModItems.ENDERIUM_SHOVEL,
+                ModItems.VIBRANIUM_PAXEL,
+                ModItems.VULPUS_PAXEL,
+                ModItems.ENDERIUM_PAXEL);
+
+        getOrCreateTagBuilder(ItemTags.CHEST_ARMOR).add(ModItems.VIBRANIUM_CHESTPLATE,
+                ModItems.VULPUS_CHESTPLATE,
+                ModItems.ENDERIUM_CHESTPLATE);
+
+        getOrCreateTagBuilder(ItemTags.FOOT_ARMOR).add(ModItems.VIBRANIUM_BOOTS,
+                ModItems.VULPUS_BOOTS,
+                ModItems.ENDERIUM_BOOTS);
+
+        getOrCreateTagBuilder(ItemTags.LEG_ARMOR).add(ModItems.VIBRANIUM_LEGGINGS,
+                ModItems.VULPUS_LEGGINGS,
+                ModItems.ENDERIUM_LEGGINGS);
+
+        getOrCreateTagBuilder(ItemTags.HEAD_ARMOR).add(ModItems.VIBRANIUM_HELMET,
+                ModItems.VULPUS_HELMET,
+                ModItems.ENDERIUM_HELMET);
+
+        getOrCreateTagBuilder(ConventionalItemTags.ARMORS).add(ModItems.VIBRANIUM_HELMET,
+                ModItems.VIBRANIUM_CHESTPLATE,
+                ModItems.VIBRANIUM_LEGGINGS,
+                ModItems.VIBRANIUM_BOOTS,
+                ModItems.VULPUS_HELMET,
+                ModItems.VULPUS_CHESTPLATE,
+                ModItems.VULPUS_LEGGINGS,
+                ModItems.VULPUS_BOOTS,
+                ModItems.ENDERIUM_HELMET,
+                ModItems.ENDERIUM_CHESTPLATE,
+                ModItems.ENDERIUM_LEGGINGS,
+                ModItems.ENDERIUM_BOOTS);
+
+        getOrCreateTagBuilder(ConventionalItemTags.NUGGETS)
+                .add(ModItems.VIBRANIUM_NUGGET,
+                        ModItems.VULPUS_NUGGET,
+                        ModItems.ENDERIUM_NUGGET);
+
+        getOrCreateTagBuilder(ConventionalItemTags.RAW_MATERIALS)
+                .add(ModItems.RAW_VIBRANIUM,
+                        ModItems.RAW_VULPUS,
+                        ModItems.RAW_ENDERIUM);
+
+        getOrCreateTagBuilder(ItemTags.BREAKS_DECORATED_POTS).add(ModItems.VIBRANIUM_HAMMER,
+                ModItems.VULPUS_HAMMER,
+                ModItems.ENDERIUM_HAMMER,
+                ModItems.VIBRANIUM_EXCAVATOR,
+                ModItems.VULPUS_EXCAVATOR,
+                ModItems.ENDERIUM_EXCAVATOR,
+                ModItems.VIBRANIUM_PICKAXE,
+                ModItems.VULPUS_PICKAXE,
+                ModItems.ENDERIUM_PICKAXE,
+                ModItems.VIBRANIUM_HOE,
+                ModItems.VULPUS_HOE,
+                ModItems.ENDERIUM_HOE,
+                ModItems.VIBRANIUM_AXE,
+                ModItems.VULPUS_AXE,
+                ModItems.ENDERIUM_AXE,
+                ModItems.VIBRANIUM_SHOVEL,
+                ModItems.VULPUS_SHOVEL,
+                ModItems.ENDERIUM_SHOVEL,
+                ModItems.VIBRANIUM_PAXEL,
+                ModItems.VULPUS_PAXEL,
+                ModItems.ENDERIUM_PAXEL);
     }
 }
