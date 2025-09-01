@@ -78,10 +78,10 @@ public class VulpusBow extends BowItem {
             Holder<Enchantment> enchantmentReference = enchantmentRegistry.getHolderOrThrow(Enchantments.INFINITY);
             boolean hasInfinity = EnchantmentHelper.getTagEnchantmentLevel(enchantmentReference, player.getMainHandItem()) > 0;
 
-            Holder<Enchantment> enchantmentReferencePower = enchantmentRegistry.getHolderOrThrow(Enchantments.INFINITY);
+            Holder<Enchantment> enchantmentReferencePower = enchantmentRegistry.getHolderOrThrow(Enchantments.POWER);
             int powerLevel = EnchantmentHelper.getTagEnchantmentLevel(enchantmentReferencePower, player.getMainHandItem());
 
-            Holder<Enchantment> enchantmentReferencePunch = enchantmentRegistry.getHolderOrThrow(Enchantments.INFINITY);
+            Holder<Enchantment> enchantmentReferencePunch = enchantmentRegistry.getHolderOrThrow(Enchantments.PUNCH);
             int punchLevel = EnchantmentHelper.getTagEnchantmentLevel(enchantmentReferencePunch, player.getMainHandItem());
 
             int charge = getUseDuration(stack, entityLiving) - timeLeft;
