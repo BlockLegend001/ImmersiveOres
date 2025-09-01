@@ -88,7 +88,11 @@ public class VulpusBow extends BowItem {
                                 .normalize()
                                 .multiply(punchLevel * 0.6 * resistance);
 
-                        arrowEntity.setVelocity(knockbackVec.x, 0.1, knockbackVec.z);
+                        arrowEntity.setVelocity(
+                                arrowEntity.getVelocity().x + knockbackVec.x,
+                                arrowEntity.getVelocity().y + knockbackVec.y,
+                                arrowEntity.getVelocity().z + knockbackVec.z
+                        );
                     }
 
                     PersistentProjectileEntity.PickupPermission pickupPermission = hasInfinity ? PersistentProjectileEntity.PickupPermission.DISALLOWED : PersistentProjectileEntity.PickupPermission.ALLOWED;
