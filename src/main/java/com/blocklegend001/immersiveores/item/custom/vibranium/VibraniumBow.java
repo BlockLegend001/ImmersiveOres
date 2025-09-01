@@ -61,10 +61,10 @@ public class VibraniumBow extends BowItem {
             Holder<Enchantment> enchantmentReference = enchantmentRegistry.getOrThrow(Enchantments.INFINITY);
             boolean hasInfinity = EnchantmentHelper.getTagEnchantmentLevel(enchantmentReference, player.getMainHandItem()) > 0;
 
-            Holder<Enchantment> enchantmentReferencePower = enchantmentRegistry.getOrThrow(Enchantments.INFINITY);
+            Holder<Enchantment> enchantmentReferencePower = enchantmentRegistry.getOrThrow(Enchantments.POWER);
             int powerLevel = EnchantmentHelper.getTagEnchantmentLevel(enchantmentReferencePower, player.getMainHandItem());
 
-            Holder<Enchantment> enchantmentReferencePunch = enchantmentRegistry.getOrThrow(Enchantments.INFINITY);
+            Holder<Enchantment> enchantmentReferencePunch = enchantmentRegistry.getOrThrow(Enchantments.PUNCH);
             int punchLevel = EnchantmentHelper.getTagEnchantmentLevel(enchantmentReferencePunch, player.getMainHandItem());
 
             int charge = getUseDuration(stack, entityLiving) - timeLeft;
