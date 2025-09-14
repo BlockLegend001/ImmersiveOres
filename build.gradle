@@ -30,14 +30,12 @@ repositories {
             includeGroup "mcp.mobius.waila"
         }
     }
-    repositories {
-        maven {
-            name = 'Ladysnake Mods'
-            url = 'https://maven.ladysnake.org/releases'
-            content {
-                includeGroup 'io.github.ladysnake'
-                includeGroupByRegex 'org\\.ladysnake.*'
-            }
+    maven {
+        name = 'Ladysnake Mods'
+        url = 'https://maven.ladysnake.org/releases'
+        content {
+            includeGroup 'io.github.ladysnake'
+            includeGroupByRegex 'org\\.ladysnake.*'
         }
     }
 }
