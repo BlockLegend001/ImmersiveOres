@@ -1,2 +1,1 @@
-- Added more tags
-- Fixed Punch on bows causing arrows to drop at the player's feet when shooting upward
+- Fixed an incompatibility issue with Enderium Boots (When Flying) with other mods using PAL
