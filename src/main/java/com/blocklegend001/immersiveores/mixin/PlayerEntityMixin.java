@@ -1,11 +1,14 @@
 package com.blocklegend001.immersiveores.mixin;
 
+import com.blocklegend001.immersiveores.ImmersiveOres;
 import com.blocklegend001.immersiveores.config.EnderiumConfig;
 import com.blocklegend001.immersiveores.event.ModEventHandler;
 import com.blocklegend001.immersiveores.item.ModItems;
+import io.github.ladysnake.pal.AbilitySource;
+import io.github.ladysnake.pal.Pal;
+import io.github.ladysnake.pal.VanillaAbilities;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.player.PlayerEntity;
-import org.jetbrains.annotations.NotNull;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -18,52 +21,45 @@ import java.util.UUID;
 @Mixin(PlayerEntity.class)
 public class PlayerEntityMixin {
 
-    @NotNull
-    private static final Map<UUID, Boolean> Fly = new HashMap<>();
-    private boolean wasWearingBoots = false;
+    private static final Map<UUID, Boolean> FlyByBoots = new HashMap<>();
+    private static final AbilitySource BOOT_SOURCE = Pal.getAbilitySource(ImmersiveOres.MOD_ID, "enderium_boots");
 
     @Inject(method = "tick", at = @At("HEAD"))
     public void onPlayerTick(CallbackInfo ci) {
         PlayerEntity player = (PlayerEntity) (Object) this;
+        UUID uuid = player.getUuid();
 
-        boolean isWearingBoots = player.getEquippedStack(EquipmentSlot.FEET).getItem() == ModItems.ENDERIUM_BOOTS;
+        if (player.getWorld().isClient) return;
 
-        if (!player.isCreative() && !player.isSpectator()) {
+        if (player.isCreative() || player.isSpectator()) return;
 
-            if (isWearingBoots && EnderiumConfig.canFlyEnderiumArmor) {
-                Fly.put(player.getUuid(), true);
-                player.getAbilities().allowFlying = true;
-                player.sendAbilitiesUpdate();
-                wasWearingBoots = true;
-            } else {
-                if (wasWearingBoots && !isWearingBoots) {
-                    ModEventHandler.onBootsRemoved();
-                    wasWearingBoots = false;
-                }
+        boolean wearingBoots = player.getEquippedStack(EquipmentSlot.FEET).getItem() == ModItems.ENDERIUM_BOOTS;
+        boolean hadBootFlight = FlyByBoots.getOrDefault(uuid, false);
 
-                if (player.isOnGround()) {
-                    ModEventHandler.resetFallDamagePrevention();
-                }
+        if (wearingBoots && EnderiumConfig.canFlyEnderiumArmor) {
+            FlyByBoots.put(uuid, true);
 
-                if (!isWearingBoots) {
-                    if (!Fly.getOrDefault(player.getUuid(), false) && player.getAbilities().allowFlying) {
-                        return;
-                    }
-                    player.getAbilities().allowFlying = false;
-                    player.getAbilities().flying = false;
-                    Fly.put(player.getUuid(), false);
-                    player.sendAbilitiesUpdate();
-                }
-
-                boolean canFlyForOtherReasons = Fly.getOrDefault(player.getUuid(), false);
-
-                if (!isWearingBoots && !canFlyForOtherReasons) {
-                    player.getAbilities().allowFlying = false;
-                    player.getAbilities().flying = false;
-                    Fly.put(player.getUuid(), false);
-                    player.sendAbilitiesUpdate();
-                }
+            if (!VanillaAbilities.ALLOW_FLYING.getTracker(player).isGrantedBy(BOOT_SOURCE)) {
+                VanillaAbilities.ALLOW_FLYING.getTracker(player).addSource(BOOT_SOURCE);
             }
+
+            player.fallDistance = 0.0f;
+            return;
+        }
+
+        if (!wearingBoots && hadBootFlight) {
+            FlyByBoots.put(uuid, false);
+
+            if (VanillaAbilities.ALLOW_FLYING.getTracker(player).isGrantedBy(BOOT_SOURCE)) {
+                VanillaAbilities.ALLOW_FLYING.getTracker(player).removeSource(BOOT_SOURCE);
+            }
+
+            ModEventHandler.onBootsRemoved();
+        }
+
+        if (player.isOnGround() && ModEventHandler.shouldPreventFallDamage()) {
+            player.fallDistance = 0.0f;
+            ModEventHandler.resetFallDamagePrevention();
         }
     }
 }
