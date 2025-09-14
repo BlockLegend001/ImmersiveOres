@@ -30,6 +30,16 @@ repositories {
             includeGroup "mcp.mobius.waila"
         }
     }
+    repositories {
+        maven {
+            name = 'Ladysnake Mods'
+            url = 'https://maven.ladysnake.org/releases'
+            content {
+                includeGroup 'io.github.ladysnake'
+                includeGroupByRegex 'org\\.ladysnake.*'
+            }
+        }
+    }
 }
 
 fabricApi {
@@ -51,6 +61,9 @@ dependencies {
     modCompileOnly "mcp.mobius.waila:wthit-api:fabric-${wthitVersion}"
     modRuntimeOnly "mcp.mobius.waila:wthit:fabric-${wthitVersion}"
     modRuntimeOnly "lol.bai:badpackets:fabric-${badpacketsVersion}"
+
+    modImplementation "io.github.ladysnake:PlayerAbilityLib:${pal_version}"
+    include "io.github.ladysnake:PlayerAbilityLib:${pal_version}"
 
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 }
