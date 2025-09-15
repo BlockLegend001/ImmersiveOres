@@ -1,5 +1,17 @@
 {
   "values": [
+    "immersiveores:vibranium_helmet",
+    "immersiveores:vibranium_chestplate",
+    "immersiveores:vibranium_leggings",
+    "immersiveores:vibranium_boots",
+    "immersiveores:vulpus_helmet",
+    "immersiveores:vulpus_chestplate",
+    "immersiveores:vulpus_leggings",
+    "immersiveores:vulpus_boots",
+    "immersiveores:enderium_helmet",
+    "immersiveores:enderium_chestplate",
+    "immersiveores:enderium_leggings",
+    "immersiveores:enderium_boots",
     "immersiveores:vibranium_hammer",
     "immersiveores:vulpus_hammer",
     "immersiveores:enderium_hammer",
@@ -20,6 +32,18 @@
     "immersiveores:enderium_shovel",
     "immersiveores:vibranium_paxel",
     "immersiveores:vulpus_paxel",
-    "immersiveores:enderium_paxel"
+    "immersiveores:enderium_paxel",
+    "immersiveores:vibranium_sword",
+    "immersiveores:vulpus_sword",
+    "immersiveores:enderium_sword",
+    "immersiveores:vibranium_axe",
+    "immersiveores:vulpus_axe",
+    "immersiveores:enderium_axe",
+    "immersiveores:vibranium_paxel",
+    "immersiveores:vulpus_paxel",
+    "immersiveores:enderium_paxel",
+    "immersiveores:vibranium_bow",
+    "immersiveores:vulpus_bow",
+    "immersiveores:enderium_bow"
   ]
 }
