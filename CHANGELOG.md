@@ -1,1 +1,2 @@
-- Fixed an incompatibility issue with Enderium Boots (When Flying) with other mods using PAL
+- Added more tags
+- Added Ukraine language
