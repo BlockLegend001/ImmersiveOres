@@ -1,2 +1,2 @@
 - Added more tags
-- Fixed some issues on bows
+- Added Ukraine language
