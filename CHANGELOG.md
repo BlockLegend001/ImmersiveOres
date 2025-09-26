@@ -1,2 +1,1 @@
-- Added more tags
-- Added Ukraine language
+- Fixed the horse armor entity textures
