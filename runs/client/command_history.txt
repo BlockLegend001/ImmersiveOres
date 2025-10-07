@@ -15,3 +15,7 @@
 /gamemode survival
 /time set night
 /gamemode survival
+/time set night
+/time set day
+/gamemode creative
+/gamemode survival
