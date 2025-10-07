@@ -1,274 +1,114 @@
-[06lug2025 12:32:35.160] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forge_userdev_data, --assetIndex, 18, --assetsDir, C:\Users\rosar\.gradle\caches\forge_gradle\assets, --gameDir, ., --mod, immersiveores, --all, --output, D:\Programmazione\Mod\Immersive Ores\FORGE\1.21.3\src\generated\resources, --existing, D:\Programmazione\Mod\Immersive Ores\FORGE\1.21.3\src\main\resources, --mixin.config, immersiveores.mixins.json]
-[06lug2025 12:32:35.163] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: JVM identified as Amazon.com Inc. OpenJDK 64-Bit Server VM 21.0.6+7-LTS
-[06lug2025 12:32:35.163] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 10.2.4 starting: java version 21.0.6 by Amazon.com Inc.; OS Windows 11 arch amd64 version 10.0
-[06lug2025 12:32:35.265] [main/INFO] [net.minecraftforge.fml.loading.ImmediateWindowHandler/]: ImmediateWindowProvider not loading because launch target is forge_userdev_data
-[06lug2025 12:32:35.374] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.7 Source=jar:file:///C:/Users/rosar/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.7/8ab114ac385e6dbdad5efafe28aba4df8120915f/mixin-0.8.7.jar!/ Service=ModLauncher Env=UNKNOWN
-[06lug2025 12:32:36.189] [main/INFO] [net.minecraftforge.fml.loading.moddiscovery.JarInJarDependencyLocator/]: No dependencies to load found. Skipping!
-[06lug2025 12:32:36.920] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forge_userdev_data' with arguments [--gameDir, ., --assetsDir, C:\Users\rosar\.gradle\caches\forge_gradle\assets, --assetIndex, 18, --mod, immersiveores, --all, --output, D:\Programmazione\Mod\Immersive Ores\FORGE\1.21.3\src\generated\resources, --existing, D:\Programmazione\Mod\Immersive Ores\FORGE\1.21.3\src\main\resources]
-[06lug2025 12:32:36.976] [main/WARN] [mixin/]: Reference map 'immersiveores.refmap.json' for immersiveores.mixins.json could not be read. If this is a development environment you can ignore this message
-[06lug2025 12:32:37.083] [main/WARN] [mixin/]: Mixin environment was unable to detect the current side, sided mixins will not be applied
-[06lug2025 12:32:41.371] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:root
-[06lug2025 12:32:41.371] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:sound_event
-[06lug2025 12:32:41.371] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:fluid
-[06lug2025 12:32:41.371] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:attribute
-[06lug2025 12:32:41.371] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:particle_type
-[06lug2025 12:32:41.371] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:mob_effect
-[06lug2025 12:32:41.371] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:block
-[06lug2025 12:32:41.371] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:enchantment_effect_component_type
-[06lug2025 12:32:41.371] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:data_component_type
-[06lug2025 12:32:41.371] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:entity_type
-[06lug2025 12:32:41.371] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:item
-[06lug2025 12:32:41.371] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:game_event
-[06lug2025 12:32:41.371] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:potion
-[06lug2025 12:32:41.371] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:block_entity_type
-[06lug2025 12:32:41.371] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:stat_type
-[06lug2025 12:32:41.371] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:custom_stat
-[06lug2025 12:32:41.371] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:chunk_status
-[06lug2025 12:32:41.371] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:rule_test
-[06lug2025 12:32:41.371] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:rule_block_entity_modifier
-[06lug2025 12:32:41.371] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:pos_rule_test
-[06lug2025 12:32:41.371] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:menu
-[06lug2025 12:32:41.371] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:recipe_type
-[06lug2025 12:32:41.372] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:recipe_serializer
-[06lug2025 12:32:41.372] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:position_source_type
-[06lug2025 12:32:41.372] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:command_argument_type
-[06lug2025 12:32:41.372] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:villager_type
-[06lug2025 12:32:41.372] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:villager_profession
-[06lug2025 12:32:41.372] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:point_of_interest_type
-[06lug2025 12:32:41.372] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:memory_module_type
-[06lug2025 12:32:41.372] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:sensor_type
-[06lug2025 12:32:41.372] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:activity
-[06lug2025 12:32:41.372] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:schedule
-[06lug2025 12:32:41.372] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:loot_score_provider_type
-[06lug2025 12:32:41.372] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:loot_number_provider_type
-[06lug2025 12:32:41.372] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:map_decoration_type
-[06lug2025 12:32:41.372] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:loot_nbt_provider_type
-[06lug2025 12:32:41.372] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:loot_function_type
-[06lug2025 12:32:41.372] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:loot_pool_entry_type
-[06lug2025 12:32:41.372] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:loot_condition_type
-[06lug2025 12:32:41.372] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:float_provider_type
-[06lug2025 12:32:41.372] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:int_provider_type
-[06lug2025 12:32:41.372] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:height_provider_type
-[06lug2025 12:32:41.372] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:block_predicate_type
-[06lug2025 12:32:41.372] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:worldgen/carver
-[06lug2025 12:32:41.372] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:worldgen/structure_processor
-[06lug2025 12:32:41.372] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:worldgen/feature
-[06lug2025 12:32:41.372] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:worldgen/structure_placement
-[06lug2025 12:32:41.372] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:worldgen/structure_piece
-[06lug2025 12:32:41.372] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:worldgen/structure_type
-[06lug2025 12:32:41.372] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:worldgen/placement_modifier_type
-[06lug2025 12:32:41.372] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:worldgen/block_state_provider_type
-[06lug2025 12:32:41.372] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:worldgen/foliage_placer_type
-[06lug2025 12:32:41.372] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:worldgen/trunk_placer_type
-[06lug2025 12:32:41.372] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:worldgen/root_placer_type
-[06lug2025 12:32:41.372] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:worldgen/tree_decorator_type
-[06lug2025 12:32:41.372] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:worldgen/feature_size_type
-[06lug2025 12:32:41.372] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:worldgen/biome_source
-[06lug2025 12:32:41.372] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:worldgen/chunk_generator
-[06lug2025 12:32:41.372] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:worldgen/material_condition
-[06lug2025 12:32:41.373] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:worldgen/material_rule
-[06lug2025 12:32:41.373] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:worldgen/density_function_type
-[06lug2025 12:32:41.373] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:block_type
-[06lug2025 12:32:41.373] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:worldgen/structure_pool_element
-[06lug2025 12:32:41.373] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:worldgen/pool_alias_binding
-[06lug2025 12:32:41.373] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:cat_variant
-[06lug2025 12:32:41.373] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:frog_variant
-[06lug2025 12:32:41.373] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:decorated_pot_pattern
-[06lug2025 12:32:41.373] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:creative_mode_tab
-[06lug2025 12:32:41.373] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:trigger_type
-[06lug2025 12:32:41.373] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:number_format_type
-[06lug2025 12:32:41.373] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:entity_sub_predicate_type
-[06lug2025 12:32:41.373] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:item_sub_predicate_type
-[06lug2025 12:32:41.373] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:enchantment_level_based_value_type
-[06lug2025 12:32:41.373] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:enchantment_entity_effect_type
-[06lug2025 12:32:41.373] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:enchantment_location_based_effect_type
-[06lug2025 12:32:41.373] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:enchantment_value_effect_type
-[06lug2025 12:32:41.373] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:enchantment_provider_type
-[06lug2025 12:32:41.373] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:consume_effect_type
-[06lug2025 12:32:41.373] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:recipe_display
-[06lug2025 12:32:41.373] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:slot_display
-[06lug2025 12:32:41.373] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:recipe_book_category
-[06lug2025 12:32:41.447] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 53.1.0, for MC 1.21.3 with MCP 20241025.112443
-[06lug2025 12:32:41.447] [modloading-worker-0/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v53.1.0 Initialized
-[06lug2025 12:32:41.460] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Configuration file D:\Programmazione\Mod\Immersive Ores\FORGE\1.21.3\run-data\config\immersiveores\vibranium-common.toml is not correct. Correcting
-[06lug2025 12:32:41.462] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Armor Protection and Resistance was corrected from null to its default, SynchronizedConfig{DataHolder:{}}. 
-[06lug2025 12:32:41.462] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Armor Protection and Resistance.toughnessValueVibraniumArmor was corrected from null to its default, 100. 
-[06lug2025 12:32:41.462] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Armor Protection and Resistance.enchantmentValueVibraniumArmor was corrected from null to its default, 85. 
-[06lug2025 12:32:41.462] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Armor Protection and Resistance.knockbackResistanceValueVibraniumArmor was corrected from null to its default, 1. 
-[06lug2025 12:32:41.462] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Armor Protection and Resistance.protectionValueVibraniumBoots was corrected from null to its default, 10. 
-[06lug2025 12:32:41.462] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Armor Protection and Resistance.protectionValueVibraniumLeggings was corrected from null to its default, 15. 
-[06lug2025 12:32:41.462] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Armor Protection and Resistance.protectionValueVibraniumChestplate was corrected from null to its default, 20. 
-[06lug2025 12:32:41.462] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Armor Protection and Resistance.protectionValueVibraniumHelmet was corrected from null to its default, 10. 
-[06lug2025 12:32:41.465] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Armor Special Effects and Abilities was corrected from null to its default, SynchronizedConfig{DataHolder:{}}. 
-[06lug2025 12:32:41.466] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Armor Special Effects and Abilities.speedIVibraniumArmor was corrected from null to its default, true. 
-[06lug2025 12:32:41.466] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Armor Special Effects and Abilities.jumpIVibraniumArmor was corrected from null to its default, true. 
-[06lug2025 12:32:41.466] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Armor Special Effects and Abilities.nightVisionVibraniumArmor was corrected from null to its default, true. 
-[06lug2025 12:32:41.466] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Armor Special Effects and Abilities.canWalkOnPowderedSnowVibranium was corrected from null to its default, true. 
-[06lug2025 12:32:41.467] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Bow Settings was corrected from null to its default, SynchronizedConfig{DataHolder:{}}. 
-[06lug2025 12:32:41.467] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Bow Settings.enchantmentValueVibraniumBow was corrected from null to its default, 5. 
-[06lug2025 12:32:41.467] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Bow Settings.damageVibraniumBow was corrected from null to its default, 8. 
-[06lug2025 12:32:41.468] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Bow Settings.arrowCountVibraniumBow was corrected from null to its default, 2. 
-[06lug2025 12:32:41.468] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Tool Tier Base Properties was corrected from null to its default, SynchronizedConfig{DataHolder:{}}. 
-[06lug2025 12:32:41.468] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Tool Tier Base Properties.speedVibraniumTier was corrected from null to its default, 40. 
-[06lug2025 12:32:41.468] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Tool Tier Base Properties.attackDamageBonusVibraniumTier was corrected from null to its default, 11. 
-[06lug2025 12:32:41.468] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Tool Tier Base Properties.enchantmentValueVibraniumTier was corrected from null to its default, 85. 
-[06lug2025 12:32:41.468] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Tool Tier Base Properties.durabilityVibranium was corrected from null to its default, 4062. 
-[06lug2025 12:32:41.468] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Tool Tier Base Properties.unbreakableVibranium was corrected from null to its default, false. 
-[06lug2025 12:32:41.469] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Pickaxe Stats was corrected from null to its default, SynchronizedConfig{DataHolder:{}}. 
-[06lug2025 12:32:41.469] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Pickaxe Stats.attackDamageVibraniumPickaxe was corrected from null to its default, 9. 
-[06lug2025 12:32:41.469] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Pickaxe Stats.attackSpeedVibraniumPickaxe was corrected from null to its default, 2.0. 
-[06lug2025 12:32:41.470] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Axe Stats was corrected from null to its default, SynchronizedConfig{DataHolder:{}}. 
-[06lug2025 12:32:41.470] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Axe Stats.attackDamageVibraniumAxe was corrected from null to its default, 10. 
-[06lug2025 12:32:41.470] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Axe Stats.attackSpeedVibraniumAxe was corrected from null to its default, 2.0. 
-[06lug2025 12:32:41.471] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Shovel Stats was corrected from null to its default, SynchronizedConfig{DataHolder:{}}. 
-[06lug2025 12:32:41.471] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Shovel Stats.attackDamageVibraniumShovel was corrected from null to its default, 9. 
-[06lug2025 12:32:41.471] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Shovel Stats.attackSpeedVibraniumShovel was corrected from null to its default, 2.0. 
-[06lug2025 12:32:41.471] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Sword Stats was corrected from null to its default, SynchronizedConfig{DataHolder:{}}. 
-[06lug2025 12:32:41.471] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Sword Stats.attackDamageVibraniumSword was corrected from null to its default, 10. 
-[06lug2025 12:32:41.472] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Sword Stats.attackSpeedVibraniumSword was corrected from null to its default, 2.0. 
-[06lug2025 12:32:41.473] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Hoe Stats was corrected from null to its default, SynchronizedConfig{DataHolder:{}}. 
-[06lug2025 12:32:41.473] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Hoe Stats.attackDamageVibraniumHoe was corrected from null to its default, 7. 
-[06lug2025 12:32:41.473] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Hoe Stats.attackSpeedVibraniumHoe was corrected from null to its default, 2.0. 
-[06lug2025 12:32:41.474] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Paxel Stats was corrected from null to its default, SynchronizedConfig{DataHolder:{}}. 
-[06lug2025 12:32:41.474] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Paxel Stats.attackDamageVibraniumPaxel was corrected from null to its default, 15. 
-[06lug2025 12:32:41.475] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Paxel Stats.attackSpeedVibraniumPaxel was corrected from null to its default, 2.0. 
-[06lug2025 12:32:41.475] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Hammer Stats was corrected from null to its default, SynchronizedConfig{DataHolder:{}}. 
-[06lug2025 12:32:41.475] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Hammer Stats.attackDamageVibraniumHammer was corrected from null to its default, 13. 
-[06lug2025 12:32:41.475] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Hammer Stats.attackSpeedVibraniumHammer was corrected from null to its default, 2.0. 
-[06lug2025 12:32:41.475] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Hammer Stats.radiusVibraniumHammer was corrected from null to its default, 1. 
-[06lug2025 12:32:41.476] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Excavator Stats was corrected from null to its default, SynchronizedConfig{DataHolder:{}}. 
-[06lug2025 12:32:41.476] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Excavator Stats.attackDamageVibraniumExcavator was corrected from null to its default, 13. 
-[06lug2025 12:32:41.476] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Excavator Stats.attackSpeedVibraniumExcavator was corrected from null to its default, 2.0. 
-[06lug2025 12:32:41.476] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Excavator Stats.radiusVibraniumExcavator was corrected from null to its default, 1. 
-[06lug2025 12:32:41.480] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Configuration file D:\Programmazione\Mod\Immersive Ores\FORGE\1.21.3\run-data\config\immersiveores\vulpus-common.toml is not correct. Correcting
-[06lug2025 12:32:41.481] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Armor Protection and Resistance was corrected from null to its default, SynchronizedConfig{DataHolder:{}}. 
-[06lug2025 12:32:41.481] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Armor Protection and Resistance.toughnessValueVulpusArmor was corrected from null to its default, 150. 
-[06lug2025 12:32:41.481] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Armor Protection and Resistance.enchantmentValueVulpusArmor was corrected from null to its default, 85. 
-[06lug2025 12:32:41.481] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Armor Protection and Resistance.knockbackResistanceValueVulpusArmor was corrected from null to its default, 2. 
-[06lug2025 12:32:41.481] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Armor Protection and Resistance.protectionValueVulpusBoots was corrected from null to its default, 20. 
-[06lug2025 12:32:41.481] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Armor Protection and Resistance.protectionValueVulpusLeggings was corrected from null to its default, 25. 
-[06lug2025 12:32:41.481] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Armor Protection and Resistance.protectionValueVulpusChestplate was corrected from null to its default, 35. 
-[06lug2025 12:32:41.481] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Armor Protection and Resistance.protectionValueVulpusHelmet was corrected from null to its default, 20. 
-[06lug2025 12:32:41.482] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Armor Special Effects and Abilities was corrected from null to its default, SynchronizedConfig{DataHolder:{}}. 
-[06lug2025 12:32:41.482] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Armor Special Effects and Abilities.speedIIVulpusArmor was corrected from null to its default, true. 
-[06lug2025 12:32:41.482] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Armor Special Effects and Abilities.jumpIIVulpusArmor was corrected from null to its default, true. 
-[06lug2025 12:32:41.482] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Armor Special Effects and Abilities.nightVisionVulpusArmor was corrected from null to its default, true. 
-[06lug2025 12:32:41.482] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Armor Special Effects and Abilities.fireResistanceVulpusArmor was corrected from null to its default, true. 
-[06lug2025 12:32:41.482] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Armor Special Effects and Abilities.immuneToFallDamageVulpusArmor was corrected from null to its default, true. 
-[06lug2025 12:32:41.482] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Armor Special Effects and Abilities.neverLoseHungerVulpusArmor was corrected from null to its default, true. 
-[06lug2025 12:32:41.482] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Armor Special Effects and Abilities.canWalkOnPowderedSnowVulpus was corrected from null to its default, true. 
-[06lug2025 12:32:41.482] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Armor Special Effects and Abilities.makesPiglinsNeutralVulpus was corrected from null to its default, true. 
-[06lug2025 12:32:41.482] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Bow Settings was corrected from null to its default, SynchronizedConfig{DataHolder:{}}. 
-[06lug2025 12:32:41.483] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Bow Settings.enchantmentValueVulpusBow was corrected from null to its default, 5. 
-[06lug2025 12:32:41.483] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Bow Settings.damageVulpusBow was corrected from null to its default, 10. 
-[06lug2025 12:32:41.483] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Bow Settings.arrowCountVulpusBow was corrected from null to its default, 3. 
-[06lug2025 12:32:41.483] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Tool Tier Base Properties was corrected from null to its default, SynchronizedConfig{DataHolder:{}}. 
-[06lug2025 12:32:41.483] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Tool Tier Base Properties.speedVulpusTier was corrected from null to its default, 75. 
-[06lug2025 12:32:41.483] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Tool Tier Base Properties.attackDamageBonusVulpusTier was corrected from null to its default, 20. 
-[06lug2025 12:32:41.483] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Tool Tier Base Properties.enchantmentValueVulpusTier was corrected from null to its default, 85. 
-[06lug2025 12:32:41.483] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Tool Tier Base Properties.durabilityVulpus was corrected from null to its default, 6093. 
-[06lug2025 12:32:41.483] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Tool Tier Base Properties.unbreakableVulpus was corrected from null to its default, false. 
-[06lug2025 12:32:41.484] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Pickaxe Stats was corrected from null to its default, SynchronizedConfig{DataHolder:{}}. 
-[06lug2025 12:32:41.484] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Pickaxe Stats.attackDamageVulpusPickaxe was corrected from null to its default, 10. 
-[06lug2025 12:32:41.484] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Pickaxe Stats.attackSpeedVulpusPickaxe was corrected from null to its default, 2.0. 
-[06lug2025 12:32:41.485] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Axe Stats was corrected from null to its default, SynchronizedConfig{DataHolder:{}}. 
-[06lug2025 12:32:41.485] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Axe Stats.attackDamageVulpusAxe was corrected from null to its default, 15. 
-[06lug2025 12:32:41.485] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Axe Stats.attackSpeedVulpusAxe was corrected from null to its default, 2.0. 
-[06lug2025 12:32:41.486] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Shovel Stats was corrected from null to its default, SynchronizedConfig{DataHolder:{}}. 
-[06lug2025 12:32:41.486] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Shovel Stats.attackDamageVulpusShovel was corrected from null to its default, 12. 
-[06lug2025 12:32:41.486] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Shovel Stats.attackSpeedVulpusShovel was corrected from null to its default, 2.0. 
-[06lug2025 12:32:41.487] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Sword Stats was corrected from null to its default, SynchronizedConfig{DataHolder:{}}. 
-[06lug2025 12:32:41.487] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Sword Stats.attackDamageVulpusSword was corrected from null to its default, 14. 
-[06lug2025 12:32:41.487] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Sword Stats.attackSpeedVulpusSword was corrected from null to its default, 2.0. 
-[06lug2025 12:32:41.487] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Hoe Stats was corrected from null to its default, SynchronizedConfig{DataHolder:{}}. 
-[06lug2025 12:32:41.487] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Hoe Stats.attackDamageVulpusHoe was corrected from null to its default, 10. 
-[06lug2025 12:32:41.487] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Hoe Stats.attackSpeedVulpusHoe was corrected from null to its default, 2.0. 
-[06lug2025 12:32:41.488] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Paxel Stats was corrected from null to its default, SynchronizedConfig{DataHolder:{}}. 
-[06lug2025 12:32:41.488] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Paxel Stats.attackDamageVulpusPaxel was corrected from null to its default, 18. 
-[06lug2025 12:32:41.488] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Paxel Stats.attackSpeedVulpusPaxel was corrected from null to its default, 2.0. 
-[06lug2025 12:32:41.489] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Hammer Stats was corrected from null to its default, SynchronizedConfig{DataHolder:{}}. 
-[06lug2025 12:32:41.489] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Hammer Stats.attackDamageVulpusHammer was corrected from null to its default, 22. 
-[06lug2025 12:32:41.489] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Hammer Stats.attackSpeedVulpusHammer was corrected from null to its default, 2.0. 
-[06lug2025 12:32:41.490] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Hammer Stats.radiusVulpusHammer was corrected from null to its default, 2. 
-[06lug2025 12:32:41.491] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Excavator Stats was corrected from null to its default, SynchronizedConfig{DataHolder:{}}. 
-[06lug2025 12:32:41.491] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Excavator Stats.attackDamageVulpusExcavator was corrected from null to its default, 20. 
-[06lug2025 12:32:41.491] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Excavator Stats.attackSpeedVulpusExcavator was corrected from null to its default, 2.0. 
-[06lug2025 12:32:41.491] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Excavator Stats.radiusVulpusExcavator was corrected from null to its default, 2. 
-[06lug2025 12:32:41.495] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Configuration file D:\Programmazione\Mod\Immersive Ores\FORGE\1.21.3\run-data\config\immersiveores\enderium-common.toml is not correct. Correcting
-[06lug2025 12:32:41.495] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Armor Protection and Resistance was corrected from null to its default, SynchronizedConfig{DataHolder:{}}. 
-[06lug2025 12:32:41.495] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Armor Protection and Resistance.toughnessValueEnderiumArmor was corrected from null to its default, 200. 
-[06lug2025 12:32:41.495] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Armor Protection and Resistance.enchantmentValueEnderiumArmor was corrected from null to its default, 85. 
-[06lug2025 12:32:41.495] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Armor Protection and Resistance.knockbackResistanceValueEnderiumArmor was corrected from null to its default, 3. 
-[06lug2025 12:32:41.495] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Armor Protection and Resistance.protectionValueEnderiumBoots was corrected from null to its default, 30. 
-[06lug2025 12:32:41.495] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Armor Protection and Resistance.protectionValueEnderiumLeggings was corrected from null to its default, 50. 
-[06lug2025 12:32:41.495] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Armor Protection and Resistance.protectionValueEnderiumChestplate was corrected from null to its default, 70. 
-[06lug2025 12:32:41.495] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Armor Protection and Resistance.protectionValueEnderiumHelmet was corrected from null to its default, 30. 
-[06lug2025 12:32:41.496] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Armor Special Effects and Abilities was corrected from null to its default, SynchronizedConfig{DataHolder:{}}. 
-[06lug2025 12:32:41.496] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Armor Special Effects and Abilities.speedIIIEnderiumArmor was corrected from null to its default, true. 
-[06lug2025 12:32:41.496] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Armor Special Effects and Abilities.jumpIIIEnderiumArmor was corrected from null to its default, true. 
-[06lug2025 12:32:41.496] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Armor Special Effects and Abilities.nightVisionEnderiumArmor was corrected from null to its default, true. 
-[06lug2025 12:32:41.496] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Armor Special Effects and Abilities.immuneToFallDamageEnderiumArmor was corrected from null to its default, true. 
-[06lug2025 12:32:41.496] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Armor Special Effects and Abilities.fireResistanceEnderiumArmor was corrected from null to its default, true. 
-[06lug2025 12:32:41.496] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Armor Special Effects and Abilities.neverLoseHungerEnderiumArmor was corrected from null to its default, true. 
-[06lug2025 12:32:41.496] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Armor Special Effects and Abilities.canFlyEnderiumArmor was corrected from null to its default, true. 
-[06lug2025 12:32:41.496] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Armor Special Effects and Abilities.canWalkOnPowderedSnowEnderium was corrected from null to its default, true. 
-[06lug2025 12:32:41.496] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Armor Special Effects and Abilities.makesPiglinsNeutralEnderium was corrected from null to its default, true. 
-[06lug2025 12:32:41.496] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Armor Special Effects and Abilities.endermanWillNotBeAngryWithYouEnderium was corrected from null to its default, true. 
-[06lug2025 12:32:41.497] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Bow Settings was corrected from null to its default, SynchronizedConfig{DataHolder:{}}. 
-[06lug2025 12:32:41.497] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Bow Settings.enchantmentValueEnderiumBow was corrected from null to its default, 5. 
-[06lug2025 12:32:41.497] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Bow Settings.damageEnderiumBow was corrected from null to its default, 14. 
-[06lug2025 12:32:41.497] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Bow Settings.arrowCountEnderiumBow was corrected from null to its default, 4. 
-[06lug2025 12:32:41.497] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Tool Tier Base Properties was corrected from null to its default, SynchronizedConfig{DataHolder:{}}. 
-[06lug2025 12:32:41.497] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Tool Tier Base Properties.speedEnderiumTier was corrected from null to its default, 130. 
-[06lug2025 12:32:41.498] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Tool Tier Base Properties.attackDamageBonusEnderiumTier was corrected from null to its default, 40. 
-[06lug2025 12:32:41.498] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Tool Tier Base Properties.enchantmentValueEnderiumTier was corrected from null to its default, 85. 
-[06lug2025 12:32:41.498] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Tool Tier Base Properties.durabilityEnderium was corrected from null to its default, 9139. 
-[06lug2025 12:32:41.498] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Tool Tier Base Properties.unbreakableEnderium was corrected from null to its default, false. 
-[06lug2025 12:32:41.498] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Pickaxe Stats was corrected from null to its default, SynchronizedConfig{DataHolder:{}}. 
-[06lug2025 12:32:41.499] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Pickaxe Stats.attackDamageEnderiumPickaxe was corrected from null to its default, 18. 
-[06lug2025 12:32:41.499] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Pickaxe Stats.attackSpeedEnderiumPickaxe was corrected from null to its default, 2.0. 
-[06lug2025 12:32:41.499] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Axe Stats was corrected from null to its default, SynchronizedConfig{DataHolder:{}}. 
-[06lug2025 12:32:41.500] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Axe Stats.attackDamageEnderiumAxe was corrected from null to its default, 20. 
-[06lug2025 12:32:41.500] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Axe Stats.attackSpeedEnderiumAxe was corrected from null to its default, 2.0. 
-[06lug2025 12:32:41.500] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Opening jdk.naming.dns/com.sun.jndi.dns to java.naming
-[06lug2025 12:32:41.501] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Shovel Stats was corrected from null to its default, SynchronizedConfig{DataHolder:{}}. 
-[06lug2025 12:32:41.501] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Shovel Stats.attackDamageEnderiumShovel was corrected from null to its default, 17. 
-[06lug2025 12:32:41.501] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Shovel Stats.attackSpeedEnderiumShovel was corrected from null to its default, 2.0. 
-[06lug2025 12:32:41.501] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Sword Stats was corrected from null to its default, SynchronizedConfig{DataHolder:{}}. 
-[06lug2025 12:32:41.501] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Sword Stats.attackDamageEnderiumSword was corrected from null to its default, 22. 
-[06lug2025 12:32:41.502] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Sword Stats.attackSpeedEnderiumSword was corrected from null to its default, 2.0. 
-[06lug2025 12:32:41.502] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Hoe Stats was corrected from null to its default, SynchronizedConfig{DataHolder:{}}. 
-[06lug2025 12:32:41.502] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Hoe Stats.attackDamageEnderiumHoe was corrected from null to its default, 14. 
-[06lug2025 12:32:41.502] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Hoe Stats.attackSpeedEnderiumHoe was corrected from null to its default, 2.0. 
-[06lug2025 12:32:41.503] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Paxel Stats was corrected from null to its default, SynchronizedConfig{DataHolder:{}}. 
-[06lug2025 12:32:41.503] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Paxel Stats.attackDamageEnderiumPaxel was corrected from null to its default, 20. 
-[06lug2025 12:32:41.504] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Paxel Stats.attackSpeedEnderiumPaxel was corrected from null to its default, 2.0. 
-[06lug2025 12:32:41.505] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Hammer Stats was corrected from null to its default, SynchronizedConfig{DataHolder:{}}. 
-[06lug2025 12:32:41.505] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Hammer Stats.attackDamageEnderiumHammer was corrected from null to its default, 20. 
-[06lug2025 12:32:41.505] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Hammer Stats.attackSpeedEnderiumHammer was corrected from null to its default, 2.0. 
-[06lug2025 12:32:41.505] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Hammer Stats.radiusEnderiumHammer was corrected from null to its default, 3. 
-[06lug2025 12:32:41.506] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Excavator Stats was corrected from null to its default, SynchronizedConfig{DataHolder:{}}. 
-[06lug2025 12:32:41.506] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Excavator Stats.attackDamageEnderiumExcavator was corrected from null to its default, 20. 
-[06lug2025 12:32:41.506] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Excavator Stats.attackSpeedEnderiumExcavator was corrected from null to its default, 2.0. 
-[06lug2025 12:32:41.506] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Excavator Stats.radiusEnderiumExcavator was corrected from null to its default, 3. 
-[06lug2025 12:32:41.730] [main/INFO] [net.minecraftforge.data.loading.DatagenModLoader/]: Initializing Data Gatherer for mods [immersiveores]
-[06lug2025 12:32:41.795] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/rosar/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.21.3-53.1.0_mapped_official_1.21.3/forge-1.21.3-53.1.0_mapped_official_1.21.3.jar%230!/assets/.mcassetsroot' uses unexpected schema
-[06lug2025 12:32:41.795] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/rosar/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.21.3-53.1.0_mapped_official_1.21.3/forge-1.21.3-53.1.0_mapped_official_1.21.3.jar%230!/data/.mcassetsroot' uses unexpected schema
-[06lug2025 12:32:41.997] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Recipes
-[06lug2025 12:32:42.148] [main/INFO] [net.minecraft.data.DataGenerator/]: Recipes finished after 150 ms
-[06lug2025 12:32:42.149] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Block States: immersiveores
-[06lug2025 12:32:42.190] [main/INFO] [net.minecraft.data.DataGenerator/]: Block States: immersiveores finished after 39 ms
-[06lug2025 12:32:42.190] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Item Models: immersiveores
-[06lug2025 12:32:42.217] [main/INFO] [net.minecraft.data.DataGenerator/]: Item Models: immersiveores finished after 26 ms
-[06lug2025 12:32:42.217] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Loot Tables
-[06lug2025 12:32:42.258] [main/INFO] [net.minecraft.data.DataGenerator/]: Loot Tables finished after 40 ms
-[06lug2025 12:32:42.258] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:block mod id immersiveores
-[06lug2025 12:32:42.290] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:block mod id immersiveores finished after 32 ms
-[06lug2025 12:32:42.290] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:item mod id immersiveores
-[06lug2025 12:32:42.294] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:item mod id immersiveores finished after 3 ms
-[06lug2025 12:32:42.294] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Registries
-[06lug2025 12:32:42.304] [main/INFO] [net.minecraft.data.DataGenerator/]: Registries finished after 10 ms
-[06lug2025 12:32:42.304] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Advancements
-[06lug2025 12:32:42.328] [main/INFO] [net.minecraft.data.DataGenerator/]: Advancements finished after 23 ms
-[06lug2025 12:32:42.328] [main/INFO] [net.minecraft.data.DataGenerator/]: All providers took: 332 ms
-[06lug2025 12:32:42.341] [main/INFO] [net.minecraft.data.HashCache/]: Caching: total files: 448, old count: 446, new count: 449, removed stale: 0, written: 2
+[16set2025 12:05:11.436] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forge_userdev_data, --assetIndex, 18, --assetsDir, C:\Users\rosar\.gradle\caches\forge_gradle\assets, --gameDir, ., --mod, immersiveores, --all, --output, D:\Programmazione\Mod\Immersive Ores\FORGE\1.21.3\src\generated\resources, --existing, D:\Programmazione\Mod\Immersive Ores\FORGE\1.21.3\src\main\resources, --mixin.config, immersiveores.mixins.json]
+[16set2025 12:05:11.439] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: JVM identified as Amazon.com Inc. OpenJDK 64-Bit Server VM 21.0.6+7-LTS
+[16set2025 12:05:11.439] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 10.2.4 starting: java version 21.0.6 by Amazon.com Inc.; OS Windows 11 arch amd64 version 10.0
+[16set2025 12:05:11.517] [main/INFO] [net.minecraftforge.fml.loading.ImmediateWindowHandler/]: ImmediateWindowProvider not loading because launch target is forge_userdev_data
+[16set2025 12:05:11.605] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.7 Source=jar:file:///C:/Users/rosar/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.7/8ab114ac385e6dbdad5efafe28aba4df8120915f/mixin-0.8.7.jar!/ Service=ModLauncher Env=UNKNOWN
+[16set2025 12:05:12.368] [main/INFO] [net.minecraftforge.fml.loading.moddiscovery.JarInJarDependencyLocator/]: No dependencies to load found. Skipping!
+[16set2025 12:05:13.072] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forge_userdev_data' with arguments [--gameDir, ., --assetsDir, C:\Users\rosar\.gradle\caches\forge_gradle\assets, --assetIndex, 18, --mod, immersiveores, --all, --output, D:\Programmazione\Mod\Immersive Ores\FORGE\1.21.3\src\generated\resources, --existing, D:\Programmazione\Mod\Immersive Ores\FORGE\1.21.3\src\main\resources]
+[16set2025 12:05:13.116] [main/WARN] [mixin/]: Reference map 'immersiveores.refmap.json' for immersiveores.mixins.json could not be read. If this is a development environment you can ignore this message
+[16set2025 12:05:13.210] [main/WARN] [mixin/]: Mixin environment was unable to detect the current side, sided mixins will not be applied
+[16set2025 12:05:17.284] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:root
+[16set2025 12:05:17.284] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:sound_event
+[16set2025 12:05:17.284] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:fluid
+[16set2025 12:05:17.284] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:attribute
+[16set2025 12:05:17.284] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:particle_type
+[16set2025 12:05:17.284] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:mob_effect
+[16set2025 12:05:17.284] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:block
+[16set2025 12:05:17.284] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:enchantment_effect_component_type
+[16set2025 12:05:17.284] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:data_component_type
+[16set2025 12:05:17.284] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:entity_type
+[16set2025 12:05:17.284] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:item
+[16set2025 12:05:17.284] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:game_event
+[16set2025 12:05:17.285] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:potion
+[16set2025 12:05:17.285] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:block_entity_type
+[16set2025 12:05:17.285] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:stat_type
+[16set2025 12:05:17.285] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:custom_stat
+[16set2025 12:05:17.285] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:chunk_status
+[16set2025 12:05:17.285] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:rule_test
+[16set2025 12:05:17.285] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:rule_block_entity_modifier
+[16set2025 12:05:17.285] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:pos_rule_test
+[16set2025 12:05:17.285] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:menu
+[16set2025 12:05:17.285] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:recipe_type
+[16set2025 12:05:17.285] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:recipe_serializer
+[16set2025 12:05:17.285] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:position_source_type
+[16set2025 12:05:17.285] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:command_argument_type
+[16set2025 12:05:17.285] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:villager_type
+[16set2025 12:05:17.285] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:villager_profession
+[16set2025 12:05:17.285] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:point_of_interest_type
+[16set2025 12:05:17.285] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:memory_module_type
+[16set2025 12:05:17.285] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:sensor_type
+[16set2025 12:05:17.285] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:activity
+[16set2025 12:05:17.285] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:schedule
+[16set2025 12:05:17.285] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:loot_score_provider_type
+[16set2025 12:05:17.285] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:loot_number_provider_type
+[16set2025 12:05:17.285] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:map_decoration_type
+[16set2025 12:05:17.285] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:loot_nbt_provider_type
+[16set2025 12:05:17.285] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:loot_function_type
+[16set2025 12:05:17.285] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:loot_pool_entry_type
+[16set2025 12:05:17.285] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:loot_condition_type
+[16set2025 12:05:17.285] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:float_provider_type
+[16set2025 12:05:17.286] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:int_provider_type
+[16set2025 12:05:17.286] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:height_provider_type
+[16set2025 12:05:17.286] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:block_predicate_type
+[16set2025 12:05:17.286] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:worldgen/carver
+[16set2025 12:05:17.286] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:worldgen/structure_processor
+[16set2025 12:05:17.286] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:worldgen/feature
+[16set2025 12:05:17.286] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:worldgen/structure_placement
+[16set2025 12:05:17.286] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:worldgen/structure_piece
+[16set2025 12:05:17.286] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:worldgen/structure_type
+[16set2025 12:05:17.286] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:worldgen/placement_modifier_type
+[16set2025 12:05:17.286] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:worldgen/block_state_provider_type
+[16set2025 12:05:17.286] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:worldgen/foliage_placer_type
+[16set2025 12:05:17.286] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:worldgen/trunk_placer_type
+[16set2025 12:05:17.286] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:worldgen/root_placer_type
+[16set2025 12:05:17.287] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:worldgen/tree_decorator_type
+[16set2025 12:05:17.287] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:worldgen/feature_size_type
+[16set2025 12:05:17.287] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:worldgen/biome_source
+[16set2025 12:05:17.287] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:worldgen/chunk_generator
+[16set2025 12:05:17.287] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:worldgen/material_condition
+[16set2025 12:05:17.287] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:worldgen/material_rule
+[16set2025 12:05:17.287] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:worldgen/density_function_type
+[16set2025 12:05:17.287] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:block_type
+[16set2025 12:05:17.287] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:worldgen/structure_pool_element
+[16set2025 12:05:17.287] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:worldgen/pool_alias_binding
+[16set2025 12:05:17.287] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:cat_variant
+[16set2025 12:05:17.287] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:frog_variant
+[16set2025 12:05:17.287] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:decorated_pot_pattern
+[16set2025 12:05:17.287] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:creative_mode_tab
+[16set2025 12:05:17.287] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:trigger_type
+[16set2025 12:05:17.287] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:number_format_type
+[16set2025 12:05:17.288] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:entity_sub_predicate_type
+[16set2025 12:05:17.288] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:item_sub_predicate_type
+[16set2025 12:05:17.288] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:enchantment_level_based_value_type
+[16set2025 12:05:17.288] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:enchantment_entity_effect_type
+[16set2025 12:05:17.288] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:enchantment_location_based_effect_type
+[16set2025 12:05:17.288] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:enchantment_value_effect_type
+[16set2025 12:05:17.288] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:enchantment_provider_type
+[16set2025 12:05:17.288] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:consume_effect_type
+[16set2025 12:05:17.288] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:recipe_display
+[16set2025 12:05:17.288] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:slot_display
+[16set2025 12:05:17.288] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:recipe_book_category
+[16set2025 12:05:17.367] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 53.1.0, for MC 1.21.3 with MCP 20241025.112443
+[16set2025 12:05:17.368] [modloading-worker-0/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v53.1.0 Initialized
+[16set2025 12:05:17.422] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Opening jdk.naming.dns/com.sun.jndi.dns to java.naming
+[16set2025 12:05:17.649] [main/INFO] [net.minecraftforge.data.loading.DatagenModLoader/]: Initializing Data Gatherer for mods [immersiveores]
+[16set2025 12:05:17.710] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/rosar/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.21.3-53.1.0_mapped_official_1.21.3/forge-1.21.3-53.1.0_mapped_official_1.21.3.jar%230!/assets/.mcassetsroot' uses unexpected schema
+[16set2025 12:05:17.710] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/rosar/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.21.3-53.1.0_mapped_official_1.21.3/forge-1.21.3-53.1.0_mapped_official_1.21.3.jar%230!/data/.mcassetsroot' uses unexpected schema
+[16set2025 12:05:17.883] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Recipes
+[16set2025 12:05:18.078] [main/INFO] [net.minecraft.data.DataGenerator/]: Recipes finished after 194 ms
+[16set2025 12:05:18.078] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Block States: immersiveores
+[16set2025 12:05:18.121] [main/INFO] [net.minecraft.data.DataGenerator/]: Block States: immersiveores finished after 42 ms
+[16set2025 12:05:18.121] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Item Models: immersiveores
+[16set2025 12:05:18.154] [main/INFO] [net.minecraft.data.DataGenerator/]: Item Models: immersiveores finished after 32 ms
+[16set2025 12:05:18.154] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Loot Tables
+[16set2025 12:05:18.205] [main/INFO] [net.minecraft.data.DataGenerator/]: Loot Tables finished after 49 ms
+[16set2025 12:05:18.205] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:block mod id immersiveores
+[16set2025 12:05:18.232] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:block mod id immersiveores finished after 27 ms
+[16set2025 12:05:18.232] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:item mod id immersiveores
+[16set2025 12:05:18.238] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:item mod id immersiveores finished after 5 ms
+[16set2025 12:05:18.238] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Registries
+[16set2025 12:05:18.248] [main/INFO] [net.minecraft.data.DataGenerator/]: Registries finished after 10 ms
+[16set2025 12:05:18.249] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Advancements
+[16set2025 12:05:18.278] [main/INFO] [net.minecraft.data.DataGenerator/]: Advancements finished after 29 ms
+[16set2025 12:05:18.278] [main/INFO] [net.minecraft.data.DataGenerator/]: All providers took: 395 ms
+[16set2025 12:05:18.290] [main/INFO] [net.minecraft.data.HashCache/]: Caching: total files: 475, old count: 472, new count: 476, removed stale: 0, written: 3
