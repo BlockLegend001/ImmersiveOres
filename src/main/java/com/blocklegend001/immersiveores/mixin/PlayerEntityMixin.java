@@ -1,7 +1,6 @@
 package com.blocklegend001.immersiveores.mixin;
 
 import com.blocklegend001.immersiveores.ImmersiveOres;
-import com.blocklegend001.immersiveores.config.EnderiumConfig;
 import com.blocklegend001.immersiveores.event.ModEventHandler;
 import com.blocklegend001.immersiveores.item.ModItems;
 import io.github.ladysnake.pal.AbilitySource;
@@ -36,7 +35,7 @@ public class PlayerEntityMixin {
         boolean wearingBoots = player.getEquippedStack(EquipmentSlot.FEET).getItem() == ModItems.ENDERIUM_BOOTS;
         boolean hadBootFlight = FlyByBoots.getOrDefault(uuid, false);
 
-        if (wearingBoots && EnderiumConfig.canFlyEnderiumArmor) {
+        if (wearingBoots && ImmersiveOres.ENDERIUM_CONFIG.armorAbilities().canFly) {
             FlyByBoots.put(uuid, true);
 
             if (!VanillaAbilities.ALLOW_FLYING.getTracker(player).isGrantedBy(BOOT_SOURCE)) {

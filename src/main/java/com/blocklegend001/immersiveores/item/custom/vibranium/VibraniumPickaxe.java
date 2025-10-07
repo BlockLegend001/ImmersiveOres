@@ -1,12 +1,11 @@
 package com.blocklegend001.immersiveores.item.custom.vibranium;
 
-import com.blocklegend001.immersiveores.config.EnderiumConfig;
+import com.blocklegend001.immersiveores.ImmersiveOres;
 import com.blocklegend001.immersiveores.config.VibraniumConfig;
 import com.blocklegend001.immersiveores.item.ModToolMaterials;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.component.DataComponentTypes;
 import net.minecraft.component.type.UnbreakableComponent;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.PickaxeItem;
 import net.minecraft.item.ToolMaterial;
@@ -22,7 +21,7 @@ public class VibraniumPickaxe extends PickaxeItem {
                 .maxDamage(durability)
                 .fireproof()
                 .attributeModifiers(VibraniumPickaxe.createAttributeModifiers(ModToolMaterials.VIBRANIUM,
-                        VibraniumConfig.attackDamageVibraniumPickaxe, (float) VibraniumConfig.attackSpeedVibraniumPickaxe));
+                        ImmersiveOres.VIBRANIUM_CONFIG.pickaxe().attackDamage, (float) ImmersiveOres.VIBRANIUM_CONFIG.pickaxe().attackSpeed));
 
         if (unbreakable) {
             settings.component(DataComponentTypes.UNBREAKABLE, new UnbreakableComponent(true));
@@ -33,7 +32,7 @@ public class VibraniumPickaxe extends PickaxeItem {
 
     public VibraniumPickaxe(ToolMaterial material, int attackDamage, float attackSpeed) {
         super(material,
-                createSettings(VibraniumConfig.unbreakableVibranium, VibraniumConfig.durabilityVibranium));
+                createSettings(ImmersiveOres.VIBRANIUM_CONFIG.toolTier().unbreakable, ImmersiveOres.VIBRANIUM_CONFIG.toolTier().durability));
     }
 
     @Override
@@ -49,7 +48,7 @@ public class VibraniumPickaxe extends PickaxeItem {
     @Override
     public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType options) {
         if(Screen.hasShiftDown()) {
-            if (VibraniumConfig.unbreakableVibranium) {
+            if (ImmersiveOres.VIBRANIUM_CONFIG.toolTier().unbreakable) {
                 tooltip.add(Text.translatable("tooltip.immersiveores.unbreakble.tooltip").formatted(Formatting.LIGHT_PURPLE));
             }
             tooltip.add(Text.translatable("tooltip.immersiveores.immunetofire.tooltip").formatted(Formatting.LIGHT_PURPLE));

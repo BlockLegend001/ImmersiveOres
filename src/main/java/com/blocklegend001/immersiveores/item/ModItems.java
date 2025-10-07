@@ -1,7 +1,6 @@
 package com.blocklegend001.immersiveores.item;
 
 import com.blocklegend001.immersiveores.ImmersiveOres;
-import com.blocklegend001.immersiveores.config.EnderiumConfig;
 import com.blocklegend001.immersiveores.config.VibraniumConfig;
 import com.blocklegend001.immersiveores.config.VulpusConfig;
 import com.blocklegend001.immersiveores.item.custom.enderium.*;
@@ -63,31 +62,31 @@ public class ModItems {
 
     //VIBRANIUM
     public static final Item VIBRANIUM_PICKAXE = registerItem("vibranium_pickaxe",
-            new VibraniumPickaxe(ModToolMaterials.VIBRANIUM, VibraniumConfig.attackDamageVibraniumPickaxe, (float) VibraniumConfig.attackSpeedVibraniumPickaxe));
+            new VibraniumPickaxe(ModToolMaterials.VIBRANIUM, ImmersiveOres.VIBRANIUM_CONFIG.pickaxe().attackDamage, (float) ImmersiveOres.VIBRANIUM_CONFIG.pickaxe().attackSpeed));
 
     public static final Item VIBRANIUM_SHOVEL = registerItem("vibranium_shovel",
-            new VibraniumShovel(ModToolMaterials.VIBRANIUM, VibraniumConfig.attackDamageVibraniumShovel, (float) VibraniumConfig.attackSpeedVibraniumShovel));
+            new VibraniumShovel(ModToolMaterials.VIBRANIUM, ImmersiveOres.VIBRANIUM_CONFIG.shovel().attackDamage, (float) ImmersiveOres.VIBRANIUM_CONFIG.shovel().attackSpeed));
 
     public static final Item VIBRANIUM_AXE = registerItem("vibranium_axe",
-            new VibraniumAxe(ModToolMaterials.VIBRANIUM, VibraniumConfig.attackDamageVibraniumAxe, (float) VibraniumConfig.attackSpeedVibraniumAxe));
+            new VibraniumAxe(ModToolMaterials.VIBRANIUM, ImmersiveOres.VIBRANIUM_CONFIG.axe().attackDamage, (float) ImmersiveOres.VIBRANIUM_CONFIG.axe().attackSpeed));
 
     public static final Item VIBRANIUM_SWORD = registerItem("vibranium_sword",
-            new VibraniumSword(ModToolMaterials.VIBRANIUM, VibraniumConfig.attackDamageVibraniumSword, (float) VibraniumConfig.attackSpeedVibraniumSword));
+            new VibraniumSword(ModToolMaterials.VIBRANIUM, ImmersiveOres.VIBRANIUM_CONFIG.sword().attackDamage, (float) ImmersiveOres.VIBRANIUM_CONFIG.sword().attackSpeed));
 
     public static final Item VIBRANIUM_BOW = registerItem("vibranium_bow",
             new VibraniumBow(BowTiers.VIBRANIUM));
 
     public static final Item VIBRANIUM_HOE = registerItem("vibranium_hoe",
-            new VibraniumHoe(ModToolMaterials.VIBRANIUM, VibraniumConfig.attackDamageVibraniumHoe, (float) VibraniumConfig.attackSpeedVibraniumHoe));
+            new VibraniumHoe(ModToolMaterials.VIBRANIUM, ImmersiveOres.VIBRANIUM_CONFIG.hoe().attackDamage, (float) ImmersiveOres.VIBRANIUM_CONFIG.hoe().attackSpeed));
 
     public static final Item VIBRANIUM_PAXEL = registerItem("vibranium_paxel",
-            new VibraniumPaxel(ModToolMaterials.VIBRANIUM, VibraniumConfig.attackDamageVibraniumPaxel, (float) VibraniumConfig.attackSpeedVibraniumPaxel));
+            new VibraniumPaxel(ModToolMaterials.VIBRANIUM, ImmersiveOres.VIBRANIUM_CONFIG.paxel().attackDamage, (float) ImmersiveOres.VIBRANIUM_CONFIG.paxel().attackSpeed));
 
     public static final Item VIBRANIUM_HAMMER = registerItem("vibranium_hammer",
-            new VibraniumHammer(ModToolMaterials.VIBRANIUM, VibraniumConfig.attackDamageVibraniumHammer, (float) VibraniumConfig.attackSpeedVibraniumHammer));
+            new VibraniumHammer(ModToolMaterials.VIBRANIUM, ImmersiveOres.VIBRANIUM_CONFIG.hammer().attackDamage, (float) ImmersiveOres.VIBRANIUM_CONFIG.hammer().attackSpeed));
 
     public static final Item VIBRANIUM_EXCAVATOR = registerItem("vibranium_excavator",
-            new VibraniumExcavator(ModToolMaterials.VIBRANIUM, VibraniumConfig.attackDamageVibraniumExcavator, (float) VibraniumConfig.attackSpeedVibraniumExcavator));
+            new VibraniumExcavator(ModToolMaterials.VIBRANIUM, ImmersiveOres.VIBRANIUM_CONFIG.excavator().attackDamage, (float) ImmersiveOres.VIBRANIUM_CONFIG.excavator().attackSpeed));
 
     public static final Item VIBRANIUM_HELMET = registerItem("vibranium_helmet",
             new VibraniumArmor(ModArmorMaterials.VIBRANIUM, ArmorItem.Type.HELMET,
@@ -169,31 +168,31 @@ public class ModItems {
 
     //ENDERIUM
     public static final Item ENDERIUM_PICKAXE = registerItem("enderium_pickaxe",
-            new EnderiumPickaxe(ModToolMaterials.ENDERIUM, EnderiumConfig.attackDamageEnderiumPickaxe, (float) EnderiumConfig.attackSpeedEnderiumPickaxe));
+            new EnderiumPickaxe(ModToolMaterials.ENDERIUM, ImmersiveOres.ENDERIUM_CONFIG.pickaxe().attackDamage, (float) ImmersiveOres.ENDERIUM_CONFIG.pickaxe().attackSpeed));
 
     public static final Item ENDERIUM_SHOVEL = registerItem("enderium_shovel",
-            new EnderiumShovel(ModToolMaterials.ENDERIUM, EnderiumConfig.attackDamageEnderiumShovel, (float) EnderiumConfig.attackSpeedEnderiumShovel));
+            new EnderiumShovel(ModToolMaterials.ENDERIUM, ImmersiveOres.ENDERIUM_CONFIG.shovel().attackDamage, (float) ImmersiveOres.ENDERIUM_CONFIG.shovel().attackSpeed));
 
     public static final Item ENDERIUM_AXE = registerItem("enderium_axe",
-            new EnderiumAxe(ModToolMaterials.ENDERIUM, EnderiumConfig.attackDamageEnderiumAxe, (float) EnderiumConfig.attackSpeedEnderiumAxe));
+            new EnderiumAxe(ModToolMaterials.ENDERIUM, ImmersiveOres.ENDERIUM_CONFIG.axe().attackDamage, (float) ImmersiveOres.ENDERIUM_CONFIG.axe().attackSpeed));
 
     public static final Item ENDERIUM_SWORD = registerItem("enderium_sword",
-            new EnderiumSword(ModToolMaterials.ENDERIUM, EnderiumConfig.attackDamageEnderiumSword, (float) EnderiumConfig.attackSpeedEnderiumSword));
+            new EnderiumSword(ModToolMaterials.ENDERIUM, ImmersiveOres.ENDERIUM_CONFIG.sword().attackDamage, (float) ImmersiveOres.ENDERIUM_CONFIG.sword().attackSpeed));
 
     public static final Item ENDERIUM_BOW = registerItem("enderium_bow",
             new EnderiumBow(BowTiers.ENDERIUM));
 
     public static final Item ENDERIUM_HOE = registerItem("enderium_hoe",
-            new EnderiumHoe(ModToolMaterials.ENDERIUM, EnderiumConfig.attackDamageEnderiumHoe, (float) EnderiumConfig.attackSpeedEnderiumHoe));
+            new EnderiumHoe(ModToolMaterials.ENDERIUM, ImmersiveOres.ENDERIUM_CONFIG.hoe().attackDamage, (float) ImmersiveOres.ENDERIUM_CONFIG.hoe().attackSpeed));
 
     public static final Item ENDERIUM_PAXEL = registerItem("enderium_paxel",
-            new EnderiumPaxel(ModToolMaterials.ENDERIUM, EnderiumConfig.attackDamageEnderiumPaxel, (float) EnderiumConfig.attackSpeedEnderiumPaxel));
+            new EnderiumPaxel(ModToolMaterials.ENDERIUM, ImmersiveOres.ENDERIUM_CONFIG.paxel().attackDamage, (float) ImmersiveOres.ENDERIUM_CONFIG.paxel().attackSpeed));
 
     public static final Item ENDERIUM_HAMMER = registerItem("enderium_hammer",
-            new EnderiumHammer(ModToolMaterials.ENDERIUM, EnderiumConfig.attackDamageEnderiumHammer, (float) EnderiumConfig.attackSpeedEnderiumHammer));
+            new EnderiumHammer(ModToolMaterials.ENDERIUM, ImmersiveOres.ENDERIUM_CONFIG.hammer().attackDamage, (float) ImmersiveOres.ENDERIUM_CONFIG.hammer().attackSpeed));
 
     public static final Item ENDERIUM_EXCAVATOR = registerItem("enderium_excavator",
-            new EnderiumExcavator(ModToolMaterials.ENDERIUM, EnderiumConfig.attackDamageEnderiumExcavator, (float) EnderiumConfig.attackSpeedEnderiumExcavator));
+            new EnderiumExcavator(ModToolMaterials.ENDERIUM, ImmersiveOres.ENDERIUM_CONFIG.excavator().attackDamage, (float) ImmersiveOres.ENDERIUM_CONFIG.excavator().attackSpeed));
 
     public static final Item ENDERIUM_HELMET = registerItem("enderium_helmet",
             new EnderiumArmor(ModArmorMaterials.ENDERIUM, ArmorItem.Type.HELMET,

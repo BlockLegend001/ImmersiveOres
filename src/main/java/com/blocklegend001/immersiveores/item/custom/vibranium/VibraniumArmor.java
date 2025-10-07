@@ -1,6 +1,6 @@
 package com.blocklegend001.immersiveores.item.custom.vibranium;
 
-import com.blocklegend001.immersiveores.config.EnderiumConfig;
+import com.blocklegend001.immersiveores.ImmersiveOres;
 import com.blocklegend001.immersiveores.config.VibraniumConfig;
 import com.blocklegend001.immersiveores.item.ModItems;
 import net.minecraft.client.gui.screen.Screen;
@@ -33,11 +33,11 @@ public class VibraniumArmor extends ArmorItem {
     }
 
     public VibraniumArmor(RegistryEntry<ArmorMaterial> material, Type type, Settings settings) {
-        super(material, type, createSettings(VibraniumConfig.unbreakableVibranium, VibraniumConfig.durabilityVibranium));
+        super(material, type, createSettings(ImmersiveOres.VIBRANIUM_CONFIG.toolTier().unbreakable, ImmersiveOres.VIBRANIUM_CONFIG.toolTier().durability));
     }
 
     @Override
-    public boolean isEnchantable(ItemStack p_41456_) {
+    public boolean isEnchantable(ItemStack stack) {
         return true;
     }
 
@@ -48,18 +48,18 @@ public class VibraniumArmor extends ArmorItem {
 
     @Override
     public void inventoryTick(ItemStack stack, World world, Entity entity, int slot, boolean selected) {
-        if (!world.isClient()){
-            if(entity instanceof PlayerEntity player) {
+        if (!world.isClient()) {
+            if (entity instanceof PlayerEntity player) {
                 if (player.getInventory().getArmorStack(0).getItem() == ModItems.VIBRANIUM_BOOTS) {
-                    if (VibraniumConfig.speedIVibraniumArmor) {
+                    if (ImmersiveOres.VIBRANIUM_CONFIG.armorAbilities().speed) {
                         player.addStatusEffect(new StatusEffectInstance(StatusEffects.SPEED, 400, 0, false, false));
                     }
-                    if (VibraniumConfig.jumpIVibraniumArmor) {
+                    if (ImmersiveOres.VIBRANIUM_CONFIG.armorAbilities().jump) {
                         player.addStatusEffect(new StatusEffectInstance(StatusEffects.JUMP_BOOST, 400, 0, false, false));
                     }
                 }
                 if (player.getInventory().getArmorStack(3).getItem() == ModItems.VIBRANIUM_HELMET) {
-                    if (VibraniumConfig.nightVisionVibraniumArmor) {
+                    if (ImmersiveOres.VIBRANIUM_CONFIG.armorAbilities().nightVision) {
                         player.addStatusEffect(new StatusEffectInstance(StatusEffects.NIGHT_VISION, 400, 0, false, false));
                     }
                 }
@@ -95,37 +95,39 @@ public class VibraniumArmor extends ArmorItem {
 
     @Override
     public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType options) {
-        if(Screen.hasShiftDown()) {
+        if (Screen.hasShiftDown()) {
             if (ModItems.VIBRANIUM_BOOTS == stack.getItem()) {
-                if (VibraniumConfig.unbreakableVibranium) {
+                if (ImmersiveOres.VIBRANIUM_CONFIG.toolTier().unbreakable) {
                     tooltip.add(Text.translatable("tooltip.immersiveores.unbreakble.tooltip").formatted(Formatting.LIGHT_PURPLE));
                 }
                 tooltip.add(Text.translatable("tooltip.immersiveores.immunetofire.tooltip").formatted(Formatting.LIGHT_PURPLE));
-                if (VibraniumConfig.speedIVibraniumArmor) {
+                if (ImmersiveOres.VIBRANIUM_CONFIG.armorAbilities().speed) {
                     tooltip.add(Text.translatable("tooltip.immersiveores.speed1.tooltip").formatted(Formatting.LIGHT_PURPLE));
-                } if (VibraniumConfig.jumpIVibraniumArmor) {
+                }
+                if (ImmersiveOres.VIBRANIUM_CONFIG.armorAbilities().jump) {
                     tooltip.add(Text.translatable("tooltip.immersiveores.jump1.tooltip").formatted(Formatting.LIGHT_PURPLE));
-                } if (VibraniumConfig.canWalkOnPowderedSnowVibranium) {
+                }
+                if (ImmersiveOres.VIBRANIUM_CONFIG.armorAbilities().canWalkOnPowderedSnow) {
                     tooltip.add(Text.translatable("tooltip.immersiveores.canwalkonpowderedsnow.tooltip").formatted(Formatting.LIGHT_PURPLE));
                 }
             }
             if (ModItems.VIBRANIUM_CHESTPLATE == stack.getItem()) {
-                if (VibraniumConfig.unbreakableVibranium) {
+                if (ImmersiveOres.VIBRANIUM_CONFIG.toolTier().unbreakable) {
                     tooltip.add(Text.translatable("tooltip.immersiveores.unbreakble.tooltip").formatted(Formatting.LIGHT_PURPLE));
                 }
                 tooltip.add(Text.translatable("tooltip.immersiveores.immunetofire.tooltip").formatted(Formatting.LIGHT_PURPLE));
             }
             if (ModItems.VIBRANIUM_HELMET == stack.getItem()) {
-                if (VibraniumConfig.unbreakableVibranium) {
+                if (ImmersiveOres.VIBRANIUM_CONFIG.toolTier().unbreakable) {
                     tooltip.add(Text.translatable("tooltip.immersiveores.unbreakble.tooltip").formatted(Formatting.LIGHT_PURPLE));
                 }
                 tooltip.add(Text.translatable("tooltip.immersiveores.immunetofire.tooltip").formatted(Formatting.LIGHT_PURPLE));
-                if (VibraniumConfig.nightVisionVibraniumArmor) {
+                if (ImmersiveOres.VIBRANIUM_CONFIG.armorAbilities().nightVision) {
                     tooltip.add(Text.translatable("tooltip.immersiveores.nightvision.tooltip").formatted(Formatting.LIGHT_PURPLE));
                 }
             }
             if (ModItems.VIBRANIUM_LEGGINGS == stack.getItem()) {
-                if (VibraniumConfig.unbreakableVibranium) {
+                if (ImmersiveOres.VIBRANIUM_CONFIG.toolTier().unbreakable) {
                     tooltip.add(Text.translatable("tooltip.immersiveores.unbreakble.tooltip").formatted(Formatting.LIGHT_PURPLE));
                 }
                 tooltip.add(Text.translatable("tooltip.immersiveores.immunetofire.tooltip").formatted(Formatting.LIGHT_PURPLE));

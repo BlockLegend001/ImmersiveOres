@@ -22,11 +22,12 @@ public class ImmersiveOres implements ModInitializer {
     public static final String MOD_ID = "immersiveores";
     public static final Logger LOGGER = Logger.getLogger(MOD_ID);
 
+    public static VibraniumConfig VIBRANIUM_CONFIG = VibraniumConfig.createAndLoad();
+    public static EnderiumConfig ENDERIUM_CONFIG = EnderiumConfig.createAndLoad();
+
     @Override
     public void onInitialize() {
-        VibraniumConfig.registerConfigs();
         VulpusConfig.registerConfigs();
-        EnderiumConfig.registerConfigs();
         ModItemGroups.registerItemGroups();
         ModItems.registerModItems();
         ModBlocks.registerModels();

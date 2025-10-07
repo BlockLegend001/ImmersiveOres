@@ -1,13 +1,12 @@
 package com.blocklegend001.immersiveores.item.custom.enderium;
 
-import com.blocklegend001.immersiveores.config.EnderiumConfig;
+import com.blocklegend001.immersiveores.ImmersiveOres;
 import com.blocklegend001.immersiveores.item.ModToolMaterials;
 import com.blocklegend001.immersiveores.item.custom.base.Hammer;
 import com.blocklegend001.immersiveores.util.map.RadiusMap;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.component.DataComponentTypes;
 import net.minecraft.component.type.UnbreakableComponent;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.item.tooltip.TooltipType;
@@ -23,7 +22,7 @@ public class EnderiumHammer extends Hammer {
                 .maxDamage(durability)
                 .fireproof()
                 .attributeModifiers(EnderiumHammer.createAttributeModifiers(ModToolMaterials.ENDERIUM,
-                        EnderiumConfig.attackDamageEnderiumHammer, (float) EnderiumConfig.attackSpeedEnderiumHammer));
+                        ImmersiveOres.ENDERIUM_CONFIG.hammer().attackDamage, (float) ImmersiveOres.ENDERIUM_CONFIG.hammer().attackSpeed));
 
         if (unbreakable) {
             settings.component(DataComponentTypes.UNBREAKABLE, new UnbreakableComponent(true));
@@ -34,7 +33,7 @@ public class EnderiumHammer extends Hammer {
 
     public EnderiumHammer(ToolMaterial material, int attackDamage, float attackSpeed) {
         super(material,
-                createSettings(EnderiumConfig.unbreakableEnderium, EnderiumConfig.durabilityEnderium));
+                createSettings(ImmersiveOres.ENDERIUM_CONFIG.toolTier().unbreakable, ImmersiveOres.ENDERIUM_CONFIG.toolTier().durability));
     }
 
     @Override
@@ -48,8 +47,9 @@ public class EnderiumHammer extends Hammer {
         int widht = radius * 2 + 1;
 
         if (Screen.hasShiftDown()) {
-            tooltip.add(Text.translatable("tooltip.immersiveores.unbreakble.tooltip").formatted(Formatting.DARK_AQUA));
-            tooltip.add(Text.translatable("tooltip.immersiveores.immunetofire.tooltip").formatted(Formatting.DARK_AQUA));
+            if (ImmersiveOres.ENDERIUM_CONFIG.toolTier().unbreakable) {
+                tooltip.add(Text.translatable("tooltip.immersiveores.unbreakble.tooltip").formatted(Formatting.DARK_AQUA));
+            }            tooltip.add(Text.translatable("tooltip.immersiveores.immunetofire.tooltip").formatted(Formatting.DARK_AQUA));
             Text text = Text.literal("Dig area: ")
                     .formatted(Formatting.DARK_AQUA)
                     .append(Text.literal(widht + "x1").formatted(Formatting.YELLOW));

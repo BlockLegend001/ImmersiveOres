@@ -1,6 +1,6 @@
 package com.blocklegend001.immersiveores.mixin;
 
-import com.blocklegend001.immersiveores.config.EnderiumConfig;
+import com.blocklegend001.immersiveores.ImmersiveOres;
 import com.blocklegend001.immersiveores.item.ModItems;
 import net.minecraft.block.PowderSnowBlock;
 import net.minecraft.entity.Entity;
@@ -16,7 +16,7 @@ public class PowderSnowBlockMixinEnderium {
     private static void canWalkOnPowderSnow(Entity entityIn, CallbackInfoReturnable<Boolean> cir) {
         if (entityIn instanceof PlayerEntity) {
             PlayerEntity player = (PlayerEntity) entityIn;
-            if (player.getInventory().getArmorStack(0).getItem() == ModItems.ENDERIUM_BOOTS && EnderiumConfig.canWalkOnPowderedSnowEnderium) {
+            if (player.getInventory().getArmorStack(0).getItem() == ModItems.ENDERIUM_BOOTS && ImmersiveOres.ENDERIUM_CONFIG.armorAbilities().canWalkOnPowderedSnow) {
                 cir.setReturnValue(true);
             }
         }

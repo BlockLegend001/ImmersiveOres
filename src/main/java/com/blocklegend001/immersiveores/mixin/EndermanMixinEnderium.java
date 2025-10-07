@@ -1,6 +1,6 @@
 package com.blocklegend001.immersiveores.mixin;
 
-import com.blocklegend001.immersiveores.config.EnderiumConfig;
+import com.blocklegend001.immersiveores.ImmersiveOres;
 import com.blocklegend001.immersiveores.item.ModItems;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
@@ -22,7 +22,7 @@ public abstract class EndermanMixinEnderium extends Entity {
     @Inject(at = @At("HEAD"), cancellable = true, method = "isPlayerStaring")
     private void isPlayerWearingEnderMask(PlayerEntity player, CallbackInfoReturnable<Boolean> cir) {
         ItemStack stack = (ItemStack) player.getInventory().getArmorStack(3);
-        if (stack.getItem() == ModItems.ENDERIUM_HELMET && EnderiumConfig.endermanWillNotBeAngryWithYouEnderium) {
+        if (stack.getItem() == ModItems.ENDERIUM_HELMET && ImmersiveOres.ENDERIUM_CONFIG.armorAbilities().endermenNeutral) {
             cir.setReturnValue(false);
         }
     }

@@ -1,6 +1,6 @@
 package com.blocklegend001.immersiveores.item.custom.enderium;
 
-import com.blocklegend001.immersiveores.config.EnderiumConfig;
+import com.blocklegend001.immersiveores.ImmersiveOres;
 import com.blocklegend001.immersiveores.util.map.ArrowCountMap;
 import com.blocklegend001.immersiveores.util.tools.bow.BowTier;
 import net.minecraft.client.gui.screen.Screen;
@@ -30,7 +30,7 @@ import java.util.List;
 
 public class EnderiumBow extends BowItem {
     private final BowTier tier;
-    private final int ARROW_COUNT = EnderiumConfig.arrowCountEnderiumBow;
+    private final int ARROW_COUNT = ImmersiveOres.ENDERIUM_CONFIG.bow().arrowCount;
 
     private static Settings createSettings(boolean unbreakable, int durability) {
         Settings settings = new Settings()
@@ -45,7 +45,7 @@ public class EnderiumBow extends BowItem {
     }
 
     public EnderiumBow(BowTier tier) {
-        super(createSettings(EnderiumConfig.unbreakableEnderium, EnderiumConfig.durabilityEnderium));
+        super(createSettings(ImmersiveOres.ENDERIUM_CONFIG.toolTier().unbreakable, ImmersiveOres.ENDERIUM_CONFIG.toolTier().durability));
         this.tier = tier;
     }
 
@@ -150,7 +150,7 @@ public class EnderiumBow extends BowItem {
                     .formatted(color);
             tooltip.add(damage);
 
-            if (EnderiumConfig.unbreakableEnderium) {
+            if (ImmersiveOres.ENDERIUM_CONFIG.toolTier().unbreakable) {
                 Text unbreakable = Text.translatable("tooltip.immersiveores.unbreakble.tooltip")
                         .formatted(color);
                 tooltip.add(unbreakable);

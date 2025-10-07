@@ -1,6 +1,6 @@
 package com.blocklegend001.immersiveores.item.custom.enderium;
 
-import com.blocklegend001.immersiveores.config.EnderiumConfig;
+import com.blocklegend001.immersiveores.ImmersiveOres;
 import com.blocklegend001.immersiveores.item.ModArmorMaterials;
 import com.blocklegend001.immersiveores.item.ModItems;
 import net.minecraft.client.gui.screen.Screen;
@@ -33,7 +33,7 @@ public class EnderiumArmor extends ArmorItem {
     }
 
     public EnderiumArmor(RegistryEntry<ArmorMaterial> material, Type type, Settings settings) {
-        super(material, type, createSettings(EnderiumConfig.unbreakableEnderium, EnderiumConfig.durabilityEnderium));
+        super(material, type, createSettings(ImmersiveOres.ENDERIUM_CONFIG.toolTier().unbreakable, ImmersiveOres.ENDERIUM_CONFIG.toolTier().durability));
     }
 
     @Override
@@ -51,37 +51,37 @@ public class EnderiumArmor extends ArmorItem {
         if (!world.isClient()) {
             if (entity instanceof PlayerEntity player) {
                 if (player.getInventory().getArmorStack(0).getItem() == ModItems.ENDERIUM_BOOTS) {
-                    if (EnderiumConfig.speedIIIEnderiumArmor) {
+                    if (ImmersiveOres.ENDERIUM_CONFIG.armorAbilities().speedIII) {
                         player.addStatusEffect(new StatusEffectInstance(StatusEffects.SPEED, 400, 2, false, false));
                     }
-                    if (EnderiumConfig.jumpIIIEnderiumArmor) {
+                    if (ImmersiveOres.ENDERIUM_CONFIG.armorAbilities().jumpIII) {
                         player.addStatusEffect(new StatusEffectInstance(StatusEffects.JUMP_BOOST, 400, 2, false, false));
                     }
-                    if (EnderiumConfig.fireResistanceEnderiumArmor) {
+                    if (ImmersiveOres.ENDERIUM_CONFIG.armorAbilities().fireResistance) {
                         player.addStatusEffect(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE, 400, 1, false, false));
                     }
-                    if (!player.isOnGround() && player.fallDistance >= 1.0F && EnderiumConfig.immuneToFallDamageEnderiumArmor) {
+                    if (!player.isOnGround() && player.fallDistance >= 1.0F && ImmersiveOres.ENDERIUM_CONFIG.armorAbilities().immuneToFallDamage) {
                         player.fallDistance = 0F;
                     }
                 }
                 if (player.getInventory().getArmorStack(2).getItem() == ModItems.ENDERIUM_CHESTPLATE) {
-                    if (EnderiumConfig.fireResistanceEnderiumArmor) {
+                    if (ImmersiveOres.ENDERIUM_CONFIG.armorAbilities().fireResistance) {
                         player.addStatusEffect(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE, 400, 0, false, false));
                     }
                 }
                 if (player.getInventory().getArmorStack(3).getItem() == ModItems.ENDERIUM_HELMET) {
-                    if (EnderiumConfig.nightVisionEnderiumArmor) {
+                    if (ImmersiveOres.ENDERIUM_CONFIG.armorAbilities().nightVision) {
                         player.addStatusEffect(new StatusEffectInstance(StatusEffects.NIGHT_VISION, 400, 0, false, false));
                     }
-                    if (EnderiumConfig.fireResistanceEnderiumArmor) {
+                    if (ImmersiveOres.ENDERIUM_CONFIG.armorAbilities().fireResistance) {
                         player.addStatusEffect(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE, 400, 0, false, false));
                     }
                 }
                 if (player.getInventory().getArmorStack(1).getItem() == ModItems.ENDERIUM_LEGGINGS) {
-                    if (EnderiumConfig.neverLoseHungerEnderiumArmor) {
+                    if (ImmersiveOres.ENDERIUM_CONFIG.armorAbilities().neverLoseHunger) {
                         player.addStatusEffect(new StatusEffectInstance(StatusEffects.SATURATION, 400, 99, false, false));
                     }
-                    if (EnderiumConfig.fireResistanceEnderiumArmor) {
+                    if (ImmersiveOres.ENDERIUM_CONFIG.armorAbilities().fireResistance) {
                         player.addStatusEffect(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE, 400, 0, false, false));
                     }
                 }
@@ -119,62 +119,62 @@ public class EnderiumArmor extends ArmorItem {
     public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType options) {
         if(Screen.hasShiftDown()) {
             if (ModItems.ENDERIUM_BOOTS == stack.getItem()) {
-                if (EnderiumConfig.unbreakableEnderium) {
+                if (ImmersiveOres.ENDERIUM_CONFIG.toolTier().unbreakable) {
                     tooltip.add(Text.translatable("tooltip.immersiveores.unbreakble.tooltip").formatted(Formatting.DARK_AQUA));
                 }
                 tooltip.add(Text.translatable("tooltip.immersiveores.immunetofire.tooltip").formatted(Formatting.DARK_AQUA));
-                if (EnderiumConfig.speedIIIEnderiumArmor) {
+                if (ImmersiveOres.ENDERIUM_CONFIG.armorAbilities().speedIII) {
                     tooltip.add(Text.translatable("tooltip.immersiveores.speed3.tooltip").formatted(Formatting.DARK_AQUA));
-                } if (EnderiumConfig.jumpIIIEnderiumArmor) {
+                } if (ImmersiveOres.ENDERIUM_CONFIG.armorAbilities().jumpIII) {
                     tooltip.add(Text.translatable("tooltip.immersiveores.jump3.tooltip").formatted(Formatting.DARK_AQUA));
-                } if (EnderiumConfig.canWalkOnPowderedSnowEnderium) {
+                } if (ImmersiveOres.ENDERIUM_CONFIG.armorAbilities().canWalkOnPowderedSnow) {
                     tooltip.add(Text.translatable("tooltip.immersiveores.canwalkonpowderedsnow.tooltip").formatted(Formatting.DARK_AQUA));
-                } if (EnderiumConfig.fireResistanceEnderiumArmor) {
+                } if (ImmersiveOres.ENDERIUM_CONFIG.armorAbilities().fireResistance) {
                     tooltip.add(Text.translatable("tooltip.immersiveores.playerimmunetofire.tooltip").formatted(Formatting.DARK_AQUA));
-                } if (EnderiumConfig.makesPiglinsNeutralEnderium) {
+                } if (ImmersiveOres.ENDERIUM_CONFIG.armorAbilities().makesPiglinsNeutral) {
                     tooltip.add(Text.translatable("tooltip.immersiveores.immunetopiglin.tooltip").formatted(Formatting.DARK_AQUA));
-                } if (EnderiumConfig.immuneToFallDamageEnderiumArmor) {
+                } if (ImmersiveOres.ENDERIUM_CONFIG.armorAbilities().immuneToFallDamage) {
                     tooltip.add(Text.translatable("tooltip.immersiveores.immunetofalldamage.tooltip").formatted(Formatting.DARK_AQUA));
-                } if (EnderiumConfig.canFlyEnderiumArmor) {
+                } if (ImmersiveOres.ENDERIUM_CONFIG.armorAbilities().canFly) {
                     tooltip.add(Text.translatable("tooltip.immersiveores.canfly.tooltip").formatted(Formatting.DARK_AQUA));
                 }
             }
             if (ModItems.ENDERIUM_CHESTPLATE == stack.getItem()) {
-                if (EnderiumConfig.unbreakableEnderium) {
+                if (ImmersiveOres.ENDERIUM_CONFIG.toolTier().unbreakable) {
                     tooltip.add(Text.translatable("tooltip.immersiveores.unbreakble.tooltip").formatted(Formatting.DARK_AQUA));
                 }
                 tooltip.add(Text.translatable("tooltip.immersiveores.immunetofire.tooltip").formatted(Formatting.DARK_AQUA));
-                if (EnderiumConfig.fireResistanceEnderiumArmor) {
+                if (ImmersiveOres.ENDERIUM_CONFIG.armorAbilities().fireResistance) {
                     tooltip.add(Text.translatable("tooltip.immersiveores.playerimmunetofire.tooltip").formatted(Formatting.DARK_AQUA));
-                } if (EnderiumConfig.makesPiglinsNeutralEnderium) {
+                } if (ImmersiveOres.ENDERIUM_CONFIG.armorAbilities().makesPiglinsNeutral) {
                     tooltip.add(Text.translatable("tooltip.immersiveores.immunetopiglin.tooltip").formatted(Formatting.DARK_AQUA));
                 }
             }
             if (ModItems.ENDERIUM_LEGGINGS == stack.getItem()) {
-                if (EnderiumConfig.unbreakableEnderium) {
+                if (ImmersiveOres.ENDERIUM_CONFIG.toolTier().unbreakable) {
                     tooltip.add(Text.translatable("tooltip.immersiveores.unbreakble.tooltip").formatted(Formatting.DARK_AQUA));
                 }
                 tooltip.add(Text.translatable("tooltip.immersiveores.immunetofire.tooltip").formatted(Formatting.DARK_AQUA));
-                if (EnderiumConfig.fireResistanceEnderiumArmor) {
+                if (ImmersiveOres.ENDERIUM_CONFIG.armorAbilities().fireResistance) {
                     tooltip.add(Text.translatable("tooltip.immersiveores.playerimmunetofire.tooltip").formatted(Formatting.DARK_AQUA));
-                } if (EnderiumConfig.makesPiglinsNeutralEnderium) {
+                } if (ImmersiveOres.ENDERIUM_CONFIG.armorAbilities().makesPiglinsNeutral) {
                     tooltip.add(Text.translatable("tooltip.immersiveores.immunetopiglin.tooltip").formatted(Formatting.DARK_AQUA));
-                } if (EnderiumConfig.neverLoseHungerEnderiumArmor) {
+                } if (ImmersiveOres.ENDERIUM_CONFIG.armorAbilities().neverLoseHunger) {
                     tooltip.add(Text.translatable("tooltip.immersiveores.nerverlosehunger.tooltip").formatted(Formatting.DARK_AQUA));
                 }
             }
             if (ModItems.ENDERIUM_HELMET == stack.getItem()) {
-                if (EnderiumConfig.unbreakableEnderium) {
+                if (ImmersiveOres.ENDERIUM_CONFIG.toolTier().unbreakable) {
                     tooltip.add(Text.translatable("tooltip.immersiveores.unbreakble.tooltip").formatted(Formatting.DARK_AQUA));
                 }
                 tooltip.add(Text.translatable("tooltip.immersiveores.immunetofire.tooltip").formatted(Formatting.DARK_AQUA));
-                if (EnderiumConfig.nightVisionEnderiumArmor) {
+                if (ImmersiveOres.ENDERIUM_CONFIG.armorAbilities().nightVision) {
                     tooltip.add(Text.translatable("tooltip.immersiveores.nightvision.tooltip").formatted(Formatting.DARK_AQUA));
-                } if (EnderiumConfig.makesPiglinsNeutralEnderium) {
+                } if (ImmersiveOres.ENDERIUM_CONFIG.armorAbilities().makesPiglinsNeutral) {
                     tooltip.add(Text.translatable("tooltip.immersiveores.immunetopiglin.tooltip").formatted(Formatting.DARK_AQUA));
-                } if (EnderiumConfig.endermanWillNotBeAngryWithYouEnderium) {
+                } if (ImmersiveOres.ENDERIUM_CONFIG.armorAbilities().endermenNeutral) {
                     tooltip.add(Text.translatable("tooltip.immersiveores.endermanwillnotbeangrywithyou.tooltip").formatted(Formatting.DARK_AQUA));
-                } if (EnderiumConfig.fireResistanceEnderiumArmor) {
+                } if (ImmersiveOres.ENDERIUM_CONFIG.armorAbilities().fireResistance) {
                     tooltip.add(Text.translatable("tooltip.immersiveores.playerimmunetofire.tooltip").formatted(Formatting.DARK_AQUA));
                 }
             }

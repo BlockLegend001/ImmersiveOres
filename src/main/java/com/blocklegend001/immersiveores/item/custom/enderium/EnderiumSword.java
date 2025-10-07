@@ -1,6 +1,6 @@
 package com.blocklegend001.immersiveores.item.custom.enderium;
 
-import com.blocklegend001.immersiveores.config.EnderiumConfig;
+import com.blocklegend001.immersiveores.ImmersiveOres;
 import com.blocklegend001.immersiveores.item.ModToolMaterials;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.component.DataComponentTypes;
@@ -10,7 +10,6 @@ import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.enchantment.Enchantments;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.SwordItem;
 import net.minecraft.item.ToolMaterial;
@@ -32,7 +31,7 @@ public class EnderiumSword extends SwordItem {
                 .maxDamage(durability)
                 .fireproof()
                 .attributeModifiers(EnderiumSword.createAttributeModifiers(ModToolMaterials.ENDERIUM,
-                        EnderiumConfig.attackDamageEnderiumSword, (float) EnderiumConfig.attackSpeedEnderiumSword));
+                        ImmersiveOres.ENDERIUM_CONFIG.sword().attackDamage, (float) ImmersiveOres.ENDERIUM_CONFIG.sword().attackSpeed));
 
         if (unbreakable) {
             settings.component(DataComponentTypes.UNBREAKABLE, new UnbreakableComponent(true));
@@ -43,7 +42,7 @@ public class EnderiumSword extends SwordItem {
 
     public EnderiumSword(ToolMaterial material, int attackDamage, float attackSpeed) {
         super(material,
-                createSettings(EnderiumConfig.unbreakableEnderium, EnderiumConfig.durabilityEnderium));
+                createSettings(ImmersiveOres.ENDERIUM_CONFIG.toolTier().unbreakable, ImmersiveOres.ENDERIUM_CONFIG.toolTier().durability));
     }
 
     @Override
@@ -102,7 +101,7 @@ public class EnderiumSword extends SwordItem {
     @Override
     public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType options) {
         if(Screen.hasShiftDown()) {
-            if (EnderiumConfig.unbreakableEnderium) {
+            if (ImmersiveOres.ENDERIUM_CONFIG.toolTier().unbreakable) {
                 tooltip.add(Text.translatable("tooltip.immersiveores.unbreakble.tooltip").formatted(Formatting.DARK_AQUA));
             }
             tooltip.add(Text.translatable("tooltip.immersiveores.immunetofire.tooltip").formatted(Formatting.DARK_AQUA));

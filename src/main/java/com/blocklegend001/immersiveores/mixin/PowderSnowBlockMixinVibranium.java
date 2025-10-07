@@ -1,5 +1,6 @@
 package com.blocklegend001.immersiveores.mixin;
 
+import com.blocklegend001.immersiveores.ImmersiveOres;
 import com.blocklegend001.immersiveores.config.VibraniumConfig;
 import com.blocklegend001.immersiveores.item.ModItems;
 import net.minecraft.block.PowderSnowBlock;
@@ -16,7 +17,7 @@ public class PowderSnowBlockMixinVibranium {
     private static void canWalkOnPowderSnow(Entity entityIn, CallbackInfoReturnable<Boolean> cir) {
         if (entityIn instanceof PlayerEntity) {
             PlayerEntity player = (PlayerEntity) entityIn;
-            if (player.getInventory().getArmorStack(0).getItem() == ModItems.VIBRANIUM_BOOTS && VibraniumConfig.canWalkOnPowderedSnowVibranium) {
+            if (player.getInventory().getArmorStack(0).getItem() == ModItems.VIBRANIUM_BOOTS && ImmersiveOres.VIBRANIUM_CONFIG.armorAbilities().canWalkOnPowderedSnow) {
                 cir.setReturnValue(true);
             }
         }

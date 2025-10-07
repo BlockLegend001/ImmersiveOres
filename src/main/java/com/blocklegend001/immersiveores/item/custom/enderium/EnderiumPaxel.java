@@ -1,6 +1,6 @@
 package com.blocklegend001.immersiveores.item.custom.enderium;
 
-import com.blocklegend001.immersiveores.config.EnderiumConfig;
+import com.blocklegend001.immersiveores.ImmersiveOres;
 import com.blocklegend001.immersiveores.item.ModToolMaterials;
 import com.blocklegend001.immersiveores.item.custom.base.Paxel;
 import com.blocklegend001.immersiveores.util.ModTags;
@@ -20,7 +20,7 @@ public class EnderiumPaxel extends Paxel {
                 .maxDamage(durability)
                 .fireproof()
                 .attributeModifiers(EnderiumPaxel.createAttributeModifiers(ModToolMaterials.ENDERIUM,
-                        EnderiumConfig.attackDamageEnderiumPaxel, (float) EnderiumConfig.attackSpeedEnderiumPaxel));
+                        ImmersiveOres.ENDERIUM_CONFIG.paxel().attackDamage, (float) ImmersiveOres.ENDERIUM_CONFIG.paxel().attackSpeed));
 
         if (unbreakable) {
             settings.component(DataComponentTypes.UNBREAKABLE, new UnbreakableComponent(true));
@@ -31,7 +31,7 @@ public class EnderiumPaxel extends Paxel {
 
     public EnderiumPaxel(ToolMaterial material, int attackDamage, float attackSpeed) {
         super(material, ModTags.Blocks.ENDERIUM_PAXEL_MINEABLE,
-                createSettings(EnderiumConfig.unbreakableEnderium, EnderiumConfig.durabilityEnderium));
+                createSettings(ImmersiveOres.ENDERIUM_CONFIG.toolTier().unbreakable, ImmersiveOres.ENDERIUM_CONFIG.toolTier().durability));
     }
 
     @Override
@@ -42,7 +42,7 @@ public class EnderiumPaxel extends Paxel {
     @Override
     public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType options) {
         if(Screen.hasShiftDown()) {
-            if (EnderiumConfig.unbreakableEnderium) {
+            if (ImmersiveOres.ENDERIUM_CONFIG.toolTier().unbreakable) {
                 tooltip.add(Text.translatable("tooltip.immersiveores.unbreakble.tooltip").formatted(Formatting.DARK_AQUA));
             }
             tooltip.add(Text.translatable("tooltip.immersiveores.immunetofire.tooltip").formatted(Formatting.DARK_AQUA));
