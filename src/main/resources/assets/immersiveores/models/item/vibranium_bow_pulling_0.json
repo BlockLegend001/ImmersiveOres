@@ -1,0 +1,6 @@
+{
+  "parent": "immersiveores:item/vibranium_bow",
+  "textures": {
+    "layer0": "immersiveores:item/vibranium_bow_pulling_0"
+  }
+}

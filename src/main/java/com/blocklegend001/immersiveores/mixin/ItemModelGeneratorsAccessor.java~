@@ -1,0 +1,4 @@
+package com.blocklegend001.immersiveores.mixin;
+
+public class ItemModelGeneratorsAccessor {
+}
