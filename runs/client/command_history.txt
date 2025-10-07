@@ -8,3 +8,8 @@
 /gamemode survival
 /time set night
 /gamemode survival
+/give Dev immersiveores:raw_vibranium_block
+/give Dev immersiveores:raw_vulpus_block
+/gamemode survival
+/gamemode creative
+/gamemode survival

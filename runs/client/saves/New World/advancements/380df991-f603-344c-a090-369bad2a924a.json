@@ -351,5 +351,35 @@
     },
     "done": true
   },
+  "immersiveores:vibraniumtools": {
+    "criteria": {
+      "has_vibranium_pickaxe": "2025-08-28 11:18:23 +0200"
+    },
+    "done": false
+  },
+  "immersiveores:vulpustools": {
+    "criteria": {
+      "has_vulpus_pickaxe": "2025-08-28 11:18:23 +0200"
+    },
+    "done": false
+  },
+  "immersiveores:enderiumtools": {
+    "criteria": {
+      "has_enderium_pickaxe": "2025-08-28 11:18:24 +0200"
+    },
+    "done": false
+  },
+  "immersiveores:enderiumspecialtools": {
+    "criteria": {
+      "has_enderium_paxel": "2025-08-28 22:51:39 +0200"
+    },
+    "done": false
+  },
+  "immersiveores:vulpusspecialtools": {
+    "criteria": {
+      "has_vulpus_hammer": "2025-08-28 22:51:41 +0200"
+    },
+    "done": false
+  },
   "DataVersion": 4082
 }

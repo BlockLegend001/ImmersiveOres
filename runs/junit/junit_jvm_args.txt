@@ -11,3 +11,8 @@ java.base/sun.security.util=cpw.mods.securejarhandler
 --add-exports
 jdk.naming.dns/com.sun.jndi.dns=java.naming
 -XX:HeapDumpPath=MojangTricksIntelDriversForPerformance_javaw.exe_minecraft.exe.heapdump
+-Dforge.logging.markers=REGISTRIES
+-Dforge.logging.console.level=debug
+-DlegacyClassPath.file=D:\Programmazione\Mod\Immersive Ores\NEOFORGE\1.21.3\.gradle\configuration\neoForm\neoFormJoined1.21.3-20241023.131943\steps\writeMinecraftClasspathJunit\classpath.txt
+-DignoreList=mixinextras-neoforge-0.4.1.jar,client-extra,neoforge-
+-Djava.net.preferIPv6Addresses=system

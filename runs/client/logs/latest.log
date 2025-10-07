@@ -1,157 +1,199 @@
-[13:08:33] [main/INFO]: ModLauncher running: args [--launchTarget, forgeclientdev, --version, 21.3.74, --assetIndex, asset-index, --assetsDir, C:\Users\rosar\.gradle\caches\minecraft\assets, --gameDir, ., --fml.fmlVersion, 5.0.6, --fml.mcVersion, 1.21.3, --fml.neoForgeVersion, 21.3.74, --fml.neoFormVersion, 20241023.131943]
-[13:08:33] [main/INFO]: JVM identified as Amazon.com Inc. OpenJDK 64-Bit Server VM 21.0.6+7-LTS
-[13:08:33] [main/INFO]: ModLauncher 11.0.4+main.d2e20e43 starting: java version 21.0.6 by Amazon.com Inc.; OS Windows 11 arch amd64 version 10.0
-[13:08:33] [main/INFO]: Loading ImmediateWindowProvider fmlearlywindow
-[13:08:33] [main/INFO]: Trying GL version 4.6
-[13:08:33] [main/INFO]: Requested GL version 4.6 got version 4.6
-[13:08:33] [main/INFO]: SpongePowered MIXIN Subsystem Version=0.8.7 Source=union:/C:/Users/rosar/.gradle/caches/modules-2/files-2.1/net.fabricmc/sponge-mixin/0.15.2+mixin.0.8.7/2af2f021d8e02a0220dc27a7a72b4666d66d44ca/sponge-mixin-0.15.2+mixin.0.8.7.jar%23166!/ Service=ModLauncher Env=CLIENT
-[13:08:33] [pool-2-thread-1/INFO]: GL info: Intel(R) UHD Graphics GL version 4.6.0 - Build 31.0.101.5592, Intel
-[13:08:33] [main/INFO]: Found mod file "neoforge-21.3.74.jar" [locator: neoforge devenv provider ([D:\Programmazione\Mod\Immersive Ores\NEOFORGE\1.21.3\.gradle\repositories\ng_dummy_ng\net\neoforged\neoforge\21.3.74\neoforge-21.3.74.jar])]
-[13:08:33] [main/INFO]: Found mod file "neoforge-21.3.74.jar" [locator: neoforge devenv provider ([D:\Programmazione\Mod\Immersive Ores\NEOFORGE\1.21.3\.gradle\repositories\ng_dummy_ng\net\neoforged\neoforge\21.3.74\neoforge-21.3.74.jar])]
-[13:08:33] [main/INFO]: Found mod file "main" [locator: userdev mods and services, reader: mod manifest]
-[13:08:33] [main/INFO]: Found mod file "neoforge-21.3.74.jar" [locator: userdev mods and services, reader: mod manifest]
-[13:08:33] [main/INFO]: Found mod file "RoughlyEnoughItems-neoforge-17.0.803.jar" [locator: userdev mods and services, reader: mod manifest]
-[13:08:33] [main/INFO]: Found mod file "cloth-config-neoforge-16.0.141-neoforge.jar" [locator: userdev mods and services, reader: mod manifest]
-[13:08:33] [main/INFO]: Found mod file "architectury-neoforge-14.0.3.jar" [locator: userdev mods and services, reader: mod manifest]
-[13:08:33] [main/INFO]: Found gamelibrary file "mixinextras-neoforge-0.4.1.jar" [locator: userdev mods and services, reader: mod manifest]
-[13:08:34] [main/WARN]: Attempted to select a dependency jar for JarJar which was passed in as source: library:mixinextras.neoforge. Using Mod File: C:\Users\rosar\.gradle\caches\modules-2\files-2.1\io.github.llamalad7\mixinextras-neoforge\0.4.1\eff97772ecd0dcf8e52cdbafd3b3ccec425f8314\mixinextras-neoforge-0.4.1.jar
-[13:08:34] [main/INFO]: Found 1 dependencies adding them to mods collection
-[13:08:34] [main/INFO]: Found library file "net.neoforged.neoforge-coremods-21.3.74.jar" [parent: neoforge-21.3.74.jar, locator: jarinjar, reader: mod manifest]
-[13:08:34] [main/INFO]: 
+[13:34:14] [main/INFO]: ModLauncher running: args [--launchTarget, forgeclientdev, --version, 21.3.74, --assetIndex, asset-index, --assetsDir, C:\Users\rosar\.gradle\caches\minecraft\assets, --gameDir, ., --fml.fmlVersion, 5.0.6, --fml.mcVersion, 1.21.3, --fml.neoForgeVersion, 21.3.74, --fml.neoFormVersion, 20241023.131943]
+[13:34:14] [main/INFO]: JVM identified as Amazon.com Inc. OpenJDK 64-Bit Server VM 21.0.6+7-LTS
+[13:34:14] [main/INFO]: ModLauncher 11.0.4+main.d2e20e43 starting: java version 21.0.6 by Amazon.com Inc.; OS Windows 11 arch amd64 version 10.0
+[13:34:14] [main/INFO]: Loading ImmediateWindowProvider fmlearlywindow
+[13:34:14] [main/INFO]: Trying GL version 4.6
+[13:34:14] [main/INFO]: Requested GL version 4.6 got version 4.6
+[13:34:14] [main/INFO]: SpongePowered MIXIN Subsystem Version=0.8.7 Source=union:/C:/Users/rosar/.gradle/caches/modules-2/files-2.1/net.fabricmc/sponge-mixin/0.15.2+mixin.0.8.7/2af2f021d8e02a0220dc27a7a72b4666d66d44ca/sponge-mixin-0.15.2+mixin.0.8.7.jar%23166!/ Service=ModLauncher Env=CLIENT
+[13:34:14] [pool-2-thread-1/INFO]: GL info: Intel(R) UHD Graphics GL version 4.6.0 - Build 31.0.101.5592, Intel
+[13:34:14] [main/INFO]: Found mod file "neoforge-21.3.74.jar" [locator: neoforge devenv provider ([D:\Programmazione\Mod\Immersive Ores\NEOFORGE\1.21.3\.gradle\repositories\ng_dummy_ng\net\neoforged\neoforge\21.3.74\neoforge-21.3.74.jar])]
+[13:34:14] [main/INFO]: Found mod file "neoforge-21.3.74.jar" [locator: neoforge devenv provider ([D:\Programmazione\Mod\Immersive Ores\NEOFORGE\1.21.3\.gradle\repositories\ng_dummy_ng\net\neoforged\neoforge\21.3.74\neoforge-21.3.74.jar])]
+[13:34:14] [main/INFO]: Found mod file "badpackets-neo-0.8.2.jar" [locator: {mods folder locator at D:\Programmazione\Mod\Immersive Ores\NEOFORGE\1.21.3\runs\client\mods}, reader: mod manifest]
+[13:34:14] [main/INFO]: Found mod file "Jade-1.21.3-NeoForge-16.0.4.jar" [locator: {mods folder locator at D:\Programmazione\Mod\Immersive Ores\NEOFORGE\1.21.3\runs\client\mods}, reader: mod manifest]
+[13:34:14] [main/INFO]: Found mod file "wthit-neo-13.1.1.jar" [locator: {mods folder locator at D:\Programmazione\Mod\Immersive Ores\NEOFORGE\1.21.3\runs\client\mods}, reader: mod manifest]
+[13:34:14] [main/INFO]: Found mod file "main" [locator: userdev mods and services, reader: mod manifest]
+[13:34:14] [main/INFO]: Found mod file "neoforge-21.3.74.jar" [locator: userdev mods and services, reader: mod manifest]
+[13:34:14] [main/INFO]: Found mod file "jade-16.0.4+neoforge.jar" [locator: userdev mods and services, reader: mod manifest]
+[13:34:14] [main/INFO]: Found mod file "RoughlyEnoughItems-neoforge-17.0.803.jar" [locator: userdev mods and services, reader: mod manifest]
+[13:34:14] [main/INFO]: Found mod file "cloth-config-neoforge-16.0.141-neoforge.jar" [locator: userdev mods and services, reader: mod manifest]
+[13:34:14] [main/INFO]: Found mod file "architectury-neoforge-14.0.3.jar" [locator: userdev mods and services, reader: mod manifest]
+[13:34:14] [main/INFO]: Found gamelibrary file "mixinextras-neoforge-0.4.1.jar" [locator: userdev mods and services, reader: mod manifest]
+[13:34:15] [main/WARN]: Attempted to select a dependency jar for JarJar which was passed in as source: library:mixinextras.neoforge. Using Mod File: C:\Users\rosar\.gradle\caches\modules-2\files-2.1\io.github.llamalad7\mixinextras-neoforge\0.4.1\eff97772ecd0dcf8e52cdbafd3b3ccec425f8314\mixinextras-neoforge-0.4.1.jar
+[13:34:15] [main/INFO]: Found 1 dependencies adding them to mods collection
+[13:34:15] [main/INFO]: Found library file "net.neoforged.neoforge-coremods-21.3.74.jar" [parent: neoforge-21.3.74.jar, locator: jarinjar, reader: mod manifest]
+[13:34:15] [main/INFO]: 
      Mod List:
 		Name Version (Mod Id)
 
 		Architectury 14.0.3 (architectury)
+		Bad Packets 0.8.2 (badpackets)
 		Cloth Config v16 API 16.0.141 (cloth_config)
-		ImmersiveOres 1.21.3-1.0.8 (immersiveores)
+		ImmersiveOres 1.21.3-1.1.1 (immersiveores)
+		Jade 16.0.4+neoforge (jade)
 		Minecraft 1.21.3 (minecraft)
 		NeoForge 21.3.74 (neoforge)
 		Roughly Enough Items (REI) 17.0.803 (roughlyenoughitems)
-[13:08:34] [main/INFO]: Compatibility level set to JAVA_17
-[13:08:34] [main/INFO]: Launching target 'forgeclientdev' with arguments [--version, 21.3.74, --gameDir, ., --assetsDir, C:\Users\rosar\.gradle\caches\minecraft\assets, --assetIndex, asset-index]
-[13:08:34] [main/WARN]: Reference map 'immersiveores.refmap.json' for immersiveores.mixins.json could not be read. If this is a development environment you can ignore this message
-[13:08:34] [main/INFO]: Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.4.1).
-[02lug2025 13:08:36.873] [Datafixer Bootstrap/INFO] [com.mojang.datafixers.DataFixerBuilder/]: 240 Datafixer optimizations took 332 milliseconds
-[02lug2025 13:08:41.165] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, location] and [teleport, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
-[02lug2025 13:08:41.166] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, location] and [teleport, targets] with inputs: [0.1 -0.5 .9, 0 0 0]
-[02lug2025 13:08:41.168] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, destination] and [teleport, targets] with inputs: [Player, 0123, @e, dd12be42-52a9-4a91-a8a1-11c01849e498]
-[02lug2025 13:08:41.169] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, targets] and [teleport, destination] with inputs: [Player, 0123, dd12be42-52a9-4a91-a8a1-11c01849e498]
-[02lug2025 13:08:41.170] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, targets, location] and [teleport, targets, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
-[02lug2025 13:08:41.276] [Render thread/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/D:/Programmazione/Mod/Immersive%20Ores/NEOFORGE/1.21.3/.gradle/repositories/ng_dummy_ng/net/neoforged/neoforge/21.3.74/neoforge-21.3.74.jar%23221!/assets/.mcassetsroot' uses unexpected schema
-[02lug2025 13:08:41.276] [Render thread/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/D:/Programmazione/Mod/Immersive%20Ores/NEOFORGE/1.21.3/.gradle/repositories/ng_dummy_ng/net/neoforged/neoforge/21.3.74/neoforge-21.3.74.jar%23221!/data/.mcassetsroot' uses unexpected schema
-[02lug2025 13:08:41.324] [Render thread/INFO] [com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService/]: Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, name=PROD]
-[02lug2025 13:08:41.332] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Setting user: Dev
-[02lug2025 13:08:41.444] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Backend library: LWJGL version 3.3.3+5
-[02lug2025 13:08:41.728] [modloading-worker-0/INFO] [net.neoforged.neoforge.common.NeoForgeMod/NEOFORGE-MOD]: NeoForge mod loading, version 21.3.74, for MC 1.21.3
-[02lug2025 13:08:41.942] [modloading-worker-0/INFO] [REI/]: [REI] Config loaded
-[02lug2025 13:08:42.015] [modloading-worker-0/INFO] [REI/]: [REI] Registered plugin provider DefaultPluginImpl [roughlyenoughitems] for REICommonPlugin
-[02lug2025 13:08:42.017] [modloading-worker-0/INFO] [REI/]: [REI] Registered plugin provider DefaultRuntimePlugin [roughlyenoughitems] for REICommonPlugin
-[02lug2025 13:08:42.045] [modloading-worker-0/INFO] [REI/]: [REI] Registered plugin provider DefaultClientPluginImpl [roughlyenoughitems] for REIClientPlugin
-[02lug2025 13:08:42.059] [modloading-worker-0/INFO] [REI/]: [REI] Registered plugin provider DefaultClientRuntimePlugin [roughlyenoughitems] for REIClientPlugin
-[02lug2025 13:08:42.060] [modloading-worker-0/INFO] [REI/]: [REI] Registered plugin provider HideIngredientsFromTagsPlugin [roughlyenoughitems] for REIClientPlugin
-[02lug2025 13:08:42.593] [Render thread/WARN] [mixin/]: Method overwrite conflict for getSelectionBox in immersiveores.mixins.json:LevelRendererHammerMixin from mod immersiveores, previously written by com.blocklegend001.immersiveores.mixin.LevelRendererExcavatorMixin. Skipping method.
-[02lug2025 13:08:42.670] [Render thread/INFO] [net.neoforged.neoforge.gametest.GameTestHooks/]: Enabled Gametest Namespaces: []
-[02lug2025 13:08:42.746] [Render thread/INFO] [net.minecraft.server.packs.resources.ReloadableResourceManager/]: Reloading ResourceManager: vanilla, mod_resources, mod/roughlyenoughitems, mod/cloth_config, mod/immersiveores, mod/architectury, mod/neoforge
-[02lug2025 13:08:42.877] [resourceLoad/INFO] [net.minecraft.client.gui.font.providers.UnihexProvider/]: Found unifont_jp_patch-15.1.05.hex, loading
-[02lug2025 13:08:42.877] [resourceLoad/INFO] [net.minecraft.client.gui.font.providers.UnihexProvider/]: Found unifont_all_no_pua-15.1.05.hex, loading
-[02lug2025 13:08:43.735] [resourceLoad/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model neoforge:bucket_milk#inventory:
+		wthit 13.1.1 (wthit)
+[13:34:15] [main/INFO]: Compatibility level set to JAVA_17
+[13:34:15] [main/INFO]: Compatibility level set to JAVA_21
+[13:34:15] [main/INFO]: Launching target 'forgeclientdev' with arguments [--version, 21.3.74, --gameDir, ., --assetsDir, C:\Users\rosar\.gradle\caches\minecraft\assets, --assetIndex, asset-index]
+[13:34:15] [main/WARN]: Reference map 'immersiveores.refmap.json' for immersiveores.mixins.json could not be read. If this is a development environment you can ignore this message
+[13:34:15] [main/WARN]: Reference map 'jade.refmap.json' for jade.mixins.json could not be read. If this is a development environment you can ignore this message
+[13:34:16] [main/INFO]: Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.4.1).
+[30ago2025 13:34:18.025] [Datafixer Bootstrap/INFO] [com.mojang.datafixers.DataFixerBuilder/]: 240 Datafixer optimizations took 386 milliseconds
+[30ago2025 13:34:22.409] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, location] and [teleport, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+[30ago2025 13:34:22.410] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, location] and [teleport, targets] with inputs: [0.1 -0.5 .9, 0 0 0]
+[30ago2025 13:34:22.411] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, destination] and [teleport, targets] with inputs: [Player, 0123, @e, dd12be42-52a9-4a91-a8a1-11c01849e498]
+[30ago2025 13:34:22.413] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, targets] and [teleport, destination] with inputs: [Player, 0123, dd12be42-52a9-4a91-a8a1-11c01849e498]
+[30ago2025 13:34:22.414] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, targets, location] and [teleport, targets, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+[30ago2025 13:34:22.514] [Render thread/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/D:/Programmazione/Mod/Immersive%20Ores/NEOFORGE/1.21.3/.gradle/repositories/ng_dummy_ng/net/neoforged/neoforge/21.3.74/neoforge-21.3.74.jar%23224!/assets/.mcassetsroot' uses unexpected schema
+[30ago2025 13:34:22.515] [Render thread/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/D:/Programmazione/Mod/Immersive%20Ores/NEOFORGE/1.21.3/.gradle/repositories/ng_dummy_ng/net/neoforged/neoforge/21.3.74/neoforge-21.3.74.jar%23224!/data/.mcassetsroot' uses unexpected schema
+[30ago2025 13:34:22.554] [Render thread/INFO] [com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService/]: Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, name=PROD]
+[30ago2025 13:34:22.562] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Setting user: Dev
+[30ago2025 13:34:22.676] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Backend library: LWJGL version 3.3.3+5
+[30ago2025 13:34:22.914] [modloading-worker-0/INFO] [net.neoforged.neoforge.common.NeoForgeMod/NEOFORGE-MOD]: NeoForge mod loading, version 21.3.74, for MC 1.21.3
+[30ago2025 13:34:23.099] [modloading-worker-0/INFO] [REI/]: [REI] Config loaded
+[30ago2025 13:34:23.141] [modloading-worker-0/INFO] [REI/]: [REI] Registered plugin provider DefaultPluginImpl [roughlyenoughitems] for REICommonPlugin
+[30ago2025 13:34:23.142] [modloading-worker-0/INFO] [REI/]: [REI] Registered plugin provider DefaultRuntimePlugin [roughlyenoughitems] for REICommonPlugin
+[30ago2025 13:34:23.156] [modloading-worker-0/INFO] [REI/]: [REI] Registered plugin provider DefaultClientPluginImpl [roughlyenoughitems] for REIClientPlugin
+[30ago2025 13:34:23.163] [modloading-worker-0/INFO] [REI/]: [REI] Registered plugin provider DefaultClientRuntimePlugin [roughlyenoughitems] for REIClientPlugin
+[30ago2025 13:34:23.165] [modloading-worker-0/INFO] [REI/]: [REI] Registered plugin provider HideIngredientsFromTagsPlugin [roughlyenoughitems] for REIClientPlugin
+[30ago2025 13:34:23.870] [Render thread/WARN] [mixin/]: Method overwrite conflict for getSelectionBox in immersiveores.mixins.json:LevelRendererHammerMixin from mod immersiveores, previously written by com.blocklegend001.immersiveores.mixin.LevelRendererExcavatorMixin. Skipping method.
+[30ago2025 13:34:23.951] [Render thread/INFO] [net.neoforged.neoforge.gametest.GameTestHooks/]: Enabled Gametest Namespaces: []
+[30ago2025 13:34:24.053] [Render thread/INFO] [net.minecraft.server.packs.resources.ReloadableResourceManager/]: Reloading ResourceManager: vanilla, mod_resources, mod/badpackets, mod/roughlyenoughitems, mod/cloth_config, mod/immersiveores, mod/wthit,waila, mod/jade, mod/architectury, mod/neoforge
+[30ago2025 13:34:24.186] [resourceLoad/INFO] [net.minecraft.client.gui.font.providers.UnihexProvider/]: Found unifont_all_no_pua-15.1.05.hex, loading
+[30ago2025 13:34:24.186] [resourceLoad/INFO] [net.minecraft.client.gui.font.providers.UnihexProvider/]: Found unifont_jp_patch-15.1.05.hex, loading
+[30ago2025 13:34:25.279] [resourceLoad/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model neoforge:bucket_milk#inventory:
     minecraft:textures/atlas/blocks.png:neoforge:items/bucket_base
     minecraft:textures/atlas/blocks.png:neoforge:items/bucket_cover
     minecraft:textures/atlas/blocks.png:neoforge:items/bucket_fluid
-[02lug2025 13:08:43.993] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:ui.hud.bubble_pop
-[02lug2025 13:08:43.993] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:entity.creaking.ambient
-[02lug2025 13:08:43.993] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:entity.creaking.activate
-[02lug2025 13:08:43.993] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:entity.creaking.deactivate
-[02lug2025 13:08:43.993] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:entity.creaking.attack
-[02lug2025 13:08:43.993] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:entity.creaking.death
-[02lug2025 13:08:43.993] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:entity.creaking.step
-[02lug2025 13:08:43.993] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:entity.creaking.freeze
-[02lug2025 13:08:43.993] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:entity.creaking.unfreeze
-[02lug2025 13:08:43.993] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:entity.creaking.spawn
-[02lug2025 13:08:43.994] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:entity.creaking.sway
-[02lug2025 13:08:43.994] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:block.creaking_heart.break
-[02lug2025 13:08:43.994] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:block.creaking_heart.fall
-[02lug2025 13:08:43.994] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:block.creaking_heart.hit
-[02lug2025 13:08:43.994] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:block.creaking_heart.hurt
-[02lug2025 13:08:43.994] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:block.creaking_heart.place
-[02lug2025 13:08:43.994] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:block.creaking_heart.step
-[02lug2025 13:08:43.994] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:block.creaking_heart.idle
-[02lug2025 13:08:43.994] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:block.creaking_heart.spawn
-[02lug2025 13:08:43.994] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:block.pale_hanging_moss.idle
-[02lug2025 13:08:43.994] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:entity.parrot.imitate.creaking
-[02lug2025 13:08:43.994] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:block.spawner.fall
-[02lug2025 13:08:44.103] [Render thread/INFO] [com.mojang.blaze3d.audio.Library/]: OpenAL initialized on device OpenAL Soft on Altoparlanti (Maonocaster G1 Neo)
-[02lug2025 13:08:44.104] [Render thread/INFO] [net.minecraft.client.sounds.SoundEngine/SOUNDS]: Sound engine started
-[02lug2025 13:08:44.207] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 1024x512x4 minecraft:textures/atlas/blocks.png-atlas
-[02lug2025 13:08:44.266] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x4 minecraft:textures/atlas/signs.png-atlas
-[02lug2025 13:08:44.267] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x512x4 minecraft:textures/atlas/shield_patterns.png-atlas
-[02lug2025 13:08:44.270] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x512x4 minecraft:textures/atlas/banner_patterns.png-atlas
-[02lug2025 13:08:44.273] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 1024x1024x4 minecraft:textures/atlas/armor_trims.png-atlas
-[02lug2025 13:08:44.297] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 128x64x4 minecraft:textures/atlas/decorated_pot.png-atlas
-[02lug2025 13:08:44.298] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x4 minecraft:textures/atlas/chest.png-atlas
-[02lug2025 13:08:44.299] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x4 minecraft:textures/atlas/beds.png-atlas
-[02lug2025 13:08:44.301] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x4 minecraft:textures/atlas/shulker_boxes.png-atlas
-[02lug2025 13:08:44.399] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 64x64x0 minecraft:textures/atlas/map_decorations.png-atlas
-[02lug2025 13:08:44.490] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x0 minecraft:textures/atlas/particles.png-atlas
-[02lug2025 13:08:44.498] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x0 minecraft:textures/atlas/paintings.png-atlas
-[02lug2025 13:08:44.500] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x128x0 minecraft:textures/atlas/mob_effects.png-atlas
-[02lug2025 13:08:44.501] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 1024x1024x0 minecraft:textures/atlas/gui.png-atlas
-[02lug2025 13:08:44.517] [Render thread/INFO] [net.neoforged.neoforge.client.entity.animation.json.AnimationLoader/]: Loaded 0 entity animations
-[02lug2025 13:08:48.834] [Render thread/INFO] [net.minecraft.world.item.crafting.RecipeManager/]: Loaded 1412 recipes
-[02lug2025 13:08:48.845] [Render thread/INFO] [net.minecraft.advancements.AdvancementTree/]: Loaded 1535 advancements
-[02lug2025 13:08:49.095] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Starting integrated minecraft server version 1.21.3
-[02lug2025 13:08:49.095] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Generating keypair
-[02lug2025 13:08:49.463] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Preparing start region for dimension minecraft:overworld
-[02lug2025 13:08:50.256] [progressListener/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
-[02lug2025 13:08:50.256] [progressListener/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
-[02lug2025 13:08:50.369] [Server thread/INFO] [net.neoforged.neoforge.server.permission.PermissionAPI/]: Successfully initialized permission handler neoforge:default_handler
-[02lug2025 13:08:50.370] [progressListener/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Time elapsed: 904 ms
-[02lug2025 13:08:50.460] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Changing view distance to 12, from 10
-[02lug2025 13:08:50.460] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Changing simulation distance to 12, from 0
-[02lug2025 13:08:51.534] [Server thread/INFO] [net.minecraft.server.players.PlayerList/]: Dev[local:E:7a3f8e72] logged in with entity id 97 at (-6.5, 119.0, 2.5)
-[02lug2025 13:08:51.583] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev joined the game
-[02lug2025 13:08:51.713] [Render thread/WARN] [REI/]: [REI] Found 1 existing reload task(s) after trying to terminate them!
-[02lug2025 13:08:51.756] [Render thread/INFO] [net.minecraft.advancements.AdvancementTree/]: Loaded 71 advancements
-[02lug2025 13:08:51.777] [REI-ReloadPlugins/INFO] [REI/]: [REI] ========================================
-[02lug2025 13:08:51.778] [REI-ReloadPlugins/INFO] [REI/]: [REI] REICommonPlugin starting main-reload for START.
-[02lug2025 13:08:51.779] [REI-ReloadPlugins/INFO] [REI/]: [REI] Plugins (2):
-[02lug2025 13:08:51.779] [REI-ReloadPlugins/INFO] [REI/]: [REI]  - (-100,00) DefaultPluginImpl of DefaultPluginImpl [roughlyenoughitems]
-[02lug2025 13:08:51.779] [REI-ReloadPlugins/INFO] [REI/]: [REI]  - (0,00) DefaultRuntimePlugin of DefaultRuntimePlugin [roughlyenoughitems]
-[02lug2025 13:08:51.779] [REI-ReloadPlugins/INFO] [REI/]: [REI] ========================================
-[02lug2025 13:08:51.960] [REI-ReloadPlugins/INFO] [REI/]: [REI] @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-[02lug2025 13:08:51.960] [REI-ReloadPlugins/INFO] [REI/]: [REI] REIClientPlugin starting main-reload for START.
-[02lug2025 13:08:51.960] [REI-ReloadPlugins/INFO] [REI/]: [REI] Plugins (3):
-[02lug2025 13:08:51.960] [REI-ReloadPlugins/INFO] [REI/]: [REI]  - (-100,00) DefaultClientPluginImpl of DefaultClientPluginImpl [roughlyenoughitems]
-[02lug2025 13:08:51.961] [REI-ReloadPlugins/INFO] [REI/]: [REI]  - (0,00) HideIngredientsFromTagsPlugin of HideIngredientsFromTagsPlugin [roughlyenoughitems]
-[02lug2025 13:08:51.961] [REI-ReloadPlugins/INFO] [REI/]: [REI]  - (0,00) DefaultClientRuntimePlugin of DefaultClientRuntimePlugin [roughlyenoughitems]
-[02lug2025 13:08:51.961] [REI-ReloadPlugins/INFO] [REI/]: [REI] @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-[02lug2025 13:08:52.561] [REI-ReloadPlugins/INFO] [REI/]: [REI] REICommonPlugin finished post-reload for START in 2.142 ms, totaling 229.4 ms.
-[02lug2025 13:08:52.565] [REI-ReloadPlugins/INFO] [REI/]: [REI] REIClientPlugin finished post-reload for START in 1.709 ms, totaling 601.8 ms.
-[02lug2025 13:08:52.576] [REI-ReloadPlugins/INFO] [REI/]: [REI] OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
-[02lug2025 13:08:52.576] [REI-ReloadPlugins/INFO] [REI/]: [REI] REICommonPlugin starting main-reload for END.
-[02lug2025 13:08:52.576] [REI-ReloadPlugins/INFO] [REI/]: [REI] Plugins (2):
-[02lug2025 13:08:52.577] [REI-ReloadPlugins/INFO] [REI/]: [REI]  - (-100,00) DefaultPluginImpl of DefaultPluginImpl [roughlyenoughitems]
-[02lug2025 13:08:52.577] [REI-ReloadPlugins/INFO] [REI/]: [REI]  - (0,00) DefaultRuntimePlugin of DefaultRuntimePlugin [roughlyenoughitems]
-[02lug2025 13:08:52.577] [REI-ReloadPlugins/INFO] [REI/]: [REI] OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
-[02lug2025 13:08:52.651] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Saving and pausing game...
-[02lug2025 13:08:52.695] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
-[02lug2025 13:08:52.697] [REI-ReloadPlugins/INFO] [REI/]: [REI] ########################################
-[02lug2025 13:08:52.697] [REI-ReloadPlugins/INFO] [REI/]: [REI] REIClientPlugin starting main-reload for END.
-[02lug2025 13:08:52.700] [REI-ReloadPlugins/INFO] [REI/]: [REI] Plugins (3):
-[02lug2025 13:08:52.700] [REI-ReloadPlugins/INFO] [REI/]: [REI]  - (-100,00) DefaultClientPluginImpl of DefaultClientPluginImpl [roughlyenoughitems]
-[02lug2025 13:08:52.700] [REI-ReloadPlugins/INFO] [REI/]: [REI]  - (0,00) HideIngredientsFromTagsPlugin of HideIngredientsFromTagsPlugin [roughlyenoughitems]
-[02lug2025 13:08:52.700] [REI-ReloadPlugins/INFO] [REI/]: [REI]  - (0,00) DefaultClientRuntimePlugin of DefaultClientRuntimePlugin [roughlyenoughitems]
-[02lug2025 13:08:52.700] [REI-ReloadPlugins/INFO] [REI/]: [REI] ########################################
-[02lug2025 13:08:52.741] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
-[02lug2025 13:08:52.741] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
-[02lug2025 13:08:53.563] [REI-ReloadPlugins/INFO] [REI/]: [REI] REICommonPlugin finished post-reload for END in 1.298 ms, totaling 123.2 ms.
-[02lug2025 13:08:53.570] [REI-ReloadPlugins/INFO] [REI/]: [REI] REIClientPlugin finished post-reload for END in 3.893 ms, totaling 869.0 ms.
-[02lug2025 13:08:55.818] [Render thread/INFO] [REI/]: [REI] [REI Server Display Sync] Received server's request to set 1592 recipes.
-[02lug2025 13:08:55.842] [Render thread/WARN] [REI/]: [REI] Detected runtime DisplayRegistry modification, this can be extremely dangerous!
-[02lug2025 13:08:58.241] [Render thread/INFO] [net.minecraft.advancements.AdvancementTree/]: Loaded 71 advancements
-[02lug2025 13:08:59.633] [Render thread/INFO] [net.minecraft.advancements.AdvancementTree/]: Loaded 71 advancements
-[02lug2025 13:09:01.482] [Render thread/INFO] [net.minecraft.advancements.AdvancementTree/]: Loaded 71 advancements
-[02lug2025 13:09:03.932] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: [Dev: Set own game mode to Survival Mode]
-[02lug2025 13:09:03.937] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] Set own game mode to Survival Mode
-[02lug2025 13:09:05.696] [Server thread/WARN] [net.minecraft.server.level.ServerPlayerGameMode/]: Mismatch in destroy block pos: BlockPos{x=-10, y=117, z=6} BlockPos{x=-9, y=116, z=6}
-[02lug2025 13:09:08.713] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] [Debug]: Advanced tooltips: shown
+[30ago2025 13:34:25.400] [resourceLoad/INFO] [mcp.mobius.waila.plugin.PluginLoader/]: [WTHIT] Initializing common plugin waila:core at mcp.mobius.waila.plugin.core.CoreCommonPlugin
+[30ago2025 13:34:25.400] [resourceLoad/INFO] [mcp.mobius.waila.plugin.PluginLoader/]: [WTHIT] Initializing client plugin waila:core at mcp.mobius.waila.plugin.core.CoreClientPlugin
+[30ago2025 13:34:25.442] [resourceLoad/INFO] [snownee.jade.Jade/]: Start loading plugin from com.blocklegend001.immersiveores.imp.client.compat.JadeCompatibility
+[30ago2025 13:34:25.452] [resourceLoad/INFO] [mcp.mobius.waila.plugin.PluginLoader/]: [WTHIT] Initializing common plugin waila:vanilla at mcp.mobius.waila.plugin.vanilla.VanillaCommonPlugin
+[30ago2025 13:34:25.452] [resourceLoad/INFO] [mcp.mobius.waila.plugin.PluginLoader/]: [WTHIT] Initializing client plugin waila:vanilla at mcp.mobius.waila.plugin.vanilla.VanillaClientPlugin
+[30ago2025 13:34:25.498] [resourceLoad/INFO] [snownee.jade.Jade/]: Bootstrapped plugin from com.blocklegend001.immersiveores.imp.client.compat.JadeCompatibility in 51.97 ms
+[30ago2025 13:34:25.509] [resourceLoad/INFO] [snownee.jade.Jade/]: Loaded plugin from com.blocklegend001.immersiveores.imp.client.compat.JadeCompatibility in 63.08 ms
+[30ago2025 13:34:25.509] [resourceLoad/INFO] [snownee.jade.Jade/]: Start loading plugin from snownee.jade.addon.vanilla.VanillaPlugin
+[30ago2025 13:34:25.545] [resourceLoad/INFO] [mcp.mobius.waila.plugin.PluginLoader/]: [WTHIT] Initializing common plugin waila:harvest at mcp.mobius.waila.plugin.harvest.HarvestCommonPlugin
+[30ago2025 13:34:25.545] [resourceLoad/INFO] [mcp.mobius.waila.plugin.PluginLoader/]: [WTHIT] Initializing client plugin waila:harvest at mcp.mobius.waila.plugin.harvest.HarvestClientPlugin
+[30ago2025 13:34:25.555] [resourceLoad/INFO] [mcp.mobius.waila.plugin.PluginLoader/]: [WTHIT] Initializing common plugin waila:neo at mcp.mobius.waila.plugin.neo.NeoCommonPlugin
+[30ago2025 13:34:25.555] [resourceLoad/INFO] [mcp.mobius.waila.plugin.PluginLoader/]: [WTHIT] Initializing client plugin waila:neo at mcp.mobius.waila.plugin.neo.NeoClientPlugin
+[30ago2025 13:34:25.565] [resourceLoad/INFO] [mcp.mobius.waila.plugin.PluginLoader/]: [WTHIT] Initializing common plugin waila:extra at mcp.mobius.waila.plugin.extra.ExtraPlugin
+[30ago2025 13:34:25.565] [resourceLoad/INFO] [mcp.mobius.waila.plugin.PluginLoader/]: [WTHIT] Initializing client plugin waila:extra at mcp.mobius.waila.plugin.extra.ExtraPlugin
+[30ago2025 13:34:25.590] [resourceLoad/INFO] [snownee.jade.Jade/]: Bootstrapped plugin from snownee.jade.addon.vanilla.VanillaPlugin in 78.49 ms
+[30ago2025 13:34:25.600] [resourceLoad/INFO] [snownee.jade.Jade/]: Loaded plugin from snownee.jade.addon.vanilla.VanillaPlugin in 88.97 ms
+[30ago2025 13:34:25.601] [resourceLoad/INFO] [snownee.jade.Jade/]: Start loading plugin from snownee.jade.addon.universal.UniversalPlugin
+[30ago2025 13:34:25.614] [resourceLoad/INFO] [mcp.mobius.waila.config.PluginConfig/]: [WTHIT] Plugin config reloaded
+[30ago2025 13:34:25.632] [resourceLoad/INFO] [snownee.jade.Jade/]: Bootstrapped plugin from snownee.jade.addon.universal.UniversalPlugin in 30.01 ms
+[30ago2025 13:34:25.632] [resourceLoad/INFO] [snownee.jade.Jade/]: Loaded plugin from snownee.jade.addon.universal.UniversalPlugin in 30.32 ms
+[30ago2025 13:34:25.632] [resourceLoad/INFO] [snownee.jade.Jade/]: Start loading plugin from snownee.jade.addon.debug.DebugPlugin
+[30ago2025 13:34:25.637] [resourceLoad/INFO] [snownee.jade.Jade/]: Bootstrapped plugin from snownee.jade.addon.debug.DebugPlugin in 4.363 ms
+[30ago2025 13:34:25.638] [resourceLoad/INFO] [snownee.jade.Jade/]: Loaded plugin from snownee.jade.addon.debug.DebugPlugin in 4.612 ms
+[30ago2025 13:34:25.638] [resourceLoad/INFO] [snownee.jade.Jade/]: Start loading plugin from snownee.jade.addon.core.CorePlugin
+[30ago2025 13:34:25.643] [resourceLoad/INFO] [snownee.jade.Jade/]: Bootstrapped plugin from snownee.jade.addon.core.CorePlugin in 4.890 ms
+[30ago2025 13:34:25.644] [resourceLoad/INFO] [snownee.jade.Jade/]: Loaded plugin from snownee.jade.addon.core.CorePlugin in 5.178 ms
+[30ago2025 13:34:25.644] [resourceLoad/INFO] [snownee.jade.Jade/]: Start loading plugin from snownee.jade.addon.access.AccessibilityPlugin
+[30ago2025 13:34:25.649] [resourceLoad/INFO] [snownee.jade.Jade/]: Bootstrapped plugin from snownee.jade.addon.access.AccessibilityPlugin in 4.635 ms
+[30ago2025 13:34:25.649] [resourceLoad/INFO] [snownee.jade.Jade/]: Loaded plugin from snownee.jade.addon.access.AccessibilityPlugin in 4.828 ms
+[30ago2025 13:34:25.814] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:ui.hud.bubble_pop
+[30ago2025 13:34:25.814] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:entity.creaking.ambient
+[30ago2025 13:34:25.814] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:entity.creaking.activate
+[30ago2025 13:34:25.814] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:entity.creaking.deactivate
+[30ago2025 13:34:25.814] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:entity.creaking.attack
+[30ago2025 13:34:25.814] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:entity.creaking.death
+[30ago2025 13:34:25.814] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:entity.creaking.step
+[30ago2025 13:34:25.814] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:entity.creaking.freeze
+[30ago2025 13:34:25.814] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:entity.creaking.unfreeze
+[30ago2025 13:34:25.814] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:entity.creaking.spawn
+[30ago2025 13:34:25.814] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:entity.creaking.sway
+[30ago2025 13:34:25.814] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:block.creaking_heart.break
+[30ago2025 13:34:25.814] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:block.creaking_heart.fall
+[30ago2025 13:34:25.814] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:block.creaking_heart.hit
+[30ago2025 13:34:25.815] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:block.creaking_heart.hurt
+[30ago2025 13:34:25.815] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:block.creaking_heart.place
+[30ago2025 13:34:25.815] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:block.creaking_heart.step
+[30ago2025 13:34:25.815] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:block.creaking_heart.idle
+[30ago2025 13:34:25.815] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:block.creaking_heart.spawn
+[30ago2025 13:34:25.815] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:block.pale_hanging_moss.idle
+[30ago2025 13:34:25.815] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:entity.parrot.imitate.creaking
+[30ago2025 13:34:25.815] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:block.spawner.fall
+[30ago2025 13:34:25.936] [Render thread/INFO] [com.mojang.blaze3d.audio.Library/]: OpenAL initialized on device OpenAL Soft on Altoparlanti (Maonocaster G1 Neo)
+[30ago2025 13:34:25.936] [Render thread/INFO] [net.minecraft.client.sounds.SoundEngine/SOUNDS]: Sound engine started
+[30ago2025 13:34:26.012] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 1024x512x4 minecraft:textures/atlas/blocks.png-atlas
+[30ago2025 13:34:26.071] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x4 minecraft:textures/atlas/signs.png-atlas
+[30ago2025 13:34:26.074] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x512x4 minecraft:textures/atlas/shield_patterns.png-atlas
+[30ago2025 13:34:26.077] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x512x4 minecraft:textures/atlas/banner_patterns.png-atlas
+[30ago2025 13:34:26.081] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 1024x1024x4 minecraft:textures/atlas/armor_trims.png-atlas
+[30ago2025 13:34:26.109] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 128x64x4 minecraft:textures/atlas/decorated_pot.png-atlas
+[30ago2025 13:34:26.110] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x4 minecraft:textures/atlas/chest.png-atlas
+[30ago2025 13:34:26.112] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x4 minecraft:textures/atlas/beds.png-atlas
+[30ago2025 13:34:26.113] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x4 minecraft:textures/atlas/shulker_boxes.png-atlas
+[30ago2025 13:34:26.216] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 64x64x0 minecraft:textures/atlas/map_decorations.png-atlas
+[30ago2025 13:34:26.313] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x0 minecraft:textures/atlas/particles.png-atlas
+[30ago2025 13:34:26.318] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x0 minecraft:textures/atlas/paintings.png-atlas
+[30ago2025 13:34:26.320] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x128x0 minecraft:textures/atlas/mob_effects.png-atlas
+[30ago2025 13:34:26.321] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 1024x1024x0 minecraft:textures/atlas/gui.png-atlas
+[30ago2025 13:34:26.345] [Render thread/INFO] [net.neoforged.neoforge.client.entity.animation.json.AnimationLoader/]: Loaded 0 entity animations
+[30ago2025 13:34:32.043] [Render thread/INFO] [net.minecraft.world.item.crafting.RecipeManager/]: Loaded 1412 recipes
+[30ago2025 13:34:32.055] [Render thread/INFO] [net.minecraft.advancements.AdvancementTree/]: Loaded 1535 advancements
+[30ago2025 13:34:32.102] [Render thread/INFO] [snownee.jade.Jade/]: LootTableMineableCollector took 3.584 ms
+[30ago2025 13:34:32.207] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Starting integrated minecraft server version 1.21.3
+[30ago2025 13:34:32.207] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Generating keypair
+[30ago2025 13:34:32.566] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Preparing start region for dimension minecraft:overworld
+[30ago2025 13:34:33.229] [progressListener/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
+[30ago2025 13:34:33.229] [progressListener/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
+[30ago2025 13:34:33.431] [Server thread/INFO] [net.neoforged.neoforge.server.permission.PermissionAPI/]: Successfully initialized permission handler neoforge:default_handler
+[30ago2025 13:34:33.431] [progressListener/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Time elapsed: 848 ms
+[30ago2025 13:34:33.434] [Server thread/INFO] [mcp.mobius.waila.config.PluginConfig/]: [WTHIT] Plugin config reloaded
+[30ago2025 13:34:33.513] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Changing view distance to 12, from 10
+[30ago2025 13:34:33.513] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Changing simulation distance to 12, from 0
+[30ago2025 13:34:34.208] [Render thread/INFO] [mcp.mobius.waila.plugin.PluginLoader/]: [WTHIT] Initializing common plugin waila:core at mcp.mobius.waila.plugin.core.CoreCommonPlugin
+[30ago2025 13:34:34.208] [Render thread/INFO] [mcp.mobius.waila.plugin.PluginLoader/]: [WTHIT] Initializing client plugin waila:core at mcp.mobius.waila.plugin.core.CoreClientPlugin
+[30ago2025 13:34:34.209] [Render thread/INFO] [mcp.mobius.waila.plugin.PluginLoader/]: [WTHIT] Initializing common plugin waila:vanilla at mcp.mobius.waila.plugin.vanilla.VanillaCommonPlugin
+[30ago2025 13:34:34.209] [Render thread/INFO] [mcp.mobius.waila.plugin.PluginLoader/]: [WTHIT] Initializing client plugin waila:vanilla at mcp.mobius.waila.plugin.vanilla.VanillaClientPlugin
+[30ago2025 13:34:34.209] [Render thread/INFO] [mcp.mobius.waila.plugin.PluginLoader/]: [WTHIT] Initializing common plugin waila:harvest at mcp.mobius.waila.plugin.harvest.HarvestCommonPlugin
+[30ago2025 13:34:34.209] [Render thread/INFO] [mcp.mobius.waila.plugin.PluginLoader/]: [WTHIT] Initializing client plugin waila:harvest at mcp.mobius.waila.plugin.harvest.HarvestClientPlugin
+[30ago2025 13:34:34.209] [Render thread/INFO] [mcp.mobius.waila.plugin.PluginLoader/]: [WTHIT] Initializing common plugin waila:neo at mcp.mobius.waila.plugin.neo.NeoCommonPlugin
+[30ago2025 13:34:34.209] [Render thread/INFO] [mcp.mobius.waila.plugin.PluginLoader/]: [WTHIT] Initializing client plugin waila:neo at mcp.mobius.waila.plugin.neo.NeoClientPlugin
+[30ago2025 13:34:34.209] [Render thread/INFO] [mcp.mobius.waila.plugin.PluginLoader/]: [WTHIT] Initializing common plugin waila:extra at mcp.mobius.waila.plugin.extra.ExtraPlugin
+[30ago2025 13:34:34.209] [Render thread/INFO] [mcp.mobius.waila.plugin.PluginLoader/]: [WTHIT] Initializing client plugin waila:extra at mcp.mobius.waila.plugin.extra.ExtraPlugin
+[30ago2025 13:34:34.211] [Render thread/INFO] [mcp.mobius.waila.config.PluginConfig/]: [WTHIT] Plugin config reloaded
+[30ago2025 13:34:34.227] [Render thread/INFO] [mcp.mobius.waila.network.common.s2c.ConfigSyncCommonS2CPacket/]: [WTHIT] Received config from the server: {"minecraft:bee.hive_occupants":true,"minecraft:attribute.horse_jump_height":true,"harvest:enabled":true,"minecraft:level.composter":true,"minecraft:entity.armor":true,"minecraft:effect.beacon":true,"minecraft:plant.tree_growable":true,"minecraft:attribute.horse_speed":true,"wailax:progress.enabled_entity":true,"minecraft:redstone.lever":true,"minecraft:entity.absorption":true,"minecraft:jukebox.record":true,"minecraft:effect.mob":true,"minecraft:book.bookshelf":true,"wailax:energy.enabled_entity":true,"wailax:fluid.enabled_block":true,"minecraft:plant.crop_growable":true,"minecraft:attribute.health":true,"minecraft:horse.jump_height":true,"minecraft:crop_growable":true,"wailax:item.nbt":true,"minecraft:attribute.beacon_effects":true,"minecraft:entity.health":true,"minecraft:plant.crop_progress":true,"minecraft:pet.owner":true,"minecraft:bee.hive_honey_level":true,"wailax:fluid.enabled_entity":true,"minecraft:timer.grow":true,"minecraft:bee.hive_pos":true,"minecraft:entity.item_entity":true,"minecraft:attribute.mob_effects":true,"minecraft:override.invisible_entity":true,"minecraft:spawner_type":true,"wailax:progress.enabled_block":true,"minecraft:note_block.type":true,"minecraft:tree_growable":true,"minecraft:override.infested":true,"wailax:item.enabled_entity":true,"minecraft:item_entity":true,"minecraft:breaking_progress.enabled":true,"minecraft:timer.breed":true,"minecraft:redstone.comparator":true,"minecraft:attribute.panda_genes":true,"wailax:item.enabled_block":true,"minecraft:spawner.type":true,"minecraft:override.trapped_chest":true,"minecraft:effect.hidden_mob":false,"minecraft:horse.speed":true,"minecraft:attribute.armor":true,"wailax:energy.enabled_block":true,"minecraft:attribute.absorption":true,"minecraft:redstone.level":true,"minecraft:level.honey":true,"minecraft:crop_progress":true,"minecraft:redstone.repeater":true,"minecraft:attribute.hidden_mob_effects":false,"minecraft:player_head.name":true,"minecraft:panda.genes":true,"minecraft:override.powder_snow":true}
+[30ago2025 13:34:34.508] [Server thread/INFO] [net.minecraft.server.players.PlayerList/]: Dev[local:E:069580c5] logged in with entity id 81 at (-4.956243697779197, 121.0, 5.1859195538719876)
+[30ago2025 13:34:34.562] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev joined the game
+[30ago2025 13:34:34.785] [Render thread/WARN] [REI/]: [REI] Found 1 existing reload task(s) after trying to terminate them!
+[30ago2025 13:34:34.836] [Render thread/INFO] [snownee.jade.Jade/]: Received config from the server: {}
+[30ago2025 13:34:34.843] [Render thread/INFO] [net.minecraft.advancements.AdvancementTree/]: Loaded 71 advancements
+[30ago2025 13:34:34.864] [REI-ReloadPlugins/INFO] [REI/]: [REI] ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[30ago2025 13:34:34.864] [REI-ReloadPlugins/INFO] [REI/]: [REI] REICommonPlugin starting main-reload for START.
+[30ago2025 13:34:34.864] [REI-ReloadPlugins/INFO] [REI/]: [REI] Plugins (2):
+[30ago2025 13:34:34.864] [REI-ReloadPlugins/INFO] [REI/]: [REI]  - (-100,00) DefaultPluginImpl of DefaultPluginImpl [roughlyenoughitems]
+[30ago2025 13:34:34.864] [REI-ReloadPlugins/INFO] [REI/]: [REI]  - (0,00) DefaultRuntimePlugin of DefaultRuntimePlugin [roughlyenoughitems]
+[30ago2025 13:34:34.864] [REI-ReloadPlugins/INFO] [REI/]: [REI] ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[30ago2025 13:34:35.177] [REI-ReloadPlugins/INFO] [REI/]: [REI] OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+[30ago2025 13:34:35.177] [REI-ReloadPlugins/INFO] [REI/]: [REI] REIClientPlugin starting main-reload for START.
+[30ago2025 13:34:35.178] [REI-ReloadPlugins/INFO] [REI/]: [REI] Plugins (3):
+[30ago2025 13:34:35.178] [REI-ReloadPlugins/INFO] [REI/]: [REI]  - (-100,00) DefaultClientPluginImpl of DefaultClientPluginImpl [roughlyenoughitems]
+[30ago2025 13:34:35.178] [REI-ReloadPlugins/INFO] [REI/]: [REI]  - (0,00) HideIngredientsFromTagsPlugin of HideIngredientsFromTagsPlugin [roughlyenoughitems]
+[30ago2025 13:34:35.178] [REI-ReloadPlugins/INFO] [REI/]: [REI]  - (0,00) DefaultClientRuntimePlugin of DefaultClientRuntimePlugin [roughlyenoughitems]
+[30ago2025 13:34:35.178] [REI-ReloadPlugins/INFO] [REI/]: [REI] OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+[30ago2025 13:34:35.838] [REI-ReloadPlugins/INFO] [REI/]: [REI] REICommonPlugin finished post-reload for START in 2.428 ms, totaling 377.3 ms.
+[30ago2025 13:34:35.883] [REI-ReloadPlugins/INFO] [REI/]: [REI] REIClientPlugin finished post-reload for START in 1.454 ms, totaling 659.8 ms.
+[30ago2025 13:34:35.898] [REI-ReloadPlugins/INFO] [REI/]: [REI] ----------------------------------------
+[30ago2025 13:34:35.898] [REI-ReloadPlugins/INFO] [REI/]: [REI] REICommonPlugin starting main-reload for END.
+[30ago2025 13:34:35.899] [REI-ReloadPlugins/INFO] [REI/]: [REI] Plugins (2):
+[30ago2025 13:34:35.899] [REI-ReloadPlugins/INFO] [REI/]: [REI]  - (-100,00) DefaultPluginImpl of DefaultPluginImpl [roughlyenoughitems]
+[30ago2025 13:34:35.899] [REI-ReloadPlugins/INFO] [REI/]: [REI]  - (0,00) DefaultRuntimePlugin of DefaultRuntimePlugin [roughlyenoughitems]
+[30ago2025 13:34:35.899] [REI-ReloadPlugins/INFO] [REI/]: [REI] ----------------------------------------
+[30ago2025 13:34:35.997] [REI-ReloadPlugins/INFO] [REI/]: [REI] ----------------------------------------
+[30ago2025 13:34:35.997] [REI-ReloadPlugins/INFO] [REI/]: [REI] REIClientPlugin starting main-reload for END.
+[30ago2025 13:34:35.998] [REI-ReloadPlugins/INFO] [REI/]: [REI] Plugins (3):
+[30ago2025 13:34:35.998] [REI-ReloadPlugins/INFO] [REI/]: [REI]  - (-100,00) DefaultClientPluginImpl of DefaultClientPluginImpl [roughlyenoughitems]
+[30ago2025 13:34:35.998] [REI-ReloadPlugins/INFO] [REI/]: [REI]  - (0,00) HideIngredientsFromTagsPlugin of HideIngredientsFromTagsPlugin [roughlyenoughitems]
+[30ago2025 13:34:35.998] [REI-ReloadPlugins/INFO] [REI/]: [REI]  - (0,00) DefaultClientRuntimePlugin of DefaultClientRuntimePlugin [roughlyenoughitems]
+[30ago2025 13:34:35.998] [REI-ReloadPlugins/INFO] [REI/]: [REI] ----------------------------------------
+[30ago2025 13:34:36.834] [REI-ReloadPlugins/INFO] [REI/]: [REI] REICommonPlugin finished post-reload for END in 229.4 μs, totaling 100.4 ms.
+[30ago2025 13:34:36.837] [REI-ReloadPlugins/INFO] [REI/]: [REI] REIClientPlugin finished post-reload for END in 2.667 ms, totaling 839.8 ms.
+[30ago2025 13:34:38.234] [Render thread/INFO] [REI/]: [REI] [REI Server Display Sync] Received server's request to append 1592 recipes.
+[30ago2025 13:34:38.505] [Render thread/WARN] [REI/]: [REI] Detected runtime DisplayRegistry modification, this can be extremely dangerous!
