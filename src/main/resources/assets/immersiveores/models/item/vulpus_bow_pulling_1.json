@@ -1,0 +1,6 @@
+{
+  "parent": "immersiveores:item/vulpus_bow",
+  "textures": {
+    "layer0": "immersiveores:item/vulpus_bow_pulling_1"
+  }
+}
