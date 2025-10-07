@@ -385,5 +385,41 @@
     },
     "done": false
   },
+  "minecraft:recipes/misc/vibranium_ingot_from_smelting_vibranium_ore": {
+    "criteria": {
+      "has_vibranium_ore": "2025-08-27 22:07:38 +0200"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/vibranium_ingot_from_blasting_vibranium_ore": {
+    "criteria": {
+      "has_vibranium_ore": "2025-08-27 22:07:38 +0200"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/enderium_ingot_from_smelting_enderium_ore": {
+    "criteria": {
+      "has_enderium_ore": "2025-08-27 22:07:39 +0200"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/enderium_ingot_from_blasting_enderium_ore": {
+    "criteria": {
+      "has_enderium_ore": "2025-08-27 22:07:39 +0200"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/vulpus_ingot_from_blasting_vulpus_ore": {
+    "criteria": {
+      "has_vulpus_ore": "2025-08-27 22:07:39 +0200"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/vulpus_ingot_from_smelting_vulpus_ore": {
+    "criteria": {
+      "has_vulpus_ore": "2025-08-27 22:07:39 +0200"
+    },
+    "done": true
+  },
   "DataVersion": 3953
 }
