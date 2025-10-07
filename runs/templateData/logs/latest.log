@@ -1,322 +1,322 @@
-[26ago2025 19:03:14.094] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--mod, immersiveores, --all, --output, D:\Programmazione\Mod\Immersive Ores\NEOFORGE\1.21.1\src\generated\resources, --existing, D:\Programmazione\Mod\Immersive Ores\NEOFORGE\1.21.1\src\main\resources, --launchTarget, forgedatauserdev, --assetIndex, asset-index, --assetsDir, C:\Users\rosar\.gradle\caches\minecraft\assets, --gameDir, ., --fml.neoForgeVersion, 21.1.161, --fml.fmlVersion, 4.0.38, --fml.mcVersion, 1.21.1, --fml.neoFormVersion, 20240808.144430]
-[26ago2025 19:03:14.103] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: JVM identified as Amazon.com Inc. OpenJDK 64-Bit Server VM 21.0.6+7-LTS
-[26ago2025 19:03:14.105] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 11.0.4+main.d2e20e43 starting: java version 21.0.6 by Amazon.com Inc.; OS Windows 11 arch amd64 version 10.0
-[26ago2025 19:03:14.198] [main/WARN] [net.neoforged.fml.loading.FMLConfig/CORE]: Configuration file D:\Programmazione\Mod\Immersive Ores\NEOFORGE\1.21.1\runs\templateData\config\fml.toml is not correct. Correcting
-[26ago2025 19:03:14.235] [main/INFO] [net.neoforged.fml.loading.ImmediateWindowHandler/]: ImmediateWindowProvider not loading because launch target is forgedatauserdev
-[26ago2025 19:03:14.316] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.7 Source=union:/C:/Users/rosar/.gradle/caches/modules-2/files-2.1/net.fabricmc/sponge-mixin/0.15.2+mixin.0.8.7/2af2f021d8e02a0220dc27a7a72b4666d66d44ca/sponge-mixin-0.15.2+mixin.0.8.7.jar%23135!/ Service=ModLauncher Env=CLIENT
-[26ago2025 19:03:14.329] [main/WARN] [net.neoforged.fml.loading.FMLConfig/CORE]: Configuration file D:\Programmazione\Mod\Immersive Ores\NEOFORGE\1.21.1\runs\templateData\config\fml.toml is not correct. Correcting
-[26ago2025 19:03:14.528] [main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file "neoforge-21.1.161.jar" [locator: neoforge devenv provider ([D:\Programmazione\Mod\Immersive Ores\NEOFORGE\1.21.1\.gradle\repositories\ng_dummy_ng\net\neoforged\neoforge\21.1.161\neoforge-21.1.161.jar])]
-[26ago2025 19:03:14.549] [main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file "neoforge-21.1.161.jar" [locator: neoforge devenv provider ([D:\Programmazione\Mod\Immersive Ores\NEOFORGE\1.21.1\.gradle\repositories\ng_dummy_ng\net\neoforged\neoforge\21.1.161\neoforge-21.1.161.jar])]
-[26ago2025 19:03:14.565] [main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file "main" [locator: userdev mods and services, reader: mod manifest]
-[26ago2025 19:03:14.575] [main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file "neoforge-21.1.161.jar" [locator: userdev mods and services, reader: mod manifest]
-[26ago2025 19:03:14.580] [main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file "architectury-neoforge-13.0.6.jar" [locator: userdev mods and services, reader: mod manifest]
-[26ago2025 19:03:14.584] [main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file "RoughlyEnoughItems-neoforge-16.0.799.jar" [locator: userdev mods and services, reader: mod manifest]
-[26ago2025 19:03:14.587] [main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file "jei-1.21.1-neoforge-19.21.0.247.jar" [locator: userdev mods and services, reader: mod manifest]
-[26ago2025 19:03:14.591] [main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file "cloth-config-neoforge-15.0.130-neoforge.jar" [locator: userdev mods and services, reader: mod manifest]
-[26ago2025 19:03:14.610] [main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Found gamelibrary file "mixinextras-neoforge-0.4.1.jar" [locator: userdev mods and services, reader: mod manifest]
-[26ago2025 19:03:14.806] [main/WARN] [net.neoforged.jarjar.selection.JarSelector/]: Attempted to select a dependency jar for JarJar which was passed in as source: library:mixinextras.neoforge. Using Mod File: C:\Users\rosar\.gradle\caches\modules-2\files-2.1\io.github.llamalad7\mixinextras-neoforge\0.4.1\eff97772ecd0dcf8e52cdbafd3b3ccec425f8314\mixinextras-neoforge-0.4.1.jar
-[26ago2025 19:03:14.806] [main/INFO] [net.neoforged.fml.loading.moddiscovery.locators.JarInJarDependencyLocator/]: Found 1 dependencies adding them to mods collection
-[26ago2025 19:03:14.806] [main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Found library file "neoforge-coremods-21.1.161.jar" [parent: neoforge-21.1.161.jar, locator: jarinjar, reader: mod manifest]
-[26ago2025 19:03:14.809] [main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/]: 
+[16set2025 15:01:15.337] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--mod, immersiveores, --all, --output, D:\Programmazione\Mod\Immersive Ores\NEOFORGE\1.21.1\src\generated\resources, --existing, D:\Programmazione\Mod\Immersive Ores\NEOFORGE\1.21.1\src\main\resources, --launchTarget, forgedatauserdev, --assetIndex, asset-index, --assetsDir, C:\Users\rosar\.gradle\caches\minecraft\assets, --gameDir, ., --fml.neoForgeVersion, 21.1.161, --fml.fmlVersion, 4.0.38, --fml.mcVersion, 1.21.1, --fml.neoFormVersion, 20240808.144430]
+[16set2025 15:01:15.343] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: JVM identified as Amazon.com Inc. OpenJDK 64-Bit Server VM 21.0.6+7-LTS
+[16set2025 15:01:15.346] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 11.0.4+main.d2e20e43 starting: java version 21.0.6 by Amazon.com Inc.; OS Windows 11 arch amd64 version 10.0
+[16set2025 15:01:15.478] [main/WARN] [net.neoforged.fml.loading.FMLConfig/CORE]: Configuration file D:\Programmazione\Mod\Immersive Ores\NEOFORGE\1.21.1\runs\templateData\config\fml.toml is not correct. Correcting
+[16set2025 15:01:15.509] [main/INFO] [net.neoforged.fml.loading.ImmediateWindowHandler/]: ImmediateWindowProvider not loading because launch target is forgedatauserdev
+[16set2025 15:01:15.561] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.7 Source=union:/C:/Users/rosar/.gradle/caches/modules-2/files-2.1/net.fabricmc/sponge-mixin/0.15.2+mixin.0.8.7/2af2f021d8e02a0220dc27a7a72b4666d66d44ca/sponge-mixin-0.15.2+mixin.0.8.7.jar%23135!/ Service=ModLauncher Env=CLIENT
+[16set2025 15:01:15.569] [main/WARN] [net.neoforged.fml.loading.FMLConfig/CORE]: Configuration file D:\Programmazione\Mod\Immersive Ores\NEOFORGE\1.21.1\runs\templateData\config\fml.toml is not correct. Correcting
+[16set2025 15:01:15.715] [main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file "neoforge-21.1.161.jar" [locator: neoforge devenv provider ([D:\Programmazione\Mod\Immersive Ores\NEOFORGE\1.21.1\.gradle\repositories\ng_dummy_ng\net\neoforged\neoforge\21.1.161\neoforge-21.1.161.jar])]
+[16set2025 15:01:15.746] [main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file "neoforge-21.1.161.jar" [locator: neoforge devenv provider ([D:\Programmazione\Mod\Immersive Ores\NEOFORGE\1.21.1\.gradle\repositories\ng_dummy_ng\net\neoforged\neoforge\21.1.161\neoforge-21.1.161.jar])]
+[16set2025 15:01:15.761] [main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file "main" [locator: userdev mods and services, reader: mod manifest]
+[16set2025 15:01:15.770] [main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file "neoforge-21.1.161.jar" [locator: userdev mods and services, reader: mod manifest]
+[16set2025 15:01:15.774] [main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file "architectury-neoforge-13.0.6.jar" [locator: userdev mods and services, reader: mod manifest]
+[16set2025 15:01:15.777] [main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file "RoughlyEnoughItems-neoforge-16.0.799.jar" [locator: userdev mods and services, reader: mod manifest]
+[16set2025 15:01:15.781] [main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file "jei-1.21.1-neoforge-19.21.0.247.jar" [locator: userdev mods and services, reader: mod manifest]
+[16set2025 15:01:15.784] [main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Found mod file "cloth-config-neoforge-15.0.130-neoforge.jar" [locator: userdev mods and services, reader: mod manifest]
+[16set2025 15:01:15.799] [main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Found gamelibrary file "mixinextras-neoforge-0.4.1.jar" [locator: userdev mods and services, reader: mod manifest]
+[16set2025 15:01:16.016] [main/WARN] [net.neoforged.jarjar.selection.JarSelector/]: Attempted to select a dependency jar for JarJar which was passed in as source: library:mixinextras.neoforge. Using Mod File: C:\Users\rosar\.gradle\caches\modules-2\files-2.1\io.github.llamalad7\mixinextras-neoforge\0.4.1\eff97772ecd0dcf8e52cdbafd3b3ccec425f8314\mixinextras-neoforge-0.4.1.jar
+[16set2025 15:01:16.017] [main/INFO] [net.neoforged.fml.loading.moddiscovery.locators.JarInJarDependencyLocator/]: Found 1 dependencies adding them to mods collection
+[16set2025 15:01:16.017] [main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/SCAN]: Found library file "neoforge-coremods-21.1.161.jar" [parent: neoforge-21.1.161.jar, locator: jarinjar, reader: mod manifest]
+[16set2025 15:01:16.019] [main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/]: 
      Mod List:
 		Name Version (Mod Id)
 
 		Architectury 13.0.6 (architectury)
 		Cloth Config v15 API 15.0.130 (cloth_config)
-		ImmersiveOres 1.21.1-1.1.1 (immersiveores)
+		ImmersiveOres 1.21.1-1.1.4 (immersiveores)
 		Just Enough Items 19.21.0.247 (jei)
 		Minecraft 1.21.1 (minecraft)
 		NeoForge 21.1.161 (neoforge)
 		Roughly Enough Items (REI) 16.0.799 (roughlyenoughitems)
-[26ago2025 19:03:15.300] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgedatauserdev' with arguments [--gameDir, ., --assetsDir, C:\Users\rosar\.gradle\caches\minecraft\assets, --mod, immersiveores, --all, --output, D:\Programmazione\Mod\Immersive Ores\NEOFORGE\1.21.1\src\generated\resources, --existing, D:\Programmazione\Mod\Immersive Ores\NEOFORGE\1.21.1\src\main\resources, --assetIndex, asset-index]
-[26ago2025 19:03:15.371] [main/WARN] [mixin/]: Reference map 'onlyexcavators.refmap.json' for immersiveores.mixins.json could not be read. If this is a development environment you can ignore this message
-[26ago2025 19:03:15.964] [main/INFO] [net.neoforged.neoforge.data.loading.DatagenModLoader/]: Initializing Data Gatherer for mods [immersiveores]
-[26ago2025 19:03:15.976] [main/INFO] [MixinExtras|Service/]: Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.4.1).
-[26ago2025 19:03:21.238] [modloading-worker-0/INFO] [net.neoforged.neoforge.common.NeoForgeMod/NEOFORGE-MOD]: NeoForge mod loading, version 21.1.161, for MC 1.21.1
-[26ago2025 19:03:21.456] [modloading-worker-0/ERROR] [mezz.jei.common.config.file.ConfigSerializer/]: 'DebugMode' is not a valid config key for config category 'debug'.
+[16set2025 15:01:16.684] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgedatauserdev' with arguments [--gameDir, ., --assetsDir, C:\Users\rosar\.gradle\caches\minecraft\assets, --mod, immersiveores, --all, --output, D:\Programmazione\Mod\Immersive Ores\NEOFORGE\1.21.1\src\generated\resources, --existing, D:\Programmazione\Mod\Immersive Ores\NEOFORGE\1.21.1\src\main\resources, --assetIndex, asset-index]
+[16set2025 15:01:16.762] [main/WARN] [mixin/]: Reference map 'immersiveores.refmap.json' for immersiveores.mixins.json could not be read. If this is a development environment you can ignore this message
+[16set2025 15:01:17.583] [main/INFO] [net.neoforged.neoforge.data.loading.DatagenModLoader/]: Initializing Data Gatherer for mods [immersiveores]
+[16set2025 15:01:17.600] [main/INFO] [MixinExtras|Service/]: Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.4.1).
+[16set2025 15:01:22.230] [modloading-worker-0/INFO] [net.neoforged.neoforge.common.NeoForgeMod/NEOFORGE-MOD]: NeoForge mod loading, version 21.1.161, for MC 1.21.1
+[16set2025 15:01:22.413] [modloading-worker-0/ERROR] [mezz.jei.common.config.file.ConfigSerializer/]: 'DebugMode' is not a valid config key for config category 'debug'.
 Valid keys: [debugMode, debugGuis, debugInputs, debugInfoTooltipsEnabled, crashingTestItemsEnabled, logSuffixTreeStats]
 Skipping this key.
 Config file: D:\Programmazione\Mod\Immersive Ores\NEOFORGE\1.21.1\runs\templateData\config\jei\jei-debug.ini
 Line #5: "	DebugMode = false"
-[26ago2025 19:03:21.456] [modloading-worker-0/ERROR] [mezz.jei.common.config.file.ConfigSerializer/]: 'DebugGuis' is not a valid config key for config category 'debug'.
+[16set2025 15:01:22.413] [modloading-worker-0/ERROR] [mezz.jei.common.config.file.ConfigSerializer/]: 'DebugGuis' is not a valid config key for config category 'debug'.
 Valid keys: [debugMode, debugGuis, debugInputs, debugInfoTooltipsEnabled, crashingTestItemsEnabled, logSuffixTreeStats]
 Skipping this key.
 Config file: D:\Programmazione\Mod\Immersive Ores\NEOFORGE\1.21.1\runs\templateData\config\jei\jei-debug.ini
 Line #10: "	DebugGuis = false"
-[26ago2025 19:03:21.456] [modloading-worker-0/ERROR] [mezz.jei.common.config.file.ConfigSerializer/]: 'DebugInputs' is not a valid config key for config category 'debug'.
+[16set2025 15:01:22.413] [modloading-worker-0/ERROR] [mezz.jei.common.config.file.ConfigSerializer/]: 'DebugInputs' is not a valid config key for config category 'debug'.
 Valid keys: [debugMode, debugGuis, debugInputs, debugInfoTooltipsEnabled, crashingTestItemsEnabled, logSuffixTreeStats]
 Skipping this key.
 Config file: D:\Programmazione\Mod\Immersive Ores\NEOFORGE\1.21.1\runs\templateData\config\jei\jei-debug.ini
 Line #15: "	DebugInputs = false"
-[26ago2025 19:03:21.458] [modloading-worker-0/ERROR] [mezz.jei.common.config.file.ConfigSerializer/]: 'CrashingTestItemsEnabled' is not a valid config key for config category 'debug'.
+[16set2025 15:01:22.414] [modloading-worker-0/ERROR] [mezz.jei.common.config.file.ConfigSerializer/]: 'CrashingTestItemsEnabled' is not a valid config key for config category 'debug'.
 Valid keys: [debugMode, debugGuis, debugInputs, debugInfoTooltipsEnabled, crashingTestItemsEnabled, logSuffixTreeStats]
 Skipping this key.
 Config file: D:\Programmazione\Mod\Immersive Ores\NEOFORGE\1.21.1\runs\templateData\config\jei\jei-debug.ini
 Line #25: "	CrashingTestItemsEnabled = false"
-[26ago2025 19:03:21.462] [modloading-worker-0/ERROR] [mezz.jei.common.config.file.ConfigSerializer/]: '[modname]' is not a valid category name.
+[16set2025 15:01:22.418] [modloading-worker-0/ERROR] [mezz.jei.common.config.file.ConfigSerializer/]: '[modname]' is not a valid category name.
 Valid names are: [modName]
 Skipping all values until the first valid category is declared.
 Config file: D:\Programmazione\Mod\Immersive Ores\NEOFORGE\1.21.1\runs\templateData\config\jei\jei-mod-id-format.ini
 Line #1: "[modname]"
-[26ago2025 19:03:21.462] [modloading-worker-0/ERROR] [mezz.jei.common.config.file.ConfigSerializer/]: Expected a '[category]' here.
+[16set2025 15:01:22.419] [modloading-worker-0/ERROR] [mezz.jei.common.config.file.ConfigSerializer/]: Expected a '[category]' here.
 Configs must start with a category before defining values.
 Skipping all lines until the first valid category is declared.
 Config file: D:\Programmazione\Mod\Immersive Ores\NEOFORGE\1.21.1\runs\templateData\config\jei\jei-mod-id-format.ini
 Line #9: "	ModNameFormat = blue italic"
-[26ago2025 19:03:21.465] [modloading-worker-0/ERROR] [mezz.jei.common.config.file.ConfigSerializer/]: 'SearchColors' is not a valid config key for config category 'colors'.
+[16set2025 15:01:22.421] [modloading-worker-0/ERROR] [mezz.jei.common.config.file.ConfigSerializer/]: 'SearchColors' is not a valid config key for config category 'colors'.
 Valid keys: [searchColors]
 Skipping this key.
 Config file: D:\Programmazione\Mod\Immersive Ores\NEOFORGE\1.21.1\runs\templateData\config\jei\jei-colors.ini
 Line #6: "	SearchColors = White:EEEEEE, LightBlue:7492CC, Cyan:00EEEE, Blue:2222DD, LapisBlue:25418B, Teal:008080, Yellow:CACB58, GoldenYellow:EED700, Orange:D97634, Pink:D1899D, HotPink:FC0FC0, Magenta:B24BBB, Purple:813EB9, EvilPurple:2E1649, Lavender:B57EDC, Indigo:480082, Sand:DBD3A0, Tan:BB9B63, LightBrown:A0522D, Brown:634B33, DarkBrown:3A2D13, LimeGreen:43B239, SlimeGreen:83CB73, Green:008000, DarkGreen:224D22, GrassGreen:548049, Red:963430, BrickRed:B0604B, NetherBrick:2A1516, Redstone:CE3E36, Black:181515, CharcoalGray:464646, IronGray:646464, Gray:808080, Silver:C0C0C0"
-[26ago2025 19:03:21.478] [modloading-worker-0/ERROR] [mezz.jei.common.config.file.ConfigSerializer/]: 'CenterSearch' is not a valid config key for config category 'appearance'.
+[16set2025 15:01:22.430] [modloading-worker-0/ERROR] [mezz.jei.common.config.file.ConfigSerializer/]: 'CenterSearch' is not a valid config key for config category 'appearance'.
 Valid keys: [centerSearch, recipeGuiHeight]
 Skipping this key.
 Config file: D:\Programmazione\Mod\Immersive Ores\NEOFORGE\1.21.1\runs\templateData\config\jei\jei-client.ini
 Line #5: "	CenterSearch = false"
-[26ago2025 19:03:21.478] [modloading-worker-0/ERROR] [mezz.jei.common.config.file.ConfigSerializer/]: 'RecipeGuiHeight' is not a valid config key for config category 'appearance'.
+[16set2025 15:01:22.430] [modloading-worker-0/ERROR] [mezz.jei.common.config.file.ConfigSerializer/]: 'RecipeGuiHeight' is not a valid config key for config category 'appearance'.
 Valid keys: [centerSearch, recipeGuiHeight]
 Skipping this key.
 Config file: D:\Programmazione\Mod\Immersive Ores\NEOFORGE\1.21.1\runs\templateData\config\jei\jei-client.ini
 Line #10: "	RecipeGuiHeight = 350"
-[26ago2025 19:03:21.478] [modloading-worker-0/ERROR] [mezz.jei.common.config.file.ConfigSerializer/]: '[cheat_mode]' is not a valid category name.
+[16set2025 15:01:22.430] [modloading-worker-0/ERROR] [mezz.jei.common.config.file.ConfigSerializer/]: '[cheat_mode]' is not a valid category name.
 Valid names are: [appearance, cheating, bookmarks, tooltips, performance, lookups, advanced, input, sorting, search, ingredientList, bookmarkList]
 Skipping all values until the first valid category is declared.
 Config file: D:\Programmazione\Mod\Immersive Ores\NEOFORGE\1.21.1\runs\templateData\config\jei\jei-client.ini
 Line #13: "[cheat_mode]"
-[26ago2025 19:03:21.478] [modloading-worker-0/ERROR] [mezz.jei.common.config.file.ConfigSerializer/]: Expected a '[category]' here.
+[16set2025 15:01:22.430] [modloading-worker-0/ERROR] [mezz.jei.common.config.file.ConfigSerializer/]: Expected a '[category]' here.
 Configs must start with a category before defining values.
 Skipping all lines until the first valid category is declared.
 Config file: D:\Programmazione\Mod\Immersive Ores\NEOFORGE\1.21.1\runs\templateData\config\jei\jei-client.ini
 Line #17: "	GiveMode = MOUSE_PICKUP"
-[26ago2025 19:03:21.478] [modloading-worker-0/ERROR] [mezz.jei.common.config.file.ConfigSerializer/]: Expected a '[category]' here.
+[16set2025 15:01:22.430] [modloading-worker-0/ERROR] [mezz.jei.common.config.file.ConfigSerializer/]: Expected a '[category]' here.
 Configs must start with a category before defining values.
 Skipping all lines until the first valid category is declared.
 Config file: D:\Programmazione\Mod\Immersive Ores\NEOFORGE\1.21.1\runs\templateData\config\jei\jei-client.ini
 Line #22: "	CheatToHotbarUsingHotkeysEnabled = false"
-[26ago2025 19:03:21.478] [modloading-worker-0/ERROR] [mezz.jei.common.config.file.ConfigSerializer/]: Expected a '[category]' here.
+[16set2025 15:01:22.430] [modloading-worker-0/ERROR] [mezz.jei.common.config.file.ConfigSerializer/]: Expected a '[category]' here.
 Configs must start with a category before defining values.
 Skipping all lines until the first valid category is declared.
 Config file: D:\Programmazione\Mod\Immersive Ores\NEOFORGE\1.21.1\runs\templateData\config\jei\jei-client.ini
 Line #27: "	ShowHiddenItems = false"
-[26ago2025 19:03:21.478] [modloading-worker-0/ERROR] [mezz.jei.common.config.file.ConfigSerializer/]: 'AddBookmarksToFrontEnabled' is not a valid config key for config category 'bookmarks'.
+[16set2025 15:01:22.430] [modloading-worker-0/ERROR] [mezz.jei.common.config.file.ConfigSerializer/]: 'AddBookmarksToFrontEnabled' is not a valid config key for config category 'bookmarks'.
 Valid keys: [addBookmarksToFrontEnabled, dragToRearrangeBookmarksEnabled]
 Skipping this key.
 Config file: D:\Programmazione\Mod\Immersive Ores\NEOFORGE\1.21.1\runs\templateData\config\jei\jei-client.ini
 Line #34: "	AddBookmarksToFrontEnabled = false"
-[26ago2025 19:03:21.478] [modloading-worker-0/ERROR] [mezz.jei.common.config.file.ConfigSerializer/]: 'BookmarkTooltipFeatures' is not a valid config key for config category 'bookmarks'.
+[16set2025 15:01:22.430] [modloading-worker-0/ERROR] [mezz.jei.common.config.file.ConfigSerializer/]: 'BookmarkTooltipFeatures' is not a valid config key for config category 'bookmarks'.
 Valid keys: [addBookmarksToFrontEnabled, dragToRearrangeBookmarksEnabled]
 Skipping this key.
 Config file: D:\Programmazione\Mod\Immersive Ores\NEOFORGE\1.21.1\runs\templateData\config\jei\jei-client.ini
 Line #40: "	BookmarkTooltipFeatures = PREVIEW"
-[26ago2025 19:03:21.478] [modloading-worker-0/ERROR] [mezz.jei.common.config.file.ConfigSerializer/]: 'HoldShiftToShowBookmarkTooltipFeatures' is not a valid config key for config category 'bookmarks'.
+[16set2025 15:01:22.430] [modloading-worker-0/ERROR] [mezz.jei.common.config.file.ConfigSerializer/]: 'HoldShiftToShowBookmarkTooltipFeatures' is not a valid config key for config category 'bookmarks'.
 Valid keys: [addBookmarksToFrontEnabled, dragToRearrangeBookmarksEnabled]
 Skipping this key.
 Config file: D:\Programmazione\Mod\Immersive Ores\NEOFORGE\1.21.1\runs\templateData\config\jei\jei-client.ini
 Line #45: "	HoldShiftToShowBookmarkTooltipFeatures = true"
-[26ago2025 19:03:21.478] [modloading-worker-0/ERROR] [mezz.jei.common.config.file.ConfigSerializer/]: 'DragToRearrangeBookmarksEnabled' is not a valid config key for config category 'bookmarks'.
+[16set2025 15:01:22.430] [modloading-worker-0/ERROR] [mezz.jei.common.config.file.ConfigSerializer/]: 'DragToRearrangeBookmarksEnabled' is not a valid config key for config category 'bookmarks'.
 Valid keys: [addBookmarksToFrontEnabled, dragToRearrangeBookmarksEnabled]
 Skipping this key.
 Config file: D:\Programmazione\Mod\Immersive Ores\NEOFORGE\1.21.1\runs\templateData\config\jei\jei-client.ini
 Line #50: "	DragToRearrangeBookmarksEnabled = true"
-[26ago2025 19:03:21.478] [modloading-worker-0/ERROR] [mezz.jei.common.config.file.ConfigSerializer/]: 'LowMemorySlowSearchEnabled' is not a valid config key for config category 'advanced'.
+[16set2025 15:01:22.430] [modloading-worker-0/ERROR] [mezz.jei.common.config.file.ConfigSerializer/]: 'LowMemorySlowSearchEnabled' is not a valid config key for config category 'advanced'.
 Valid keys: [catchRenderErrorsEnabled]
 Skipping this key.
 Config file: D:\Programmazione\Mod\Immersive Ores\NEOFORGE\1.21.1\runs\templateData\config\jei\jei-client.ini
 Line #57: "	LowMemorySlowSearchEnabled = false"
-[26ago2025 19:03:21.480] [modloading-worker-0/ERROR] [mezz.jei.common.config.file.ConfigSerializer/]: 'CatchRenderErrorsEnabled' is not a valid config key for config category 'advanced'.
+[16set2025 15:01:22.430] [modloading-worker-0/ERROR] [mezz.jei.common.config.file.ConfigSerializer/]: 'CatchRenderErrorsEnabled' is not a valid config key for config category 'advanced'.
 Valid keys: [catchRenderErrorsEnabled]
 Skipping this key.
 Config file: D:\Programmazione\Mod\Immersive Ores\NEOFORGE\1.21.1\runs\templateData\config\jei\jei-client.ini
 Line #62: "	CatchRenderErrorsEnabled = false"
-[26ago2025 19:03:21.480] [modloading-worker-0/ERROR] [mezz.jei.common.config.file.ConfigSerializer/]: 'lookupFluidContentsEnabled' is not a valid config key for config category 'advanced'.
+[16set2025 15:01:22.431] [modloading-worker-0/ERROR] [mezz.jei.common.config.file.ConfigSerializer/]: 'lookupFluidContentsEnabled' is not a valid config key for config category 'advanced'.
 Valid keys: [catchRenderErrorsEnabled]
 Skipping this key.
 Config file: D:\Programmazione\Mod\Immersive Ores\NEOFORGE\1.21.1\runs\templateData\config\jei\jei-client.ini
 Line #67: "	lookupFluidContentsEnabled = false"
-[26ago2025 19:03:21.480] [modloading-worker-0/ERROR] [mezz.jei.common.config.file.ConfigSerializer/]: 'lookupBlockTagsEnabled' is not a valid config key for config category 'advanced'.
+[16set2025 15:01:22.431] [modloading-worker-0/ERROR] [mezz.jei.common.config.file.ConfigSerializer/]: 'lookupBlockTagsEnabled' is not a valid config key for config category 'advanced'.
 Valid keys: [catchRenderErrorsEnabled]
 Skipping this key.
 Config file: D:\Programmazione\Mod\Immersive Ores\NEOFORGE\1.21.1\runs\templateData\config\jei\jei-client.ini
 Line #72: "	lookupBlockTagsEnabled = true"
-[26ago2025 19:03:21.480] [modloading-worker-0/ERROR] [mezz.jei.common.config.file.ConfigSerializer/]: 'showTagRecipesEnabled' is not a valid config key for config category 'advanced'.
+[16set2025 15:01:22.431] [modloading-worker-0/ERROR] [mezz.jei.common.config.file.ConfigSerializer/]: 'showTagRecipesEnabled' is not a valid config key for config category 'advanced'.
 Valid keys: [catchRenderErrorsEnabled]
 Skipping this key.
 Config file: D:\Programmazione\Mod\Immersive Ores\NEOFORGE\1.21.1\runs\templateData\config\jei\jei-client.ini
 Line #77: "	showTagRecipesEnabled = true"
-[26ago2025 19:03:21.480] [modloading-worker-0/ERROR] [mezz.jei.common.config.file.ConfigSerializer/]: 'showCreativeTabNamesEnabled' is not a valid config key for config category 'advanced'.
+[16set2025 15:01:22.431] [modloading-worker-0/ERROR] [mezz.jei.common.config.file.ConfigSerializer/]: 'showCreativeTabNamesEnabled' is not a valid config key for config category 'advanced'.
 Valid keys: [catchRenderErrorsEnabled]
 Skipping this key.
 Config file: D:\Programmazione\Mod\Immersive Ores\NEOFORGE\1.21.1\runs\templateData\config\jei\jei-client.ini
 Line #82: "	showCreativeTabNamesEnabled = false"
-[26ago2025 19:03:21.480] [modloading-worker-0/ERROR] [mezz.jei.common.config.file.ConfigSerializer/]: 'IngredientSortStages' is not a valid config key for config category 'sorting'.
+[16set2025 15:01:22.431] [modloading-worker-0/ERROR] [mezz.jei.common.config.file.ConfigSerializer/]: 'IngredientSortStages' is not a valid config key for config category 'sorting'.
 Valid keys: [ingredientSortStages, recipeSorterStages]
 Skipping this key.
 Config file: D:\Programmazione\Mod\Immersive Ores\NEOFORGE\1.21.1\runs\templateData\config\jei\jei-client.ini
 Line #102: "	IngredientSortStages = MOD_NAME, INGREDIENT_TYPE, CREATIVE_MENU"
-[26ago2025 19:03:21.480] [modloading-worker-0/ERROR] [mezz.jei.common.config.file.ConfigSerializer/]: 'RecipeSorterStages' is not a valid config key for config category 'sorting'.
+[16set2025 15:01:22.431] [modloading-worker-0/ERROR] [mezz.jei.common.config.file.ConfigSerializer/]: 'RecipeSorterStages' is not a valid config key for config category 'sorting'.
 Valid keys: [ingredientSortStages, recipeSorterStages]
 Skipping this key.
 Config file: D:\Programmazione\Mod\Immersive Ores\NEOFORGE\1.21.1\runs\templateData\config\jei\jei-client.ini
 Line #108: "	RecipeSorterStages = BOOKMARKED, CRAFTABLE"
-[26ago2025 19:03:21.480] [modloading-worker-0/ERROR] [mezz.jei.common.config.file.ConfigSerializer/]: '[tags]' is not a valid category name.
+[16set2025 15:01:22.431] [modloading-worker-0/ERROR] [mezz.jei.common.config.file.ConfigSerializer/]: '[tags]' is not a valid category name.
 Valid names are: [appearance, cheating, bookmarks, tooltips, performance, lookups, advanced, input, sorting, search, ingredientList, bookmarkList]
 Skipping all values until the first valid category is declared.
 Config file: D:\Programmazione\Mod\Immersive Ores\NEOFORGE\1.21.1\runs\templateData\config\jei\jei-client.ini
 Line #111: "[tags]"
-[26ago2025 19:03:21.480] [modloading-worker-0/ERROR] [mezz.jei.common.config.file.ConfigSerializer/]: Expected a '[category]' here.
+[16set2025 15:01:22.431] [modloading-worker-0/ERROR] [mezz.jei.common.config.file.ConfigSerializer/]: Expected a '[category]' here.
 Configs must start with a category before defining values.
 Skipping all lines until the first valid category is declared.
 Config file: D:\Programmazione\Mod\Immersive Ores\NEOFORGE\1.21.1\runs\templateData\config\jei\jei-client.ini
 Line #115: "	TagContentTooltipEnabled = true"
-[26ago2025 19:03:21.480] [modloading-worker-0/ERROR] [mezz.jei.common.config.file.ConfigSerializer/]: Expected a '[category]' here.
+[16set2025 15:01:22.431] [modloading-worker-0/ERROR] [mezz.jei.common.config.file.ConfigSerializer/]: Expected a '[category]' here.
 Configs must start with a category before defining values.
 Skipping all lines until the first valid category is declared.
 Config file: D:\Programmazione\Mod\Immersive Ores\NEOFORGE\1.21.1\runs\templateData\config\jei\jei-client.ini
 Line #120: "	HideSingleIngredientTagsEnabled = true"
-[26ago2025 19:03:21.480] [modloading-worker-0/ERROR] [mezz.jei.common.config.file.ConfigSerializer/]: 'ModNameSearchMode' is not a valid config key for config category 'search'.
+[16set2025 15:01:22.432] [modloading-worker-0/ERROR] [mezz.jei.common.config.file.ConfigSerializer/]: 'ModNameSearchMode' is not a valid config key for config category 'search'.
 Valid keys: [modNameSearchMode, tagSearchMode, tooltipSearchMode, colorSearchMode, resourceLocationSearchMode, creativeTabSearchMode, searchAdvancedTooltips, searchModIds, searchModAliases, searchShortModNames, searchIngredientAliases]
 Skipping this key.
 Config file: D:\Programmazione\Mod\Immersive Ores\NEOFORGE\1.21.1\runs\templateData\config\jei\jei-client.ini
 Line #127: "	ModNameSearchMode = REQUIRE_PREFIX"
-[26ago2025 19:03:21.480] [modloading-worker-0/ERROR] [mezz.jei.common.config.file.ConfigSerializer/]: 'TooltipSearchMode' is not a valid config key for config category 'search'.
+[16set2025 15:01:22.432] [modloading-worker-0/ERROR] [mezz.jei.common.config.file.ConfigSerializer/]: 'TooltipSearchMode' is not a valid config key for config category 'search'.
 Valid keys: [modNameSearchMode, tagSearchMode, tooltipSearchMode, colorSearchMode, resourceLocationSearchMode, creativeTabSearchMode, searchAdvancedTooltips, searchModIds, searchModAliases, searchShortModNames, searchIngredientAliases]
 Skipping this key.
 Config file: D:\Programmazione\Mod\Immersive Ores\NEOFORGE\1.21.1\runs\templateData\config\jei\jei-client.ini
 Line #132: "	TooltipSearchMode = ENABLED"
-[26ago2025 19:03:21.481] [modloading-worker-0/ERROR] [mezz.jei.common.config.file.ConfigSerializer/]: 'TagSearchMode' is not a valid config key for config category 'search'.
+[16set2025 15:01:22.432] [modloading-worker-0/ERROR] [mezz.jei.common.config.file.ConfigSerializer/]: 'TagSearchMode' is not a valid config key for config category 'search'.
 Valid keys: [modNameSearchMode, tagSearchMode, tooltipSearchMode, colorSearchMode, resourceLocationSearchMode, creativeTabSearchMode, searchAdvancedTooltips, searchModIds, searchModAliases, searchShortModNames, searchIngredientAliases]
 Skipping this key.
 Config file: D:\Programmazione\Mod\Immersive Ores\NEOFORGE\1.21.1\runs\templateData\config\jei\jei-client.ini
 Line #137: "	TagSearchMode = REQUIRE_PREFIX"
-[26ago2025 19:03:21.481] [modloading-worker-0/ERROR] [mezz.jei.common.config.file.ConfigSerializer/]: 'ColorSearchMode' is not a valid config key for config category 'search'.
+[16set2025 15:01:22.432] [modloading-worker-0/ERROR] [mezz.jei.common.config.file.ConfigSerializer/]: 'ColorSearchMode' is not a valid config key for config category 'search'.
 Valid keys: [modNameSearchMode, tagSearchMode, tooltipSearchMode, colorSearchMode, resourceLocationSearchMode, creativeTabSearchMode, searchAdvancedTooltips, searchModIds, searchModAliases, searchShortModNames, searchIngredientAliases]
 Skipping this key.
 Config file: D:\Programmazione\Mod\Immersive Ores\NEOFORGE\1.21.1\runs\templateData\config\jei\jei-client.ini
 Line #142: "	ColorSearchMode = DISABLED"
-[26ago2025 19:03:21.482] [modloading-worker-0/ERROR] [mezz.jei.common.config.file.ConfigSerializer/]: 'ResourceLocationSearchMode' is not a valid config key for config category 'search'.
+[16set2025 15:01:22.432] [modloading-worker-0/ERROR] [mezz.jei.common.config.file.ConfigSerializer/]: 'ResourceLocationSearchMode' is not a valid config key for config category 'search'.
 Valid keys: [modNameSearchMode, tagSearchMode, tooltipSearchMode, colorSearchMode, resourceLocationSearchMode, creativeTabSearchMode, searchAdvancedTooltips, searchModIds, searchModAliases, searchShortModNames, searchIngredientAliases]
 Skipping this key.
 Config file: D:\Programmazione\Mod\Immersive Ores\NEOFORGE\1.21.1\runs\templateData\config\jei\jei-client.ini
 Line #147: "	ResourceLocationSearchMode = DISABLED"
-[26ago2025 19:03:21.482] [modloading-worker-0/ERROR] [mezz.jei.common.config.file.ConfigSerializer/]: 'CreativeTabSearchMode' is not a valid config key for config category 'search'.
+[16set2025 15:01:22.432] [modloading-worker-0/ERROR] [mezz.jei.common.config.file.ConfigSerializer/]: 'CreativeTabSearchMode' is not a valid config key for config category 'search'.
 Valid keys: [modNameSearchMode, tagSearchMode, tooltipSearchMode, colorSearchMode, resourceLocationSearchMode, creativeTabSearchMode, searchAdvancedTooltips, searchModIds, searchModAliases, searchShortModNames, searchIngredientAliases]
 Skipping this key.
 Config file: D:\Programmazione\Mod\Immersive Ores\NEOFORGE\1.21.1\runs\templateData\config\jei\jei-client.ini
 Line #152: "	CreativeTabSearchMode = DISABLED"
-[26ago2025 19:03:21.482] [modloading-worker-0/ERROR] [mezz.jei.common.config.file.ConfigSerializer/]: 'SearchAdvancedTooltips' is not a valid config key for config category 'search'.
+[16set2025 15:01:22.432] [modloading-worker-0/ERROR] [mezz.jei.common.config.file.ConfigSerializer/]: 'SearchAdvancedTooltips' is not a valid config key for config category 'search'.
 Valid keys: [modNameSearchMode, tagSearchMode, tooltipSearchMode, colorSearchMode, resourceLocationSearchMode, creativeTabSearchMode, searchAdvancedTooltips, searchModIds, searchModAliases, searchShortModNames, searchIngredientAliases]
 Skipping this key.
 Config file: D:\Programmazione\Mod\Immersive Ores\NEOFORGE\1.21.1\runs\templateData\config\jei\jei-client.ini
 Line #157: "	SearchAdvancedTooltips = false"
-[26ago2025 19:03:21.482] [modloading-worker-0/ERROR] [mezz.jei.common.config.file.ConfigSerializer/]: 'SearchModIds' is not a valid config key for config category 'search'.
+[16set2025 15:01:22.432] [modloading-worker-0/ERROR] [mezz.jei.common.config.file.ConfigSerializer/]: 'SearchModIds' is not a valid config key for config category 'search'.
 Valid keys: [modNameSearchMode, tagSearchMode, tooltipSearchMode, colorSearchMode, resourceLocationSearchMode, creativeTabSearchMode, searchAdvancedTooltips, searchModIds, searchModAliases, searchShortModNames, searchIngredientAliases]
 Skipping this key.
 Config file: D:\Programmazione\Mod\Immersive Ores\NEOFORGE\1.21.1\runs\templateData\config\jei\jei-client.ini
 Line #162: "	SearchModIds = true"
-[26ago2025 19:03:21.483] [modloading-worker-0/ERROR] [mezz.jei.common.config.file.ConfigSerializer/]: 'SearchModAliases' is not a valid config key for config category 'search'.
+[16set2025 15:01:22.432] [modloading-worker-0/ERROR] [mezz.jei.common.config.file.ConfigSerializer/]: 'SearchModAliases' is not a valid config key for config category 'search'.
 Valid keys: [modNameSearchMode, tagSearchMode, tooltipSearchMode, colorSearchMode, resourceLocationSearchMode, creativeTabSearchMode, searchAdvancedTooltips, searchModIds, searchModAliases, searchShortModNames, searchIngredientAliases]
 Skipping this key.
 Config file: D:\Programmazione\Mod\Immersive Ores\NEOFORGE\1.21.1\runs\templateData\config\jei\jei-client.ini
 Line #167: "	SearchModAliases = true"
-[26ago2025 19:03:21.483] [modloading-worker-0/ERROR] [mezz.jei.common.config.file.ConfigSerializer/]: 'SearchShortModNames' is not a valid config key for config category 'search'.
+[16set2025 15:01:22.432] [modloading-worker-0/ERROR] [mezz.jei.common.config.file.ConfigSerializer/]: 'SearchShortModNames' is not a valid config key for config category 'search'.
 Valid keys: [modNameSearchMode, tagSearchMode, tooltipSearchMode, colorSearchMode, resourceLocationSearchMode, creativeTabSearchMode, searchAdvancedTooltips, searchModIds, searchModAliases, searchShortModNames, searchIngredientAliases]
 Skipping this key.
 Config file: D:\Programmazione\Mod\Immersive Ores\NEOFORGE\1.21.1\runs\templateData\config\jei\jei-client.ini
 Line #172: "	SearchShortModNames = true"
-[26ago2025 19:03:21.483] [modloading-worker-0/ERROR] [mezz.jei.common.config.file.ConfigSerializer/]: 'SearchIngredientAliases' is not a valid config key for config category 'search'.
+[16set2025 15:01:22.432] [modloading-worker-0/ERROR] [mezz.jei.common.config.file.ConfigSerializer/]: 'SearchIngredientAliases' is not a valid config key for config category 'search'.
 Valid keys: [modNameSearchMode, tagSearchMode, tooltipSearchMode, colorSearchMode, resourceLocationSearchMode, creativeTabSearchMode, searchAdvancedTooltips, searchModIds, searchModAliases, searchShortModNames, searchIngredientAliases]
 Skipping this key.
 Config file: D:\Programmazione\Mod\Immersive Ores\NEOFORGE\1.21.1\runs\templateData\config\jei\jei-client.ini
 Line #177: "	SearchIngredientAliases = true"
-[26ago2025 19:03:21.483] [modloading-worker-0/ERROR] [mezz.jei.common.config.file.ConfigSerializer/]: '[IngredientList]' is not a valid category name.
+[16set2025 15:01:22.432] [modloading-worker-0/ERROR] [mezz.jei.common.config.file.ConfigSerializer/]: '[IngredientList]' is not a valid category name.
 Valid names are: [appearance, cheating, bookmarks, tooltips, performance, lookups, advanced, input, sorting, search, ingredientList, bookmarkList]
 Skipping all values until the first valid category is declared.
 Config file: D:\Programmazione\Mod\Immersive Ores\NEOFORGE\1.21.1\runs\templateData\config\jei\jei-client.ini
 Line #180: "[IngredientList]"
-[26ago2025 19:03:21.483] [modloading-worker-0/ERROR] [mezz.jei.common.config.file.ConfigSerializer/]: Expected a '[category]' here.
+[16set2025 15:01:22.432] [modloading-worker-0/ERROR] [mezz.jei.common.config.file.ConfigSerializer/]: Expected a '[category]' here.
 Configs must start with a category before defining values.
 Skipping all lines until the first valid category is declared.
 Config file: D:\Programmazione\Mod\Immersive Ores\NEOFORGE\1.21.1\runs\templateData\config\jei\jei-client.ini
 Line #184: "	MaxRows = 16"
-[26ago2025 19:03:21.483] [modloading-worker-0/ERROR] [mezz.jei.common.config.file.ConfigSerializer/]: Expected a '[category]' here.
+[16set2025 15:01:22.433] [modloading-worker-0/ERROR] [mezz.jei.common.config.file.ConfigSerializer/]: Expected a '[category]' here.
 Configs must start with a category before defining values.
 Skipping all lines until the first valid category is declared.
 Config file: D:\Programmazione\Mod\Immersive Ores\NEOFORGE\1.21.1\runs\templateData\config\jei\jei-client.ini
 Line #189: "	MaxColumns = 9"
-[26ago2025 19:03:21.483] [modloading-worker-0/ERROR] [mezz.jei.common.config.file.ConfigSerializer/]: Expected a '[category]' here.
+[16set2025 15:01:22.433] [modloading-worker-0/ERROR] [mezz.jei.common.config.file.ConfigSerializer/]: Expected a '[category]' here.
 Configs must start with a category before defining values.
 Skipping all lines until the first valid category is declared.
 Config file: D:\Programmazione\Mod\Immersive Ores\NEOFORGE\1.21.1\runs\templateData\config\jei\jei-client.ini
 Line #194: "	HorizontalAlignment = RIGHT"
-[26ago2025 19:03:21.483] [modloading-worker-0/ERROR] [mezz.jei.common.config.file.ConfigSerializer/]: Expected a '[category]' here.
+[16set2025 15:01:22.433] [modloading-worker-0/ERROR] [mezz.jei.common.config.file.ConfigSerializer/]: Expected a '[category]' here.
 Configs must start with a category before defining values.
 Skipping all lines until the first valid category is declared.
 Config file: D:\Programmazione\Mod\Immersive Ores\NEOFORGE\1.21.1\runs\templateData\config\jei\jei-client.ini
 Line #199: "	VerticalAlignment = TOP"
-[26ago2025 19:03:21.486] [modloading-worker-0/ERROR] [mezz.jei.common.config.file.ConfigSerializer/]: Expected a '[category]' here.
+[16set2025 15:01:22.433] [modloading-worker-0/ERROR] [mezz.jei.common.config.file.ConfigSerializer/]: Expected a '[category]' here.
 Configs must start with a category before defining values.
 Skipping all lines until the first valid category is declared.
 Config file: D:\Programmazione\Mod\Immersive Ores\NEOFORGE\1.21.1\runs\templateData\config\jei\jei-client.ini
 Line #204: "	ButtonNavigationVisibility = ENABLED"
-[26ago2025 19:03:21.489] [modloading-worker-0/ERROR] [mezz.jei.common.config.file.ConfigSerializer/]: Expected a '[category]' here.
+[16set2025 15:01:22.433] [modloading-worker-0/ERROR] [mezz.jei.common.config.file.ConfigSerializer/]: Expected a '[category]' here.
 Configs must start with a category before defining values.
 Skipping all lines until the first valid category is declared.
 Config file: D:\Programmazione\Mod\Immersive Ores\NEOFORGE\1.21.1\runs\templateData\config\jei\jei-client.ini
 Line #209: "	DrawBackground = false"
-[26ago2025 19:03:21.489] [modloading-worker-0/ERROR] [mezz.jei.common.config.file.ConfigSerializer/]: '[BookmarkList]' is not a valid category name.
+[16set2025 15:01:22.433] [modloading-worker-0/ERROR] [mezz.jei.common.config.file.ConfigSerializer/]: '[BookmarkList]' is not a valid category name.
 Valid names are: [appearance, cheating, bookmarks, tooltips, performance, lookups, advanced, input, sorting, search, ingredientList, bookmarkList]
 Skipping all values until the first valid category is declared.
 Config file: D:\Programmazione\Mod\Immersive Ores\NEOFORGE\1.21.1\runs\templateData\config\jei\jei-client.ini
 Line #212: "[BookmarkList]"
-[26ago2025 19:03:21.489] [modloading-worker-0/ERROR] [mezz.jei.common.config.file.ConfigSerializer/]: Expected a '[category]' here.
+[16set2025 15:01:22.433] [modloading-worker-0/ERROR] [mezz.jei.common.config.file.ConfigSerializer/]: Expected a '[category]' here.
 Configs must start with a category before defining values.
 Skipping all lines until the first valid category is declared.
 Config file: D:\Programmazione\Mod\Immersive Ores\NEOFORGE\1.21.1\runs\templateData\config\jei\jei-client.ini
 Line #216: "	MaxRows = 16"
-[26ago2025 19:03:21.489] [modloading-worker-0/ERROR] [mezz.jei.common.config.file.ConfigSerializer/]: Expected a '[category]' here.
+[16set2025 15:01:22.434] [modloading-worker-0/ERROR] [mezz.jei.common.config.file.ConfigSerializer/]: Expected a '[category]' here.
 Configs must start with a category before defining values.
 Skipping all lines until the first valid category is declared.
 Config file: D:\Programmazione\Mod\Immersive Ores\NEOFORGE\1.21.1\runs\templateData\config\jei\jei-client.ini
 Line #221: "	MaxColumns = 9"
-[26ago2025 19:03:21.490] [modloading-worker-0/ERROR] [mezz.jei.common.config.file.ConfigSerializer/]: Expected a '[category]' here.
+[16set2025 15:01:22.434] [modloading-worker-0/ERROR] [mezz.jei.common.config.file.ConfigSerializer/]: Expected a '[category]' here.
 Configs must start with a category before defining values.
 Skipping all lines until the first valid category is declared.
 Config file: D:\Programmazione\Mod\Immersive Ores\NEOFORGE\1.21.1\runs\templateData\config\jei\jei-client.ini
 Line #226: "	HorizontalAlignment = LEFT"
-[26ago2025 19:03:21.490] [modloading-worker-0/ERROR] [mezz.jei.common.config.file.ConfigSerializer/]: Expected a '[category]' here.
+[16set2025 15:01:22.434] [modloading-worker-0/ERROR] [mezz.jei.common.config.file.ConfigSerializer/]: Expected a '[category]' here.
 Configs must start with a category before defining values.
 Skipping all lines until the first valid category is declared.
 Config file: D:\Programmazione\Mod\Immersive Ores\NEOFORGE\1.21.1\runs\templateData\config\jei\jei-client.ini
 Line #231: "	VerticalAlignment = TOP"
-[26ago2025 19:03:21.490] [modloading-worker-0/ERROR] [mezz.jei.common.config.file.ConfigSerializer/]: Expected a '[category]' here.
+[16set2025 15:01:22.434] [modloading-worker-0/ERROR] [mezz.jei.common.config.file.ConfigSerializer/]: Expected a '[category]' here.
 Configs must start with a category before defining values.
 Skipping all lines until the first valid category is declared.
 Config file: D:\Programmazione\Mod\Immersive Ores\NEOFORGE\1.21.1\runs\templateData\config\jei\jei-client.ini
 Line #236: "	ButtonNavigationVisibility = ENABLED"
-[26ago2025 19:03:21.490] [modloading-worker-0/ERROR] [mezz.jei.common.config.file.ConfigSerializer/]: Expected a '[category]' here.
+[16set2025 15:01:22.434] [modloading-worker-0/ERROR] [mezz.jei.common.config.file.ConfigSerializer/]: Expected a '[category]' here.
 Configs must start with a category before defining values.
 Skipping all lines until the first valid category is declared.
 Config file: D:\Programmazione\Mod\Immersive Ores\NEOFORGE\1.21.1\runs\templateData\config\jei\jei-client.ini
 Line #241: "	DrawBackground = false"
-[26ago2025 19:03:21.496] [modloading-worker-0/INFO] [mezz.jei.library.load.PluginCaller/]: Sending ConfigManager...
-[26ago2025 19:03:21.502] [modloading-worker-0/INFO] [mezz.jei.library.load.PluginCaller/]: Sending ConfigManager took 4.101 ms
-[26ago2025 19:03:21.831] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/D:/Programmazione/Mod/Immersive%20Ores/NEOFORGE/1.21.1/.gradle/repositories/ng_dummy_ng/net/neoforged/neoforge/21.1.161/neoforge-21.1.161.jar%23189!/assets/.mcassetsroot' uses unexpected schema
-[26ago2025 19:03:21.832] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/D:/Programmazione/Mod/Immersive%20Ores/NEOFORGE/1.21.1/.gradle/repositories/ng_dummy_ng/net/neoforged/neoforge/21.1.161/neoforge-21.1.161.jar%23189!/data/.mcassetsroot' uses unexpected schema
-[26ago2025 19:03:22.259] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Recipes
-[26ago2025 19:03:22.420] [main/INFO] [net.minecraft.data.DataGenerator/]: Recipes finished after 160 ms
-[26ago2025 19:03:22.420] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Block States: immersiveores
-[26ago2025 19:03:22.471] [main/INFO] [net.minecraft.data.DataGenerator/]: Block States: immersiveores finished after 51 ms
-[26ago2025 19:03:22.471] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Item Models: immersiveores
-[26ago2025 19:03:22.560] [main/INFO] [net.minecraft.data.DataGenerator/]: Item Models: immersiveores finished after 88 ms
-[26ago2025 19:03:22.561] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Loot Tables
-[26ago2025 19:03:22.626] [main/INFO] [net.minecraft.data.DataGenerator/]: Loot Tables finished after 64 ms
-[26ago2025 19:03:22.626] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:block mod id immersiveores
-[26ago2025 19:03:22.660] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:block mod id immersiveores finished after 33 ms
-[26ago2025 19:03:22.660] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:item mod id immersiveores
-[26ago2025 19:03:22.670] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:item mod id immersiveores finished after 9 ms
-[26ago2025 19:03:22.670] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Registries
-[26ago2025 19:03:22.702] [main/INFO] [net.minecraft.data.DataGenerator/]: Registries finished after 30 ms
-[26ago2025 19:03:22.702] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Advancements
-[26ago2025 19:03:22.747] [main/INFO] [net.minecraft.data.DataGenerator/]: Advancements finished after 45 ms
-[26ago2025 19:03:22.748] [main/INFO] [net.minecraft.data.DataGenerator/]: All providers took: 489 ms
-[26ago2025 19:03:22.769] [main/INFO] [net.minecraft.data.HashCache/]: Caching: total files: 445, old count: 445, new count: 446, removed stale: 0, written: 12
+[16set2025 15:01:22.438] [modloading-worker-0/INFO] [mezz.jei.library.load.PluginCaller/]: Sending ConfigManager...
+[16set2025 15:01:22.443] [modloading-worker-0/INFO] [mezz.jei.library.load.PluginCaller/]: Sending ConfigManager took 3.381 ms
+[16set2025 15:01:22.687] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/D:/Programmazione/Mod/Immersive%20Ores/NEOFORGE/1.21.1/.gradle/repositories/ng_dummy_ng/net/neoforged/neoforge/21.1.161/neoforge-21.1.161.jar%23189!/assets/.mcassetsroot' uses unexpected schema
+[16set2025 15:01:22.687] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/D:/Programmazione/Mod/Immersive%20Ores/NEOFORGE/1.21.1/.gradle/repositories/ng_dummy_ng/net/neoforged/neoforge/21.1.161/neoforge-21.1.161.jar%23189!/data/.mcassetsroot' uses unexpected schema
+[16set2025 15:01:23.044] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Recipes
+[16set2025 15:01:23.161] [main/INFO] [net.minecraft.data.DataGenerator/]: Recipes finished after 116 ms
+[16set2025 15:01:23.162] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Block States: immersiveores
+[16set2025 15:01:23.202] [main/INFO] [net.minecraft.data.DataGenerator/]: Block States: immersiveores finished after 40 ms
+[16set2025 15:01:23.202] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Item Models: immersiveores
+[16set2025 15:01:23.238] [main/INFO] [net.minecraft.data.DataGenerator/]: Item Models: immersiveores finished after 34 ms
+[16set2025 15:01:23.238] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Loot Tables
+[16set2025 15:01:23.280] [main/INFO] [net.minecraft.data.DataGenerator/]: Loot Tables finished after 41 ms
+[16set2025 15:01:23.280] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:block mod id immersiveores
+[16set2025 15:01:23.305] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:block mod id immersiveores finished after 25 ms
+[16set2025 15:01:23.305] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:item mod id immersiveores
+[16set2025 15:01:23.312] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:item mod id immersiveores finished after 5 ms
+[16set2025 15:01:23.312] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Registries
+[16set2025 15:01:23.322] [main/INFO] [net.minecraft.data.DataGenerator/]: Registries finished after 10 ms
+[16set2025 15:01:23.322] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Advancements
+[16set2025 15:01:23.354] [main/INFO] [net.minecraft.data.DataGenerator/]: Advancements finished after 31 ms
+[16set2025 15:01:23.355] [main/INFO] [net.minecraft.data.DataGenerator/]: All providers took: 311 ms
+[16set2025 15:01:23.373] [main/INFO] [net.minecraft.data.HashCache/]: Caching: total files: 472, old count: 470, new count: 473, removed stale: 0, written: 4
