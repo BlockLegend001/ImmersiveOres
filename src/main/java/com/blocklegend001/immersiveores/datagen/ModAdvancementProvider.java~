@@ -1,0 +1,32 @@
+package com.blocklegend001.immersiveores.datagen;
+
+import com.blocklegend001.immersiveores.ImmersiveOres;
+import com.blocklegend001.immersiveores.item.ModItems;
+import net.minecraft.advancements.Advancement;
+import net.minecraft.advancements.AdvancementHolder;
+import net.minecraft.advancements.AdvancementRequirements;
+import net.minecraft.advancements.AdvancementType;
+import net.minecraft.advancements.critereon.InventoryChangeTrigger;
+import net.minecraft.core.HolderLookup;
+import net.minecraft.data.PackOutput;
+import net.minecraft.data.advancements.AdvancementProvider;
+import net.minecraft.data.advancements.AdvancementSubProvider;
+import net.minecraft.network.chat.Component;
+import net.minecraft.resources.ResourceLocation;
+
+import java.util.List;
+import java.util.concurrent.CompletableFuture;
+import java.util.function.Consumer;
+
+public class ModAdvancementProvider extends AdvancementProvider {
+    public ModAdvancementProvider(PackOutput packOutput, CompletableFuture<HolderLookup.Provider> provider) {
+        super(packOutput, provider, List.of(new ModImmersiveOresAdvancements()));
+    }
+
+    public static class ModImmersiveOresAdvancements implements AdvancementSubProvider {
+        @Override
+        public void generate(HolderLookup.Provider p_255901_, Consumer<AdvancementHolder> p_250888_) {
+
+        }
+    }
+}
