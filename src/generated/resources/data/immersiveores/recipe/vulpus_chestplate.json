@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "E": "immersiveores:vulpus_ingot",
+    "N": "immersiveores:vibranium_chestplate"
+  },
+  "pattern": [
+    "ENE",
+    "EEE",
+    "EEE"
+  ],
+  "result": {
+    "count": 1,
+    "id": "immersiveores:vulpus_chestplate"
+  }
+}
