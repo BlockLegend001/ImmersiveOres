@@ -18,16 +18,13 @@ import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
 public class ModRecipeProvider extends FabricRecipeProvider {
-    private static final List<ItemConvertible> VIBRANIUM_SMELTABLES = List.of(
-            ModItems.RAW_VIBRANIUM,
+    private static final List<ItemConvertible> VIBRANIUM_SMELTABLES = List.of(ModItems.RAW_VIBRANIUM,
             ModBlocks.VIBRANIUM_ORE);
 
-    private static final List<ItemConvertible> VULPUS_SMELTABLES = List.of(
-            ModItems.RAW_VULPUS,
+    private static final List<ItemConvertible> VULPUS_SMELTABLES = List.of(ModItems.RAW_VULPUS,
             ModBlocks.VULPUS_ORE);
     
-    private static final List<ItemConvertible> ENDERIUM_SMELTABLES = List.of(
-            ModItems.RAW_ENDERIUM,
+    private static final List<ItemConvertible> ENDERIUM_SMELTABLES = List.of(ModItems.RAW_ENDERIUM,
             ModBlocks.ENDERIUM_ORE);
     
     public ModRecipeProvider(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> registryWrapper) {
@@ -58,7 +55,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
         offerBlasting(exporter, VIBRANIUM_SMELTABLES, RecipeCategory.MISC, ModItems.VIBRANIUM_INGOT,
                 1.0f, 100, "immersiveores:vibranium_ingot_cooked_blast");
-        
+
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.VIBRANIUM_NUGGET, 9)
                 .input(Ingredient.ofItems(ModItems.VIBRANIUM_INGOT.asItem()))
                 .criterion("has_vibranium_ingot", conditionsFromItem(ModItems.VIBRANIUM_INGOT))

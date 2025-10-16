@@ -39,9 +39,6 @@ repositories {
         }
     }
     maven {
-        url 'https://maven.wispforest.io/releases/'
-    }
-    maven {
         name = "Terraformers"
         url = "https://maven.terraformersmc.com/"
     }
@@ -69,9 +66,6 @@ dependencies {
 
     modImplementation "io.github.ladysnake:PlayerAbilityLib:${pal_version}"
     include "io.github.ladysnake:PlayerAbilityLib:${pal_version}"
-
-    annotationProcessor modImplementation("io.wispforest:owo-lib:${project.owo_version}")
-    include "io.wispforest:owo-sentinel:${project.owo_version}"
 
     modImplementation("com.terraformersmc:modmenu:${project.modmenu_version}")
 

@@ -1,6 +1,6 @@
 package com.blocklegend001.immersiveores.item.custom.vibranium;
 
-import com.blocklegend001.immersiveores.ImmersiveOres;
+import com.blocklegend001.immersiveores.config.EnderiumConfig;
 import com.blocklegend001.immersiveores.config.VibraniumConfig;
 import com.blocklegend001.immersiveores.item.ModToolMaterials;
 import com.blocklegend001.immersiveores.item.custom.base.Paxel;
@@ -21,7 +21,7 @@ public class VibraniumPaxel extends Paxel {
                 .maxDamage(durability)
                 .fireproof()
                 .attributeModifiers(VibraniumPaxel.createAttributeModifiers(ModToolMaterials.VIBRANIUM,
-                        ImmersiveOres.VIBRANIUM_CONFIG.paxel().attackDamage, (float) ImmersiveOres.VIBRANIUM_CONFIG.paxel().attackSpeed));
+                        VibraniumConfig.attackDamageVibraniumPaxel, (float) VibraniumConfig.attackSpeedVibraniumPaxel));
 
         if (unbreakable) {
             settings.component(DataComponentTypes.UNBREAKABLE, new UnbreakableComponent(true));
@@ -32,7 +32,7 @@ public class VibraniumPaxel extends Paxel {
 
     public VibraniumPaxel(ToolMaterial material, int attackDamage, float attackSpeed) {
         super(material, ModTags.Blocks.VIBRANIUM_PAXEL_MINEABLE,
-                createSettings(ImmersiveOres.VIBRANIUM_CONFIG.toolTier().unbreakable, ImmersiveOres.VIBRANIUM_CONFIG.toolTier().durability));
+                createSettings(VibraniumConfig.unbreakableVibranium, VibraniumConfig.durabilityVibranium));
     }
 
     @Override
@@ -43,7 +43,7 @@ public class VibraniumPaxel extends Paxel {
     @Override
     public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType options) {
         if(Screen.hasShiftDown()) {
-            if (ImmersiveOres.VIBRANIUM_CONFIG.toolTier().unbreakable) {
+            if (VibraniumConfig.unbreakableVibranium) {
                 tooltip.add(Text.translatable("tooltip.immersiveores.unbreakble.tooltip").formatted(Formatting.LIGHT_PURPLE));
             }
             tooltip.add(Text.translatable("tooltip.immersiveores.immunetofire.tooltip").formatted(Formatting.LIGHT_PURPLE));

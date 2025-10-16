@@ -1,6 +1,6 @@
 package com.blocklegend001.immersiveores.item;
 
-import com.blocklegend001.immersiveores.ImmersiveOres;
+import com.blocklegend001.immersiveores.config.EnderiumConfig;
 import com.blocklegend001.immersiveores.config.VibraniumConfig;
 import com.blocklegend001.immersiveores.config.VulpusConfig;
 import com.blocklegend001.immersiveores.util.ModTags;
@@ -14,26 +14,9 @@ import java.util.function.Supplier;
 
 public enum ModToolMaterials implements ToolMaterial {
 
-    VIBRANIUM(ModTags.Blocks.INCORRECT_FOR_VIBRANIUM_TOOL,
-            ImmersiveOres.VIBRANIUM_CONFIG.toolTier().durability,
-            ImmersiveOres.VIBRANIUM_CONFIG.toolTier().speed,
-            ImmersiveOres.VIBRANIUM_CONFIG.toolTier().attackDamageBonus,
-            ImmersiveOres.VIBRANIUM_CONFIG.toolTier().enchantmentValue,
-            () -> Ingredient.ofItems(ModItems.VIBRANIUM_INGOT)),
-
-    VULPUS(ModTags.Blocks.INCORRECT_FOR_VULPUS_TOOL,
-            VulpusConfig.durabilityVulpus,
-            VulpusConfig.speedVulpusTier ,
-            VulpusConfig.attackDamageBonusVulpusTier,
-            VulpusConfig.enchantmentValueVulpusTier,
-            () -> Ingredient.ofItems(ModItems.VULPUS_INGOT)),
-
-    ENDERIUM(ModTags.Blocks.INCORRECT_FOR_ENDERIUM_TOOL,
-            ImmersiveOres.ENDERIUM_CONFIG.toolTier().durability,
-            ImmersiveOres.ENDERIUM_CONFIG.toolTier().speed,
-            ImmersiveOres.ENDERIUM_CONFIG.toolTier().attackDamageBonus,
-            ImmersiveOres.ENDERIUM_CONFIG.toolTier().enchantmentValue,
-            () -> Ingredient.ofItems(ModItems.ENDERIUM_INGOT));
+    VIBRANIUM(ModTags.Blocks.INCORRECT_FOR_VIBRANIUM_TOOL, VibraniumConfig.durabilityVibranium, VibraniumConfig.speedVibraniumTier , VibraniumConfig.attackDamageBonusVibraniumTier, VibraniumConfig.enchantmentValueVibraniumTier, () -> Ingredient.ofItems(ModItems.VIBRANIUM_INGOT)),
+    VULPUS(ModTags.Blocks.INCORRECT_FOR_VULPUS_TOOL, VulpusConfig.durabilityVulpus, VulpusConfig.speedVulpusTier , VulpusConfig.attackDamageBonusVulpusTier, VulpusConfig.enchantmentValueVulpusTier, () -> Ingredient.ofItems(ModItems.VULPUS_INGOT)),
+    ENDERIUM(ModTags.Blocks.INCORRECT_FOR_ENDERIUM_TOOL, EnderiumConfig.durabilityEnderium, EnderiumConfig.speedEnderiumTier , EnderiumConfig.attackDamageBonusEnderiumTier, EnderiumConfig.enchantmentValueEnderiumTier, () -> Ingredient.ofItems(ModItems.ENDERIUM_INGOT));
 
     private final TagKey<Block> inverseTag;
     private final int itemDurability;

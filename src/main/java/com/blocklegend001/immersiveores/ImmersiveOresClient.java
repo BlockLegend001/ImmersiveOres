@@ -9,8 +9,8 @@ public class ImmersiveOresClient implements ClientModInitializer {
 
     @Override
     public void onInitializeClient() {
+        ModItemProperties.registerModModels();
         ExcavatorOverlayRenderer.init();
         HammerOverlayRenderer.init();
-        ModItemProperties.registerModModels();
     }
 }

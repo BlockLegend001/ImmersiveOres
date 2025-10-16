@@ -1,6 +1,6 @@
 package com.blocklegend001.immersiveores.item.custom.vibranium;
 
-import com.blocklegend001.immersiveores.ImmersiveOres;
+import com.blocklegend001.immersiveores.config.EnderiumConfig;
 import com.blocklegend001.immersiveores.config.VibraniumConfig;
 import com.blocklegend001.immersiveores.util.map.ArrowCountMap;
 import com.blocklegend001.immersiveores.util.tools.bow.BowTier;
@@ -31,7 +31,7 @@ import java.util.List;
 
 public class VibraniumBow extends BowItem {
     private final BowTier tier;
-    private final int ARROW_COUNT = ImmersiveOres.VIBRANIUM_CONFIG.bow().arrowCount;
+    private final int ARROW_COUNT = VibraniumConfig.arrowCountVibraniumBow;
 
     private static Settings createSettings(boolean unbreakable, int durability) {
         Settings settings = new Settings()
@@ -46,7 +46,7 @@ public class VibraniumBow extends BowItem {
     }
 
     public VibraniumBow(BowTier tier) {
-        super(createSettings(ImmersiveOres.ENDERIUM_CONFIG.toolTier().unbreakable, ImmersiveOres.ENDERIUM_CONFIG.toolTier().durability));
+        super(createSettings(EnderiumConfig.unbreakableEnderium, EnderiumConfig.durabilityEnderium));
         this.tier = tier;
     }
 
@@ -150,7 +150,7 @@ public class VibraniumBow extends BowItem {
                     .formatted(color);
             tooltip.add(damage);
 
-            if (ImmersiveOres.VIBRANIUM_CONFIG.toolTier().unbreakable) {
+            if (VibraniumConfig.unbreakableVibranium) {
                 Text unbreakable = Text.translatable("tooltip.immersiveores.unbreakble.tooltip")
                         .formatted(color);
                 tooltip.add(unbreakable);

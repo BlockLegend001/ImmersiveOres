@@ -1,6 +1,6 @@
 package com.blocklegend001.immersiveores.util.tools.bow;
 
-import com.blocklegend001.immersiveores.ImmersiveOres;
+import com.blocklegend001.immersiveores.config.EnderiumConfig;
 import com.blocklegend001.immersiveores.config.VibraniumConfig;
 import com.blocklegend001.immersiveores.config.VulpusConfig;
 import com.blocklegend001.immersiveores.item.ModItems;
@@ -12,11 +12,11 @@ import java.util.function.Supplier;
 @SuppressWarnings("deprecation")
 public enum BowTiers implements BowTier {
 
-    ENDERIUM(ImmersiveOres.ENDERIUM_CONFIG.toolTier().durability, ImmersiveOres.ENDERIUM_CONFIG.bow().damage, ImmersiveOres.ENDERIUM_CONFIG.bow().enchantmentValue, () -> {
+    ENDERIUM(EnderiumConfig.durabilityEnderium, EnderiumConfig.damageEnderiumBow, EnderiumConfig.enchantmentValueEnderiumBow, () -> {
         return Ingredient.ofItems(ModItems.ENDERIUM_INGOT);
     }),
 
-    VIBRANIUM(ImmersiveOres.VIBRANIUM_CONFIG.toolTier().durability, ImmersiveOres.VIBRANIUM_CONFIG.bow().damage, ImmersiveOres.VIBRANIUM_CONFIG.bow().enchantmentValue, () -> {
+    VIBRANIUM(VibraniumConfig.durabilityVibranium, VibraniumConfig.damageVibraniumBow, VibraniumConfig.enchantmentValueVibraniumBow, () -> {
         return Ingredient.ofItems(ModItems.VIBRANIUM_INGOT);
     }),
 

@@ -1,11 +1,12 @@
 package com.blocklegend001.immersiveores.item.custom.enderium;
 
-import com.blocklegend001.immersiveores.ImmersiveOres;
+import com.blocklegend001.immersiveores.config.EnderiumConfig;
 import com.blocklegend001.immersiveores.item.ModToolMaterials;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.component.DataComponentTypes;
 import net.minecraft.component.type.UnbreakableComponent;
 import net.minecraft.item.HoeItem;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.item.tooltip.TooltipType;
@@ -20,7 +21,7 @@ public class EnderiumHoe extends HoeItem {
                 .maxDamage(durability)
                 .fireproof()
                 .attributeModifiers(EnderiumHoe.createAttributeModifiers(ModToolMaterials.ENDERIUM,
-                        ImmersiveOres.ENDERIUM_CONFIG.hoe().attackDamage, (float) ImmersiveOres.ENDERIUM_CONFIG.hoe().attackSpeed));
+                        EnderiumConfig.attackDamageEnderiumHoe, (float) EnderiumConfig.attackSpeedEnderiumHoe));
 
         if (unbreakable) {
             settings.component(DataComponentTypes.UNBREAKABLE, new UnbreakableComponent(true));
@@ -31,7 +32,7 @@ public class EnderiumHoe extends HoeItem {
 
     public EnderiumHoe(ToolMaterial material, int attackDamage, float attackSpeed) {
         super(material,
-                createSettings(ImmersiveOres.ENDERIUM_CONFIG.toolTier().unbreakable, ImmersiveOres.ENDERIUM_CONFIG.toolTier().durability));
+                createSettings(EnderiumConfig.unbreakableEnderium, EnderiumConfig.durabilityEnderium));
     }
 
     @Override
@@ -47,7 +48,7 @@ public class EnderiumHoe extends HoeItem {
     @Override
     public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType options) {
         if(Screen.hasShiftDown()) {
-            if (ImmersiveOres.ENDERIUM_CONFIG.toolTier().unbreakable) {
+            if (EnderiumConfig.unbreakableEnderium) {
                 tooltip.add(Text.translatable("tooltip.immersiveores.unbreakble.tooltip").formatted(Formatting.DARK_AQUA));
             }
             tooltip.add(Text.translatable("tooltip.immersiveores.immunetofire.tooltip").formatted(Formatting.DARK_AQUA));
