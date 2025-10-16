@@ -19,7 +19,7 @@ public class ModBlocks {
 
     public static final Block VIBRANIUM_BLOCK = registerBlock("vibranium_block",
             new VibraniumBlock(AbstractBlock.Settings.copy(Blocks.NETHERITE_BLOCK)
-                    .strength(6.5f).requiresTool()));
+                    .strength(6.5f, 1200.0F).requiresTool()));
 
     public static final Block VULPUS_BLOCK = registerBlock("vulpus_block",
             new VulpusBlock(AbstractBlock.Settings.copy(ModBlocks.VIBRANIUM_BLOCK)
