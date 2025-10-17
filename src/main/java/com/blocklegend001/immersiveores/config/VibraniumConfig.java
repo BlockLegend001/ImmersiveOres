@@ -10,7 +10,7 @@ public class VibraniumConfig {
 
     public static int toughnessValueVibraniumArmor;
     public static int enchantmentValueVibraniumArmor;
-    public static int knockbackResistanceValueVibraniumArmor;
+    public static float knockbackResistanceValueVibraniumArmor;
     public static int protectionValueVibraniumBoots;
     public static int protectionValueVibraniumLeggings;
     public static int protectionValueVibraniumChestplate;
@@ -52,7 +52,7 @@ public class VibraniumConfig {
         configs = new ModConfigProvider();
         createConfigs();
 
-        VIBRANIUM_CONFIG = SimpleConfig.of("vibranium-common.toml")
+        VIBRANIUM_CONFIG = SimpleConfig.of("vibranium-common")
                 .provider(configs)
                 .request();
 
@@ -67,7 +67,7 @@ public class VibraniumConfig {
         configs.addKeyValuePair(new Pair<>("protectionValueVibraniumHelmet", 6), "Protection value of Vibranium Helmet");
 
         configs.addKeyValuePair(new Pair<>("toughnessValueVibraniumArmor", 3), "Toughness value of Vibranium Armor");
-        configs.addKeyValuePair(new Pair<>("knockbackResistanceValueVibraniumArmor", 1), "Knockback resistance of Vibranium Armor");
+        configs.addKeyValuePair(new Pair<>("knockbackResistanceValueVibraniumArmor", 0.1), "Knockback resistance of Vibranium Armor");
         configs.addKeyValuePair(new Pair<>("enchantmentValueVibraniumArmor", 55), "Enchantment value of Vibranium Armor");
 
         configs.addComment("--- Vibranium Armor Special Effects and Abilities ---");
