@@ -1,1 +1,3 @@
-- Fixed the horse armor entity textures
+- Balanced knockback resistance
+- Fixed that ores can be destroyed by TNT or Beds (Now its like Ancient Debris)
+- Fixed the creation of config files with a double .toml.toml extension due to a naming bug, which might cause minor issues
