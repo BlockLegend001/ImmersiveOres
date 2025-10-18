@@ -17,7 +17,7 @@ public class EnderiumConfig {
     // ---------------------------------------------
     public static final ForgeConfigSpec.IntValue toughnessValueEnderiumArmor;
     public static final ForgeConfigSpec.IntValue enchantmentValueEnderiumArmor;
-    public static final ForgeConfigSpec.IntValue knockbackResistanceValueEnderiumArmor;
+    public static final ForgeConfigSpec.FloatValue knockbackResistanceValueEnderiumArmor;
     public static final ForgeConfigSpec.IntValue protectionValueEnderiumBoots;
     public static final ForgeConfigSpec.IntValue protectionValueEnderiumLeggings;
     public static final ForgeConfigSpec.IntValue protectionValueEnderiumChestplate;
@@ -122,8 +122,8 @@ public class EnderiumConfig {
                 .comment("Enchantment value for Enderium Armor | Default Value = 65")
                 .defineInRange("enchantmentValueEnderiumArmor", 65, 0, Integer.MAX_VALUE);
         knockbackResistanceValueEnderiumArmor = BUILDER
-                .comment("Knockback resistance for Enderium Armor | Default Value = 3")
-                .defineInRange("knockbackResistanceValueEnderiumArmor", 3, 0, Integer.MAX_VALUE);
+                .comment("Knockback resistance for Enderium Armor | Default Value = 0.4")
+                .defineInRange("knockbackResistanceValueEnderiumArmor", 0.4F, 0, Float.MAX_VALUE);
         protectionValueEnderiumBoots = BUILDER
                 .comment("Protection value for Enderium Boots | Default Value = 12")
                 .defineInRange("protectionValueEnderiumBoots", 12, 0, Integer.MAX_VALUE);
