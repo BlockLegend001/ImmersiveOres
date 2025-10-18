@@ -15,7 +15,7 @@ public class VibraniumConfig {
     // 1. Armor Protection and Resistance
     public static final ForgeConfigSpec.IntValue toughnessValueVibraniumArmor;
     public static final ForgeConfigSpec.IntValue enchantmentValueVibraniumArmor;
-    public static final ForgeConfigSpec.IntValue knockbackResistanceValueVibraniumArmor;
+    public static final ForgeConfigSpec.FloatValue knockbackResistanceValueVibraniumArmor;
     public static final ForgeConfigSpec.IntValue protectionValueVibraniumBoots;
     public static final ForgeConfigSpec.IntValue protectionValueVibraniumLeggings;
     public static final ForgeConfigSpec.IntValue protectionValueVibraniumChestplate;
@@ -86,8 +86,8 @@ public class VibraniumConfig {
                 .comment("Enchantment value for Vibranium Armor | Default Value = 55")
                 .defineInRange("enchantmentValueVibraniumArmor", 55, 0, Integer.MAX_VALUE);
         knockbackResistanceValueVibraniumArmor = BUILDER
-                .comment("Knockback resistance for Vibranium Armor | Default Value = 1")
-                .defineInRange("knockbackResistanceValueVibraniumArmor", 1, 0, Integer.MAX_VALUE);
+                .comment("Knockback resistance for Vibranium Armor | Default Value = 0.2")
+                .defineInRange("knockbackResistanceValueVibraniumArmor", 0.2F, 0, Float.MAX_VALUE);
         protectionValueVibraniumBoots = BUILDER
                 .comment("Protection value for Vibranium Boots | Default Value = 6")
                 .defineInRange("protectionValueVibraniumBoots", 6, 0, Integer.MAX_VALUE);

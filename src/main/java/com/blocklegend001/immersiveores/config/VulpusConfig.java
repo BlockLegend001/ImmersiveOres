@@ -15,7 +15,7 @@ public class VulpusConfig {
     // 1. Armor Protection and Resistance
     public static final ForgeConfigSpec.IntValue toughnessValueVulpusArmor;
     public static final ForgeConfigSpec.IntValue enchantmentValueVulpusArmor;
-    public static final ForgeConfigSpec.IntValue knockbackResistanceValueVulpusArmor;
+    public static final ForgeConfigSpec.FloatValue knockbackResistanceValueVulpusArmor;
     public static final ForgeConfigSpec.IntValue protectionValueVulpusBoots;
     public static final ForgeConfigSpec.IntValue protectionValueVulpusLeggings;
     public static final ForgeConfigSpec.IntValue protectionValueVulpusChestplate;
@@ -88,8 +88,8 @@ public class VulpusConfig {
                 .comment("Enchantment value for Vulpus Armor | Default Value = 65")
                 .defineInRange("enchantmentValueVulpusArmor", 65, 0, Integer.MAX_VALUE);
         knockbackResistanceValueVulpusArmor = BUILDER
-                .comment("Knockback resistance for Vulpus Armor | Default Value = 2")
-                .defineInRange("knockbackResistanceValueVulpusArmor", 2, 0, Integer.MAX_VALUE);
+                .comment("Knockback resistance for Vulpus Armor | Default Value = 0.3")
+                .defineInRange("knockbackResistanceValueVulpusArmor", 0.3F, 0, Float.MAX_VALUE);
         protectionValueVulpusBoots = BUILDER
                 .comment("Protection value for Vulpus Boots | Default Value = 9")
                 .defineInRange("protectionValueVulpusBoots", 9, 0, Integer.MAX_VALUE);
