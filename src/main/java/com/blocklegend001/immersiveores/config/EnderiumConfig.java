@@ -10,7 +10,7 @@ public class EnderiumConfig {
 
     public static int toughnessValueEnderiumArmor;
     public static int enchantmentValueEnderiumArmor;
-    public static float knockbackResistanceValueEnderiumArmor;
+    public static double knockbackResistanceValueEnderiumArmor;
     public static int protectionValueEnderiumBoots;
     public static int protectionValueEnderiumLeggings;
     public static int protectionValueEnderiumChestplate;
@@ -72,7 +72,7 @@ public class EnderiumConfig {
         configs.addKeyValuePair(new Pair<>("protectionValueEnderiumHelmet", 12), "Protection value of Enderium Helmet");
 
         configs.addKeyValuePair(new Pair<>("toughnessValueEnderiumArmor", 10), "Toughness value of Enderium Armor");
-        configs.addKeyValuePair(new Pair<>("knockbackResistanceValueEnderiumArmor", 0.3), "Knockback resistance of Enderium Armor");
+        configs.addKeyValuePair(new Pair<>("knockbackResistanceValueEnderiumArmor", 0.4), "Knockback resistance of Enderium Armor");
         configs.addKeyValuePair(new Pair<>("enchantmentValueEnderiumArmor", 65), "Enchantment value of Enderium Armor");
 
         configs.addComment("Enderium Armor Special Effects and Abilities");
@@ -141,7 +141,7 @@ public class EnderiumConfig {
         protectionValueEnderiumHelmet = ENDERIUM_CONFIG.getOrDefault("protectionValueEnderiumHelmet", 12);
 
         toughnessValueEnderiumArmor = ENDERIUM_CONFIG.getOrDefault("toughnessValueEnderiumArmor", 10);
-        knockbackResistanceValueEnderiumArmor = ENDERIUM_CONFIG.getOrDefault("knockbackResistanceValueEnderiumArmor", 3);
+        knockbackResistanceValueEnderiumArmor = ENDERIUM_CONFIG.getOrDefault("knockbackResistanceValueEnderiumArmor", 0.4);
         enchantmentValueEnderiumArmor = ENDERIUM_CONFIG.getOrDefault("enchantmentValueEnderiumArmor", 65);
 
         speedIIIEnderiumArmor= ENDERIUM_CONFIG.getOrDefault("speedIIIEnderiumArmor", true);
