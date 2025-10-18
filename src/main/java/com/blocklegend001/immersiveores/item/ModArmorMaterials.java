@@ -19,7 +19,7 @@ public class ModArmorMaterials {
                 map.put(EquipmentType.LEGGINGS, VibraniumConfig.protectionValueVibraniumLeggings);
                 map.put(EquipmentType.CHESTPLATE, VibraniumConfig.protectionValueVibraniumChestplate);
                 map.put(EquipmentType.HELMET, VibraniumConfig.protectionValueVibraniumHelmet);
-    }), VibraniumConfig.enchantmentValueVibraniumArmor, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, VibraniumConfig.toughnessValueVibraniumArmor, VibraniumConfig.knockbackResistanceValueVibraniumArmor,
+    }), VibraniumConfig.enchantmentValueVibraniumArmor, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, VibraniumConfig.toughnessValueVibraniumArmor, (float) VibraniumConfig.knockbackResistanceValueVibraniumArmor,
             ModTags.Items.VIBRANIUM_REPAIRS, Identifier.of(ImmersiveOres.MOD_ID, "vibranium"));
 
     public static ArmorMaterial VULPUS = new ArmorMaterial(VulpusConfig.durabilityVulpus, Util.make(new EnumMap<>(EquipmentType.class), map -> {
@@ -27,7 +27,7 @@ public class ModArmorMaterials {
         map.put(EquipmentType.LEGGINGS, VulpusConfig.protectionValueVulpusLeggings);
         map.put(EquipmentType.CHESTPLATE, VulpusConfig.protectionValueVulpusChestplate);
         map.put(EquipmentType.HELMET, VulpusConfig.protectionValueVulpusHelmet);
-    }), VulpusConfig.enchantmentValueVulpusArmor, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, VulpusConfig.toughnessValueVulpusArmor, VulpusConfig.knockbackResistanceValueVulpusArmor,
+    }), VulpusConfig.enchantmentValueVulpusArmor, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, VulpusConfig.toughnessValueVulpusArmor, (float) VulpusConfig.knockbackResistanceValueVulpusArmor,
             ModTags.Items.VULPUS_REPAIRS, Identifier.of(ImmersiveOres.MOD_ID, "vulpus"));
 
     public static ArmorMaterial ENDERIUM = new ArmorMaterial(EnderiumConfig.durabilityEnderium, Util.make(new EnumMap<>(EquipmentType.class), map -> {
@@ -35,6 +35,6 @@ public class ModArmorMaterials {
         map.put(EquipmentType.LEGGINGS, EnderiumConfig.protectionValueEnderiumLeggings);
         map.put(EquipmentType.CHESTPLATE, EnderiumConfig.protectionValueEnderiumChestplate);
         map.put(EquipmentType.HELMET, EnderiumConfig.protectionValueEnderiumHelmet);
-    }), EnderiumConfig.enchantmentValueEnderiumArmor, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, EnderiumConfig.toughnessValueEnderiumArmor, EnderiumConfig.knockbackResistanceValueEnderiumArmor,
+    }), EnderiumConfig.enchantmentValueEnderiumArmor, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, EnderiumConfig.toughnessValueEnderiumArmor, (float) EnderiumConfig.knockbackResistanceValueEnderiumArmor,
             ModTags.Items.ENDERIUM_REPAIRS, Identifier.of(ImmersiveOres.MOD_ID, "enderium"));
 }
