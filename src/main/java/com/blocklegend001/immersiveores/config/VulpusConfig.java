@@ -10,7 +10,7 @@ public class VulpusConfig {
 
     public static int toughnessValueVulpusArmor;
     public static int enchantmentValueVulpusArmor;
-    public static float knockbackResistanceValueVulpusArmor;
+    public static double knockbackResistanceValueVulpusArmor;
     public static int protectionValueVulpusBoots;
     public static int protectionValueVulpusLeggings;
     public static int protectionValueVulpusChestplate;
@@ -71,7 +71,7 @@ public class VulpusConfig {
         configs.addKeyValuePair(new Pair<>("protectionValueVulpusHelmet", 9), "Protection value of Vulpus Helmet");
         configs.addKeyValuePair(new Pair<>("toughnessValueVulpusArmor", 7), "Toughness value of Vulpus Armor");
         configs.addKeyValuePair(new Pair<>("enchantmentValueVulpusArmor", 65), "Enchantment value of Vulpus Armor");
-        configs.addKeyValuePair(new Pair<>("knockbackResistanceValueVulpusArmor", 0.2), "Knockback resistance of Vulpus Armor");
+        configs.addKeyValuePair(new Pair<>("knockbackResistanceValueVulpusArmor", 0.3), "Knockback resistance of Vulpus Armor");
 
         configs.addComment("Vulpus Armor Special Effects and Abilities");
         configs.addKeyValuePair(new Pair<>("speedIIVulpusArmor", true), "Speed II effect for Vulpus Armor");
@@ -137,7 +137,7 @@ public class VulpusConfig {
         protectionValueVulpusHelmet = VULPUS_CONFIG.getOrDefault("protectionValueVulpusHelmet", 9);
 
         toughnessValueVulpusArmor = VULPUS_CONFIG.getOrDefault("toughnessValueVulpusArmor", 7);
-        knockbackResistanceValueVulpusArmor = VULPUS_CONFIG.getOrDefault("knockbackResistanceValueVulpusArmor", 2);
+        knockbackResistanceValueVulpusArmor = VULPUS_CONFIG.getOrDefault("knockbackResistanceValueVulpusArmor", 0.3);
         enchantmentValueVulpusArmor = VULPUS_CONFIG.getOrDefault("enchantmentValueVulpusArmor", 65);
         durabilityVulpus = VULPUS_CONFIG.getOrDefault("durabilityVulpus", 3093);
         unbreakableVulpus = VULPUS_CONFIG.getOrDefault("unbreakableVulpus", false);
