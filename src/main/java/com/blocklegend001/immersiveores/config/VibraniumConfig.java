@@ -8,7 +8,7 @@ public final class VibraniumConfig {
     // Armor Protection and Resistance
     public static ModConfigSpec.IntValue TOUGHNESS_VALUE_VIBRANIUM_ARMOR;
     public static ModConfigSpec.IntValue ENCHANTMENT_VALUE_VIBRANIUM_ARMOR;
-    public static ModConfigSpec.IntValue KNOCKBACK_RESISTANCE_VALUE_VIBRANIUM_ARMOR;
+    public static ModConfigSpec.DoubleValue KNOCKBACK_RESISTANCE_VALUE_VIBRANIUM_ARMOR;
     public static ModConfigSpec.IntValue PROTECTION_VALUE_VIBRANIUM_BOOTS;
     public static ModConfigSpec.IntValue PROTECTION_VALUE_VIBRANIUM_LEGGINGS;
     public static ModConfigSpec.IntValue PROTECTION_VALUE_VIBRANIUM_CHESTPLATE;
@@ -77,8 +77,8 @@ public final class VibraniumConfig {
                 .comment("Enchantment value for Vibranium Armor | Default Value = 55")
                 .defineInRange("enchantmentValueVibraniumArmor", 55, 0, Integer.MAX_VALUE);
         KNOCKBACK_RESISTANCE_VALUE_VIBRANIUM_ARMOR = BUILDER
-                .comment("Knockback resistance for Vibranium Armor | Default Value = 1")
-                .defineInRange("knockbackResistanceValueVibraniumArmor", 1, 0, Integer.MAX_VALUE);
+                .comment("Knockback resistance for Vibranium Armor | Default Value = 0.2")
+                .defineInRange("knockbackResistanceValueVibraniumArmor", 0.2, 0, Double.MAX_VALUE);
         PROTECTION_VALUE_VIBRANIUM_BOOTS = BUILDER
                 .comment("Protection value for Vibranium Boots | Default Value = 6")
                 .defineInRange("protectionValueVibraniumBoots", 6, 0, Integer.MAX_VALUE);
