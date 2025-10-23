@@ -8,7 +8,7 @@ public final class VulpusConfig {
     // Armor Protection and Resistance
     public static ModConfigSpec.IntValue TOUGHNESS_VALUE_VULPUS_ARMOR;
     public static ModConfigSpec.IntValue ENCHANTMENT_VALUE_VULPUS_ARMOR;
-    public static ModConfigSpec.IntValue KNOCKBACK_RESISTANCE_VALUE_VULPUS_ARMOR;
+    public static ModConfigSpec.DoubleValue KNOCKBACK_RESISTANCE_VALUE_VULPUS_ARMOR;
     public static ModConfigSpec.IntValue PROTECTION_VALUE_VULPUS_BOOTS;
     public static ModConfigSpec.IntValue PROTECTION_VALUE_VULPUS_LEGGINGS;
     public static ModConfigSpec.IntValue PROTECTION_VALUE_VULPUS_CHESTPLATE;
@@ -81,8 +81,8 @@ public final class VulpusConfig {
                 .comment("Enchantment value for Vulpus Armor | Default Value = 65")
                 .defineInRange("enchantmentValueVulpusArmor", 65, 0, Integer.MAX_VALUE);
         KNOCKBACK_RESISTANCE_VALUE_VULPUS_ARMOR = BUILDER
-                .comment("Knockback resistance for Vulpus Armor | Default Value = 2")
-                .defineInRange("knockbackResistanceValueVulpusArmor", 2, 0, Integer.MAX_VALUE);
+                .comment("Knockback resistance for Vulpus Armor | Default Value = 0.3")
+                .defineInRange("knockbackResistanceValueVulpusArmor", 0.3, 0, Double.MAX_VALUE);
         PROTECTION_VALUE_VULPUS_BOOTS = BUILDER
                 .comment("Protection value for Vulpus Boots | Default Value = 9")
                 .defineInRange("protectionValueVulpusBoots", 9, 0, Integer.MAX_VALUE);
