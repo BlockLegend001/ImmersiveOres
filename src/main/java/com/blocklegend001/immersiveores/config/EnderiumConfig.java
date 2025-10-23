@@ -7,7 +7,7 @@ public final class EnderiumConfig {
 
     public static ModConfigSpec.IntValue TOUGHNESS_VALUE_ENDERIUM_ARMOR;
     public static ModConfigSpec.IntValue ENCHANTMENT_VALUE_ENDERIUM_ARMOR;
-    public static ModConfigSpec.IntValue KNOCKBACK_RESISTANCE_VALUE_ENDERIUM_ARMOR;
+    public static ModConfigSpec.DoubleValue KNOCKBACK_RESISTANCE_VALUE_ENDERIUM_ARMOR;
     public static ModConfigSpec.IntValue PROTECTION_VALUE_ENDERIUM_BOOTS;
     public static ModConfigSpec.IntValue PROTECTION_VALUE_ENDERIUM_LEGGINGS;
     public static ModConfigSpec.IntValue PROTECTION_VALUE_ENDERIUM_CHESTPLATE;
@@ -73,8 +73,8 @@ public final class EnderiumConfig {
                 .comment("Enchantment value for Enderium Armor | Default Value = 65")
                 .defineInRange("enchantmentValueEnderiumArmor", 65, 0, Integer.MAX_VALUE);
         KNOCKBACK_RESISTANCE_VALUE_ENDERIUM_ARMOR = BUILDER
-                .comment("Knockback resistance for Enderium Armor | Default Value = 3")
-                .defineInRange("knockbackResistanceValueEnderiumArmor", 3, 0, Integer.MAX_VALUE);
+                .comment("Knockback resistance for Enderium Armor | Default Value = 0.4")
+                .defineInRange("knockbackResistanceValueEnderiumArmor", 0.4, 0, Double.MAX_VALUE);
         PROTECTION_VALUE_ENDERIUM_BOOTS = BUILDER
                 .comment("Protection value for Enderium Boots | Default Value = 12")
                 .defineInRange("protectionValueEnderiumBoots", 12, 0, Integer.MAX_VALUE);
