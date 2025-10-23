@@ -1,13 +1,10 @@
 package com.blocklegend001.immersiveores.item;
 
-import com.blocklegend001.immersiveores.ImmersiveOres;
 import com.blocklegend001.immersiveores.config.EnderiumConfig;
 import com.blocklegend001.immersiveores.config.VibraniumConfig;
 import com.blocklegend001.immersiveores.config.VulpusConfig;
 import com.blocklegend001.immersiveores.util.ModEquipmentAssets;
-import com.blocklegend001.immersiveores.util.ModTags;
 import net.minecraft.Util;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.equipment.ArmorMaterial;
@@ -24,7 +21,7 @@ public final class ModArmorMaterials {
                 attribute.put(ArmorType.CHESTPLATE, VibraniumConfig.PROTECTION_VALUE_VIBRANIUM_CHESTPLATE.get());
                 attribute.put(ArmorType.HELMET, VibraniumConfig.PROTECTION_VALUE_VIBRANIUM_HELMET.get());
             }), VibraniumConfig.ENCHANTMENT_VALUE_VIBRANIUM_ARMOR.get(), SoundEvents.ARMOR_EQUIP_NETHERITE,
-            VibraniumConfig.TOUGHNESS_VALUE_VIBRANIUM_ARMOR.get(), VibraniumConfig.KNOCKBACK_RESISTANCE_VALUE_VIBRANIUM_ARMOR.get(),
+            VibraniumConfig.TOUGHNESS_VALUE_VIBRANIUM_ARMOR.get(), (float) VibraniumConfig.KNOCKBACK_RESISTANCE_VALUE_VIBRANIUM_ARMOR.getAsDouble(),
             ItemTags.REPAIRS_NETHERITE_ARMOR,
             ModEquipmentAssets.VIBRANIUM);
 
@@ -35,7 +32,7 @@ public final class ModArmorMaterials {
                 attribute.put(ArmorType.CHESTPLATE, VulpusConfig.PROTECTION_VALUE_VULPUS_CHESTPLATE.get());
                 attribute.put(ArmorType.HELMET, VulpusConfig.PROTECTION_VALUE_VULPUS_HELMET.get());
             }), VulpusConfig.ENCHANTMENT_VALUE_VULPUS_ARMOR.get(), SoundEvents.ARMOR_EQUIP_NETHERITE,
-            VulpusConfig.TOUGHNESS_VALUE_VULPUS_ARMOR.get(), VulpusConfig.KNOCKBACK_RESISTANCE_VALUE_VULPUS_ARMOR.get(),
+            VulpusConfig.TOUGHNESS_VALUE_VULPUS_ARMOR.get(), (float) VulpusConfig.KNOCKBACK_RESISTANCE_VALUE_VULPUS_ARMOR.getAsDouble(),
             ItemTags.REPAIRS_NETHERITE_ARMOR,
             ModEquipmentAssets.VULPUS);
 
@@ -46,7 +43,7 @@ public final class ModArmorMaterials {
                 attribute.put(ArmorType.CHESTPLATE, EnderiumConfig.PROTECTION_VALUE_ENDERIUM_CHESTPLATE.get());
                 attribute.put(ArmorType.HELMET, EnderiumConfig.PROTECTION_VALUE_ENDERIUM_HELMET.get());
             }), EnderiumConfig.ENCHANTMENT_VALUE_ENDERIUM_ARMOR.get(), SoundEvents.ARMOR_EQUIP_NETHERITE,
-            EnderiumConfig.TOUGHNESS_VALUE_ENDERIUM_ARMOR.get(), EnderiumConfig.KNOCKBACK_RESISTANCE_VALUE_ENDERIUM_ARMOR.get(),
+            EnderiumConfig.TOUGHNESS_VALUE_ENDERIUM_ARMOR.get(), (float) EnderiumConfig.KNOCKBACK_RESISTANCE_VALUE_ENDERIUM_ARMOR.getAsDouble(),
             ItemTags.REPAIRS_NETHERITE_ARMOR,
             ModEquipmentAssets.ENDERIUM);
 }
