@@ -32,21 +32,21 @@ public final class ModArmorMaterials {
             attribute.put(ArmorItem.Type.LEGGINGS, VibraniumConfig.PROTECTION_VALUE_VIBRANIUM_LEGGINGS.get());
             attribute.put(ArmorItem.Type.CHESTPLATE, VibraniumConfig.PROTECTION_VALUE_VIBRANIUM_CHESTPLATE.get());
             attribute.put(ArmorItem.Type.HELMET, VibraniumConfig.PROTECTION_VALUE_VIBRANIUM_HELMET.get());
-        }), VibraniumConfig.ENCHANTMENT_VALUE_VIBRANIUM_ARMOR.get(), VibraniumConfig.TOUGHNESS_VALUE_VIBRANIUM_ARMOR.get(), VibraniumConfig.KNOCKBACK_RESISTANCE_VALUE_VIBRANIUM_ARMOR.get(), ModItems.VIBRANIUM_INGOT.get());
+        }), VibraniumConfig.ENCHANTMENT_VALUE_VIBRANIUM_ARMOR.get(), VibraniumConfig.TOUGHNESS_VALUE_VIBRANIUM_ARMOR.get(), (float) VibraniumConfig.KNOCKBACK_RESISTANCE_VALUE_VIBRANIUM_ARMOR.getAsDouble(), ModItems.VIBRANIUM_INGOT.get());
 
         VULPUS = register("vulpus", Util.make(new EnumMap<>(ArmorItem.Type.class), (attribute) -> {
             attribute.put(ArmorItem.Type.BOOTS, VulpusConfig.PROTECTION_VALUE_VULPUS_BOOTS.get());
             attribute.put(ArmorItem.Type.LEGGINGS, VulpusConfig.PROTECTION_VALUE_VULPUS_LEGGINGS.get());
             attribute.put(ArmorItem.Type.CHESTPLATE, VulpusConfig.PROTECTION_VALUE_VULPUS_CHESTPLATE.get());
             attribute.put(ArmorItem.Type.HELMET, VulpusConfig.PROTECTION_VALUE_VULPUS_HELMET.get());
-        }), VulpusConfig.ENCHANTMENT_VALUE_VULPUS_ARMOR.get(), VulpusConfig.TOUGHNESS_VALUE_VULPUS_ARMOR.get(), VulpusConfig.KNOCKBACK_RESISTANCE_VALUE_VULPUS_ARMOR.get(), ModItems.VULPUS_INGOT.get());
+        }), VulpusConfig.ENCHANTMENT_VALUE_VULPUS_ARMOR.get(), VulpusConfig.TOUGHNESS_VALUE_VULPUS_ARMOR.get(), (float) VulpusConfig.KNOCKBACK_RESISTANCE_VALUE_VULPUS_ARMOR.getAsDouble(), ModItems.VULPUS_INGOT.get());
 
         ENDERIUM = register("enderium", Util.make(new EnumMap<>(ArmorItem.Type.class), (attribute) -> {
             attribute.put(ArmorItem.Type.BOOTS, EnderiumConfig.PROTECTION_VALUE_ENDERIUM_BOOTS.get());
             attribute.put(ArmorItem.Type.LEGGINGS, EnderiumConfig.PROTECTION_VALUE_ENDERIUM_LEGGINGS.get());
             attribute.put(ArmorItem.Type.CHESTPLATE, EnderiumConfig.PROTECTION_VALUE_ENDERIUM_CHESTPLATE.get());
             attribute.put(ArmorItem.Type.HELMET, EnderiumConfig.PROTECTION_VALUE_ENDERIUM_HELMET.get());
-        }), EnderiumConfig.ENCHANTMENT_VALUE_ENDERIUM_ARMOR.get(), EnderiumConfig.TOUGHNESS_VALUE_ENDERIUM_ARMOR.get(), EnderiumConfig.KNOCKBACK_RESISTANCE_VALUE_ENDERIUM_ARMOR.get(), ModItems.ENDERIUM_INGOT.get());
+        }), EnderiumConfig.ENCHANTMENT_VALUE_ENDERIUM_ARMOR.get(), EnderiumConfig.TOUGHNESS_VALUE_ENDERIUM_ARMOR.get(), (float) EnderiumConfig.KNOCKBACK_RESISTANCE_VALUE_ENDERIUM_ARMOR.getAsDouble(), ModItems.ENDERIUM_INGOT.get());
     }
 
     private static Holder<ArmorMaterial> register(String name, EnumMap<ArmorItem.Type, Integer> typeProtections, int enchantability, float toughness, float knockbackResistance, Item repairItem) {
