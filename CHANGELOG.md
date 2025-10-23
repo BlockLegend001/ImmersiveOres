@@ -1,0 +1,2 @@
+- Balanced knockback resistance
+- Fixed that ores can be destroyed by TNT or Beds (Now its like Ancient Debris)
