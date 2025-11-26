@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "immersiveores:raw_vibranium",
+    "immersiveores:raw_vulpus",
+    "immersiveores:raw_enderium"
+  ]
+}

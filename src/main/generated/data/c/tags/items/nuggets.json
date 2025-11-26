@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "immersiveores:vibranium_nugget",
+    "immersiveores:vulpus_nugget",
+    "immersiveores:enderium_nugget"
+  ]
+}

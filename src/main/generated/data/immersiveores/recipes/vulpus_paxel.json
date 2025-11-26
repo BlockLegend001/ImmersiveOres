@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "E": {
+      "item": "immersiveores:vulpus_axe"
+    },
+    "S": {
+      "item": "immersiveores:vulpus_stick"
+    },
+    "T": {
+      "item": "immersiveores:vulpus_shovel"
+    },
+    "W": {
+      "item": "immersiveores:vulpus_pickaxe"
+    }
+  },
+  "pattern": [
+    "WTE",
+    " S ",
+    " S "
+  ],
+  "result": {
+    "item": "immersiveores:vulpus_paxel"
+  },
+  "show_notification": true
+}

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "E": {
+      "item": "immersiveores:enderium_ingot"
+    }
+  },
+  "pattern": [
+    "   ",
+    " E ",
+    " E "
+  ],
+  "result": {
+    "count": 2,
+    "item": "immersiveores:enderium_stick"
+  },
+  "show_notification": true
+}

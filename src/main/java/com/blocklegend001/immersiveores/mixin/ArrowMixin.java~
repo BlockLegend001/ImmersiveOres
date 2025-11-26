@@ -1,0 +1,30 @@
+package com.blocklegend001.immersiveores.mixin;
+
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.projectile.ArrowEntity;
+import net.minecraft.item.BowItem;
+import net.minecraft.item.ItemStack;
+import net.minecraft.nbt.NbtCompound;
+import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.injection.At;
+import org.spongepowered.asm.mixin.injection.Inject;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
+
+@Mixin(ArrowEntity.class)
+public abstract class ArrowMixin {
+
+    @Inject(method = "init", at = @At("HEAD"))
+    public void onArrowInit(CallbackInfo ci) {
+        ArrowEntity arrowEntity = (ArrowEntity) (Object) this;
+        LivingEntity owner = (LivingEntity) arrowEntity.getOwner();
+
+        if (owner instanceof PlayerEntity player) {
+            ItemStack bow = player.getMainHandStack();
+            if (bow.getItem() instanceof BowItem) {
+                NbtCompound tag = player.data
+                tag.putBoolean("fromModdedBow", true);
+            }
+        }
+    }
+}

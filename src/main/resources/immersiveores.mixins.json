@@ -1,0 +1,23 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.blocklegend001.immersiveores.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [
+    "CanHarvestEnderium",
+    "CanHarvestVibranium",
+    "CanHarvestVulpus",
+    "EndermanMixinEnderium",
+    "ItemStackMixin",
+    "LivingEntityMixin",
+    "PiglinMixinEnderium",
+    "PiglinMixinVulpus",
+    "PlayerEntityMixin",
+    "PowderSnowBlockMixinEnderium",
+    "PowderSnowBlockMixinVibranium",
+    "PowderSnowBlockMixinVulpus"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

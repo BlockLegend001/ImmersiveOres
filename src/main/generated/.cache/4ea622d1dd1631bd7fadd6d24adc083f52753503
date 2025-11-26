@@ -1,0 +1,10 @@
+// 1.20.1	2025-11-24T10:35:07.8848142	ImmersiveOres/Block Loot Tables
+3264ebadaeae0c7d13ee8ba565169748f68f62fa data\immersiveores\loot_tables\blocks\vibranium_block.json
+b54d5717ecd09b9ccf04008bb9b9504d60b4a348 data\immersiveores\loot_tables\blocks\raw_vibranium_block.json
+837a1bf5c676fbfcae40506896063d9eab09730a data\immersiveores\loot_tables\blocks\raw_enderium_block.json
+69e1e6d9048ddb10f5ef54582918503db2ecb0db data\immersiveores\loot_tables\blocks\enderium_ore.json
+3809e37b6431dddacf186c58b9c89fe718de8f0c data\immersiveores\loot_tables\blocks\raw_vulpus_block.json
+fe0e2e7365608b8cc2fa34f7a32f49fbdb2c3fdc data\immersiveores\loot_tables\blocks\enderium_block.json
+7665e00d9c9fd7dc4f51a9202349999ffc852ead data\immersiveores\loot_tables\blocks\vulpus_block.json
+cb50f6d8042122b87ec1ac035da35306c3078864 data\immersiveores\loot_tables\blocks\vulpus_ore.json
+540d897a408c990c61a8b34f2f1721a00d5f53ff data\immersiveores\loot_tables\blocks\vibranium_ore.json

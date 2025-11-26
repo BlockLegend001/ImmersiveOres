@@ -1,0 +1,14 @@
+// 1.20.1	2025-11-24T10:35:07.8818151	ImmersiveOres/Tags for minecraft:block
+2f7cad3b15262d7dbc66fb7c0e38b9f81186e6eb data\immersiveores\tags\blocks\needs_enderium_tool.json
+a1dd048f9cf9702112d589f85c670fb19accf2a9 data\immersiveores\tags\blocks\beacon_base_blocks.json
+b5c9b6f02cd2d8f739cc1c1db893b6c3761bea36 data\c\tags\blocks\ores.json
+634fcf182fa327867215e6722559e0cd93d70e4f data\immersiveores\tags\blocks\needs_netherite_tool.json
+9aa7b144fb29278905b38684d2ff75713758dc51 data\immersiveores\tags\blocks\mineable\vibranium_paxel.json
+cd461b8d4f5dcb35d2fb717fef7a9662947eee19 data\immersiveores\tags\blocks\needs_vibranium_tool.json
+b221ec153f29e62c2cbf6a8c454ed35e266b870a data\immersiveores\tags\blocks\incorrect_for_enderium_tool.json
+b221ec153f29e62c2cbf6a8c454ed35e266b870a data\immersiveores\tags\blocks\incorrect_for_vulpus_tool.json
+2f7cad3b15262d7dbc66fb7c0e38b9f81186e6eb data\immersiveores\tags\blocks\needs_vulpus_tool.json
+a4186fe73a59cd41eebc72f7d54993f300cefc9d data\immersiveores\tags\blocks\incorrect_for_vibranium_tool.json
+bebacbe88f09bc0e56adeeee3c1ed8fe850ad439 data\immersiveores\tags\blocks\mineable\vulpus_paxel.json
+93071c810a6be466dc608c27e99ead363737468f data\minecraft\tags\blocks\mineable\pickaxe.json
+4b8f0bccedd81d318ba8312f049a8e15c4bc3cb7 data\immersiveores\tags\blocks\mineable\enderium_paxel.json
