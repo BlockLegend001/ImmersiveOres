@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "E": {
+      "item": "immersiveores:enderium_ingot"
+    },
+    "S": {
+      "item": "immersiveores:enderium_stick"
+    },
+    "W": {
+      "item": "immersiveores:enderium_block"
+    }
+  },
+  "pattern": [
+    "WEW",
+    " S ",
+    " S "
+  ],
+  "result": {
+    "item": "immersiveores:enderium_hammer"
+  },
+  "show_notification": true
+}

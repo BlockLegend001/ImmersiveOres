@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "E": {
+      "item": "immersiveores:vulpus_ingot"
+    },
+    "N": {
+      "item": "immersiveores:vibranium_boots"
+    }
+  },
+  "pattern": [
+    "   ",
+    "E E",
+    "ENE"
+  ],
+  "result": {
+    "item": "immersiveores:vulpus_boots"
+  },
+  "show_notification": true
+}

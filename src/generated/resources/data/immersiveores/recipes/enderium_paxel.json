@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "E": {
+      "item": "immersiveores:enderium_axe"
+    },
+    "S": {
+      "item": "immersiveores:enderium_stick"
+    },
+    "T": {
+      "item": "immersiveores:enderium_shovel"
+    },
+    "W": {
+      "item": "immersiveores:enderium_pickaxe"
+    }
+  },
+  "pattern": [
+    "WTE",
+    " S ",
+    " S "
+  ],
+  "result": {
+    "item": "immersiveores:enderium_paxel"
+  },
+  "show_notification": true
+}

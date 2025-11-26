@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "E": {
+      "item": "immersiveores:vibranium_ingot"
+    },
+    "S": {
+      "item": "immersiveores:vibranium_stick"
+    }
+  },
+  "pattern": [
+    " EE",
+    " S ",
+    " S "
+  ],
+  "result": {
+    "item": "immersiveores:vibranium_hoe"
+  },
+  "show_notification": true
+}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "E": {
+      "item": "immersiveores:vibranium_ingot"
+    },
+    "W": {
+      "tag": "minecraft:wool"
+    }
+  },
+  "pattern": [
+    "E E",
+    "EEE",
+    "EWE"
+  ],
+  "result": {
+    "item": "immersiveores:vibranium_horse_armor"
+  },
+  "show_notification": true
+}
