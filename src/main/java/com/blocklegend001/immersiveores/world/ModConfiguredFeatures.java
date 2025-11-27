@@ -57,7 +57,7 @@ public class ModConfiguredFeatures {
                         true, UniformIntProvider.create(4, 8),
                         UniformIntProvider.create(2, 5),
                         UniformIntProvider.create(1, 3),
-                        -80, 0, 0.075D, 1));
+                        16, 4, 3, 1));
 
         register(context, VULPUS_GEODE_KEY, Feature.GEODE,
                 new GeodeFeatureConfig(new GeodeLayerConfig(
