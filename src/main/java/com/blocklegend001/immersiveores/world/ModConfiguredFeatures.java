@@ -60,7 +60,7 @@ public class ModConfiguredFeatures {
                         true, UniformInt.of(4, 8),
                         UniformInt.of(2, 5),
                         UniformInt.of(1, 3),
-                        16, 4, 3, 1));
+                        3, 4, 0.05D, 2));
 
         register(context, VULPUS_GEODE_KEY, Feature.GEODE,
                 new GeodeConfiguration(new GeodeBlockSettings(BlockStateProvider.simple(Blocks.AIR),
@@ -75,7 +75,7 @@ public class ModConfiguredFeatures {
                         true, UniformInt.of(3, 6),
                         UniformInt.of(2, 4),
                         UniformInt.of(1, 3),
-                        0, 125, 0.075D, 1));
+                        3, 4, 0.05D, 2));
 
         register(context, ENDERIUM_GEODE_KEY, Feature.GEODE,
                 new GeodeConfiguration(new GeodeBlockSettings(BlockStateProvider.simple(Blocks.AIR),
@@ -90,7 +90,7 @@ public class ModConfiguredFeatures {
                         true, UniformInt.of(3, 6),
                         UniformInt.of(2, 5),
                         UniformInt.of(1, 3),
-                        0, 125, 0.075D, 1));
+                        3, 4, 0.05D, 2));
     }
 
     public static ResourceKey<ConfiguredFeature<?, ?>> registerKey(String name) {
