@@ -1,4 +1,4 @@
-// 1.20.1	2025-11-24T10:35:07.8818151	ImmersiveOres/Model Definitions
+// 1.20.1	2025-11-28T12:47:56.8180122	ImmersiveOres/Model Definitions
 342bf14c2747cd29fd75acd449d9abc64f0f94b2 assets\immersiveores\models\item\vibranium_helmet_gold_trim.json
 923beae99c905fcc11db225018c11a1d78493205 assets\immersiveores\models\item\vibranium_leggings_emerald_trim.json
 55f8730bd64443c349011a6bfb92682633afa617 assets\immersiveores\models\item\vibranium_chestplate_copper_trim.json
@@ -190,8 +190,8 @@ e611fccb9c5f2a723d30e23dc475234e5ac275ae assets\immersiveores\models\item\vulpus
 3f56ef8adb486a07fdd1d72979ee263f4b2f5dc2 assets\immersiveores\models\item\vulpus_helmet_lapis_trim.json
 b01a80bf47ff706b41f10902d854759edb7ea381 assets\immersiveores\models\item\vibranium_chestplate_netherite_trim.json
 e5d28b8b76ed33fc7e8f6a0ddc316f84ccc3205f assets\immersiveores\models\item\vibranium_chestplate_gold_trim.json
-760797fd7ee7d8afc193008ad9ba3e6cb6383e27 assets\immersiveores\blockstates\raw_enderium_block.json
 0caaf45e9d16305019d8f8148cbce19457f7bb9e assets\immersiveores\blockstates\raw_vibranium_block.json
+760797fd7ee7d8afc193008ad9ba3e6cb6383e27 assets\immersiveores\blockstates\raw_enderium_block.json
 f224bd29b7ead3cd786284cb1f6e2b14c7cab89c assets\immersiveores\models\item\raw_vulpus.json
 03afa920bf93f4bdaa352d99a3427e596e3e24e1 assets\immersiveores\models\item\enderium_helmet_redstone_trim.json
 7aac5efa48c525330240f9a51cf6852891925871 assets\immersiveores\models\item\vibranium_helmet_copper_trim.json

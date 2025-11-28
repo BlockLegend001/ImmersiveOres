@@ -1,4 +1,4 @@
-// 1.20.1	2025-11-24T10:35:07.8858148	ImmersiveOres/Advancements
+// 1.20.1	2025-11-28T12:47:56.8210143	ImmersiveOres/Advancements
 2127da0ab0863dcf6092213ed507571a95ad89f3 data\immersiveores\advancements\vulpusarmor.json
 82afc1d79ee9c96daad2dc7af7f9e2853c2998b7 data\immersiveores\advancements\vulpus.json
 302a1d6168bd1ba95dc414b0909c293434314889 data\immersiveores\advancements\vulpusspecialtools.json
@@ -6,8 +6,8 @@
 89199ba38dd4c2d5eb1f36fb42d669f83cbdc8b2 data\immersiveores\advancements\enderiumarmor.json
 3eb2647a73ad463ed444b405c696b4fd7f90da14 data\immersiveores\advancements\enderiumtools.json
 dee147b9bfe18bd830ac9e1480c5c1446bc2e662 data\immersiveores\advancements\vibraniumspecialtools.json
-7b148dba282124f367e0732fc1936869bd2b704b data\immersiveores\advancements\vibraniumtools.json
 5083fee874814bb5bc8c3b384a92f19855996ec7 data\immersiveores\advancements\enderium.json
+7b148dba282124f367e0732fc1936869bd2b704b data\immersiveores\advancements\vibraniumtools.json
 8fc921418faf944a74617e0209596933f1eef6b4 data\immersiveores\advancements\vibraniumarmor.json
 8d67449b8e059c4462496eecb4dd497bae29bac0 data\immersiveores\advancements\vulpustools.json
 26410962ff518ab5914580dbe0bba647ca34f50a data\immersiveores\advancements\root.json
