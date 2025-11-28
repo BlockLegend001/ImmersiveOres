@@ -58,7 +58,7 @@
         "min_inclusive": 2
       }
     },
-    "invalid_blocks_threshold": 1,
+    "invalid_blocks_threshold": 2,
     "layers": {
       "filling": 2.1,
       "inner_layer": 2.0,
@@ -66,8 +66,8 @@
       "outer_layer": 3.0
     },
     "max_gen_offset": 4,
-    "min_gen_offset": 16,
-    "noise_multiplier": 3.0,
+    "min_gen_offset": 3,
+    "noise_multiplier": 0.05,
     "outer_wall_distance": {
       "type": "minecraft:uniform",
       "value": {
