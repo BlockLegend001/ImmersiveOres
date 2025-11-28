@@ -1,3 +1,1 @@
-- Refactored the version 1.20.1
-- Added back the support to the version 1.20.1
-- Added all the feature of the newer version
+- Fixed geode generation causing “setBlock in a far chunk” errors

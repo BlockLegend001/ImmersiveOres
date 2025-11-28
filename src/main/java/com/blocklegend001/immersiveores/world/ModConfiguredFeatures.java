@@ -60,7 +60,7 @@ public class ModConfiguredFeatures {
                         true, UniformInt.of(4, 8),
                         UniformInt.of(2, 5),
                         UniformInt.of(1, 3),
-                        -80, 0, 0.075D, 1));
+                        16, 4, 3, 1));
 
         register(context, VULPUS_GEODE_KEY, Feature.GEODE,
                 new GeodeConfiguration(new GeodeBlockSettings(BlockStateProvider.simple(Blocks.AIR),
