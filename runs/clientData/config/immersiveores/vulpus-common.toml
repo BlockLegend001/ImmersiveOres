@@ -7,9 +7,9 @@
 	# Default: 65
 	# Range: > 0
 	enchantmentValueVulpusArmor = 85
-	#Knockback resistance for Vulpus Armor | Default Value = 2
-	# Default: 2
-	# Range: > 0
+	#Knockback resistance for Vulpus Armor | Default Value = 0.3
+	# Default: 0.3
+	# Range: 0.0 ~ 1.7976931348623157E308
 	knockbackResistanceValueVulpusArmor = 2
 	#Protection value for Vulpus Boots | Default Value = 9
 	# Default: 9

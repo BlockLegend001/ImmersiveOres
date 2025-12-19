@@ -7,9 +7,9 @@
 	# Default: 65
 	# Range: > 0
 	enchantmentValueEnderiumArmor = 85
-	#Knockback resistance for Enderium Armor | Default Value = 3
-	# Default: 3
-	# Range: > 0
+	#Knockback resistance for Enderium Armor | Default Value = 0.4
+	# Default: 0.4
+	# Range: 0.0 ~ 1.7976931348623157E308
 	knockbackResistanceValueEnderiumArmor = 3
 	#Protection value for Enderium Boots | Default Value = 12
 	# Default: 12
