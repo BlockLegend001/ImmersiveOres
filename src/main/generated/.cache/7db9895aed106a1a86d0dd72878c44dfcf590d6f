@@ -1,4 +1,4 @@
-// 1.20.1	2025-11-28T12:47:56.8210143	ImmersiveOres/Tags for minecraft:item
+// 1.20.1	2025-11-28T18:54:49.547666	ImmersiveOres/Tags for minecraft:item
 642ec0e56c82585a889d75dafcecea98d5e7d8a8 data\immersiveores\tags\items\vulpus_sword.json
 8118d4bea317aa5d8620d89f9840ed3aa26f2057 data\minecraft\tags\items\shovels.json
 67fb6bdd6f7bec08d05e80964cc57b960263e4bb data\minecraft\tags\items\swords.json
@@ -6,8 +6,8 @@
 444c12e184ca904c69ea814ce5eea55568267302 data\minecraft\tags\items\hoes.json
 d06c592d2ed7c89ed48b6f1d5e7b8dc090930230 data\immersiveores\tags\items\enderium_excavator.json
 8ba0bebfaa20d717822a68fa4fc4dc581f7f0877 data\c\tags\items\nuggets.json
-1a9e7a7b4aaf8e16a9df7bc2aff7377dfad8e37f data\minecraft\tags\items\axes.json
 503fd65096b9706612820226843f531747ca59b6 data\immersiveores\tags\items\vibranium_paxel.json
+1a9e7a7b4aaf8e16a9df7bc2aff7377dfad8e37f data\minecraft\tags\items\axes.json
 ac540e990b9b4e8dcc13a82741b174b7e0b3a861 data\immersiveores\tags\items\enderium_pickaxe.json
 f50e3b50cab0305355496a9b20bb6250a9f79e2f data\immersiveores\tags\items\enderium_sword.json
 2f593fb6ebc28b1a116f0e96efde657c172ad331 data\immersiveores\tags\items\vulpus_shovel.json
@@ -22,13 +22,13 @@ bc71726b7dfc5287defc3144ca3c35bf49bb031e data\immersiveores\tags\items\vulpus_ex
 1df9ffa34456b0869db01432665cae93850f1bea data\immersiveores\tags\items\vibranium_hammer.json
 99a1511575aae69210381522ebb0552d2770b4f2 data\immersiveores\tags\items\enderium_bow.json
 597f290a01f3efa0c91cb208e932ce51e811dd39 data\immersiveores\tags\items\enderium_hammer.json
-6c78a9738e0a14d38585a66571fbe9b90de50937 data\immersiveores\tags\items\vulpus_hoe.json
 4bd6da8effcfa1c1bec3be90341dcd7a35905501 data\immersiveores\tags\items\vulpus_axe.json
+6c78a9738e0a14d38585a66571fbe9b90de50937 data\immersiveores\tags\items\vulpus_hoe.json
 db38f3f607dab9c1cfffdff852db90922276406b data\minecraft\tags\items\breaks_decorated_pots.json
 2dc222f54a8345194699f460d3adeb46ebb46cf2 data\immersiveores\tags\items\tools_netherite.json
 e45814c705575fa236bb1062a2d3c3068541c822 data\immersiveores\tags\items\vibranium_sword.json
-c5030f64a56664c0c319edcbe272281382a2e79c data\c\tags\items\raw_ores.json
 6a1b0b004e9389d97092673bba1b2a2f54aedfe7 data\immersiveores\tags\items\enderium_paxel.json
+c5030f64a56664c0c319edcbe272281382a2e79c data\c\tags\items\raw_ores.json
 a24b98d5a46195533c0b2d0e46fb253879c0d7ec data\immersiveores\tags\items\vibranium_armor.json
 0507c9aff70d282dff112ad70111bd7edf3cccbc data\immersiveores\tags\items\vibranium_pickaxe.json
 8152859511f2f878843afd635e2cd6bbe2eb8fbb data\immersiveores\tags\items\enderium_shovel.json
@@ -38,7 +38,7 @@ a24b98d5a46195533c0b2d0e46fb253879c0d7ec data\immersiveores\tags\items\vibranium
 ece73e13bdeacebd208d2e6f5ea00bbfc0c5d0dc data\immersiveores\tags\items\vulpus_pickaxe.json
 1c5fdff91445278ab4913fc8b68bd5ea2483008e data\immersiveores\tags\items\vibranium_hoe.json
 97b003c8189fe5ccd9c626ee8c2340640b7f89ed data\c\tags\items\bows.json
-ff5e3fdad2f895b46b151ac92facf07bafc52af8 data\minecraft\tags\items\trimmable_armor.json
 c4f85ebee54cb76dfe1335f2a3cfcba3804b00c0 data\immersiveores\tags\items\enderium_armor.json
+ff5e3fdad2f895b46b151ac92facf07bafc52af8 data\minecraft\tags\items\trimmable_armor.json
 bafade6dcc7f0082474996235e603a5c6e07175f data\minecraft\tags\items\cluster_max_harvestables.json
 0af7442a400ab0726823b4ffd6838369e278c8ac data\immersiveores\tags\items\vulpus_bow.json
