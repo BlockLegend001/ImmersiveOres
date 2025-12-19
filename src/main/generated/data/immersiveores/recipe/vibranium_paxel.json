@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "E": "immersiveores:vibranium_axe",
+    "S": "immersiveores:vibranium_stick",
+    "T": "immersiveores:vibranium_shovel",
+    "W": "immersiveores:vibranium_pickaxe"
+  },
+  "pattern": [
+    "WTE",
+    " S ",
+    " S "
+  ],
+  "result": {
+    "count": 1,
+    "id": "immersiveores:vibranium_paxel"
+  }
+}
