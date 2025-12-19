@@ -1,4 +1,4 @@
-// 1.21	2025-11-28T12:46:39.2321998	ImmersiveOres/Tags for minecraft:item
+// 1.21	2025-11-28T18:53:58.242397	ImmersiveOres/Tags for minecraft:item
 358b460696e007ecac2aad8b5c671670b5da044f data\immersiveores\tags\item\vulpus_axe.json
 03f65d7df76f08c3ac5641beedbd6f8de9a0f5c0 data\immersiveores\tags\item\vibranium_bow.json
 9dd29c6236b43b13ec3230e02ccc41d77733af22 data\c\tags\item\tools\ranged_weapon.json
@@ -26,8 +26,8 @@ ab499936339b39053fe46cdacc9973bfc7509a0f data\immersiveores\tags\item\vibranium_
 6f6ef5d198b30bb6e688aec463b46e3b047eec57 data\immersiveores\tags\item\enderium_armor.json
 544dc51e47b4703b0cfc90bcda10cd9ba9950d6c data\immersiveores\tags\item\vulpus_shovel.json
 a560531bd0871518600f84c5701e74c65c776af5 data\immersiveores\tags\item\vulpus_paxel.json
-ddb8820d7592052e23298c40d0dc1cfa846478e2 data\minecraft\tags\item\pickaxes.json
 d4ccf21f0b8d61a896e6e635b9756c509d7da517 data\immersiveores\tags\item\vulpus_bow.json
+ddb8820d7592052e23298c40d0dc1cfa846478e2 data\minecraft\tags\item\pickaxes.json
 1d1d0bcb7c7e861b2deb6535e3e858f231b7b1b6 data\immersiveores\tags\item\vulpus_hoe.json
 ba9d073fbcfdd7bc960e55403bc299992ae8fe56 data\immersiveores\tags\item\vibranium_paxel.json
 5142cae31cc004088ee61727009e82abddb121e8 data\immersiveores\tags\item\vibranium_axe.json

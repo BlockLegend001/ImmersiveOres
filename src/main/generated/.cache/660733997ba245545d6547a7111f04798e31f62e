@@ -1,4 +1,4 @@
-// 1.21	2025-11-28T12:46:39.2331996	ImmersiveOres/Recipes
+// 1.21	2025-11-28T18:53:58.2433971	ImmersiveOres/Recipes
 1308b19abb892e5196b320e31be76de873e2eb2a data\immersiveores\recipe\enderium_nugget.json
 2439d2524399f9a8c003443991386941a6a766a6 data\immersiveores\recipe\vibranium_boots.json
 fd4861ee0b4fcc498fdd0f7e468f20021765ab63 data\immersiveores\advancement\recipes\combat\enderium_horse_armor.json
@@ -75,8 +75,8 @@ e0b5f7dc0e0c7e2396160c2b6ab26313afeb2c48 data\immersiveores\recipe\vibranium_ing
 8e5df8693ef856e54a25d3c3442e7b9ae81a9261 data\immersiveores\advancement\recipes\misc\vulpus_ingot.json
 4f8139404e3cdb3fb0a5297110dbf9fe10122177 data\immersiveores\recipe\vibranium_pickaxe.json
 5b8b2429f968e912d9dc71be8726ae66c413187c data\immersiveores\recipe\vibranium_bow.json
-9cfc36829fa0723f22d28d635f6c592df44f1d7f data\immersiveores\recipe\vulpus_ingot_from_smelting_raw_vulpus.json
 892a1f07e74fec132a7a7657a7e8c71cc82fb43f data\immersiveores\advancement\recipes\misc\vulpus_ingot_from_smelting_raw_vulpus.json
+9cfc36829fa0723f22d28d635f6c592df44f1d7f data\immersiveores\recipe\vulpus_ingot_from_smelting_raw_vulpus.json
 072d11e248269e7539f34addd459fe5485c7f9f6 data\immersiveores\recipe\vulpus_ingot.json
 581be4d0a635fb56d9333e027998c2a09b233f29 data\immersiveores\advancement\recipes\tools\enderium_pickaxe.json
 7e98340d6c177bcbd72551566408b9e36fa1f8fd data\immersiveores\advancement\recipes\tools\vibranium_excavator.json
