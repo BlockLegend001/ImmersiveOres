@@ -1,0 +1,18 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.blocklegend001.immersiveores.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "refmap": "immersiveores.refmap.json",
+  "mixins": [
+    "EndermanMixin",
+    "LevelRendererToolMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "client": [
+    "EndermanMixin",
+    "LevelRendererToolMixin"
+  ]
+}
