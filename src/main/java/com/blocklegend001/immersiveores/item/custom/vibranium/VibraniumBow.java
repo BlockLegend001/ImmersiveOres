@@ -30,7 +30,8 @@ import java.util.List;
 public class VibraniumBow extends BowItem {
     private static Settings createSettings() {
         return new Settings()
-                .fireproof();
+                .fireproof()
+                .maxDamage(VibraniumConfig.durabilityVibranium);
     }
 
     private final BowTier tier;
@@ -126,7 +127,8 @@ public class VibraniumBow extends BowItem {
                 }
                 player.incrementStat(Stats.USED.getOrCreateStat(this));
                 if (!player.getAbilities().creativeMode) {
-                    stack.decrement(1);
+                    stack.damage(1, player,
+                            p -> p.sendToolBreakStatus(player.getActiveHand()));
                 }
             }
         }

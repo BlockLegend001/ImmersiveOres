@@ -1,1 +1,1 @@
-- Fixed geode generation causing “setBlock in a far chunk” errors
+- Fixed a bug that let all three bows disappear from the inventory upon firing the first shot
