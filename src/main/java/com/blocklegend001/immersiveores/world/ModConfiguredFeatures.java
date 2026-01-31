@@ -57,7 +57,7 @@ public class ModConfiguredFeatures {
                         true, UniformIntProvider.create(4, 8),
                         UniformIntProvider.create(2, 5),
                         UniformIntProvider.create(1, 3),
-                        16, 4, 3, 1));
+                        3, 4, 0.05D, 2));
 
         register(context, VULPUS_GEODE_KEY, Feature.GEODE,
                 new GeodeFeatureConfig(new GeodeLayerConfig(
@@ -74,7 +74,7 @@ public class ModConfiguredFeatures {
                         true, UniformIntProvider.create(3, 6),
                         UniformIntProvider.create(2, 4),
                         UniformIntProvider.create(1, 3),
-                        0, 125, 0.075D, 1));
+                        3, 4, 0.05D, 2));
 
         register(context, ENDERIUM_GEODE_KEY, Feature.GEODE,
                 new GeodeFeatureConfig(new GeodeLayerConfig(
@@ -91,7 +91,7 @@ public class ModConfiguredFeatures {
                         true, UniformIntProvider.create(3, 6),
                         UniformIntProvider.create(2, 5),
                         UniformIntProvider.create(1, 3),
-                        0, 125, 0.075D, 1));
+                        3, 4, 0.05D, 2));
     }
 
 

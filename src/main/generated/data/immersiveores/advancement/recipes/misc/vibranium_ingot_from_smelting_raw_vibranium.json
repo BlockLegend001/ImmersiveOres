@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:vibranium_ingot_from_smelting_raw_vibranium"
+        "recipe": "immersiveores:vibranium_ingot_from_smelting_raw_vibranium"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -26,7 +26,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:vibranium_ingot_from_smelting_raw_vibranium"
+      "immersiveores:vibranium_ingot_from_smelting_raw_vibranium"
     ]
   }
 }

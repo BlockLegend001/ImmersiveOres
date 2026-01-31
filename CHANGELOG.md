@@ -1,1 +1,1 @@
-- Fixed geode generation causing “setBlock in a far chunk” errors
+- Fixed a bug that cause the game to crash

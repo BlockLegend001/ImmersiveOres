@@ -1,4 +1,4 @@
-// 1.21.1	2025-11-28T12:42:44.9091687	ImmersiveOres/Model Definitions
+// 1.21.1	2026-01-31T19:35:21.0539788	ImmersiveOres/Model Definitions
 b18d5a87b02ad85a93254f6b959a6c9e9add6491 assets\immersiveores\models\item\vulpus_chestplate.json
 5fe87e473129033a08e6fee84f824d3406f7ae21 assets\immersiveores\models\item\enderium_leggings.json
 cd74d9ca49f2184fedaf446cc8caafed53692e1d assets\immersiveores\models\block\vulpus_ore.json
@@ -185,8 +185,8 @@ d5729357986307907cb3b6b372e3e10fe9fb7d6e assets\immersiveores\models\item\enderi
 a7347fc8b1b8a6de07b940537253175c4256d172 assets\immersiveores\models\item\vibranium_helmet.json
 fd8d645701c0d11f847cda340707551b24163b79 assets\immersiveores\models\item\enderium_helmet_lapis_trim.json
 3408f2f1070038848449ca9678f7611db30eaa04 assets\immersiveores\models\item\enderium_ore.json
-839710fb4d92c8d4f479988eb5cd7d97dd71abd8 assets\immersiveores\models\item\enderium_excavator.json
 b9cec4b73ef314ddb72348eb0ff4aeb86aec62c1 assets\immersiveores\models\item\enderium_leggings_redstone_trim.json
+839710fb4d92c8d4f479988eb5cd7d97dd71abd8 assets\immersiveores\models\item\enderium_excavator.json
 2fbb55db2a23f83b19919c8414ced8e34fb9fcab assets\immersiveores\models\item\enderium_helmet_gold_trim.json
 06d2cc460fa3a4ac2a5c55280c861b5ec0ccb979 assets\immersiveores\models\item\enderium_ingot.json
 ee4fda4cbf7b54564f07c225ec4b38cc137420e7 assets\immersiveores\models\item\vibranium_chestplate_lapis_trim.json

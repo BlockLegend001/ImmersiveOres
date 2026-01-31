@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:vulpus_ingot_from_smelting_vulpus_ore"
+        "recipe": "immersiveores:vulpus_ingot_from_smelting_vulpus_ore"
       },
       "trigger": "minecraft:recipe_unlocked"
     },
@@ -26,7 +26,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:vulpus_ingot_from_smelting_vulpus_ore"
+      "immersiveores:vulpus_ingot_from_smelting_vulpus_ore"
     ]
   }
 }

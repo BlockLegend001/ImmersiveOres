@@ -1,4 +1,4 @@
-// 1.21.1	2025-11-28T12:42:44.9173624	ImmersiveOres/Tags for minecraft:item
+// 1.21.1	2026-01-31T19:35:21.0589815	ImmersiveOres/Tags for minecraft:item
 1d1d0bcb7c7e861b2deb6535e3e858f231b7b1b6 data\immersiveores\tags\item\vulpus_hoe.json
 a102816f072b82dd5e9a67c810e1ebfd58720e16 data\immersiveores\tags\item\tools_netherite.json
 d4ccf21f0b8d61a896e6e635b9756c509d7da517 data\immersiveores\tags\item\vulpus_bow.json
@@ -36,8 +36,8 @@ a3c77fec97318b0d4d11c0e197286800072c728d data\minecraft\tags\item\shovels.json
 4be95455468b79bd610153c4fda3eedf7405f2d4 data\minecraft\tags\item\cluster_max_harvestables.json
 84d40d1c79905cad9bd2bacaaca1d5c3bb97bd74 data\c\tags\item\ingots.json
 b4efdcba7e4915e0944d78430376e2aaed87f42b data\immersiveores\tags\item\enderium_excavator.json
-f91f95d9121b79f8fddbc103a925459cb3e6ee35 data\immersiveores\tags\item\enderium_sword.json
 703da89a08878d1c86907889cb8509bfa152df66 data\immersiveores\tags\item\enderium_axe.json
+f91f95d9121b79f8fddbc103a925459cb3e6ee35 data\immersiveores\tags\item\enderium_sword.json
 ee9b19416bf9206c12e6d80639295b2559bb7fb6 data\minecraft\tags\item\trimmable_armor.json
 502abde21d06c5ab664c29fc04200e28594e1d8f data\c\tags\item\nuggets.json
 544dc51e47b4703b0cfc90bcda10cd9ba9950d6c data\immersiveores\tags\item\vulpus_shovel.json

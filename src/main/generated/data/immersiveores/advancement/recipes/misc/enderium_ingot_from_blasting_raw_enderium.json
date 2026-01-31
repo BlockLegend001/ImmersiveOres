@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:enderium_ingot_from_blasting_raw_enderium"
+        "recipe": "immersiveores:enderium_ingot_from_blasting_raw_enderium"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -26,7 +26,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:enderium_ingot_from_blasting_raw_enderium"
+      "immersiveores:enderium_ingot_from_blasting_raw_enderium"
     ]
   }
 }

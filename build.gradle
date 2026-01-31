@@ -1,5 +1,5 @@
 plugins {
-    id 'fabric-loom' version '1.9-SNAPSHOT'
+    id 'fabric-loom' version '1.15-SNAPSHOT'
     id 'maven-publish'
     id "me.modmuss50.mod-publish-plugin" version "0.7.4"
 }
@@ -63,7 +63,7 @@ dependencies {
     modImplementation "io.github.ladysnake:PlayerAbilityLib:${pal_version}"
     include "io.github.ladysnake:PlayerAbilityLib:${pal_version}"
 
-    modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
+    modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
 }
 
 processResources {
