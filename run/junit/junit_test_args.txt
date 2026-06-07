@@ -1,0 +1,6 @@
+--version
+26.1.2.48-beta
+--assetIndex
+asset-index
+--assetsDir
+C:\Users\rosar\.gradle\caches\minecraft\assets
