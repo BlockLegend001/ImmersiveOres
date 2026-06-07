@@ -1,0 +1,1 @@
+- Fixed Paxel that doesn't give snowball when breaking snow block

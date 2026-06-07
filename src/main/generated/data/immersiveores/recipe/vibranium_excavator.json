@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "E": "immersiveores:vibranium_ingot",
+    "S": "immersiveores:vibranium_stick",
+    "W": "immersiveores:vibranium_block"
+  },
+  "pattern": [
+    " E ",
+    "WSW",
+    " S "
+  ],
+  "result": {
+    "id": "immersiveores:vibranium_excavator"
+  }
+}
