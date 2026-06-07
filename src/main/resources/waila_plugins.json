@@ -1,0 +1,6 @@
+{
+  "immersiveores:wthit": {
+    "initializer": "com.blocklegend001.immersiveores.imp.client.compat.WthitCompatibility",
+    "side": "client"
+  }
+}

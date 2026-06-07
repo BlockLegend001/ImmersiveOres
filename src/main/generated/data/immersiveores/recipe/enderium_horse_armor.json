@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "E": "immersiveores:enderium_ingot",
+    "W": "immersiveores:vulpus_horse_armor"
+  },
+  "pattern": [
+    "E E",
+    "EEE",
+    "EWE"
+  ],
+  "result": {
+    "id": "immersiveores:enderium_horse_armor"
+  }
+}
