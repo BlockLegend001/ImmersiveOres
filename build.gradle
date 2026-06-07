@@ -1,0 +1,125 @@
+plugins {
+    id 'net.fabricmc.fabric-loom' version "${loom_version}"
+    id 'maven-publish'
+    id "me.modmuss50.mod-publish-plugin" version "1.1.0"
+}
+
+version = project.mod_version
+group = project.maven_group
+
+base {
+    archivesName = project.archives_base_name
+}
+
+repositories {
+    maven {
+        url "https://maven.shedaniel.me"
+    }
+    maven {
+        url "https://maven2.bai.lol"
+        content {
+            includeGroup "lol.bai"
+            includeGroup "mcp.mobius.waila"
+        }
+    }
+    maven {
+        name = 'Ladysnake Mods'
+        url = 'https://maven.ladysnake.org/releases'
+        content {
+            includeGroup 'io.github.ladysnake'
+            includeGroupByRegex 'org\\.ladysnake.*'
+        }
+    }
+}
+
+fabricApi {
+    configureDataGeneration {
+        client = true
+    }
+}
+
+dependencies {
+    minecraft "com.mojang:minecraft:${project.minecraft_version}"
+    implementation "net.fabricmc:fabric-loader:${project.loader_version}"
+    implementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
+
+    compileOnly "mcp.mobius.waila:wthit-api:fabric-${wthitVersion}"
+    runtimeOnly "mcp.mobius.waila:wthit:fabric-${wthitVersion}"
+    runtimeOnly "lol.bai:badpackets:fabric-${badpacketsVersion}"
+
+    implementation "io.github.ladysnake:PlayerAbilityLib:${pal_version}"
+    include "io.github.ladysnake:PlayerAbilityLib:${pal_version}"
+}
+
+processResources {
+    def version = project.version
+    inputs.property "version", version
+
+    filesMatching("fabric.mod.json") {
+        expand "version": version
+    }
+}
+
+tasks.withType(JavaCompile).configureEach {
+    it.options.release = 25
+}
+
+java {
+    withSourcesJar()
+
+    sourceCompatibility = JavaVersion.VERSION_25
+    targetCompatibility = JavaVersion.VERSION_25
+}
+
+jar {
+    def projectName = project.name
+    inputs.property "projectName", projectName
+
+    from("LICENSE") {
+        rename { "${it}_$projectName"}
+    }
+}
+
+publishing {
+    publications {
+        create("mavenJava", MavenPublication) {
+            from components.java
+        }
+    }
+
+    repositories {
+    }
+}
+
+publishMods {
+    displayName = "$project.archives_base_name-$mod_version-Fabric"
+    version = mod_version
+    type = STABLE
+
+    def changelogFile = file('CHANGELOG.md')
+    changelog = changelogFile.exists() ? changelogFile.text : 'CHANGELOG.md not found'
+
+    modLoaders.add('fabric')
+    file = jar.archiveFile
+
+    curseforge {
+        projectId = '876772'
+        accessToken = providers.environmentVariable('CURSEFORGE_TOKEN')
+        minecraftVersions.add(minecraft_version)
+        clientRequired = true
+        serverRequired = true
+        requires("fabric-api")
+    }
+    modrinth {
+        projectId = 'F9Vuwq3S'
+        accessToken = providers.environmentVariable('MODRINTH_TOKEN')
+        minecraftVersions.add(minecraft_version)
+        requires("fabric-api")
+    }
+}
+
+tasks.publishMods.group = "other"
+tasks.register("publishAll") {
+    group = "publishing"
+    dependsOn(tasks.publishMods)
+}
