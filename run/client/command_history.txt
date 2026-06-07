@@ -1,0 +1,18 @@
+/gamemode survival
+/give Dev minecraft:powder_snow_bucket
+/give Dev immersiveores:enderium_helmet
+/summon minecraft:piglin
+/summon minecraft:enderman
+/gamemode creative
+/gamemode survival
+/gamemode creative
+/gamemode survival
+/gamemode creative
+/gamemode survival
+/summon minecraft:piglin
+/summon minecraft:enderman
+/give Dev immersiveores:enderium_axe
+/summon minecraft:enderman
+/gamemode survival
+/give Dev minecraft:snow_block
+/give Dev minecraft:snow_block 64
