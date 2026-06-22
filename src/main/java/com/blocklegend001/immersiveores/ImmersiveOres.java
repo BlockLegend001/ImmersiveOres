@@ -6,12 +6,8 @@ import com.blocklegend001.immersiveores.config.VibraniumConfig;
 import com.blocklegend001.immersiveores.config.VulpusConfig;
 import com.blocklegend001.immersiveores.item.ModItemGroups;
 import com.blocklegend001.immersiveores.item.ModItems;
-import com.blocklegend001.immersiveores.util.tools.excavator.ModEventsEnderiumExcavator;
-import com.blocklegend001.immersiveores.util.tools.excavator.ModEventsVibraniumExcavator;
-import com.blocklegend001.immersiveores.util.tools.excavator.ModEventsVulpusExcavator;
-import com.blocklegend001.immersiveores.util.tools.hammer.ModEventsEnderiumHammer;
-import com.blocklegend001.immersiveores.util.tools.hammer.ModEventsVibraniumHammer;
-import com.blocklegend001.immersiveores.util.tools.hammer.ModEventsVulpusHammer;
+import com.blocklegend001.immersiveores.util.tools.excavator.ModEventsExcavator;
+import com.blocklegend001.immersiveores.util.tools.hammer.ModEventsHammer;
 import com.blocklegend001.immersiveores.world.gen.ModWorldGeneration;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents;
@@ -31,11 +27,7 @@ public class ImmersiveOres implements ModInitializer {
         ModItems.registerModItems();
         ModBlocks.registerModels();
         ModWorldGeneration.generateModWorldGen();
-        PlayerBlockBreakEvents.BEFORE.register(new ModEventsVibraniumExcavator());
-        PlayerBlockBreakEvents.BEFORE.register(new ModEventsVulpusExcavator());
-        PlayerBlockBreakEvents.BEFORE.register(new ModEventsEnderiumExcavator());
-        PlayerBlockBreakEvents.BEFORE.register(new ModEventsVibraniumHammer());
-        PlayerBlockBreakEvents.BEFORE.register(new ModEventsVulpusHammer());
-        PlayerBlockBreakEvents.BEFORE.register(new ModEventsEnderiumHammer());
+        PlayerBlockBreakEvents.BEFORE.register(new ModEventsExcavator());
+        PlayerBlockBreakEvents.BEFORE.register(new ModEventsHammer());
     }
 }
