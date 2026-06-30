@@ -1,1 +1,2 @@
-- Fixed a bug that let all three bows disappear from the inventory upon firing the first shot
+- Added KeyBind to Enable/Disable the Outline
+- Now when you craft the Armors the Trim will be transferred
