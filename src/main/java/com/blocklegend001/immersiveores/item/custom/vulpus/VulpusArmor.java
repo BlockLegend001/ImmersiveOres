@@ -13,6 +13,7 @@ import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.*;
 import net.minecraft.item.tooltip.TooltipType;
+import net.minecraft.item.trim.ArmorTrim;
 import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;
@@ -106,6 +107,11 @@ public class VulpusArmor extends ArmorItem {
                 var customName = ingredient.get(DataComponentTypes.CUSTOM_NAME);
                 if (customName != null) {
                     stack.set(DataComponentTypes.CUSTOM_NAME, customName);
+                }
+
+                ArmorTrim trim = ingredient.get(DataComponentTypes.TRIM);
+                if (trim != null) {
+                    stack.set(DataComponentTypes.TRIM, trim);
                 }
 
                 break;

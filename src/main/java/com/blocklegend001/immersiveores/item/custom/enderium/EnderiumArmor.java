@@ -12,12 +12,14 @@ import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.*;
 import net.minecraft.item.tooltip.TooltipType;
+import net.minecraft.item.trim.ArmorTrim;
 import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;
 import net.minecraft.world.World;
 
 import java.util.List;
+import java.util.Optional;
 
 public class EnderiumArmor extends ArmorItem {
     private static Settings createSettings(boolean unbreakable, int durability) {
@@ -108,6 +110,11 @@ public class EnderiumArmor extends ArmorItem {
                 var customName = ingredient.get(DataComponentTypes.CUSTOM_NAME);
                 if (customName != null) {
                     stack.set(DataComponentTypes.CUSTOM_NAME, customName);
+                }
+
+                ArmorTrim trim = ingredient.get(DataComponentTypes.TRIM);
+                if (trim != null) {
+                    stack.set(DataComponentTypes.TRIM, trim);
                 }
 
                 break;
