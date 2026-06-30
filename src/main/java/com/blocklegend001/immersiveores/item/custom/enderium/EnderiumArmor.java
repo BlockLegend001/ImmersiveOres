@@ -13,6 +13,7 @@ import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.*;
+import net.minecraft.item.trim.ArmorTrim;
 import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;
 import net.minecraft.world.World;
@@ -20,6 +21,7 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 
 public class EnderiumArmor extends ArmorItem {
     private static Settings createSettings() {
@@ -103,6 +105,9 @@ public class EnderiumArmor extends ArmorItem {
                 if (ingredient.hasCustomName()) {
                     stack.setCustomName(ingredient.getName());
                 }
+
+                Optional<ArmorTrim> trim = ArmorTrim.getTrim(world.getRegistryManager(), ingredient);
+                trim.ifPresent(t -> ArmorTrim.apply(world.getRegistryManager(), stack, t));
 
                 break;
             }
