@@ -13,6 +13,7 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.*;
 import net.minecraft.item.equipment.ArmorMaterial;
 import net.minecraft.item.equipment.EquipmentType;
+import net.minecraft.item.equipment.trim.ArmorTrim;
 import net.minecraft.item.tooltip.TooltipType;
 import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.text.Text;
@@ -105,6 +106,11 @@ public class EnderiumArmor extends ArmorItem {
                 var customName = ingredient.get(DataComponentTypes.CUSTOM_NAME);
                 if (customName != null) {
                     stack.set(DataComponentTypes.CUSTOM_NAME, customName);
+                }
+
+                ArmorTrim trim = ingredient.get(DataComponentTypes.TRIM);
+                if (trim != null) {
+                    stack.set(DataComponentTypes.TRIM, trim);
                 }
 
                 break;
