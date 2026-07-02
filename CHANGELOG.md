@@ -1,1 +1,2 @@
-- Fixed a bug that cause the game to crash
+- Added KeyBind to Enable/Disable the Outline
+- Now when you craft the Armors the Trim will be transferred
