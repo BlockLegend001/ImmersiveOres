@@ -20,6 +20,7 @@ import net.minecraft.world.item.component.TooltipDisplay;
 import net.minecraft.world.item.equipment.ArmorMaterial;
 import net.minecraft.world.item.equipment.ArmorType;
 import net.minecraft.world.item.equipment.Equippable;
+import net.minecraft.world.item.equipment.trim.ArmorTrim;
 import org.jspecify.annotations.Nullable;
 
 import java.util.function.Consumer;
@@ -114,6 +115,11 @@ public class EnderiumArmor extends Item {
                 var customName = ingredient.get(DataComponents.CUSTOM_NAME);
                 if (customName != null) {
                     stack.set(DataComponents.CUSTOM_NAME, customName);
+                }
+
+                ArmorTrim trim = ingredient.get(DataComponents.TRIM);
+                if (trim != null) {
+                    stack.set(DataComponents.TRIM, trim);
                 }
 
                 break;
