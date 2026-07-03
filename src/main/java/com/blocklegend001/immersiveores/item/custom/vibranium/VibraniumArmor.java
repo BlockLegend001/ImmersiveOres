@@ -16,6 +16,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.item.equipment.ArmorMaterial;
 import net.minecraft.item.equipment.EquipmentType;
+import net.minecraft.item.equipment.trim.ArmorTrim;
 import net.minecraft.item.tooltip.TooltipType;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.text.Text;
@@ -92,6 +93,11 @@ public class VibraniumArmor extends Item {
                 var customName = ingredient.get(DataComponentTypes.CUSTOM_NAME);
                 if (customName != null) {
                     stack.set(DataComponentTypes.CUSTOM_NAME, customName);
+                }
+
+                ArmorTrim trim = ingredient.get(DataComponentTypes.TRIM);
+                if (trim != null) {
+                    stack.set(DataComponentTypes.TRIM, trim);
                 }
 
                 break;
