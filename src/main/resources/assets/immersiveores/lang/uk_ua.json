@@ -151,6 +151,9 @@
   "advancement.immersiveores.enderiumspecialtools.title": "Ендерієвий спеціаліст",
   "advancement.immersiveores.enderiumspecialtools.descrption": "Змайструйте всі спеціальні ендкрієві інструменти, включаючи молот, паксель і землекоп. Опануйте ці вдосконалені інструменти для виняткової ефективности та можливостей",
 
+  "key.category.immersiveores.showoutline": "Immersive Ores",
+  "key.immersiveores.showoutline": "Увімкнути/вимкнути контур",
+
   "itemGroup.immersiveorestab": "Immersive Ores",
 
   "modmenu.descriptionTranslation.immersiveores": "Immersive Ores додає до гри три нові руди, вібраній, вульпус та Ендерій, з метою покращення досвіду печер і видобутку з додаванням нових обладунків та інструментів зі спеціальними здібностями"

@@ -1,5 +1,6 @@
 package com.blocklegend001.immersiveores.util.tools.hammer;
 
+import com.blocklegend001.immersiveores.ImmersiveOresClient;
 import com.blocklegend001.immersiveores.item.custom.base.Hammer;
 import com.blocklegend001.immersiveores.util.map.RadiusMap;
 import net.fabricmc.fabric.api.client.rendering.v1.WorldRenderEvents;
@@ -22,7 +23,7 @@ public class HammerOverlayRenderer {
     public static void init() {
         WorldRenderEvents.AFTER_ENTITIES.register(context -> {
             MinecraftClient client = MinecraftClient.getInstance();
-
+            if (!ImmersiveOresClient.SHOW_OUTLINE_ENABLED) return;
             if (client.world == null || client.player == null) return;
 
             ItemStack heldItem = client.player.getMainHandStack();
