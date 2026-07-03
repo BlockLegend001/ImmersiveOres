@@ -1,5 +1,6 @@
 package com.blocklegend001.immersiveores.util.tools.excavator;
 
+import com.blocklegend001.immersiveores.ImmersiveOresClient;
 import com.blocklegend001.immersiveores.item.custom.base.Excavator;
 import com.blocklegend001.immersiveores.util.map.RadiusMap;
 import net.fabricmc.fabric.api.client.rendering.v1.WorldRenderEvents;
@@ -23,7 +24,7 @@ public class ExcavatorOverlayRenderer {
         WorldRenderEvents.AFTER_ENTITIES.register(context -> {
             MinecraftClient client = MinecraftClient.getInstance();
             if (client.world == null || client.player == null) return;
-
+            if (!ImmersiveOresClient.SHOW_OUTLINE_ENABLED) return;
             ItemStack heldItem = client.player.getMainHandStack();
             if (!(heldItem.getItem() instanceof Excavator)) return;
 
