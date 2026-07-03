@@ -1,5 +1,6 @@
 package com.blocklegend001.immersiveores.mixin;
 
+import com.blocklegend001.immersiveores.ImmersiveOresClient;
 import com.blocklegend001.immersiveores.util.WorldRenderContext;
 import com.blocklegend001.immersiveores.util.map.RadiusMap;
 import com.mojang.blaze3d.buffers.GpuBufferSlice;
@@ -30,7 +31,7 @@ public class ToolOverlayRenderer {
                                  GpuBufferSlice fogBuffer, Vector4f fogColor, boolean renderSky, CallbackInfo ci) {
 
         MinecraftClient client = MinecraftClient.getInstance();
-
+        if (!ImmersiveOresClient.SHOW_OUTLINE_ENABLED) return;
         if (client.world == null || client.player == null) return;
 
         ItemStack heldItem = client.player.getMainHandStack();
