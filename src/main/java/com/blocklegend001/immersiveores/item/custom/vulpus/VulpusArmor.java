@@ -15,6 +15,7 @@ import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.ArmorMaterial;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.item.armortrim.ArmorTrim;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import net.minecraft.world.level.Level;
@@ -99,6 +100,9 @@ public class VulpusArmor extends ArmorItem {
                 if (ingredient.hasCustomHoverName()) {
                     stack.setHoverName(ingredient.getHoverName());
                 }
+
+                ArmorTrim.getTrim(level.registryAccess(), ingredient)
+                        .ifPresent(trim -> ArmorTrim.setTrim(level.registryAccess(), stack, trim));
 
                 break;
             }
