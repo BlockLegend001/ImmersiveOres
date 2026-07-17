@@ -1,5 +1,6 @@
 package com.blocklegend001.immersiveores.mixin;
 
+import com.blocklegend001.immersiveores.ImmersiveOres;
 import com.blocklegend001.immersiveores.item.custom.base.Excavator;
 import com.blocklegend001.immersiveores.util.map.RadiusMap;
 import com.mojang.blaze3d.systems.RenderSystem;
@@ -32,7 +33,7 @@ public class LevelRendererExcavatorMixin {
                                   Matrix4f projection, CallbackInfo ci) {
 
         Minecraft mc = Minecraft.getInstance();
-
+        if (!ImmersiveOres.SHOW_OUTLINE_ENABLED) return;
         if (mc.level == null || mc.player == null) return;
 
         ItemStack held = mc.player.getMainHandItem();
