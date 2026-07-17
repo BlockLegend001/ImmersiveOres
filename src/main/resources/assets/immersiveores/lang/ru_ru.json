@@ -151,5 +151,8 @@
   "advancement.immersiveores.enderiumspecialtools.title": "Мастер эндериевых инструментов",
   "advancement.immersiveores.enderiumspecialtools.descrption": "Создайте все специальные эндериевые инструменты, включая эндериевые молот, мультиинструмент и экскаватор. Овладейте этими передовыми инструментами для достижения исключительной эффективности и возможностей.",
 
+  "key.category.immersiveores.showoutline": "Immersive Ores",
+  "key.immersiveores.showoutline": "включить/отключить контур",
+
   "itemGroup.immersiveorestab": "Immersive Ores"
 }
