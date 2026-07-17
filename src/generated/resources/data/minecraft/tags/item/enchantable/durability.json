@@ -41,6 +41,9 @@
     "immersiveores:enderium_axe",
     "immersiveores:vibranium_paxel",
     "immersiveores:vulpus_paxel",
-    "immersiveores:enderium_paxel"
+    "immersiveores:enderium_paxel",
+    "immersiveores:vibranium_bow",
+    "immersiveores:vulpus_bow",
+    "immersiveores:enderium_bow"
   ]
 }
