@@ -18,6 +18,7 @@ import net.minecraftforge.fml.loading.FMLPaths;
 @Mod(ImmersiveOres.MODID)
 public class ImmersiveOres {
     public static final String MODID = "immersiveores";
+    public static boolean SHOW_OUTLINE_ENABLED = true;
 
     public ImmersiveOres(FMLJavaModLoadingContext context) {
         var modEventBus = context.getModBusGroup();
