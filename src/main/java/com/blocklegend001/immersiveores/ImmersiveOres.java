@@ -7,6 +7,8 @@ import com.blocklegend001.immersiveores.config.VulpusConfig;
 import com.blocklegend001.immersiveores.event.ModEventHandler;
 import com.blocklegend001.immersiveores.item.ModCreativeModTabs;
 import com.blocklegend001.immersiveores.item.ModItems;
+import com.blocklegend001.immersiveores.util.KeyBinding;
+import net.minecraftforge.client.event.RegisterKeyMappingsEvent;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.listener.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -18,6 +20,7 @@ import net.minecraftforge.fml.loading.FMLPaths;
 @Mod(ImmersiveOres.MODID)
 public class ImmersiveOres {
     public static final String MODID = "immersiveores";
+    public static boolean SHOW_OUTLINE_ENABLED = true;
 
     public ImmersiveOres(FMLJavaModLoadingContext context) {
         var modEventBus = context.getModBusGroup();
@@ -36,6 +39,9 @@ public class ImmersiveOres {
         ModBlocks.register(modEventBus);
         ModItems.register(modEventBus);
         FMLCommonSetupEvent.getBus(modEventBus).addListener(this::setup);
+
+        RegisterKeyMappingsEvent.getBus(modEventBus)
+                .addListener(KeyBinding::registerKeys);
     }
 
     @SubscribeEvent
