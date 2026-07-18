@@ -380,7 +380,10 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                 ModItems.ENDERIUM_AXE.get(),
                 ModItems.VIBRANIUM_PAXEL.get(),
                 ModItems.VULPUS_PAXEL.get(),
-                ModItems.ENDERIUM_PAXEL.get());
+                ModItems.ENDERIUM_PAXEL.get(),
+                ModItems.VIBRANIUM_BOW.get(),
+                ModItems.VULPUS_BOW.get(),
+                ModItems.ENDERIUM_BOW.get());
 
         tag(ItemTags.SHARP_WEAPON_ENCHANTABLE).add(ModItems.VIBRANIUM_SWORD.get(),
                 ModItems.VULPUS_SWORD.get(),
