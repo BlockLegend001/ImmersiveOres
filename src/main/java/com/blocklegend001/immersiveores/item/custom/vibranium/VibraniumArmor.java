@@ -14,6 +14,7 @@ import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.*;
+import net.minecraft.world.item.armortrim.ArmorTrim;
 import net.minecraft.world.item.component.Unbreakable;
 import net.minecraft.world.level.Level;
 
@@ -83,6 +84,11 @@ public class VibraniumArmor extends ArmorItem {
                 var customName = ingredient.get(DataComponents.CUSTOM_NAME);
                 if (customName != null) {
                     stack.set(DataComponents.CUSTOM_NAME, customName);
+                }
+
+                ArmorTrim trim = ingredient.get(DataComponents.TRIM);
+                if (trim != null) {
+                    stack.set(DataComponents.TRIM, trim);
                 }
 
                 break;
