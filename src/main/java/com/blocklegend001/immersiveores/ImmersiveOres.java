@@ -24,6 +24,8 @@ public class ImmersiveOres
     public static final String MODID = "immersiveores";
     public static final Logger LOGGER = Logger.getLogger(MODID);
 
+    public static boolean SHOW_OUTLINE_ENABLED = true;
+
     public ImmersiveOres(IEventBus modEventBus, ModContainer modContainer) {
         modContainer.registerConfig(ModConfig.Type.STARTUP, EnderiumConfig.COMMON, "immersiveores/enderium-common.toml");
         modContainer.registerConfig(ModConfig.Type.STARTUP, VulpusConfig.COMMON, "immersiveores/vulpus-common.toml");
