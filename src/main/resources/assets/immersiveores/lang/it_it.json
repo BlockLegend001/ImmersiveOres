@@ -151,6 +151,9 @@
   "advancement.immersiveores.enderiumspecialtools.title": "Maestro degli Strumenti di Enderium",
   "advancement.immersiveores.enderiumspecialtools.descrption": "Crea tutti gli strumenti speciali di Enderium, incluso il Martello, il Paxel e l'Escavatore di Enderium. Domina questi strumenti avanzati per un'efficienza e capacità eccezionali",
 
+  "key.category.immersiveores.showoutline": "Immersive Ores",
+  "key.immersiveores.showoutline": "Abilita/Disabilita Contorno",
+
   "itemGroup.immersiveorestab": "Immersive Ores",
   "config.jade.plugin_immersiveores.tool_requirement": "Immersive Ores Tool Requirement Jade"
 }
