@@ -140,5 +140,8 @@
   "advancement.immersiveores.enderiumspecialtools.title": "Enderium Tool Master",
   "advancement.immersiveores.enderiumspecialtools.descrption": "Craft all special Enderium tools, including the Enderium Hammer, Paxel, and Excavator. Master these advanced tools for exceptional efficiency and capability",
 
+  "key.category.immersiveores.showoutline": "Immersive Ores",
+  "key.immersiveores.showoutline": "Enable/Disable Outline",
+
   "itemGroup.immersiveorestab": "Immersive Ores"
 }

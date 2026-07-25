@@ -1,5 +1,6 @@
 package com.blocklegend001.immersiveores.mixin;
 
+import com.blocklegend001.immersiveores.ImmersiveOres;
 import com.blocklegend001.immersiveores.item.custom.base.Hammer;
 import com.blocklegend001.immersiveores.util.map.RadiusMap;
 import com.blocklegend001.immersiveores.util.tools.OverlayRenderer;
@@ -31,6 +32,8 @@ public class LevelRendererHammerMixin {
         if (Minecraft.getInstance().level == null || Minecraft.getInstance().player == null) {
             return;
         }
+
+        if (!ImmersiveOres.SHOW_OUTLINE_ENABLED) return;
 
         ItemStack heldItem = Minecraft.getInstance().player.getMainHandItem();
         if (!(heldItem.getItem() instanceof Hammer)) {
