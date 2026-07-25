@@ -19,6 +19,7 @@ import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.component.Unbreakable;
 import net.minecraft.world.item.equipment.ArmorMaterial;
 import net.minecraft.world.item.equipment.ArmorType;
+import net.minecraft.world.item.equipment.trim.ArmorTrim;
 import net.minecraft.world.level.Level;
 
 import java.util.List;
@@ -108,6 +109,11 @@ public class VulpusArmor extends ArmorItem {
                 var customName = ingredient.get(DataComponents.CUSTOM_NAME);
                 if (customName != null) {
                     stack.set(DataComponents.CUSTOM_NAME, customName);
+                }
+
+                ArmorTrim trim = ingredient.get(DataComponents.TRIM);
+                if (trim != null) {
+                    stack.set(DataComponents.TRIM, trim);
                 }
 
                 break;
