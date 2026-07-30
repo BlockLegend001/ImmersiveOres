@@ -1,4 +1,4 @@
-// 1.21.9	2025-10-07T18:33:11.0254016	Tags for minecraft:item mod id vanilla
+// 1.21.9	2026-07-24T14:46:12.6086046	Tags for minecraft:item mod id vanilla
 ee9b19416bf9206c12e6d80639295b2559bb7fb6 data/c/tags/item/armors.json
 84d40d1c79905cad9bd2bacaaca1d5c3bb97bd74 data/c/tags/item/ingots.json
 502abde21d06c5ab664c29fc04200e28594e1d8f data/c/tags/item/nuggets.json
@@ -46,7 +46,7 @@ b698209e4a0f09e4b97eab6356ccb23df35c9821 data/minecraft/tags/item/axes.json
 ee9b19416bf9206c12e6d80639295b2559bb7fb6 data/minecraft/tags/item/enchantable/armor.json
 9dd29c6236b43b13ec3230e02ccc41d77733af22 data/minecraft/tags/item/enchantable/bow.json
 2ab52baad09c1b06bfaafc7cd87f47505881520f data/minecraft/tags/item/enchantable/chest_armor.json
-2a3e0d70661ec63eb0552045db9926da8f45b553 data/minecraft/tags/item/enchantable/durability.json
+42e32c17c687bd522565267b415955d688641db9 data/minecraft/tags/item/enchantable/durability.json
 0d064628ab6aeb04136b74229dcf3e324f0e6610 data/minecraft/tags/item/enchantable/fire_aspect.json
 a7b311b73aa20f5a660aae7af5537b92caee8f1b data/minecraft/tags/item/enchantable/foot_armor.json
 77ad9a14282810e51f6568151de5a474c3136893 data/minecraft/tags/item/enchantable/head_armor.json
