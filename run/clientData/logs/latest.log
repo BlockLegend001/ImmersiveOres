@@ -1,57 +1,56 @@
-[22mag2026 10:48:57.310] [main/INFO] [net.neoforged.fml.startup.Entrypoint/]: JVM Uptime at startup: 136ms
-[22mag2026 10:48:57.330] [main/INFO] [net.neoforged.fml.loading.FMLLoader/]: Starting FancyModLoader version 11.0.5 (CLIENT in DEV)
-[22mag2026 10:48:57.330] [main/INFO] [net.neoforged.fml.loading.FMLLoader/]: Game directory: D:\Programmazione\Mod\Immersive Ores\NEOFORGE\26.1.1\run\clientData
-[22mag2026 10:48:57.401] [main/INFO] [net.neoforged.fml.loading.EarlyServiceDiscovery/]: Found 2 early service jars (out of 112) in 23ms
-[22mag2026 10:48:57.402] [main/INFO] [net.neoforged.fml.loading.FMLLoader/]: Loading FML Early Services:
-[22mag2026 10:48:57.403] [main/INFO] [net.neoforged.fml.loading.FMLLoader/]:  - C:/Users/rosar/.gradle/caches/modules-2/files-2.1/net.neoforged.fancymodloader/earlydisplay/11.0.5/b2edeab4008c91772d61f8f98a5253a09a4e890d/earlydisplay-11.0.5.jar
-[22mag2026 10:48:57.403] [main/INFO] [net.neoforged.fml.loading.FMLLoader/]:  - C:/Users/rosar/.gradle/caches/modules-2/files-2.1/net.neoforged.fancymodloader/loader/11.0.5/3477e70d79fe8cd06962749f24e64f01edda3bb3/loader-11.0.5.jar
-[22mag2026 10:48:57.408] [main/INFO] [net.neoforged.fml.loading.ImmediateWindowHandler/]: Not loading early display in headless mode.
-[22mag2026 10:48:57.441] [main/INFO] [net.neoforged.fml.loading.moddiscovery.locators.GameLocator/]: Detected a joined NeoForge and Minecraft configuration. Applying filtering...
-[22mag2026 10:48:57.526] [main/INFO] [net.neoforged.fml.loading.moddiscovery.locators.InDevFolderLocator/CORE]: Got mod coordinates 26.1.1%%D:\Programmazione\Mod\Immersive Ores\NEOFORGE\26.1.1\build\resources\main;26.1.1%%D:\Programmazione\Mod\Immersive Ores\NEOFORGE\26.1.1\build\classes\java\main from env
-[22mag2026 10:48:57.537] [main/ERROR] [net.neoforged.fml.loading.moddiscovery.ModFile/LOADING]: Access transformer file META-INF/accesstransformer.cfg provided by mod immersiveores does not exist!
-[22mag2026 10:48:57.854] [main/WARN] [net.neoforged.jarjar.selection.JarSelector/]: Attempted to select a dependency jar for JarJar which was passed in as source: library:mixinextras.neoforge. Using jar(C:/Users/rosar/.gradle/caches/modules-2/files-2.1/io.github.llamalad7/mixinextras-neoforge/0.5.3/a0919957808de97707c5fb4ce073e66aeef3e187/mixinextras-neoforge-0.5.3.jar)
-[22mag2026 10:48:57.854] [main/INFO] [net.neoforged.fml.loading.moddiscovery.locators.JarInJarDependencyLocator/]: Found 1 dependencies adding them to mods collection
-[22mag2026 10:48:57.856] [main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/]: 
+[24lug2026 15:52:03.949] [main/INFO] [net.neoforged.fml.startup.Entrypoint/]: JVM Uptime at startup: 151ms
+[24lug2026 15:52:03.966] [main/INFO] [net.neoforged.fml.loading.FMLLoader/]: Starting FancyModLoader version 11.0.5 (CLIENT in DEV)
+[24lug2026 15:52:03.966] [main/INFO] [net.neoforged.fml.loading.FMLLoader/]: Game directory: D:\Programmazione\Mod\Immersive Ores\NEOFORGE\26.1.1\run\clientData
+[24lug2026 15:52:04.031] [main/INFO] [net.neoforged.fml.loading.EarlyServiceDiscovery/]: Found 2 early service jars (out of 112) in 24ms
+[24lug2026 15:52:04.032] [main/INFO] [net.neoforged.fml.loading.FMLLoader/]: Loading FML Early Services:
+[24lug2026 15:52:04.032] [main/INFO] [net.neoforged.fml.loading.FMLLoader/]:  - C:/Users/rosar/.gradle/caches/modules-2/files-2.1/net.neoforged.fancymodloader/earlydisplay/11.0.5/b2edeab4008c91772d61f8f98a5253a09a4e890d/earlydisplay-11.0.5.jar
+[24lug2026 15:52:04.033] [main/INFO] [net.neoforged.fml.loading.FMLLoader/]:  - C:/Users/rosar/.gradle/caches/modules-2/files-2.1/net.neoforged.fancymodloader/loader/11.0.5/3477e70d79fe8cd06962749f24e64f01edda3bb3/loader-11.0.5.jar
+[24lug2026 15:52:04.039] [main/INFO] [net.neoforged.fml.loading.ImmediateWindowHandler/]: Not loading early display in headless mode.
+[24lug2026 15:52:04.084] [main/INFO] [net.neoforged.fml.loading.moddiscovery.locators.GameLocator/]: Detected a joined NeoForge and Minecraft configuration. Applying filtering...
+[24lug2026 15:52:04.164] [main/INFO] [net.neoforged.fml.loading.moddiscovery.locators.InDevFolderLocator/CORE]: Got mod coordinates 26.1.1%%D:\Programmazione\Mod\Immersive Ores\NEOFORGE\26.1.1\build\resources\main;26.1.1%%D:\Programmazione\Mod\Immersive Ores\NEOFORGE\26.1.1\build\classes\java\main from env
+[24lug2026 15:52:04.565] [main/WARN] [net.neoforged.jarjar.selection.JarSelector/]: Attempted to select a dependency jar for JarJar which was passed in as source: library:mixinextras.neoforge. Using jar(C:/Users/rosar/.gradle/caches/modules-2/files-2.1/io.github.llamalad7/mixinextras-neoforge/0.5.3/a0919957808de97707c5fb4ce073e66aeef3e187/mixinextras-neoforge-0.5.3.jar)
+[24lug2026 15:52:04.565] [main/INFO] [net.neoforged.fml.loading.moddiscovery.locators.JarInJarDependencyLocator/]: Found 1 dependencies adding them to mods collection
+[24lug2026 15:52:04.569] [main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/]: 
      Mod List:
 		Name Version (Mod Id)
 
-		ImmersiveOres 26.1.1-0.1 (immersiveores)
+		ImmersiveOres 26.1.1-0.3 (immersiveores)
 		Jade 26.1.1+neoforge (jade)
 		Minecraft 26.1.1 (minecraft)
 		NeoForge 26.1.1.15-beta (neoforge)
-[22mag2026 10:48:58.045] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.7 Source=file:/C:/Users/rosar/.gradle/caches/modules-2/files-2.1/net.fabricmc/sponge-mixin/0.17.0+mixin.0.8.7/cf31463202f72d03b0ef1e1e38e8ee71b7faaab6/sponge-mixin-0.17.0+mixin.0.8.7.jar Service=FML Env=CLIENT
-[22mag2026 10:48:58.069] [main/INFO] [net.neoforged.fml.loading.FMLLoader/]: Loading FML Plugins:
-[22mag2026 10:48:58.070] [main/INFO] [net.neoforged.fml.loading.FMLLoader/]:  - C:/Users/rosar/.gradle/caches/modules-2/files-2.1/net.neoforged/neoforge/26.1.1.15-beta/323b8c91d3007b84edac8ff1d71662c2daded399/neoforge-26.1.1.15-beta-universal.jar > net.neoforged.neoforge-coremods-26.1.1.15-beta.jar
-[22mag2026 10:48:58.160] [main/INFO] [net.neoforged.fml.loading.FMLLoader/]: Building game content classloader:
+[24lug2026 15:52:04.812] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.7 Source=file:/C:/Users/rosar/.gradle/caches/modules-2/files-2.1/net.fabricmc/sponge-mixin/0.17.0+mixin.0.8.7/cf31463202f72d03b0ef1e1e38e8ee71b7faaab6/sponge-mixin-0.17.0+mixin.0.8.7.jar Service=FML Env=CLIENT
+[24lug2026 15:52:04.831] [main/INFO] [net.neoforged.fml.loading.FMLLoader/]: Loading FML Plugins:
+[24lug2026 15:52:04.832] [main/INFO] [net.neoforged.fml.loading.FMLLoader/]:  - C:/Users/rosar/.gradle/caches/modules-2/files-2.1/net.neoforged/neoforge/26.1.1.15-beta/323b8c91d3007b84edac8ff1d71662c2daded399/neoforge-26.1.1.15-beta-universal.jar > net.neoforged.neoforge-coremods-26.1.1.15-beta.jar
+[24lug2026 15:52:04.923] [main/INFO] [net.neoforged.fml.loading.FMLLoader/]: Building game content classloader:
  - immersiveores (composite(folder(D:/Programmazione/Mod/Immersive Ores/NEOFORGE/26.1.1/build/resources/main), folder(D:/Programmazione/Mod/Immersive Ores/NEOFORGE/26.1.1/build/classes/java/main)))
  - jade (jar(C:/Users/rosar/.gradle/caches/modules-2/files-2.1/maven.modrinth/jade/26.1.1+neoforge/de4f46703a11ac6a35d2fce17c17a603c1886478/jade-26.1.1+neoforge.jar))
  - minecraft (composite(filtered(jar(D:/Programmazione/Mod/Immersive Ores/NEOFORGE/26.1.1/.gradle/repositories/ng_dummy_ng/net/neoforged/neoforge/26.1.1.15-beta/neoforge-26.1.1.15-beta.jar)), filtered(jar(D:/Programmazione/Mod/Immersive Ores/NEOFORGE/26.1.1/.gradle/repositories/ng_dummy_ng/net/neoforged/neoforge/26.1.1.15-beta/neoforge-26.1.1.15-beta.jar))))
  - mixinextras.neoforge (jar(C:/Users/rosar/.gradle/caches/modules-2/files-2.1/io.github.llamalad7/mixinextras-neoforge/0.5.3/a0919957808de97707c5fb4ce073e66aeef3e187/mixinextras-neoforge-0.5.3.jar))
  - neoforge (composite(filtered(jar(C:/Users/rosar/.gradle/caches/modules-2/files-2.1/net.neoforged/neoforge/26.1.1.15-beta/323b8c91d3007b84edac8ff1d71662c2daded399/neoforge-26.1.1.15-beta-universal.jar))))
  - net.neoforged.fml.generated (empty(VirtualJar/net.neoforged.fml.generated))
-[22mag2026 10:48:58.175] [main/INFO] [net.neoforged.fml.loading.FMLLoader/]: Built game content classloader in 22ms
-[22mag2026 10:48:58.216] [main/INFO] [mixin/]: Compatibility level set to JAVA_25
-[22mag2026 10:48:58.242] [main/WARN] [mixin/]: Reference map 'immersiveores.refmap.json' for immersiveores.mixins.json could not be read. If this is a development environment you can ignore this message
-[22mag2026 10:48:58.711] [main/INFO] [MixinExtras|Service/]: Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.5.3).
-[22mag2026 10:49:03.020] [main/INFO] [net.neoforged.neoforge.data.loading.DatagenModLoader/]: Initializing Data Gatherer for mods [immersiveores]
-[22mag2026 10:49:03.061] [modloading-worker-0/INFO] [net.neoforged.neoforge.common.NeoForgeMod/NEOFORGE-MOD]: NeoForge mod loading, version 26.1.1.15-beta, for MC 26.1.1
-[22mag2026 10:49:04.191] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Recipes
-[22mag2026 10:49:04.283] [main/INFO] [net.minecraft.data.DataGenerator/]: Recipes finished after 90 ms
-[22mag2026 10:49:04.284] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Model Definitions - immersiveores
-[22mag2026 10:49:04.432] [main/INFO] [net.minecraft.data.DataGenerator/]: Model Definitions - immersiveores finished after 148 ms
-[22mag2026 10:49:04.432] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Loot Tables
-[22mag2026 10:49:04.462] [main/INFO] [net.minecraft.data.DataGenerator/]: Loot Tables finished after 29 ms
-[22mag2026 10:49:04.463] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:block mod id immersiveores
-[22mag2026 10:49:04.477] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:block mod id immersiveores finished after 14 ms
-[22mag2026 10:49:04.477] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:item mod id vanilla
-[22mag2026 10:49:04.495] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:item mod id vanilla finished after 17 ms
-[22mag2026 10:49:04.496] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Registries
-[22mag2026 10:49:04.504] [main/INFO] [net.minecraft.data.DataGenerator/]: Registries finished after 8 ms
-[22mag2026 10:49:04.504] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Advancements
-[22mag2026 10:49:04.526] [main/INFO] [net.minecraft.data.DataGenerator/]: Advancements finished after 20 ms
-[22mag2026 10:49:04.526] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Equipment Asset Definitions
-[22mag2026 10:49:04.532] [main/INFO] [net.minecraft.data.DataGenerator/]: Equipment Asset Definitions finished after 6 ms
-[22mag2026 10:49:04.532] [main/INFO] [net.minecraft.data.DataGenerator/]: All providers took: 341 ms
-[22mag2026 10:49:04.558] [main/INFO] [net.minecraft.data.HashCache/]: Caching: total files: 585, old count: 0, new count: 585, removed stale: 0, written: 585
-[22mag2026 10:49:04.558] [main/INFO] [net.neoforged.fml.loading.FMLLoader/]: Closing FML Loader 7ec97aa2
-[22mag2026 10:49:04.559] [main/INFO] [net.neoforged.fml.ModLoader/]: Clearing ModLoader
+[24lug2026 15:52:04.937] [main/INFO] [net.neoforged.fml.loading.FMLLoader/]: Built game content classloader in 23ms
+[24lug2026 15:52:04.978] [main/INFO] [mixin/]: Compatibility level set to JAVA_25
+[24lug2026 15:52:04.998] [main/WARN] [mixin/]: Reference map 'immersiveores.refmap.json' for immersiveores.mixins.json could not be read. If this is a development environment you can ignore this message
+[24lug2026 15:52:05.404] [main/INFO] [MixinExtras|Service/]: Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.5.3).
+[24lug2026 15:52:21.122] [main/INFO] [net.neoforged.neoforge.data.loading.DatagenModLoader/]: Initializing Data Gatherer for mods [immersiveores]
+[24lug2026 15:52:21.225] [modloading-worker-0/INFO] [net.neoforged.neoforge.common.NeoForgeMod/NEOFORGE-MOD]: NeoForge mod loading, version 26.1.1.15-beta, for MC 26.1.1
+[24lug2026 15:52:25.747] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Recipes
+[24lug2026 15:52:26.034] [main/INFO] [net.minecraft.data.DataGenerator/]: Recipes finished after 283 ms
+[24lug2026 15:52:26.040] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Model Definitions - immersiveores
+[24lug2026 15:52:26.275] [main/INFO] [net.minecraft.data.DataGenerator/]: Model Definitions - immersiveores finished after 234 ms
+[24lug2026 15:52:26.275] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Loot Tables
+[24lug2026 15:52:26.312] [main/INFO] [net.minecraft.data.DataGenerator/]: Loot Tables finished after 37 ms
+[24lug2026 15:52:26.313] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:block mod id immersiveores
+[24lug2026 15:52:26.397] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:block mod id immersiveores finished after 82 ms
+[24lug2026 15:52:26.398] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:item mod id vanilla
+[24lug2026 15:52:26.447] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:item mod id vanilla finished after 48 ms
+[24lug2026 15:52:26.447] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Registries
+[24lug2026 15:52:26.506] [main/INFO] [net.minecraft.data.DataGenerator/]: Registries finished after 57 ms
+[24lug2026 15:52:26.506] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Advancements
+[24lug2026 15:52:26.653] [main/INFO] [net.minecraft.data.DataGenerator/]: Advancements finished after 146 ms
+[24lug2026 15:52:26.653] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Equipment Asset Definitions
+[24lug2026 15:52:26.664] [main/INFO] [net.minecraft.data.DataGenerator/]: Equipment Asset Definitions finished after 11 ms
+[24lug2026 15:52:26.666] [main/INFO] [net.minecraft.data.DataGenerator/]: All providers took: 919 ms
+[24lug2026 15:52:26.728] [main/INFO] [net.minecraft.data.HashCache/]: Caching: total files: 585, old count: 585, new count: 585, removed stale: 0, written: 1
+[24lug2026 15:52:26.729] [main/INFO] [net.neoforged.fml.loading.FMLLoader/]: Closing FML Loader e4efe41
+[24lug2026 15:52:26.731] [main/INFO] [net.neoforged.fml.ModLoader/]: Clearing ModLoader
