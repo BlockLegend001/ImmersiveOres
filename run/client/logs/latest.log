@@ -1,0 +1,162 @@
+[30lug2026 15:51:21.810] [main/INFO] [net.neoforged.fml.startup.Entrypoint/]: JVM Uptime at startup: 138ms
+[30lug2026 15:51:21.828] [main/INFO] [net.neoforged.fml.loading.FMLLoader/]: Starting FancyModLoader version 11.0.13 (CLIENT in DEV)
+[30lug2026 15:51:21.828] [main/INFO] [net.neoforged.fml.loading.FMLLoader/]: Game directory: D:\Programmazione\Mod\Immersive Ores\NEOFORGE\26.2\run\client
+[30lug2026 15:51:21.883] [main/INFO] [net.neoforged.fml.loading.EarlyServiceDiscovery/]: Found 2 early service jars (out of 126) in 24ms
+[30lug2026 15:51:21.883] [main/INFO] [net.neoforged.fml.loading.FMLLoader/]: Loading FML Early Services:
+[30lug2026 15:51:21.883] [main/INFO] [net.neoforged.fml.loading.FMLLoader/]:  - C:/Users/rosar/.gradle/caches/modules-2/files-2.1/net.neoforged.fancymodloader/earlydisplay/11.0.13/491a1bedecb33802fa118cae384b60f91f6f0241/earlydisplay-11.0.13.jar
+[30lug2026 15:51:21.884] [main/INFO] [net.neoforged.fml.loading.FMLLoader/]:  - C:/Users/rosar/.gradle/caches/modules-2/files-2.1/net.neoforged.fancymodloader/loader/11.0.13/c9c89eaf35535990110088224d188748d81eaecf/loader-11.0.13.jar
+[30lug2026 15:51:21.888] [main/INFO] [net.neoforged.fml.loading.ImmediateWindowHandler/]: Loading ImmediateWindowProvider fmlearlywindow
+[30lug2026 15:51:22.443] [ForkJoinPool.commonPool-worker-9/INFO] [net.neoforged.fml.loading.moddiscovery.locators.GameLocator/]: Detected a joined NeoForge and Minecraft configuration. Applying filtering...
+[30lug2026 15:51:22.468] [fml-loadingscreen/INFO] [net.neoforged.fml.earlydisplay.render.LoadingScreenRenderer/]: GL info: Intel(R) UHD Graphics GL version 3.3.0 - Build 32.0.101.5972, Intel
+[30lug2026 15:51:22.524] [ForkJoinPool.commonPool-worker-9/INFO] [net.neoforged.fml.loading.moddiscovery.locators.InDevFolderLocator/CORE]: Got mod coordinates 26.2%%D:\Programmazione\Mod\Immersive Ores\NEOFORGE\26.2\build\resources\main;26.2%%D:\Programmazione\Mod\Immersive Ores\NEOFORGE\26.2\build\classes\java\main from env
+[30lug2026 15:51:22.653] [ForkJoinPool.commonPool-worker-9/WARN] [net.neoforged.jarjar.selection.JarSelector/]: Attempted to select a dependency jar for JarJar which was passed in as source: library:mixinextras.neoforge. Using jar(C:/Users/rosar/.gradle/caches/modules-2/files-2.1/io.github.llamalad7/mixinextras-neoforge/0.5.4/3cb0fec08c25e18fddf797fbdc1b9db83dc4e92f/mixinextras-neoforge-0.5.4.jar)
+[30lug2026 15:51:22.653] [ForkJoinPool.commonPool-worker-9/INFO] [net.neoforged.fml.loading.moddiscovery.locators.JarInJarDependencyLocator/]: Found 1 dependencies adding them to mods collection
+[30lug2026 15:51:22.654] [ForkJoinPool.commonPool-worker-9/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/]: 
+     Mod List:
+		Name Version (Mod Id)
+
+		ImmersiveOres 26.2-0.1 (immersiveores)
+		Jade 26.2.8+neoforge (jade)
+		Minecraft 26.2 (minecraft)
+		NeoForge 26.2.0.40-beta (neoforge)
+[30lug2026 15:51:22.851] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.7 Source=file:/C:/Users/rosar/.gradle/caches/modules-2/files-2.1/net.fabricmc/sponge-mixin/0.17.3+mixin.0.8.7/41c4a3984a80f4679e759fb9f495587acc5cdac7/sponge-mixin-0.17.3+mixin.0.8.7.jar Service=FML Env=CLIENT
+[30lug2026 15:51:22.873] [main/INFO] [net.neoforged.fml.loading.FMLLoader/]: Loading FML Plugins:
+[30lug2026 15:51:22.873] [main/INFO] [net.neoforged.fml.loading.FMLLoader/]:  - C:/Users/rosar/.gradle/caches/modules-2/files-2.1/net.neoforged/neoforge/26.2.0.40-beta/ffdcc31f17aeb4e41147db9a9bc38a4208f0c704/neoforge-26.2.0.40-beta-universal.jar > net.neoforged.neoforge-coremods-26.2.0.40-beta.jar
+[30lug2026 15:51:22.945] [main/INFO] [net.neoforged.fml.loading.FMLLoader/]: Building game content classloader:
+ - immersiveores (composite(folder(D:/Programmazione/Mod/Immersive Ores/NEOFORGE/26.2/build/resources/main), folder(D:/Programmazione/Mod/Immersive Ores/NEOFORGE/26.2/build/classes/java/main)))
+ - jade (jar(C:/Users/rosar/.gradle/caches/modules-2/files-2.1/maven.modrinth/jade/26.2.8+neoforge/ef0778b036e7af1b5cc8fc14be7326afe419e16b/jade-26.2.8+neoforge.jar))
+ - minecraft (composite(filtered(jar(D:/Programmazione/Mod/Immersive Ores/NEOFORGE/26.2/.gradle/repositories/ng_dummy_ng/net/neoforged/neoforge/26.2.0.40-beta/neoforge-26.2.0.40-beta.jar)), filtered(jar(D:/Programmazione/Mod/Immersive Ores/NEOFORGE/26.2/.gradle/repositories/ng_dummy_ng/net/neoforged/neoforge/26.2.0.40-beta/neoforge-26.2.0.40-beta.jar))))
+ - mixinextras.neoforge (jar(C:/Users/rosar/.gradle/caches/modules-2/files-2.1/io.github.llamalad7/mixinextras-neoforge/0.5.4/3cb0fec08c25e18fddf797fbdc1b9db83dc4e92f/mixinextras-neoforge-0.5.4.jar))
+ - neoforge (composite(filtered(jar(C:/Users/rosar/.gradle/caches/modules-2/files-2.1/net.neoforged/neoforge/26.2.0.40-beta/ffdcc31f17aeb4e41147db9a9bc38a4208f0c704/neoforge-26.2.0.40-beta-universal.jar))))
+ - net.neoforged.fml.generated (empty(VirtualJar/net.neoforged.fml.generated))
+[30lug2026 15:51:22.957] [main/INFO] [net.neoforged.fml.loading.FMLLoader/]: Built game content classloader in 23ms
+[30lug2026 15:51:22.986] [main/INFO] [mixin/]: Compatibility level set to JAVA_25
+[30lug2026 15:51:23.008] [main/WARN] [mixin/]: Reference map 'immersiveores.refmap.json' for immersiveores.mixins.json could not be read. If this is a development environment you can ignore this message
+[30lug2026 15:51:24.520] [Datafixer Bootstrap #0/INFO] [com.mojang.datafixers.DataFixerBuilder/]: 298 Datafixer optimizations took 527 milliseconds
+[30lug2026 15:51:25.548] [pool-9-thread-1/INFO] [MixinExtras|Service/]: Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.5.4).
+[30lug2026 15:51:32.581] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, location] and [teleport, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+[30lug2026 15:51:32.583] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, location] and [teleport, targets] with inputs: [0.1 -0.5 .9, 0 0 0]
+[30lug2026 15:51:32.584] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, destination] and [teleport, targets] with inputs: [Player, 0123, @e, dd12be42-52a9-4a91-a8a1-11c01849e498]
+[30lug2026 15:51:32.585] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, targets] and [teleport, destination] with inputs: [Player, 0123, dd12be42-52a9-4a91-a8a1-11c01849e498]
+[30lug2026 15:51:32.586] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, targets, location] and [teleport, targets, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+[30lug2026 15:51:32.587] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [time, set, time] and [time, set, timemarker] with inputs: [0, 0s, 0d, 0t]
+[30lug2026 15:51:32.587] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [time, set, timemarker] and [time, set, time] with inputs: [012]
+[30lug2026 15:51:32.588] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [time, of, clock, set, time] and [time, of, clock, set, timemarker] with inputs: [0, 0s, 0d, 0t]
+[30lug2026 15:51:32.589] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [time, of, clock, set, timemarker] and [time, of, clock, set, time] with inputs: [012]
+[30lug2026 15:51:32.637] [modloading-worker-0/INFO] [net.neoforged.neoforge.common.NeoForgeMod/NEOFORGE-MOD]: NeoForge mod loading, version 26.2.0.40-beta, for MC 26.2
+[30lug2026 15:51:33.083] [Render thread/INFO] [com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService/]: Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, profilesHost=https://api.mojang.com, name=PROD]
+[30lug2026 15:51:33.101] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Setting user: Dev
+[30lug2026 15:51:33.174] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Backend library: LWJGL version 3.4.1+2
+[30lug2026 15:51:33.379] [Render thread/INFO] [com.mojang.blaze3d.vulkan.VulkanBackend/]: Preferring discrete GPU: NVIDIA GeForce RTX 4050 Laptop GPU
+[30lug2026 15:51:33.435] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Using graphics backend OpenGL, using drivers: 3.3.0 - Build 32.0.101.5972
+[30lug2026 15:51:33.435] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Using graphics device: Intel(R) UHD Graphics (Intel)
+[30lug2026 15:51:33.435] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Using graphics device extensions: GL_ARB_multi_draw_indirect, GL_ARB_buffer_storage, GL_ARB_shader_draw_parameters, GL_ARB_base_instance, GL_KHR_debug, GL_ARB_draw_indirect, GL_ARB_clip_control, GL_ARB_vertex_attrib_binding, GL_ARB_direct_state_access, GL_EXT_texture_filter_anisotropic
+[30lug2026 15:51:33.940] [modloading-sync-worker/INFO] [snownee.jade.Jade/]: Start loading plugin from ImmersiveOres: com.blocklegend001.immersiveores.imp.client.compat.JadeCompatibility
+[30lug2026 15:51:33.941] [modloading-sync-worker/INFO] [snownee.jade.Jade/]: com.blocklegend001.immersiveores.imp.client.compat.JadeCompatibility loaded: 888.2 μs
+[30lug2026 15:51:33.942] [modloading-sync-worker/INFO] [snownee.jade.Jade/]: Start loading plugin from Jade: snownee.jade.addon.access.AccessibilityPlugin
+[30lug2026 15:51:33.946] [modloading-sync-worker/INFO] [snownee.jade.Jade/]: snownee.jade.addon.access.AccessibilityPlugin loaded: 4.279 ms
+[30lug2026 15:51:33.948] [modloading-sync-worker/INFO] [snownee.jade.Jade/]: Start loading plugin from Jade: snownee.jade.addon.core.CorePlugin
+[30lug2026 15:51:33.953] [modloading-sync-worker/INFO] [snownee.jade.Jade/]: snownee.jade.addon.core.CorePlugin loaded: 4.068 ms
+[30lug2026 15:51:33.953] [modloading-sync-worker/INFO] [snownee.jade.Jade/]: Start loading plugin from Jade: snownee.jade.addon.debug.DebugPlugin
+[30lug2026 15:51:33.956] [modloading-sync-worker/INFO] [snownee.jade.Jade/]: snownee.jade.addon.debug.DebugPlugin loaded: 2.554 ms
+[30lug2026 15:51:33.958] [modloading-sync-worker/INFO] [snownee.jade.Jade/]: Start loading plugin from Jade: snownee.jade.addon.universal.UniversalPlugin
+[30lug2026 15:51:33.975] [modloading-sync-worker/INFO] [snownee.jade.Jade/]: snownee.jade.addon.universal.UniversalPlugin loaded: 16.70 ms
+[30lug2026 15:51:33.977] [modloading-sync-worker/INFO] [snownee.jade.Jade/]: Start loading plugin from Jade: snownee.jade.addon.vanilla.VanillaPlugin
+[30lug2026 15:51:34.001] [modloading-sync-worker/INFO] [snownee.jade.Jade/]: snownee.jade.addon.vanilla.VanillaPlugin loaded: 24.43 ms
+[30lug2026 15:51:34.168] [Render thread/INFO] [net.minecraft.server.packs.resources.ReloadableResourceManager/]: Reloading ResourceManager: vanilla, mod_resources, mod/immersiveores, mod/jade, mod/neoforge
+[30lug2026 15:51:34.336] [resourceLoad/INFO] [net.minecraft.client.gui.font.providers.UnihexProvider/]: Found unifont_all_no_pua-17.0.01.hex, loading
+[30lug2026 15:51:34.336] [resourceLoad/INFO] [net.minecraft.client.gui.font.providers.UnihexProvider/]: Found unifont_pua-17.0.01.hex, loading
+[30lug2026 15:51:34.451] [resourceLoad/INFO] [net.minecraft.client.gui.font.providers.UnihexProvider/]: Found unifont_jp_patch-17.0.01.hex, loading
+[30lug2026 15:51:35.125] [Render thread/WARN] [com.mojang.blaze3d.opengl.GlProgram/]: neoforge:pipeline/item_translucent_unlit shader program does not use sampler Sampler2 defined in the pipeline. This might be a bug.
+[30lug2026 15:51:35.219] [Render thread/WARN] [com.mojang.blaze3d.opengl.GlProgram/]: neoforge:pipeline/item_cutout_unlit shader program does not use sampler Sampler2 defined in the pipeline. This might be a bug.
+[30lug2026 15:51:35.368] [Render thread/INFO] [com.mojang.blaze3d.audio.Library/]: OpenAL initialized on device OpenAL Soft on Altoparlanti (Maonocaster G1 Neo)
+[30lug2026 15:51:35.370] [Render thread/INFO] [net.minecraft.client.sounds.SoundEngine/SOUNDS]: Sound engine started
+[30lug2026 15:51:35.370] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x0 minecraft:textures/atlas/particles.png-atlas
+[30lug2026 15:51:35.411] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 128x128x0 minecraft:textures/atlas/decorated_pot.png-atlas
+[30lug2026 15:51:35.415] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 2048x1024x0 minecraft:textures/atlas/armor_trims.png-atlas
+[30lug2026 15:51:35.467] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x0 minecraft:textures/atlas/paintings.png-atlas
+[30lug2026 15:51:35.471] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 1024x512x0 minecraft:textures/atlas/shield_patterns.png-atlas
+[30lug2026 15:51:35.476] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 2048x2048x4 minecraft:textures/atlas/blocks.png-atlas
+[30lug2026 15:51:35.675] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x512x0 minecraft:textures/atlas/chest.png-atlas
+[30lug2026 15:51:35.678] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x128x0 minecraft:textures/atlas/celestials.png-atlas
+[30lug2026 15:51:35.681] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 1024x512x0 minecraft:textures/atlas/banner_patterns.png-atlas
+[30lug2026 15:51:35.686] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 1024x512x0 minecraft:textures/atlas/items.png-atlas
+[30lug2026 15:51:35.797] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 1024x1024x0 minecraft:textures/atlas/gui.png-atlas
+[30lug2026 15:51:35.854] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 128x64x0 minecraft:textures/atlas/map_decorations.png-atlas
+[30lug2026 15:51:35.859] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x512x0 minecraft:textures/atlas/shulker_boxes.png-atlas
+[30lug2026 15:51:35.930] [Render thread/INFO] [net.neoforged.neoforge.client.entity.animation.json.AnimationLoader/]: Loaded 0 entity animations
+[30lug2026 15:51:40.103] [Render thread/INFO] [net.minecraft.world.item.crafting.RecipeManager/]: Loaded 1660 recipes
+[30lug2026 15:51:40.110] [Render thread/INFO] [net.minecraft.advancements.AdvancementTree/]: Loaded 1775 advancements
+[30lug2026 15:51:40.111] [Render thread/INFO] [net.neoforged.neoforge.common.crafting.RecipePriorityManager/]: Loaded 0 recipe priority overrides
+[30lug2026 15:51:40.249] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Starting integrated minecraft server version 26.2
+[30lug2026 15:51:40.249] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Generating keypair
+[30lug2026 15:51:40.605] [Server thread/INFO] [net.minecraft.server.level.progress.LoggingLevelLoadListener/]: Loading 0 persistent chunks...
+[30lug2026 15:51:40.617] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[30lug2026 15:51:40.636] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[30lug2026 15:51:40.749] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[30lug2026 15:51:40.770] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (world): All chunks are saved
+[30lug2026 15:51:40.770] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[30lug2026 15:51:40.770] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[30lug2026 15:51:40.770] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage: All dimensions are saved
+[30lug2026 15:51:40.775] [Server thread/INFO] [net.neoforged.neoforge.server.permission.PermissionAPI/]: Successfully initialized permission handler neoforge:default_handler
+[30lug2026 15:51:41.396] [Server thread/INFO] [net.minecraft.server.level.progress.LoggingLevelLoadListener/]: Loading 49 chunks for player spawn...
+[30lug2026 15:51:41.397] [Server thread/INFO] [net.minecraft.server.level.progress.LoggingLevelLoadListener/]: Preparing spawn area: 16%
+[30lug2026 15:51:41.427] [Server thread/INFO] [net.minecraft.server.level.progress.LoggingLevelLoadListener/]: Preparing spawn area: 16%
+[30lug2026 15:51:41.627] [Server thread/INFO] [net.minecraft.server.level.progress.LoggingLevelLoadListener/]: Preparing spawn area: 100%
+[30lug2026 15:51:41.627] [Server thread/INFO] [net.minecraft.server.level.progress.LoggingLevelLoadListener/]: Time elapsed: 1022 ms
+[30lug2026 15:51:41.811] [Server thread/INFO] [net.minecraft.server.players.PlayerList/]: Dev[local:E:48043965] logged in with entity id 59 at (-8.5, 78.0, 4.5)
+[30lug2026 15:51:41.851] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev joined the game
+[30lug2026 15:51:41.932] [Render thread/WARN] [net.minecraft.client.multiplayer.ClientPacketListener/]: Ignoring chat session from Dev due to missing Services public key
+[30lug2026 15:51:41.940] [Render thread/INFO] [net.minecraft.advancements.AdvancementTree/]: Loaded 2 advancements
+[30lug2026 15:51:41.950] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Changing view distance to 16, from 10
+[30lug2026 15:51:41.952] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Changing simulation distance to 12, from 0
+[30lug2026 15:51:42.032] [Render thread/INFO] [net.minecraft.client.renderer.DynamicUniformStorage/]: Resizing Dynamic Transforms UBO, capacity limit of 2 reached during a single frame. New capacity will be 4.
+[30lug2026 15:51:42.059] [Render thread/INFO] [snownee.jade.Jade/]: Received config from the server: {}
+[30lug2026 15:51:42.140] [Render thread/INFO] [net.minecraft.client.renderer.DynamicUniformStorage/]: Resizing Dynamic Transforms UBO, capacity limit of 4 reached during a single frame. New capacity will be 8.
+[30lug2026 15:51:42.187] [Render thread/INFO] [net.minecraft.client.renderer.DynamicUniformStorage/]: Resizing Dynamic Transforms UBO, capacity limit of 8 reached during a single frame. New capacity will be 16.
+[30lug2026 15:51:42.562] [Render thread/INFO] [net.minecraft.client.renderer.DynamicUniformStorage/]: Resizing Chunk Sections UBO, capacity limit of 2 reached during a single frame. New capacity will be 8.
+[30lug2026 15:51:42.651] [Render thread/INFO] [net.minecraft.client.renderer.DynamicUniformStorage/]: Resizing Chunk Sections UBO, capacity limit of 8 reached during a single frame. New capacity will be 32.
+[30lug2026 15:51:42.696] [Render thread/INFO] [net.minecraft.client.renderer.DynamicUniformStorage/]: Resizing Chunk Sections UBO, capacity limit of 32 reached during a single frame. New capacity will be 64.
+[30lug2026 15:51:42.785] [Render thread/INFO] [net.minecraft.client.renderer.DynamicUniformStorage/]: Resizing Chunk Sections UBO, capacity limit of 64 reached during a single frame. New capacity will be 128.
+[30lug2026 15:51:42.935] [Render thread/INFO] [net.minecraft.client.renderer.DynamicUniformStorage/]: Resizing Chunk Sections UBO, capacity limit of 128 reached during a single frame. New capacity will be 256.
+[30lug2026 15:51:43.387] [Render thread/INFO] [net.minecraft.client.renderer.DynamicUniformStorage/]: Resizing Chunk Sections UBO, capacity limit of 256 reached during a single frame. New capacity will be 512.
+[30lug2026 15:51:44.817] [Render thread/INFO] [net.minecraft.client.renderer.DynamicUniformStorage/]: Resizing Chunk Sections UBO, capacity limit of 512 reached during a single frame. New capacity will be 1024.
+[30lug2026 15:51:47.852] [Render thread/INFO] [net.minecraft.advancements.AdvancementTree/]: Loaded 4 advancements
+[30lug2026 15:51:49.041] [Render thread/INFO] [net.minecraft.advancements.AdvancementTree/]: Loaded 5 advancements
+[30lug2026 15:51:50.250] [Render thread/INFO] [net.minecraft.advancements.AdvancementTree/]: Loaded 6 advancements
+[30lug2026 15:52:05.887] [Render thread/INFO] [net.minecraft.advancements.AdvancementTree/]: Loaded 7 advancements
+[30lug2026 15:52:24.292] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: [Dev: Set own game mode to Survival Mode]
+[30lug2026 15:52:24.303] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] Set own game mode to Survival Mode
+[30lug2026 15:52:39.228] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Saving and pausing game...
+[30lug2026 15:52:39.244] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[30lug2026 15:52:39.280] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[30lug2026 15:52:39.281] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[30lug2026 15:52:40.990] [IO-Worker-8/WARN] [com.mojang.authlib.yggdrasil.YggdrasilFriendsService/]: Friends service unauthorized (401) — Invalid token
+[30lug2026 15:52:43.078] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Saving and pausing game...
+[30lug2026 15:52:43.087] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[30lug2026 15:52:43.096] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[30lug2026 15:52:43.097] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[30lug2026 15:52:44.177] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Saving and pausing game...
+[30lug2026 15:52:44.187] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[30lug2026 15:52:44.199] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[30lug2026 15:52:44.200] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[30lug2026 15:52:52.924] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] Outline: OFF
+[30lug2026 15:52:53.777] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] Outline: ON
+[30lug2026 15:52:55.793] [Render thread/INFO] [net.minecraft.advancements.AdvancementTree/]: Loaded 10 advancements
+[30lug2026 15:53:37.328] [Server thread/WARN] [net.minecraft.server.level.ServerPlayerGameMode/]: Mismatch in destroy block pos: BlockPos{x=-9, y=78, z=4} BlockPos{x=4, y=76, z=1}
+[30lug2026 15:53:37.428] [Server thread/WARN] [net.minecraft.server.level.ServerPlayerGameMode/]: Mismatch in destroy block pos: BlockPos{x=-9, y=78, z=4} BlockPos{x=4, y=76, z=1}
+[30lug2026 15:53:37.478] [Server thread/WARN] [net.minecraft.server.level.ServerPlayerGameMode/]: Mismatch in destroy block pos: BlockPos{x=-9, y=78, z=4} BlockPos{x=4, y=76, z=1}
+[30lug2026 15:53:37.528] [Server thread/WARN] [net.minecraft.server.level.ServerPlayerGameMode/]: Mismatch in destroy block pos: BlockPos{x=-9, y=78, z=4} BlockPos{x=4, y=76, z=1}
+[30lug2026 15:53:37.578] [Server thread/WARN] [net.minecraft.server.level.ServerPlayerGameMode/]: Mismatch in destroy block pos: BlockPos{x=-9, y=78, z=4} BlockPos{x=4, y=76, z=1}
+[30lug2026 15:53:37.579] [Server thread/WARN] [net.minecraft.server.level.ServerPlayerGameMode/]: Mismatch in destroy block pos: BlockPos{x=-9, y=78, z=4} BlockPos{x=4, y=76, z=1}
+[30lug2026 15:53:37.678] [Server thread/WARN] [net.minecraft.server.level.ServerPlayerGameMode/]: Mismatch in destroy block pos: BlockPos{x=-9, y=78, z=4} BlockPos{x=4, y=76, z=1}
+[30lug2026 15:53:37.727] [Server thread/WARN] [net.minecraft.server.level.ServerPlayerGameMode/]: Mismatch in destroy block pos: BlockPos{x=-9, y=78, z=4} BlockPos{x=4, y=76, z=1}
+[30lug2026 15:53:37.778] [Server thread/WARN] [net.minecraft.server.level.ServerPlayerGameMode/]: Mismatch in destroy block pos: BlockPos{x=-9, y=78, z=4} BlockPos{x=4, y=76, z=1}
+[30lug2026 15:53:37.827] [Server thread/WARN] [net.minecraft.server.level.ServerPlayerGameMode/]: Mismatch in destroy block pos: BlockPos{x=-9, y=78, z=4} BlockPos{x=4, y=76, z=1}
+[30lug2026 15:53:37.827] [Server thread/WARN] [net.minecraft.server.level.ServerPlayerGameMode/]: Mismatch in destroy block pos: BlockPos{x=-9, y=78, z=4} BlockPos{x=4, y=76, z=1}
+[30lug2026 15:53:49.652] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: [Dev: Summoned new Spider]
+[30lug2026 15:53:49.661] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] Summoned new Spider
+[30lug2026 15:53:50.629] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev has made the advancement [Monster Hunter]
+[30lug2026 15:53:50.639] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] Dev has made the advancement [Monster Hunter]
+[30lug2026 15:53:50.656] [Render thread/INFO] [net.minecraft.advancements.AdvancementTree/]: Loaded 52 advancements
+[30lug2026 15:53:51.139] [Render thread/INFO] [net.minecraft.advancements.AdvancementTree/]: Loaded 61 advancements

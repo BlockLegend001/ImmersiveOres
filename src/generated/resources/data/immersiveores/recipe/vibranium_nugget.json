@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    "immersiveores:vibranium_ingot"
+  ],
+  "result": {
+    "count": 9,
+    "id": "immersiveores:vibranium_nugget"
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "minecraft:recipes/decorations/crafting_table": {
+    "criteria": {
+      "unlock_right_away": "2026-05-21 23:20:10 +0200"
+    },
+    "done": true
+  },
+  "minecraft:adventure/adventuring_time": {
+    "criteria": {
+      "minecraft:forest": "2026-05-21 23:20:11 +0200"
+    },
+    "done": false
+  },
+  "immersiveores:enderiumarmor": {
+    "criteria": {
+      "has_enderium_boots": "2026-07-30 15:52:08 +0200"
+    },
+    "done": false
+  },
+  "immersiveores:vulpustools": {
+    "criteria": {
+      "has_vulpus_sword": "2026-07-30 15:52:00 +0200",
+      "has_vulpus_shovel": "2026-07-30 15:52:22 +0200"
+    },
+    "done": false
+  },
+  "immersiveores:recipes/misc/enderium_ingot": {
+    "criteria": {
+      "has_enderium_block": "2026-07-30 15:51:50 +0200"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/chest": {
+    "criteria": {
+      "has_lots_of_items": "2026-07-30 15:52:05 +0200"
+    },
+    "done": true
+  },
+  "immersiveores:vulpusarmor": {
+    "criteria": {
+      "has_vulpus_helmet": "2026-07-30 15:52:03 +0200",
+      "has_vulpus_leggings": "2026-07-30 15:52:12 +0200",
+      "has_vulpus_boots": "2026-07-30 15:52:05 +0200"
+    },
+    "done": false
+  },
+  "immersiveores:vibraniumtools": {
+    "criteria": {
+      "has_vibranium_pickaxe": "2026-07-30 15:51:51 +0200"
+    },
+    "done": false
+  },
+  "immersiveores:recipes/misc/raw_vulpus": {
+    "criteria": {
+      "has_vulpus_block": "2026-07-30 15:51:49 +0200"
+    },
+    "done": true
+  },
+  "immersiveores:enderiumspecialtools": {
+    "criteria": {
+      "has_enderium_hammer": "2026-07-30 15:51:55 +0200"
+    },
+    "done": false
+  },
+  "minecraft:recipes/misc/vibranium_ingot_from_smelting_vibranium_ore": {
+    "criteria": {
+      "has_vibranium_ore": "2026-07-30 15:51:47 +0200"
+    },
+    "done": true
+  },
+  "immersiveores:vulpusspecialtools": {
+    "criteria": {
+      "has_vulpus_paxel": "2026-07-30 15:51:55 +0200"
+    },
+    "done": false
+  },
+  "immersiveores:vibraniumarmor": {
+    "criteria": {
+      "has_vibranium_chestplate": "2026-07-30 15:52:15 +0200"
+    },
+    "done": false
+  },
+  "immersiveores:vibraniumspecialtools": {
+    "criteria": {
+      "has_vibranium_excavator": "2026-07-30 15:51:58 +0200"
+    },
+    "done": false
+  },
+  "minecraft:recipes/misc/vibranium_ingot_from_blasting_vibranium_ore": {
+    "criteria": {
+      "has_vibranium_ore": "2026-07-30 15:51:47 +0200"
+    },
+    "done": true
+  },
+  "DataVersion": 4903
+}

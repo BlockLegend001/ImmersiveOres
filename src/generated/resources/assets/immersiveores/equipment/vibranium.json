@@ -1,0 +1,24 @@
+{
+  "layers": {
+    "horse_body": [
+      {
+        "texture": "immersiveores:vibranium"
+      }
+    ],
+    "humanoid": [
+      {
+        "texture": "immersiveores:vibranium"
+      }
+    ],
+    "humanoid_baby": [
+      {
+        "texture": "immersiveores:vibranium"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "immersiveores:vibranium"
+      }
+    ]
+  }
+}

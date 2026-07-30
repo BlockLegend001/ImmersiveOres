@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:vulpus_ingot_from_smelting_vulpus_ore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_vulpus_ore": {
+      "conditions": {
+        "items": [
+          {
+            "items": "immersiveores:vulpus_ore"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_vulpus_ore"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:vulpus_ingot_from_smelting_vulpus_ore"
+    ]
+  }
+}

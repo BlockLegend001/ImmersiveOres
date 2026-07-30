@@ -1,0 +1,10 @@
+// 26.2	2026-07-30T15:51:14.3827195	Loot Tables
+2a40f7b446486407fb1d832b6db23d1b48aedcba data/immersiveores/loot_table/blocks/enderium_block.json
+733dd037971a41b3e9a537d9a50c0c7ce04bfc0d data/immersiveores/loot_table/blocks/enderium_ore.json
+5e8779537e337592c0353e3a7cd6e0080841c6c5 data/immersiveores/loot_table/blocks/raw_enderium_block.json
+33a494edb31c8f410b86ec73ffa7c4033cec294d data/immersiveores/loot_table/blocks/raw_vibranium_block.json
+a4a825cc1f696e217105fd2e7952ae001a2b964b data/immersiveores/loot_table/blocks/raw_vulpus_block.json
+7767d782f31d572d1fe1dee774cf68af1c2e87d8 data/immersiveores/loot_table/blocks/vibranium_block.json
+ca92840f283eff8a598c6fd671ab6e5cc3e47957 data/immersiveores/loot_table/blocks/vibranium_ore.json
+f6f601da924a7cb7491a6513f523f85c192e3cbd data/immersiveores/loot_table/blocks/vulpus_block.json
+340dac8ba31f1ce17b005b6215eeebe823368e8e data/immersiveores/loot_table/blocks/vulpus_ore.json

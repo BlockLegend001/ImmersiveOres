@@ -1,0 +1,26 @@
+{
+  "stats": {
+    "minecraft:custom": {
+      "minecraft:time_since_rest": 2790,
+      "minecraft:fall_one_cm": 375,
+      "minecraft:walk_one_cm": 207,
+      "minecraft:total_world_time": 1558,
+      "minecraft:leave_game": 1,
+      "minecraft:sneak_time": 38,
+      "minecraft:play_time": 1395,
+      "minecraft:jump": 2,
+      "minecraft:time_since_death": 1395
+    },
+    "minecraft:mined": {
+      "immersiveores:vibranium_ore": 1,
+      "immersiveores:raw_vulpus_block": 1
+    },
+    "minecraft:used": {
+      "immersiveores:vibranium_pickaxe": 2,
+      "immersiveores:enderium_block": 1,
+      "immersiveores:raw_vulpus_block": 1,
+      "immersiveores:vibranium_ore": 1
+    }
+  },
+  "DataVersion": 4903
+}
