@@ -46,7 +46,7 @@ public class ImmersiveOres {
 
     @SubscribeEvent
     public void clientSetup(final FMLClientSetupEvent event) {
-        ModItemProperties.addCustomItemProperties();
+        event.enqueueWork(ModItemProperties::addCustomItemProperties);
     }
 
     @SubscribeEvent
