@@ -45,10 +45,9 @@ public class ImmersiveOres {
         MinecraftForge.EVENT_BUS.register(this);
     }
 
-
     @SubscribeEvent
     public void clientSetup(final FMLClientSetupEvent event) {
-        ModItemProperties.addCustomItemProperties();
+        event.enqueueWork(ModItemProperties::addCustomItemProperties);
     }
 
     @SubscribeEvent
