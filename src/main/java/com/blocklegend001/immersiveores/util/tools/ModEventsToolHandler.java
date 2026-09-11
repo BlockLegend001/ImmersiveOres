@@ -26,6 +26,8 @@ public class ModEventsToolHandler {
 
         ItemStack mainHandItem = player.getMainHandItem();
         BlockPos origin = event.getPos();
+        if (event.getState().getDestroySpeed(event.getLevel(), event.getPos()) == 0.0F) return;
+
         if (HARVESTED_BLOCKS.contains(origin)) return;
 		
 		boolean isSneaking = player.isCrouching() || player.isShiftKeyDown();
