@@ -30,6 +30,10 @@ repositories {
             includeGroupByRegex 'org\\.ladysnake.*'
         }
     }
+    maven {
+        name = "Terraformers"
+        url = "https://maven.terraformersmc.com/"
+    }
 }
 
 fabricApi {
@@ -43,8 +47,8 @@ dependencies {
     mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
     modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 
-//    modCompileOnly "me.shedaniel:RoughlyEnoughItems-api-fabric:${rei_version}"
-//    modRuntimeOnly "me.shedaniel:RoughlyEnoughItems-fabric:${rei_version}"
+    modCompileOnly "me.shedaniel:RoughlyEnoughItems-api-fabric:${rei_version}"
+    modRuntimeOnly "me.shedaniel:RoughlyEnoughItems-fabric:${rei_version}"
 
     modCompileOnly "mcp.mobius.waila:wthit-api:fabric-${wthitVersion}"
     modRuntimeOnly "mcp.mobius.waila:wthit:fabric-${wthitVersion}"
@@ -52,6 +56,8 @@ dependencies {
 
     modImplementation "io.github.ladysnake:PlayerAbilityLib:${pal_version}"
     include "io.github.ladysnake:PlayerAbilityLib:${pal_version}"
+
+    modImplementation("com.terraformersmc:modmenu:${project.modmenu_version}")
 
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 }
