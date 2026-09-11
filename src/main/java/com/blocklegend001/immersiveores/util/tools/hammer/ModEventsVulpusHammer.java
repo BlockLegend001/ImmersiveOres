@@ -25,6 +25,8 @@ public class ModEventsVulpusHammer implements PlayerBlockBreakEvents.Before{
 
         ItemStack mainHandItem = player.getMainHandItem();
         if (!(mainHandItem.getItem() instanceof VulpusHammer hammer)) return true;
+        if (state.getDestroySpeed(world, pos) == 0.0F)  return true;
+
         if (HARVESTED_BLOCKS.contains(pos)) return true;
 
         boolean isSneaking = player.isShiftKeyDown();
