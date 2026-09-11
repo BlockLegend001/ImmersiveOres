@@ -25,6 +25,8 @@ public class ModEventsVibraniumExcavator implements PlayerBlockBreakEvents.Befor
 
         ItemStack mainHandItem = player.getMainHandItem();
         if (!(mainHandItem.getItem() instanceof VibraniumExcavator excavator)) return true;
+        if (state.getDestroySpeed(world, pos) == 0.0F)  return true;
+
         if (HARVESTED_BLOCKS.contains(pos)) return true;
 
         boolean isSneaking = player.isShiftKeyDown();
