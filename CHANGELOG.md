@@ -1,2 +1,3 @@
-- Added KeyBind to Enable/Disable the Outline
-- Now when you craft the Armors the Trim will be transferred
+- Small Bug Fix
+- Added Hungarian Language
+- Added ModMenu Integration
