@@ -1,1 +1,2 @@
-- Fixed a rare crash on startup caused by a bug on bow registration
+- Small bug fix
+- Added Hungarian Language

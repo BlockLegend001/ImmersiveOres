@@ -19,12 +19,14 @@ public class ModEventsEnderiumHammer {
     private static final Set<BlockPos> HARVESTED_BLOCKS = new HashSet<>();
 
     @SubscribeEvent
-    public static boolean onExcavatorUsage(BlockEvent.BreakEvent event) {
+    public static boolean onHammerUsage(BlockEvent.BreakEvent event) {
         Player player = event.getPlayer();
         ItemStack mainHandItem = player.getMainHandItem();
 
         if (!(player instanceof ServerPlayer serverPlayer)) return true;
-        if (!(mainHandItem.getItem() instanceof EnderiumHammer excavator)) return true;
+        if (!(mainHandItem.getItem() instanceof EnderiumHammer hammer)) return true;
+        if (event.getState().getDestroySpeed(event.getLevel(), event.getPos()) == 0.0F) return true;
+
         if (HARVESTED_BLOCKS.contains(event.getPos())) return true;
 
         boolean isSneaking = player.isCrouching() || player.isShiftKeyDown();
@@ -37,7 +39,7 @@ public class ModEventsEnderiumHammer {
             for (BlockPos targetPos : EnderiumHammer.getBlocksToBeDestroyed(radius, event.getPos(), serverPlayer)) {
                 if (targetPos.equals(event.getPos())) continue;
                 if (HARVESTED_BLOCKS.contains(targetPos)) continue;
-                if (!excavator.isCorrectToolForDrops(mainHandItem, event.getLevel().getBlockState(targetPos))) continue;
+                if (!hammer.isCorrectToolForDrops(mainHandItem, event.getLevel().getBlockState(targetPos))) continue;
 
                 HARVESTED_BLOCKS.add(targetPos);
                 serverPlayer.gameMode.destroyBlock(targetPos);
