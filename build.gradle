@@ -38,6 +38,10 @@ repositories {
             includeGroupByRegex 'org\\.ladysnake.*'
         }
     }
+    maven {
+        name = "Terraformers"
+        url = "https://maven.terraformersmc.com/"
+    }
 }
 
 fabricApi {
@@ -62,6 +66,8 @@ dependencies {
 
     modImplementation "io.github.ladysnake:PlayerAbilityLib:${pal_version}"
     include "io.github.ladysnake:PlayerAbilityLib:${pal_version}"
+
+    modImplementation("com.terraformersmc:modmenu:${project.modmenu_version}")
 
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
 }
