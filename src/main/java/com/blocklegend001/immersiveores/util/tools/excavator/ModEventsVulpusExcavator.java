@@ -25,6 +25,8 @@ public class ModEventsVulpusExcavator {
 
         if (!(player instanceof ServerPlayer serverPlayer)) return true;
         if (!(mainHandItem.getItem() instanceof VulpusExcavator excavator)) return true;
+        if (event.getState().getDestroySpeed(event.getLevel(), event.getPos()) == 0.0F) return true;
+
         if (HARVESTED_BLOCKS.contains(event.getPos())) return true;
 
         boolean isSneaking = player.isCrouching() || player.isShiftKeyDown();
