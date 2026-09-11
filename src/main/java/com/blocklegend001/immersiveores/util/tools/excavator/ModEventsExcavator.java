@@ -33,6 +33,8 @@ public final class ModEventsExcavator implements PlayerBlockBreakEvents.Before {
         if (!(player instanceof ServerPlayerEntity serverPlayer)) return true;
         if (world.isClient()) return true;
 
+        if (state.getHardness(world, pos) == 0.0F)  return true;
+
         ItemStack stack = player.getMainHandStack();
         Item item = stack.getItem();
 
