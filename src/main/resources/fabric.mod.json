@@ -7,7 +7,11 @@
   "authors": [
     "Block_Legend001"
   ],
-  "contact": {},
+  "contact": {
+    "homepage": "https://blocklegend001.dev",
+    "sources": "https://github.com/BlockLegend001/ImmersiveOres",
+    "issues": "https://github.com/BlockLegend001/ImmersiveOres/issues"
+  },
   "license": "All-Rights-Reserved",
   "icon": "assets/immersiveores/icon.png",
   "environment": "*",
@@ -21,6 +25,13 @@
     "main": [
       "com.blocklegend001.immersiveores.ImmersiveOres"
     ]
+  },
+  "custom": {
+    "modmenu": {
+      "links": {
+        "modmenu.discord": "https://discord.gg/jVmUTGFMX5"
+      }
+    }
   },
   "mixins": [
     "immersiveores.mixins.json"
