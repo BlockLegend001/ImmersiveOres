@@ -1,3 +1,2 @@
-- Added KeyBind to Enable/Disable the Outline
-- Now when you craft the Armors the Trim will be transferred
-- Fixed durability enchants not being able to be applied to bows
+- Small bug fix
+- Added Hungarian Language
