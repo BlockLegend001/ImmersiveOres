@@ -9,7 +9,6 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
-import net.neoforged.neoforge.event.level.BlockEvent;
 import net.neoforged.neoforge.event.level.block.BreakBlockEvent;
 
 import java.util.HashSet;
@@ -26,6 +25,8 @@ public class ModEventsVulpusExcavator {
 
         if (!(player instanceof ServerPlayer serverPlayer)) return true;
         if (!(mainHandItem.getItem() instanceof VulpusExcavator excavator)) return true;
+        if (event.getState().getDestroySpeed(event.getLevel(), event.getPos()) == 0.0F) return true;
+
         if (HARVESTED_BLOCKS.contains(event.getPos())) return true;
 
         boolean isSneaking = player.isCrouching() || player.isShiftKeyDown();

@@ -9,7 +9,6 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
-import net.neoforged.neoforge.event.level.BlockEvent;
 import net.neoforged.neoforge.event.level.block.BreakBlockEvent;
 
 import java.util.HashSet;
@@ -25,7 +24,9 @@ public class ModEventsVulpusHammer {
         ItemStack mainHandItem = player.getMainHandItem();
 
         if (!(player instanceof ServerPlayer serverPlayer)) return true;
-        if (!(mainHandItem.getItem() instanceof VulpusHammer excavator)) return true;
+        if (!(mainHandItem.getItem() instanceof VulpusHammer hammer)) return true;
+        if (event.getState().getDestroySpeed(event.getLevel(), event.getPos()) == 0.0F) return true;
+
         if (HARVESTED_BLOCKS.contains(event.getPos())) return true;
 
         boolean isSneaking = player.isCrouching() || player.isShiftKeyDown();
@@ -38,7 +39,7 @@ public class ModEventsVulpusHammer {
             for (BlockPos targetPos : VulpusHammer.getBlocksToBeDestroyed(radius, event.getPos(), serverPlayer)) {
                 if (targetPos.equals(event.getPos())) continue;
                 if (HARVESTED_BLOCKS.contains(targetPos)) continue;
-                if (!excavator.isCorrectToolForDrops(mainHandItem, event.getLevel().getBlockState(targetPos))) continue;
+                if (!hammer.isCorrectToolForDrops(mainHandItem, event.getLevel().getBlockState(targetPos))) continue;
 
                 HARVESTED_BLOCKS.add(targetPos);
                 serverPlayer.gameMode.destroyBlock(targetPos);
