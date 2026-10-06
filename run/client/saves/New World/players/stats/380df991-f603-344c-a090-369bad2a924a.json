@@ -1,0 +1,37 @@
+{
+  "stats": {
+    "minecraft:mined": {
+      "immersiveores:vibranium_ore": 1,
+      "minecraft:dirt": 6,
+      "immersiveores:raw_vulpus_block": 1,
+      "minecraft:grass_block": 9,
+      "minecraft:stone": 138
+    },
+    "minecraft:custom": {
+      "minecraft:time_since_rest": 3424,
+      "minecraft:fall_one_cm": 375,
+      "minecraft:walk_one_cm": 822,
+      "minecraft:total_world_time": 1875,
+      "minecraft:leave_game": 1,
+      "minecraft:fly_one_cm": 63,
+      "minecraft:crouch_one_cm": 1,
+      "minecraft:sneak_time": 81,
+      "minecraft:play_time": 1712,
+      "minecraft:jump": 3,
+      "minecraft:time_since_death": 1712
+    },
+    "minecraft:used": {
+      "immersiveores:vibranium_pickaxe": 2,
+      "immersiveores:enderium_hammer": 138,
+      "immersiveores:enderium_block": 1,
+      "immersiveores:raw_vulpus_block": 1,
+      "immersiveores:vibranium_ore": 1,
+      "immersiveores:vibranium_excavator": 15
+    },
+    "minecraft:picked_up": {
+      "minecraft:dirt": 14,
+      "minecraft:cobblestone": 22
+    }
+  },
+  "DataVersion": 5023
+}

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "N": "minecraft:netherite_chestplate",
+    "V": "immersiveores:vibranium_ingot"
+  },
+  "pattern": [
+    "VNV",
+    "VVV",
+    "VVV"
+  ],
+  "result": {
+    "id": "immersiveores:vibranium_chestplate"
+  }
+}

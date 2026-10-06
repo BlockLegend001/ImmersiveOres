@@ -1,0 +1,50 @@
+package com.blocklegend001.immersiveores.block.custom.vibranium;
+
+import com.blocklegend001.immersiveores.block.ModBlocks;
+import com.blocklegend001.immersiveores.item.ModItems;
+import com.blocklegend001.immersiveores.util.color.ColoredBlock;
+import com.blocklegend001.immersiveores.util.tooltip.TooltipBlock;
+import net.minecraft.ChatFormatting;
+import net.minecraft.core.BlockPos;
+import net.minecraft.network.chat.Component;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.state.BlockState;
+
+public class VibraniumBlock extends Block implements TooltipBlock, ColoredBlock {
+    public VibraniumBlock(Properties p_49795_) {
+        super(p_49795_);
+    }
+
+    @Override
+    public boolean canHarvestBlock(BlockState state, BlockGetter level, BlockPos pos, Player player) {
+        ItemStack itemInHand = player.getMainHandItem();
+
+        if (state.getBlock() == ModBlocks.VIBRANIUM_BLOCK.get()) {
+            return itemInHand.is(ModItems.VIBRANIUM_PICKAXE.get())
+                    || itemInHand.is(Items.NETHERITE_PICKAXE)
+                    || itemInHand.is(ModItems.VULPUS_PICKAXE.get())
+                    || itemInHand.is(ModItems.ENDERIUM_PICKAXE.get())
+                    || itemInHand.is(ModItems.VIBRANIUM_HAMMER.get())
+                    || itemInHand.is(ModItems.VULPUS_HAMMER.get())
+                    || itemInHand.is(ModItems.ENDERIUM_HAMMER.get())
+                    || itemInHand.is(ModItems.VIBRANIUM_PAXEL.get())
+                    || itemInHand.is(ModItems.VULPUS_PAXEL.get())
+                    || itemInHand.is(ModItems.ENDERIUM_PAXEL.get());
+        }
+        return super.canHarvestBlock(state, level, pos, player);
+    }
+
+    @Override
+    public ChatFormatting getColor() {
+        return ChatFormatting.LIGHT_PURPLE;
+    }
+
+    @Override
+    public void appendClientTooltip(ItemStack stack, TooltipAccept tooltips) {
+        tooltips.accept(Component.translatable("tooltip.immersiveores.breakvibranium.tooltip").withStyle(ChatFormatting.LIGHT_PURPLE));
+    }
+}

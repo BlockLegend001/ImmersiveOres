@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "entries": [
+        {
+          "type": "minecraft:alternatives",
+          "children": [
+            {
+              "type": "minecraft:item",
+              "condition": "minecraft:tool/can_silk_touch",
+              "name": "immersiveores:vibranium_ore"
+            },
+            {
+              "type": "minecraft:item",
+              "modifier": {
+                "type": "minecraft:explosion_decay"
+              },
+              "name": "immersiveores:raw_vibranium"
+            }
+          ]
+        }
+      ],
+      "rolls": 1
+    }
+  ],
+  "random_sequence": "immersiveores:blocks/vibranium_ore"
+}

@@ -1,0 +1,65 @@
+package com.blocklegend001.immersiveores.item.custom.vulpus;
+
+import com.blocklegend001.immersiveores.config.VulpusConfig;
+import com.blocklegend001.immersiveores.item.ModToolTiers;
+import com.blocklegend001.immersiveores.util.ScreenUtils;
+import net.minecraft.ChatFormatting;
+import net.minecraft.core.component.DataComponents;
+import net.minecraft.network.chat.Component;
+import net.minecraft.tags.BlockTags;
+import net.minecraft.util.Unit;
+import net.minecraft.world.InteractionResult;
+import net.minecraft.world.item.*;
+import net.minecraft.world.item.component.BlockTransformers;
+import net.minecraft.world.item.component.TooltipDisplay;
+import net.minecraft.world.item.context.UseOnContext;
+
+import java.util.function.Consumer;
+
+public class VulpusHoe extends Item {
+    private static Properties createSettings(Properties properties, boolean unbreakable, int durability) {
+        properties.durability(durability);
+
+        if (unbreakable) {
+            properties.component(DataComponents.UNBREAKABLE, Unit.INSTANCE);
+        }
+        return properties;
+    }
+
+    public VulpusHoe(ModToolTiers material, float attackDamage, float attackSpeed, Properties settings) {
+        super(
+                material.applyToolProperties(
+                        createSettings(settings, VulpusConfig.UNBREAKABLE_VULPUS.get(), VulpusConfig.DURABILITY_VULPUS.get()),
+                        BlockTags.MINEABLE_WITH_HOE,
+                        attackDamage,
+                        attackSpeed
+                )
+        );
+    }
+
+    @Override
+    public Component getName(ItemStack stack) {
+        return super.getName(stack).copy().withStyle(ChatFormatting.DARK_AQUA);
+    }
+
+    @Override
+    public InteractionResult useOn(UseOnContext context) {
+        return context.getLevel().registryAccess()
+                .getOrThrow(BlockTransformers.HOE)
+                .value()
+                .transformBlock(context);
+    }
+
+    @Override
+    public void appendHoverText(ItemStack pStack, TooltipContext p_333372_, TooltipDisplay p_396484_, Consumer<Component> consumer, TooltipFlag p_41424_) {
+        super.appendHoverText(pStack, p_333372_, p_396484_, consumer, p_41424_);
+        if(ScreenUtils.isShiftDown()) {
+            if (VulpusConfig.UNBREAKABLE_VULPUS.get()) {
+                consumer.accept(Component.translatable("tooltip.immersiveores.unbreakble.tooltip").withStyle(ChatFormatting.RED));
+            }
+            consumer.accept(Component.translatable("tooltip.immersiveores.immunetofire.tooltip").withStyle(ChatFormatting.RED));
+        } else {
+            consumer.accept(Component.translatable("tooltip.immersiveores.pressshiftformoreinfo.tooltip").withStyle(ChatFormatting.RED));
+        }
+    }
+}
