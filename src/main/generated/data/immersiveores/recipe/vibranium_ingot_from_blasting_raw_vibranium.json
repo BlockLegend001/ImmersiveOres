@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:blasting",
+  "category": "blocks",
+  "cookingtime": 100,
+  "experience": 1.0,
+  "group": "immersiveores:vibranium_ingot_cooked_blast",
+  "ingredient": "immersiveores:raw_vibranium",
+  "result": {
+    "id": "immersiveores:vibranium_ingot"
+  }
+}

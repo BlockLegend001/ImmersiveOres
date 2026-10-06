@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "id": "immersiveores",
+  "version": "${version}",
+  "name": "ImmersiveOres",
+  "description": "Immersive Ores add three new ores to the game, Vibranium, Vulpus and Enderium, with the aim of improving the cave and mining experience, with the addition of new armor and tools with special abilities",
+  "authors": [
+    "Block_Legend001"
+  ],
+  "contact": {
+    "homepage": "https://blocklegend001.dev",
+    "sources": "https://github.com/BlockLegend001/ImmersiveOres",
+    "issues": "https://github.com/BlockLegend001/ImmersiveOres/issues"
+  },
+  "license": "All-Rights-Reserved",
+  "icon": "assets/immersiveores/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "com.blocklegend001.immersiveores.ImmersiveOresClient"
+    ],
+    "fabric-datagen": [
+      "com.blocklegend001.immersiveores.datagen.DataGenerators"
+    ],
+    "main": [
+      "com.blocklegend001.immersiveores.ImmersiveOres"
+    ],
+    "jade": [
+      "com.blocklegend001.immersiveores.imp.client.compat.JadeCompatibility"
+    ]
+  },
+  "custom": {
+    "modmenu": {
+      "links": {
+        "modmenu.discord": "https://discord.gg/jVmUTGFMX5"
+      }
+    }
+  },
+  "mixins": [
+    "immersiveores.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.19.5",
+    "minecraft": "~26.3",
+    "java": ">=25",
+    "fabric-api": "*"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "layers": {
+    "horse_body": [
+      {
+        "texture": "immersiveores:enderium"
+      }
+    ],
+    "humanoid": [
+      {
+        "texture": "immersiveores:enderium"
+      }
+    ],
+    "humanoid_baby": [
+      {
+        "texture": "immersiveores:enderium"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "immersiveores:enderium"
+      }
+    ]
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "E": "immersiveores:enderium_ingot",
+    "N": "immersiveores:vulpus_leggings"
+  },
+  "pattern": [
+    "EEE",
+    "ENE",
+    "E E"
+  ],
+  "result": {
+    "id": "immersiveores:enderium_leggings"
+  }
+}

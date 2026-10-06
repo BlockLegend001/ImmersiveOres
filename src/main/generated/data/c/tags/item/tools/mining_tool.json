@@ -1,0 +1,25 @@
+{
+  "values": [
+    "immersiveores:vibranium_hammer",
+    "immersiveores:vulpus_hammer",
+    "immersiveores:enderium_hammer",
+    "immersiveores:vibranium_excavator",
+    "immersiveores:vulpus_excavator",
+    "immersiveores:enderium_excavator",
+    "immersiveores:vibranium_pickaxe",
+    "immersiveores:vulpus_pickaxe",
+    "immersiveores:enderium_pickaxe",
+    "immersiveores:vibranium_hoe",
+    "immersiveores:vulpus_hoe",
+    "immersiveores:enderium_hoe",
+    "immersiveores:vibranium_axe",
+    "immersiveores:vulpus_axe",
+    "immersiveores:enderium_axe",
+    "immersiveores:vibranium_shovel",
+    "immersiveores:vulpus_shovel",
+    "immersiveores:enderium_shovel",
+    "immersiveores:vibranium_paxel",
+    "immersiveores:vulpus_paxel",
+    "immersiveores:enderium_paxel"
+  ]
+}

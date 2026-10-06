@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    "immersiveores:raw_vulpus_block"
+  ],
+  "result": {
+    "count": 9,
+    "id": "immersiveores:raw_vulpus"
+  }
+}

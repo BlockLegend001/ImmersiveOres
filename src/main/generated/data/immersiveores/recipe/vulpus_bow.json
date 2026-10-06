@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "D": "minecraft:string",
+    "E": "immersiveores:vulpus_ingot",
+    "S": "immersiveores:vulpus_stick"
+  },
+  "pattern": [
+    " SD",
+    "SED",
+    " SD"
+  ],
+  "result": {
+    "id": "immersiveores:vulpus_bow"
+  }
+}
