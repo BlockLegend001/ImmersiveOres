@@ -50,10 +50,6 @@ dependencies {
     implementation "net.fabricmc:fabric-loader:${project.loader_version}"
     implementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
 
-//    compileOnly "mcp.mobius.waila:wthit-api:fabric-${wthitVersion}"
-//    runtimeOnly "mcp.mobius.waila:wthit:fabric-${wthitVersion}"
-//    runtimeOnly "lol.bai:badpackets:fabric-${badpacketsVersion}"
-
     implementation "io.github.ladysnake:PlayerAbilityLib:${pal_version}"
     include "io.github.ladysnake:PlayerAbilityLib:${pal_version}"
 
