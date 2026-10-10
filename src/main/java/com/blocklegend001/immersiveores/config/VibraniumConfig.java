@@ -67,7 +67,7 @@ public class VibraniumConfig {
         configs.addKeyValuePair(new Pair<>("protectionValueVibraniumHelmet", 6), "Protection value of Vibranium Helmet");
 
         configs.addKeyValuePair(new Pair<>("toughnessValueVibraniumArmor", 3), "Toughness value of Vibranium Armor");
-        configs.addKeyValuePair(new Pair<>("knockbackResistanceValueVibraniumArmor", 0.2), "Knockback resistance of Vibranium Armor");
+        configs.addKeyValuePair(new Pair<>("knockbackResistanceValueVibraniumArmor", 0.1), "Knockback resistance of Vibranium Armor");
         configs.addKeyValuePair(new Pair<>("enchantmentValueVibraniumArmor", 55), "Enchantment value of Vibranium Armor");
 
         configs.addComment("--- Vibranium Armor Special Effects and Abilities ---");
@@ -130,7 +130,7 @@ public class VibraniumConfig {
         protectionValueVibraniumHelmet = VIBRANIUM_CONFIG.getOrDefault("protectionValueVibraniumHelmet", 6);
 
         toughnessValueVibraniumArmor = VIBRANIUM_CONFIG.getOrDefault("toughnessValueVibraniumArmor", 3);
-        knockbackResistanceValueVibraniumArmor = VIBRANIUM_CONFIG.getOrDefault("knockbackResistanceValueVibraniumArmor", 0.2);
+        knockbackResistanceValueVibraniumArmor = VIBRANIUM_CONFIG.getOrDefault("knockbackResistanceValueVibraniumArmor", 0.1);
         enchantmentValueVibraniumArmor = VIBRANIUM_CONFIG.getOrDefault("enchantmentValueVibraniumArmor", 55);
         durabilityVibranium = VIBRANIUM_CONFIG.getOrDefault("durabilityVibranium", 2562);
         unbreakableVibranium = VIBRANIUM_CONFIG.getOrDefault("unbreakableVibranium", false);
