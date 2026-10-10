@@ -69,7 +69,7 @@ public class VibraniumConfig {
         configs.addKeyValuePair(new Pair<>("protectionValueVibraniumHorseArmor", 12), "Protection value of Vibranium Horse Armor");
 
         configs.addKeyValuePair(new Pair<>("toughnessValueVibraniumArmor", 3), "Toughness value of Vibranium Armor");
-        configs.addKeyValuePair(new Pair<>("knockbackResistanceValueVibraniumArmor", 0.2), "Knockback resistance of Vibranium Armor");
+        configs.addKeyValuePair(new Pair<>("knockbackResistanceValueVibraniumArmor", 0.1), "Knockback resistance of Vibranium Armor");
         configs.addKeyValuePair(new Pair<>("enchantmentValueVibraniumArmor", 55), "Enchantment value of Vibranium Armor");
 
         configs.addComment("--- Vibranium Armor Special Effects and Abilities ---");

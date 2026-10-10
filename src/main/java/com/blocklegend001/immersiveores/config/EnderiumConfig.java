@@ -74,7 +74,7 @@ public class EnderiumConfig {
         configs.addKeyValuePair(new Pair<>("protectionValueEnderiumHorseArmor", 20), "Protection value of Enderium Horse Armor");
 
         configs.addKeyValuePair(new Pair<>("toughnessValueEnderiumArmor", 10), "Toughness value of Enderium Armor");
-        configs.addKeyValuePair(new Pair<>("knockbackResistanceValueEnderiumArmor", 0.4), "Knockback resistance of Enderium Armor");
+        configs.addKeyValuePair(new Pair<>("knockbackResistanceValueEnderiumArmor", 0.2), "Knockback resistance of Enderium Armor");
         configs.addKeyValuePair(new Pair<>("enchantmentValueEnderiumArmor", 65), "Enchantment value of Enderium Armor");
 
         configs.addComment("Enderium Armor Special Effects and Abilities");
