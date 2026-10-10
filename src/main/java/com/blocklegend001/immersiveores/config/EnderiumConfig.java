@@ -144,7 +144,7 @@ public class EnderiumConfig {
         protectionValueEnderiumHorseArmor = ENDERIUM_CONFIG.getOrDefault("protectionValueEnderiumHorseArmor", 20);
 
         toughnessValueEnderiumArmor = ENDERIUM_CONFIG.getOrDefault("toughnessValueEnderiumArmor", 10);
-        knockbackResistanceValueEnderiumArmor = ENDERIUM_CONFIG.getOrDefault("knockbackResistanceValueEnderiumArmor", 0.4);
+        knockbackResistanceValueEnderiumArmor = ENDERIUM_CONFIG.getOrDefault("knockbackResistanceValueEnderiumArmor", 0.2);
         enchantmentValueEnderiumArmor = ENDERIUM_CONFIG.getOrDefault("enchantmentValueEnderiumArmor", 65);
 
         speedIIIEnderiumArmor= ENDERIUM_CONFIG.getOrDefault("speedIIIEnderiumArmor", true);

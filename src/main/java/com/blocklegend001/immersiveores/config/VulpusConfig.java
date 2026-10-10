@@ -140,7 +140,7 @@ public class VulpusConfig {
         protectionValueVulpusHorseArmor = VULPUS_CONFIG.getOrDefault("protectionValueVulpusHorseArmor", 16);
 
         toughnessValueVulpusArmor = VULPUS_CONFIG.getOrDefault("toughnessValueVulpusArmor", 7);
-        knockbackResistanceValueVulpusArmor = VULPUS_CONFIG.getOrDefault("knockbackResistanceValueVulpusArmor", 0.3);
+        knockbackResistanceValueVulpusArmor = VULPUS_CONFIG.getOrDefault("knockbackResistanceValueVulpusArmor", 0.15);
         enchantmentValueVulpusArmor = VULPUS_CONFIG.getOrDefault("enchantmentValueVulpusArmor", 65);
         durabilityVulpus = VULPUS_CONFIG.getOrDefault("durabilityVulpus", 3093);
         unbreakableVulpus = VULPUS_CONFIG.getOrDefault("unbreakableVulpus", false);

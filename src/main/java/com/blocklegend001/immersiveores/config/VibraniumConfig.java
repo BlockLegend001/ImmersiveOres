@@ -133,7 +133,7 @@ public class VibraniumConfig {
         protectionValueVibraniumHorseArmor = VIBRANIUM_CONFIG.getOrDefault("protectionValueVibraniumHorseArmor", 12);
 
         toughnessValueVibraniumArmor = VIBRANIUM_CONFIG.getOrDefault("toughnessValueVibraniumArmor", 3);
-        knockbackResistanceValueVibraniumArmor = VIBRANIUM_CONFIG.getOrDefault("knockbackResistanceValueVibraniumArmor", 0.2);
+        knockbackResistanceValueVibraniumArmor = VIBRANIUM_CONFIG.getOrDefault("knockbackResistanceValueVibraniumArmor", 0.1);
         enchantmentValueVibraniumArmor = VIBRANIUM_CONFIG.getOrDefault("enchantmentValueVibraniumArmor", 55);
         durabilityVibranium = VIBRANIUM_CONFIG.getOrDefault("durabilityVibranium", 2562);
         unbreakableVibranium = VIBRANIUM_CONFIG.getOrDefault("unbreakableVibranium", false);
