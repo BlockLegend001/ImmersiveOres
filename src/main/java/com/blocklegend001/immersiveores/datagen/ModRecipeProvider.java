@@ -1,5 +1,6 @@
 package com.blocklegend001.immersiveores.datagen;
 
+import com.blocklegend001.immersiveores.ImmersiveOres;
 import com.blocklegend001.immersiveores.block.ModBlocks;
 import com.blocklegend001.immersiveores.item.ModItems;
 import net.minecraft.advancements.Advancement;
@@ -8,8 +9,10 @@ import net.minecraft.core.registries.MultiRegistryBootstrap;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.recipes.*;
 import net.minecraft.data.worldgen.BootstrapContext;
+import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.tags.ItemTags;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.CookingBookCategory;
 import net.minecraft.world.item.crafting.Ingredient;
@@ -56,11 +59,7 @@ public class ModRecipeProvider extends RecipeProvider {
                 .unlockedBy("has_vibranium_ingot", has(ModItems.VIBRANIUM_INGOT.get()))
                 .save(this.output);
 
-        oreSmelting(VIBRANIUM_SMELTABLES, RecipeCategory.MISC, CookingBookCategory.BLOCKS, ModItems.VIBRANIUM_INGOT.get(),
-                1.0f, 200, "immersiveores:vibranium_ingot_cooked");
-
-        oreBlasting(VIBRANIUM_SMELTABLES, RecipeCategory.MISC, CookingBookCategory.BLOCKS, ModItems.VIBRANIUM_INGOT.get(),
-                1.0f, 100, "immersiveores:vibranium_ingot_cooked_blast");
+        basicBlastingAndSmeltingRecipe(VIBRANIUM_SMELTABLES, ModItems.VIBRANIUM_INGOT.get(), 1.0f, 200);
 
         shapeless(RecipeCategory.MISC, ModItems.VIBRANIUM_NUGGET.get(), 9)
                 .requires(Ingredient.of(ModItems.VIBRANIUM_INGOT.get().asItem()))
@@ -241,11 +240,7 @@ public class ModRecipeProvider extends RecipeProvider {
                 .unlockedBy("has_vulpus_ingot", has(ModItems.VULPUS_INGOT.get()))
                 .save(this.output);
 
-        oreSmelting(VULPUS_SMELTABLES, RecipeCategory.MISC, CookingBookCategory.BLOCKS, ModItems.VULPUS_INGOT.get(),
-                1.0f, 224, "immersiveores:vulpus_ingot_cooked");
-
-        oreBlasting(VULPUS_SMELTABLES, RecipeCategory.MISC, CookingBookCategory.BLOCKS, ModItems.VULPUS_INGOT.get(),
-                1.0f, 112, "immersiveores:vulpus_ingot_cooked_blast");
+        basicBlastingAndSmeltingRecipe(VULPUS_SMELTABLES, ModItems.VULPUS_INGOT.get(), 1.0f, 225);
 
         shapeless(RecipeCategory.MISC, ModItems.VULPUS_NUGGET.get(), 9)
                 .requires(Ingredient.of(ModItems.VULPUS_INGOT.get().asItem()))
@@ -426,11 +421,7 @@ public class ModRecipeProvider extends RecipeProvider {
                 .unlockedBy("has_enderium_ingot", has(ModItems.ENDERIUM_INGOT.get()))
                 .save(this.output);
 
-        oreSmelting(ENDERIUM_SMELTABLES, RecipeCategory.MISC, CookingBookCategory.BLOCKS, ModItems.ENDERIUM_INGOT.get(),
-                1.0f, 250, "immersiveores:enderium_ingot_cooked");
-
-        oreBlasting(ENDERIUM_SMELTABLES, RecipeCategory.MISC, CookingBookCategory.BLOCKS, ModItems.ENDERIUM_INGOT.get(),
-                1.0f, 125, "immersiveores:enderium_ingot_cooked_blast");
+        basicBlastingAndSmeltingRecipe(ENDERIUM_SMELTABLES, ModItems.ENDERIUM_INGOT.get(), 1.0f, 250);
 
         shapeless(RecipeCategory.MISC, ModItems.ENDERIUM_NUGGET.get(), 9)
                 .requires(Ingredient.of(ModItems.ENDERIUM_INGOT.get().asItem()))
@@ -593,6 +584,44 @@ public class ModRecipeProvider extends RecipeProvider {
                 .pattern("ENE")
                 .unlockedBy("has_enderium_ingot", has(ModItems.ENDERIUM_INGOT.get()))
                 .save(this.output);
+    }
+
+    private void basicBlastingAndSmeltingRecipe(List<ItemLike> inputs, ItemLike outputItem,
+                                                float experience, int smeltTime) {
+        int blastTime = smeltTime / 2;
+
+        for (ItemLike input : inputs) {
+            String name = getItemName(input);
+
+            SimpleCookingRecipeBuilder.blasting(
+                            Ingredient.of(input),
+                            RecipeCategory.MISC,
+                            CookingBookCategory.MISC,
+                            outputItem,
+                            experience,
+                            blastTime
+                    )
+                    .unlockedBy("has_".concat(name), has(input))
+                    .save(output, resourceKeyForRecipe(name.concat("_blasting")));
+
+            SimpleCookingRecipeBuilder.smelting(
+                            Ingredient.of(input),
+                            RecipeCategory.MISC,
+                            CookingBookCategory.MISC,
+                            outputItem,
+                            experience,
+                            smeltTime
+                    )
+                    .unlockedBy("has_".concat(name), has(input))
+                    .save(output, resourceKeyForRecipe(name.concat("_smelting")));
+        }
+    }
+
+    protected static ResourceKey<Recipe<?>> resourceKeyForRecipe(String name) {
+        return ResourceKey.create(
+                Registries.RECIPE,
+                Identifier.fromNamespaceAndPath(ImmersiveOres.MODID, name)
+        );
     }
 
     public static MultiRegistryBootstrap create() {
