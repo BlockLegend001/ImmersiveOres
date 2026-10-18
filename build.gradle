@@ -125,12 +125,14 @@ publishMods {
         minecraftVersions.add(minecraft_version)
         clientRequired = true
         serverRequired = true
+        requires("jade")
     }
 
     modrinth {
         accessToken = providers.environmentVariable("MODRINTH_TOKEN")
         projectId = "F9Vuwq3S"
         minecraftVersions.add(minecraft_version)
+        requires("jade")
     }
 }
 
