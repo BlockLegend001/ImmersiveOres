@@ -33,7 +33,7 @@ import java.util.function.Consumer;
 public class VibraniumArmor extends Item {
 
     public VibraniumArmor(ArmorMaterial material, ArmorType type, Properties settings) {
-        super(computeSettings(material, type, EnderiumConfig.UNBREAKABLE_ENDERIUM.get(), EnderiumConfig.DURABILITY_ENDERIUM.get(), settings));
+        super(computeSettings(material, type, VibraniumConfig.UNBREAKABLE_VIBRANIUM.get(), VibraniumConfig.DURABILITY_VIBRANIUM.get(), settings));
     }
 
     private static Properties computeSettings(ArmorMaterial material, ArmorType type, boolean unbreakable, int durability, Properties settings) {
