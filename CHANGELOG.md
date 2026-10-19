@@ -1,2 +1,1 @@
-- Small bug fix
-- Added Hungarian Language
+- Fixed Durability & Unbreakable Config for Vibranium Armor
