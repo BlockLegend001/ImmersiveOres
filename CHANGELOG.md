@@ -1,1 +1,1 @@
-Fixed Smelting Recipes of the ores
+- Fixed Durability & Unbreakable Config for Vibranium Armor
