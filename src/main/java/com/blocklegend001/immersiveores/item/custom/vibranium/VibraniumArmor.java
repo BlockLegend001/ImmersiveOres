@@ -116,7 +116,7 @@ public class VibraniumArmor extends Item {
         super.appendHoverText(pStack, p_333372_, p_396484_, consumer, p_41424_);
         if(Screen.hasShiftDown()) {
             if (ModItems.VIBRANIUM_BOOTS.get() == pStack.getItem()) {
-                if (EnderiumConfig.UNBREAKABLE_ENDERIUM.get()) {
+                if (VibraniumConfig.UNBREAKABLE_VIBRANIUM.get()) {
                     consumer.accept(Component.translatable("tooltip.immersiveores.unbreakble.tooltip").withStyle(ChatFormatting.LIGHT_PURPLE));
                 }
                 consumer.accept(Component.translatable("tooltip.immersiveores.immunetofire.tooltip").withStyle(ChatFormatting.LIGHT_PURPLE));
