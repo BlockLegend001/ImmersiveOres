@@ -1,2 +1,1 @@
-- Small bug fix
-- Added Hungarian Language
+- Adjusted Knockback Resistance
