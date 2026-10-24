@@ -88,8 +88,8 @@ public class VulpusConfig {
                 .comment("Enchantment value for Vulpus Armor | Default Value = 65")
                 .defineInRange("enchantmentValueVulpusArmor", 65, 0, Integer.MAX_VALUE);
         knockbackResistanceValueVulpusArmor = BUILDER
-                .comment("Knockback resistance for Vulpus Armor | Default Value = 0.3")
-                .defineInRange("knockbackResistanceValueVulpusArmor", 0.3F, 0, Float.MAX_VALUE);
+                .comment("Knockback resistance for Vulpus Armor | Default Value = 0.15")
+                .defineInRange("knockbackResistanceValueVulpusArmor", 0.15F, 0, Float.MAX_VALUE);
         protectionValueVulpusBoots = BUILDER
                 .comment("Protection value for Vulpus Boots | Default Value = 9")
                 .defineInRange("protectionValueVulpusBoots", 9, 0, Integer.MAX_VALUE);
