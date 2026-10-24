@@ -1,3 +1,1 @@
-- Small Bug Fix
-- Added Hungarian Language
-- Added ModMenu Integration
+- Adjusted Knockback Resistance
