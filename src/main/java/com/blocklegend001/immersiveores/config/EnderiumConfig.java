@@ -122,8 +122,8 @@ public class EnderiumConfig {
                 .comment("Enchantment value for Enderium Armor | Default Value = 65")
                 .defineInRange("enchantmentValueEnderiumArmor", 65, 0, Integer.MAX_VALUE);
         knockbackResistanceValueEnderiumArmor = BUILDER
-                .comment("Knockback resistance for Enderium Armor | Default Value = 0.4")
-                .defineInRange("knockbackResistanceValueEnderiumArmor", 0.4F, 0, Float.MAX_VALUE);
+                .comment("Knockback resistance for Enderium Armor | Default Value = 0.2")
+                .defineInRange("knockbackResistanceValueEnderiumArmor", 0.2F, 0, Float.MAX_VALUE);
         protectionValueEnderiumBoots = BUILDER
                 .comment("Protection value for Enderium Boots | Default Value = 12")
                 .defineInRange("protectionValueEnderiumBoots", 12, 0, Integer.MAX_VALUE);
