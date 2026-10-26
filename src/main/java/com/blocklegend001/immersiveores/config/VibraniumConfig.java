@@ -77,8 +77,8 @@ public final class VibraniumConfig {
                 .comment("Enchantment value for Vibranium Armor | Default Value = 55")
                 .defineInRange("enchantmentValueVibraniumArmor", 55, 0, Integer.MAX_VALUE);
         KNOCKBACK_RESISTANCE_VALUE_VIBRANIUM_ARMOR = BUILDER
-                .comment("Knockback resistance for Vibranium Armor | Default Value = 0.2")
-                .defineInRange("knockbackResistanceValueVibraniumArmor", 0.2, 0, Double.MAX_VALUE);
+                .comment("Knockback resistance for Vibranium Armor | Default Value = 0.1")
+                .defineInRange("knockbackResistanceValueVibraniumArmor", 0.1, 0, Double.MAX_VALUE);
         PROTECTION_VALUE_VIBRANIUM_BOOTS = BUILDER
                 .comment("Protection value for Vibranium Boots | Default Value = 6")
                 .defineInRange("protectionValueVibraniumBoots", 6, 0, Integer.MAX_VALUE);
