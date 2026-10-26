@@ -1,1 +1,1 @@
-- Fixed Durability & Unbreakable Config for Vibranium Armor
+Adjusted Knockback Resistance
