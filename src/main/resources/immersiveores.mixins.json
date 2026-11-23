@@ -14,12 +14,12 @@
     "PlayerEntityMixin",
     "PowderSnowBlockMixinEnderium",
     "PowderSnowBlockMixinVibranium",
-    "PowderSnowBlockMixinVulpus",
+    "PowderSnowBlockMixinVulpus"
+  ],
+  "client": [
     "ToolOverlayRenderer"
   ],
   "injectors": {
     "defaultRequire": 1
-  },
-  "client": [
-  ]
+  }
 }

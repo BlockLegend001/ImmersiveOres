@@ -1,1 +1,1 @@
-- Adjusted Knockback Resistance
+- Fixed a bug that let crash the server at start
